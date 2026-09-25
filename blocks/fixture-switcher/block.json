@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "tranzly/fixture-switcher",
+	"title": "Language switcher",
+	"category": "widgets",
+	"icon": "translation",
+	"description": "Links to this page in each of the site's languages. It renders nothing until two or more languages are listed.",
+	"keywords": [ "language", "switcher", "translation" ],
+	"textdomain": "tranzly",
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		}
+	},
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"html": false
+	},
+	"editorScript": "tranzly-editor"
+}

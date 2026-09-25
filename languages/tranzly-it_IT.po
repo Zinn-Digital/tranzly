@@ -1,0 +1,392 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tranzly\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=3; plural=(((((((0 == 0)) && ((((n == 0)) == 0))) && (((n % 1000000) == 0))) && ((0 == 0))) || ((((0 >= 0 && 0 <= 5)) == 0))) ? 1 : (((n == 1)) && ((0 == 0))) ? 0 : 2);\n"
+"X-Domain: tranzly\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: tranzly.php
+#: includes/class-admin.php:55
+#: includes/class-admin.php:56
+#: includes/class-admin.php:75
+msgid "Tranzly"
+msgstr "Tranzly"
+
+#. Plugin URI of the plugin
+#: tranzly.php
+msgid "https://zinndigital.com/wordpress-plugins/tranzly"
+msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
+
+#. Description of the plugin
+#: tranzly.php
+msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
+msgstr "La versione iniziale del Tranzly ricostruito: un elenco delle lingue del vostro sito, un blocco per il cambio lingua e le API di lingua lette dagli altri plugin."
+
+#. Author of the plugin
+#: tranzly.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: tranzly.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:72
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Siamo spiacenti, non disponi dell'autorizzazione per accedere a questa pagina."
+
+#: includes/class-admin.php:78
+msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
+msgstr "Gli script della schermata di amministrazione mancano da questa copia del plugin. Reinstallalo da un pacchetto rilasciato."
+
+#: includes/class-admin.php:81
+msgid "This screen needs JavaScript."
+msgstr "Questo schermo richiede JavaScript."
+
+#: includes/class-fixture.php:60
+msgid "Choose a language"
+msgstr "Scegli una lingua"
+
+#: includes/class-freemius-i18n.php:65
+#: src/admin/App.js:100
+msgid "Upgrade"
+msgstr "Aggiorna"
+
+#: includes/class-freemius-i18n.php:66
+msgid "Pricing"
+msgstr "Prezzi"
+
+#: includes/class-freemius-i18n.php:67
+msgid "Start Trial"
+msgstr "Inizia la prova gratuita"
+
+#: includes/class-freemius-i18n.php:68
+msgid "Account"
+msgstr "Account"
+
+#: includes/class-freemius-i18n.php:69
+msgid "Contact Us"
+msgstr "Contattaci"
+
+#: includes/class-freemius-i18n.php:70
+msgid "Affiliation"
+msgstr "Affiliazione"
+
+#: includes/class-freemius-i18n.php:73
+msgctxt "the kind of software"
+msgid "Plugin"
+msgstr "Plugin"
+
+#. translators: %s: the user's first name.
+#: includes/class-freemius-i18n.php:75
+#, php-format
+msgctxt "greeting"
+msgid "Hey %s,"
+msgstr "Ciao %s,"
+
+#. translators: %s: the module type, e.g. "plugin".
+#: includes/class-freemius-i18n.php:77
+#, php-format
+msgid "Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info. This will help us make the %s more compatible with your site and better at doing what you need it to."
+msgstr "Accetti di ricevere notifiche via email per aggiornamenti di sicurezza e funzionalità, contenuti formativi e offerte occasionali, e di condividere alcune informazioni di base sull'ambiente WordPress. Ciò ci aiuterà a rendere il %s più compatibile con il Suo sito e più efficiente nel soddisfare le Sue esigenze."
+
+#: includes/class-freemius-i18n.php:78
+msgid "Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info."
+msgstr "Iscriviti per ricevere notifiche via email su aggiornamenti di sicurezza e funzionalità, contenuti formativi e offerte occasionali, e per condividere alcune informazioni di base sull'ambiente WordPress."
+
+#. translators: %1$s: the plugin name.
+#: includes/class-freemius-i18n.php:80
+#, php-format
+msgid "If you skip this, that's okay! %1$s will still work just fine."
+msgstr "Se salti questo passaggio, nessun problema! %1$s continuerà a funzionare perfettamente."
+
+#: includes/class-freemius-i18n.php:81
+msgid "Allow & Continue"
+msgstr "Consenti e continua"
+
+#: includes/class-freemius-i18n.php:82
+msgctxt "verb"
+msgid "Skip"
+msgstr "Salta"
+
+#: includes/class-freemius-i18n.php:83
+msgid "Skipping, please wait"
+msgstr "Salto in corso, attendere prego"
+
+#: includes/class-freemius-i18n.php:84
+msgid "Continue"
+msgstr "Continua"
+
+#: includes/class-freemius-i18n.php:85
+msgid "Please wait"
+msgstr "Attendere prego"
+
+#: includes/class-freemius-i18n.php:86
+msgctxt "as activating plugin"
+msgid "Activating"
+msgstr "Attivazione"
+
+#. translators: %s: the plugin name.
+#: includes/class-freemius-i18n.php:88
+#, php-format
+msgid "This will allow %s to"
+msgstr "Questo consentirà a %s di"
+
+#: includes/class-freemius-i18n.php:89
+msgid "Privacy Policy"
+msgstr "Informativa sulla privacy"
+
+#: includes/class-freemius-i18n.php:90
+msgid "Terms of Service"
+msgstr "Termini di servizio"
+
+#: includes/class-freemius-i18n.php:91
+msgid "License Agreement"
+msgstr "Contratto di licenza"
+
+#: includes/class-freemius-i18n.php:92
+msgid "Have a license key?"
+msgstr "Disponi di una chiave di licenza?"
+
+#: includes/class-freemius-i18n.php:93
+msgid "Activate License"
+msgstr "Attiva licenza"
+
+#: includes/class-freemius-i18n.php:95
+msgid "View Basic Profile Info"
+msgstr "Visualizza informazioni di base sul profilo"
+
+#: includes/class-freemius-i18n.php:96
+msgid "Your WordPress user's: first & last name, and email address"
+msgstr "I dati utente del Suo WordPress: nome, cognome e indirizzo email"
+
+#: includes/class-freemius-i18n.php:97
+msgid "View Basic Website Info"
+msgstr "Visualizza informazioni di base sul sito web"
+
+#: includes/class-freemius-i18n.php:98
+msgid "Homepage URL & title, WP & PHP versions, and site language"
+msgstr "URL e titolo della homepage, versioni di WP e PHP e lingua del sito"
+
+#. translators: %s: "Plugin".
+#: includes/class-freemius-i18n.php:100
+#, php-format
+msgid "View Basic %s Info"
+msgstr "Visualizza informazioni di base %s"
+
+#. translators: %s: "plugin".
+#: includes/class-freemius-i18n.php:102
+#, php-format
+msgid "Current %s & SDK versions, and if active or uninstalled"
+msgstr "Versioni correnti di %s e SDK, e se attivo o disinstallato"
+
+#: includes/class-freemius-i18n.php:103
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: includes/class-freemius-i18n.php:104
+msgid "Updates, announcements, marketing, no spam"
+msgstr "Aggiornamenti, annunci, marketing, niente spam"
+
+#: includes/class-freemius-i18n.php:105
+msgid "View Diagnostic Info"
+msgstr "Visualizza informazioni diagnostiche"
+
+#: includes/class-freemius-i18n.php:106
+msgid "WordPress & PHP versions, site language & title"
+msgstr "Versioni di WordPress & PHP, lingua e titolo del sito"
+
+#: includes/class-freemius-i18n.php:107
+msgid "View Plugins & Themes List"
+msgstr "Visualizza elenco di plugin e temi"
+
+#: includes/class-freemius-i18n.php:108
+msgid "Names, slugs, versions, and if active or not"
+msgstr "Nomi, slug, versioni e stato di attivazione"
+
+#: includes/class-freemius-i18n.php:109
+msgid "optional"
+msgstr "facoltativo"
+
+#: includes/class-freemius-i18n.php:125
+msgid "Never miss an important update"
+msgstr "Non perdere mai un aggiornamento importante"
+
+#. translators: %s: the module type, e.g. "plugin".
+#: includes/class-freemius-i18n.php:127
+#, php-format
+msgid "We have introduced this opt-in so you never miss an important update and help us make the %s more compatible with your site and better at doing what you need it to."
+msgstr "Abbiamo introdotto questa opzione di attivazione per fare in modo che non perdiate mai un aggiornamento importante e per aiutarci a rendere %s più compatibile con il vostro sito e più efficace nel soddisfare le vostre esigenze."
+
+#. translators: %1$s: the plugin name, %2$s: its version.
+#: includes/class-freemius-i18n.php:129
+#, php-format
+msgid "Thank you for updating to %1$s v%2$s!"
+msgstr "Grazie per aver aggiornato a %1$s v%2$s!"
+
+#: includes/class-rest.php:195
+msgid "That language is not one of this site's languages."
+msgstr "Questa lingua non è tra quelle supportate da questo sito."
+
+#: includes/class-settings.php:74
+msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
+msgstr "Il prefisso deve essere composto da 1 a 8 lettere minuscole o cifre, iniziare con una lettera e non deve coincidere con il nome del plugin."
+
+#. translators: %s: the language code that was refused.
+#: includes/class-settings.php:89
+#, php-format
+msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
+msgstr "\"%s\" non è un codice lingua. Utilizza un locale di WordPress come fr_FR o de_DE."
+
+#: includes/class-settings.php:98
+msgid "List at least one language."
+msgstr "Elenca almeno una lingua."
+
+#: includes/class-settings.php:105
+msgid "That is more languages than one site can list."
+msgstr "Questo è un numero di lingue superiore a quelle che un singolo sito può elencare."
+
+#: src/admin/About.js:15
+msgid "About"
+msgstr "Informazioni"
+
+#: src/admin/About.js:17
+msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
+msgstr "Creato da Neil Lock, CEO di Zinn Digital® Ltd"
+
+#. translators: %s: plugin version number.
+#: src/admin/About.js:25
+#, js-format
+msgid "Version %s"
+msgstr "Versione %s"
+
+#: src/admin/About.js:32
+msgid "Tranzly website"
+msgstr "Sito web Tranzly"
+
+#: src/admin/About.js:37
+msgid "Zinn Digital® website"
+msgstr "sito web di Zinn Digital®"
+
+#: src/admin/App.js:62
+msgid "Settings saved."
+msgstr "Impostazioni salvate."
+
+#: src/admin/App.js:103
+msgid "See the Pro plans and pricing"
+msgstr "Visualizza i piani Pro e i prezzi"
+
+#: src/admin/App.js:113
+msgid "Languages"
+msgstr "Lingue"
+
+#: src/admin/App.js:117
+msgid "The first language is the one your content is written in. Visitors switch with the language switcher block."
+msgstr "La prima lingua è quella in cui sono scritti i Suoi contenuti. I visitatori passano da una lingua all'altra con il blocco di selezione della lingua."
+
+#: src/admin/App.js:131
+msgid "(default)"
+msgstr "(predefinito)"
+
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: src/admin/App.js:158
+msgid "Locale code"
+msgstr "Codice lingua"
+
+#: src/admin/App.js:159
+msgid "For example fr_FR"
+msgstr "Ad esempio fr_FR"
+
+#: src/admin/App.js:170
+msgid "Name (optional)"
+msgstr "Nome (facoltativo)"
+
+#: src/admin/App.js:171
+msgid "For example Français"
+msgstr "Ad esempio Français"
+
+#: src/admin/App.js:185
+msgid "Add language"
+msgstr "Aggiungi lingua"
+
+#: src/admin/App.js:193
+msgid "Front-end output"
+msgstr "Output di front-end"
+
+#: src/admin/App.js:198
+msgid "Class name prefix"
+msgstr "Prefisso nome classe"
+
+#: src/admin/App.js:199
+msgid "Every class name the plugin prints on your pages starts with this prefix, so the pages do not reveal which plugin built them. 1 to 8 lowercase letters or digits, starting with a letter."
+msgstr "Ogni nome di classe stampato dal plugin sulle vostre pagine inizia con questo prefisso, in modo che le pagine non rivelino quale plugin le ha create. Da 1 a 8 lettere minuscole o cifre, che iniziano con una lettera."
+
+#: src/admin/App.js:210
+msgid "Beta updates"
+msgstr "Aggiornamenti beta"
+
+#: src/admin/App.js:217
+msgid "This site receives beta versions as updates."
+msgstr "Questo sito riceve versioni beta come aggiornamenti."
+
+#: src/admin/App.js:221
+msgid "This site receives stable versions only."
+msgstr "Questo sito riceve solo versioni stabili."
+
+#: src/admin/App.js:230
+msgid "Change this on the Account page"
+msgstr "Modifica questa voce nella pagina Account"
+
+#: src/admin/App.js:239
+msgid "Beta versions are offered to licensed Pro installations that are connected to their account. Once connected, you can join from the Account page."
+msgstr "Le versioni beta sono offerte alle installazioni Pro con licenza che sono collegate al proprio account. Una volta connesse, puoi partecipare dalla pagina Account."
+
+#: src/admin/App.js:255
+msgid "Save settings"
+msgstr "Salva impostazioni"
+
+#: src/editor/index.js:17
+msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
+msgstr "Aggiungi una seconda lingua in Tranzly dal menu di amministrazione e il selettore comparirà qui."
+
+#: src/editor/index.js:29
+msgid "Switcher"
+msgstr "Selettore"
+
+#: src/editor/index.js:32
+msgid "Accessible label"
+msgstr "Etichetta accessibile"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block title"
+msgid "Language switcher"
+msgstr "Selettore lingua"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block description"
+msgid "Links to this page in each of the site's languages. It renders nothing until two or more languages are listed."
+msgstr "Link a questa pagina in ciascuna lingua del sito. Non visualizza nulla finché non vengono elencate due o più lingue."
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "language"
+msgstr "lingua"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "switcher"
+msgstr "selettore"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "translation"
+msgstr "traduzione"

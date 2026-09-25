@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * Plugin Name:       Tranzly
+ * Plugin URI:        https://zinndigital.com/wordpress-plugins/tranzly
+ * Description:       The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read.
+ * Version:           3.0.0
+ * Requires at least: 6.8
+ * Requires PHP:      8.2
+ * Author:            Neil Lock — CEO, Zinn Digital® Ltd
+ * Author URI:        https://zinndigital.com
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       tranzly
+ * Domain Path:       /languages
+ *
+ * @package ZinnDigital\Tranzly
+ *
+ * ⛔⛔ THIS FILE IS NAMED `tranzly.php` ON PURPOSE AND MUST NEVER BE RENAMED. Every site running
+ * the legacy plugin has `tranzly/tranzly.php` recorded as the active basename; WordPress
+ * deactivates a plugin whose basename disappears during an update (plugins.json
+ * `legacy_main_file`, CONTRACT §1 / G10).
+ *
+ * ⛔⛔ AND IT IS WRITTEN IN THE LICENSING SERVICE'S OWN PRINT, NOT IN WPCS STYLE. Freemius
+ * re-prints the file that calls fs_dynamic_init() (four-space indent, no blank lines between
+ * statements, `!$x`); every other file reaches its free package byte-for-byte. Writing this file
+ * in that canonical form is what makes the house free zip and the Freemius free zip identical
+ * (docs/adr/0031, docs/adr/0032). Keep it to headers, the SDK init and one require; everything
+ * else lives in includes/ and follows WPCS.
+ *
+ * ⛔ No `Update URI` header and no secret key in this SOURCE, ever. Freemius adds the header to the premium download only (measured, docs/adr/0031). The SDK needs only the PUBLIC key below.
+ */
+defined( 'ABSPATH' ) || exit;
+if ( function_exists( 'tranzly_fs' ) ) {
+    tranzly_fs()->set_basename( false, __FILE__ );
+    return;
+}
+define( 'TRANZLY_VERSION', '3.0.0' );
+define( 'TRANZLY_FILE', __FILE__ );
+define( 'TRANZLY_DIR', plugin_dir_path( __FILE__ ) );
+define( 'TRANZLY_URL', plugin_dir_url( __FILE__ ) );
+if ( !function_exists( 'tranzly_fs' ) ) {
+    /**
+     * The licensing SDK instance for this plugin. The name is the legacy plugin's; the SDK keys a site's connection on plugin 6843 and its slug.
+     *
+     * @return Freemius
+     */
+    function tranzly_fs() {
+        global $tranzly_fs;
+        if ( !isset( $tranzly_fs ) ) {
+            require_once __DIR__ . '/vendor/freemius/start.php';
+            $tranzly_fs = fs_dynamic_init( array(
+                'id'               => '6843',
+                'slug'             => 'tranzly',
+                'premium_slug'     => 'tranzly-premium',
+                'type'             => 'plugin',
+                'public_key'       => 'pk_41c863827b360a912566ffb91d7fd',
+                'is_premium'       => false,
+                'premium_suffix'   => 'Pro',
+                'has_addons'       => false,
+                'has_paid_plans'   => true,
+                'is_org_compliant' => true,
+                'menu'             => array(
+                    'slug'       => 'tranzly',
+                    'first-path' => 'admin.php?page=tranzly',
+                    'contact'    => false,
+                    'support'    => false,
+                ),
+                'is_live'          => true,
+            ) );
+        }
+        return $tranzly_fs;
+    }
+
+    tranzly_fs();
+    tranzly_fs()->add_action( 'after_uninstall', 'tranzly_uninstall' );
+    do_action( 'tranzly_fs_loaded' );
+}
+require_once __DIR__ . '/includes/bootstrap.php';

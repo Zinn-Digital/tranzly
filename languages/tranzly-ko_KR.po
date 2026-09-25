@@ -1,0 +1,393 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tranzly\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: tranzly\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: tranzly.php
+#: includes/class-admin.php:55
+#: includes/class-admin.php:56
+#: includes/class-admin.php:75
+msgid "Tranzly"
+msgstr "Tranzly"
+
+#. Plugin URI of the plugin
+#: tranzly.php
+msgid "https://zinndigital.com/wordpress-plugins/tranzly"
+msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
+
+#. Description of the plugin
+#: tranzly.php
+msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
+msgstr "재구축된 Tranzly의 기본 릴리스: 사이트 언어 목록, 언어 전환 블록, 그리고 다른 플러그인이 읽는 언어 API."
+
+#. Author of the plugin
+#: tranzly.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: tranzly.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:72
+msgid "Sorry, you are not allowed to access this page."
+msgstr "죄송합니다. 이 페이지에 접근할 권한이 없습니다."
+
+#: includes/class-admin.php:78
+msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
+msgstr "이 플러그인 사본에는 관리자 화면 스크립트가 누락되어 있습니다. 배포된 패키지에서 다시 설치하세요."
+
+#: includes/class-admin.php:81
+msgid "This screen needs JavaScript."
+msgstr "이 화면을 보려면 JavaScript가 필요합니다."
+
+#: includes/class-fixture.php:60
+msgid "Choose a language"
+msgstr "언어 선택"
+
+#: includes/class-freemius-i18n.php:65
+#: src/admin/App.js:100
+msgid "Upgrade"
+msgstr "업그레이드"
+
+#: includes/class-freemius-i18n.php:66
+msgid "Pricing"
+msgstr "요금제"
+
+#: includes/class-freemius-i18n.php:67
+msgid "Start Trial"
+msgstr "체험 시작"
+
+#: includes/class-freemius-i18n.php:68
+msgid "Account"
+msgstr "계정"
+
+#: includes/class-freemius-i18n.php:69
+msgid "Contact Us"
+msgstr "문의하기"
+
+#: includes/class-freemius-i18n.php:70
+msgid "Affiliation"
+msgstr "소속"
+
+#: includes/class-freemius-i18n.php:73
+msgctxt "the kind of software"
+msgid "Plugin"
+msgstr "플러그인"
+
+#. translators: %s: the user's first name.
+#: includes/class-freemius-i18n.php:75
+#, php-format
+msgctxt "greeting"
+msgid "Hey %s,"
+msgstr "%s님, 안녕하세요."
+
+#. translators: %s: the module type, e.g. "plugin".
+#: includes/class-freemius-i18n.php:77
+#, php-format
+msgid "Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info. This will help us make the %s more compatible with your site and better at doing what you need it to."
+msgstr "보안 및 기능 업데이트, 교육 콘텐츠, 간헐적인 프로모션에 대한 이메일 알림을 수신하고 기본적인 WordPress 환경 정보를 공유하는 것에 동의합니다. 이는 %s이(가) 사이트와 더 호환되고 귀하가 필요로 하는 작업을 더 잘 수행할 수 있도록 개선하는 데 도움이 됩니다."
+
+#: includes/class-freemius-i18n.php:78
+msgid "Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info."
+msgstr "보안 및 기능 업데이트, 유익한 콘텐츠, 가끔 제공되는 혜택에 대한 이메일 알림을 받고 기본적인 WordPress 환경 정보를 공유하는 데 동의합니다."
+
+#. translators: %1$s: the plugin name.
+#: includes/class-freemius-i18n.php:80
+#, php-format
+msgid "If you skip this, that's okay! %1$s will still work just fine."
+msgstr "건너뛰어도 괜찮습니다! %1$s(은)는 여전히 정상적으로 작동합니다."
+
+#: includes/class-freemius-i18n.php:81
+msgid "Allow & Continue"
+msgstr "허용 및 계속"
+
+#: includes/class-freemius-i18n.php:82
+msgctxt "verb"
+msgid "Skip"
+msgstr "건너뛰기"
+
+#: includes/class-freemius-i18n.php:83
+msgid "Skipping, please wait"
+msgstr "건너뛰는 중입니다. 잠시만 기다려 주세요."
+
+#: includes/class-freemius-i18n.php:84
+msgid "Continue"
+msgstr "계속"
+
+#: includes/class-freemius-i18n.php:85
+msgid "Please wait"
+msgstr "잠시만 기다려 주세요"
+
+#: includes/class-freemius-i18n.php:86
+msgctxt "as activating plugin"
+msgid "Activating"
+msgstr "활성화 중"
+
+#. translators: %s: the plugin name.
+#: includes/class-freemius-i18n.php:88
+#, php-format
+msgid "This will allow %s to"
+msgstr "%s이(가) 다음을 수행할 수 있습니다."
+
+#: includes/class-freemius-i18n.php:89
+msgid "Privacy Policy"
+msgstr "개인정보 처리방침"
+
+#: includes/class-freemius-i18n.php:90
+msgid "Terms of Service"
+msgstr "이용 약관"
+
+#: includes/class-freemius-i18n.php:91
+msgid "License Agreement"
+msgstr "라이선스 계약"
+
+#: includes/class-freemius-i18n.php:92
+msgid "Have a license key?"
+msgstr "라이선스 키가 있으신가요?"
+
+#: includes/class-freemius-i18n.php:93
+msgid "Activate License"
+msgstr "라이선스 활성화"
+
+#: includes/class-freemius-i18n.php:95
+msgid "View Basic Profile Info"
+msgstr "기본 프로필 정보 보기"
+
+#: includes/class-freemius-i18n.php:96
+msgid "Your WordPress user's: first & last name, and email address"
+msgstr "귀하의 WordPress 사용자 이름: 이름 및 성, 그리고 이메일 주소"
+
+#: includes/class-freemius-i18n.php:97
+msgid "View Basic Website Info"
+msgstr "기본 웹사이트 정보 보기"
+
+#: includes/class-freemius-i18n.php:98
+msgid "Homepage URL & title, WP & PHP versions, and site language"
+msgstr "홈페이지 URL 및 제목, WP 및 PHP 버전, 사이트 언어"
+
+#. translators: %s: "Plugin".
+#: includes/class-freemius-i18n.php:100
+#, php-format
+msgid "View Basic %s Info"
+msgstr "기본 %s 정보 보기"
+
+#. translators: %s: "plugin".
+#: includes/class-freemius-i18n.php:102
+#, php-format
+msgid "Current %s & SDK versions, and if active or uninstalled"
+msgstr "현재 %s 및 SDK 버전, 활성화 상태 또는 제거 여부"
+
+#: includes/class-freemius-i18n.php:103
+msgid "Newsletter"
+msgstr "뉴스레터"
+
+#: includes/class-freemius-i18n.php:104
+msgid "Updates, announcements, marketing, no spam"
+msgstr "업데이트, 공지사항, 마케팅, 스팸 없음"
+
+#: includes/class-freemius-i18n.php:105
+msgid "View Diagnostic Info"
+msgstr "진단 정보 보기"
+
+#: includes/class-freemius-i18n.php:106
+msgid "WordPress & PHP versions, site language & title"
+msgstr "WordPress 및 PHP 버전, 사이트 언어 및 제목"
+
+#: includes/class-freemius-i18n.php:107
+msgid "View Plugins & Themes List"
+msgstr "플러그인 및 테마 목록 보기"
+
+#: includes/class-freemius-i18n.php:108
+msgid "Names, slugs, versions, and if active or not"
+msgstr "이름, 슬러그, 버전 및 활성화 여부"
+
+#: includes/class-freemius-i18n.php:109
+msgid "optional"
+msgstr "선택 사항"
+
+#: includes/class-freemius-i18n.php:125
+msgid "Never miss an important update"
+msgstr "중요한 업데이트를 놓치지 마세요"
+
+#. translators: %s: the module type, e.g. "plugin".
+#: includes/class-freemius-i18n.php:127
+#, php-format
+msgid "We have introduced this opt-in so you never miss an important update and help us make the %s more compatible with your site and better at doing what you need it to."
+msgstr "중요한 업데이트를 놓치지 않고 %s이(가) 고객님의 사이트와 더 호환되도록, 그리고 고객님이 필요로 하는 기능을 더 잘 수행할 수 있도록 이 선택 동의(opt-in) 기능을 도입했습니다."
+
+#. translators: %1$s: the plugin name, %2$s: its version.
+#: includes/class-freemius-i18n.php:129
+#, php-format
+msgid "Thank you for updating to %1$s v%2$s!"
+msgstr "%1$s v%2$s(으)로 업데이트해 주셔서 감사합니다!"
+
+#: includes/class-rest.php:195
+msgid "That language is not one of this site's languages."
+msgstr "해당 언어는 이 사이트에서 지원하는 언어가 아닙니다."
+
+#: includes/class-settings.php:74
+msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
+msgstr "접두사는 1~8자의 소문자 또는 숫자로 이루어져야 하며, 문자로 시작해야 하고, 플러그인 이름과 같아서는 안 됩니다."
+
+#. translators: %s: the language code that was refused.
+#: includes/class-settings.php:89
+#, php-format
+msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
+msgstr "\"%s\"은(는) 언어 코드가 아닙니다. fr_FR 또는 de_DE와 같은 WordPress 로케일을 사용하세요."
+
+#: includes/class-settings.php:98
+msgid "List at least one language."
+msgstr "최소 하나 이상의 언어를 입력하세요."
+
+#: includes/class-settings.php:105
+msgid "That is more languages than one site can list."
+msgstr "하나의 사이트에 나열할 수 있는 것보다 더 많은 언어입니다."
+
+#: src/admin/About.js:15
+msgid "About"
+msgstr "정보"
+
+#: src/admin/About.js:17
+msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd의 CEO인 Neil Lock이 제작함"
+
+#. translators: %s: plugin version number.
+#: src/admin/About.js:25
+#, js-format
+msgid "Version %s"
+msgstr "버전 %s"
+
+#. zinn-i18n: human translation — a person corrected the machine translation
+#: src/admin/About.js:32
+msgid "Tranzly website"
+msgstr "Tranzly 웹사이트"
+
+#: src/admin/About.js:37
+msgid "Zinn Digital® website"
+msgstr "Zinn Digital® 웹사이트"
+
+#: src/admin/App.js:62
+msgid "Settings saved."
+msgstr "설정이 저장되었습니다."
+
+#: src/admin/App.js:103
+msgid "See the Pro plans and pricing"
+msgstr "Pro 요금제 및 가격 보기"
+
+#: src/admin/App.js:113
+msgid "Languages"
+msgstr "언어"
+
+#: src/admin/App.js:117
+msgid "The first language is the one your content is written in. Visitors switch with the language switcher block."
+msgstr "첫 번째 언어는 콘텐츠가 작성된 언어입니다. 방문자는 언어 전환기 블록을 사용하여 언어를 바꿉니다."
+
+#: src/admin/App.js:131
+msgid "(default)"
+msgstr "(기본값)"
+
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "제거"
+
+#: src/admin/App.js:158
+msgid "Locale code"
+msgstr "로캘 코드"
+
+#: src/admin/App.js:159
+msgid "For example fr_FR"
+msgstr "예: fr_FR"
+
+#: src/admin/App.js:170
+msgid "Name (optional)"
+msgstr "이름(선택사항)"
+
+#: src/admin/App.js:171
+msgid "For example Français"
+msgstr "예를 들어 Français"
+
+#: src/admin/App.js:185
+msgid "Add language"
+msgstr "언어 추가"
+
+#: src/admin/App.js:193
+msgid "Front-end output"
+msgstr "프론트엔드 출력"
+
+#: src/admin/App.js:198
+msgid "Class name prefix"
+msgstr "클래스 이름 접두사"
+
+#: src/admin/App.js:199
+msgid "Every class name the plugin prints on your pages starts with this prefix, so the pages do not reveal which plugin built them. 1 to 8 lowercase letters or digits, starting with a letter."
+msgstr "플러그인이 페이지에 출력하는 모든 클래스 이름은 이 접두사로 시작하므로, 페이지가 어떤 플러그인으로 만들어졌는지 드러내지 않습니다. 문자로 시작하는 1~8자의 소문자 또는 숫자입니다."
+
+#: src/admin/App.js:210
+msgid "Beta updates"
+msgstr "베타 업데이트"
+
+#: src/admin/App.js:217
+msgid "This site receives beta versions as updates."
+msgstr "이 사이트는 업데이트로 베타 버전을 받습니다."
+
+#: src/admin/App.js:221
+msgid "This site receives stable versions only."
+msgstr "이 사이트는 안정 버전만 수신합니다."
+
+#: src/admin/App.js:230
+msgid "Change this on the Account page"
+msgstr "계정 페이지에서 이를 변경하세요"
+
+#: src/admin/App.js:239
+msgid "Beta versions are offered to licensed Pro installations that are connected to their account. Once connected, you can join from the Account page."
+msgstr "베타 버전은 계정에 연결된 라이선스 보유 Pro 설치 버전에 제공됩니다. 연결되면 계정 페이지에서 참여할 수 있습니다."
+
+#: src/admin/App.js:255
+msgid "Save settings"
+msgstr "설정 저장"
+
+#: src/editor/index.js:17
+msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
+msgstr "관리 메뉴의 Tranzly 아래에 두 번째 언어를 추가하면 여기에 언어 전환기가 나타납니다."
+
+#: src/editor/index.js:29
+msgid "Switcher"
+msgstr "스위처"
+
+#: src/editor/index.js:32
+msgid "Accessible label"
+msgstr "접근성 레이블"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block title"
+msgid "Language switcher"
+msgstr "언어 전환기"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block description"
+msgid "Links to this page in each of the site's languages. It renders nothing until two or more languages are listed."
+msgstr "사이트의 각 언어별 이 페이지로 향하는 링크입니다. 두 개 이상의 언어가 나열될 때까지 아무것도 표시되지 않습니다."
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "language"
+msgstr "언어"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "switcher"
+msgstr "스위처"
+
+#: blocks/fixture-switcher/block.json
+msgctxt "block keyword"
+msgid "translation"
+msgstr "번역"
