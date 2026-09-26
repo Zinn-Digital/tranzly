@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "AI провайдерлері"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ChatGPT жасаушылары. Жақсы жан-жақты көмекші."
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Claude жасаушылары. Жазуға мықты және мұқият пайымдайды."
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Google компаниясының Gemini үлгілері. Жылдам әрі қолжетімді."
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "Жылдам әрі қолжетімді модельдері бар еуропалық ЖИ компаниясы."
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "Жazu men kod jazuda jaqsı jumıs isteytin arzan modeller."
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "Басқа да көптеген провайдерлердің модельдеріне арналған бір кілт."
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "Өз компьютеріңізде эbolа немесе серверде жұмыс істейтін модельді қоса алғанда, OpenAI API сияқты жұмыс істейтін кез келген қызмет."
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "Жалпы (басқа нақты параметрлер орнатылмаған кезде қолданылады)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "Жазу және қайта жазу"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "Аударма"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "Код және CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Кешіріңіз, бұл бетке кіруге рұқсатыңыз жоқ."
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "Бұл параметрлер оларды пайдаланатын әрбір плагинмен ортақ болып табылады: %s."
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "Кілттеріңіз бұл сайттың деректер базасында шифрланған және тек сіз таңдаған провайдерге ғана жіберіледі — бізге ешқашан жіберілмейді."
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "1-қадам / 2: AI провайдерін таңдаңыз"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "Сіз өз кілтіңізді әкелесіз, сондықтан тұтынылған нәрсе үшін провайдерге тікелей төлейсіз. Сенімді емессіз бе? Олардың кез келгені жақсы жұмыс істейді; кейінірек көбірек қоса аласыз."
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "Келесі"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "2-қадамның 2-қадамы: %s қосылуда"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "OpenAI үйлесімді қызметіңіздің мекенжайын енгізіңіз, ол /v1 арқылы аяқталуы тиіс. Кілт тек қызмет оны сұраған жағдайда ғана қажет."
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "%s ашып, жүйеге кіріңіз (немесе тегін тіркелгі жасаңыз)."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s API кілттері беті"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "Жаңа кілт жасап, оны көшіріп алыңыз."
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "Оны төменге қойып, \"Сақтау және сынау\" түймесін басыңыз. Оның жұмыс істейтінін тексеру үшін біз бір кішкентай сұрау жібереміз."
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "Клттің жұмыс істеуі үшін көптеген провайдерлердің шотында аз ғана баланс болуы қажет: %s."
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "несие қосу"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← Басқа провайдерді таңдау"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "Мекенжай"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "Сақталған кілт …%s әрпімен аяқталады — оны ауыстыру үшін жаңасын қойыңыз"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "Кілт (міндетті емес)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API кілті"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "Сақтау және сынау"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "Провайдерлер"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "Провайдер"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "Күйі"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "Клоқы"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "Кілт алу"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "Тест"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Жою"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "Қосымшаның жаңа нұсқасымен сақталды: бұл қосымшаны жаңартыңыз немесе кілтті қайта енгізіңіз."
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "Сақталған кілтті енді ашу мүмкін емес (сайттың қауіпсіздік кілттері өзгерді). Оны қайтадан енгізіңіз."
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "Қосылмаған"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "Қосылды — соңғы тест сәтті өтті %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "Соңғы сын сәтсіз аяқталды: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "Қосылған — әлі тексерілген жоқ"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "Қай моделді пайдалану керек"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ бұл тапсырма үшін біздің ұсынысымызды білдіреді. Тізімге провайдерден тікелей алынған кілтіңіз пайдалана алатын әрбір модель кіреді."
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— Провайдер үшін ұсынылады —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "Үлгілерді сақтау"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "Провайдерлерден үлгі тізімдерін жаңарту"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "ең жақсы сапа"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "ең төменгі құн"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "ең жылдам"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "Модельді өзіңіз қосыңыз"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "Бүгін жаңа модель шықты ма? Оны бірден пайдалану үшін дәл атауын қойыңыз."
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "Модель атауы"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "Модель қосу"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "Ұсынылатын модельдер тізімі"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "Ұсынылған модельдер тізімін тексеру мүмкін болмады, сондықтан ешқандай ұсыныстар көрсетілмейді. Плагинді қайта орнатыңыз немесе төменде күнделікті жаңартуларды қосыңыз."
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "Қолданыстағы тізім %s күні жарияланған. Әрбір плагин жаңартуы жаңасын әкеледі."
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "Жаңартылған тізімді көру үшін Zinn Digital® сайтына күніне бір рет кіріп тұрыңыз."
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "Тек қарапайым жүктеп алу сұрауы жіберіледі: кілт те, сайт мекенжайы да, мазмұныңыз туралы ешнәрсе де жоқ. Тізімге қол қойылған, ал қолтаңбаны тексеруден өтпеген тізім елеусіз қалады."
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "Соңғы тексерілген уақыты: %1$s: %2$s."
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "Сақтап, егер қосулы болса, қазір тексеріңіз"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "жаңа тізім орнатылды"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "соңғы нұсқаға дейін жаңартылған"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "жүктеу қолтаңбаны тексеруден өтпеді және елеусіз қалдырылды"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital® байланысқа шықпады; ағымдағы тізім қолданыста қалады"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "өшірілген"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "Ашу"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "Олардың күй бетін тексеру"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "Ботшот парақшасын ашу"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "API кілттері бетін ашу"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "AI параметрлерін ашу"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "Кешіріңіз, сізге мұны істеуге рұқсат етілмеген."
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "Белгісіз провайдер."
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "Қызметіңіздің мекенжайын енгізіңіз, мысалы, http://localhost:11434/v1."
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "Бұл API кілтіне ұқсамайды. Бос орынсыз, қайтадан көшіріп алыңыз."
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "Алдымен API кілтіңізді қойыңыз."
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "Кілт жойылды."
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "Модельдер сақталды."
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "Модельдің нақты атауын енгізіңіз, мысалы, провайдердің құжаттамасында жазылғандай."
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "%s қосылды. Оны \"Қай модельді пайдалану керек\" бөлімінен таңдаңыз."
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "Модель жойылды."
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "Күнделікті жаңартулар өшірілген. Плагинмен бірге келген тізім қолданылады."
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "Тексерілді: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "Модель тізімдері жаңартылды."
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "Жасанды интеллект кілтіңіз плагиндеріңіздің бірінің жаңарақ нұсқасымен сақталды. Осы плагинді жаңартыңыз немесе AI параметрлерінде кілтті қайта енгізіңіз."
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "Сақталған AI кілтіңізді енді ашу мүмкін емес (сайттың қауіпсіздік кілттері өзгерді). Оны AI параметрлерінде қайта енгізіңіз."
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "ЖИ әлі бапталмаған. ЖИ параметрлеріне ЖИ провайдерінің кілтін қосыңыз."
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "Бұл тапсырма үшін ешбір модель таңдалмаған. AI параметрлерінен біреуін таңдаңыз."
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "Бұл AI провайдері плагиннің бұл нұсқасында қолдау көрсетілмейді."
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "Бұл сайт AI қызметіне қосыла алмады. Оның жұмыс істеп тұрғанын және мекенжайы веб-серверден қолжетімді екенін тексеріңіз (өз компьютеріңіздегі қызмет хостингтегі сайттан қолжетімді емес)."
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "Бұл сайт %s мекенжайына қосыла алмады. Олардың күй бетін тексеріңіз; егер сайт жұмыс істеп тұрса, хостингіңіз шығыс қосылымдарды бұғаттап жатқан болуы мүмкін немесе мекенжай қате."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s сіздің тіркелгіңізде баланс немесе квота қалмағанын хабарлайды. Олардағы тіркелгіңізге қаражат қосыңыз немесе лимитіңізді арттырыңыз, содан кейін қайталап көріңіз."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s кілтіңізді қабылдамады. Ол қате терілген, кері қайтарылған немесе мерзімі өткен болуы мүмкін. Жаңа кілт жасап, оны осында қойыңыз."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s кілтіңізге арналған бұл сұрауды қабылдамады. Кілттің бұл модельге немесе функцияға қолжетім жоқ шығар, немесе аккаунтты растау қажет."
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "%2$s жүйесінде кілтіңіз үшін \"%1$s\" моделі қолжетімді емес. AI параметрлерінен басқа модельді таңдаңыз."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s кілтіңіздің сұрау жіберу жылдамдығын шектеп жатыр. Бір минут күтіп, қайталап көріңіз немесе олармен жылдамдық шегін арттырыңыз."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s қазіргі уақытта ақауларға тап болуда (олардың жағында істен шығу немесе шамадан тыс жүктеме бар). Сіздің параметрлеріңізде ешқандай қате жоқ. Біраз уақыттан кейін қайта көріңіз."
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "Жасанды интеллект сұрауы анықталмаған себеп бойынша сәтсіз аяқталды. Қайталап көріңіз; бұл қайталана берсе, төмендегі мәліметтермен қолдау қызметіне хабарласыңыз."
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "AI провайдері бұл плагин оқи алмайтын пішімде жауап берді. Қайталап көріңіз; бұл жағдай қайталана берсе, басқа модельді таңдаңыз немесе қолдау қызметіне хабарласыңыз."
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "Арнайы (OpenAI үйлесімді)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "Алдымен бұл провайдер үшін кілтті сақтаңыз."
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "Сіздің кілтіңіз жұмыс істейді, бірақ провайдер бұл үшін ешқандай мәтіндік модельді көрсетпеген. Төменде модельді өзіңіз қосыңыз."
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "Қосылды. %1$s %2$s көмегімен жауап берді. AI мүмкіндіктеріңіз пайдалануға дайын."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "Сіздің пайдаланушы рөліңізге бұл сайтта AI пайдалануға рұқсат етілмеген. Әкімшіге хабарласыңыз."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "Бұл сайт ай сайынғы AI шығындар лимитіне жетті. Әкімші оны AI параметрлерінен арттыра алады."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "Бұл сайт AI сұрауларының айлық лимитне жетті. Әкімші оны AI параметрлерінен арттыра алады."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "Қолданыс пен құны"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "Журнал, лимиттер мен рұқсаттар мына арқылы пайдаланылатын AI-ға қолданылады: %s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "Шығындар шамамен алынған, жарияланған бағалар негізінде есептелген; белгілі бағасы жоқ үлгі нөлге тең деп есептеледі."
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "Бұл айда: %1$s сұрау, шамамен %2$s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "Қашан"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "Кім"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "Қолданылу мақсаты"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "Модель"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "Кіріс / шығыс токендері"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "Туралы"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "Нәтиже"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "Әлі еқандай AI сұраулары жасалған жоқ."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "Орындалды"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "Шектеулер мен рұқсаттар"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "Айлық шығындар лимиті (US доллары)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "Шек қоймау үшін бос қалдырыңыз. Шамамен алынған құны осы шекке жеткенде, AI айдың қалған бөлігіне жұмысын тоқтатады."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "Ай сайынгы сұраулар лимиті"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "Шектеу қоймау үшін бос қалдырыңыз."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "Жасанды интеллектті кімдер пайдалана алады"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "Плагиннің мүмкіндіктерін пайдалана алатын әрбір адамға ЖИ-ді пайдалануға мүмкіндік беру үшін ешқайсысын белгілемеңіз. Әкімшілер оны әрқашан пайдалана алады."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "Лимиттер мен рұқсаттарды сақтау"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "Лимиттер мен рұқсаттар сақталды."
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "Kem дегенде бір тілді көрсетіңіз."
 msgid "That is more languages than one site can list."
 msgstr "Бұл бір сайтта тізімдеуге болатыннан көбірек тілдер."
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "Туралы"
-
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -294,10 +863,6 @@ msgstr "Бірінші тіл – контентіңіз жазылған тіл
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(әдепкі)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "Жою"
 
 #: src/admin/App.js:158
 msgid "Locale code"

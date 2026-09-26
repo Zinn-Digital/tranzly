@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "Արհեստական բանականության մատակարարներ"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ChatGPT-ի ստեղծողները: Լավ համակողմանի տարբերակ:"
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Claude-ի ստեղծողները: Հզոր են գրելու և ուշադիր վերլուծության մեջ:"
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Google-ի Gemini մոդելները: Արագ և էժան:"
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "Եվրոպական արհեստական բանականության ընկերություն՝ արագ և մատչելի մոդելներով։"
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "Ցածր արժեքով մոդելներ, որոնք լավ են գրում և կոդավորում:"
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "Մեկ բանալի տարբեր մատակարարների մոդելների համար:"
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "Ցանկացված ծառայություն, որն աշխատում է OpenAI-ի API-ի նման, ներառյալ ձեր սեփական համակարգչում կամ սերվերում աշխատող մոդելը:"
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "Ընդհանուր (օգտագործվում է, երբ ավելի կոնկրետ բան սահմանված չէ)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "Գրում և վերագրում"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "Թարգմանություն"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "Կոդ և CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Կներեք, դուք իրավունք չունեք մուտք գործելու այս էջ:"
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "Այս կարգավորումները կիսվում են յուրաքանչյուր հավելվածի կողմից, որոնք օգտագործում են դրանք՝ %s։"
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "Ձեր բանալիները գաղտնագրված են այս կայքի տվյալների բազայում և ուղարկվում են միայն ձեր ընտրած մատակարարին, բայց ոչ երբեք մեզ:"
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "Քայլ 1՝ 2-ից. ընտրեք արհեստական ​​ինտելեկտի մատակարարին"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "Դուք բերում եք ձեր սեփական բանալին, ուստի դուք ուղղակիորեն վճարում եք մատակարարին ձեր օգտագործածի համար: Վստահ չե՞ք: Այս տարբերակներից ցանկացածն էլ հարմար է. հետագայում կարող եք ավելացնել այլ տարբերակներ:"
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "Հաջորդը"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "Քայլ 2՝ 2-ից. միացնել %s"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "Մուտքագրեք ձեր OpenAI-compatible ծառայության հասցեն, որը վերջանում է /v1-ով: Բանալի անհրաժեշտ է միայն այն դեպքում, եթե ծառայությունը պահանջում է այն:"
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "Բացեք %s և մուտք գործեք (կամ ստեղծեք անվճար հաշիվ):"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s API բանալիների էջը"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "Ստեղծեք նոր բանալի և պատճենեք այն:"
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "Տեղադրեք այն ստորև և սեղմեք «Պահպանել և ստուգել»: Մենք ուղարկում ենք մեկ փոքր հարցում՝ ստուգելու համար, թե արդյոք այն աշխատում է:"
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "Շատ մատակարարներ պահանջում են հաշվին փոքր գումար ունենալ, նախքան բանալին կաշխատի՝ %s։"
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "ավելացնել գումար"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← Ընտրել այլ մատակարար"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "Հասցե"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "Պահպանված բանալին ավարտվում է… %s — տեղադրեք նորը՝ այն փոխարինելու համար"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "Բանալի (կամընտիր)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API բանալի"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "Պահպանել և փորձարկել"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "Մատակարարներ"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "Մատակարար"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "Կարգավիճակ"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "Բանալի"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "Ստանալ բանալի"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "Թեստ"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Հեռացնել"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "Պահպանված է պլագինի ավելի նոր տարբերակով. թարմացրեք այս պլագինը կամ նորից մուտքագրեք բանալին:"
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "Պահպանված բանալին այլևս չի կարելի բացել (կայքի անվտանգության բանալիները փոխվել են): Մուտքագրեք այն նորից:"
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "Միացված չէ"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "Միացված է. վերջին թեստը հաջողվել է %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "Վերջին թեստը ձախողվեց՝ %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "Միացված է. դեռևս չստուգված"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "Որ մոդելն օգտագործել"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★-ը նշում է մեր առաջարկությունը այդ խնդրի համար: Ցանկը ներառում է յուրաքանչյուր մոդել, որը ձեր բանալին կարող է օգտագործել, ուղղակիորեն կարդացված մատակարարից:"
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— Առաջարկվում է մատակարարի կողմից —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "Պահպանել մոդելները"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "Թարմացրեք մոդելների ցանկերը մատակարարներից"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "լավագույն որակի"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "ամենացածր գինը"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "ամենաարագ"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "Ավելացրեք մոդել ինքնուրույն"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "Այսօր նոր մոդել է թողարկվել։ Տեղադրեք դրա ճշգրիտ անունը՝ այն անմիջապես օգտագործելու համար։"
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "Մոդելի անունը"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "Ավելացնել մոդել"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "Առաջարկվող մոդելների ցանկ"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "Առաջարկվող մոդելների ցանկը չհաջողվեց ստուգել, ուստի որևէ առաջարկ չի ցուցադրվում: Վերատեղադրեք հավելվածը կամ միացրեք ամենօրյա թարմացումները ստորև:"
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "Օգտագործվող ցանկը հրապարակվել է %s-ին: Յուրաքանչյուր հավելվածի թարմացում բերում է նորը:"
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "Նաև ստուգեք Zinn Digital®-ը օրը մեկ անգամ թարմացված ցանկի համար:"
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "Ուղարկվում է միայն սովորական ներբեռնման հարցում՝ առանց բանալու, կայքի հասցեի և ձեր բովանդակության մասին որևէ տեղեկության: Ցանկը ստորագրված է, և ստորագրության ստուգումը չանցած ցանկն անտեսվում է:"
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "Վերջին անգամ ստուգվել է %1$s: %2$s:"
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "Պահպանել և ստուգել հիմա, եթե միացված է"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "ավելի նոր ցուցակ է տեղադրվել"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "արդեն թարմացված է"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "ներբեռնումը չհաջողվեց անցնել ստորագրության ստուգումը և անտեսվեց"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital®-ին հնարավոր չեղավ միանալ. ընթացիկ ցանկը շարունակում է մնալ գործածության մեջ"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "անջատված"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "Բացել"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "Ստուգեք նրանց կարգավիճակի էջը"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "Բացեք ձեր վճարումների էջը"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "Բացեք ձեր API բանալիների էջը"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "Բացել արհեստական բանականության կարգավորումները"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "Կներեք, դուք իրավունք չունեք դա անելու:"
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "Անհայտ մատակարար:"
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "Մուտքագրեք ձեր ծառայության հասցեն, օրինակ՝ http://localhost:11434/v1:"
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "Դա API բանալու նման չէ։ Կրկին պատճենեք այն՝ առանց բացատների:"
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "Նախ տեղադրեք ձեր API բանալին:"
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "Բանալին հեռացված է:"
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "Մոդելները պահպանված են:"
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "Մուտքագրեք մոդելի ճշգրիտ անունը, օրինակ՝ ինչպես գրված է մատակարարի փաստաթղթերում:"
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "Ավելացվեց %s։ Ընտրեք այն «Որ մոդելն օգտագործել» բաժնում։"
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "Մոդելը հեռացված է։"
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "Ամենօրյա թարմացումները անջատված են: Օգտագործվում է հավելվածի հետ տրամադրված ցանկը:"
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "Ստուգված է՝ %s:"
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "Մոդելների ցանկերը թարմացվել են:"
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "Ձեր AI բանալին պահպանվել է ձեր հավելվածներից մեկի ավելի նոր տարբերակի կողմից: Թարմացրեք այս հավելվածը կամ նորից մուտքագրեք բանալին AI-ի կարգավորումներում:"
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "Ձեր պահպանված AI բանալին այլևս հնարավոր չէ բացել (կայքի անվտանգության բանալիները փոխվել են): Մուտքագրեք այն նորից AI կարգավորումներում:"
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "Արհեստական ​​բանականությունը դեռևս կարգավորված չէ: Ավելացրեք AI մատակարարի բանալին AI կարգավորումներում:"
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "Այս առաջադրանքի համար որևէ մոդել ընտրված չէ: Ընտրեք մեկը AI կարգավորումներում:"
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "Այդ արհեստական բանականության մատակարարը չի աջակցվում պլագինի այս տարբերակի կողմից:"
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "Այս կայքը չկարողացավ կապվել ձեր արհեստական ​​բանականության (AI) ծառայության հետ: Ստուգեք, որ այն աշխատում է և որ նրա հասցեն հասանելի է ձեր վեբ սերվերից (ձեր սեփական համակարգչի ծառայությունը հասանելի չէ հոսթինգում գտնվող կայքից):"
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "Այս կայքին չհաջողվեց կապ հաստատել %s-ի հետ։ Ստուգեք նրանց վիճակի էջը. եթե այն աշխատում է, հնարավոր է, որ ձեր հոսթինգը արգելափակում է ելքային միացությունները, կամ հասցեն սխալ է։"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s-ը հայտնում է, որ ձեր հաշվում չի մնացել գումար կամ քվոտա։ Ավելացրեք գումար կամ բարձրացրեք ձեր սահմանաչափը նրանց մոտ գտնվող ձեր հաշվում, այնպես որ նորից փորձեք:"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s-ը չընդունեց ձեր բանալին: Այն կարող է սխալ մուտքագրված, հետ կանչված կամ ժամկետանց լինել: Ստեղծեք նոր բանալի և տեղադրեք այն այստեղ:"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s-ը մերժեց այս հարցումը ձեր բանալու համար: Հնարավոր է, որ բանալին հասանելիություն չունի այս մոդելին կամ գործառույթին, կամ ձեր հաշիվը հաստատման կարիք ունի:"
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "\"%1$s\" մոդելը հասանելի չէ %2$s-ից ձեր բանալու համար: Ընտրեք այլ մոդել արհեստական ​​բանականության կարգավորումներում:"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s-ը սահմանափակում է ձեր բանալու կողմից հարցումների ուղարկման արագությունը: Սպասեք մեկ րոպե և նորից փորձեք, կամ բարձրացրեք ձեր հարցումների սահմանաչափը նրանց մոտ:"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s-ում հիմա խնդիրներ են (նրանց կողմից անջատում կամ գերծանրաբեռնվածություն): Ձեր կարգավորումներում որևէ սխալ չկա: Փորձեք մի փոքր ուշ:"
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "AI հարցումը ձախողվեց մեզ անհայտ պատճառով: Կրկին փորձեք. եթե այն շարունակվի կրկնվել, դիմեք աջակցման ծառայությանը ստորև բերված մանրամասներով:"
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "Արհեստական ​​բանականության մատակարարը պատասխանել է այնպիսի ձևաչափով, որը այս հավելվածը չի կարող կարդալ: Կրկին փորձեք. եթե խնդիրը կրկնվի, ընտրեք այլ մոդել կամ դիմեք աջակցման ծառայությանը:"
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "Հատուկ (OpenAI-համատեղելի)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "Նախ պահպանեք այս մատակարարի բանալին:"
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "Ձեր բանալին աշխատում է, սակայն մատակարարը դրա համար տեքստային մոդել չի նշում: Ստորև ինքներդ ավելացրեք մոդել:"
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "Միացված է: %1$s պատասխանեց՝ օգտագործելով %2$s։ Ձեր արհեստական ​​ինտելեկտի գործառույթները պատրաստ են օգտագործման:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "Ձեր օգտատիրոջ դերին չի թույլատրվում օգտագործել արհեստական բանականություն այս կայքում: Դիմեք ադմինիստրատորին:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "Այս կայքը հասել է արհեստական ​​բանականության վրա ամսական ծախսերի իր սահմանաչափին: Ադմինիստրատորը կարող է բարձրացնել այն AI-ի կարգավորումներում:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "Այս կայքը հասել է արհեստական ​​ինտելեկտի հարցումների իր ամսական սահմանաչափին: Ադմինիստրատորը կարող է բարձրացնել այն արհեստական ​​ինտելեկտի կարգավորումներում:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "Օգտագործում և արժեք"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "Մատյանը, սահմանափակումները և դերերի թույլտվությունները վերաբերում են %s-ի միջոցով օգտագործվող արհեստական ​​բանականությանը:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "Ծախսերը մոտավոր են, հաշվարկված են հրապարակված գներից. առանց հայտնի գնի մոդելը հաշվվում է որպես զրո:"
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "Այս ամիս՝ %1$s հարցում, մոտավորապես %2$s:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "Երբ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "Ում"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "Օգտագործվում է"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "Մոդել"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "Մուտքային/ելքային նշաններ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "Մասին"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "Արդյունք"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "Այնուամենայնիվ, արհեստական ​​ինտելեկտի հարցումներ դեռևս չեն կատարվել։"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "Կատարված է"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "Սահմանափակումներ և թույլտվություններ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "Ամսական ծախսերի սահմանաչափ (US դոլար)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "Թողեք դատարկ՝ առանց սահմանափակման: Արհեստական ​​բանականությունը դադարեցնում է աշխատանքը մնացած ամսվա համար, հենց որ մոտավոր արժեքը հասնի դրան:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "Ամսական հարցումների սահմանաչափ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "Թողեք դատարկ՝ առանց սահմանափակման։"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "Ովքեր կարող են օգտագործել արհեստական բանականությունը"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "Ոչինչ մի նշեք՝ թույլ տալու համար բոլորին, ովքեր կարող են օգտագործել հավելվածի հնարավորությունները, օգտագործել արհեստական ​​բանականությունը: Ադմինիստրատորները միշտ կարող են օգտագործել այն:"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "Պահպանել սահմանափակումները և թույլտվությունները"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "Սահմանափակումները և թույլտվությունները պահպանված են:"
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "Նշեք առնվազն մեկ լեզու:"
 msgid "That is more languages than one site can list."
 msgstr "Դա ավելի շատ լեզուներ են, քան մեկ կայքը կարող է նշել:"
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "Մասին"
-
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -294,10 +863,6 @@ msgstr "Առաջին լեզուն այն լեզուն է, որով գրված է
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(լռելյայն)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "Հեռացնել"
 
 #: src/admin/App.js:158
 msgid "Locale code"

@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "Provedores de IA"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "Os criadores do ChatGPT. Um bom modelo versátil."
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Os criadores do Claude. Fortes em redação e com raciocínio cuidadoso."
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Os modelos Gemini do Google. Rápidos e econômicos."
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "Uma empresa europeia de IA com modelos rápidos e econômicos."
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "Modelos de baixo custo com bom desempenho em redação e código."
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "Uma única chave para modelos de diversos provedores."
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "Qualquer serviço que funcione como a API da OpenAI, incluindo um modelo rodando no seu próprio computador ou servidor."
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "Geral (usado quando nada mais específico for definido)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "Escrita e reescrita"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "Tradução"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "Código e CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Desculpe, você não tem permissão para acessar esta página."
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "Estas configurações são compartilhadas por todos os plugins que as utilizam: %s."
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "Suas chaves são criptografadas no banco de dados deste site e só são enviadas para o provedor que você escolheu — nunca para nós."
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "Passo 1 de 2: escolha um provedor de IA"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "Você traz sua própria chave, portanto paga diretamente ao provedor pelo que utilizar. Tem dúvidas? Qualquer uma destas opções funciona bem; você poderá adicionar mais depois."
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "Próximo"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "Passo 2 de 2: conectar %s"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "Insira o endereço do seu serviço compatível com a OpenAI, terminando em /v1. Uma chave só é necessária se o serviço solicitar uma."
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "Abra o %s e faça login (ou crie uma conta gratuita)."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "a página de chaves de API %s"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "Crie uma nova chave e copie-a."
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "Cole-o abaixo e pressione \"Salvar e testar\". Enviamos uma pequena requisição para verificar se funciona."
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "A maioria dos provedores precisa de um pouco de crédito na conta antes que uma chave funcione: %s."
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "adicionar crédito"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← Escolher um provedor diferente"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "Endereço"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "A chave salva termina em …%s — cole uma nova para substituí-la"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "Chave (opcional)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "Chave de API"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "Salvar e testar"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "Provedores"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "Provedor"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "Status"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "Chave"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "Obter uma chave"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "Testar"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Remover"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "Salvo por uma versão mais recente do plugin: atualize este plugin ou insira a chave novamente."
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "A chave salva não pode mais ser aberta (as chaves de segurança do site foram alteradas). Insira-a novamente."
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "Não conectado"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "Conectado — último teste aprovado em %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "Último teste falhou: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "Conectado — ainda não testado"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "Qual modelo usar"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ indica a nossa recomendação para essa tarefa. A lista inclui todos os modelos que sua chave pode usar, obtidos em tempo real do provedor."
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— Recomendado pelo provedor —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "Salvar modelos"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "Atualizar as listas de modelos dos provedores"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "melhor qualidade"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "menor custo"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "mais rápido"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "Adicionar um modelo você mesmo"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "Um modelo foi lançado hoje? Cole o nome exato dele para usá-lo imediatamente."
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "Nome do modelo"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "Adicionar modelo"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "Lista de modelos recomendados"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "Não foi possível verificar a lista de modelos recomendados, portanto, nenhuma recomendação é exibida. Reinstale o plugin ou ative as atualizações diárias abaixo."
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "A lista em uso foi publicada em %s. Cada atualização de plugin traz uma nova."
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "Verifique também o Zinn Digital® uma vez por dia para ver uma lista atualizada."
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "Apenas uma solicitação simples de download é enviada: nenhuma chave, nenhum endereço de site, nada sobre o seu conteúdo. A lista é assinada, e qualquer lista que falhe na verificação da assinatura será ignorada."
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "Última verificação em %1$s: %2$s."
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "Salvar e verificar agora se ativado"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "uma lista mais recente foi instalada"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "já atualizado"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "o download falhou na verificação de assinatura e foi ignorado"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Não foi possível contatar a Zinn Digital®; a lista atual continua em uso"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "desligado"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "Abrir"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "Verificar a página de status deles"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "Abra sua página de cobrança"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "Abra sua página de chaves de API"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "Abrir as configurações de IA"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "Desculpe, você não tem permissão para fazer isso."
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "Provedor desconhecido."
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "Insira o endereço do seu serviço, por exemplo http://localhost:11434/v1."
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "Essa não parece ser uma chave de API. Copie-a novamente, sem espaços."
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "Cole sua chave de API primeiro."
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "Chave removida."
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "Modelos salvos."
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "Insira o nome exato do modelo, por exemplo, conforme escrito na documentação do provedor."
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "Adicionado %s. Escolha-o em \"Qual modelo usar\"."
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "Modelo removido."
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "As atualizações diárias estão desativadas. A lista que veio com o plugin é usada."
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "Marcado: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "Listas de modelos atualizadas."
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "Sua chave de IA foi salva por uma versão mais recente de um dos seus plugins. Atualize este plugin ou insira a chave novamente nas configurações de IA."
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "Sua chave de IA salva não pode mais ser aberta (as chaves de segurança do site foram alteradas). Insira-a novamente nas configurações de IA."
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "A IA ainda não foi configurada. Adicione uma chave para um provedor de IA nas configurações de IA."
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "Nenhum modelo foi selecionado para esta tarefa. Escolha um nas configurações de IA."
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "Esse provedor de IA não é suportado por esta versão do plugin."
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "Este site não conseguiu se conectar ao seu serviço de IA. Verifique se ele está em execução e se o seu endereço pode ser acessado a partir do seu servidor web (um serviço no seu próprio computador não pode ser acessado a partir de um site hospedado)."
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "Este site não conseguiu alcançar %s. Verifique a página de status deles; se estiverem funcionando, seu host pode estar bloqueando conexões de saída ou o endereço está incorreto."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s informa que sua conta não tem mais crédito ou cota. Adicione crédito ou aumente seu limite na conta deles e tente novamente."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s não aceitou sua chave. Ela pode estar incorreta, revogada ou expirada. Crie uma nova chave e cole-a aqui."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s recusou esta solicitação para sua chave. A chave pode não ter acesso a este modelo ou recurso, ou sua conta precisa de verificação."
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "O modelo \"%1$s\" não está disponível em %2$s para a sua chave. Escolha outro modelo nas configurações de IA."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s está limitando a velocidade com que sua chave pode enviar solicitações. Aguarde um minuto e tente novamente, ou aumente seu limite de taxa com eles."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s está com problemas no momento (uma interrupção ou sobrecarga do lado deles). Suas configurações estão corretas. Tente novamente em breve."
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "A solicitação de IA falhou por um motivo que não pudemos identificar. Tente novamente; se continuar acontecendo, entre em contato com o suporte com os detalhes abaixo."
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "O provedor de IA respondeu em um formato que este plugin não pôde ler. Tente novamente; se o problema persistir, escolha outro modelo ou entre em contato com o suporte."
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "Personalizado (compatível com OpenAI)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "Salve uma chave para este provedor primeiro."
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "Sua chave funciona, mas o provedor não lista nenhum modelo de texto para ela. Adicione um modelo você mesmo abaixo."
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "Conectado. %1$s respondeu usando %2$s. Seus recursos de IA estão prontos para uso."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "Sua função de usuário não tem permissão para usar IA neste site. Consulte um administrador."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "Este site atingiu seu limite mensal de gastos com IA. Um administrador pode aumentá-lo nas configurações de IA."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "Este site atingiu o limite mensal de solicitações de IA. Um administrador pode aumentá-lo nas configurações de IA."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "Uso e custo"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "O registro, os limites e as permissões de função se aplicam à IA usada por meio de: %s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "Os custos são aproximados, calculados a partir dos preços publicados; um modelo sem preço conhecido conta como zero."
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "Este mês: %1$s solicitações, cerca de %2$s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "Quando"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "Quem"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "Usado para"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "Modelo"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "Tokens de entrada / saída"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "Sobre"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "Resultado"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "Nenhuma solicitação de IA foi feita ainda."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "Concluído"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "Limites e permissões"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "Limite de gastos mensal (dólares dos US)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "Deixe em branco para nenhum limite. A IA para pelo resto do mês assim que o custo aproximado atingir esse valor."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "Limite de solicitações mensais"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "Deixe em branco para nenhum limite."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "Quem pode usar a IA"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "Desmarque tudo para permitir que todos que possam usar os recursos do plugin usem a IA. Os administradores sempre podem usá-la."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "Salvar limites e permissões"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "Limites e permissões salvos."
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "Liste pelo menos um idioma."
 msgid "That is more languages than one site can list."
 msgstr "Isso é mais do que um site pode listar."
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "Sobre"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Criado por Neil Lock, CEO da Zinn Digital® Ltd"
@@ -293,10 +862,6 @@ msgstr "O primeiro idioma é aquele em que o seu conteúdo está escrito. Os vis
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(padrão)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "Remover"
 
 #: src/admin/App.js:158
 msgid "Locale code"

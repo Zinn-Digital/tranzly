@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "ผู้ให้บริการ AI"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ผู้สร้าง ChatGPT เป็นเครื่องมืออเนกประสงค์ที่ดี"
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "ผู้สร้าง Claude มีความสามารถด้านการเขียนและการใช้เหตุผลอย่างรอบคอบ"
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "โมเดล Gemini จาก Google รวดเร็วและมีราคาประหยัด"
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "บริษัท AI ของยุโรปที่มีโมเดลความเร็วสูงและราคาประหยัด"
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "โมเดลราคาประหยัดที่เก่งด้านการเขียนและการเขียนโค้ด"
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "กุญแจดอกเดียวสำหรับโมเดลจากผู้ให้บริการที่หลากหลาย"
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "บริการใดๆ ที่ทำงานเหมือนกับ API ของ OpenAI รวมถึงโมเดลที่ทำงานบนคอมพิวเตอร์หรือเซิร์ฟเวอร์ของคุณเอง"
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "ทั่วไป (ใช้เมื่อไม่มีการกำหนดค่าที่เฉพาะเจาะจงมากกว่านี้)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "กำลังเขียนและเขียนใหม่"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "การแปล"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "โค้ดและ CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้"
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "การตั้งค่าเหล่านี้ใช้ร่วมกันโดยปลั๊กอินทุกตัวที่ใช้งาน: %s"
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "คีย์ของคุณจะถูกเข้ารหัสไว้ในฐานข้อมูลของเว็บไซต์นี้ และจะถูกส่งไปยังผู้ให้บริการที่คุณเลือกเท่านั้น — จะไม่มีการส่งมาที่เราเด็ดขาด"
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "ขั้นตอนที่ 1 จาก 2: เลือกผู้ให้บริการ AI"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "คุณใช้กุญแจของคุณเอง ดังนั้นคุณจึงจ่ายเงินให้ผู้ให้บริการโดยตรงตามที่คุณใช้งาน ไม่แน่ใจใช่ไหม? ตัวเลือกเหล่านี้ใช้งานได้ดีทั้งหมด คุณสามารถเพิ่มภายหลังได้อีก"
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "ถัดไป"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "ขั้นตอนที่ 2 จาก 2: เชื่อมต่อ %s"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "ป้อนที่อยู่ของบริการที่รองรับ OpenAI ของคุณ ซึ่งลงท้ายด้วย /v1 จำเป็นต้องใช้คีย์ก็ต่อเมื่อบริการนั้นขอเท่านั้น"
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "เปิด %s แล้วลงชื่อเข้าใช้ (หรือสร้างบัญชีฟรี)"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "หน้าคีย์ API %s"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "สร้างคีย์ใหม่และคัดลอกคีย์นั้น"
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "วางลงด้านล่างแล้วกด \"บันทึกและทดสอบ\" เราจะส่งคำขอขนาดเล็กหนึ่งรายการเพื่อตรวจสอบว่าใช้งานได้"
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "ผู้ให้บริการส่วนใหญ่ต้องการเครดิตในบัญชีเล็กน้อยก่อนที่คีย์จะทำงาน: %s"
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "เติมเครดิต"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← เลือกผู้ให้บริการรายอื่น"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "ที่อยู่"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "คีย์ที่บันทึกไว้ลงท้ายด้วย …%s โปรดวางคีย์ใหม่เพื่อแทนที่"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "คีย์ (ไม่บังคับ)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "คีย์ API"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "บันทึกและทดสอบ"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "ผู้ให้บริการ"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "ผู้ให้บริการ"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "สถานะ"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "คีย์"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "รับคีย์"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "ทดสอบ"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "นำออก"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "บันทึกด้วยปลั๊กอินเวอร์ชันที่ใหม่กว่า: โปรดอัปเดตปลั๊กอินนี้ หรือป้อนคีย์อีกครั้ง"
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "คีย์ที่บันทึกไว้ไม่สามารถเปิดได้อีกแล้ว (คีย์ความปลอดภัยของเว็บไซต์เปลี่ยนไป) โปรดป้อนใหม่อีกครั้ง"
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "ยังไม่เชื่อมต่อ"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "เชื่อมต่อแล้ว — การทดสอบล่าสุดผ่านเมื่อ %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "การทดสอบล่าสุดล้มเหลว: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "เชื่อมต่อแล้ว — ยังไม่ได้ทดสอบ"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "รุ่นที่ต้องการใช้"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ คือเครื่องหมายแสดงคำแนะนำของเราสำหรับงานนั้น รายการนี้ประกอบด้วยทุกรุ่นที่คีย์ของคุณสามารถใช้งานได้ ซึ่งดึงข้อมูลแบบสดจากผู้ให้บริการ"
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— แนะนำสำหรับผู้ให้บริการ —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "บันทึกโมเดล"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "รีเฟรชรายการโมเดลจากผู้ให้บริการ"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "คุณภาพดีที่สุด"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "ค่าใช้จ่ายต่ำที่สุด"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "เร็วที่สุด"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "เพิ่มรุ่นด้วยตัวเอง"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "มีโมเดลใหม่ออกมาวันนี้ใช่ไหม วางชื่อที่แน่นอนลงไปเพื่อใช้งานได้ทันที"
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "ชื่อรุ่น"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "เพิ่มโมเดล"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "รายชื่อรุ่นที่แนะนำ"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "ไม่สามารถตรวจสอบรายชื่อรุ่นที่แนะนำได้ จึงไม่มีการแสดงคำแนะนำ โปรดติดตั้งปลั๊กอินใหม่อีกครั้ง หรือเปิดใช้งานการอัปเดตรายวันด้านล่างนี้"
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "รายการที่ใช้งานอยู่เผยแพร่เมื่อ %s การอัปเดตปลั๊กอินแต่ละครั้งจะนำรายการใหม่มาให้"
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "โปรดตรวจสอบ Zinn Digital® วันละครั้งเช่นกันสำหรับรายการที่อัปเดตแล้ว"
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "จะมีการส่งคำขอให้ดาวน์โหลดแบบธรรมดาเท่านั้น: ไม่มีคีย์ ไม่มีที่อยู่เว็บไซต์ และไม่มีข้อมูลใดๆ เกี่ยวกับเนื้อหาของคุณ รายการดังกล่าวจะถูกลงนาม และรายการใดที่ไม่ผ่านการตรวจสอบลายเซ็นจะถูกเพิกเฉย"
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "ตรวจสอบครั้งล่าสุดเมื่อ %1$s: %2$s"
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "บันทึก และตรวจสอบทันทีหากเปิดใช้งานอยู่"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "ได้ติดตั้งรายการใหม่กว่าแล้ว"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "เป็นปัจจุบันอยู่แล้ว"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "การดาวน์โหลดไม่ผ่านการตรวจสอบลายเซ็นและถูกละเว้น"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "ไม่สามารถติดต่อ Zinn Digital® ได้ รายชื่อปัจจุบันจึงยังคงใช้งานอยู่"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "ปิดการใช้งาน"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "เปิด"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "ตรวจสอบหน้าสถานะของพวกเขา"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "เปิดหน้าการเรียกเก็บเงินของคุณ"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "เปิดหน้าคีย์ API ของคุณ"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "เปิดการตั้งค่า AI"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้ดำเนินการดังกล่าว"
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "ไม่ทราบผู้ให้บริการ"
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "ป้อนที่อยู่ของบริการของคุณ เช่น http://localhost:11434/v1"
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "คีย์ API นั้นไม่ถูกต้อง คัดลอกใหม่อีกครั้งโดยไม่มีช่องว่าง"
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "กรุณาวางคีย์ API ของคุณก่อน"
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "ลบกีย์แล้ว"
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "บันทึกโมเดลแล้ว"
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "ป้อนชื่อที่แน่นอนของโมเดล เช่นเดียวกับที่ระบุไว้ในเอกสารประกอบของผู้ให้บริการ"
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "เพิ่ม %s แล้ว เลือกได้ที่หัวข้อ \"รุ่นใดที่จะใช้\""
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "นำโมเดลออกแล้ว"
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "การอัปเดตรายวันถูกปิดใช้งาน ใช้รายการที่มาพร้อมกับปลั๊กอิน"
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "เลือกแล้ว: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "รีเฟรชรายการโมเดลแล้ว"
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "คีย์ AI ของคุณถูกบันทึกโดยปลั๊กอินเวอร์ชันที่ใหม่กว่า กรุณาอัปเดตปลั๊กอินนี้ หรือป้อนคีย์อีกครั้งในการตั้งค่า AI"
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "คีย์ AI ที่บันทึกไว้ของคุณไม่สามารถเปิดได้อีกต่อไป (คีย์ความปลอดภัยของเว็บไซต์เปลี่ยนแปลง) กรุณากรอกใหม่อีกครั้งในการตั้งค่า AI"
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "ยังไม่ได้ตั้งค่า AI โปรดเพิ่มคีย์สำหรับผู้ให้บริการ AI ในการตั้งค่า AI"
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "ยังไม่ได้เลือกโมเดลสำหรับงานนี้ โปรดเลือกหนึ่งรายการในการตั้งค่า AI"
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "ปลั๊กอินเวอร์ชันนี้ไม่รองรับผู้ให้บริการ AI รายนั้น"
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "เว็บไซต์นี้ไม่สามารถเชื่อมต่อกับบริการ AI ของคุณได้ โปรดตรวจสอบว่าบริการดังกล่าวกำลังทำงานอยู่และสามารถเข้าถึงที่อยู่ได้จากเว็บเซิร์ฟเวอร์ของคุณ (ไม่สามารถเข้าถึงบริการบนคอมพิวเตอร์ของคุณเองจากเว็บไซต์ที่โฮสต์อยู่ได้)"
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "ไซต์นี้ไม่สามารถเข้าถึง %s ได้ โปรดตรวจสอบหน้าสถานะของพวกเขา หากเว็บไซต์ใช้งานได้ปกติ โฮสต์ของคุณอาจบล็อกการเชื่อมต่อขาออก หรือที่อยู่อาจไม่ถูกต้อง"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s แจ้งว่าบัญชีของคุณไม่มีเครดิตหรือโควตาเหลืออยู่แล้ว โปรดเพิ่มเครดิตหรือเพิ่มขีดจำกัดในบัญชีของคุณ แล้วลองใหม่อีกครั้ง"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s ไม่ยอมรับคีย์ของคุณ คีย์อาจพิมพ์ผิด ถูกเพิกถอน หรือหมดอายุ โปรดสร้างคีย์ใหม่แล้ววางที่นี่"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%sปฏิเสธคำขอนี้สำหรับคีย์ของคุณ คีย์นี้อาจไม่สามารถเข้าถึงโมเดลหรือฟีเจอร์นี้ได้ หรือบัญชีของคุณจำเป็นต้องได้รับการยืนยัน"
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "โมเดล \"%1$s\" ไม่มีให้บริการจาก %2$s สำหรับคีย์ของคุณ โปรดเลือกโมเดลอื่นในการตั้งค่า AI"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s กำลังจำกัดความเร็วในการส่งคำขอคีย์ของคุณ โปรดรอสักครู่วิและลองใหม่อีกครั้ง หรือเพิ่มขีดจำกัดอัตราคำขอกับพวกเขา"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s กำลังประสบปัญหาในขณะนี้ (ระบบขัดข้องหรือมีการใช้งานเกินพิกัดจากฝั่งของพวกเขา) การตั้งค่าของคุณไม่มีอะไรผิดพลาด โปรดลองใหม่อีกครั้งในอีกสักครู่"
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "คำขอ AI ล้มเหลวด้วยสาเหตุที่เราไม่สามารถระบุได้ โปรดลองอีกครั้ง หากยังเกิดปัญหาเดิม โปรดติดต่อฝ่ายสนับสนุนพร้อมระบุรายละเอียดด้านล่างนี้"
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "ผู้ให้บริการ AI ตอบกลับในรูปแบบที่ปลั๊กอินนี้ไม่สามารถอ่านได้ โปรดลองอีกครั้ง หากยังเกิดปัญหาเดิม ให้เลือกโมเดลอื่นหรือติดต่อฝ่ายสนับสนุน"
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "กำหนดเอง (เข้ากันได้กับ OpenAI)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "บันทึกคีย์สำหรับผู้ให้บริการนี้ก่อน"
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "คีย์ของคุณใช้งานได้ แต่ผู้ให้บริการไม่ได้ระบุโมเดลข้อความสำหรับคีย์นี้ โปรดเพิ่มโมเดลด้วยตนเองด้านล่าง"
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "เชื่อมต่อแล้ว %1$s รับสายโดยใช้ %2$s ฟีเจอร์ AI ของคุณพร้อมใช้งานแล้ว"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "บทบาทผู้ใช้ของคุณไม่ได้รับอนุญาตให้ใช้ AI บนเว็บไซต์นี้ โปรดติดต่อผู้ดูแลระบบ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "เว็บไซต์นี้ใช้โควตาการใช้จ่าย AI รายเดือนจนถึงขีดจำกัดแล้ว ผู้ดูแลระบบสามารถเพิ่มขีดจำกัดได้ในการตั้งค่า AI"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "เว็บไซต์นี้ใช้งานคำขอ AI ครบตามโควต้ารายเดือนแล้ว ผู้ดูแลระบบสามารถเพิ่มขีดจำกัดได้ในการตั้งค่า AI"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "การใช้งานและค่าใช้จ่าย"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "บันทึก ขีดจำกัด และสิทธิ์บทบาทมีผลกับ AI ที่ใช้งานผ่าน: %s"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "ค่าใช้จ่ายเป็นเพียงค่าประมาณการ คำนวณจากราคาที่ประกาศไว้ ส่วนรุ่นที่ไม่มีราคาปรากฏจะถูกนับเป็นศูนย์"
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "เดือนนี้: %1$s คำขอ ประมาณ %2$s"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "เมื่อ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "ผู้ใช้"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "ใช้สำหรับ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "รุ่น"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "โทเค็น ขาเข้า / ขาออก"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "ผลลัพธ์"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "ยังไม่มีการส่งคำขอ AI ใดๆ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "เสร็จสิ้น"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "ขีดจำกัดและสิทธิ์"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "ขีดจำกัดการใช้จ่ายรายเดือน (US)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "เว้นว่างไว้หากไม่ต้องการจำกัด AI จะหยุดทำงานสำหรับเดือนที่เหลือเมื่อต้นทุนโดยประมาณถึงจำนวนดังกล่าว"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "ขีดจำกัดคำขอต่อเดือน"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "เว้นว่างไว้หากไม่ต้องการกำหนดขีดจำกัด"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "ผู้ที่สามารถใช้ AI ได้"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "ไม่เลือกช่องใดเลยเพื่อให้ทุกคนที่สามารถใช้ฟีเจอร์ของปลั๊กอินนี้ใช้ AI ได้ ผู้ดูแลระบบสามารถใช้งานได้เสมอ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "บันทึกขีดจำกัดและสิทธิ์"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "บันทึกขีดจำกัดและสิทธิ์เรียบร้อยแล้ว"
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "ระบุอย่างน้อยหนึ่งภาษา"
 msgid "That is more languages than one site can list."
 msgstr "นั่นเป็นภาษาที่เกินกว่าเว็บไซต์เดียวจะแสดงรายการได้"
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "เกี่ยวกับ"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "สร้างโดย Neil Lock ประธานเจ้าหน้าที่บริหารของ Zinn Digital® Ltd"
@@ -293,10 +862,6 @@ msgstr "ภาษาแรกคือภาษาที่เนื้อหา
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(ค่าเริ่มต้น)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "นำออก"
 
 #: src/admin/App.js:158
 msgid "Locale code"

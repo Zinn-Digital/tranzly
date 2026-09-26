@@ -37,9 +37,583 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "AI 공급자"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ChatGPT의 제작사. 다재다능한 제품입니다."
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Claude의 개발사입니다. 글쓰기와 신중한 추론에 뛰어납니다."
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Google의 Gemini 모델. 빠르고 저렴합니다."
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "빠르고 저렴한 모델을 제공하는 유럽의 AI 기업입니다."
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "글쓰기와 코딩에 뛰어난 저렴한 모델."
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "다양한 제공업체의 모델을 위한 하나의 키."
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "OpenAI의 API처럼 작동하는 모든 서비스(사용자 본인의 컴퓨터나 서버에서 실행 중인 모델 포함)입니다."
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "일반 (더 구체적인 설정이 없을 때 사용)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "작성 및 재작성"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "번역"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "코드 및 CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "죄송합니다. 이 페이지에 접근할 권한이 없습니다."
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "이 설정들은 다음 플러그인들에서 공유됩니다: %s."
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "귀하의 키는 이 사이트의 데이터베이스에 암호화되어 저장되며, 당사가 아닌 귀하가 선택한 제공업체로만 전송됩니다."
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "1단계 / 2단계: AI 제공업체 선택"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "고객님께서 직접 키를 가져오시는 방식이므로, 사용하신 만큼 서비스 제공업체에 직접 비용을 지불하시게 됩니다. 잘 모르시겠나요? 이 중 어떤 것을 선택하셔도 좋습니다. 나중에 더 추가하실 수 있습니다."
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "다음"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "2단계 중 2단계: %s 연결"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "/v1으로 끝나는 OpenAI 호환 서비스의 주소를 입력하세요. 키는 서비스에서 요구하는 경우에만 필요합니다."
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "%s을(를) 열고 로그인하세요(또는 무료 계정을 만드세요)."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s API 키 페이지"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "새 키를 생성하고 복사하십시오."
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "아래에 붙여넣고 \"저장 및 테스트\"를 누르세요. 작동을 확인하기 위해 작은 요청 하나를 보냅니다."
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "대부분의 호스팅 업체는 키가 작동하기 전에 계정에 소액의 크레딧이 필요합니다: %s."
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "크레딧 추가"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← 다른 공급업체 선택"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "주소"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "저장된 키의 끝자리: …%s — 교체하려면 새 키를 붙여넣으세요."
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "키 (선택 사항)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API 키"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "저장 및 테스트"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "제공자"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "제공자"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "상태"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "키"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "키 발급받기"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "테스트"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "제거"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "최신 플러그인 버전으로 저장됨: 이 플러그인을 업데이트하거나 키를 다시 입력하세요."
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "저장된 키를 더 이상 열 수 없습니다(사이트의 보안 키가 변경되었습니다). 다시 입력해 주세요."
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "연결되지 않음"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "연결됨 — 마지막 테스트 통과 %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "마지막 테스트 실패: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "연결됨 — 아직 테스트되지 않음"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "사용할 모델"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ 표시는 해당 작업에 대한 추천 모델입니다. 목록에는 공급자에서 실시간으로 읽어 온, 키로 사용할 수 있는 모든 모델이 포함됩니다."
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— 제공업체 추천 —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "모델 저장"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "제공업체에서 모델 목록 새로 고치기"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "최고 품질"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "최저가"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "가장 빠른"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "모델 직접 추가하기"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "오늘 새 모델이 나왔나요? 정확한 이름을 붙여넣고 바로 사용하세요."
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "모델 이름"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "모델 추가"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "추천 모델 목록"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "추천 모델 목록을 확인할 수 없어 추천 항목이 표시되지 않습니다. 플러그인을 다시 설치하거나 아래에서 일일 업데이트를 켜십시오."
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "사용 중인 목록은 %s에 발행되었습니다. 각 플러그인 업데이트마다 새로운 목록이 제공됩니다."
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "업데이트된 목록을 확인하려면 하루에 한 번 Zinn Digital®도 확인하세요."
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "단순한 다운로드 요청만 전송되며, 키, 사이트 주소, 콘텐츠 관련 정보는 전혀 전송되지 않습니다. 목록은 서명되어 있으며, 서명 확인에 실패한 목록은 무시됩니다."
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "마지막 확인 시간 %1$s: %2$s."
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "저장하고 켜져 있는지 지금 확인하세요"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "더 최신 목록이 설치되었습니다"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "이미 최신 버전입니다"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "다운로드의 서명 검증이 실패하여 무시되었습니다"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital®에 연결할 수 없어 현재 목록을 계속 사용합니다"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "꺼짐"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "열기"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "상태 페이지 확인하기"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "결제 페이지 열기"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "API 키 페이지를 여세요"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "AI 설정 열기"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "죄송합니다. 이 작업을 수행할 권한이 없습니다."
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "알 수 없는 제공업체입니다."
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "서비스 주소를 입력하십시오. 예를 들어 http://localhost:11434/v1과 같습니다."
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "API 키가 아닌 것 같습니다. 공백 없이 다시 복사하세요."
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "API 키를 먼저 붙여넣으세요."
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "키가 삭제되었습니다."
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "모델이 저장되었습니다."
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "제공업체의 문서에 나와 있는 대로 모델의 정확한 이름을 입력하십시오."
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "%s이(가) 추가되었습니다. \"사용할 모델\" 아래에서 선택하세요."
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "모델이 제거되었습니다."
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "일일 업데이트가 꺼져 있습니다. 플러그인과 함께 제공된 목록이 사용됩니다."
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "체크됨: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "모델 목록이 새로 고쳐졌습니다."
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "AI 키가 플러그인의 최신 버전에 의해 저장되었습니다. 이 플러그인을 업데이트하거나 AI 설정에서 키를 다시 입력하세요."
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "저장된 AI 키를 더 이상 열 수 없습니다(사이트의 보안 키가 변경되었습니다). AI 설정에서 다시 입력해 주세요."
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "AI가 아직 설정되지 않았습니다. AI 설정에서 AI 제공업체의 키를 추가하세요."
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "이 작업에 선택된 모델이 없습니다. AI 설정에서 모델을 선택하세요."
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "해당 AI 공급자는 이 플러그인 버전에서 지원되지 않습니다."
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "이 사이트에서 AI 서비스에 연결할 수 없습니다. 서비스가 실행 중이며 웹 서버에서 해당 주소에 접근할 수 있는지 확인하세요(개인 컴퓨터의 서비스는 호스팅된 사이트에서 접근할 수 없습니다)."
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "이 사이트에서 %s에 연결할 수 없습니다. 상태 페이지를 확인하십시오. 정상 작동 중인 경우 호스트가 발신 연결을 차단하고 있거나 주소가 잘못되었을 수 있습니다."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s 계정에 크레딧이나 할당량이 남아 있지 않습니다. 해당 계정에서 크레딧을 충전하거나 한도를 늘린 후 다시 시도하세요."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s에서 회원님의 키를 거부했습니다. 오타가 있거나, 폐기되었거나, 만료되었을 수 있습니다. 새 키를 생성하여 여기에 붙여넣으세요."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s에서 귀하의 키에 대한 이 요청을 거부했습니다. 해당 키가 이 모델이나 기능에 액세스할 수 없거나, 계정 인증이 필요할 수 있습니다."
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "%2$s에서 사용자의 키로 \"%1$s\" 모델을 사용할 수 없습니다. AI 설정에서 다른 모델을 선택하세요."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s이(가) 키의 요청 전송 속도를 제한하고 있습니다. 잠시 기다린 후 다시 시도하시거나, 해당 서비스에서 요청 제한(rate limit)을 상향 조정하세요."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s에서 현재 문제가 발생하고 있습니다(해당 측의 서비스 중단 또는 과부하). 회원님의 설정에는 문제가 없습니다. 잠시 후 다시 시도해 주세요."
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "식별할 수 없는 이유로 AI 요청이 실패했습니다. 다시 시도해 주시고, 문제가 지속되면 아래 세부 정보를 포함하여 지원팀에 문의하세요."
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "AI 공급자가 이 플러그인이 읽을 수 없는 형식으로 응답했습니다. 다시 시도해 주세요. 계속 문제가 발생하면 다른 모델을 선택하거나 고객지원팀에 문의하세요."
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "사용자 지정 (OpenAI 호환)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "이 제공자에 대한 키를 먼저 저장하십시오."
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "귀하의 키는 작동하지만, 제공업체에서 해당 키에 대한 텍스트 모델을 나열하지 않았습니다. 아래에 직접 모델을 추가하세요."
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "연결되었습니다. %1$s님이 %2$s을(를) 사용하여 응답했습니다. AI 기능을 사용할 준비가 되었습니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "귀하의 사용자 역할은 이 사이트에서 AI를 사용할 수 없습니다. 관리자에게 문의하세요."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "이 사이트의 월간 AI 사용 한도가 초과되었습니다. 관리자는 AI 설정에서 이를 상향 조정할 수 있습니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "이 사이트는 월간 AI 요청 한도에 도달했습니다. 관리자는 AI 설정에서 이를 늘릴 수 있습니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "사용량 및 비용"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "로그, 제한 및 역할 권한은 다음을 통해 사용되는 AI에 적용됩니다: %s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "비용은 대략적인 금액으로, 공개된 가격을 바탕으로 산정되었습니다. 알려진 가격이 없는 모델은 0으로 처리됩니다."
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "이번 달: %1$s개 요청, 약 %2$s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "언제"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "소유자"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "사용 용도"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "모델"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "입력 / 출력 토큰"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "정보"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "결과"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "아직 생성된 AI 요청이 없습니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "완료"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "한도 및 권한"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "월별 지출 한도 (US 달러)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "제한을 두지 않으려면 비워 두세요. 대략적인 비용이 도달하면 해당 월의 남은 기간 동안 AI가 중단됩니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "월별 요청 한도"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "제한을 두지 않으려면 비워 두세요."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "AI를 사용할 수 있는 사용자"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "플러그인의 기능을 사용할 수 있는 모든 사용자가 AI를 사용할 수 있도록 하려면 아무것도 선택하지 마십시오. 관리자는 항상 사용할 수 있습니다."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "한도 및 권한 저장"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "제한 및 권한이 저장되었습니다."
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +826,6 @@ msgstr "최소 하나 이상의 언어를 입력하세요."
 msgid "That is more languages than one site can list."
 msgstr "하나의 사이트에 나열할 수 있는 것보다 더 많은 언어입니다."
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "정보"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd의 CEO인 Neil Lock이 제작함"
@@ -294,10 +864,6 @@ msgstr "첫 번째 언어는 콘텐츠가 작성된 언어입니다. 방문자�
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(기본값)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "제거"
 
 #: src/admin/App.js:158
 msgid "Locale code"

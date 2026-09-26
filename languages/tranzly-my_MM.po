@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "AI ပံ့ပိုးပေးသူများ"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ChatGPT ကို ဖန်တီးသူများ။ အရာရာတွင် ကောင်းမွန်သော လက်စွမ်းပြသူ။"
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Claude ကို ဖန်တီးသူများ။ အရေးအသားနှင့် တွေးခေါ်ဆင်ခြင်မှုတွင် အားကောင်းသည်။"
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Google ၏ Gemini မော်ဒယ်များ။ မြန်ဆန်ပြီး ကုန်ကျစရိတ် သက်သာသည်။"
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "မြန်ဆန်၍ ဈေးနှုန်းချိုသာသော မော်ဒယ်များပါရှိသော ဥရောပ AI ကုမ္ပဏီတစ်ခု။"
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "ရေးသားခြင်းနှင့် ကုဒ်ရေးခြင်းတို့တွင် ကောင်းမွန်သော ကုန်ကျစရိတ်သက်သာသည့် မော်ဒယ်များ။"
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "မတူညီသော ပံ့ပိုးပေးသူများစွာထံမှ မော်ဒယ်များအတွက် သော့ချက်တစ်ခု။"
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "သင့်ကိုယ်ပိုင်ကွန်ပျူတာ သို့မဟုတ် ဆာဗာတွင် လုပ်ဆောင်နေသော မော်ဒယ်လ်တစ်ခု အပါအဝင် OpenAI ၏ API ကဲ့သို့ လုပ်ဆောင်သည့် မည်သည့်ဝန်ဆောင်မှုမဆို။"
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "အထွေထွေ (ပို၍တိကျသောအရာကို မသတ်မှတ်ထားသည့်အခါ အသုံးပြုသည်)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "ရေးသားခြင်းနှင့် ပြန်လည်ရေးသားခြင်း"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "ဘာသာပြန်ဆိုချက်"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "ကုဒ်နှင့် CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "တောင်းပန်ပါတယ်၊ သင်သည် ဤစာမျက်နှာကို ဝင်ရောက်ကြည့်ရှုရန် ခွင့်ပြုချက်မရှိပါ။"
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "ဤဆက်တင်များကို ၎င်းတို့ကို အသုံးပြုသည့် ပလပ်အင်တိုင်းက မျှဝေသုံးစွဲသည် - %s။"
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "သင့်၏သော့များကို ဤဆိုက်၏ဒေတာဘေ့စ်တွင် ကုဒ်ဝှက်ထားရှိပြီး သင်ရွေးချယ်ထားသော ပံ့ပိုးပေးသူထံသို့သာ ပို့ဆောင်ပေးကာ ကျွန်ုပ်တို့ထံသို့ လုံးဝမပို့ဆောင်ပါ။"
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "အဆင့် ၁/၂ - AI ပံ့ပိုးပေးသူကို ရွေးချယ်ပါ"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "သင်သည် သင်၏ကိုယ်ပိုင်ကီးကို ယူဆောင်လာခြင်းဖြစ်သဖြင့် သင်အသုံးပြုသည့်အတိုင်း ပံ့ပိုးပေးသူထံ တိုက်ရိုက်ပေးချေရမည်ဖြစ်သည်။ မသေချာသေးဘူးလား။ ဤအရာများထဲမှ တစ်ခုခုသည် ကောင်းမွန်စွာ အလုပ်လုပ်ပါသည်။ နောက်မှ ထပ်ထည့်နိုင်ပါသည်။"
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "နောက်သို့"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "အဆင့် ၂ ၏ ၂ - %s ကို ချိတ်ဆက်ပါ"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "/v1 ဖြင့် ဆုံးသော သင်၏ OpenAI-compatible ဝန်ဆောင်မှု၏ လိပ်စာကို ထည့်ပါ။ သော့ချက်ကို ဝန်ဆောင်မှုက တောင်းမှသာ လိုအပ်သည်။"
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "%s ကို ဖွင့်ပြီး ဝင်ရောက်ပါ (သို့မဟုတ် အခမဲ့ အကောင့်တစ်ခု ဖန်တီးပါ)။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s API သော့များ စာမျက်နှာ"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "သော့ချက်အသစ်တစ်ခု ဖန်တီးပြီး ၎င်းကို ကူးယူပါ။"
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "၎င်းကို အောက်တွင် ကူးထည့်ပြီး \"သိမ်းဆည်းပြီး စမ်းသပ်ရန်\" ကို နှိပ်ပါ။ ၎င်း အလုပ်လုပ်ကြောင်း စစ်ဆေးရန် သေးငယ်သော တောင်းဆိုချက်တစ်ခု ပို့ပါမည်။"
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "သော့ချက်တစ်ခု အလုပ်မလုပ်မီ ဝန်ဆောင်မှုပေးသူအများစုသည် အကောင့်တွင် ငွေအနည်းငယ် ကြိုတင်ဖြည့်သွင်းရန် လိုအပ်သည်- %s။"
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "ငွေဖြည့်ပါ"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← အခြားဝန်ဆောင်မှုပေးသူကို ရွေးချယ်ပါ"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "လိပ်စာ"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "သိမ်းဆည်းထားသော သော့ချက်သည် …%s ဖြင့် ဆုံးသည် — ၎င်းကို အစားထိုးရန် အသစ်တစ်ခုကို ကူးထည့်ပါ"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "ကီး (စိတ်ကြိုက်)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API သော့ချက်"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "သိမ်းဆည်းပြီး စမ်းသပ်ရန်"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "ပandေဝဒါများ"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "ပံ့ပိုးပေးသူ"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "အခြေအနေ"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "သော့ချက်"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "သော့ချက်တစ်ခု ရယူရန်"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "စမ်းသပ်ရန်"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "ဖယ်ရှားရန်"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "ပိုမိုသစ်လွင်သော ပလပ်အင်ဗားရှင်းဖြင့် သိမ်းဆည်းထားပါသည်- ဤပလပ်အင်ကို အပ်ဒိတ်လုပ်ပါ သို့မဟုတ် သော့ချက်ကို ထပ်မံထည့်ပါ။"
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "သိမ်းဆည်းထားသော သော့ချက်ကို ယခုအခါ ဖွင့်၍မရတော့ပါ (ဆိုဒ်၏ လုံခြုံရေးသော့ချက်များ ပြောင်းလဲသွားပါပြီ)။ ၎င်းကို ထပ်မံထည့်သွင်းပါ။"
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "ချိတ်ဆက်မထားပါ"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "ချိတ်ဆက်ထားသည် — နောက်ဆုံးစမ်းသပ်မှု အောင်မြင်သည် %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "နောက်ဆုံး စမ်းသပ်မှု မအောင်မြင်ပါ: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "ချိတ်ဆက်ထားသည် — စစ်ဆေးရသေးသည်မဟုတ်ပါ"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "မည်သည့်မော်ဒယ်ကို အသုံးပြုရမည်နည်း"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ သည် ထိုလုပ်ဆောင်ချက်အတွက် ကျွန်ုပ်တို့၏ အကြံပြုချက်ကို ဖော်ပြသည်။ ဤစာရင်းတွင် သင့်သော့ချက်စာသား အသုံးပြုနိုင်သည့် မော်ဒယ်အားလုံး ပါဝင်ပြီး ပံ့ပိုးပေးသူထံမှ တိုက်ရိုက်ဖတ်ရှုထားသည်။"
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— ဝန်ဆောင်မှုပေးသူအတွက် အကြံပြုထားသည် —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "ပုံစံများကို သိမ်းဆည်းရန်"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "ပံ့ပိုးပေးသူများထံမှ မော်ဒယ်စာရင်းများကို အသစ်ပြန်လုပ်ပါ"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "အရည်အသွေးအကောင်းဆုံး"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "ကုန်ကျစရိတ် အနည်းဆုံး"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "အမြန်ဆုံး"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "မော်ဒယ်ကို ကိုယ်တိုင်ထည့်ပါ"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "မော်ဒယ်အသစ်တစ်ခု ယနေ့ထွက်ရှိလာပါသလား။ ၎င်းကို ချက်ချင်းအသုံးပြုရန် ၎င်း၏ အမည်အတိအကျကို ကူးထည့်ပါ။"
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "မော်ဒယ်အမည်"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "ပုံစံခွဲထည့်ရန်"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "အကြံပြုထားသော မော်ဒယ်များစာရင်း"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "အကြံပြုထားသော မော်ဒယ်များစာရင်းကို အတည်ပြု၍ မရပါ၊ ထို့ကြောင့် မည်သည့် အကြံပြုချက်မျှ ဖော်ပြမထားပါ။ ပလပ်အင်ကို ပြန်လည်ထည့်သွင်းပါ သို့မဟုတ် အောက်တွင် နေ့စဉ် အပ်ဒိတ်များကို ဖွင့်ပါ။"
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "အသုံးပြုနေသော စာရင်းကို %s တွင် ထုတ်ဝေခဲ့သည်။ ပလပ်အင် အပ်ဒိတ်တိုင်းသည် စာရင်းအသစ်တစ်ခုကို ယူဆောင်လာပေးသည်။"
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "မွမ်းမံထားသော စာရင်းအသစ်အတွက် Zinn Digital® ကို တစ်နေ့လျှင် တစ်ကြိမ် စစ်ဆေးပါ။"
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "ရိုးရှင်းသော ဒေါင်းလုဒ်တောင်းဆိုချက်ကိုသာ ပေးပို့သည်- မည်သည့် ကီး၊ ဝဘ်ဆိုက်လိပ်စာ သို့မဟုတ် သင်၏ အကြောင်းအရာနှင့် ပတ်သက်သည်များ ပါဝင်မည် မဟုတ်ပါ။ စာရင်းကို လက်မှတ်ရေးထိုးထားပြီး လက်မှတ်စစ်ဆေးမှု မအောင်မြင်သော စာရင်းကို လစ်လျူရှုမည်ဖြစ်သည်။"
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "နောက်ဆုံးစစ်ဆေးခဲ့သည့်အချိန် %1$s: %2$s။"
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "ချွေတာပြီး၊ ဖွင့်ထားပါက ယခုပင် စစ်ဆေးပါ"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "ပိုမိုသစ်လွင်သော စာရင်းတစ်ခုကို ထည့်သွင်းပြီးပါပြီ"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "နောက်ဆုံးပေါ် ဖြစ်နေပါပြီ"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "ဒေါင်းလုပ်သည် လက်မှတ်စစ်ဆေးမှု မအောင်မြင်သဖြင့် လျစ်လျူရှုခဲ့သည်"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital® သို့ ဆက်သွယ်၍မရပါ။ လက်ရှိစာရင်းကို ဆက်လက်အသုံးပြုမည်ဖြစ်သည်"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "ပိတ်ထားသည်"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "ဖွင့်ရန်"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "သူတို့၏ အခြေအနေစာမျက်နှာကို စစ်ဆေးပါ"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "သင့် ငွေတောင်းခံလွှာ စာမျက်နှာကို ဖွင့်ပါ"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "သင့်၏ API သော့များ စာမျက်နှာကို ဖွင့်ပါ"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "AI ဆက်တင်များကို ဖွင့်ပါ"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "တောင်းပန်ပါတယ်၊ ၎င်းကို လုပ်ဆောင်ခွင့် မရှိပါ။"
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "မသိရှိရသော ပံ့ပိုးပေးသူ။"
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "သင့်ဝန်ဆောင်မှု၏ လိပ်စာကို ထည့်ပါ၊ ဥပမာ http://localhost:11434/v1 ဖြစ်သည်။"
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "API သော့တစ်ခုနှင့် မတူပါ။ နေရာလပ်များမပါဘဲ ထပ်မံကူးယူပါ။"
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "ပထမဦးစွာ သင့်၏ API သော့ကို ကူးထည့်ပါ။"
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "သော့ကို ဖယ်ရှားပြီးပါပြီ။"
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "ပုံစံများကို သိမ်းဆည်းပြီးပါပြီ။"
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "ပံ့ပိုးပေးသူ၏ စာရွက်စာတမ်းများတွင် ဖော်ပြထားသည့်အတိုင်း မော်ဂျူး၏ အတိအကျအမည်ကို ထည့်ပါ။"
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "%s ထည့်ပြီးပါပြီ။ \"မည်သည့်မော်ဒယ်ကို သုံးရမလဲ\" အောက်တွင် ၎င်းကို ရွေးပါ။"
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "မော်ဒယ်ကို ဖယ်ရှားပြီးပါပြီ။"
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "နေ့စဉ် အပ်ဒိတ်များကို ပိတ်ထားသည်။ ပလပ်ဂင်နှင့်အတူ ပါလာသော စာရင်းကို အသုံးပြုထားသည်။"
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "စစ်ဆေးပြီးပါပြီ: %s။"
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "ပုံစံစာရင်းများကို အသစ်ပြုလုပ်ပြီးပါပြီ။"
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "သင့် AI သော့ချက်ကို သင်၏ ပလပ်ဂင်တစ်ခု၏ ပိုမိုအသစ်သော ဗားရှင်းတစ်ခုက သိမ်းဆည်းခဲ့သည်။ ဤပလပ်ဂင်ကို အပ်ဒိတ်လုပ်ပါ သို့မဟုတ် AI ဆက်တင်များတွင် သော့ချက်ကို ထပ်မံထည့်သွင်းပါ။"
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "သင်၏ သိမ်းဆည်းထားသော AI သော့ချက်ကို ဖွင့်၍မရတော့ပါ (ဆိုက်၏ လုံခြုံရေးသော့ချက်များ ပြောင်းလဲသွားပါပြီ)။ AI ဆက်တင်များတွင် ၎င်းကို ထပ်မံထည့်သွင်းပါ။"
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "AI ကို မသတ်မှတ်ရသေးပါ။ AI ဆက်တင်များတွင် AI ပံ့ပိုးပေးသူတစ်ဦးအတွက် သော့ချက်တစ်ခုကို ထည့်ပါ။"
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "ဤလုပ်ဆောင်ချက်အတွက် မော်ဒယ်ကို မရွေးချယ်ရသေးပါ။ AI ဆက်တင်များတွင် တစ်ခုကို ရွေးပါ။"
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "ထို AI ပံ့ပိုးပေးသူကို ဤပလပ်အင် ဗားရှင်းဖြင့် မပံ့ပိုးပါ။"
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "ဤဆိုက်သည် သင်၏ AI ဝန်ဆောင်မှုကို မချိတ်ဆက်နိုင်ပါ။ ၎င်း အလုပ်လုပ်နေခြင်း ရှိမရှိနှင့် ၎င်း၏လိပ်စာကို သင်၏ ဝဘ်ဆာဗာမှ ချိတ်ဆက်၍ရနိုင်ခြင်း ရှိမရှိ စစ်ဆေးပါ (သင့်ကိုယ်ပိုင်ကွန်ပျူတာရှိ ဝန်ဆောင်မှုတစ်ခုကို ဟို့စ်လုပ်ထားသော ဆိုက်တစ်ခုမှ ချိတ်ဆက်၍ မရနိုင်ပါ)။"
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "ဤဆိုက်သည် %s သို့ မချိတ်ဆက်နိုင်ပါ။ ၎င်းတို့၏ အခြေအနေစာမျက်နှာကို စစ်ဆေးပါ၊ အလုပ်လုပ်နေပါက သင့်ဟိုစ်မှ ထွက်ဝင်ချိတ်ဆက်မှုများကို ပိတ်ပင်ထားခြင်း သို့မဟုတ် လိပ်စာ မှားယွင်းနေခြင်း ဖြစ်နိုင်သည်။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s က သင့်အကောင့်တွင် ငွေကြေး သို့မဟုတ် ခွဲတမ်း လုံးဝမကျန်တော့ကြောင်း ဆိုထားသည်။ ၎င်းတို့ထံရှိ သင့်အကောင့်တွင် ငွေဖြည့်ပါ သို့မဟုတ် ကန့်သတ်ချက်ကို မြှင့်တင်ပြီးနောက် ထပ်မံကြိုးစားပါ။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s သည် သင်၏ သော့ကို လက်မခံပါ။ ၎င်းသည် စာလုံးပေါင်းမှားခြင်း၊ ရုပ်သိမ်းခံရခြင်း သို့မဟုတ် သက်တမ်းကုန်ဆုံးသွားခြင်း ဖြစ်နိုင်သည်။ သော့အသစ်တစ်ခု ဖန်တီးပြီး ဤနေရာတွင် ကူးထည့်ပါ။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s သည် သင်၏ သော့ချက်အတွက် ဤတောင်းဆိုမှုကို ငြင်းပယ်ခဲ့သည်။ ဤသော့ချက်သည် ဤမော်ဒယ် သို့မဟုတ် အင်္ဂါရပ်ကို အသုံးပြုခွင့် မရှိခြင်း သို့မဟုတ် သင်၏အကောက်ကို အတည်ပြုရန် လိုအပ်ခြင်း ဖြစ်နိုင်သည်။"
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "သင့်သော့အတွက် %2$s မှ \"%1$s\" မော်ဒယ်ကို မရရှိနိုင်ပါ။ AI ဆက်တင်များတွင် အခြားမော်ဒယ်တစ်ခုကို ရွေးချယ်ပါ။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s သည် သင့်သော့ (key) မှ တောင်းဆိုချက်များ ပေးပို့နိုင်သည့် အမြန်နှုန်းကို ကန့်သတ်နေပါသည်။ တစ်မိနစ်ခန့် စောင့်ပြီးနောက် ထပ်မံကြိုးစားပါ သို့မဟုတ် ၎င်းတို့နှင့် သင့်နှုန်းထား ကန့်သတ်ချက်ကို တိုးမြှင့်ပါ။"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s တွင် လက်ရှိ ပြဿနာများ ရှိနေပါသည် (၎င်းတို့ဘက်မှ ဝန်ဆောင်မှုရပ်ဆိုင်းခြင်း သို့မဟုတ် ဝန်ပိုနေခြင်း ဖြစ်သည်)။ သင်၏ ဆက်တင်များတွင် မည်သည့်အမှားမျှ မရှိပါ။ ခဏနေမှ ထပ်ကြိုးစားပါ။"
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "AI တောင်းဆိုချက်သည် အကြောင်းရင်းကို ကျွန်ုပ်တို့ မဖော်ထုတ်နိုင်ဘဲ မအောင်မြင်ခဲ့ပါ။ ထပ်ကြိုးစားကြည့်ပါ၊ ဆက်လက်ဖြစ်ပေါ်နေပါက အောက်ပါအသေးစိတ်အချက်အလက်များဖြင့် ပံ့ပိုးကူညီရေးအဖွဲ့ထံ ဆက်သွယ်ပါ။"
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "AI ပေးသွင်းသူသည် ဤပလပ်ဂင် မဖတ်နိုင်သော ပုံစံဖြင့် ဖြေကြားခဲ့သည်။ ထပ်ကြိုးစားပါ၊ ဆက်ဖြစ်နေပါက အခြားမော်ဒယ်တစ်ခုကို ရွေးပါ သို့မဟုတ် ပံ့ပိုးကူညီရေးအဖွဲ့ထံ ဆက်သွယ်ပါ။"
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "စိတ်ကြိုက် (OpenAI-compatible)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "ဤပံ့ပိုးပေးသူအတွက် သော့ချက်တစ်ခုကို အရင်သိမ်းဆည်းပါ။"
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "သင့်သော့ချက် အလုပ်လုပ်သော်လည်း၊ ပံ့ပိုးပေးသူသည် ၎င်းအတွက် စာသားပုံစံ (text model) တစ်ခုမျှ စာရင်းမပြုစုထားပါ။ အောက်တွင် မော်ဒယ်တစ်ခုကို သင်ကိုယ်တိုင် ထည့်ပါ။"
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "ချိတ်ဆက်ပြီးပါပြီ။ %1$s က %2$s ကို အသုံးပြု၍ ဖြေကြားခဲ့သည်။ သင်၏ AI အင်္ဂါရပ်များကို အသုံးပြုရန် အဆင်သင့်ဖြစ်နေပါပြီ။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "ဤဆိုက်တွင် AI အသုံးပြုရန် သင့်အသုံးပြုသူအခန်းကဏ္ဍကို ခွင့်မပြုပါ။ အက်ဒမင်နိစထရေတာထံ မေးမြန်းပါ။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "ဤဆိုက်သည် ၎င်း၏လစဉ် AI သုံးစွဲမှု ကန့်သတ်ချက်သို့ ရောက်ရှိသွားပါပြီ။ စီမံခန့်ခွဲသူတစ်ဦးသည် AI ဆက်တင်များတွင် ၎င်းကို တိုးမြှင့်နိုင်ပါသည်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "ဤဆိုက်သည် ၎င်း၏ လစဉ် AI တောင်းဆိုမှု ကန့်သတ်ချက်သို့ ရောက်ရှိသွားပါပြီ။ စီမံခန့်ခွဲသူတစ်ဦးသည် ၎င်းကို AI ဆက်တင်များတွင် တိုးမြှင့်နိုင်ပါသည်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "အသုံးပြုမှုနှင့် ကုန်ကျစရိတ်"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "%s မှတစ်ဆင့် အသုံးပြုသော AI တွင် လော့ဂ်၊ ကန့်သတ်ချက်များနှင့် အခန်းကဏ္ဍ ခွင့်ပြုချက်များ သက်ရောက်ပါသည်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "ကုန်ကျစရိတ်မှာ ခန့်မှန်းခြေဖြစ်ပြီး၊ ထုတ်ဝေထားသော ဈေးနှုန်းများမှ တွက်ချက်ထားခြင်းဖြစ်ပါသည်။ ဈေးနှုန်းအတိအကျမသိရသေးသော မော်ဒယ်ကို သုညအဖြစ် ရတွက်ထားပါသည်။"
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "ဤလတွင် - %1$s တောင်းဆိုချက်များ၊ %2$s ခန့်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "အခါ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "မည်သူ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "အတွက် အသုံးပြုသည်"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "ပုံစံခွဲ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "ထည့်သွင်းမှု / ထုတ်ယူမှု တိုကင်များ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "အကြောင်း"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "ရလဒ်"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "AI တောင်းဆိုမှုများကို ပြုလုပ်ထားခြင်း မရှိသေးပါ။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "ပြီးပါပြီ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "ကန့်သတ်ချက်များနှင့် ခွင့်ပြုချက်များ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "လစဉ် သုံးစွဲမှု ကန့်သတ်ချက် (US ဒေါ်လာ)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "ကန့်သတ်ချက်မရှိလိုပါက ကွက်လပ်ထားခဲ့ပါ။ ခန့်မှန်းခြေကုန်ကျစရိတ် ယင်းသို့ရောက်ရှိသွားပါက AI သည် ကျန်ရှိသည့်လအတွက် ရပ်တန့်သွားမည်ဖြစ်သည်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "လစဉ် တောင်းဆိုမှု ကန့်သတ်ချက်"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "ကန့်သတ်ချက်မရှိလိုပါက ကွက်လပ်ထားခဲ့ပါ။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "AI ကို မည်သူများ အသုံးပြုနိုင်သနည်း"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "ပလပ်အင်၏ အင်္ဂါရပ်များကို အသုံးပြုနိုင်သူတိုင်း AI ကို သုံးခွင့်ပြုရန် ဘာမှမခြစ်ပါနှင့်။ စီမံခန့်ခွဲသူများအနေဖြင့် ၎င်းကို အမြဲတမ်း အသုံးပြုနိုင်ပါသည်။"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "ကန့်သတ်ချက်များနှင့် ခွင့်ပြုချက်များကို သိမ်းဆည်းရန်"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "ကန့်သတ်ချက်များနှင့် ခွင့်ပြုချက်များကို သိမ်းဆည်းပြီးပါပြီ။"
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "အနည်းဆုံး ဘာသာစကား တစ်ခုက�
 msgid "That is more languages than one site can list."
 msgstr "ထိုသည်မှာ နေရာတစ်ခုတည်းတွင် ဖော်ပြနိုင်သည်ထက် ပိုမိုများပြားသော ဘာသာစကားများ ဖြစ်ပါသည်။"
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "အကြောင်း"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd ၏ CEO ဖြစ်သူ Neil Lock မှ တည်ဆောက်သည်"
@@ -293,10 +862,6 @@ msgstr "ပထမဆုံးဘာသာစကားမှာ သင့်အ�
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(မူရင်း)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "ဖယ်ရှားရန်"
 
 #: src/admin/App.js:158
 msgid "Locale code"

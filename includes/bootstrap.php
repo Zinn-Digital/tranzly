@@ -31,6 +31,20 @@ require_once __DIR__ . '/class-plugin.php';
 \ZinnDigital\Tranzly\Plugin::boot();
 
 /*
+ * The shared AI core (wp/packages/zinn-ai-core, rendered into ai-core/ by wp/bin/build-ai-core.php).
+ * If another plugin on the site carries its own copy, the copies agree on one settings screen and
+ * one set of keys by themselves; see ai-core/class-core.php.
+ */
+require_once __DIR__ . '/ai-core/load.php';
+\ZinnDigital\Tranzly\AiCore\Core::boot(
+	array(
+		'slug' => 'tranzly',
+		'name' => 'Tranzly',
+		'pro'  => static fn(): bool => tranzly_fs()->can_use_premium_code(),
+	)
+);
+
+/*
  * ⛔⛔ THE PREMIUM LAYER LOADS ONLY WHEN ITS FILE IS PRESENT AND THE LICENCE ALLOWS IT.
  *
  * The free package (house and licensing-service alike) drops the whole premium-only directory,
@@ -54,6 +68,8 @@ unset( $tranzly_premium_entry );
  * @return void
  */
 function tranzly_uninstall(): void {
+	// Leaves the shared AI keys alone while another plugin that uses them is still installed.
+	\ZinnDigital\Tranzly\AiCore\Core::uninstall( 'tranzly' );
 	\ZinnDigital\Tranzly\Assets::remove_all();
 	delete_option( \ZinnDigital\Tranzly\Settings::OPTION );
 	delete_post_meta_by_key( \ZinnDigital\Tranzly\Languages::META_TRANSLATIONS );

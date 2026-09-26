@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "AI প্রদানকারী"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "ChatGPT-এর নির্মাতা। একটি দারুণ বহুমুখী বিকল্প।"
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Claude-এর নির্মাতাগণ। লেখালেখি এবং সতর্কতার সাথে যুক্তি প্রদর্শনে শক্তিশালী।"
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Google-এর Gemini মডেলসমূহ। দ্রুত এবং সাশ্রয়ী।"
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "দ্রুত এবং সাশ্রয়ী মূল্যের মডেলসহ একটি ইউরোপীয় এআই কোম্পানি।"
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "কম খরচের মডেল যা লেখালেখি এবং কোডিংয়ের জন্য ভালো।"
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "অনেকগুলো ভিন্ন ভিন্ন প্রদানকারীর মডেলের জন্য একটি মাত্র চাবি।"
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "OpenAI-এর এপিআই-এর মতো কাজ করে এমন যেকোনো পরিষেবা, যার মধ্যে আপনার নিজস্ব কম্পিউটার বা সার্ভারে চলা একটি মডেলও অন্তর্ভুক্ত রয়েছে।"
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "সাধারণ (যখন আরও নির্দিষ্ট কিছু সেট করা না থাকে)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "লেখা এবং পুনর্লেখা"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "অনুবাদ"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "কোড এবং সিএসএস"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "দুঃখিত, আপনার এই পৃষ্ঠাটি অ্যাক্সেস করার অনুমতি নেই।"
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "এই সেটিংসগুলি এগুলো ব্যবহারকারী প্রতিটি প্লাগইন দ্বারা শেয়ার করা হয়: %s।"
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "আপনার চাবিগুলো এই সাইটের ডেটাবেজে এনক্রিপ্ট করা থাকে এবং এগুলো কেবল আপনার বেছে নেওয়া প্রোভাইডারের কাছেই পাঠানো হয়—কখনো আমাদের কাছে নয়।"
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "ধাপ ১ এর ২: একটি এআই প্রোভাইডার বেছে নিন"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "আপনি নিজের কি (key) ব্যবহার করেন, তাই আপনি যা ব্যবহার করেন তার জন্য সরাসরি প্রদানকারীকে অর্থ প্রদান করেন। নিশ্চিত নন? এগুলোর যেকোনো একটি ভালো কাজ করে; আপনি পরে আরও যোগ করতে পারেন।"
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "পরবর্তী"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "ধাপ ২ এর ২: %s সংযোগ করুন"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "আপনার OpenAI-সম্মত পরিষেবার ঠিকানা লিখুন, যা /v1 দিয়ে শেষ হবে। পরিষেবাটি কোনো চাবি চাইলে তবেই একটি চাবির প্রয়োজন হবে।"
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "%s খুলুন এবং সাইন ইন করুন (অথবা একটি বিনামূল্যে অ্যাকাউন্ট তৈরি করুন)।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s এপিআই কি পৃষ্ঠা"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "একটি নতুন কি তৈরি করুন এবং এটি কপি করুন।"
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "এটি নিচে পেস্ট করুন এবং \"Save and test\" চাপুন। এটি কাজ করছে কি না তা পরীক্ষা করার জন্য আমরা একটি ছোট অনুরোধ পাঠাই।"
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "বেশিরভাগ প্রোভাইডারের একটি কী কাজ করার আগে অ্যাকাউন্টে কিছু ক্রেডিট প্রয়োজন হয়: %s।"
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "ক্রেডিট যোগ করুন"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← অন্য একটি প্রদানকারী বেছে নিন"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "ঠিকানা"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "সংরক্ষিত চাবির শেষাংশ …%s — এটি প্রতিস্থাপন করতে একটি নতুন চাবি পেস্ট করুন"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "কিলি (ঐচ্ছিক)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "এপিআই কি"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "সংরক্ষণ করুন এবং পরীক্ষা করুন"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "প্রদানকারীগণ"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "প্রদানকারী"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "স্ট্যাটাস"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "কী"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "একটি চাবি পান"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "টেস্ট"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "সরিয়ে দিন"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "একটি নতুন প্লাগইন সংস্করণের মাধ্যমে সংরক্ষিত: এই প্লাগইনটি আপডেট করুন, অথবা চাবিটি আবার লিখুন।"
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "সংরক্ষিত চাবিটি আর খোলা যাচ্ছে না (সাইটের সুরক্ষা চাবিগুলো পরিবর্তিত হয়েছে)। এটি আবার লিখুন।"
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "সংযুক্ত নয়"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "সংযুক্ত — শেষ পরীক্ষা উত্তীর্ণ হয়েছে %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "শেষ পরীক্ষা ব্যর্থ হয়েছে: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "সংযুক্ত — এখনও পরীক্ষা করা হয়নি"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "কোন মডেলটি ব্যবহার করবেন"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ চিহ্নটি ওই কাজের জন্য আমাদের সুপারিশ নির্দেশ করে। এই তালিকায় আপনার কি ব্যবহার করতে পারে এমন প্রতিটি মডেল অন্তর্ভুক্ত রয়েছে, যা প্রোভাইডার থেকে সরাসরি লাইভ আপডেট করা হয়।"
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— প্রদানকারীর জন্য প্রস্তাবিত —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "মডেলগুলো সংরক্ষণ করুন"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "প্রদানকারীদের থেকে মডেলের তালিকা রিফ্রেশ করুন"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "সর্বোত্তম মান"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "সর্বনিম্ন খরচ"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "সবচেয়ে দ্রুত"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "নিজেই একটি মডেল যোগ করুন"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "আজ একটি নতুন মডেল প্রকাশ পেয়েছে? এটি অবিলম্বে ব্যবহার করতে এর সঠিক নামটি পেস্ট করুন।"
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "মডেলের নাম"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "মডেল যোগ করুন"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "প্রস্তাবিত মডেলগুলির তালিকা"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "প্রস্তাবিত মডেলগুলোর তালিকা যাচাই করা যায়নি, তাই কোনো সুপারিশ দেখানো হচ্ছে না। প্লাগইনটি পুনরায় ইনস্টল করুন অথবা নিচের দৈনিক আপডেটগুলো চালু করুন।"
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "ব্যবহৃত তালিকাটি %s তারিখে প্রকাশিত হয়েছিল। প্রতিটি প্লাগইন আপডেট একটি নতুন তালিকা নিয়ে আসে।"
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "একটি আপডেট করা তালিকার জন্য দিনে একবার Zinn Digital®-ও চেক করুন।"
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "শুধুমাত্র একটি সাধারণ ডাউনলোডের অনুরোধ পাঠানো হয়: কোনো চাবি নেই, কোনো সাইটের ঠিকানা নেই, আপনার কন্টেন্ট সম্পর্কে কিছুই নেই। তালিকাটিতে স্বাক্ষর করা থাকে, এবং যে তালিকা স্বাক্ষর পরীক্ষায় ব্যর্থ হয় তা উপেক্ষা করা হয়।"
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "সর্বশেষ চেক করা হয়েছে %1$s: %2$s।"
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "সংরক্ষণ করুন এবং চালু থাকলে এখনই পরীক্ষা করুন"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "একটি নতুন তালিকা ইনস্টল করা হয়েছে"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "ইতিমধ্যেই আপ টু ডেট"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "ডাউনলোডটি সিগনেচার চেক করতে ব্যর্থ হয়েছে এবং উপেক্ষা করা হয়েছে"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital®-এর সাথে যোগাযোগ করা যায়নি; বর্তমান তালিকাটি ব্যবহারেই থাকছে"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "বন্ধ করা হয়েছে"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "ওপেন"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "তাদের স্ট্যাটাস পেজটি দেখুন"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "আপনার বিলিং পৃষ্ঠা খুলুন"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "আপনার এপিআই কি পেজ খুলুন"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "এআই সেটিংস খুলুন"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "দুঃখিত, আপনার এটি করার অনুমতি নেই।"
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "অজানা প্রদানকারী।"
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "আপনার পরিষেবার ঠিকানা লিখুন, উদাহরণস্বরূপ http://localhost:11434/v1।"
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "এটি কোনো এপিআই কি (API key) এর মতো মনে হচ্ছে না। স্পেস বা ফাঁকা জায়গা ছাড়াই এটি আবার কপি করুন।"
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "প্রথমে আপনার API কী পেস্ট করুন।"
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "চাবি সরানো হয়েছে।"
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "মডেলগুলো সংরক্ষিত হয়েছে।"
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "মডেলের সঠিক নামটি লিখুন, উদাহরণস্বরূপ প্রোভাইডারের ডকুমেন্টেশনে যেভাবে লেখা আছে।"
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "%s যোগ করা হয়েছে। \"Which model to use\" এর অধীনে এটি নির্বাচন করুন।"
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "মডেল সরানো হয়েছে।"
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "দৈনিক আপডেট বন্ধ আছে। প্লাগইনের সাথে আসা তালিকাটি ব্যবহার করা হচ্ছে।"
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "পরীক্ষিত: %s।"
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "মডেলের তালিকা রিফ্রেশ করা হয়েছে।"
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "আপনার এআই কি আপনার প্লাগইনগুলির মধ্যে একটির একটি নতুন সংস্করণ দ্বারা সংরক্ষিত হয়েছে। এই প্লাগইনটি আপডেট করুন, অথবা এআই সেটিংসে কি আবার লিখুন।"
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "আপনার সংরক্ষিত এআই কি আর খোলা যাচ্ছে না (সাইটের সিকিউরিটি কি পরিবর্তিত হয়েছে)। এআই সেটিংসে এটি আবার লিখুন।"
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "এআই এখনও সেট আপ করা হয়নি। এআই সেটিংস-এ কোনো এআই প্রোভাইডারের জন্য একটি চাবি যোগ করুন।"
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "এই কাজের জন্য কোনো মডেল নির্বাচন করা হয়নি। এআই সেটিংসে একটি বেছে নিন।"
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "প্লাগইনের এই সংস্করণে সেই এআই প্রদানকারী সমর্থিত নয়।"
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "এই সাইটটি আপনার এআই সার্ভিসের সাথে যোগাযোগ করতে পারেনি। এটি চালু আছে কিনা এবং আপনার ওয়েব সার্ভার থেকে এর ঠিকানায় পৌঁছানো যাচ্ছে কিনা তা পরীক্ষা করুন (আপনার নিজের কম্পিউটারে থাকা কোনো সার্ভিসে হোস্টেড সাইট থেকে পৌঁছানো যায় না)।"
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "এই সাইটটি %s-এ পৌঁছাতে পারেনি। তাদের স্ট্যাটাস পেজটি চেক করুন; যদি তারা সচল থাকে, তবে আপনার হোস্টিং প্রদানকারী আউটগোয়িং সংযোগ ব্লক করে থাকতে পারে, অথবা ঠিকানাটি ভুল।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s জানাচ্ছে আপনার অ্যাকাউন্টে কোনো ক্রেডিট বা কোটা বাকি নেই। তাদের সাথে আপনার অ্যাকাউন্টে ক্রেডিট যোগ করুন বা আপনার সীমা বাড়ান, তারপর আবার চেষ্টা করুন।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s আপনার কি গ্রহণ করেনি। এটি ভুল টাইপ করা, বাতিল করা বা মেয়াদোত্তীর্ণ হতে পারে। একটি নতুন কি তৈরি করুন এবং এখানে পেস্ট করুন।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s আপনার কীর জন্য এই অনুরোধটি প্রত্যাখ্যান করেছে। কি-টি সম্ভবত এই মডেল বা ফিচারে অ্যাক্সেস দিতে পারছে না, অথবা আপনার অ্যাকাউন্ট যাচাই করা প্রয়োজন।"
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "আপনার চাবির জন্য %2$s-এর পক্ষ থেকে \"%1$s\" মডেলটি উপলব্ধ নেই। AI সেটিংস-এ অন্য একটি মডেল বেছে নিন।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s আপনার কী থেকে অনুরোধ পাঠানোর গতি সীমিত করছে। এক মিনিট অপেক্ষা করে আবার চেষ্টা করুন, অথবা তাদের সাথে আপনার রেট লিমিট বৃদ্ধি করুন।"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s-এর এই মুহূর্তে সমস্যা হচ্ছে (তাদের দিক থেকে কোনো ডাউনটাইম বা ওভারলোড)। আপনার সেটিংসে কোনো সমস্যা নেই। কিছুক্ষণ পর আবার চেষ্টা করুন।"
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "একটি অজ্ঞাত কারণে এআই অনুরোধ ব্যর্থ হয়েছে। আবার চেষ্টা করুন; যদি এটি ঘটতেই থাকে, তবে নিচের বিবরণসহ সহায়তার সাথে যোগাযোগ করুন।"
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "এআই প্রদানকারী এমন একটি ফর্মে উত্তর দিয়েছে যা এই প্লাগইনটি পড়তে পারেনি। আবার চেষ্টা করুন; যদি এটি বারবার হতে থাকে, তবে অন্য একটি মডেল বেছে নিন বা সহায়তার জন্য যোগাযোগ করুন।"
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "কাস্টম (OpenAI-সামঞ্জস্যপূর্ণ)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "প্রথমে এই প্রোভাইডারের জন্য একটি কি (key) সেভ করুন।"
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "আপনার চাবি কাজ করে, কিন্তু প্রদানকারী এর জন্য কোনো টেক্সট মডেল তালিকাভুক্ত করেনি। নিচে নিজে একটি মডেল যোগ করুন।"
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "সংযুক্ত হয়েছে। %1$s, %2$s ব্যবহার করে উত্তর দিয়েছে। আপনার এআই (AI) বৈশিষ্ট্যগুলি ব্যবহারের জন্য প্রস্তুত।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "এই সাইটে এআই ব্যবহার করার অনুমতি আপনার ব্যবহারকারী ভূমিকার নেই। একজন প্রশাসকের সাথে যোগাযোগ করুন।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "এই সাইটটি তার মাসিক এআই খরচের সীমায় পৌঁছে গেছে। একজন প্রশাসক এআই সেটিংসে এটি বাড়াতে পারেন।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "এই সাইটটি এর মাসিক এআই অনুরোধের সীমা অতিক্রম করেছে। একজন প্রশাসক এআই সেটিংসে এটি বাড়াতে পারেন।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "ব্যবহার এবং খরচ"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "লগ, সীমা এবং ভূমিকার অনুমতিগুলি %s এর মাধ্যমে ব্যবহৃত এআই-এর ক্ষেত্রে প্রযোজ্য।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "খরচগুলো আনুমানিক, প্রকাশিত মূল্যের ওপর ভিত্তি করে হিসাব করা হয়েছে; যে মডেলের কোনো পরিচিত মূল্য নেই তা শূন্য হিসেবে গণ্য হয়।"
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "এই মাসে: %1$s টি অনুরোধ, প্রায় %2$s।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "কখন"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "কে"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "ব্যবহারের জন্য"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "মডেল"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "টোকেন ইন / আউট"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "সম্পর্কে"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "ফলাফল"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "এখনও কোনো এআই অনুরোধ করা হয়নি।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "সম্পন্ন"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "সীমা এবং অনুমতিসমূহ"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "মাসের খরচের সীমা (US ডলার)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "কোনো সীমা না রাখতে খালি রাখুন। আনুমানিক খরচ সেই সীমায় পৌঁছালে মাসের বাকি সময়ের জন্য এআই বন্ধ থাকে।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "মাসিক অনুরোধের সীমা"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "কোনো সীমার জন্য খালি রাখুন।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "কারা এআই ব্যবহার করতে পারবেন"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "প্লাগইনের ফিচারগুলো ব্যবহার করতে পারে এমন যে কেউ যাতে এআই ব্যবহার করতে পারে তার জন্য কোনোটিই টিক দেবেন না। প্রশাসকরা সবসময় এটি ব্যবহার করতে পারেন।"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "সীমা এবং অনুমতি সংরক্ষণ করুন"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "সীমা এবং অনুমতি সংরক্ষিত হয়েছে।"
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "কমপক্ষে একটি ভাষা তালিকাভু
 msgid "That is more languages than one site can list."
 msgstr "সেটি একটি সাইট তালিকাভুক্ত করতে পারার চেয়েও বেশি ভাষা।"
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "সম্পর্কে"
-
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -294,10 +863,6 @@ msgstr "প্রথম ভাষাটি সেই ভাষা যাতে �
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(ডিফল্ট)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "সরিয়ে দিন"
 
 #: src/admin/App.js:158
 msgid "Locale code"

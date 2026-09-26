@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "Poskytovatelé AI"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "Tvůrci ChatGPT. Dobrý všestranný nástroj."
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Tvůrci systému Claude. Silní v psaní a pečlivém uvažování."
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Modely Gemini od společnosti Google. Rychlé a levné."
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "Evropská společnost zabývající se umělou inteligencí s rychlými a levnými modely."
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "Cenově dostupné modely, které jsou dobré v psaní a kódování."
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "Jedno klíčové slovo pro modely od mnoha různých poskytovatelů."
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "Jakákoli služba, která funguje jako API OpenAI, včetně modelu spuštěného ve vašem vlastním počítači nebo serveru."
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "Obecné (použije se, když není nastaveno nic specifičtějšího)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "Zápis a přepis"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "Překlad"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "Kód a CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Litujeme, nemáte oprávnění k přístupu na tuto stránku."
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "Tato nastavení sdílí každý plugin, který je používá: %s."
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "Vaše klíče jsou zašifrovány v databázi tohoto webu a jsou odesílány pouze poskytovateli, kterého jste si vybrali – nám je neposíláme nikdy."
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "Krok 1 ze 2: vyberte poskytovatele AI"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "Používáte vlastní klíč, takže za to, co spotřebujete, platíte přímo poskytovateli. Nejste si jistí? Funguje kterákoli z těchto možností; další můžete přidat později."
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "Další"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "Krok 2 z 2: připojte %s"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "Zadejte adresu své služby kompatibilní s OpenAI, končící na /v1. Klíč je vyžadován pouze v případě, že si o něj služba požádá."
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "Otevřete %s a přihlaste se (nebo si vytvořte bezplatný účet)."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "stránka s API klíči %s"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "Vytvořte nový klíč a zkopírujte jej."
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "Vložte jej níže a stiskněte „Uložit a otestovat“. Odešleme jeden malý požadavek, abychom ověřili, že to funguje."
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "Většina poskytovatelů vyžaduje na účtu určitý kredit, než začne klíč fungovat: %s."
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "přidat kredit"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← Zvolit jiného poskytovatele"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "Adresa"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "Uložený klíč končí na …%s — vložte nový pro jeho nahrazení"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "Klíč (volitelné)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API klíč"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "Uložit a otestovat"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "Poskytovatelé"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "Poskytovatel"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "Stav"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "Klíč"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "Získat klíč"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "Test"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Odebrat"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "Uloženo novější verzí pluginu: aktualizujte tento plugin nebo zadejte klíč znovu."
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "Uložený klíč již nelze otevřít (bezpečnostní klíče webu se změněny). Zadejte jej znovu."
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "Nepřipojeno"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "Připojeno – poslední test úspěšný %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "Poslední test selhal: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "Připojeno – dosud netestováno"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "Který model použít"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ označuje naše doporučení pro daný úkol. Seznam obsahuje všechny modely, které váš klíč může používat, načtené živě od poskytovatele."
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— Doporučeno pro poskytovatele —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "Uložit modely"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "Aktualizovat seznamy modelů od poskytovatelů"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "nejvyšší kvalita"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "nejnižší cena"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "nejrychlejší"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "Přidat model vlastními silami"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "Vyšel dnes nový model? Vložte jeho přesný název a můžete ho ihned začít používat."
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "Název modelu"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "Přidat model"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "Seznam doporučených modelů"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "Seznam doporučených modelů se nepodařilo ověřit, proto se nezobrazují žádná doporučení. Přeinstalujte plugin nebo níže zapněte denní aktualizace."
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "Používaný seznam byl publikován dne %s. Každá aktualizace pluginu přináší nový."
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "Také kontrolujte Zinn Digital® jednou denně kvůli aktualizovanému seznamu."
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "Odesílá se pouze prostý požadavek na stažení: žádný klíč, žádná adresa webu, nic o vašem obsahu. Seznam je podepsaný a seznam, který neprojde kontrolou podpisu, je ignorován."
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "Naposledy zkontrolováno %1$s: %2$s."
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "Uložit a nyní zkontrolovat, zda je zapnuto"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "byl nainstalován novější seznam"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "již aktuální"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "stahování selhalo při kontrole podpisu a bylo ignorováno"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital® nebylo možné kontaktovat; aktuální seznam zůstává v platnosti"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "vypnuto"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "Otevřít"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "Zkontrolovat jejich stavovou stránku"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "Otevřete svou stránku fakturace"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "Otevřete stránku s API klíči"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "Otevřít nastavení AI"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "Litujeme, k této akci nemáte oprávnění."
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "Neznámý poskytovatel."
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "Zadejte adresu své služby, například http://localhost:11434/v1."
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "To nevypadá jako klíč API. Zkopírujte ho znovu bez mezer."
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "Nejprve vložte svůj klíč API."
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "Klíč byl odstraněn."
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "Modely uloženy."
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "Zadejte přesný název modelu, například tak, jak je uveden v dokumentaci poskytovatele."
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "Přidáno %s. Vyberte jej v části „Který model použít“."
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "Model odebrán."
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "Denní aktualizace jsou vypnuty. Používá se seznam, který byl dodán s pluginem."
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "Zaškrtnuto: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "Seznamy modelů byly aktualizovány."
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "Váš AI klíč byl uložen novější verzí jednoho z vašich pluginů. Aktualizujte tento plugin nebo zadejte klíč znovu v nastavení AI."
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "Váš uložený klíč AI již nelze otevřít (bezpečnostní klíče webu se změnily). Zadejte jej znovu v nastavení AI."
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "Umělá inteligence ještě není nastavená. Přidejte klíč pro poskytovatele AI v nastavení AI."
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "Pro tuto úlohu není vybrán žádný model. Zvolte jeden v nastavení umělé inteligence."
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "Tento poskytovatel AI není touto verzí pluginu podporován."
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "Tento web nemohl navázat spojení s vaší službou umělé inteligence. Zkontrolujte, zda je spuštěná a zda je její adresa dostupná z vašeho webového serveru (služba běžící na vašem vlastním počítači není z hostovaného webu dostupná)."
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "Tento web se nemohl připojit k serveru %s. Zkontrolujte jeho stavovou stránku; pokud funguje, váš hosting může blokovat odchozí připojení nebo je adresa nesprávná."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s uvádí, že vašemu účtu došel kredit nebo kvóta. Přidejte kredit nebo zvyšte svůj limit ve svém účtu u nich a zkuste to znovu."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s váš klíč nepřijal. Může být zapsán chybně, odvolán nebo jeho platnost vypršela. Vytvořte nový klíč a vložte jej sem."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s tuto žádost pro váš klíč odmítl. Klíč nemusí mít k tomuto modelu nebo funkci přístup, případně je nutné ověřit váš účet."
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "Model \"%1$s\" není dostupný od poskytovatele %2$s pro váš klíč. Zvolte jiný model v nastavení AI."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s omezuje rychlost, s jakou může váš klíč odesílat požadavky. Počkejte minutu a zkuste to znovu, nebo u nich zvyšte svůj limit požadavků."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s má právě teď problémy (výpadek nebo přetížení na jejich straně). S vaším nastavením není nic v nepořádku. Zkuste to brzy znovu."
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "Požadavek na AI selhal z nezjištěného důvodu. Zkuste to znovu; pokud problém přetrvává, kontaktujte podporu a uveďte podrobnosti níže."
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "Poskytovatel umělé inteligence odpověděl ve formátu, který tento plugin nedokáže přečíst. Zkuste to znovu; pokud to bude pokračovat, zvolte jiný model nebo kontaktujte podporu."
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "Vlastní (kompatibilní s OpenAI)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "Nejprve uložte klíč pro tohoto poskytovatele."
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "Váš klíč funguje, ale poskytovatel pro něj uvádí žádný textový model. Přidejte model sami níže."
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "Připojeno. %1$s odpověděl(a) pomocí %2$s. Vaše funkce s umělou inteligencí jsou připraveny k použití."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "Vaše uživatelská role nemá na tomto webu povomoženo používat umělou inteligenci. Požádejte administrátora."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "Tento web dosáhl svého měsíčního limitu útraty za umělou inteligenci. Správce ho může zvýšit v nastavení umělé inteligence."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "Tento web dosáhl svého měsíčního limitu požadavků na AI. Správce ho může navýšit v nastavení AI."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "Využití a náklady"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "Protokol, limity a oprávnění rolí platí pro AI používanou prostřednictvím: %s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "Náklady jsou přibližné, vypočítané ze zveřejněných cen; model bez známé ceny se počítá jako nula."
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "Tento měsíc: %1$s požadavků, přibližně %2$s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "Když"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "Kdo"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "Použito pro"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "Model"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "Tokeny na vstupu / výstupu"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "O aplikaci"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "Výsledek"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "Zatím nebyly provedeny žádné požadavky na AI."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "Hotovo"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "Limity a oprávnění"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "Měsíční limit útraty (v USD)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "Ponechte prázdné pro bez limitu. Umělá inteligence se pro zbytek měsíce zastaví, jakmile přibližné náklady dosáhnou této hodnoty."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "Měsíční limit požadavků"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "Ponechte prázdné pro bez omezení."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "Kdo může používat AI"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "Nezaškrtávejte nic, pokud chcete povolit používání umělé inteligence všem, kteří mohou používat funkce tohoto pluginu. Správci ji mohou používat vždy."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "Uložit limity a oprávnění"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "Limity a oprávnění byly uloženy."
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "Uveďte alespoň jeden jazyk."
 msgid "That is more languages than one site can list."
 msgstr "To je více jazyků, než může jeden web uvést."
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "O aplikaci"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Vytvořil Neil Lock, generální ředitel společnosti Zinn Digital® Ltd"
@@ -293,10 +862,6 @@ msgstr "První jazyk je ten, ve kterém je napsán váš obsah. Návštěvníci 
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(výchozí)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "Odebrat"
 
 #: src/admin/App.js:158
 msgid "Locale code"

@@ -37,9 +37,582 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
 
+#: includes/ai-core/class-admin.php:59
+#: includes/ai-core/class-admin.php:60
+#: includes/ai-core/class-admin.php:118
+msgid "AI providers"
+msgstr "AI pružatelji usluga"
+
+#: includes/ai-core/class-admin.php:76
+msgid "The makers of ChatGPT. A good all-rounder."
+msgstr "Tvorci sustava ChatGPT. Dobar svestrani alat."
+
+#: includes/ai-core/class-admin.php:78
+msgid "The makers of Claude. Strong at writing and careful reasoning."
+msgstr "Tvorci modela Claude. Snažan u pisanju i opreznom zaključivanju."
+
+#: includes/ai-core/class-admin.php:80
+msgid "Google's Gemini models. Fast and inexpensive."
+msgstr "Gemini modeli tvrtke Google. Brzo i povoljno."
+
+#: includes/ai-core/class-admin.php:82
+msgid "A European AI company with fast, inexpensive models."
+msgstr "Europska AI tvrtka s brzim i povoljnim modelima."
+
+#: includes/ai-core/class-admin.php:84
+msgid "Low-cost models that are good at writing and code."
+msgstr "Jeftini modeli koji su dobri u pisanju i pisanju koda."
+
+#: includes/ai-core/class-admin.php:86
+msgid "One key for models from many different providers."
+msgstr "Jedan ključ za modele od mnogo različitih pružatelja usluga."
+
+#: includes/ai-core/class-admin.php:88
+msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgstr "Bilo koja usluga koja radi poput OpenAI-jeva API-ja, uključujući model koji se izvodi na vašem vlastitom računalu ili poslužitelju."
+
+#: includes/ai-core/class-admin.php:101
+msgid "General (used when nothing more specific is set)"
+msgstr "Općenito (koristi se kada nije postavljeno ništa specifičnije)"
+
+#: includes/ai-core/class-admin.php:102
+msgid "Writing and rewriting"
+msgstr "Pisanje i prepisivanje"
+
+#: includes/ai-core/class-admin.php:103
+msgid "Translation"
+msgstr "Prijevod"
+
+#: includes/ai-core/class-admin.php:104
+msgid "Code and CSS"
+msgstr "Kod i CSS"
+
+#: includes/ai-core/class-admin.php:115
 #: includes/class-admin.php:72
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Žao nam je, nemate dopuštenje za pristup ovoj stranici."
+
+#. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
+#: includes/ai-core/class-admin.php:125
+#, php-format
+msgid "These settings are shared by every plugin that uses them: %s."
+msgstr "Ove postavke dijele svi dodaci koji ih koriste: %s."
+
+#: includes/ai-core/class-admin.php:128
+msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
+msgstr "Vaši su ključevi šifrirani u bazi podataka ove stranice i šalju se samo davatelju usluga kojeg ste odabrali – nikada nama."
+
+#: includes/ai-core/class-admin.php:155
+msgid "Step 1 of 2: choose an AI provider"
+msgstr "1. korak od 2: odaberite AI davatelja usluge"
+
+#: includes/ai-core/class-admin.php:156
+msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
+msgstr "Donosite vlastiti ključ, tako da pružatelju usluga plaćate izravno za ono što koristite. Niste sigurni? Bilo koja od ovih opcija dobro funkcionira; kasnije možete dodati još."
+
+#: includes/ai-core/class-admin.php:166
+msgid "Next"
+msgstr "Sljedeće"
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:175
+#, php-format
+msgid "Step 2 of 2: connect %s"
+msgstr "Korak 2 od 2: povežite %s"
+
+#: includes/ai-core/class-admin.php:180
+msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
+msgstr "Unesite adresu svoje usluge kompatibilne s OpenAI koja završava s /v1. Ključ je potreban samo ako ga usluga zatraži."
+
+#. translators: %s: link to the provider's API key page.
+#: includes/ai-core/class-admin.php:185
+#, php-format
+msgid "Open %s and sign in (or create a free account)."
+msgstr "Otvorite %s i prijavite se (ili izradite besplatan račun)."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-admin.php:189
+#, php-format
+msgid "the %s API keys page"
+msgstr "%s stranica API ključeva"
+
+#: includes/ai-core/class-admin.php:194
+msgid "Create a new key and copy it."
+msgstr "Izradite novi ključ i kopirajte ga."
+
+#: includes/ai-core/class-admin.php:195
+msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
+msgstr "Zalijepite ga ispod i pritisnite „Spremi i testiraj”. Šaljemo jedan mali zahtjev kako bismo provjerili radi li."
+
+#. translators: %s: link to the provider's billing page.
+#: includes/ai-core/class-admin.php:200
+#, php-format
+msgid "Most providers need a little credit on the account before a key works: %s."
+msgstr "Većina pružatelja usluga treba malo kredita na računu prije nego što ključ počne raditi: %s."
+
+#: includes/ai-core/class-admin.php:201
+msgid "add credit"
+msgstr "dodaj kredit"
+
+#: includes/ai-core/class-admin.php:206
+msgid "← Choose a different provider"
+msgstr "← Odaberite drugog pružatelja usluga"
+
+#: includes/ai-core/class-admin.php:224
+msgid "Address"
+msgstr "Adresa"
+
+#. translators: %s: the last four characters of the saved key.
+#: includes/ai-core/class-admin.php:228
+#, php-format
+msgid "Saved key ends in …%s — paste a new one to replace it"
+msgstr "Spremljeni ključ završava s …%s — zalijepite novi da biste ga zamijenili"
+
+#: includes/ai-core/class-admin.php:230
+msgid "Key (optional)"
+msgstr "Ključ (neobavezno)"
+
+#: includes/ai-core/class-admin.php:230
+msgid "API key"
+msgstr "API ključ"
+
+#: includes/ai-core/class-admin.php:232
+msgid "Save and test"
+msgstr "Spremi i testiraj"
+
+#: includes/ai-core/class-admin.php:242
+msgid "Providers"
+msgstr "Pružatelji usluga"
+
+#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:365
+msgid "Provider"
+msgstr "Pružatelj usluga"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Status"
+msgstr "Status"
+
+#: includes/ai-core/class-admin.php:243
+msgid "Key"
+msgstr "Ključ"
+
+#: includes/ai-core/class-admin.php:248
+msgid "Get a key"
+msgstr "Nabavite ključ"
+
+#: includes/ai-core/class-admin.php:253
+msgid "Test"
+msgstr "Test"
+
+#: includes/ai-core/class-admin.php:254
+#: includes/ai-core/class-admin.php:387
+#: src/admin/App.js:147
+msgid "Remove"
+msgstr "Ukloni"
+
+#: includes/ai-core/class-admin.php:273
+msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
+msgstr "Spremljeno novijom verzijom dodatka: ažurirajte ovaj dodatak ili ponovno unesite ključ."
+
+#: includes/ai-core/class-admin.php:275
+msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
+msgstr "Spremljeni ključ se više ne može otvoriti (sigurnosni ključevi web-mjesta su promijenjeni). Unesite ga ponovno."
+
+#: includes/ai-core/class-admin.php:278
+msgid "Not connected"
+msgstr "Nije spojeno"
+
+#. translators: %s: date and time of the last successful test.
+#: includes/ai-core/class-admin.php:284
+#, php-format
+msgid "Connected — last test passed %s"
+msgstr "Povezano — posljednji test je prošao %s"
+
+#. translators: %s: why the last test failed.
+#: includes/ai-core/class-admin.php:290
+#, php-format
+msgid "Last test failed: %s"
+msgstr "Posljednji test nije uspio: %s"
+
+#: includes/ai-core/class-admin.php:293
+msgid "Connected — not tested yet"
+msgstr "Povezano — još nije testirano"
+
+#: includes/ai-core/class-admin.php:302
+msgid "Which model to use"
+msgstr "Koji model koristiti"
+
+#: includes/ai-core/class-admin.php:303
+msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
+msgstr "★ označava našu preporuku za taj zadatak. Popis uključuje svaki model koji vaš ključ može koristiti, učitan uživo od pružatelja usluge."
+
+#: includes/ai-core/class-admin.php:311
+msgid "— Recommended for the provider —"
+msgstr "— Preporučuje se za pružatelja usluga —"
+
+#: includes/ai-core/class-admin.php:330
+msgid "Save models"
+msgstr "Spremi modele"
+
+#: includes/ai-core/class-admin.php:332
+msgid "Refresh the model lists from the providers"
+msgstr "Osvježite liste modela od pružatelja usluga"
+
+#: includes/ai-core/class-admin.php:344
+msgid "best quality"
+msgstr "najbolja kvaliteta"
+
+#: includes/ai-core/class-admin.php:346
+msgid "lowest cost"
+msgstr "najniža cijena"
+
+#: includes/ai-core/class-admin.php:348
+msgid "fastest"
+msgstr "najbrže"
+
+#: includes/ai-core/class-admin.php:360
+msgid "Add a model yourself"
+msgstr "Dodajte model sami"
+
+#: includes/ai-core/class-admin.php:361
+msgid "A model came out today? Paste its exact name to use it straight away."
+msgstr "Danas je izašao novi model? Zalijepite njegov točan naziv kako biste ga odmah počeli koristiti."
+
+#: includes/ai-core/class-admin.php:372
+msgid "Model name"
+msgstr "Naziv modela"
+
+#: includes/ai-core/class-admin.php:373
+msgid "Add model"
+msgstr "Dodaj model"
+
+#: includes/ai-core/class-admin.php:403
+msgid "Recommended models list"
+msgstr "Popis preporučenih modela"
+
+#: includes/ai-core/class-admin.php:406
+msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
+msgstr "Lista preporučenih modela nije mogla biti potvrđena, stoga se preporuke ne prikazuju. Ponovno instalirajte dodatak ili uključite dnevna ažuriranja u nastavku."
+
+#. translators: %s: publication date.
+#: includes/ai-core/class-admin.php:409
+#, php-format
+msgid "The list in use was published on %s. Each plugin update brings a fresh one."
+msgstr "Korišteni popis objavljen je %s. Svako ažuriranje dodatka donosi novi."
+
+#: includes/ai-core/class-admin.php:416
+msgid "Also check Zinn Digital® once a day for an updated list."
+msgstr "Također provjerite Zinn Digital® jednom dnevno za ažurirani popis."
+
+#: includes/ai-core/class-admin.php:417
+msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
+msgstr "Šalje se samo običan zahtjev za preuzimanje: bez ključa, bez adrese web-mjesta, ništa o vašem sadržaju. Popis je potpisan, a popis koji ne prođe provjeru potpisa se zanemaruje."
+
+#. translators: 1: date and time, 2: result such as "updated".
+#: includes/ai-core/class-admin.php:422
+#, php-format
+msgid "Last checked %1$s: %2$s."
+msgstr "Zadnja provjera %1$s: %2$s."
+
+#: includes/ai-core/class-admin.php:428
+msgid "Save, and check now if turned on"
+msgstr "Spremite i provjerite odmah ako je uključeno"
+
+#: includes/ai-core/class-admin.php:441
+msgid "a newer list was installed"
+msgstr "instaliran je noviji popis"
+
+#: includes/ai-core/class-admin.php:443
+msgid "already up to date"
+msgstr "već ažurirano"
+
+#: includes/ai-core/class-admin.php:445
+msgid "the download failed the signature check and was ignored"
+msgstr "preuzimanje nije prošlo provjeru potpisa i zanemareno je"
+
+#: includes/ai-core/class-admin.php:447
+msgid "Zinn Digital® could not be reached; the current list stays in use"
+msgstr "Zinn Digital® nije dostupan; trenutačni popis ostaje u upotrebi"
+
+#: includes/ai-core/class-admin.php:450
+msgid "turned off"
+msgstr "isključeno"
+
+#: includes/ai-core/class-admin.php:487
+msgid "Open"
+msgstr "Otvori"
+
+#: includes/ai-core/class-admin.php:530
+msgid "Check their status page"
+msgstr "Provjerite njihovu stranicu sa statusom"
+
+#: includes/ai-core/class-admin.php:533
+msgid "Open your billing page"
+msgstr "Otvorite svoju stranicu za naplatu"
+
+#: includes/ai-core/class-admin.php:535
+msgid "Open your API keys page"
+msgstr "Otvorite stranicu s API ključevima"
+
+#: includes/ai-core/class-admin.php:538
+msgid "Open the AI settings"
+msgstr "Otvorite postavke umjetne inteligencije"
+
+#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:296
+msgid "Sorry, you are not allowed to do that."
+msgstr "Žao nam je, nemate dopuštenje za to."
+
+#: includes/ai-core/class-admin.php:575
+#: includes/ai-core/class-admin.php:609
+msgid "Unknown provider."
+msgstr "Nepoznati davatelj."
+
+#: includes/ai-core/class-admin.php:583
+msgid "Enter the address of your service, for example http://localhost:11434/v1."
+msgstr "Unesite adresu svoje usluge, na primjer http://localhost:11434/v1."
+
+#: includes/ai-core/class-admin.php:590
+msgid "That does not look like an API key. Copy it again, without spaces."
+msgstr "To ne izgleda kao API ključ. Kopirajte ga ponovno, bez razmaka."
+
+#: includes/ai-core/class-admin.php:594
+msgid "Paste your API key first."
+msgstr "Prvo zalijepite svoj API ključ."
+
+#: includes/ai-core/class-admin.php:658
+msgid "Key removed."
+msgstr "Ključ je uklonjen."
+
+#: includes/ai-core/class-admin.php:687
+msgid "Models saved."
+msgstr "Modeli su spremljeni."
+
+#: includes/ai-core/class-admin.php:701
+msgid "Enter the model's exact name, for example as the provider's documentation writes it."
+msgstr "Unesite točan naziv modela, na primjer onako kako je navedeno u dokumentaciji pružatelja usluge."
+
+#. translators: %s: model name.
+#: includes/ai-core/class-admin.php:725
+#, php-format
+msgid "Added %s. Choose it under \"Which model to use\"."
+msgstr "Dodan %s. Odaberite ga pod \"Koji model koristiti\"."
+
+#: includes/ai-core/class-admin.php:754
+msgid "Model removed."
+msgstr "Model je uklonjen."
+
+#: includes/ai-core/class-admin.php:781
+msgid "Daily updates are off. The list that came with the plugin is used."
+msgstr "Dnevna ažuriranja su isključena. Koristi se popis koji je došao s dodacima."
+
+#. translators: %s: result of the check, such as "already up to date".
+#: includes/ai-core/class-admin.php:788
+#, php-format
+msgid "Checked: %s."
+msgstr "Odabrano: %s."
+
+#: includes/ai-core/class-admin.php:810
+msgid "Model lists refreshed."
+msgstr "Popisi modela su osvježeni."
+
+#: includes/ai-core/class-client.php:53
+msgid "Your AI key was saved by a newer version of one of your plugins. Update this plugin, or enter the key again in the AI settings."
+msgstr "Vaš AI ključ je spremila novija verzija jednog od vaših dodataka. Ažurirajte ovaj dodatak ili ponovno unesite ključ u postavkama za AI."
+
+#: includes/ai-core/class-client.php:54
+msgid "Your saved AI key can no longer be opened (the site's security keys changed). Enter it again in the AI settings."
+msgstr "Vaš spremljeni AI ključ se više ne može otvoriti (sigurnosni ključevi web-mjesta su promijenjeni). Unesite ga ponovno u postavkama umjetne inteligencije."
+
+#: includes/ai-core/class-client.php:59
+msgid "AI is not set up yet. Add a key for an AI provider in the AI settings."
+msgstr "AI još nije podešen. Dodajte ključ za AI davatelja usluga u AI postavkama."
+
+#: includes/ai-core/class-client.php:65
+msgid "No model is chosen for this task. Pick one in the AI settings."
+msgstr "Ni jedan model nije odabran za ovaj zadatak. Odaberite jedan u postavkama umjetne inteligencije."
+
+#: includes/ai-core/class-client.php:83
+msgid "That AI provider is not supported by this version of the plugin."
+msgstr "Taj pružatelj usluga umjetne inteligencije nije podržan u ovoj verziji dodatka."
+
+#: includes/ai-core/class-failure.php:141
+msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
+msgstr "Ova stranica ne može dosegnuti vašu AI uslugu. Provjerite radi li i je li njena adresa dostupna s vašeg web poslužitelja (usluga na vašem vlastitom računalu nije dostupna s hostirane stranice)."
+
+#. translators: %s: AI provider name, e.g. OpenAI.
+#: includes/ai-core/class-failure.php:152
+#, php-format
+msgid "This site could not reach %s. Check their status page; if they are up, your host may be blocking outgoing connections, or the address is wrong."
+msgstr "Ova stranica nije mogla dosegnuti %s. Provjerite njihovu stranicu statusa; ako rade, vaš poslužitelj možda blokira odlazne veze ili je adresa pogrešna."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:168
+#, php-format
+msgid "%s says your account has no credit or quota left. Add credit or raise your limit in your account with them, then try again."
+msgstr "%s navodi da vaš račun nema preostalog kredita ili kvote. Dodajte kredit ili povećajte ograničenje na svom računu kod njih, a zatim pokušajte ponovo."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:182
+#, php-format
+msgid "%s did not accept your key. It may be mistyped, revoked or expired. Create a new key and paste it here."
+msgstr "%s nije prihvatio vaš ključ. Možda je pogrešno upisan, opozvan ili je istekao. Izradite novi ključ i zalijepite ga ovdje."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:196
+#, php-format
+msgid "%s refused this request for your key. The key may not have access to this model or feature, or your account needs verifying."
+msgstr "%s je odbio ovaj zahtjev za vaš ključ. Ključ možda nema pristup ovom modelu ili značajci, ili je vaš račun potrebno verificirati."
+
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:210
+#, php-format
+msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
+msgstr "Model \"%1$s\" nije dostupan od davatelja %2$s za vaš ključ. Odaberite drugi model u postavkama umjetne inteligencije."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:225
+#, php-format
+msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
+msgstr "%s ograničava brzinu kojom vaš ključ može slati zahtjeve. Pričekajte minutu i pokušajte ponovno ili povećajte ograničenje brzine kod njih."
+
+#. translators: %s: AI provider name.
+#: includes/ai-core/class-failure.php:239
+#, php-format
+msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
+msgstr "%s trenutačno ima problema (prekid rada ili preopterećenje s njihove strane). S vašim postavkama je sve u redu. Pokušajte ponovno uskoro."
+
+#: includes/ai-core/class-failure.php:250
+msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
+msgstr "Zahtjev za AI nije uspio iz razloga koji nismo mogli utvrditi. Pokušajte ponovno; ako se to nastavi događati, obratite se podršci s detaljima u nastavku."
+
+#: includes/ai-core/class-provider.php:162
+msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
+msgstr "Pružatelj usluga umjetne inteligencije odgovorio je u obliku koji ovaj dodatak nije mogao pročitati. Pokušajte ponovno; ako se to nastavi događati, odaberite drugi model ili se obratite podršci."
+
+#: includes/ai-core/class-registry.php:58
+msgid "Custom (OpenAI-compatible)"
+msgstr "Prilagođeno (kompatibilno s OpenAI)"
+
+#: includes/ai-core/class-tester.php:40
+msgid "Save a key for this provider first."
+msgstr "Prvo spremite ključ za ovog pružatelja usluga."
+
+#: includes/ai-core/class-tester.php:50
+msgid "Your key works, but the provider lists no text model for it. Add a model yourself below."
+msgstr "Vaš ključ radi, ali pružatelj usluge za njega ne navodi nijedan tekstualni model. Dodajte model sami u nastavku."
+
+#. translators: 1: AI provider name, 2: model name.
+#: includes/ai-core/class-tester.php:74
+#, php-format
+msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
+msgstr "Povezano. %1$s je odgovorio/la koristeći %2$s. Vaše AI značajke spremne su za upotrebu."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:112
+msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
+msgstr "Vaša korisnička uloga ne smije koristiti umjetnu inteligenciju na ovoj stranici. Obratite se administratoru."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:119
+msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
+msgstr "Ova je stranica dosegla svoju mjesečnu potrošnju na umjetnu inteligenciju. Administrator ju može povećati u postavkama umjetne inteligencije."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:122
+msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
+msgstr "Ova je stranica dosegnula mjesečni limit AI zahtjeva. Administrator ga može povećati u postavkama za AI."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:228
+msgid "Usage and cost"
+msgstr "Upotreba i troškovi"
+
+#. translators: %s: list of plugin names.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:238
+#, php-format
+msgid "The log, limits and role permissions apply to AI used through: %s."
+msgstr "Dnevnik, ograničenja i dozvole uloga primjenjuju se na AI koji se koristi putem: %s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:241
+msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
+msgstr "Troškovi su približni, izračunati na temelju objavljenih cijena; model bez poznate cijene računa se kao nula."
+
+#. translators: 1: number of requests, 2: approximate cost in US dollars.
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:245
+#, php-format
+msgid "This month: %1$s requests, about %2$s."
+msgstr "Ovaj mjesec: %1$s zahtjeva, oko %2$s."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "When"
+msgstr "Kada"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Who"
+msgstr "Tko"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Used for"
+msgstr "Upotrebljava se za"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Model"
+msgstr "Model"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Tokens in / out"
+msgstr "Tokeni / izlazni tokeni"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/About.js:15
+msgid "About"
+msgstr "O programu"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+msgid "Result"
+msgstr "Rezultat"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:258
+msgid "No AI requests have been made yet."
+msgstr "Još nije podnesen nijedan zahtjev za AI."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
+msgid "Done"
+msgstr "Gotovo"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:273
+msgid "Limits and permissions"
+msgstr "Ograničenja i dozvole"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Monthly spending limit (US dollars)"
+msgstr "Mjesečni limit potrošnje (US dolara)"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:277
+msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
+msgstr "Ostavite prazno za bez ograničenja. AI se zaustavlja do kraja mjeseca kada približni trošak dosegne tu vrijednost."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Monthly request limit"
+msgstr "Mjesečno ograničenje zahtjeva"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:278
+msgid "Leave empty for no limit."
+msgstr "Ostavite prazno za bez ograničenja."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:279
+msgid "Who may use AI"
+msgstr "Tko može koristiti AI"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:283
+msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
+msgstr "Označite ništa kako biste omogućili svima koji mogu koristiti značajke dodatka da koriste umjetnu inteligenciju. Administratori je uvijek mogu koristiti."
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:285
+msgid "Save limits and permissions"
+msgstr "Spremi ograničenja i dozvole"
+
+#: includes/ai-core/pro__premium_only/class-pro-policy.php:334
+msgid "Limits and permissions saved."
+msgstr "Ograničenja i dozvole su spremljeni."
 
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
@@ -252,10 +825,6 @@ msgstr "Navedite barem jedan jezik."
 msgid "That is more languages than one site can list."
 msgstr "To je više jezika nego što jedna stranica može prikazati."
 
-#: src/admin/About.js:15
-msgid "About"
-msgstr "O programu"
-
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Izradio Neil Lock, izvršni direktor tvrtke Zinn Digital® Ltd"
@@ -293,10 +862,6 @@ msgstr "Prvi jezik je onaj na kojem je vaš sadržaj napisan. Posjetitelji se pr
 #: src/admin/App.js:131
 msgid "(default)"
 msgstr "(zadano)"
-
-#: src/admin/App.js:147
-msgid "Remove"
-msgstr "Ukloni"
 
 #: src/admin/App.js:158
 msgid "Locale code"
