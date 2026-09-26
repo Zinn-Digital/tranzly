@@ -471,19 +471,25 @@ msgstr "%s உங்கள் திறவுவிதிக்கான இந�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "%2$s இலிருந்து உங்கள் திறவுகோலுக்கு \"%1$s\" மாதிரி கிடைக்கவில்லை. AI அமைப்புகளில் மற்றொரு மாதிரியைத் தேர்ந்தெடுக்கவும்."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "உங்களின் %2$s திட்டத்தில் \"%1$s\" மாதிரி அடங்கவில்லை. AI அமைப்புகளில் மற்றொரு மாதிரியைத் தேர்ந்தெடுக்கவும் அல்லது அவர்களுடன் சேர்ந்து உங்கள் திட்டத்தை மேம்படுத்தவும்."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s உங்கள் விசை கோரிக்கைகளை அனுப்பும் வேகத்தைக் கட்டுப்படுத்துகிறது. ஒரு நிமிடம் காத்திருந்து மீண்டும் முயற்சிக்கவும் அல்லது உங்களுடன் அதற்கான வீத வரம்பை அதிகரிக்கவும்."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s தற்போது சிக்கல்களை எதிர்கொள்கிறது (அவர்களின் தரப்பில் சேவையகத் தடை அல்லது அதிக சுமை). உங்கள் அமைப்புகளில் எந்தப் பிழையும் இல்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "காரணம் கண்டறிய முடியாததால் AI கோரிக்கை தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்; இது தொடர்ந்து நடந்தால், கீழேயுள்ள விவரங்களுடன் ஆதரவுக் குழுவைத் தொடர்பு கொள்ளவும்."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "உங்கள் விசை செயல்படுகிறது, ஆனால் வழங்குநர் அதற்கு எந்த உரை மாதிரியையும் பட்டியலிடவில்லை. கீழே நீங்களே ஒரு மாதிரியைச் சேர்க்கவும்."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "இணைக்கப்பட்டது. %1$s, %2$s ஐப் பயன்படுத்தி பதிலளித்தார். உங்கள் AI அம்சங்கள் பயன்படுத்தத் தயார்."

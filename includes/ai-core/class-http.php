@@ -32,7 +32,7 @@ final class Http {
 	/**
 	 * A replacement sender, used by the tests only.
 	 *
-	 * @var (callable(string, string, array<string, string>, ?string): array{status: int, body: string, error: string})|null
+	 * @var (callable(string, string, array<string, string>, ?string): array{status: int, body: string, error: string, headers?: array<string, string>})|null
 	 */
 	private static $fake = null;
 
@@ -44,7 +44,7 @@ final class Http {
 	 * @param array<string, string> $headers Request headers.
 	 * @param string|null           $body    Request body, already encoded.
 	 * @param bool                  $local   Allow a private or loopback address (a self-hosted model).
-	 * @return array{status: int, body: string, error: string} `status` 0 means no response arrived.
+	 * @return array{status: int, body: string, error: string, headers?: array<string, string>} `status` 0 means no response arrived.
 	 */
 	public static function send( string $method, string $url, array $headers = array(), ?string $body = null, bool $local = false ): array {
 		if ( null !== self::$fake ) {
@@ -73,17 +73,29 @@ final class Http {
 			);
 		}
 
+		// Response headers, lower-cased. Some providers say things only there: Mistral answers a
+		// model the account's plan excludes with a 429 whose request limit is zero, and the body
+		// alone cannot tell that apart from a real rate limit (see Failure::from_response()).
+		$headers = array();
+		// ⛔ Not `(array)`: WordPress returns a CaseInsensitiveDictionary OBJECT, and casting an
+		// object gives its private properties, not the headers. It is iterable; iterate it.
+		$raw = wp_remote_retrieve_headers( $response );
+		foreach ( is_iterable( $raw ) ? $raw : array() as $name => $value ) {
+			$headers[ strtolower( (string) $name ) ] = is_array( $value ) ? implode( ', ', array_map( 'strval', $value ) ) : (string) $value;
+		}
+
 		return array(
-			'status' => (int) wp_remote_retrieve_response_code( $response ),
-			'body'   => (string) wp_remote_retrieve_body( $response ),
-			'error'  => '',
+			'status'  => (int) wp_remote_retrieve_response_code( $response ),
+			'body'    => (string) wp_remote_retrieve_body( $response ),
+			'error'   => '',
+			'headers' => $headers,
 		);
 	}
 
 	/**
 	 * Replace the sender (tests only). Pass null to restore the real one.
 	 *
-	 * @param (callable(string, string, array<string, string>, ?string): array{status: int, body: string, error: string})|null $sender Replacement.
+	 * @param (callable(string, string, array<string, string>, ?string): array{status: int, body: string, error: string, headers?: array<string, string>})|null $sender Replacement.
 	 * @return void
 	 */
 	public static function fake( ?callable $sender ): void {

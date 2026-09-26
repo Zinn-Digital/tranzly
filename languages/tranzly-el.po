@@ -471,19 +471,25 @@ msgstr "%s απέρριψε αυτό το αίτημα για το κλειδί 
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Το μοντέλο \"%1$s\" δεν είναι διαθέσιμο από τον πάροχο %2$s για το κλειδί σας. Επιλέξτε άλλο μοντέλο στις ρυθμίσεις τεχνητής νοημοσύνης."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Το πρόγραμμά σας %2$s δεν περιλαμβάνει το μοντέλο \"%1$s\". Επιλέξτε άλλο μοντέλο στις ρυθμίσεις τεχνητής νοημοσύνης ή αναβαθμίστε το πρόγραμμά σας με αυτούς."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s περιορίζει τον ρυθμό με τον οποίο το κλειδί σας μπορεί να στέλνει αιτήματα. Περιμένετε ένα λεπτό και δοκιμάστε ξανά, ή αυξήστε το όριο ρυθμού σας μαζί τους."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s αντιμετωπίζει προβλήματα αυτή τη στιγμή (διακοπή λειτουργίας ή υπερφόρτωση από την πλευρά τους). Δεν υπάρχει πρόβλημα με τις ρυθμίσεις σας. Δοκιμάστε ξανά σύντομα."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Η αίτηση τεχνητής νοημοσύνης απέτυχε για έναν λόγο που δεν μπορέσαμε να εντοπίσουμε. Δοκιμάστε ξανά· εάν το πρόβλημα επιμένει, επικοινωνήστε με την υποστήριξη παρέχοντας τις παρακάτω λεπτομέρειες."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Το κλειδί σας λειτουργεί, αλλά ο πάροχος δεν διαθέτει κανένα μοντέλο κειμένου για αυτό. Προσθέστε ένα μοντέλο παρακάτω."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Συνδέθηκε. Ο/Η %1$s απάντησε χρησιμοποιώντας το %2$s. Οι λειτουργίες τεχνητής νοημοσύνης σας είναι έτοιμες για χρήση."

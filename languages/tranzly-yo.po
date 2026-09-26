@@ -471,19 +471,25 @@ msgstr "%s kọ ìbéèrè yìí fún bọtínì rẹ. Bọtínì náà le má n
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Àì sí àwoṣe \"%1$s\" láti ọ̀dọ̀ %2$s fún bọ́tìni rẹ. Yan àwoṣe miiran nínú ètò AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Ètò %2$s rẹ ko ni awoṣe \"%1$s\" ninu. Yan awoṣe miiran ninu awọn eto AI, tabi sọ eto rẹ di tuntun pẹlu wọn."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s nfi opin si bi o ṣe yara to fun bọtini rẹ lati fi awọn ibeere ranṣẹ. Duro fun iṣẹju kan ki o tun gbiyanju si tun, tabi gbe opin oṣuwọn rẹ soke pẹlu wọn."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s nírírí awọn iṣoro ni akoko yii (aiṣiṣẹ tabi fifuye lori apa wọn). Ko si ohun ti ko tọ si pẹlu awọn eto rẹ. Gbiyanju lẹẹkansi laipẹ."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Ìbéèrè AI náà kùnà fún ìdí kan tí a kò lè mọ̀. Gbìyànjú lẹ́ẹ̀kan sí i; tí ó bá ń ṣẹlẹ̀ sí i, kàn sí ìmọ̀ títìlẹ́yìn pẹ̀lú àwọn kúlẹ̀kúlẹ̀ tó wà ní ìsàlẹ̀ yìí."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Bọtini rẹ ṡe iṣẹ, ṣugbọn olupese naa ko ṣe atkojọ awoṣe ọrọ kankan fun un. Fi awoṣe kan kun fun ara rẹ ni isalẹ."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Ti sopọ. %1$s ti fesi ni lilo %2$s. Awọn ẹya ara ẹrọ AI rẹ ti ṣetan lati lo."

@@ -471,19 +471,25 @@ msgstr "%s đã từ chối yêu cầu này đối với khóa của bạn. Khó
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Mô hình \"%1$s\" không khả dụng từ %2$s đối với khóa của bạn. Hãy chọn một mô hình khác trong cài đặt AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Gói %2$s của bạn không bao gồm mô hình \"%1$s\". Hãy chọn một mô hình khác trong cài đặt AI hoặc nâng cấp gói của bạn với họ."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s đang giới hạn tốc độ khóa của bạn gửi yêu cầu. Hãy đợi một phút và thử lại, hoặc tăng giới hạn tốc độ của bạn với họ."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s đang gặp sự cố vào lúc này (lỗi gián đoạn hoặc quá tải từ phía họ). Cài đặt của bạn hoàn toàn bình thường. Vui lòng thử lại sau ít phút."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Yêu cầu AI đã thất bại vì một lý do không xác định. Vui lòng thử lại; nếu sự cố vẫn tiếp diễn, hãy liên hệ với bộ phận hỗ trợ kèm theo thông tin chi tiết dưới đây."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Khóa của bạn hoạt động, nhưng nhà cung cấp không liệt kê mô hình văn bản nào cho khóa đó. Hãy tự thêm mô hình bên dưới."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Đã kết nối. %1$s đã trả lời bằng %2$s. Các tính năng AI của bạn đã sẵn sàng sử dụng."

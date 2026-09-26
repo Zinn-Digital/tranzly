@@ -471,19 +471,25 @@ msgstr "%s refuzoi këtë kërkesë për çelësin tuaj. Çelësi mund të mos k
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Modeli \"%1$s\" nuk është i disponueshëm nga %2$s për çelësin tuaj. Zgjidhni një model tjetër te cilësimet e AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Pani Jau %2$s nuk përfshin modelin \"%1$s\". Zgjidhni një model tjetër te cilësimet e AI, ose përmirësoni planin tuaj me ta."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s po kufizon shpejtësinë me të cilën çelësi juaj mund të dërgojë kërkesa. Prisni një minutë dhe provoni përsëri, ose rritni kufirin tuaj të shpejtësisë me ta."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s po përjeton probleme në këtë moment (një ndërprerje ose mbingarkesë në anën e tyre). Nuk ka asnjë problem me cilësimet tuaja. Provoni sërish pas pak."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Kërkesa e AI dështoi për një arsye që nuk mundëm ta identifikonim. Provoni përsëri; nëse vazhdon të ndodhë, kontaktoni mbështetjen me detajet e mëposhtme."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Çelësi juaj funksionon, por ofruesi nuk liston asnjë model teksti për të. Shtoni vetë një model më poshtë."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Lidhur. %1$s u përgjigj duke përdorur %2$s. Veçoritë tuaja të AI janë gati për t'u përdorur."

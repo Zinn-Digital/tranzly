@@ -471,19 +471,25 @@ msgstr "%s anahtarınız için bu isteği reddetti. Anahtarın bu modele veya ö
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "\"%1$s\" modeli, anahtarınız için %2$s tarafından kullanılamıyor. Yapay zeka ayarlarından başka bir model seçin."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "%2$s planınız \"%1$s\" modelini içermemektedir. Yapay zeka ayarlarından başka bir model seçin veya planınızı yükseltin."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s, anahtarınızın istek gönderme hızını sınırlandırıyor. Bir dakika bekleyip tekrar deneyin veya onlarla oran sınırınızı artırın."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s şu anda sorun yaşıyor (kendi tarafında bir kesinti veya aşırı yüklenme var). Ayarlarınızda bir sorun yok. Kısa süre sonra tekrar deneyin."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Yapay zeka isteği, belirleyemediğimiz bir nedenle başarısız oldu. Tekrar deneyin; sorun devam ederse aşağıdaki ayrıntılarla birlikte destek ekibiyle iletişime geçin."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Anahtarınız çalışıyor, ancak sağlayıcı bunun için hiçbir metin modeli listelemiyor. Aşağıya kendiniz bir model ekleyin."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Bağlandı. %1$s, %2$s kullanarak yanıt verdi. Yapay zeka özellikleriniz kullanıma hazır."

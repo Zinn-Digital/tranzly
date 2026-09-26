@@ -471,19 +471,25 @@ msgstr "%s tinanggihan ang kahilingang ito para sa iyong key. Maaaring walang ac
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Hindi available ang model na \"%1$s\" mula sa %2$s para sa iyong key. Pumili ng ibang modelo sa mga setting ng AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Ang iyong planong %2$s ay hindi kasama ang modelong \"%1$s\". Pumili ng ibang modelo sa mga setting ng AI, o i-upgrade ang iyong plano sa kanila."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "Nililimitahan ng %s kung gaano kaqabilis makapagpadala ng mga kahilingan ang iyong key. Maghintay ng isang minuto at subukang muli, o pataasin ang iyong rate limit sa kanila."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "May mga problema ang %s sa ngayon (isang outage o overload sa kanilang bahagi). Walang mali sa iyong mga setting. Subukan itong muli mamaya-maya."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Nabigo ang kahilingan ng AI sa dahilang hindi namin matukoy. Subukang muli; kung magpatuloy ito, makipag-ugnayan sa suporta kasama ang mga detalye sa ibaba."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Gumagana ang iyong key, ngunit walang nakalistang text model para rito ang provider. Magdagdag ng modelo sa ibaba."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Konektado. Sinagot ni %1$s gamit ang %2$s. Handang gamitin ang iyong mga AI feature."

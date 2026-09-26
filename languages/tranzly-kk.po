@@ -471,19 +471,25 @@ msgstr "%s кілтіңізге арналған бұл сұрауды қабы�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "%2$s жүйесінде кілтіңіз үшін \"%1$s\" моделі қолжетімді емес. AI параметрлерінен басқа модельді таңдаңыз."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Сіздің %2$s жоспарыңыз \"%1$s\" моделін қамтымайды. AI параметрлерінен басқа модельді таңдаңыз немесе жоспарыңызды жаңартыңыз."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s кілтіңіздің сұрау жіберу жылдамдығын шектеп жатыр. Бір минут күтіп, қайталап көріңіз немесе олармен жылдамдық шегін арттырыңыз."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s қазіргі уақытта ақауларға тап болуда (олардың жағында істен шығу немесе шамадан тыс жүктеме бар). Сіздің параметрлеріңізде ешқандай қате жоқ. Біраз уақыттан кейін қайта көріңіз."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Жасанды интеллект сұрауы анықталмаған себеп бойынша сәтсіз аяқталды. Қайталап көріңіз; бұл қайталана берсе, төмендегі мәліметтермен қолдау қызметіне хабарласыңыз."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Сіздің кілтіңіз жұмыс істейді, бірақ провайдер бұл үшін ешқандай мәтіндік модельді көрсетпеген. Төменде модельді өзіңіз қосыңыз."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Қосылды. %1$s %2$s көмегімен жауап берді. AI мүмкіндіктеріңіз пайдалануға дайын."

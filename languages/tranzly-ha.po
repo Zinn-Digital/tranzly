@@ -471,19 +471,25 @@ msgstr "%s ya ki amincewa da wannan roƙo na madannin ku. Madannin wataƙila ba 
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Ba a samun samfurin \"%1$s\" daga %2$s don makullin ku. Zaɓi wani samfurin daban a cikin saitunan AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Tsarin ku na %2$s bai haɗa da samfurin \"%1$s\" ba. Zaɓi wani samfurin a cikin saitunan AI, ko haɓaka tsarin ku tare da su."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s na takaita saurin da maɓallin ku zai iya aika buƙatu. Jira minti guda sannan a ƙara gwadawa, ko kuma a ƙara iyakar ƙimar ku tare da su."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s yana fuskantar matsaloli a yanzu (akwai matsalar katsewar sabis ko cunkoso a ɓangarensu). Babu wata matsala game da saitunanka. Sake gwadawa nan ba da dadewa ba."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Aikace-aikacen AI ya gaza saboda dalilin da ba za mu iya gane shi ba. Sake gwadawa; idan hakan ya ci gaba da faruwa, tuntuɓi sashen goyon baya tare da bayanan da ke ƙasa."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Makullin ku yana aiki, amma mai ba da sabis ɗin bai lissafa wani samfurin rubutu ba a kansa. Ƙara samfurin da kanku a ƙasa."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "An haɗa. %1$s ya/ta amsa ta amfani da %2$s. Siffofin AI ɗinka suna shirye don amfani."

@@ -471,19 +471,25 @@ msgstr "%s د دې غوښتنې لپاره ستاسو کیلي رد کړه. کې
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "ماډل \"%1$s\" د %2$s لخوا ستاسو د کیلي لپاره شتون نلري. د مصنوعي ځيرکتیا (AI) په تنظیماتو کې بل ماډل وټاکئ."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "ستاسو د %2$s پلانونه د \"%1$s\" ماډل نه لري. په مصنوعي ځیرکتیا (AI) ترتیباتو کې بل ماډل وټاکئ، یا خپل پلان لوړ کړئ."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s ستاسو د کیلي لخوا د غوښتنو استولو چټکتیا محدوده کوي. یوه دقیقه انتظار وکړئ او بیا هڅه وکړئ، یا د دوی سره خپل د نرخ حد (rate limit) لوړ کړئ."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s اوس مهال ستونزې لري (د دوی په لوري کې بندښت یا ډیر بار دی). ستاسو په ترتیباتو کې هیڅ ستونزه نشته. لږ وروسته بیا هڅه وکړئ."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "د مصنوعي استخباراتو غوښتنه د یو داسې دلیل له امله ناکامه شوه چې موږ یې نشو پیژندلی. بیا هڅه وکړئ؛ که دا دوام ولري، لاندې معلوماتو سره ملاتړ سره اړیکه ونیسئ."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "ستاسو کلي کار کوي، خو چمتو کونکي د دې لپاره د متن کوم ماډل نه دی لړلیک کړی. لاندې پخپله یو ماډل اضافه کړئ."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "وصل شو. %1$s د %2$s په کارولو سره ځواب ورکړ. ستاسو د مصنوعي ځيرکتیا ځانګړتیاوې د کارولو لپاره چمتو دي."

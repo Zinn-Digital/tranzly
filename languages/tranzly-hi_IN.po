@@ -471,19 +471,25 @@ msgstr "%s ने आपकी कुंजी के लिए इस अनु
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "मॉडल \"%1$s\", आपकी कुंजी के लिए %2$s से उपलब्ध नहीं है। AI सेटिंग्स में कोई अन्य मॉडल चुनें।"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "आपके %2$s प्लान में \"%1$s\" मॉडल शामिल नहीं है। AI सेटिंग्स में कोई दूसरा मॉडल चुनें या उनके साथ अपना प्लान अपग्रेड करें।"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s आपकी कुंजी द्वारा अनुरोध भेजने की गति को सीमित कर रहा है। एक मिनट प्रतीक्षा करें और पुनः प्रयास करें, या उनके साथ अपनी दर सीमा बढ़ाएँ।"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s में अभी समस्या आ रही है (उनकी ओर से आउटेज या ओवरलोड)। आपकी सेटिंग में कोई खराबी नहीं है। थोड़ी देर बाद पुनः प्रयास करें।"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI अनुरोध एक ऐसे कारण से विफल हो गया जिसकी हम पहचान नहीं कर सके। पुनः प्रयास करें; यदि यह समस्या बनी रहती है, तो नीचे दिए गए विवरण के साथ सहायता टीम से संपर्क करें।"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "आपकी कुंजी काम करती है, लेकिन प्रदाता इसके लिए किसी टेक्स्ट मॉडल की सूची नहीं देता है। नीचे स्वयं एक मॉडल जोड़ें।"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "कनेक्टेड। %1$s ने %2$s का उपयोग करके उत्तर दिया। आपकी AI सुविधाएँ उपयोग के लिए तैयार हैं।"

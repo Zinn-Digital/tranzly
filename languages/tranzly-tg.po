@@ -471,19 +471,25 @@ msgstr "%s ин дархостро барои калиди шумо рад ка�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Модели \"%1$s\" аз %2$s барои калиди шумо дастнорас аст. Модели дигарро дар танзимоти AI интихоб кунед."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Нқшаи %2$s-и шумо модели «%1$s»-ро дар бар намегирад. Дар танзимоти AI модели дигареро интихоб кунед ё нақшаи худро бо онҳо навсозӣ кунед."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s суръати фиристодани дархостҳоро бо калиди шумо маҳдуд мекунад. Як дақиқа интизор шавед ва бори дигар кӯшиш кунед ё маҳдудияти суръати худро бо онҳо баланд бардоред."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s айни замон мушкилот дорад (носозӣ ё аз ҳад зиёд бор шудани сервер дар тарафи онҳо). Бо танзимоти шумо ягон мушкилӣ нест. Ба зудӣ дубора кӯшиш кунед."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Дархости сунъӣ бо сабабе номуайян иҷро нашуд. Бори дигар кӯшиш кунед; агар ин такрор шавад, бо маълумоти зерин ба дастгирии муштариён муроҷиат кунед."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Калиди шумо кор мекунад, аммо провайдер ягон модели матниро барои он номбар намекунад. Дар зер худатон моделеро илова кунед."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Пайваст шуд. %1$s бо истифодаи %2$s ҷавоб дод. Хусусиятҳои сунъии зеҳнии шумо барои истифода омодаанд."

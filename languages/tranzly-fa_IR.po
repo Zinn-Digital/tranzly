@@ -471,19 +471,25 @@ msgstr "%s این درخواست را برای کلید شما رد کرد. مم
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "مدل \"%1$s\" برای کلید شما از طرف %2$s در دسترس نیست. مدل دیگری را در تنظیمات هوش مصنوعی انتخاب کنید."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "طرح %2$s شما شامل مدل «%1$s» نمی‌شود. مدل دیگری را در تنظیمات هوش مصنوعی انتخاب کنید، یا طرح خود را ارتقا دهید."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s سرعت ارسال درخواست‌های کلید شما را محدود می‌کند. یک دقیقه صبر کنید و دوباره امتحان کنید، یا حد نرخ خود را با آن‌ها افزایش دهید."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s در حال حاضر با مشکل مواجه است (قطعی یا بارگذاری بیش از حد در سمت آن‌ها). مشکلی در تنظیمات شما وجود ندارد. لطفاً به‌زودی دوباره امتحان کنید."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "درخواست هوش مصنوعی به دلیلی که نتوانستیم شناسایی کنیم با شکست مواجه شد. دوباره تلاش کنید؛ اگر مشکل ادامه داشت، با جزئیات زیر با پشتیبانی تماس بگیرید."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "کلید شما کار می‌کند، اما ارائه‌دهنده هیچ مدل متنی را برای آن فهرست نکرده است. خودتان یک مدل را در زیر اضافه کنید."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "متصل شد. %1$s با استفاده از %2$s پاسخ داد. ویژگی‌های هوش مصنوعی شما آماده استفاده هستند."

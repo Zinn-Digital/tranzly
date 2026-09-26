@@ -471,19 +471,25 @@ msgstr "%s သည် သင်၏ သော့ချက်အတွက် ဤတ
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "သင့်သော့အတွက် %2$s မှ \"%1$s\" မော်ဒယ်ကို မရရှိနိုင်ပါ။ AI ဆက်တင်များတွင် အခြားမော်ဒယ်တစ်ခုကို ရွေးချယ်ပါ။"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "သင့်ရဲ့ %2$s ပလန်တွင် \"%1$s\" မော်ဒယ် မပါဝင်ပါ။ AI ဆက်တင်များတွင် အခြားမော်ဒယ်တစ်ခုကို ရွေးပါ သို့မဟုတ် ၎င်းတို့နှင့် သင့်ပလန်ကို အဆင့်မြှင့်ပါ။"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s သည် သင့်သော့ (key) မှ တောင်းဆိုချက်များ ပေးပို့နိုင်သည့် အမြန်နှုန်းကို ကန့်သတ်နေပါသည်။ တစ်မိနစ်ခန့် စောင့်ပြီးနောက် ထပ်မံကြိုးစားပါ သို့မဟုတ် ၎င်းတို့နှင့် သင့်နှုန်းထား ကန့်သတ်ချက်ကို တိုးမြှင့်ပါ။"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s တွင် လက်ရှိ ပြဿနာများ ရှိနေပါသည် (၎င်းတို့ဘက်မှ ဝန်ဆောင်မှုရပ်ဆိုင်းခြင်း သို့မဟုတ် ဝန်ပိုနေခြင်း ဖြစ်သည်)။ သင်၏ ဆက်တင်များတွင် မည်သည့်အမှားမျှ မရှိပါ။ ခဏနေမှ ထပ်ကြိုးစားပါ။"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI တောင်းဆိုချက်သည် အကြောင်းရင်းကို ကျွန်ုပ်တို့ မဖော်ထုတ်နိုင်ဘဲ မအောင်မြင်ခဲ့ပါ။ ထပ်ကြိုးစားကြည့်ပါ၊ ဆက်လက်ဖြစ်ပေါ်နေပါက အောက်ပါအသေးစိတ်အချက်အလက်များဖြင့် ပံ့ပိုးကူညီရေးအဖွဲ့ထံ ဆက်သွယ်ပါ။"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "သင့်သော့ချက် အလုပ်လုပ်သော်လည်း၊ ပံ့ပိုးပေးသူသည် ၎င်းအတွက် စာသားပုံစံ (text model) တစ်ခုမျှ စာရင်းမပြုစုထားပါ။ အောက်တွင် မော်ဒယ်တစ်ခုကို သင်ကိုယ်တိုင် ထည့်ပါ။"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "ချိတ်ဆက်ပြီးပါပြီ။ %1$s က %2$s ကို အသုံးပြု၍ ဖြေကြားခဲ့သည်။ သင်၏ AI အင်္ဂါရပ်များကို အသုံးပြုရန် အဆင်သင့်ဖြစ်နေပါပြီ။"

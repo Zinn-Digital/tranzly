@@ -471,19 +471,25 @@ msgstr "%s نے آپ کی کلید کے لیے اس درخواست مسترد ک
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "ماڈل \"%1$s\" آپ کی کلید کے لیے %2$s پر دستیاب نہیں ہے۔ AI کی ترتیبات میں کوئی دوسرا ماڈل منتخب کریں۔"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "آپ کا %2$s پلان ماڈل \"%1$s\" شامل نہیں کرتا ہے۔ AI کی ترتیبات میں کسی دوسرے ماڈل کا انتخاب کریں، یا ان کے ساتھ اپنا پلان اپ گریڈ کریں۔"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s اس بات کو محدود کر رہا ہے کہ آپ کی کلید کتنی تیزی سے درخواستیں بھیج سکتی ہے۔ ایک منٹ انتظار کریں اور دوبارہ کوشش کریں، یا ان کے ساتھ اپنی ریٹ کی حد بڑھا دیں۔"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s کو اس وقت مسائل کا سامنا ہے (ان کی طرف سے بندش یا اوورلوڈ)۔ آپ کی سیٹنگز میں کوئی خرابی نہیں ہے۔ کچھ دیر بعد دوبارہ کوشش کریں۔"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI کی درخواست ایک ایسی وجہ سے ناکام ہو گئی جسے ہم شناخت نہیں کر سکے۔ دوبارہ کوشش کریں؛ اگر ایسا ہوتا رہے، تو نیچے دیے گئے تفصیلات کے ساتھ سپورٹ سے رابطہ کریں۔"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "آپ کی کلید کام کرتی ہے، لیکن فراہم کنندہ نے اس کے لیے کسی ٹیکسٹ ماڈل کی فہرست نہیں دی۔ نیچے خود ایک ماڈل شامل کریں۔"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "منسلک ہے۔ %1$s نے %2$s کا استعمال کرتے ہوئے جواب دیا۔ آپ کی AI خصوصیات استعمال کے لیے تیار ہیں۔"

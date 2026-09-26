@@ -471,19 +471,25 @@ msgstr "%s はキーに対するこのリクエストを拒否しました。キ
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "お使いのキーでは、モデル「%1$s」を %2$s から利用できません。AI 設定で別のモデルを選択してください。"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "お使いの %2$s プランにはモデル「%1$s」が含まれていません。AI 設定で別のモデルを選択するか、プランをアップグレードしてください。"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s がキーからのリクエスト送信速度を制限しています。1分待ってからもう一度試すか、リクエスト制限を引き上げてもらってください。"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s は現在問題が発生しています（相手方での障害または過負荷）。お客様の設定には問題ありません。しばらくしてからもう一度お試しください。"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "原因不明のエラーにより、AIリクエストの処理に失敗しました。もう一度お試しください。問題が解決しない場合は、以下の詳細情報をご確認の上、サポートまでお問い合わせください。"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "APIキーは正常に機能していますが、プロバイダーにテキストモデルが登録されていません。以下にご自身でモデルを追加してください。"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "接続されました。%1$sさんが%2$sを使用して応答しました。AI機能の準備が整いました。"

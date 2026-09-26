@@ -471,19 +471,25 @@ msgstr "%s heeft dit verzoek om uw sleutel geweigerd. De sleutel heeft mogelijk 
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Het model \"%1$s\" is niet beschikbaar bij %2$s voor uw sleutel. Kies een ander model in de AI-instellingen."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Uw %2$s-abonnement bevat het model \"%1$s\" niet. Kies een ander model in de AI-instellingen of upgrade uw abonnement via hen."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s beperkt de snelheid waarmee uw sleutel verzoeken kan verzenden. Wacht een minuut en probeer het opnieuw, of verhoog uw tarieflimiet bij hen."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s heeft momenteel problemen (een storing of overbelasting aan hun kant). Er is niets mis met uw instellingen. Probeer het over een ogenblik opnieuw."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "De AI-aanvraag is mislukt om een reden die we niet hebben kunnen achterhalen. Probeer het opnieuw; als dit blijft gebeuren, neem dan contact op met de ondersteuning met onderstaande gegevens."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Uw sleutel werkt, maar de provider vermeldt er geen tekstmodel voor. Voeg hieronder zelf een model toe."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Verbonden. %1$s nam op met %2$s. Uw AI-functies zijn klaar voor gebruik."

@@ -471,19 +471,25 @@ msgstr "%s отхвърли тази заявка за вашия ключ. Кл
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Моделът „%1$s“ не е наличен от %2$s за вашия ключ. Изберете друг модел в настройките за изкуствен интелект."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Вашият план %2$s не включва модела \"%1$s\". Изберете друг модел в настройките за AI или надстройте своя план с тях."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s ограничава скоростта, с която вашият ключ може да изпраща заявки. Изчакайте минута и опитайте отново или увеличете лимита на заявките при тях."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s има проблеми в момента (прекъсване или претоварване от тяхна страна). Всичко с вашите настройки е наред. Опитайте отново скоро."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Заявката към изкуствения интелект се провали по неизяснена причина. Опитайте отново; ако проблемът продължава, свържете се с поддръжката с данните по-долу."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Вашият ключ работи, но доставчикът не посочва текстов модел за него. Добавете модел сами по-долу."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Свързано. %1$s отговори чрез %2$s. Вашите функции с изкуствен интелект са готови за употреба."

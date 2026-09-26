@@ -471,19 +471,25 @@ msgstr "%s 拒绝了针对您的密钥的此请求。该密钥可能无法访问
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "您的密钥无法通过 %2$s 使用模型 \"%1$s\"。请在 AI 设置中选择另一个模型。"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "您的 %2$s 方案不包含模型 \"%1$s\"。请在 AI 设置中选择其他模型，或通过他们升级您的方案。"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s 正在限制您的密钥发送请求的速度。请稍候一分钟再试，或者提高您与他们的速率限制。"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s 目前遇到问题（对方服务器出现故障或过载）。您的设置没有问题。请稍后重试。"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI 请求因未知原因失败。请重试；如果问题仍然存在，请将以下详细信息提供给客服支持。"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "您的密钥有效，但提供商未列出可用的文本模型。请在下方自行添加模型。"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "已连接：%1$s 使用 %2$s 接听。您的人工智能功能已准备就绪。"

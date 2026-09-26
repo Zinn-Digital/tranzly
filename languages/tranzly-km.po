@@ -471,19 +471,25 @@ msgstr "%s បានបដិសេធសំណើនេះសម្រាប់
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "ម៉ូដែល \"%1$s\" មិនមាននៅលើ %2$s សម្រាប់គ្រាប់ចុចរបស់អ្នកទេ។ សូមជ្រើសរើសម៉ូដែលផ្សេងនៅក្នុងការកំណត់ AI។"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "ផែនការ %2$s របស់អ្នកមិនមានបញ្ចូលម៉ូដែល \"%1$s\" ទេ។ សូមជ្រើសរើសម៉ូដែលផ្សេងនៅក្នុងការកំណត់ AI ឬអភិវឌ្ឍផែនការរបស់អ្នកឱ្យប្រសើរជាងមុនជាមួយពួកគេ។"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s កំពុងកំណត់ល្បឿនដែលគ្រាប់ចុចរបស់អ្នកអាចផ្ញើសំណើ។ សូមរង់ចាំមួយនាទីហើយព្យាយាមម្តងទៀត ឬបង្កើនដែនកំណត់អត្រារបស់អ្នកជាមួយពួកគេ។"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s កំពុងមានបញ្ហានៅពេលនេះ (ការដាច់ចរន្ត ឬការផ្ទុកលើសទម្ងន់នៅខាងពួកគេ)។ គ្មានអ្វីខុសប្រក្រតីជាមួយការកំណត់របស់អ្នកទេ។ សូមព្យាយាមម្តងទៀតក្នុងពេលឆាប់ៗនេះ។"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "សំណើ AI បានបរាជ័យដោយមូលហេតុដែលយើងមិនអាចកំណត់បាន។ សូមព្យាយាមម្តងទៀត បើវានៅតែកើតឡើង សូមទាក់ទងផ្នែកជំនួយដោយផ្ដល់នូវព័ត៌មានលម្អិតខាងក្រោម។"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "គ្រាប់ចុចរបស់អ្នកដំណើរការ ប៉ុន្តែអ្នកផ្តល់សេវាមិនរាយបញ្ជីម៉ូដែលអត្ថបទណាមួយសម្រាប់វាទេ។ សូមបន្ថែមម៉ូដែលដោយខ្លួនឯងខាងក្រោម។"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "បានតភ្ជាប់។ %1$s បានឆ្លើយតបដោយប្រើ %2$s។ លក្ខណៈពិសេស AI របស់អ្នកបានត្រៀមរួចជាស្រេចដើម្បីប្រើប្រាស់។"

@@ -471,19 +471,25 @@ msgstr "%s-მ უარი თქვა ამ მოთხოვნაზე �
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "მოდელი \"%1$s\" მიუწვდომელია %2$s-დან თქვენი გასაღებისთვის. აირჩიეთ სხვა მოდელი AI პარამეტრებში."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "თქვენი %2$s გეგმა არ მოიცავს მოდელს „%1$s“. აირჩიეთ სხვა მოდელი AI პარამეტრებში ან განაახლეთ თქვენი გეგმა მათთან ერთად."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s ზღუდავს სიჩქარეს, რომლითაც თქვენს გასაღებს მოთხოვნების გაგზავნა შეუძლია. დაიცადეთ ერთი წუთი და სცადეთ თავიდან, ან გაზარდეთ მათთან თქვენი სიხშირის ლიმიტი."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s ამჟამად აწყდება პრობლემებს (მისი მხრიდან გათიშვა ან გადატვირთვა). თქვენს პარამეტრებში ყველაფერი რიგზეა. სცადეთ თავიდან მოგვიანებით."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI მოთხოვნა წარუმატებელი აღმოჩნდა მიზეზით, რომლის იდენტიფიცირებაც ვერ შევძელით. სცადეთ თავიდან; თუ პრობლემა განმეორდება, დაუკავშირდით მხარდაჭერის სამსახურს ქვემოთ მოცემული დეტალებით."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "თქვენი გასაღები მუშაობს, მაგრამ პროვაიდერი მისთვის ტექსტურ მოდელს არ აჩვენებს. ქვემოთ თავად დაამატეთ მოდელი."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "დაკავშირებულია. %1$s-მა უპასუხა %2$s-ის გამოყენებით. თქვენი AI ფუნქციები მზად არის გამოსაყენებლად."

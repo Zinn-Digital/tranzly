@@ -471,19 +471,25 @@ msgstr "%sปฏิเสธคำขอนี้สำหรับคีย์�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "โมเดล \"%1$s\" ไม่มีให้บริการจาก %2$s สำหรับคีย์ของคุณ โปรดเลือกโมเดลอื่นในการตั้งค่า AI"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "แพ็กเกจ %2$s ของคุณไม่รวมโมเดล \"%1$s\" โปรดเลือกโมเดลอื่นในการตั้งค่า AI หรืออัปเกรดแพ็กเกจของคุณกับผู้ให้บริการ"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s กำลังจำกัดความเร็วในการส่งคำขอคีย์ของคุณ โปรดรอสักครู่วิและลองใหม่อีกครั้ง หรือเพิ่มขีดจำกัดอัตราคำขอกับพวกเขา"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s กำลังประสบปัญหาในขณะนี้ (ระบบขัดข้องหรือมีการใช้งานเกินพิกัดจากฝั่งของพวกเขา) การตั้งค่าของคุณไม่มีอะไรผิดพลาด โปรดลองใหม่อีกครั้งในอีกสักครู่"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "คำขอ AI ล้มเหลวด้วยสาเหตุที่เราไม่สามารถระบุได้ โปรดลองอีกครั้ง หากยังเกิดปัญหาเดิม โปรดติดต่อฝ่ายสนับสนุนพร้อมระบุรายละเอียดด้านล่างนี้"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "คีย์ของคุณใช้งานได้ แต่ผู้ให้บริการไม่ได้ระบุโมเดลข้อความสำหรับคีย์นี้ โปรดเพิ่มโมเดลด้วยตนเองด้านล่าง"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "เชื่อมต่อแล้ว %1$s รับสายโดยใช้ %2$s ฟีเจอร์ AI ของคุณพร้อมใช้งานแล้ว"

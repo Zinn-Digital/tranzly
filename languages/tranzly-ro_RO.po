@@ -471,19 +471,25 @@ msgstr "%s a refuzat această solicitare pentru cheia dumneavoastră. Este posib
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Modelul \"%1$s\" nu este disponibil de la %2$s pentru cheia dumneavoastră. Alegeți alt model în setările AI."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Planul dvs. %2$s nu include modelul „%1$s”. Alegeți un alt model din setările AI sau faceți upgrade la planul dvs. împreună cu aceștia."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s limitează viteza cu care cheia dvs. poate trimite cereri. Așteptați un minut și încercați din nou sau măriți limita de rate alături de ei."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s întâmpină probleme în acest moment (o pană sau o suprasarcină de partea lor). Setările dvs. sunt în regulă. Încercați din nou în curând."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Solicitarea AI a eșuat dintr-un motiv pe care nu l-am putut identifica. Încercați din nou; dacă problema persistă, contactați asistența oferind detaliile de mai jos."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Cheia dvs. funcționează, dar furnizorul nu listează niciun model de text pentru aceasta. Adăugați singur un model mai jos."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Conectat. %1$s a răspuns folosind %2$s. Funcțiile dvs. de IA sunt gata de utilizare."

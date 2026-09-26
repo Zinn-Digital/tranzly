@@ -471,19 +471,25 @@ msgstr "%s ले तपाईंको कुञ्जीका लागि �
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "तपाईंको कुञ्जीका लागि %2$s बाट \"%1$s\" मोडल उपलब्ध छैन। AI सेटिङहरूमा अर्को मोडल छान्नुहोस्।"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "तपाईंको %2$s योजनामा ​​\"%1$s\" मोडल समावेश छैन। AI सेटिङहरूमा अर्को मोडल छान्नुहोस्, वा उनीहरूसँग आफ्नो योजना अपग्रेड गर्नुहोस्।"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s ले तपाईंको कुञ्जीले अनुरोधहरू पठाउन सक्ने गतिलाई सीमित गर्दैछ। एक मिनेट पर्खनुहोस् र फेरि प्रयास गर्नुहोस्, वा तिनीहरूसँग आफ्नो दर सीमा बढाउनुहोस्।"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s मा अहिले समस्या भइरहेको छ (उनीहरूकोतर्फबाट सेवा अवरुद्ध वा अत्यधिक भार)। तपाईंका सेटिङहरूमा कुनै त्रुटि छैन। केही समयपछि फेरि प्रयास गर्नुहोस्।"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI अनुरोध अज्ञात कारणले असफल भयो। फेरि प्रयास गर्नुहोस्; यदि यो भइरह्यो भने, तलका विवरणहरूसँग समर्थन टोलीलाई सम्पर्क गर्नुहोस्।"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "तपाईंको कुञ्जीले काम गर्छ, तर प्रदायकले यसको लागि कुनै पाठ मोडेल सूचीबद्ध गरेको छैन। तल आफैं एउटा मोडेल थप्नुहोस्।"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "जडित। %1$s ले %2$s प्रयोग गरेर जवाफ दिनुभयो। तपाईंको AI सुविधाहरू प्रयोग गर्न तयार छन्।"

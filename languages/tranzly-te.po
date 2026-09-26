@@ -471,19 +471,25 @@ msgstr "%s మీ కీ కోసం ఈ అభ్యర్థనను తి�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "మీ కీ కోసం \"%2$s\" నుండి \"%1$s\" మోడల్ అందుబాటులో లేదు. AI సెట్టింగ్‌లలో వేరే మోడల్‌ను ఎంచుకోండి."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "మీ %2$s ప్లాన్‌లో \"%1$s\" మోడల్ లేదు. AI సెట్టింగ్‌లలో వేరొక మోడల్‌ను ఎంచుకోండి లేదా మీ ప్లాన్‌ను అప్‌గ్రేడ్ చేయండి."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s మీ కీ అభ్యర్థనలను పంపే వేగాన్ని పరిమితి చేస్తోంది. ఒక నిమిషం వేచి ఉండి మళ్లీ ప్రయత్నించండి లేదా వారి వద్ద మీ రేట్ పరిమితిని పెంచుకోండి."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది (వారి వైపు అంతరాయం లేదా ఓవర్‌లోడ్). మీ సెట్టింగ్‌లలో ఎలాంటి లోపం లేదు. కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "గుర్తించలేని కారణం వల్ల AI అభ్యర్థన విఫలమైంది. మళ్లీ ప్రయత్నించండి; సమస్య పునరావృతమైతే, దిగువ వివరాలతో మద్దతు బృందాన్ని సంప్రదించండి."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "మీ కీ పని చేస్తుంది, కానీ ప్రొవైడర్ దీని కోసం టెక్స్ట్ మోడల్‌ను జాబితా చేయలేదు. క్రింద మీరే ఒక మోడల్‌ని జోడించండి."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "కనెక్ట్ అయింది. %1$s %2$sని ఉపయోగించి సమాధానం ఇచ్చారు. మీ AI ఫీచర్‌లు ఉపయోగించడానికి సిద్ధంగా ఉన్నాయి."

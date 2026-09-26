@@ -471,19 +471,25 @@ msgstr "%s hat diese Anfrage für Ihren Schlüssel abgelehnt. Der Schlüssel hat
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "Das Modell „%1$s“ ist von %2$s für Ihren Schlüssel nicht verfügbar. Wählen Sie ein anderes Modell in den KI-Einstellungen."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Ihr Tarif %2$s beinhaltet nicht das Modell „%1$s“. Wählen Sie in den KI-Einstellungen ein anderes Modell aus oder führen Sie ein Upgrade Ihres Tarifs durch."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s begrenzt, wie schnell Ihr Schlüssel Anfragen senden kann. Warten Sie eine Minute und versuchen Sie es erneut, oder erhöhen Sie Ihr Rate-Limit bei diesem Anbieter."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s hat derzeit Probleme (ein Ausfall oder eine Überlastung auf deren Seite). An Ihren Einstellungen liegt es nicht. Versuchen Sie es in Kürze noch einmal."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Die KI-Anfrage ist aus einem nicht näher bestimmbaren Grund fehlgeschlagen. Versuchen Sie es erneut; sollte das Problem weiterhin auftreten, wenden Sie sich bitte unter Angabe der nachfolgenden Details an den Support."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Ihr Schlüssel funktioniert, aber der Anbieter führt kein Textmodell dafür auf. Fügen Sie unten selbst ein Modell hinzu."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Verbunden. %1$s antwortete mit %2$s. Ihre KI-Funktionen sind einsatzbereit."

@@ -121,9 +121,9 @@ final class Failure {
 	/**
 	 * Classify a provider response.
 	 *
-	 * @param string                                          $provider Provider id.
-	 * @param array{status: int, body: string, error: string} $response The transport's answer.
-	 * @param string                                          $model    The model that was asked, for the model message.
+	 * @param string                                                                           $provider Provider id.
+	 * @param array{status: int, body: string, error: string, headers?: array<string, string>} $response The transport's answer.
+	 * @param string                                                                           $model    The model that was asked, for the model message.
 	 * @return self
 	 */
 	public static function from_response( string $provider, array $response, string $model = '' ): self {
@@ -212,6 +212,23 @@ final class Failure {
 					$label
 				),
 				'',
+				$detail
+			);
+		}
+
+		// A per-minute request limit of ZERO is not a rate limit: the account's plan does not
+		// include this model at all (Mistral, measured 2026-09-26). Waiting would never help.
+		if ( 429 === $status && '0' === (string) ( $response['headers']['x-ratelimit-limit-req-minute'] ?? '' ) ) {
+			return new self(
+				self::MODEL,
+				$provider,
+				sprintf(
+					/* translators: 1: model name, 2: AI provider name. */
+					__( 'Your %2$s plan does not include the model "%1$s". Choose another model in the AI settings, or upgrade your plan with them.', 'tranzly' ),
+					$model,
+					$label
+				),
+				(string) ( $spec['billing_url'] ?? '' ),
 				$detail
 			);
 		}

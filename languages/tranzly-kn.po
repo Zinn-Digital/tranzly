@@ -471,19 +471,25 @@ msgstr "%s ನಿಮ್ಮ ಕೀಗಾಗಿ ಈ ವಿನಂತಿಯನ್ನ
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "ನಿಮ್ಮ ಕೀಗಾಗಿ %2$s ನಿಂದ \"%1$s\" ಮಾದರಿಯು ಲಭ್ಯವಿಲ್ಲ. AI ಸಂಯೋಜನೆಗಳಲ್ಲಿ (settings) ಮತ್ತೊಂದು ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "ನಿಮ್ಮ %2$s ಪ್ಲಾನ್‌ನಲ್ಲಿ \"%1$s\" ಮಾದರಿಯು ಸೇರಿಲ್ಲ. AI ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಮತ್ತೊಂದು ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ಅವರೊಂದಿಗೆ ನಿಮ್ಮ ಪ್ಲಾನ್ ಅನ್ನು ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s ನಿಮ್ಮ ಕೀಯು ಎಷ್ಟು ವೇಗವಾಗಿ ವಿನಂತಿಗಳನ್ನು ಕಳುಹಿಸಬಹುದು ಎಂಬುದನ್ನು ಮಿತಿಗೊಳಿಸುತ್ತಿದೆ. ಒಂದು ನಿಮಿಷ ಕಾಯ್ದು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಅವರೊಂದಿಗೆ ನಿಮ್ಮ ದರ ಮಿತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s ಈ ಸಮಯದಲ್ಲಿ ಸಮಸ್ಯೆಗಳನ್ನು ಎದುರಿಸುತ್ತಿದೆ (ಅವರ ಕಡೆ ಅಡಚಣೆ ಅಥವಾ ಅತಿ ಹೆಚ್ಚು ಹೊರೆ). ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಯಾವುದೇ ದೋಷವಿಲ್ಲ. ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI ವಿನಂತಿಯು ನಾವು ಗುರುತಿಸಲು ಸಾಧ್ಯವಾಗದ ಕಾರಣದಿಂದ ವಿಫಲವಾಯಿತು. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ; ಅದು ಮುಂದುವರಿದರೆ, ಕೆಳಗಿನ ವಿವರಗಳೊಂದಿಗೆ ಬೆಂಬಲ ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ."
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "ನಿಮ್ಮ ಕೀ ಕೆಲಸ ಮಾಡುತ್ತದೆ, ಆದರೆ ಪ್ರೊವೈಡರ್ ಅದಕ್ಕಾಗಿ ಯಾವುದೇ ಪಠ್ಯ ಮಾದರಿಯನ್ನು ಪಟ್ಟಿ ಮಾಡಿಲ್ಲ. ಕೆಳಗೆ ನೀವೇ ಒಂದು ಮಾದರಿಯನ್ನು ಸೇರಿಸಿ."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "ಸಂಪರ್ಕಗೊಂಡಿದೆ. %1$s ಅವರು %2$s ಬಳಸಿ ಉತ್ತರಿಸಿದ್ದಾರೆ. ನಿಮ್ಮ AI ವೈಶಿಷ್ಟ್ಯಗಳು ಬಳಸಲು ಸಿದ್ಧವಾಗಿವೆ."

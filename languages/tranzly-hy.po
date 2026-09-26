@@ -471,19 +471,25 @@ msgstr "%s-ը մերժեց այս հարցումը ձեր բանալու համ�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "\"%1$s\" մոդելը հասանելի չէ %2$s-ից ձեր բանալու համար: Ընտրեք այլ մոդել արհեստական ​​բանականության կարգավորումներում:"
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "Ձեր %2$s պլանը չի ներառում «%1$s» մոդելը: Ընտրեք այլ մոդել արհեստական ​​ինտելեկտի կարգավորումներում կամ բարելավեք ձեր պլանը նրանց հետ:"
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s-ը սահմանափակում է ձեր բանալու կողմից հարցումների ուղարկման արագությունը: Սպասեք մեկ րոպե և նորից փորձեք, կամ բարձրացրեք ձեր հարցումների սահմանաչափը նրանց մոտ:"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s-ում հիմա խնդիրներ են (նրանց կողմից անջատում կամ գերծանրաբեռնվածություն): Ձեր կարգավորումներում որևէ սխալ չկա: Փորձեք մի փոքր ուշ:"
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI հարցումը ձախողվեց մեզ անհայտ պատճառով: Կրկին փորձեք. եթե այն շարունակվի կրկնվել, դիմեք աջակցման ծառայությանը ստորև բերված մանրամասներով:"
 
@@ -504,7 +510,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "Ձեր բանալին աշխատում է, սակայն մատակարարը դրա համար տեքստային մոդել չի նշում: Ստորև ինքներդ ավելացրեք մոդել:"
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "Միացված է: %1$s պատասխանեց՝ օգտագործելով %2$s։ Ձեր արհեստական ​​ինտելեկտի գործառույթները պատրաստ են օգտագործման:"

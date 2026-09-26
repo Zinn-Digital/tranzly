@@ -472,19 +472,25 @@ msgstr "%s에서 귀하의 키에 대한 이 요청을 거부했습니다. 해�
 msgid "The model \"%1$s\" is not available from %2$s for your key. Choose another model in the AI settings."
 msgstr "%2$s에서 사용자의 키로 \"%1$s\" 모델을 사용할 수 없습니다. AI 설정에서 다른 모델을 선택하세요."
 
+#. translators: 1: model name, 2: AI provider name.
+#: includes/ai-core/class-failure.php:227
+#, php-format
+msgid "Your %2$s plan does not include the model \"%1$s\". Choose another model in the AI settings, or upgrade your plan with them."
+msgstr "귀하의 %2$s 요금제에는 \"%1$s\" 모델이 포함되어 있지 않습니다. AI 설정에서 다른 모델을 선택하거나 해당 요금제를 업그레이드하세요."
+
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:225
+#: includes/ai-core/class-failure.php:242
 #, php-format
 msgid "%s is limiting how fast your key can send requests. Wait a minute and try again, or raise your rate limit with them."
 msgstr "%s이(가) 키의 요청 전송 속도를 제한하고 있습니다. 잠시 기다린 후 다시 시도하시거나, 해당 서비스에서 요청 제한(rate limit)을 상향 조정하세요."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-failure.php:239
+#: includes/ai-core/class-failure.php:256
 #, php-format
 msgid "%s is having problems right now (an outage or overload on their side). Nothing is wrong with your settings. Try again shortly."
 msgstr "%s에서 현재 문제가 발생하고 있습니다(해당 측의 서비스 중단 또는 과부하). 회원님의 설정에는 문제가 없습니다. 잠시 후 다시 시도해 주세요."
 
-#: includes/ai-core/class-failure.php:250
+#: includes/ai-core/class-failure.php:267
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "식별할 수 없는 이유로 AI 요청이 실패했습니다. 다시 시도해 주시고, 문제가 지속되면 아래 세부 정보를 포함하여 지원팀에 문의하세요."
 
@@ -505,7 +511,7 @@ msgid "Your key works, but the provider lists no text model for it. Add a model 
 msgstr "귀하의 키는 작동하지만, 제공업체에서 해당 키에 대한 텍스트 모델을 나열하지 않았습니다. 아래에 직접 모델을 추가하세요."
 
 #. translators: 1: AI provider name, 2: model name.
-#: includes/ai-core/class-tester.php:74
+#: includes/ai-core/class-tester.php:87
 #, php-format
 msgid "Connected. %1$s answered using %2$s. Your AI features are ready to use."
 msgstr "연결되었습니다. %1$s님이 %2$s을(를) 사용하여 응답했습니다. AI 기능을 사용할 준비가 되었습니다."
