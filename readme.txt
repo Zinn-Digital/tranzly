@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.3
+Stable tag: 3.0.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,9 @@ They are imported in the background the first time the new version runs. The old
 From the `lang` query parameter when it names a listed language, then from the language of the post being viewed, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
 
 == Changelog ==
+
+= 3.0.4 =
+* Translating a post again (or with --force over a hand-edited translation) no longer unpublishes the translation.
 
 = 3.0.3 =
 * Developer API: template functions, engine interface, REST routes and WP-CLI (`wp tranzly translate`), generated hooks reference; Polylang/WPML compatibility (Pro); multisite network set-up (Agency); speed benchmark (at most two extra queries per translated page).

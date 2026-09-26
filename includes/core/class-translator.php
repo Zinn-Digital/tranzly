@@ -84,8 +84,10 @@ final class Translator {
 			if ( ! current_user_can( 'edit_post', $target ) ) {
 				return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to change that translation.', 'tranzly' ), array( 'status' => 403 ) );
 			}
-			$status = (string) get_post_meta( $target, self::STATUS_META, true );
-			if ( in_array( $status, self::PROTECTED, true ) && empty( $args['force'] ) ) {
+			// ⛔ Not `$status`: that holds the post status asked for (publish/draft), and reusing it
+			// wrote this meta value ('human', 'machine') into post_status, unpublishing the page.
+			$state = (string) get_post_meta( $target, self::STATUS_META, true );
+			if ( in_array( $state, self::PROTECTED, true ) && empty( $args['force'] ) ) {
 				return new \WP_Error(
 					'tranzly_protected',
 					__( 'This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again.', 'tranzly' ),
