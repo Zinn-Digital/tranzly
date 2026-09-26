@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "ප්‍රතිනිර්මාණය කරන ලද Tranzly හි මූලික නිකුතුව: ඔබේ අඩවියේ භාෂා ලැයිස්තුවක්, භාෂා මාරු කිරීමේ කොටසක් සහ අනෙකුත් ප්ලගින කියවන භාෂා API එක."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "බහුභාෂා WordPress, එක් භාෂාවකට එක් ලිපිය බැගින්: ඔබගේ පැරණි Tranzly පරිවර්තන ආනයනය කරමින්, ලිපි, පිටු, වර්ගීකරණ, මාධ්‍ය පෙළ, විජෙට් (widgets) සහ අඩවි මාතෘකාවේ සම්බන්ධිත පරිවර්තන."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "සීමාවන් සහ අවසර සුරකින්න"
 msgid "Limits and permissions saved."
 msgstr "සීමාවන් සහ අවසර සුරකින ලදී."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "එම භාෂාව මෙම වෙබ් අඩවියේ භාෂාවලින් එකක් නොවේ."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "පරිවර්තනයක් යනු මුල් අන්තර්ගතයේම ආකාරයේ අන්තර්ගතයක් විය යුතුය."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "අඩවිය සඳහා වෙනත් භාෂාවකින් එකක් තෝරන්න."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "මෙම ප්ලගින පිටපතෙහි පරිපාලක තිරයේ ස්ක්‍රිප්ට් (scripts) අස්ථානගත වී ඇත. එය නිකුත් කරන ලද පැකේජයකින් නැවත ස්ථාපනය කරන්න."
@@ -809,27 +829,107 @@ msgstr "වැදගත් යාවත්කාලීන කිරීමක් 
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$s වෙත යාවත්කාලීන කිරීම ගැන ඔබට ස්තුතියි!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "එම භාෂාව මෙම වෙබ් අඩවියේ භාෂාවලින් එකක් නොවේ."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "පූර්ව පදය (prefix) කුඩා අකුරු හෝ ඉලක්කම් 1 සිට 8 දක්වා විය යුතු අතර, අකුරකින් ආරම්භ විය යුතු අතර, ප්ලගිනයේ නම නොවිය යුතුය."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" යනු භාෂා කේතයක් නොවේ. fr_FR හෝ de_DE වැනි WordPress දේශීයකරණයක් භාවිතා කරන්න."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "අවඩමෙන් එක් භාෂාවක්වත් ලැයිස්තුගත කරන්න."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "එය එක් වෙබ් අඩවියකට ලැයිස්තුගත කළ හැකි ප්‍රමාණයට වඩා වැඩි භාෂා ප්‍රමාණයකි."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "මෙම අයිතමය පරිවර්තනය කිරීමට ඔබට අවසර නැත."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "මෙම අයිතමය දැනටමත් එම භාෂාවෙන් සංස්කරණයක් ඇත."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s සඳහා වන අගය අවසර දී ඇති තේරීම් වලින් එකක් නොවේ."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "මෙම අයිතමයේ සමූහය සඳහා දැනටමත් %1$s අනුවාදයක් (#%2$d) ඇත."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "අයිතමයක් එහිම පරිවර්තනයක් විය නොහැක."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "එම අයිතමය දැනටමත් වෙනත් දෙයක පරිවර්තනයකි. පළමුව එහි සබැඳිය ඉවත් කරන්න."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "පරිවර්තන සබැඳිය සුරැකීමට නොහැකි විය."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "මෙම පෙළ මෙහි පරිවර්තනය කළ නොහැක."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "මෙම මාධ්‍ය පෙළ මෙහි පරිවර්තනය කළ නොහැක."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "පරිවර්තනයක් ප්‍රකාශයට පත් කිරීමට හෝ කෙටුම්පතක් ලෙස තබා ගැනීමට හැක."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "මෙan පන්තියේ අන්තර්ගතයන් ප්‍රකාශ කිරීමට ඔබට අවසර නැත."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "මෙම අයිතමය දැනටමත් එම භාෂාවෙන් ලියා ඇත."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "ඒ පරිවර්තනය වෙනස් කිරීමට ඔබට අවසර නැත."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "මෙම පරිවර්තනය පුද්ගලයෙකු විසින් සංස්කරණය කරන ලදී (හෝ ආනයනය කරන ලදී), එබැවින් එය ආරක්ෂිතයි. නැවත පරිවර්තනය කිරීමට එය අගුළු හරින්න."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "තවම කිසිදු පරිවර්තන එන්ජිමක් පිහිටුවා නැත. Tranzly → Engines වෙත ගොස් එකක් සඳහා යතුරක් එක් කරන්න."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "මෙම වෙබ් අඩවිය සඳහා එම පරිවර්තන එන්ජිම ලබා ගත නොහැක."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "එම පරිවර්තන එන්ජිම තවමත් සැකස නැත: පළමුව එහි යතුර එකතු කරන්න."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s මෙම අයිතමයේ සෑම කොටසක් සඳහාම පරිවර්තනයක් ලබා දී නොමැත. කිසිවක් වෙනස් කර නැත."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "එන්ජින් අයිඩිය (engine id) කුඩා අකුරු, ඉලක්කම් සහ හයිෆන (hyphens) පමණක් විය යුතුය."
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

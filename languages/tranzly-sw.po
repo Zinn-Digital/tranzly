@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "Toleo la msingi la Tranzly iliyoundwa upya: orodha ya lugha za tovuti yako, kizuizi cha kubadilisha lugha, na API ya lugha ambayo programu jalizi zingine husoma."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "WordPress ya lugha nyingi, chapisho moja kwa lugha: tafsiri zilizounganishwa za machapisho, kurasa, kategoria, maandishi ya media, wijeti na jina la tovuti, huku tafsiri zako za zamani za Tranzly zikiwa zimeingizwa."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "Hifadhi vigezo na ruhusa"
 msgid "Limits and permissions saved."
 msgstr "Vikomo na ruhusa vimehifadhiwa."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "Lugha hiyo si mojawapo ya lugha za tovuti hii."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "Tafsiri lazima iwe ya aina sawa ya maudhui kama asili."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "Chagua mojawapo ya lugha nyingine za tovuti."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Hati za mfumo za skrini ya msimamizi hazipo kwenye nakala hii ya programu-jalizi. Isakinishe upya kutoka kwenye kifurushi kilichotolewa."
@@ -809,27 +829,107 @@ msgstr "Tumeleta chaguo hili ili usipate kukosa sasisho muhimu na kutusaidia kuf
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "Asante kwa kusasisha hadi %1$s v%2$s!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "Lugha hiyo si mojawapo ya lugha za tovuti hii."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "Kiambishi awali lazima kiwe na herufi 1 hadi 8 za mwanzoni ndogo au nambari, kianze na herufi, na kisiwe jina la plagi."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" si msimbo wa lugha. Tumia eneo la WordPress kama vile fr_FR au de_DE."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "Orodhesha angalau lugha moja."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "Hiyo ni lugha nyingi kuliko tovuti moja inavyoweza kuorodhesha."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "Huruhusiwa kutafsiri kipengele hiki."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "Kipengele hiki tayari kina toleo katika lugha hiyo."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "Thamani ya %s si mojawapo ya chaguo zinazoruhusiwa."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "Kikundi cha bidhaa hii tayari kina toleo la %1$s (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "Bidhaa haiwezi kuwa tafsiri yake yenyewe."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "Bidhaa hiyo tayari ni tafsiri ya kitu kingine. Kitenganishe kwanza."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "Kiungo cha tafsiri kimeshindwa kuhifadhiwa."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "Maandishi hayo hayawezi kutafsiriwa hapa."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "Maandishi hayo ya media hayawezi kutafsiriwa hapa."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "Tafsiri inaweza kuchapishwa au kuwekwa kama rasimu."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "Huruhusiwi kuchapisha aina hii ya maudhui."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "Kipengele hiki kimeshaandikwa katika lugha hiyo."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "Huruhusiwi kubadilisha tafsiri hiyo."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "Tafsiri hii ilihaririwa na mtu (au kuingizwa kutoka nje), kwa hiyo imelindwa. Ifungue ili uweze kuitafsiri tena."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "Hakuna injini ya tafsiri iliyowekwa bado. Ongeza ufunguo wa moja katika Tranzly → Engines."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "Injini hiyo ya kutafsiri haipatikani kwenye tovuti hii."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "Injini hiyo ya tafsiri haijasakinishwa bado: ongeza ufunguo wake kwanza."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s haikurudisha tafsiri kwa kila sehemu ya kipengele hiki. Hakuna kilichobadilishwa."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "Kitambulisho cha injini lazima kiwe na herufi ndogo, nambari na vapa."
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

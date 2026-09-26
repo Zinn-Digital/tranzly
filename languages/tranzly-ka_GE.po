@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "Tranzly-ს ხელახლა აგებული ვერსიის საბაზისო გამოშვება: თქვენი საიტის ენების სია, ენების გადამრთველი ბლოკი და ენების API, რომელსაც სხვა პლაგინები კითხულობენ."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "მრავალენოვანი WordPress, თითო პოსტი თითო ენაზე: პოსტების, გვერდების, კატეგორიების, მედiatექსტის, ვიჯეტებისა და საიტის სათაურის დაკავშირებული თარგმანები, თქვენი ძველი Tranzly თარგმანების იმპორტით."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "შეინახეთ ლიმიტები და უფლებ
 msgid "Limits and permissions saved."
 msgstr "შეზღუდვები და უფლებები შენახულია."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "ეს ენა ამ საიტის ენების სიაში არ არის."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "თარგმანი ორიგინალის მსავგავსი შიგთავსის უნდა იყოს."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "აირჩიეთ საიტის სხვა ენებიდან ერთ-ერთი."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "პლაგინის ამ ასლს აკლია ადმინისტრატორის ეკრანის სკრიპტები. გადააინსტალირეთ გამოშვებული პაკეტიდან."
@@ -809,27 +829,107 @@ msgstr "ჩვენ შემოვიღეთ ეს არასავალ
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "გმადლობთ, რომ განაახლეთ %1$s v%2$s-მდე!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "ეს ენა ამ საიტის ენების სიაში არ არის."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "პრეფიქსი უნდა შედეგებოდეს 1-დან 8-მდე პატარა ასოსგან ან ციფრისგან, იწყებოდეს ასოთი და არ უნდა ემთხვეოდეს პლაგინის სახელს."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" არ არის ენის კოდი. გამოიყენეთ WordPress ლოკალი, როგორიცაა fr_FR ან de_DE."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "ჩამოთვალეთ მინიმუმ ერთი ენა."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "ეს უფრო მეტი ენია, ვიდრე ერთ საიტს შეუძლია ჩამოთვალოს."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "ამ ელემენტის თარგმნის უფლება არ გაქვთ."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "ამ ელემენტს უკვე აქვს ვერსია ამ ენაზე."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s-ის მნიშვნელობა არ შედის დაშვებულ ვარიანტებში."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "ამ ელემენტის ჯგუფს უკვე აქვს %1$s ვერსია (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "ელემენტი არ შეიძლება იყოს საკუთარი თავის თარგმანი."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "ეგ ელემენტი უკვე სხვა რამის თარგმანია. ჯერ გააუქმეთ მისი მიმაგრება."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "თარგმანის ბმულის შენახვა ვერ მოხერხდა."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "ამ ტექსტის თარგმნა აქ შეუძლებელია."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "ამ მედია ტექსტის თარგმნა აქ შეუძლებელია."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "თარგმანი შეიძლება გამოქვეყნდეს ან შენახული იყოს დროებით ვერსიად."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "თქვენ არ გაქვთ ამ ტიპის კონტენტის გამოქვეყნების უფლება."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "ეს ელემენტი უკვე დაწერილია ამ ენაზე."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "თქვენ არ გაქვთ ამ თარგმანის შეცვლის უფლება."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "ეს თარგმანი რედაქტირებულია ადამიანის მიერ (ან იმპორტირებულია), ამიტომ ის დაცულია. განბლოკეთ ის ხელახლა სათარგმნად."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "არცერთი თარგმანის ძრავა ჯერ არ არის დაყენებული. დაამატეთ ერთი მათგანის გასაღები Tranzly → Engines-ში."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "ეს თარგმანის ძრავა ამ საიტზე მიუწვდომელია."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "ეს თარგმანის ძრავა ჯერ არ არის კონფიგურირებული: ჯერ დაამატეთ მისი გასაღები."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s-მა არ დააბრუნა თარგმანი ამ ელემენტის ყველა ნაწილისთვის. არაფერი შეცვლილა."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "ძრავის იდენტიფიკატორი უნდა შედგებოდეს მხოლოდ ლათინური პატარა ასოების, ციფრებისა და დეფისებისგან."
 
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17

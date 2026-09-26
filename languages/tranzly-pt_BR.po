@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "A versão básica do Tranzly reconstruído: uma lista dos idiomas do seu site, um bloco de alternância de idiomas e a API de idiomas lida por outros plugins."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "WordPress multilíngue, um post por idioma: traduções vinculadas de posts, páginas, categorias, texto de mídia, widgets e o título do site, com suas antigas traduções do Tranzly importadas."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "Salvar limites e permissões"
 msgid "Limits and permissions saved."
 msgstr "Limites e permissões salvos."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "Esse idioma não é um dos idiomas deste site."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "Uma tradução deve ser o mesmo tipo de conteúdo que o original."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "Escolha um dos outros idiomas do site."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Os scripts da tela do administrador estão faltando nesta cópia do plugin. Reinstale-o a partir de um pacote lançado."
@@ -809,27 +829,107 @@ msgstr "Introduzimos esta opção para que você nunca perca uma atualização i
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "Obrigado por atualizar para o %1$s v%2$s!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "Esse idioma não é um dos idiomas deste site."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "O prefixo deve ter de 1 a 8 letras minúsculas ou dígitos, começar com uma letra e não deve nomear o plugin."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" não é um código de idioma. Use uma localidade do WordPress, como fr_FR ou de_DE."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "Liste pelo menos um idioma."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "Isso é mais do que um site pode listar."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "Você não tem permissão para traduzir este item."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "Este item já possui uma versão nesse idioma."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "O valor para %s não está entre as opções permitidas."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "O grupo deste item já possui uma versão %1$s (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "Um item não pode ser sua própria tradução."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "Esse item já é uma tradução de outra coisa. Desvincule-o primeiro."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "Não foi possível salvar o link de tradução."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "Esse texto não pode ser traduzido aqui."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "Esse texto de mídia não pode ser traduzido aqui."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "Uma tradução pode ser publicada ou mantida como rascunho."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "Não é permitido publicar este tipo de conteúdo."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "Este item já está escrito nesse idioma."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "Você não tem permissão para alterar essa tradução."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "Esta tradução foi editada por uma pessoa (ou importada), portanto está protegida. Desbloqueie-a para traduzi-la novamente."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "Nenhum mecanismo de tradução foi configurado ainda. Adicione uma chave para um em Tranzly → Engines."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "Esse mecanismo de tradução não está disponível neste site."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "Esse mecanismo de tradução ainda não está configurado: adicione a chave dele primeiro."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s não retornou uma tradução para todas as partes deste item. Nada foi alterado."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "Um identificador de engine deve conter apenas letras minúsculas, números e hífens."
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

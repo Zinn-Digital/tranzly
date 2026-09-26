@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once __DIR__ . '/class-settings.php';
 require_once __DIR__ . '/class-languages.php';
+require_once __DIR__ . '/core/class-boot.php';
 require_once __DIR__ . '/class-contract.php';
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/class-assets.php';
@@ -74,4 +75,5 @@ function tranzly_uninstall(): void {
 	delete_option( \ZinnDigital\Tranzly\Settings::OPTION );
 	delete_post_meta_by_key( \ZinnDigital\Tranzly\Languages::META_TRANSLATIONS );
 	delete_post_meta_by_key( \ZinnDigital\Tranzly\Languages::META_LANGUAGE );
+	\ZinnDigital\Tranzly\Core\Boot::uninstall();
 }

@@ -1,6 +1,6 @@
 # Tranzly
 
-The foundation release of the rebuilt Tranzly: your site's language list, a language switcher block, and a language API for other plugins.
+Multilingual WordPress, one post per language: linked translations of posts, pages, terms, media, widgets and the site title.
 
 Built and maintained by **Neil Lock — CEO, Zinn Digital® Ltd** — https://zinndigital.com
 
@@ -15,7 +15,7 @@ Both are the same file. The download page is the canonical one: it is served fro
 
 | | |
 |---|---|
-| Version | `3.0.2` |
+| Version | `3.0.3` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |

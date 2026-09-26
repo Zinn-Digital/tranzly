@@ -7,18 +7,26 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.2
+Stable tag: 3.0.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The foundation release of the rebuilt Tranzly: your site's language list, a language switcher block, and a language API for other plugins.
+Multilingual WordPress, one post per language: linked translations of posts, pages, terms, media, widgets and the site title.
 
 == Description ==
 
-This is the first release of Tranzly rebuilt from the ground up. It contains the foundations the translation features are built on, and nothing that pretends to be more than that: it does not translate content yet.
+Tranzly rebuilt from the ground up. Each translation is a real WordPress post (or category, or tag) linked to its original, which is the approach themes, page builders and SEO plugins handle best. This release holds the translations; the translation engines (machine translation with your own key) arrive in the next release.
 
 = What this release does =
 
+* **One post per language, linked together.** Create the German version of a post, page or custom post type and Tranzly links the two: each knows the other, and a visitor reading one is in its language. A new translation starts as a draft copy of the original's title, content, excerpt, featured image and template, and keeps its categories (or their translations, where they exist). Nothing else is copied.
+* **Categories, tags and custom taxonomies** get linked translations with their own names, descriptions and slugs.
+* **Media, widgets, site title and tagline.** Image alt text, captions and titles, widget text and the site title and tagline can each carry a translation per language, shown to visitors of that language.
+* **Unlimited languages**, in the free edition as well.
+* **Your old Tranzly translations come with you.** On a site that ran Tranzly 2.x, the first load of this version imports the old language links in the background, adds their languages to your list, and moves your DeepL key into encrypted storage. It never changes the old data, so it can be undone, and anything it could not import (a link to a deleted post, two posts claiming the same language) is reported rather than stopping it. `wp tranzly legacy dry-run` shows what it would do first.
+* **For developers:** PHP functions (translations, current language, switching language in code), an interface for adding your own translation engine, hooks, a REST API and WP-CLI (`wp tranzly translate --lang=de --post-type=page`). Pro adds Polylang and WPML function compatibility; the Agency plan adds multisite network set-up.
+* **Fast:** a translated page adds at most two database queries and sets no cookie, so page caches keep working. This is measured automatically on every change.
+* **Security by design.** Every change needs the right permission and a valid request token; API keys are stored encrypted; the old version's "AI translated by Tranzly" link is off.
 * **A list of your site's languages.** Add languages by their WordPress locale code (for example `fr_FR`). The first one is the language your content is written in.
 * **A language switcher block** that links to the current page in each listed language, using a `lang` query parameter. It appears once two or more languages are listed.
 * **A language API for other plugins**: `tranzly_languages()`, `tranzly_current_language()`, `tranzly_language_url()`, `tranzly_get_translation()` and `tranzly_translatable_attributes()`, with a read-only REST mirror under `tranzly/v1`. Blocks mark which attributes are translatable with `"role": "content"` in their block.json.
@@ -67,15 +75,23 @@ Recommended models list (off unless you turn it on). If you turn on the daily ch
 
 == Frequently Asked Questions ==
 
-= Does this release translate my content? =
+= Does this release translate my content automatically? =
 
-No. It stores your languages, tells other plugins which language a visitor is viewing, and lets visitors switch. Translation arrives in later releases.
+Not yet. It creates and links the translations and shows each one to visitors of its language; you write the translated text, or keep the text imported from Tranzly 2.x. Machine translation with your own DeepL or AI key arrives in the next release.
+
+= What happens to my Tranzly 2.x translations? =
+
+They are imported in the background the first time the new version runs. The old data is left untouched. To preview or reverse it: `wp tranzly legacy dry-run`, `wp tranzly legacy undo`, and `wp tranzly legacy run` to import again.
 
 = How is the current language chosen? =
 
-From the `lang` query parameter when it names a listed language, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
+From the `lang` query parameter when it names a listed language, then from the language of the post being viewed, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
 
 == Changelog ==
+
+= 3.0.3 =
+* Developer API: template functions, engine interface, REST routes and WP-CLI (`wp tranzly translate`), generated hooks reference; Polylang/WPML compatibility (Pro); multisite network set-up (Agency); speed benchmark (at most two extra queries per translated page).
+* Translations: one post per language, linked (posts, pages, custom post types, categories, tags, custom taxonomies), media text, widgets and site title/tagline; unlimited languages; automatic import of Tranzly 2.x translations with dry run and undo; the DeepL key moved to encrypted storage; permission and request-token checks on every change.
 
 = 3.0.2 =
 * AI core: when a provider's plan excludes a model, say so (instead of 'rate limited') and let Save and test fall through to a model the plan includes.

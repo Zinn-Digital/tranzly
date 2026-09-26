@@ -3,8 +3,8 @@
 /**
  * Plugin Name:       Tranzly
  * Plugin URI:        https://zinndigital.com/wordpress-plugins/tranzly
- * Description:       The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read.
- * Version:           3.0.2
+ * Description:       Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported.
+ * Version:           3.0.3
  * Requires at least: 6.8
  * Requires PHP:      8.2
  * Author:            Neil Lock — CEO, Zinn Digital® Ltd
@@ -35,7 +35,7 @@ if ( function_exists( 'tranzly_fs' ) ) {
     tranzly_fs()->set_basename( false, __FILE__ );
     return;
 }
-define( 'TRANZLY_VERSION', '3.0.2' );
+define( 'TRANZLY_VERSION', '3.0.3' );
 define( 'TRANZLY_FILE', __FILE__ );
 define( 'TRANZLY_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TRANZLY_URL', plugin_dir_url( __FILE__ ) );

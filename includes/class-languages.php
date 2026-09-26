@@ -10,23 +10,26 @@ declare( strict_types = 1 );
 
 namespace ZinnDigital\Tranzly;
 
+use ZinnDigital\Tranzly\Core\Relations;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 /**
- * ⭐ A WORKING STUB OVER STORED DATA (docs/adr/0033). The language list is the one the site owner
- * saves on the settings screen; the current language comes from the `lang` query variable, then a
- * cookie, then the first listed language; a post's translations are read from post meta. The
- * T-milestones replace the storage behind these methods, never their signatures — that is what
- * lets Page Builder Sandwich code against them today.
+ * ⭐ The language list is the one the site owner saves on the settings screen, with no cap on its
+ * length (tz-f7). The current language comes from the `lang` query variable, then the language of
+ * the post being viewed, then a cookie, then the first listed language. A post's translations come
+ * from the translation groups (Core\Relations, T1) — the storage changed under these methods in
+ * T1 and their signatures did not, which is the promise docs/adr/0033 makes to Page Builder
+ * Sandwich.
  */
 final class Languages {
 
-	/** Post meta: map of language code => translated post ID. */
+	/** Post meta the 3.0.0 stub read (language => post ID). Read by nothing since T1; uninstall still removes it. */
 	public const META_TRANSLATIONS = '_tranzly_translations';
 
-	/** Post meta: the language a post is written in (absent = the default language). */
+	/** Post meta the 3.0.0 stub read (a post's language). Read by nothing since T1; uninstall still removes it. */
 	public const META_LANGUAGE = '_tranzly_language';
 
 	/**
@@ -111,6 +114,20 @@ final class Languages {
 	 * @return string
 	 */
 	public static function current(): string {
+		/**
+		 * Short-circuits the current language: return a language code to use it. This is how
+		 * tranzly_switch_language() works; return null to let Tranzly decide.
+		 *
+		 * @param string|null $lang Null.
+		 */
+		$forced = apply_filters( 'tranzly_pre_current_language', null );
+		if ( is_string( $forced ) ) {
+			$resolved = self::resolve( $forced );
+			if ( null !== $resolved ) {
+				return $resolved;
+			}
+		}
+
 		$var = self::query_var();
 
 		$from_query = (string) get_query_var( $var, '' );
@@ -120,6 +137,14 @@ final class Languages {
 		$resolved = self::resolve( $from_query );
 		if ( null !== $resolved ) {
 			return $resolved;
+		}
+
+		// Post-per-language: a translation IS in its language, so viewing it sets the language.
+		if ( did_action( 'wp' ) && is_singular() ) {
+			$resolved = self::resolve( Relations::language_of( 'post', (int) get_queried_object_id() ) );
+			if ( null !== $resolved ) {
+				return $resolved;
+			}
 		}
 
 		$cookie = Settings::prefix() . '_lang';
@@ -165,18 +190,14 @@ final class Languages {
 			return null;
 		}
 
-		$own = self::resolve( (string) get_post_meta( $post_id, self::META_LANGUAGE, true ) ) ?? self::default_code();
+		$group = Relations::translations( 'post', $post_id );
+		$own   = self::resolve( Relations::language_of( 'post', $post_id ) ) ?? self::default_code();
 		if ( $own === $resolved ) {
 			return $post_id;
 		}
-
-		$map = get_post_meta( $post_id, self::META_TRANSLATIONS, true );
-		if ( ! is_array( $map ) ) {
-			return null;
-		}
-		foreach ( $map as $lang => $id ) {
-			if ( self::resolve( (string) $lang ) === $resolved && (int) $id > 0 ) {
-				return (int) $id;
+		foreach ( $group as $lang => $id ) {
+			if ( self::resolve( $lang ) === $resolved ) {
+				return $id;
 			}
 		}
 

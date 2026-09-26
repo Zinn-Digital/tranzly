@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "ပြန်လည်တည်ဆောက်ထားသော Tranzly ၏ အခြေခံဗားရှင်း- သင့်ဆိုဒ်၏ ဘာသာစကားများစာရင်း၊ ဘာသာစကားပြောင်းလဲသည့် ဘလောက်၊ နှင့် အခြားပလပ်ဂင်များဖတ်ရှုနိုင်သော ဘာသာစကား API။"
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "ဘာသာစကားတစ်ခုလျှင် ပို့စ်တစ်ခုပါရှိသော ဘာသာစကားမျိုးစုံသုံး WordPress: ပို့စ်များ၊ စာမျက်နှာများ၊ အမျိုးအစားများ၊ မီဒီယာစာသား၊ ဝစ်ဂျက်များနှင့် ဆိုက်ခေါင်းစဉ်တို့၏ ချိတ်ဆက်ထားသော ဘာသာပြန်ဆိုချက်များ (သင်၏ ဇာစ်မြစ် Tranzly ဘာသာပြန်ဆိုချက်များကို တင်သွင်းထားသည်)။"
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "ကန့်သတ်ချက်များနှင့် ခွင�
 msgid "Limits and permissions saved."
 msgstr "ကန့်သတ်ချက်များနှင့် ခွင့်ပြုချက်များကို သိမ်းဆည်းပြီးပါပြီ။"
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "ထိုဘာသာစကားသည် ဤဆိုက်၏ ဘာသာစကားများထဲတွင် မပါဝင်ပါ။"
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "ဘာသာပြန်ဆိုချက်တစ်ခုသည် မူရင်းအကြောင်းအရာနှင့် အမျိုးအစား တူညီရမည်။"
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "ဆိုက်၏ အခြားဘာသာစကားများထဲမှ တစ်ခုကို ရွေးချယ်ပါ။"
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "ဤ ပလပ်အင်မိတ္တူတွင် စီမံခန့်ခွဲသူ မျက်နှာပြင်၏ စာသားစခရစ်များ ပျောက်ဆုံးနေပါသည်။ ဖြန့်ချိထားသော ပက်ကေ့ဂျ်မှတစ်ဆင့် ၎င်းကို ပြန်လည်ထည့်သွင်းပါ။"
@@ -809,27 +829,107 @@ msgstr "အရေးကြီးသော အပ်ဒိတ်တစ်ခု�
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$s သို့ အပ်ဒိတ်လုပ်ပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်။"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "ထိုဘာသာစကားသည် ဤဆိုက်၏ ဘာသာစကားများထဲတွင် မပါဝင်ပါ။"
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "ရှေ့ဆက်စကားလုံး (prefix) သည် စာလုံးရေ ၁ လုံးမှ ၈ လုံးအတွင်းရှိ စာလုံးအသေး သို့မဟုတ် ဂဏန်းများ ဖြစ်ရမည်၊ အက္ခရာဖြင့် စတင်ရမည်ဖြစ်ပြီး ပလပ်အင်၏ အမည်ကို မပေးရပါ။"
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" သည် ဘာသာစကားကုဒ် မဟုတ်ပါ။ fr_FR သို့မဟုတ် de_DE ကဲ့သို့သော WordPress ဒေသန္တရကို အသုံးပြုပါ။"
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "အနည်းဆုံး ဘာသာစကား တစ်ခုကို စာရင်းပြုစုပါ။"
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "ထိုသည်မှာ နေရာတစ်ခုတည်းတွင် ဖော်ပြနိုင်သည်ထက် ပိုမိုများပြားသော ဘာသာစကားများ ဖြစ်ပါသည်။"
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "ဤပစ္စည်းကို ဘာသာပြန်ဆိုခွင့် မရှိပါ။"
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "ဤပစ္စည်းတွင် ထိုဘာသာစကားဖြင့် ဗားရှင်းတစ်ခုပြီးသား ရှိနှင့်ပြီးဖြစ်သည်။"
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s အတွက် တန်ဖိုးသည် ခွင့်ပြုထားသော ရွေးချယ်မှုများထဲတွင် မပါဝင်ပါ။"
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "ဤပစ္စည်း၏ အုပ်စုတွင် %1$s ဗားရှင်း (#%2$d) ရှိနှင့်ပြီးသား ဖြစ်ပါသည်။"
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "ပစ္စည်းတစ်ခုသည် မိမိကိုယ်တိုင်၏ ဘာသာပြန်ချက် မဖြစ်နိုင်ပါ။"
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "ထိုပစ္စည်းသည် အခြားအရာတစ်ခု၏ ဘာသာပြန်ဆိုမှုဖြစ်ပြီးသားဖြစ်သည်။ ဦးစွာ ၎င်းကို ချိတ်ဆက်မှုဖြုတ်ပါ။"
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "ဘာသာပြန်လင့်ခ်ကို သိမ်းဆည်း၍မရပါ။"
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "ထိုစာသားကို ဤနေရာတွင် ဘာသာပြန်၍မရပါ။"
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "ထိုမီဒီယာစာသားကို ဤနေရာတွင် ဘာသာပြန်၍မရပါ။"
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "ဘာသာပြန်ချက်တစ်ခုကို ထုတ်ဝေနိုင်သည် သို့မဟုတ် မူကြမ်းအဖြစ် သိမ်းဆည်းထားနိုင်သည်။"
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "ဤကဲ့သို့သော အကြောင်းအရာမျိုးကို သင် ထုတ်ဝေခွင့်မရှိပါ။"
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "ဤပစ္စည်းကို ထိုဘာသာစကားဖြင့် ပြီးသား ရေးသားထားပြီးဖြစ်သည်။"
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "ထိုဘာသာပြန်ချက်ကို ပြောင်းလဲခွင့်မရှိပါ။"
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "ဤဘာသာပြန်ချက်ကို လူကိုယ်တိုင် ပြင်ဆင်ထားပြီးဖြစ်သဖြင့် (သို့မဟုတ် တင်သွင်းထားသဖြင့်) ၎င်းကို ကာကွယ်ထားသည်။ ၎င်းကို ထပ်မံဘာသာပြန်ရန်အတွက် သော့ဖွင့်ပါ။"
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "ဘာသာပြန်ဆိုရေး အင်ဂျင်ကို ယခုထိ မသတ်မှတ်ရသေးပါ။ Tranzly → Engines တွင် တစ်ခုအတွက် သော့ချက်တစ်ခုကို ထည့်ပါ။"
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "ဤဆိုဒ်တွင် ယင်းဘာသာပြန်အင်ဂျင်ကို မရနိုင်ပါ။"
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "ထိုဘာသာပြန်စက်ကို မသတ်မှတ်ရသေးပါ- ၎င်း၏သော့ကို ဦးစွာထည့်ပါ။"
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s သည် ဤအရာ၏ အစိတ်အပိုင်းတိုင်းအတွက် ဘာသာပြန်ဆိုချက်ကို မပြန်ဆိုခဲ့ပါ။ မည်သည့်အရာမျှ ပြောင်းလဲခြင်း မရှိပါ။"
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "အင်ဂျင် ID တစ်ခုသည် စာလုံးသေးများ၊ ဂဏန်းများနှင့် ကိုက်ဖြတ်သင်္ကေတများသာ ဖြစ်ရပါမည်။"
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

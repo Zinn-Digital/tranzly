@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "再構築された Tranzly の基盤リリース：サイトの言語一覧、言語スイッチャーブロック、および他のプラグインが読み込む言語 API。"
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "多言語対応のWordPress、1言語につき1つの投稿：投稿、固定ページ、カテゴリー、メディアテキスト、ウィジェット、サイトタイトルのリンクされた翻訳。古いTranzlyの翻訳もインポートされます。"
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "制限と権限を保存する"
 msgid "Limits and permissions saved."
 msgstr "制限と権限が保存されました。"
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "その言語はこのサイトの言語ではありません。"
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "翻訳は、原文と同じ種類のコンテンツでなければなりません。"
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "サイトの他の言語のいずれかを選択してください。"
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "このプラグインのコピーには管理画面のスクリプトがありません。リリースされたパッケージから再インストールしてください。"
@@ -809,27 +829,107 @@ msgstr "重要なアップデートを見逃さず、%sがお使いのサイト�
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$s へのアップデートありがとうございます！"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "その言語はこのサイトの言語ではありません。"
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "プレフィックスは1〜8文字の半角小文字の英字または数字を使用し、英字で始まらなければなりません。また、プラグインの名前と同じにすることはできません。"
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "「%s」は言語コードではありません。fr_FRやde_DEなどのWordPressロケールを使用してください。"
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "少なくとも1つの言語を指定してください。"
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "1つのサイトに掲載できる数を超えた言語数です。"
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "このアイテムの翻訳は許可されていません。"
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "このアイテムには既にその言語のバージョンが存在します。"
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s の値は許可されている選択肢のいずれでもありません。"
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "このアイテムのグループにはすでに %1$s バージョン (#%2$d) が存在します。"
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "項目をそれ自体の翻訳にすることはできません。"
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "そのアイテムはすでに別の項目の翻訳版です。まずリンクを解除してください。"
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "翻訳リンクを保存できませんでした。"
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "そのテキストはここでは翻訳できません。"
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "そのメディアテキストはここでは翻訳できません。"
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "翻訳は公開することも、下書きとして保存することもできます。"
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "この種のコンテンツの公開は許可されていません。"
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "この項目はその言語で既に記述されています。"
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "その翻訳を変更する権限はありません。"
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "この翻訳は人手による編集（またはインポート）が行われているため保護されています。再翻訳するにはロックを解除してください。"
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "翻訳エンジンがまだ設定されていません。Tranzly → エンジンでキーを追加してください。"
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "その翻訳エンジンはこのサイトではご利用いただけません。"
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "その翻訳エンジンはまだ設定されていません。最初にキーを追加してください。"
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s は、このアイテムの一部の翻訳を返しませんでした。何も変更されませんでした。"
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "エンジン ID は、小文字の英字、数字、およびハイフンである必要があります。"
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

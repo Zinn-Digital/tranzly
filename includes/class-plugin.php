@@ -31,6 +31,7 @@ final class Plugin {
 		Rest::register();
 		Admin::register();
 		Freemius_I18n::register();
+		Core\Boot::register();
 
 		register_activation_hook( TRANZLY_FILE, array( self::class, 'activate' ) );
 	}
@@ -41,6 +42,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public static function activate(): void {
+		Core\Boot::activate();
 		Assets::publish();
 	}
 }

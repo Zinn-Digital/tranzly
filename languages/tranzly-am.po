@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "የታደሰው Tranzly የመጀመሪያ ስሪት፡ የጣቢያዎ ቋንቋዎች ዝርዝር፣ የቋንቋ መቀየሪያ ብሎክ፣ እና ሌሎች ተሰኪዎች የሚያነቡት የቋንቋ API።"
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "ባለብዙ ቋንቋ WordPress፣ በአንድ ቋንቋ አንድ ፖስት፡ የፖስቶች፣ ገጾች፣ ምድቦች፣ የሚዲያ ጽሑፍ፣ መግብሮች እና የጣቢያ ርዕስ የተገናኙ ትርጉሞች፣ የቆዩ የTranzly ትርጉሞችዎ ገብተዋል።"
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "ገደቦችን እና ፈቃዶችን አስቀምጥ"
 msgid "Limits and permissions saved."
 msgstr "ገደቦች እና ፈቃዶች ተቀምጠዋል።"
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "ይህ ቋንቋ የዚህ ድር ጣቢያ ቋንቋዎች አንዱ አይደለም።"
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "ትርጉም እንደ መጀመሪያው ይዘት ዓይነት መሆን አለበት።"
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "የጣቢያውን ሌሎች ቋንቋዎች አንዱን ይምረጡ።"
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "የአስተዳዳሪው ስክሪን ስክሪፕቶች ከዚህ ተሰኪ (ፕለጊን) ቅጂ ጠፍተዋል። ከተለቀቀ ጥቅል እንደገና ይጫኑት።"
@@ -809,27 +829,107 @@ msgstr "አስፈላጊ ዝመና እንዳያመልጥዎት እና %s ከጣ�
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "ወደ %1$s v%2$s ስለዘመኑ እናመሰግናለን!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "ይህ ቋንቋ የዚህ ድር ጣቢያ ቋንቋዎች አንዱ አይደለም።"
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "ቅድመ-ቅጥያው ከ1 እስከ 8 ያነስተኛ እንግሊዝኛ ፊደላት ወይም ቁጥሮች መሆን አለበት፣ በፊደል መጀመር አለበት፣ እና የፕለጊኑን ስም መያዝ የለበትም።"
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" የቋንቋ ኮድ አይደለም። እንደ fr_FR ወይም de_DE ያለ የWordPress ሎኬል ይጠቀሙ።"
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "ቢያንስ አንድ ቋንቋ ዘርዝር።"
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "ይህ ከአንድድ ድረ-ገጽ ሊዘረዝር የሚችለው በላይ ቋንቋዎች አሉ።"
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "ይህንን ንጥል መተርጎም የተከለከለ ነው።"
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "ይህ ንጥል ቀድሞውኑ በዚያ ቋንቋ ስሪት አለው።"
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "የ%s ዋጋ ከፈቀዱት አማራጮች አንዱ አይደለም።"
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "የዚህ ንጥል ቡድን ቀድሞውኑ %1$s ስሪት አለው (#%2$d)።"
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "እቃ የራሱ ትርጉም ሊሆን አይችልም።"
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "ይህ ንጥል አስቀድሞ የሌላ ነገር ትርጉም ነው። እባክዎ መጀመሪያ ከማያያዣው ይላቀቁ።"
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "የትርጉም አገናኙ ሊቀመጥ አልቻለም።"
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "ይህ ጽሑፍ እዚህ ሊተረጎም አይችልም።"
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "ይህ የሚዲያ ጽሑፍ እዚህ ሊተረጎም አይችልም።"
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "ትርጉም ሊታተም ወይም እንደ ረቂቅ ሊቆይ ይችላል።"
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "ይህንን የመሰለ ይዘት ማተም አይፈቀድልዎትም።"
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "ይህ እቃ አስቀድሞ በዚያ ቋንቋ ተጽፏል።"
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "ይህንን ትርጉም ለመቀየር ፈቃድ የለዎትም።"
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "ይህ ትርጉም በሰው የተስተካከለ (ወይም የገባ) ስለሆነ የተጠበቀ ነው። እንደገና ለመተርጎም ይክፈቱት።"
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "ምንም የትርጉም ሞተር እስካሁን አልተዋቀረም። በ Tranzly → Engines ውስጥ ለአንዱ ቁልፍ ያክሉ።"
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "ይህ የትርጉም ሞተር በዚህ ድር ጣቢያ ላይ አይገኝም።"
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "የዚያ ትርጉም ማሽን ገና አልተዋቀረም፡ መጀመሪያ ቁልፉን (key) ያክሉ።"
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s የዚህን ንጥል ነገር እያንዳንዱ ክፍል ትርጉም አልመለሰም። ምንም አልተቀየረም።"
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "የሞተር መታወቂያ (engine id) ንዑስ ፊደላትን፣ አሃዶችን እና ሰያፎችን (hyphens) ብቻ መያዝ አለበት።"
 
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17

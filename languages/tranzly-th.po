@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "การเปิดตัวครั้งแรกของ Tranzly ที่สร้างขึ้นใหม่: รายการภาษาของเว็บไซต์คุณ บล็อกตัวสลับภาษา และ API ภาษาที่ปลั๊กอินอื่นๆ อ่านได้"
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "WordPress หลายภาษา, หนึ่งโพสต์ต่อหนึ่งภาษา: การเชื่อมโยงบทความ หน้า หมวดหมู่ ข้อความสื่อ วิดเจ็ต และชื่อเว็บไซต์ พร้อมนำเข้าข้อมูลการแปลเดิมจาก Tranzly ของคุณ"
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "บันทึกขีดจำกัดและสิทธิ์"
 msgid "Limits and permissions saved."
 msgstr "บันทึกขีดจำกัดและสิทธิ์เรียบร้อยแล้ว"
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "ภาษานั้นไม่ใช่หนึ่งในภาษาของเว็บไซต์นี้"
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "การแปลต้องเป็นเนื้อหาประเภทเดียวกันกับต้นฉบับ"
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "เลือกภาษาอื่นของเว็บไซต์นี้"
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "สคริปต์ของหน้าจอผู้ดูแลระบบหายไปจากปลั๊กอินรุ่นนี้ โปรดติดตั้งใหม่อีกครั้งจากแพ็กเกจที่ปล่อยออกมาอย่างเป็นทางการ"
@@ -809,27 +829,107 @@ msgstr "เราได้เพิ่มตัวเลือกนี้เพ
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "ขอบคุณสำหรับการอัปเดตเป็น %1$s v%2$s!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "ภาษานั้นไม่ใช่หนึ่งในภาษาของเว็บไซต์นี้"
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "คำนำหน้าต้องประกอบด้วยตัวอักษรพิมพ์เล็กหรือตัวเลข 1 ถึง 8 ตัว ต้องขึ้นต้นด้วยตัวอักษร และต้องไม่ใช่ชื่อของปลั๊กอิน"
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" ไม่ใช่รหัสภาษา โปรดใช้การกำหนดค่าท้องถิ่นของ WordPress เช่น fr_FR หรือ de_DE"
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "ระบุอย่างน้อยหนึ่งภาษา"
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "นั่นเป็นภาษาที่เกินกว่าเว็บไซต์เดียวจะแสดงรายการได้"
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "คุณไม่ได้รับอนุญาตให้แปลรายการนี้"
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "รายการนี้มีเวอร์ชันในภาษานั้นอยู่แล้ว"
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "ค่าสำหรับ %s ไม่อยู่ในตัวเลือกที่อนุญาต"
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "กลุ่มของรายการนี้มีเวอร์ชัน %1$s อยู่แล้ว (#%2$d)"
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "รายการหนึ่งๆ จะเป็นคำแปลของตัวเองไม่ได้"
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "รายการนั้นเป็นการแปลจากเนื้อหาอื่นอยู่แล้ว กรุณายกเลิกการเชื่อมโยงก่อน"
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "ไม่สามารถบันทึก ลิงก์การแปล นี้ได้"
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "ไม่สามารถแปลข้อความนั้นที่นี่ได้"
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "ไม่สามารถแปลข้อความสื่อดังกล่าวที่นี่ได้"
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "การแปลสามารถเผยแพร่หรือบันทึกไว้เป็นฉบับร่างได้"
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "คุณไม่ได้รับอนุญาตให้เผยแพร่เนื้อหาประเภทนี้"
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "รายการนี้เป็นภาษาดังกล่าวอยู่แล้ว"
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "คุณไม่ได้รับอนุญาตให้เปลี่ยนคำแปลนั้น"
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "การแปลนี้ถูกแก้ไขโดยบุคคล (หรือนำเข้า) จึงได้รับการป้องกัน ปลดล็อกเพื่อแปลใหม่อีกครั้ง"
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "ยังไม่ได้ตั้งค่าเครื่องมือแปลภาษา เพิ่มคีย์สำหรับเครื่องมือใน Tranzly → Engines"
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "เครื่องมือแปลภาษานั้นไม่พร้อมใช้งานบนเว็บไซต์นี้"
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "ยังไม่ได้ตั้งค่าเครื่องมือแปลภาษานั้น: กรุณาเพิ่มคีย์ของเครื่องมือก่อน"
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s ไม่ได้ส่งคืนคำแปลสำหรับทุกส่วนของรายการนี้ ไม่มีสิ่งใดถูกเปลี่ยนแปลง"
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "รหัสเอ็นจิ้นต้องประกอบด้วยตัวอักษรพิมพ์เล็ก ตัวเลข และยัติภักดิ์เท่านั้น"
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

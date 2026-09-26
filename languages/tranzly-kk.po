@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "Tranzly жүйесінің қайта құрылған бастапқы нұсқасы: сайтыңыздың тілдер тізімі, тіл ауыстырғыш блогы және басқа плагиндер оқитын тіл API интерфейсі."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "Көптілді WordPress, әр тілге бір жазба: жазбалардың, беттердің, санаттардың, медиа мәтіннің, виджеттердің және сайт атауының байланыстырылған аудармалары, сонымен қатар ескі Tranzly аудармаларыңыз импортталған."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "Лимиттер мен рұқсаттарды сақтау"
 msgid "Limits and permissions saved."
 msgstr "Лимиттер мен рұқсаттар сақталды."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "Бұл тіл – бұл сайттың тілдерінің бірі емес."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "Аударма түпнұсқамен бірдей мазмұн түрі болуы тиіс."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "Сайттың басқа тілдерінің бірін таңдаңыз."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Плагиннің бұл көшірмесінде әкімші экранының скриптері жоқ. Оны шығарылған пакеттен қайта орнатыңыз."
@@ -809,27 +829,107 @@ msgstr "Бұл қосылу мүмкіндігін сіз маңызды жаң�
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$s нұсқасына жаңартқаныңыз үшін рақмет!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "Бұл тіл – бұл сайттың тілдерінің бірі емес."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "Префикс 1 мен 8 аралығындағы кіші әріптерден немесе цифрлардан тұруы, әріппен басталуы тиіс және плагин атымен сәйкеспеуі керек."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" тіл коды емес. fr_FR немесе de_DE сияқты WordPress жергілікті параметрлерін пайдаланыңыз."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "Kem дегенде бір тілді көрсетіңіз."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "Бұл бір сайтта тізімдеуге болатыннан көбірек тілдер."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "Бұл элементті аударуға рұқсат етілмеген."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "Бұл элементтің бұл тілдегі нұсқасы қазірдің өзінде бар."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s үшін мән рұқсат етілген нұсқалардың бірі емес."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "Бұл элементтің тобында қазірдің өзінде %1$s нұсқасы бар (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "Элемент өзінің аудармасы бола алмайды."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "Бұл элемент бұрыннан басқа нәрсенің аудармасы болып табылады. Алдымен оны байланыстан ажыратыңыз."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "Аударма сілтемесін сақтау мүмкін болмады."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "Бұл мәтінді бұл жерде аудару мүмкін емес."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "Бұл медиа мәтінді мұнда аудару мүмкін емес."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "Аударманы жариялауға немесе жоба ретінде сақтауға болады."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "Бұл түрдегі мазмұнды жариялауға рұқсат етілмейді."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "Бұл элемент қазірдің өзінде сол тілде жазылған."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "Бұл аударманы өзгертуге тыйым салынған."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "Бұл аударма адам тарапынан өңделген (немесе импортталған), сондықтан ол қорғалған. Оны қайтадан аудару үшін құлпын ашыңыз."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "Әзірге ешқандай аударма қозғалтқышы орнатылмаған. Tranzly → Engines бөлімінен оған арналған кілтті қосыңыз."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "Бұл аударма тетігі бұл сайтта қолжетімді емес."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "Бұл аударма қозғалтқышы әлі бапталған жоқ: алдымен оның кілтін қосыңыз."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s бұл элементтің әрбір бөлігі үшін аударманы қайтармады. Ештеңе өзгертілген жоқ."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "Қозғалтқыш идентификаторы кіші әріптерден, цифрлардан және дефистерден тұруы тиіс."
 
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17

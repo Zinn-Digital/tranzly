@@ -24,9 +24,6 @@ final class Settings {
 	/** The prefix every front-end class name, handle and asset folder starts with. */
 	public const DEFAULT_PREFIX = 'zd';
 
-	/** The most languages one site may list. */
-	public const MAX_LANGUAGES = 100;
-
 	/**
 	 * Words a prefix may not contain, because each one would put a plugin's identity back into
 	 * the front-end HTML that F5 exists to keep neutral (CONTRACT §7).
@@ -99,13 +96,6 @@ final class Settings {
 					array( 'status' => 400 )
 				);
 			}
-			if ( count( $languages ) > self::MAX_LANGUAGES ) {
-				return new \WP_Error(
-					'tranzly_too_many_languages',
-					__( 'That is more languages than one site can list.', 'tranzly' ),
-					array( 'status' => 400 )
-				);
-			}
 			$current['languages'] = $languages;
 		}
 
@@ -149,6 +139,11 @@ final class Settings {
 		}
 		return true;
 	}
+
+	/*
+	 * ⭐ No cap on the number of languages, in free or Pro (tz-f7, owner-approved). The 3.0.0
+	 * scaffold refused more than 100; T1 removed that limit.
+	 */
 
 	/**
 	 * Is this a WordPress-style locale code (`fr`, `fr_FR`, `pt_BR_formal`, `de_CH_informal`)?

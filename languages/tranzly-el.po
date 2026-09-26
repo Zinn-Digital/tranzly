@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "Η βασική έκδοση του ανανεωμένου Tranzly: μια λίστα με τις γλώσσες του ιστότοπού σας, ένα μπλοκ εναλλαγής γλωσσών και το API γλωσσών που διαβάζουν τα άλλα πρόσθετα."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "Πολυγλωσσικό WordPress, μία δημοσίευση ανά γλώσσα: συνδεδεμένες μεταφράσεις δημοσιεύσεων, σελίδων, κατηγοριών, κειμένου πολυμέσων, widget και του τίτλου του ιστότοπου, με τις παλιές σας μεταφράσεις Tranzly εισαγμένες."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "Αποθήκευση ορίων και δικαιωμάτων"
 msgid "Limits and permissions saved."
 msgstr "Τα όρια και τα δικαιώματα αποθηκεύτηκαν."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "Αυτή η γλώσσα δεν είναι μία από τις γλώσσες αυτού του ιστότοπου."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "Μια μετάφραση πρέπει να είναι του ίδιου τύπου περιεχομένου με το πρωτότυπο."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "Επιλέξτε μία από τις άλλες γλώσσες του ιστότοπου."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Τα σενάρια (scripts) της οθόνης διαχειριστή λείπουν από αυτό το αντίγραφο του πρόσθετου. Εγκαταστήστε το ξανά από ένα επίσημο πακέτο."
@@ -809,27 +829,107 @@ msgstr "Εισαγάγαμε αυτήν την προαιρετική επιλο
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "Σας ευχαριστούμε για την ενημέρωση σε %1$s v%2$s!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "Αυτή η γλώσσα δεν είναι μία από τις γλώσσες αυτού του ιστότοπου."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "Το πρόθεμα πρέπει να αποτελείται από 1 έως 8 πεζά γράμματα ή ψηφία, να ξεκινά με γράμμα και να μην έχει το όνομα του προσθέτου."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "Το \"%s\" δεν είναι κωδικός γλώσσας. Χρησιμοποιήστε ένα τοπικό περιβάλλον του WordPress όπως το fr_FR ή το de_DE."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "Καταχωρίστε τουλάχιστον μία γλώσσα."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "Είναι περισσότερες γλώσσες από όσες μπορεί να καταχωρίσει ένας ιστότοπος."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "Δεν επιτρέπεται να μεταφράσετε αυτό το στοιχείο."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "Αυτό το στοιχείο διαθέτει ήδη μια έκδοση σε αυτή τη γλώσσα."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "Η τιμή για το %s δεν είναι μία από τις επιτρεπόμενες επιλογές."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "Η ομάδα αυτού του στοιχείου διαθέτει ήδη μια έκδοση %1$s (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "Ένα στοιχείο δεν μπορεί να είναι η μετάφραση του εαυτού του."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "Αυτό το στοιχείο αποτελεί ήδη μετάφραση κάποιου άλλου. Α αποσυνδέστε το πρώτα."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "Δεν ήταν δυνατή η αποθήκευση του συνδέσμου μετάφρασης."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "Αυτό το κείμενο δεν μπορεί να μεταφραστεί εδώ."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "Αυτό το κείμενο πολυμέσων δεν μπορεί να μεταφραστεί εδώ."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "Μια μετάδοση μπορεί να δημοσιευτεί ή να διατηρηθεί ως πρόχειρο."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "Δεν επιτρέπεται να δημοσιεύσετε αυτού του είδους το περιεχόμενο."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "Αυτό το στοιχείο έχει ήδη γραφτεί σε αυτή τη γλώσσα."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "Δεν σας επιτρέπεται να αλλάξετε αυτή τη μετάφραση."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "Αυτή η μετάφραση έχει επεξεργαστεί από άνθρωπο (ή έχει εισαχθεί), επομένως προστατεύεται. Ξεκλειδώστε την για να τη μεταφράσετε ξανά."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "Δεν έχει ρυθμιστεί ακόμη καμία μηχανή μετάφρασης. Προσθέστε ένα κλειδί για μία στο Tranzly → Engines."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "Αυτή η μηχανή μετάδοσης δεν είναι διαθέσιμη σε αυτόν τον ιστότοπο."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "Αυτή η μηχανή μετάφρασης δεν έχει ρυθμιστεί ακόμη: προσθέστε πρώτα το κλειδί της."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "Το %s δεν επέστρεψε μετάφραση για κάθε μέρος αυτού του στοιχείου. Δεν έγινε καμία αλλαγή."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "Ένα αναγνωριστικό μηχανής πρέπει να αποτελείται από πεζά γράμματα, ψηφία και παῦλες."
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

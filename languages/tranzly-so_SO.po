@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "Nuqulkii asaasiga ahaa ee Tranzly ee dib loo dhisay: liiska luqadaha mareegtaada, baloogga beddelaha luqadda, iyo API-ga luqadda ee ay akhriyaan qalabka kale ee lagu daro."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "WordPress-ka luqadaha badan, hal qoraal luqad walba: turjumaadaha la xiriira ee qoraallada, boggagta, qaybaha, qoraalka warbaahinta, agabka iyo cinwaanka bogga, iyadoo turjumaadahaagii hore ee Tranzly la soo dejiyay."
 
 #. Author of the plugin
 #: tranzly.php
@@ -621,6 +621,26 @@ msgstr "Kaydi xadka iyo ogolaanshaha"
 msgid "Limits and permissions saved."
 msgstr "Xadka iyo fasaxyada waa la keydiyay."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "Luqaddaasi ma aha mid ka mid ah luqadaha boggan."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "Turjumaaddu waa inay noqotaa nooca la mid ah nuxurka asalka ah."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "Dooro mid ka mid ah luqadaha kale ee mareegta."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Qoraalka maamulaha ee barnaamijkan ku dhex jira (script-yada) ayaa ka maqan nuqulkan. Fadlan dib ugu rakib xirmo rasmi ah."
@@ -815,27 +835,107 @@ msgstr "Waxaan soo bandhignay ikhtiyaarkan si aadan weligaba u seegin cusboonays
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "Mahadsan sanid in aad u cusbooneysiisay %1$s v%2$s!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "Luqaddaasi ma aha mid ka mid ah luqadaha boggan."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "Horgalku waa inay noqotaa 1 ilaa 8 xaraf oo yar ama nambaro ah, ku billowda xaraf, mana aha inay magac ka dhigto qalabka la rakibo."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" ma aha koodh luqadeed. Isticmaal goobta WordPress ah sida fr_FR ama de_DE."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "Liis garee ugu yaraan hal luqad."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "Taasi waa luqado ka badan inta uu hal bog liis gareyn karo."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "Ma ogolidid inaad tarjunto shaygan."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "Badeecaddan ayaa horey u lahayd nooc ku qoran luqaddaas."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "Qiimaha %s maaha mid ka mid ah fursadaha la oggol yahay."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "Kooxda shaygan waxay horey u leedahay nooca %1$s (#%2$d)."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "Hanti la mid ah ma noqon karto turjumaaddeeda."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "Sheygaas waa horay turjumaad shay kale. Marka hore iska fur isku xidhkiisa."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "Xiriirinta turjumaadda lama keydinin."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "Qoraalkaas lama turjumi karo halkan."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "Qoraalkaas warbaahinta ah laguma turjumi karo halkan."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "Turjumaad waxaa la daabici karaa ama loo hayn karaa sidii qabyo."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "Lama oggola inaad daabacdo noocyadan oo kale ah."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "Bixitaankani waa mid horay loogu qoray luqaddaas."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "Adigu uma oggolidhidh inaad beddesho turjumaaddaas."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "Turjumaaddan waxaa tafatiray qof (ama waa la soo dejiyay), markaa waa la ilaaliyay. Fur si aad mar labaad u turjunto."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "Midnaaba turjumaad ah lama dejinin weli. Ku dar furaha mid ka mid ah Tranzly → Engines."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "Mashiinka turjumaadahaas lagama heli karo boggan."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "Mashiinka tarjumaaddu wali lama habeyn: marka hore ku dar furaha uu leeyahay."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s ma soo celinin turjumaadda qayb kasta oo ka mid ah shaygan. Wax isbeddel ah lama samayn."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "Aqoonsiga matoorisku waa inay noqdaan xarfo yaryar, tirooyin, iyo xarfo kala-gooyo ah."
 
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"

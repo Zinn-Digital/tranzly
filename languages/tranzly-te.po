@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "పునర్నిర్మించిన Tranzly యొక్క ఫౌండేషన్ విడుదల: మీ సైట్ యొక్క భాషల జాబితా, భాషా స్విచ్చర్ బ్లాక్ మరియు ఇతర ప్లగిన్‌లు చదివే భాషా API."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "బహుభాషా WordPress, ప్రతి భాషకు ఒక పోస్ట్: పోస్ట్‌లు, పేజీలు, వర్గాలు, మీడియా టెక్స్ట్, విడ్జెట్‌లు మరియు సైట్ శీర్షిక యొక్క లింక్ చేయబడిన అనువాదాలు, మీ పాత Tranzly అనువాదాలు దిగుమతి చేయబడ్డాయి."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "పరిమితులు మరియు అనుమతులను 
 msgid "Limits and permissions saved."
 msgstr "పరిమితులు మరియు అనుమతులు సేవ్ చేయబడ్డాయి."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "ఆ భాష ఈ సైట్ యొక్క భాషలలో ఒకటి కాదు."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "అనువాదం అసలు కంటెంట్ మాదిరిగానే ఉండాలి."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "సైట్ యొక్క ఇతర భాషలలో ఒకదానిని ఎంచుకోండి."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "ఈ ప్లగిన్ కాపీ నుండి అడ్మిన్ స్క్రీన్ స్క్రిప్ట్‌లు మిస్ అయ్యాయి. విడుదల చేసిన ప్యాకేజీ నుండి దీన్ని మళ్లీ ఇన్‌స్టాల్ చేయండి."
@@ -809,27 +829,107 @@ msgstr "మేము ఈ ఆప్ట్-ఇన్‌ను పరిచయం �
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$sకి అప్‌డేట్ చేసినందుకు ధన్యవాదాలు!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "ఆ భాష ఈ సైట్ యొక్క భాషలలో ఒకటి కాదు."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "ప్రిఫిక్స్ 1 నుండి 8 లోయర్ కేస్ అక్షరాలు లేదా అంకెలను కలిగి ఉండాలి, అక్షరంతో ప్రారంభం కావాలి మరియు ప్లగిన్ పేరు కాకూడదు."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" అనేది భాషా కోడ్ కాదు. fr_FR లేదా de_DE వంటి WordPress లోకేల్‌ని ఉపయోగించండి."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "కనీసం ఒక భాషను జాబితా చేయండి."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "ఒక సైట్ జాబితా చేయగలిగిన దానికంటే ఎక్కువ భాషలు ఇవి."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "ఈ ఐటమ్‌ను అనువదించడానికి మీకు అనుమతి లేదు."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "ఈ అంశం ఇప్పటికే ఆ భాషలో ఒక వెర్షన్‌ను కలిగి ఉంది."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s కోసం ఇచ్చిన విలువ అనుమతించబడిన ఎంపికలలో ఒకటి కాదు."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "ఈ ఐటమ్ గ్రూప్‌లో ఇప్పటికే %1$s వెర్షన్ (#%2$d) ఉంది."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "ఒక అంశం దాని స్వంత అనువాదంగా ఉండదు."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "ఆ అంశం ఇప్పటికే వేరొక దాని అనువాదంగా ఉంది. ముందుగా దాని లింక్‌ను తీసివేయండి."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "అనువాద లింక్‌ను సేవ్ చేయడం సాధ్యపడలేదు."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "ఆ టెక్స్ట్‌ని ఇక్కడ అనువదించలేము."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "ఆ మీడియా టెక్స్ట్‌ని ఇక్కడ అనువదించలేము."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "అనువాదాన్ని ప్రచురించవచ్చు లేదా డ్రాఫ్ట్‌గా ఉంచవచ్చు."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "ఈ రకమైన కంటెంట్‌ను ప్రచురించడానికి మీకు అనుమతి లేదు."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "ఈ అంశం ఇప్పటికే ఆ భాషలో వ్రాయబడింది."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "ఆ అనువాదాన్ని మార్చడానికి మీకు అనుమతి లేదు."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "ఈ అనువాదం ఒక వ్యక్తి చేత సవరించబడింది (లేదా దిగుమతి చేయబడింది), కాబట్టి ఇది సురక్షితం చేయబడింది. దీన్ని మళ్లీ అనువదించడానికి అన్‌లాక్ చేయండి."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "ఇంకా ఏ అనువాద ఇంజిన్ సెటప్ చేయబడలేదు. Tranzly → Enginesలో ఒక దాని కోసం కీని జోడించండి."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "ఆ అనువాద ఇంజిన్ ఈ సైట్‌లో అందుబాటులో లేదు."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "ఆ అనువాద ఇంజిన్ ఇంకా సెటప్ చేయబడలేదు: ముందుగా దాని కీని జోడించండి."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s ఈ అంశంలోని ప్రతి భాగానికి అనువాదాన్ని అందించలేదు. ఏదీ మార్చబడలేదు."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "ఇంజన్ ఐడి (engine id) తప్పనిసరిగా లోయర్‌కేస్ అక్షరాలు, అంకెలు మరియు హైఫన్‌లను మాత్రమే కలిగి ఉండాలి."
 
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17

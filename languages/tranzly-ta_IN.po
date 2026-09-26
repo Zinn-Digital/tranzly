@@ -24,8 +24,8 @@ msgstr "https://zinndigital.com/wordpress-plugins/tranzly"
 
 #. Description of the plugin
 #: tranzly.php
-msgid "The foundation release of the rebuilt Tranzly: a list of your site's languages, a language switcher block, and the language API other plugins read."
-msgstr "மறுசீரமைக்கப்பட்ட Tranzly இன் முதல் அடிப்படைப் பதிப்பு: உங்கள் தளத்தின் மொழிகளின் பட்டியல், மொழி மாற்றும் தொகுதி மற்றும் பிற செருகுநிரல்கள் படிக்கும் மொழி API."
+msgid "Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported."
+msgstr "பன்மொழி WordPress, ஒரு மொழிக்கு ஒரு பதிவு: இடுகைகள், பக்கங்கள், வகைகள், மீடியா உரை, விட்ஜெட்டுகள் மற்றும் தளத் தலைப்பு ஆகியவற்றின் இணைக்கப்பட்ட மொழிபெயர்ப்புகள், உங்களது பழைய Tranzly மொழிபெயர்ப்புகள் இறக்குமதி செய்யப்பட்டுள்ளன."
 
 #. Author of the plugin
 #: tranzly.php
@@ -620,6 +620,26 @@ msgstr "வரம்புகள் மற்றும் அனுமதிக�
 msgid "Limits and permissions saved."
 msgstr "வரம்புகளும் அனுமதிகளும் சேமிக்கப்பட்டன."
 
+#: includes/api/class-rest-content.php:384
+#: includes/api/class-rest-content.php:423
+#: includes/class-rest.php:195
+#: includes/core/class-content.php:139
+#: includes/core/class-content.php:242
+#: includes/core/class-translator.php:64
+#: includes/core/class-translator.php:176
+msgid "That language is not one of this site's languages."
+msgstr "அந்த மொழி இந்தத் தளத்தின் மொழிகளில் ஒன்றாக இல்லை."
+
+#: includes/api/class-rest-content.php:389
+#: includes/api/class-rest-content.php:392
+msgid "A translation must be the same kind of content as the original."
+msgstr "ஒரு மொழிபெயர்ப்பு என்பது மூலத்தைப் போன்றே அதே வகையான உள்ளடக்கமாக இருக்க வேண்டும்."
+
+#: includes/api/class-rest-content.php:444
+#: includes/api/class-rest-content.php:464
+msgid "Choose one of the site's other languages."
+msgstr "தளத்தின் பிற மொழிகளில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
+
 #: includes/class-admin.php:78
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "இந்த செருகுநிரலின் (plugin) பிரதிகளில் நிர்வாகத் திரைக்கான ஸ்கிரிப்ட்கள் விடுபட்டுள்ளன. வெளியிடப்பட்ட தொகுப்பிலிருந்து அதை மீண்டும் நிறுவவும்."
@@ -809,27 +829,107 @@ msgstr "நீங்கள் எந்தவொரு முக்கியம�
 msgid "Thank you for updating to %1$s v%2$s!"
 msgstr "%1$s v%2$s பதிப்பிற்குப் புதுப்பித்தமைக்கு நன்றி!"
 
-#: includes/class-rest.php:195
-msgid "That language is not one of this site's languages."
-msgstr "அந்த மொழி இந்தத் தளத்தின் மொழிகளில் ஒன்றாக இல்லை."
-
-#: includes/class-settings.php:74
+#: includes/class-settings.php:71
 msgid "The prefix must be 1 to 8 lowercase letters or digits, start with a letter, and must not name the plugin."
 msgstr "முன்னொட்டு 1 முதல் 8 சிறிய எழுத்துகள் அல்லது இலக்கங்களைக் கொண்டிருக்க வேண்டும், ஒரு எழுத்தில் தொடங்க வேண்டும், மேலும் செருகுநிரலின் பெயரைக் கொண்டிருக்கக் கூடாது."
 
 #. translators: %s: the language code that was refused.
-#: includes/class-settings.php:89
+#: includes/class-settings.php:86
 #, php-format
 msgid "\"%s\" is not a language code. Use a WordPress locale such as fr_FR or de_DE."
 msgstr "\"%s\" ஒரு மொழி குறியீடு அல்ல. fr_FR அல்லது de_DE போன்ற ஒரு WordPress லோக்கலைப் பயன்படுத்தவும்."
 
-#: includes/class-settings.php:98
+#: includes/class-settings.php:95
 msgid "List at least one language."
 msgstr "குறைந்தது ஒரு மொழியையாவது பட்டியலிடுங்கள்."
 
-#: includes/class-settings.php:105
-msgid "That is more languages than one site can list."
-msgstr "அது ஒரு தளம் பட்டியலிடக்கூடியதை விட அதிகமான மொழிகளாகும்."
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:245
+#: includes/core/class-translator.php:67
+#: includes/core/class-translator.php:179
+msgid "You are not allowed to translate this item."
+msgstr "இந்த உருப்படியை மொழிபெயர்க்க உங்களுக்கு அனுமதி இல்லை."
+
+#: includes/core/class-content.php:150
+#: includes/core/class-content.php:250
+msgid "This item already has a version in that language."
+msgstr "இந்த உருப்படி ஏற்கனவே அந்த மொழியில் ஒரு பதிப்பைக் கொண்டுள்ளது."
+
+#. translators: %s: a settings field name.
+#: includes/core/class-options.php:101
+#, php-format
+msgid "The value for %s is not one of the allowed choices."
+msgstr "%s க்கான மதிப்பு அனுமதிக்கப்பட்ட விருப்பங்களில் ஒன்றாக இல்லை."
+
+#. translators: 1: language code, 2: the ID of the item that already has it.
+#: includes/core/class-relations.php:176
+#: includes/core/class-relations.php:230
+#, php-format
+msgid "This item's group already has a %1$s version (#%2$d)."
+msgstr "இந்த உருப்படியின் குழுவில் ஏற்கனவே ஒரு %1$s பதிப்பு (#%2$d) உள்ளது."
+
+#: includes/core/class-relations.php:208
+msgid "An item cannot be its own translation."
+msgstr "ஒரு பொருள் அதன் சொந்த மொழிபெயர்ப்பாக இருக்க முடியாது."
+
+#: includes/core/class-relations.php:239
+msgid "That item is already a translation of something else. Unlink it first."
+msgstr "அந்தப் பொருள் ஏற்கனவே வேறு ஒன்றின் மொழிபெயர்ப்பாக உள்ளது. முதலில் அதை இணைப்பிலிருந்து விலக்கவும்."
+
+#: includes/core/class-relations.php:371
+msgid "The translation link could not be saved."
+msgstr "மொழிபெயர்ப்பு இணைப்பை சேமிக்க முடியவில்லை."
+
+#: includes/core/class-strings.php:102
+msgid "That text cannot be translated here."
+msgstr "அந்த உரையை இங்கு மொழிபெயர்க்க முடியாது."
+
+#: includes/core/class-strings.php:141
+msgid "That media text cannot be translated here."
+msgstr "அந்த ஊடக உரையை இங்கே மொழிபெயர்க்க முடியாது."
+
+#: includes/core/class-translator.php:71
+msgid "A translation can be published or kept as a draft."
+msgstr "ஒரு மொழிபெயர்ப்பை வெளியிடலாம் அல்லது வரைவாக வைத்திருக்கலாம்."
+
+#: includes/core/class-translator.php:75
+msgid "You are not allowed to publish this kind of content."
+msgstr "இந்த வகையான உள்ளடக்கத்தை வெளியிட உங்களுக்கு அனுமதி இல்லை."
+
+#: includes/core/class-translator.php:79
+msgid "This item is already written in that language."
+msgstr "இந்த உருப்படி ஏற்கனவே அந்த மொழியில் எழுதப்பட்டுள்ளது."
+
+#: includes/core/class-translator.php:85
+msgid "You are not allowed to change that translation."
+msgstr "அந்த மொழிபெயர்ப்பை மாற்ற உங்களுக்கு அனுமதி இல்லை."
+
+#: includes/core/class-translator.php:91
+#: includes/core/class-translator.php:185
+msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
+msgstr "இந்த மொழிபெயர்ப்பு ஒருவரால் திருத்தப்பட்டது (அல்லது இறக்குமதி செய்யப்பட்டது), எனவே இது பாதுகாக்கப்பட்டுள்ளது. அதை மீண்டும் மொழிபெயர்க்க பூட்டைத் திறக்கவும்."
+
+#: includes/core/class-translator.php:316
+msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
+msgstr "மொழிபெயர்ப்புப் பொறி எதுவும் இன்னும் அமைக்கப்படவில்லை. Tranzly → Engines பகுதியில் அதற்கான விசையைச் சேர்க்கவும்."
+
+#: includes/core/class-translator.php:316
+msgid "That translation engine is not available on this site."
+msgstr "இந்த தளத்தில் அந்த மொழிபெயர்ப்பு இயந்திரம் கிடைக்கவில்லை."
+
+#: includes/core/class-translator.php:319
+msgid "That translation engine is not set up yet: add its key first."
+msgstr "அந்த மொழிபெயர்ப்பு இயந்திரம் இன்னும் அமைக்கப்படவில்லை: முதலில் அதன் விசையைச் சேர்க்கவும்."
+
+#. translators: %s: a translation engine's name.
+#: includes/core/class-translator.php:362
+#, php-format
+msgid "%s did not return a translation for every part of this item. Nothing was changed."
+msgstr "%s இந்த உருப்படியின் ஒவ்வொரு பகுதிக்கும் மொழிபெயர்ப்பைத் தரவில்லை. எதுவும் மாற்றப்படவில்லை."
+
+#: includes/engines/class-registry.php:76
+msgid "An engine id must be lowercase letters, digits and hyphens."
+msgstr "ஒரு எஞ்சின் ஐடி (engine id) சிறிய எழுத்துக்கள், எண்கள் மற்றும் ஹைபன்களை மட்டுமே கொண்டிருக்க வேண்டும்."
 
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
