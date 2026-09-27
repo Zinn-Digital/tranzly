@@ -78,6 +78,10 @@ final class Client {
 			return Result::failed( $refusal, $provider, $model );
 		}
 
+		// The host's own hook point (Core::boot `messages`): Page Builder Sandwich adds the site's
+		// brand kit here. Each copy calls only its own host, so no plugin changes another's requests.
+		$messages = Core::messages( $messages, $context );
+
 		$adapter = Registry::adapter( $provider, Store::provider( $provider ) );
 		if ( null === $adapter ) {
 			return Result::failed( Failure::refused( __( 'That AI provider is not supported by this version of the plugin.', 'tranzly' ) ), $provider, $model );

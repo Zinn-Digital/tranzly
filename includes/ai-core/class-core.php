@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Core {
 
 	/** The core's version. Bump on every change: the newest copy on a site wins the election. */
-	public const VERSION = '1.0.1';
+	public const VERSION = '1.0.2';
 
 	/** Marks the classes of this family, so the election never mistakes another plugin's class. */
 	public const FAMILY = 'zinn-ai-core';
@@ -69,7 +69,9 @@ final class Core {
 	/**
 	 * Start the core. Called once by the host plugin's bootstrap.
 	 *
-	 * @param array{slug: string, name: string, pro?: callable(): bool} $host The host plugin.
+	 * @param array{slug: string, name: string, pro?: callable(): bool, messages?: callable} $host The host plugin. `messages`, optional:
+	 *        `fn( array $messages, array $context ): array`, called on every request THIS copy sends
+	 *        (the host's own hook point — each host names its own, prefixed, filter).
 	 * @return void
 	 */
 	public static function boot( array $host ): void {
@@ -85,9 +87,10 @@ final class Core {
 			}
 		}
 		self::$host = array(
-			'slug' => (string) $host['slug'],
-			'name' => (string) $host['name'],
-			'pro'  => $pro_loaded,
+			'slug'     => (string) $host['slug'],
+			'name'     => (string) $host['name'],
+			'pro'      => $pro_loaded,
+			'messages' => isset( $host['messages'] ) && is_callable( $host['messages'] ) ? $host['messages'] : null,
 		);
 
 		add_action( 'plugins_loaded', array( self::class, 'wire' ), 20 );
@@ -217,6 +220,23 @@ final class Core {
 		}
 
 		return self::$policy;
+	}
+
+	/**
+	 * The messages of a request, after the host's `messages` callback (when it gave one).
+	 *
+	 * @param array<int, array{role: string, content: string}> $messages Conversation.
+	 * @param array<string, mixed>                             $context  Request context.
+	 * @return array<int, array{role: string, content: string}>
+	 */
+	public static function messages( array $messages, array $context ): array {
+		$callback = self::$host['messages'] ?? null;
+		if ( ! is_callable( $callback ) ) {
+			return $messages;
+		}
+		$out = $callback( $messages, $context );
+
+		return is_array( $out ) ? $out : $messages;
 	}
 
 	/**
