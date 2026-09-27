@@ -35,13 +35,6 @@ final class Content {
 	private const COPY_META = array( '_thumbnail_id', '_wp_page_template' );
 
 	/**
-	 * Marks a translation between its creation and its link: `<source id>:<language>`. A worker
-	 * killed in that window leaves the draft behind with this mark, and the next attempt adopts it
-	 * instead of making a second, orphaned copy.
-	 */
-	private const PENDING_META = '_tranzly_pending_translation';
-
-	/**
 	 * Hook the clean-up.
 	 *
 	 * @return void
@@ -167,12 +160,15 @@ final class Content {
 			$parent = Relations::translations( 'post', (int) $source->post_parent )[ $code ] ?? (int) $source->post_parent;
 		}
 
-		$marker = $source_id . ':' . $code;
-		$new_id = self::unfinished_translation( $marker );
-		if ( 0 === $new_id ) {
-			$new_id = self::insert_translation( $source, $parent, $marker );
-		}
+		// ⛔ Creating the draft and linking it are ONE transaction. A worker killed between the two
+		// (measured: a SIGKILL right after wp_insert_post) otherwise left a draft in no group, which
+		// no later attempt could see and the customer's post list kept for ever. A killed process
+		// drops its connection, and InnoDB rolls the half-made translation back.
+		global $wpdb;
+		$wpdb->query( 'START TRANSACTION' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- transaction control, no data to cache.
+		$new_id = self::insert_translation( $source, $parent );
 		if ( is_wp_error( $new_id ) ) {
+			$wpdb->query( 'ROLLBACK' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- transaction control.
 			return $new_id;
 		}
 
@@ -204,10 +200,11 @@ final class Content {
 
 		$linked = Relations::link( 'post', $source_id, $source_lang, (int) $new_id, $code );
 		if ( is_wp_error( $linked ) ) {
-			wp_delete_post( (int) $new_id, true );
+			$wpdb->query( 'ROLLBACK' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- transaction control.
+			clean_post_cache( (int) $new_id );
 			return $linked;
 		}
-		delete_post_meta( (int) $new_id, self::PENDING_META );
+		$wpdb->query( 'COMMIT' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- transaction control.
 
 		/**
 		 * Fires after Tranzly creates a post translation.
@@ -308,29 +305,13 @@ final class Content {
 	}
 
 	/**
-	 * The draft a killed worker left between creating a translation and linking it, if any.
-	 *
-	 * @param string $marker `<source id>:<language>`.
-	 * @return int The draft's ID, or 0.
-	 */
-	private static function unfinished_translation( string $marker ): int {
-		global $wpdb;
-		$id = (int) $wpdb->get_var(
-			$wpdb->prepare( 'SELECT post_id FROM %i WHERE meta_key = %s AND meta_value = %s ORDER BY post_id LIMIT 1', $wpdb->postmeta, self::PENDING_META, $marker )
-		);
-
-		return $id > 0 && null !== get_post( $id ) && array() === Relations::translations( 'post', $id ) ? $id : 0;
-	}
-
-	/**
-	 * Insert the draft copy of `$source`, marked as not yet linked.
+	 * Insert the draft copy of `$source`.
 	 *
 	 * @param \WP_Post $source The original.
 	 * @param int      $parent_id The parent the copy gets.
-	 * @param string   $marker `<source id>:<language>`.
 	 * @return int|\WP_Error
 	 */
-	private static function insert_translation( \WP_Post $source, int $parent_id, string $marker ) {
+	private static function insert_translation( \WP_Post $source, int $parent_id ) {
 		return wp_insert_post(
 			wp_slash(
 				array(
@@ -344,7 +325,6 @@ final class Content {
 					'comment_status' => $source->comment_status,
 					'ping_status'    => $source->ping_status,
 					'post_password'  => $source->post_password,
-					'meta_input'     => array( self::PENDING_META => $marker ),
 					'post_author'    => get_current_user_id() > 0 ? get_current_user_id() : (int) $source->post_author,
 				)
 			),

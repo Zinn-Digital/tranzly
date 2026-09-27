@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.5
+Stable tag: 3.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,9 @@ They are imported in the background the first time the new version runs. The old
 From the `lang` query parameter when it names a listed language, then from the language of the post being viewed, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
 
 == Changelog ==
+
+= 3.0.6 =
+* A background translation interrupted while it creates a translation no longer leaves an empty draft behind.
 
 = 3.0.5 =
 * Translation engines and the background queue: DeepL (Free and Pro keys), AI models with your own key, Google and Microsoft (Pro); jobs that keep running after you close the browser; translation memory, glossary and do-not-translate list; per-language engines, fallback and monthly caps (Pro); a failed-translation report with retry.
