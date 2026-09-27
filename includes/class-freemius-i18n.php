@@ -1,6 +1,6 @@
 <?php
 /**
- * The licensing SDK's own screens, in the site's language.
+ * The licensing SDK's own screens and notices, in the site's language.
  *
  * @package ZinnDigital\Tranzly
  */
@@ -14,36 +14,60 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Routes the SDK strings a customer actually sees through this plugin's own catalogues.
+ * Routes EVERY string the licensing SDK can show through this plugin's own catalogues.
  *
- * The SDK translates its screens with its own text domain, which ships no catalogue for most of
- * the 57 languages this plugin is sold in (Arabic among them), so the opt-in screen and the
- * "Upgrade" menu label rendered in English on an otherwise translated admin. Two supported
- * mechanisms, and nothing under vendor/ is edited:
+ * The SDK translates itself with its own `freemius` text domain, which ships a catalogue for
+ * only 13 of the 57 languages this plugin is sold in. So on an Arabic admin the sticky opt-in
+ * notice ("We made a few tweaks to the plugin, Opt in to make … better!"), its "Dismiss" link,
+ * the licence and pricing screens all rendered in English on every admin page.
  *
- * 1. `fs_override_i18n( $strings, '<slug>' )` for every string the SDK looks up by key for THIS
- *    plugin's module. The SDK then translates the value with our text domain, and because the
- *    values are written with `__()` here, `wp i18n make-pot` puts them in our POT and the
- *    catalogue pipeline translates them into every locale.
- * 2. The opt-in strings the SDK looks up WITHOUT a module slug (so no per-plugin override can
- *    reach them) are answered from the same catalogue through `gettext_freemius`, and only on
- *    this plugin's own admin page, so another vendor's copy of the SDK is never touched.
+ * The strings come from `freemius-strings.php`, which is GENERATED from the bundled SDK by
+ * `wp/bin/freemius-i18n.php` (never typed), and a unit test fails if an SDK string is missing
+ * from it. Two supported mechanisms, and nothing under vendor/ is edited:
+ *
+ * 1. `fs_override_i18n( $strings, 'tranzly' )` for every key the SDK looks up for THIS plugin's
+ *    module. It wins over the SDK's own catalogue, and only ever affects this plugin.
+ * 2. Strings the SDK looks up with no module slug (the notice's "Dismiss", strings whose key
+ *    differs between screens) reach WordPress as the `freemius` text domain. Those are answered
+ *    from our catalogue ONLY when the SDK's own catalogue had no translation (it returned the
+ *    English unchanged), so a language the SDK already translates is never overridden, and
+ *    another plugin's copy of the SDK only ever gains a translation of the same sentence.
  */
 final class Freemius_I18n {
 
 	/**
-	 * Register the hooks.
+	 * The generated table, loaded once per request.
+	 *
+	 * @var array{keyed:list<array{0:string,1:string}>,unkeyed:list<array{0:string,1:string,2:string}>,label:list<string>,mtype:list<list<string|int>>}|null
+	 */
+	private static ?array $table = null;
+
+	/**
+	 * "context\x04English" => our translation, for the gettext gap-fill.
+	 *
+	 * @var array<string,string>|null
+	 */
+	private static ?array $unkeyed = null;
+
+	/**
+	 * Register the hooks. Admin-only: the SDK renders nothing a visitor sees.
 	 *
 	 * @return void
 	 */
 	public static function register(): void {
+		if ( ! is_admin() ) {
+			return;
+		}
 		// `init`, not earlier: `__()` before `init` loads the catalogue too early (WP 6.7+ notice).
 		add_action( 'init', array( self::class, 'override' ), 1 );
+		// Before the SDK's own `admin_init` (priority 10), which is what re-adds the notice.
+		add_action( 'admin_init', array( self::class, 'refresh_stored_notice' ), 5 );
 		add_filter( 'gettext_freemius', array( self::class, 'unkeyed' ), 10, 2 );
+		add_filter( 'gettext_with_context_freemius', array( self::class, 'unkeyed_with_context' ), 10, 3 );
 	}
 
 	/**
-	 * Hand the SDK our translations of every keyed string on the screens a customer meets.
+	 * Hand the SDK our translation of every key it looks up for this module.
 	 *
 	 * @return void
 	 */
@@ -55,80 +79,127 @@ final class Freemius_I18n {
 	}
 
 	/**
-	 * Key => our translation, for the strings the SDK looks up for this module.
+	 * Re-render the SDK's STORED opt-in notice once, in the admin's current language.
+	 *
+	 * The SDK renders the "We made a few tweaks…" notice ONCE, when it first adds it, and keeps
+	 * the finished HTML in its own storage. So a site that met it before this plugin translated
+	 * the SDK keeps showing the English copy after the update, on every admin page, until someone
+	 * opts in or skips. When the language differs from the one the stored copy was made in, drop
+	 * it and clear the SDK's "already added" flag; the SDK's own `admin_init` then adds it again,
+	 * translated. The language is remembered in the SDK's storage for this module (no option of
+	 * our own), so this costs nothing on every other request.
+	 *
+	 * @return void
+	 */
+	public static function refresh_stored_notice(): void {
+		if ( ! class_exists( 'FS_Admin_Notices' ) || ! class_exists( 'FS_Storage' ) || ! function_exists( 'determine_locale' ) ) {
+			return;
+		}
+		$storage = \FS_Storage::instance( 'plugin', 'tranzly' );
+		$locale  = determine_locale();
+		if ( $storage->get( 'zinn_notice_locale' ) === $locale ) {
+			return;
+		}
+		$notices = \FS_Admin_Notices::instance( 'tranzly' );
+		if ( $notices->has_sticky( 'connect_account' ) ) {
+			$notices->remove_sticky( 'connect_account' );
+			$storage->remove( 'sticky_optin_added' );
+		}
+		$storage->store( 'zinn_notice_locale', $locale );
+	}
+
+	/**
+	 * Key => our translation.
 	 *
 	 * @return array<string,string>
 	 */
 	public static function keyed(): array {
-		return array(
-			// Admin menu.
-			'upgrade'                        => __( 'Upgrade', 'tranzly' ),
-			'pricing'                        => __( 'Pricing', 'tranzly' ),
-			'start-trial'                    => __( 'Start Trial', 'tranzly' ),
-			'account'                        => __( 'Account', 'tranzly' ),
-			'contact-us'                     => __( 'Contact Us', 'tranzly' ),
-			'affiliation'                    => __( 'Affiliation', 'tranzly' ),
-			// The opt-in screen.
-			// The module type the SDK puts into its sentences (it lower-cases it itself).
-			'plugin'                         => _x( 'Plugin', 'the kind of software', 'tranzly' ),
-			/* translators: %s: the user's first name. */
-			'hey-x'                          => _x( 'Hey %s,', 'greeting', 'tranzly' ),
-			/* translators: %s: the module type, e.g. "plugin". */
-			'connect-message'                => __( 'Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info. This will help us make the %s more compatible with your site and better at doing what you need it to.', 'tranzly' ),
-			'connect-message_on-update'      => __( 'Opt in to get email notifications for security & feature updates, educational content, and occasional offers, and to share some basic WordPress environment info.', 'tranzly' ),
-			/* translators: %1$s: the plugin name. */
-			'connect-message_on-update_skip' => __( 'If you skip this, that\'s okay! %1$s will still work just fine.', 'tranzly' ),
-			'opt-in-connect'                 => __( 'Allow & Continue', 'tranzly' ),
-			'skip'                           => _x( 'Skip', 'verb', 'tranzly' ),
-			'skipping-wait'                  => __( 'Skipping, please wait', 'tranzly' ),
-			'continue'                       => __( 'Continue', 'tranzly' ),
-			'please-wait'                    => __( 'Please wait', 'tranzly' ),
-			'activating'                     => _x( 'Activating', 'as activating plugin', 'tranzly' ),
-			/* translators: %s: the plugin name. */
-			'this-will-allow-x'              => __( 'This will allow %s to', 'tranzly' ),
-			'privacy-policy'                 => __( 'Privacy Policy', 'tranzly' ),
-			'tos'                            => __( 'Terms of Service', 'tranzly' ),
-			'license-agreement'              => __( 'License Agreement', 'tranzly' ),
-			'have-license-key'               => __( 'Have a license key?', 'tranzly' ),
-			'activate-license'               => __( 'Activate License', 'tranzly' ),
-			// The permission list behind "This will allow … to".
-			'permissions-profile'            => __( 'View Basic Profile Info', 'tranzly' ),
-			'permissions-profile_desc'       => __( 'Your WordPress user\'s: first & last name, and email address', 'tranzly' ),
-			'permissions-site'               => __( 'View Basic Website Info', 'tranzly' ),
-			'permissions-site_desc'          => __( 'Homepage URL & title, WP & PHP versions, and site language', 'tranzly' ),
-			/* translators: %s: "Plugin". */
-			'permissions-events'             => __( 'View Basic %s Info', 'tranzly' ),
-			/* translators: %s: "plugin". */
-			'permissions-events_desc'        => __( 'Current %s & SDK versions, and if active or uninstalled', 'tranzly' ),
-			'permissions-newsletter'         => __( 'Newsletter', 'tranzly' ),
-			'permissions-newsletter_desc'    => __( 'Updates, announcements, marketing, no spam', 'tranzly' ),
-			'permissions-diagnostic'         => __( 'View Diagnostic Info', 'tranzly' ),
-			'permissions-diagnostic_desc'    => __( 'WordPress & PHP versions, site language & title', 'tranzly' ),
-			'permissions-extensions'         => __( 'View Plugins & Themes List', 'tranzly' ),
-			'permissions-extensions_desc'    => __( 'Names, slugs, versions, and if active or not', 'tranzly' ),
-			'optional'                       => __( 'optional', 'tranzly' ),
-		);
+		$table = self::table();
+		$out   = array();
+		foreach ( $table['keyed'] as $row ) {
+			$out[ $row[0] ] = $row[1];
+		}
+		// The SDK formats these with its module label BEFORE the lookup, so the override must be
+		// the finished sentence, formatted with our translation of that label.
+		foreach ( $table['label'] as $key ) {
+			if ( isset( $out[ $key ], $out['plugin'] ) ) {
+				$out[ $key ] = sprintf( $out[ $key ], $out['plugin'] );
+			}
+		}
+		// And these the SDK fills with its RAW module type, the untranslated word "plugin". Our
+		// sentence carries our own word in that slot instead; sprintf() ignores the unused arg.
+		$word = isset( $out['plugin'] ) ? ( function_exists( 'mb_strtolower' ) ? mb_strtolower( $out['plugin'] ) : strtolower( $out['plugin'] ) ) : '';
+		foreach ( $table['mtype'] as $row ) {
+			$key = array_shift( $row );
+			if ( '' === $word || ! isset( $out[ $key ] ) ) {
+				continue;
+			}
+			foreach ( $row as $slot ) {
+				$out[ $key ] = str_replace( '%' . $slot . '$s', $word, $out[ $key ] );
+				if ( 1 === $slot ) {
+					// A sentence with a single placeholder keeps the SDK's bare `%s`.
+					$out[ $key ] = preg_replace( '/%s/', $word, $out[ $key ], 1 ) ?? $out[ $key ];
+				}
+			}
+		}
+		return $out;
 	}
 
 	/**
-	 * Our translation of an opt-in string the SDK looks up with no module slug.
+	 * Our translation of an SDK string looked up in the `freemius` domain, where the SDK had none.
 	 *
-	 * @param string $translation What the SDK's own catalogue returned (often the English).
+	 * @param string $translation What the SDK's own catalogue returned.
 	 * @param string $text        The English source.
 	 * @return string
 	 */
 	public static function unkeyed( $translation, $text ) {
-		if ( ! is_admin() || ! isset( $_GET['page'] ) || 'tranzly' !== sanitize_key( wp_unslash( $_GET['page'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only routing check, no state change.
+		return self::fill( (string) $translation, (string) $text, '' );
+	}
+
+	/**
+	 * As {@see unkeyed()}, for a string with a gettext context.
+	 *
+	 * @param string $translation What the SDK's own catalogue returned.
+	 * @param string $text        The English source.
+	 * @param string $context     The gettext context.
+	 * @return string
+	 */
+	public static function unkeyed_with_context( $translation, $text, $context ) {
+		return self::fill( (string) $translation, (string) $text, (string) $context );
+	}
+
+	/**
+	 * Answer from our catalogue only when the SDK's own returned the English unchanged.
+	 *
+	 * @param string $translation SDK result.
+	 * @param string $text        English.
+	 * @param string $context     Context ('' for none).
+	 * @return string
+	 */
+	private static function fill( string $translation, string $text, string $context ): string {
+		// Before `init` our catalogue may not be loaded yet, and loading it would raise WP 6.7's
+		// "translation loading was triggered too early" notice.
+		if ( $translation !== $text || ! did_action( 'init' ) ) {
 			return $translation;
 		}
-		$ours = array(
-			'Never miss an important update'        => __( 'Never miss an important update', 'tranzly' ),
-			/* translators: %s: the module type, e.g. "plugin". */
-			'We have introduced this opt-in so you never miss an important update and help us make the %s more compatible with your site and better at doing what you need it to.' => __( 'We have introduced this opt-in so you never miss an important update and help us make the %s more compatible with your site and better at doing what you need it to.', 'tranzly' ),
-			/* translators: %1$s: the plugin name, %2$s: its version. */
-			'Thank you for updating to %1$s v%2$s!' => __( 'Thank you for updating to %1$s v%2$s!', 'tranzly' ),
-		);
+		if ( null === self::$unkeyed ) {
+			self::$unkeyed = array();
+			foreach ( self::table()['unkeyed'] as $row ) {
+				self::$unkeyed[ $row[0] . "\x04" . $row[1] ] = $row[2];
+			}
+		}
+		return self::$unkeyed[ $context . "\x04" . $text ] ?? $translation;
+	}
 
-		return $ours[ (string) $text ] ?? $translation;
+	/**
+	 * The generated table (translated with the current locale on first use).
+	 *
+	 * @return array{keyed:list<array{0:string,1:string}>,unkeyed:list<array{0:string,1:string,2:string}>,label:list<string>,mtype:list<list<string|int>>}
+	 */
+	private static function table(): array {
+		if ( null === self::$table ) {
+			self::$table = require __DIR__ . '/freemius-strings.php';
+		}
+		return self::$table;
 	}
 }
