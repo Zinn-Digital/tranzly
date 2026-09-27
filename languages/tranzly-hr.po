@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "isključeno"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Otvori"
 
@@ -625,8 +626,9 @@ msgstr "Ograničenja i dozvole su spremljeni."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Taj jezik nije jedan od jezika ove stranice."
 
@@ -845,8 +847,8 @@ msgstr "Navedite barem jedan jezik."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Nije vam dopušteno prevesti ovu stavku."
 
@@ -855,11 +857,66 @@ msgstr "Nije vam dopušteno prevesti ovu stavku."
 msgid "This item already has a version in that language."
 msgstr "Ovaj predmet već ima verziju na tom jeziku."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Taj mehanizam za prevođenje nije dostupan na ovoj web-lokaciji."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Različiti mehanizmi po jeziku, automatska alternativa i ograničenja potrošnje značajke su su Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Svaki jezik mora biti jedan od jezika stranice, s dostupnim pogonom."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Rezervni popis može sadržavati samo dostupne mehanizme."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Mjesečni limit je iznos u US dolarima, nula ili više, za dostupni mehanizam."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Preferirani prijevodi i ton po jeziku značajke su su paketa Tranzly Pro. Popis pojmova koji se ne prevode besplatan je."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Unosi u rječnik moraju biti grupirani prema jednom od jezika web-mjesta."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Ton se postavlja po jeziku web-mjesta: zadana razina formalnosti, više ili manje, uz opcionalne upute."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Vrijednost za %s nije među dopuštenim opcijama."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Pozadinski red čekanja nije dostupan na ovoj stranici."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Zadatak prevođenja izvodi se kao osoba koja ga pokreće, stoga korisnik mora biti prijavljen."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "U tom odabiru nema ničega što vam je dopušteno prevesti."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Ta stavka nije dio posla prevođenja."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Nije vam dopušteno promijeniti taj prijevod."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Taj se tekst ovdje ne može prevesti."
 msgid "That media text cannot be translated here."
 msgstr "Ovaj medijski tekst se ovdje ne može prevesti."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Prijevod se može objaviti ili spremiti kao nacrt."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Nije vam dopušteno objavljivanje ove vrste sadržaja."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Ova stavka je već napisana na tom jeziku."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Nije vam dopušteno promijeniti taj prijevod."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ovaj prijevod je uredila osoba (ili je uvezen), pa je zaštićen. Otključajte ga kako biste ga ponovno preveli."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Još uvijek nije postavljen ni jedan prevoditeljski mehanizm. Dodajte ključ za jedan u Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Taj mehanizam za prevođenje nije dostupan na ovoj web-lokaciji."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Taj stroj za prevođenje još nije podešen: prvo dodajte njegov ključ."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Isti tekst se trenutno prevodi u drugom zadatku; ova stavka će koristiti taj prijevod."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Nijedan stroj za prevođenje nije mogao prihvatiti ovu stavku."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Mehanizam nije vratio prijevod za svaki dio ove stavke. Ništa nije promijenjeno."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "AI model"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s nije vratio prijevod za svaki dio ove stavke. Ništa nije promijenjeno."
+msgid "AI model (%1$s %2$s)"
+msgstr "AI model (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s trenutačno ima poteškoća. Pokušajte ponovno uskoro ili upotrijebite drugi mehanizam."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Vaša stranica nije mogla dosegnuti %s. Provjerite može li uspostavljati odlazne veze, a zatim pokušajte ponovno."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s nije prihvatio vaš ključ API. Provjerite ključ u odjeljku Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Vaš %s račun je potrošio svoju kvotu ili saldo. Nadopunite ga kod njih ili upotrijebite drugi mehanizam."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s je zatražio da usporimo. Ponovni pokušaj bit će izvršen automatski."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Ovaj je tekst predug za %s u jednom prolazu. Podijelite sadržaj ili upotrijebite drugi mehanizam."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s je odbio prevesti ovaj sadržaj. Pokušajte s drugim prevoditeljem ili ga prevedite ručno."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s ne prevodi ovaj jezik. Odaberite drugi mehanizam za njega."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Dosegnut je ovogodišnji limit potrošnje za %s, tako da mu ništa više nije poslano. Povećajte limit u Tranzly → Engines ili pričekajte sljedeći mjesec."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Prevođenje s %s nije uspjelo iz razloga koji Tranzly nije mogao identificirati. Detalji su u nastavku."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Beta verzije nude se licenciranim Pro instalacijama koje su povezane s n
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Spremi postavke"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Prvi uslužni program koji je postavljen"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Ključ je spremljen. Pohranjen je šifrirano i više se nikada neće prikazati."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Postavke stroja su spremljene."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Pojmovnik je spremljen."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Vaši ključevi"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly poziva usluge prevođenja s vašim vlastitim računom. Ključevi se pohranjuju šifrirano u vašoj bazi podataka i šalju se isključivo onoj usluzi kojoj pripadaju. Ključevi AI modela postavljaju se u postavkama umjetne inteligencije."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API ključ"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Spremljeno: %s. Unesite novi ključ da biste ga zamijenili ili spremite prazno polje da biste ga uklonili."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Nema spremljenog ključa."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure regija (ostavite prazno za globalni resurs)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Spremi ključ"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Provjeri moju upotrebu DeepL"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Iskorišteno je %1$s od %2$s znakova u ovom obračunskom razdoblju."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Koji pokretač prevodi"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Još nije postavljen nijedan mehanizam. Spremite ključ iznad (ili postavite AI model) kako biste započeli prevođenje."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Zadani mehanizam"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Zaseban mehanizam po jeziku, automatska rezervna opcija i mjesečna ograničenja potrošnje značajke su su paketa Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Pogon za %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Zadani pogon"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Ako motor otkaže ili dosegne ograničenje, pokušajte sljedeće, ovim redoslijedom"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Mjesečni limit potrošnje"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Kada mehanizam dostigne svoje ograničenje, ništa mu se više ne šalje do sljedećeg mjeseca, a izvješće o neuspjelom prevođenju navodi razlog. Ostavite prazno za bez ograničenja."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (potrošeno ovog mjeseca: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Spremi velika slova"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Rječnik i riječi koje se nikada ne prevode"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Nikada nemoj prevoditi ove riječi"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Imena brendova i proizvoda ostaju točno kakva jesu, kod svakog mehanizma."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Željeni prijevodi i ton po jeziku značajke su su Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Preferirani prijevodi (jedan po retku: termin = prijevod)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Formalnost"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Zadano"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Formalan"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Neformalno"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Upute za stil (publika, glas brenda)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Spremi rječnik"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Posao je započet s %d prijevoda za obradu. Izvršava se u pozadini: možete zatvoriti ovu stranicu."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Ponovno u redu čekanja."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Pokretanje"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Završeno"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Otkazano"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Prevedi u pozadini"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Najprije postavite mašinu za prevođenje na kartici Mašine."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Prevedi sve"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "U"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Sa"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Vlastiti mehanizam svakog jezika"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Objavite prijevode (inače se spremaju kao skice)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Izračunaj trošak"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d objava, %2$s znakova. Cijena za ovaj mehanizam nije poznata unaprijed."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d objavljenih članaka, %2$s znakova: otprilike $%3$s na vašem vlastitom računu."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Započni prevođenje"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Zadaci"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Još nema poslova prevođenja."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Posao %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d od %2$d prevedeno, %3$d nije uspjelo, %4$d preskočeno (zaštićeno ili već na tom jeziku)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Zaustavi ovaj zadatak"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Pogledajte što nije uspjelo i zašto"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Sadržaj"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Jezik"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Što je pošlo po zlu"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Popravi to"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Pojedinosti"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Ponovno pokušaj s"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Isti pogon"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Pokušaj ponovno"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Prevedi ručno"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Jezici i postavke"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Mehanizmi"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Poslovi prevođenja"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "naka-off"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Buksan"
 
@@ -625,8 +626,9 @@ msgstr "Nai-save na ang mga limitasyon at pahintulot."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Ang wikang iyon ay hindi isa sa mga wika ng site na ito."
 
@@ -845,8 +847,8 @@ msgstr "Maglista ng kahit isang wika."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Hindi ka pinapayagang isalin ang item na ito."
 
@@ -855,11 +857,66 @@ msgstr "Hindi ka pinapayagang isalin ang item na ito."
 msgid "This item already has a version in that language."
 msgstr "Mayroon nang bersyon ang item na ito sa wikang iyon."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Hindi available sa site na ito ang translation engine na iyon."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Ang magkaibang mga engine sa bawat wika, awtomatikong fallback, at mga spending cap ay mga feature ng Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Ang bawat wika ay dapat na isa sa mga wika ng site, na may available na engine."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Ang listahan ng fallback ay maaari lamang maglaman ng mga available na engine."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Ang buwanang takip ay isang halaga sa US dollars, zero o higit pa, para sa isang available na engine."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Ang mga ginustong salin at tono sa bawat wika ay mga feature ng Tranzly Pro. Libre ang listahan ng do-not-translate."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Ang mga entri sa glossary ay dapat i-grupo sa isa sa mga wika ng site."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Ang tono ay itinatakda sa bawat wika ng site: default sa pormalidad, higit pa o mas mababa, kasama ang mga opsyonal na tagubilin."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Ang halaga para sa %s ay hindi isa sa mga pinapayagang pagpipilian."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Hindi available sa site na ito ang background queue."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Ang isang trabaho sa pagsasalin ay tumatakbo bilang ang taong nagsisimula nito, kaya ang isang user ay dapat na nakakonekta."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Walang anuman na pinahihintulutan kang isalin sa pagpipiliang iyon."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Ang item na iyon ay hindi bahagi ng trabaho sa pagsasalin."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Hindi ka pinapayagang baguhin ang pagsasalin na iyon."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Hindi maaaring isalin ang tekstong iyon dito."
 msgid "That media text cannot be translated here."
 msgstr "Hindi maaring isalin dito ang tekstong pang-media na iyon."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Ang isang pagsasalin ay maaaring i-publish o panatilihin bilang isang draft."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Hindi ka pinahihintulutang mag-publish ng ganitong uri ng nilalaman."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Nakatala na ang aytem na ito sa wikang iyon."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Hindi ka pinapayagang baguhin ang pagsasalin na iyon."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ang pagsasalin na ito ay inedit ng isang tao (o na-import), kaya ito ay protektado. I-unlock ito upang isalin itong muli."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Wala pang naka-setup na translation engine. Magdagdag ng key para dito sa Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Hindi available sa site na ito ang translation engine na iyon."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Hindi pa naka-set up ang translation engine na iyon: idagdag muna ang key nito."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Isinasalin na rin ang parehong teksto ng isa pang trabaho ngayon; gagamitin ng aytem na ito ang sagot na iyon."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Walang makina ng pagsasalin ang nakakuha sa aytem na ito."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Hindi nagbalik ang makina ng pagsasalin para sa bawat bahagi ng aytem na ito. Walang binago."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Model ng AI"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s ay hindi nagbalik ng pagsasalin para sa bawat bahagi ng aytem na ito. Walang binago."
+msgid "AI model (%1$s %2$s)"
+msgstr "Modelo ng AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "Kasalukuyang nakakaranas ng mga problema ang %s. Subukang muli mamaya, o gumamit ng ibang engine."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Hindi maabot ng iyong site ang %s. Suriin na maaari itong gumawa ng mga papalabas na koneksyon, pagkatapos ay subukang muli."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "Hindi tinanggap ng %s ang iyong API key. Suriin ang key sa Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Naubos na ang quota o balanse ng iyong %s account. Mag-top up sa kanila, o gumamit ng ibang engine."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "Hiniling sa amin ng %s na bagalan ito. Susubukan itong muli nang awtomatiko."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Napakahaba ng tekstong ito para sa %s nang sabay-sabay. Hatiin ang nilalaman, o gumamit ng ibang engine."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "Tinanggihan ng %s na isalin ang nilalamang ito. Subukan ang ibang makina, o isalin ito nang manu-mano."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "Hindi isinasalin ng %s ang wikang ito. Pumili ng ibang engine para rito."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Naabot na ang limitasyon sa paggastos ngayong buwan para sa %s, kaya wala nang iba pang ipinadala rito. Itaas ang limitasyon sa Tranzly → Engines, o maghintay hanggang sa susunod na buwan."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Ang pagsasalin gamit ang %s ay nabigo dahil sa isang dahilan na hindi matukoy ng Tranzly. Ang mga detalye ay nasa ibaba."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Inaalok ang mga bersyong beta sa mga lisensyadong pag-install ng Pro na 
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "I-save ang mga setting"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Unang makina na naka-set up"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Nai-save na ang key. Naka-encrypt ito kapag nakaimbak at hindi na kailanman ipapakita muli."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Na-save na ang mga setting ng makina."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Na-save ang Glossary."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Ang iyong mga susi"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Ang Tranzly ay tumatawag sa mga serbisyo ng pagsasalin gamit ang iyong sariling account. Ang mga susi ay nakaimbak nang naka-encrypt sa iyong database at ipinapadala lamang sa serbisyo kung saan sila nabibilang. Ang mga susi ng modelo ng AI ay itinakda sa mga setting ng AI."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API key"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Na-save na: %s. Maglagay ng bagong key para palitan ito, o i-save ang isang blangkong field para tanggalin ito."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Walang naka-save na key."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Rehiyon ng Azure (iwanang blangko para sa isang global na mapagkukunan)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "I-save ang key"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Suriin ang aking paggamit ng DeepL"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "%1$s sa %2$s na character ang nagamit sa billing period na ito."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Aling makina ang nagsasalin"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Wala pang nakatakdang engine. Mag-save ng key sa itaas (o mag-set up ng AI model) para simulan ang pagsasalin."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Default na engine"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Ang magkaibang engine bawat wika, awtomatikong fallback, and buwanang limitasyon sa paggastos ay mga tampok ng Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Engine para sa %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Ang default na engine"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Kung ang isang engine ay mabigo o umabot sa limitasyon, subukan ang mga sumusunod, sa ganitong pagkakasunud-sunod"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Buwanang gastusin sa caps"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Kapag umabot sa limitasyon nito ang isang makina, wala nang ipinapadala rito hanggang sa susunod na buwan at ipinapakita ng ulat ng nabigong pagsasalin ang dahilan. Iwanang bakante kung walang limitasyon."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (nagastos ngayong buwan: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "I-save ang mga takip"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Glosaryo at mga salitang hindi kailanman isinalin"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Huwag kailanman isalin ang mga salitang ito (isa sa bawat linya)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Ang mga pangalan ng brand at produkto ay nananatiling eksakto kung ano sila, sa bawat engine."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Ang mga gustong salin at tono para sa bawat wika ay mga feature ng Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Mga ginustong pagsasalin (isa bawat linya: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Pormalidad"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Default"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Pormal"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Hindi pormal"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Mga tagubilin sa estilo (mga tagapakinig, boses ng brand)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "I-save ang glosaryo"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Nagsimula ang trabaho na may %d na isasalin. Tumatakbo ito sa background: maaari mong isara ang pahinang ito."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Naka-queue muli."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Naka-run"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Tapos na"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Kanselahin"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Isalin sa background"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Mag-set up muna ng translation engine sa Engines tab."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Isalin ang bawat isa"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Sa loob ng"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Kasama ang"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Sariling makina ng bawat wika"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "I-publish ang mga isinalin (kung hindi ay mase-save ang mga ito bilang mga draft)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Tantihin ang halaga"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d na mga post, %2$s na mga karakter. Ang presyo para sa engine na ito ay hindi alam nang maaga."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d na post, %2$s na character: humigit-kumulang $%3$s sa iyong sariling account."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Simulan ang pagsasalin"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Mga Trabaho"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Wala pang mga trabaho sa pagsasalin."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Trabaho %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d ng %2$d ang naisalin, %3$d ang nabigo, %4$d ang lumaktaw (protektado o nasa wikang iyon na)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Ihinto ang trabahong ito"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Tingnan kung ano ang nabigo at kung bakit"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Nilalaman"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Wika"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Ano ang nagkamali"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Ayusin ito"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Mga Detalye"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Subukan ulit gamit ang"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Ang parehong engine"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Subuking muli"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Isalin nang mano-mano"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Mga Wika at mga setting"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Mga Engine"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Mga trabaho sa pagsasalin"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

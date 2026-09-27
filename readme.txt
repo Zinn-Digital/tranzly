@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.4
+Stable tag: 3.0.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,9 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Media, widgets, site title and tagline.** Image alt text, captions and titles, widget text and the site title and tagline can each carry a translation per language, shown to visitors of that language.
 * **Unlimited languages**, in the free edition as well.
 * **Your old Tranzly translations come with you.** On a site that ran Tranzly 2.x, the first load of this version imports the old language links in the background, adds their languages to your list, and moves your DeepL key into encrypted storage. It never changes the old data, so it can be undone, and anything it could not import (a link to a deleted post, two posts claiming the same language) is reported rather than stopping it. `wp tranzly legacy dry-run` shows what it would do first.
+* **Machine translation with your own account.** DeepL (Free and Pro keys), AI models with your own key, and with Pro Google Cloud Translation and Microsoft Translator. See the cost before you start.
+* **Translate in the background.** Translate a whole post type into several languages as one job; it keeps going after you close the browser, and a report shows exactly what failed and why, with one click to retry with another engine or to translate it by hand.
+* **Words that are never translated** (brand and product names) in every edition; with Pro, preferred translations, tone per language, translation memory (a text already translated is never paid for again), a different engine per language, automatic fallback and monthly spending caps.
 * **For developers:** PHP functions (translations, current language, switching language in code), an interface for adding your own translation engine, hooks, a REST API and WP-CLI (`wp tranzly translate --lang=de --post-type=page`). Pro adds Polylang and WPML function compatibility; the Agency plan adds multisite network set-up.
 * **Fast:** a translated page adds at most two database queries and sets no cookie, so page caches keep working. This is measured automatically on every change.
 * **Security by design.** Every change needs the right permission and a valid request token; API keys are stored encrypted; the old version's "AI translated by Tranzly" link is off.
@@ -42,6 +45,16 @@ The admin screen and editor script are built from the human-readable sources in 
 `npm ci && npm run build`
 
 == External services ==
+
+= Translation services you choose (DeepL, Google Cloud Translation, Microsoft Translator) =
+
+Tranzly translates through the services you set up in Tranzly → Engines, with your own account and key. Nothing is sent to any of them until you save a key and start a translation, and nothing is ever sent to Zinn Digital®. What is sent is the text being translated (post titles, excerpts and content, term names and descriptions), the source and target language, and your key; the answer is the translation.
+
+* DeepL: `https://api.deepl.com` (DeepL API Pro keys) or `https://api-free.deepl.com` (keys ending in `:fx`). Tranzly calls `/v2/translate` to translate, `/v2/languages` to learn which languages your account supports, `/v2/usage` when you check your usage, and `/v2/glossaries` when you use a glossary (Pro). Terms: https://www.deepl.com/pro-license · Privacy policy: https://www.deepl.com/privacy
+* Google Cloud Translation (Pro): `https://translation.googleapis.com/language/translate/v2`. Terms: https://cloud.google.com/terms · Privacy policy: https://policies.google.com/privacy
+* Microsoft Translator (Pro): `https://api.cognitive.microsofttranslator.com/translate`. Terms: https://azure.microsoft.com/support/legal/ · Privacy policy: https://privacy.microsoft.com/privacystatement
+
+= Licensing and updates (Freemius) =
 
 The plugin bundles the Freemius SDK, which handles licences and updates for the Pro edition and, only if you agree, product usage data.
 
@@ -75,9 +88,9 @@ Recommended models list (off unless you turn it on). If you turn on the daily ch
 
 == Frequently Asked Questions ==
 
-= Does this release translate my content automatically? =
+= Does it translate my content automatically? =
 
-Not yet. It creates and links the translations and shows each one to visitors of its language; you write the translated text, or keep the text imported from Tranzly 2.x. Machine translation with your own DeepL or AI key arrives in the next release.
+Yes, with a translation service you choose and your own key: DeepL (Free or Pro) or an AI model in the free edition, and Google Cloud Translation or Microsoft Translator with Pro. Add a key under Tranzly → Engines, then translate one post from the editor or a whole post type as a background job. You can also write translations by hand, or keep the text imported from Tranzly 2.x.
 
 = What happens to my Tranzly 2.x translations? =
 
@@ -88,6 +101,9 @@ They are imported in the background the first time the new version runs. The old
 From the `lang` query parameter when it names a listed language, then from the language of the post being viewed, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
 
 == Changelog ==
+
+= 3.0.5 =
+* Translation engines and the background queue: DeepL (Free and Pro keys), AI models with your own key, Google and Microsoft (Pro); jobs that keep running after you close the browser; translation memory, glossary and do-not-translate list; per-language engines, fallback and monthly caps (Pro); a failed-translation report with retry.
 
 = 3.0.4 =
 * Translating a post again (or with --force over a hand-edited translation) no longer unpublishes the translation.

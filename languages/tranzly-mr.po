@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "बंद केले"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "उघडा"
 
@@ -625,8 +626,9 @@ msgstr "मर्यादा आणि परवानग्या जतन �
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "ती भाषा या साइटच्या भाषांपैकी एक नाही."
 
@@ -845,8 +847,8 @@ msgstr "किमान एक भाषा सूचीबद्ध करा."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "तुम्हाला या आयटमचे भाषांतर करण्याची परवानगी नाही."
 
@@ -855,11 +857,66 @@ msgstr "तुम्हाला या आयटमचे भाषांतर
 msgid "This item already has a version in that language."
 msgstr "या घटकाची या भाषेतील आवृत्ती आधीच उपलब्ध आहे."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "हे भाषांतर इंजिन या साइटवर उपलब्ध नाही."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "प्रत्येक भाषेसाठी वेगवेगळे इंजिन, स्वयंचलित फॉलबॅक आणि खर्च मर्यादा ही Tranzly Pro ची वैशिष्ट्ये आहेत."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "प्रत्येक भाषा साइटच्या भाषांपैकी एक असणे आवश्यक आहे, ज्यासाठी उपलब्ध इंजिन असेल."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "फॉलबैक सूचीमध्ये केवळ उपलब्ध इंजिनांची नावे असू शकतात."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "मासिक मर्यादा उपलब्ध असलेल्या इंजिनसाठी US डॉलर्समधील शून्य किंवा त्याहून अधिक रक्कम असते."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "पसंतीचे भाषांतरे आणि टोन ही Tranzly Pro वैशिष्ट्ये आहेत. भाषांतर-न-करण्याची सूची विनामूल्य आहे."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "ग्लोस्रीच्या नोंदी साइटच्या एका भाषानुसार गटबद्ध केल्या पाहिजेत."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "प्रत्येक साइटच्या भाषेसाठी टोन सेट केला जातो: फॉर्मॅलिटी डीफॉल्ट, कमी किंवा जास्त, अधिक पर्यायी सूचना."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s चे मूल्य अनुमत पर्यायांपैकी एक नाही."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "या साईटवर पार्श्वभूमी रांग उपलब्ध नाही."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "एक भाषांतर कार्य ते सुरू करणाऱ्या व्यक्तीच्या रूपात चालते, त्यामुळे युजरने साइन इन केलेले असणे आवश्यक आहे."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "त्या निवडीमध्ये तुम्हाला भाषांतर करण्यास परवानगी असलेली कोणतीही गोष्ट नाही."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "ती वस्तू भाषांतर नोकरीचा भाग नाही."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "तुम्हाला ते भाषांतर बदलण्याची परवानगी नाही."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "ते मजुकूर येथे भाषांतरित क�
 msgid "That media text cannot be translated here."
 msgstr "ते मीडिया मजकूर येथे अनुवादित केला जाऊ शकत नाही."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "भाषांतर प्रकाशित केले जाऊ शकते किंवा मसुदा म्हणून जतन केले जाऊ शकते."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "तुम्हाला या प्रकारची सामग्री प्रकाशित करण्याची अनुमती नाही."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "ही वस्तू आधीच त्या भाषेत लिहिलेली आहे."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "तुम्हाला ते भाषांतर बदलण्याची परवानगी नाही."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "हे भाषांतर एखाद्या व्यक्तीने संपादित केले आहे (किंवा आयात केले आहे), त्यामुळे ते संरक्षित आहे. ते पुन्हा अनुवादित करण्यासाठी अनलॉक करा."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "कोणतीही भाषांतर यंत्रणा अद्याप सेट केली गेलेली नाही. Tranzly → Engines मध्ये एकासाठी की जोडा."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "हे भाषांतर इंजिन या साइटवर उपलब्ध नाही."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ते भाषांतर इंजिन अद्याप सेट केलेले नाही: प्रथम त्याची की जोडा."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "याच मजकुराचे भाषांतर सध्या दुसऱ्या जॉबद्वारे केले जात आहे; या घटकासाठी तेच उत्तर वापरले जाईल."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "कोणत्याही भाषांतर यंत्राला ही वस्तू घेता आली नाही."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "इंजिनने या घटकाच्या प्रत्येक भागाचे भाषांतर परत केलेले नाही. काहीही बदलले नाही."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "एआय मॉडेल"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s ने या आयटमच्या प्रत्येक भागासाठी भाषांतर परत केले नाही. काहीही बदलले नाही."
+msgid "AI model (%1$s %2$s)"
+msgstr "AI मॉडेल (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s ला सध्या समस्या येत आहेत. थोड्या वेळाने पुन्हा प्रयत्न करा, किंवा दुसरे इंजिन वापरा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "तुमची साइट %s पर्यंत पोहोचू शकली नाही. ती बाहेर जाणारे कनेक्शन करू शकत असल्याचे तपासा आणि नंतर पुन्हा प्रयत्न करा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s ने तुमची API की स्वीकारली नाही. Tranzly → Engines मधील की तपासा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "तुमचे %s खाते त्याची मर्यादा किंवा शिल्लक संपली आहे. त्यात टॉप अप करा किंवा दुसरे इंजिन वापर."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s ने आम्हाला वेग कमी करण्यास सांगितले आहे. हे आपोआप पुन्हा प्रयत्न केले जाईल."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "हा मजकूर एकाच वेळी %s साठी खूप मोठा आहे. सामग्री विभाजित करा किंवा दुसरे इंजिन वापर."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s ने ही सामग्री अनुवादित करण्यास नकार दिला. दुसरे इंजिन वापरून पहा किंवा स्वतः अनुवाद करा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s या भाषेचे भाषांतर करत नाही. त्यासाठी दुसरे इंजिन निवडा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s साठी या महिन्याची खर्चाची मर्यादा संपली आहे, त्यामुळे त्यात आणखी काही पाठवले गेले नाही. Tranzly → Engines मध्ये मर्यादा वाढवा, किंवा पुढच्या महिन्याची प्रतीक्षा करा."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Tranzly ओळखू शकले नाही अशा कारणामुळे %s सह भाषांतर अयशस्वी झाले. तपशील खालीलप्रमाणे आहेत."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1026,6 +1151,302 @@ msgstr "बेटा आवृत्त्या परवानाधारक 
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "सेटिंग्स सेव्ह करा"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "सेट केलेले पहिले इंजिन"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "किल्ली जतन केली आहे. ती एन्क्रिप्ट करून संग्रहित केली जाते आणि पुन्हा कधीही दर्शवली जात नाही."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "इंजिन सेटिंग्ज जतन केल्या आहेत."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "शब्दसंग्रह जतन केला."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "तुमच्या किल्ल्या"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly तुमच्या स्वतःच्या खात्यासह भाषांतर सेवांना कॉल करते. कीज तुमच्या डेटाबेसमध्ये एनक्रिप्टेड स्वरूपात साठवल्या जातात आणि त्या फक्त संबंधित सेवेकडे पाठवल्या जातात. AI मॉडेल कीज AI सेटिंग्जमध्ये सेट केल्या जातात."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API की"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "जतन केले: %s. ते बदलण्यासाठी नवीन की प्रविष्ट करा, किंवा ते काढण्यासाठी रिकामे क्षेत्र जतन करा."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "कोणतीही की जतन केलेली नाही."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure प्रदेश (जागतिक संसदेसाठी रिक्त ठेवा)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "किल्ली सेव्ह करा"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "माझे DeepL वापर तपासा"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "या बिलिंग कालावधीत %2$s पैकी %1$s वर्ण वापरली आहेत."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "कोणते इंजिन भाषांतर करते"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "अद्याप कोणतेही इंजिन सेट केलेले नाही. भाषांतर सुरू करण्यासाठी वरील एक की सेव्ह करा (किंवा AI मॉडेल सेट करा)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "डिफॉल्ट इंजिन"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "प्रत्येक भाषेसाठी वेगळे इंजिन, स्वयंचलित फॉलबॅक आणि मासिक खर्च मर्यादा ही Tranzly Pro ची वैशिष्ट्ये आहेत."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "%s साठी इंजिन"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "डीफॉल्ट इंजिन"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "जर एखादे इंजिन अयशस्वी झाले किंवा मर्यादेपर्यंत पोहोचले, तर या क्रमाने पुढील गोष्टी करून पहा"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "मासिक खर्च मर्यादा"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "जेव्हा एखादे इंजिन त्याची मर्यादा गाठते, तेव्हा पुढील महिन्यापर्यंत त्याला काहीही पाठवले जात नाही आणि अयशस्वी भाषांतर अहवाल याचे कारण सांगतो. कोणतीही मर्यादा न ठेवण्यासाठी हे रिकामे ठेवा."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (या महिन्यात खर्च झाले: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "कॅप्स सेव्ह करा"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "शब्दकोश आणि शब्द कधीही अनुवादित केले जात नाहीत"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "हे शब्द कधीही अनुवादित करू नका (प्रत्येक ओळीत एक)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "ब्रँड आणि उत्पादनांची नावे प्रत्येक इंजिनसह तशीच राहतात."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "पसंतीची भाषांतरे आणि टोन ही Tranzly प्रो वैशिष्ट्ये आहेत."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "प्राधान्य असलेली भाषांतरे (प्रत्येक ओळीत एक: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "औपचारिकता"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "डीफॉल्ट"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "औपचारिक"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "अनौपचारिक"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "शैली सूचना (प्रेक्षक, ब्रँड व्हॉइस)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "ग्लोसअरी सेव्ह करा"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "%d भाषांतरांसह जॉब सुरू झाला. तो बॅकग्राउंडमध्ये चालतो: तुम्ही हे पेज बंद करू शकता."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "पुन्हा रांगेत ठेवले."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "सुरू आहे"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "पूर्ण झाले"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "रद्द केले"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "पार्श्वभूमीवर भाषांतर करा"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "प्रथम 'Engines' टॅबमध्ये भाषांतर यंत्र (translation engine) सेट अप करा."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "प्रत्येक भाषांतर करा"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "मध्ये"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "सह"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "प्रत्येक भाषेचे स्वतःचे इंजिन"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "भाषांतरे प्रकाशित करा (अन्यथा ती मसुदा म्हणून जतन केली जातील)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "खर्चाचा अंदाज लावा"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d पोस्ट्स, %2$s अक्षरे. या इंजिनची किंमत आगाऊ माहिती नसते."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d पोस्ट, %2$s वर्ण: तुमच्या स्वतःच्या खात्यावर सुमारे $%3$s."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "भाषांतर सुरू करा"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "कामे"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "अद्याप कोणतेही भाषांतर कार्य नाही."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "नोकरी %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d पैकी %2$d भाषांतरित, %3$d अयशस्वी, %4$d वगळले (संरक्षित किंवा आधीच त्या भाषेत)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "हे काम थांबवा"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "काय अयशस्वी झाले आणि का ते पहा"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "सामग्री"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "भाषा"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "काय चूक झाले आहे"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "दुरुस्त करा"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "तपशील"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "याची रीट्राय करा"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "हेच इंजिन"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "पुन्हा प्रयत्न करा"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "हस्ताने भाषांतर करा"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "भाषा आणि सेटिंग्ज"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "अभियांत्रिकी"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "भाषांतर कार्ये"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

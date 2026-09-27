@@ -60,17 +60,17 @@ final class Rest_Engines {
 				'callback'            => array( self::class, 'estimate' ),
 				'permission_callback' => array( self::class, 'can_edit_posts' ),
 				'args'                => array(
-					'posts'  => array(
-						'type'     => 'array',
-						'items'    => array( 'type' => 'integer' ),
-						'required' => true,
+					'posts'     => array(
+						'type'  => 'array',
+						'items' => array( 'type' => 'integer' ),
 					),
-					'langs'  => array(
+					'post_type' => array( 'type' => 'string' ),
+					'langs'     => array(
 						'type'     => 'array',
 						'items'    => array( 'type' => 'string' ),
 						'required' => true,
 					),
-					'engine' => array( 'type' => 'string' ),
+					'engine'    => array( 'type' => 'string' ),
 				),
 			)
 		);
@@ -150,7 +150,11 @@ final class Rest_Engines {
 	 * @return \WP_REST_Response|\WP_Error
 	 */
 	public static function estimate( \WP_REST_Request $request ) {
-		$ids    = array_values( array_filter( array_map( 'intval', (array) $request->get_param( 'posts' ) ), static fn( $id ) => current_user_can( 'edit_post', $id ) ) );
+		$ids = array_map( 'intval', (array) $request->get_param( 'posts' ) );
+		if ( '' !== (string) $request->get_param( 'post_type' ) ) {
+			$ids = array_merge( $ids, Rest_Jobs::sources_of_type( (string) $request->get_param( 'post_type' ) ) );
+		}
+		$ids    = array_values( array_filter( array_unique( $ids ), static fn( $id ) => current_user_can( 'edit_post', $id ) ) );
 		$result = Translator::estimate( $ids, array_map( 'strval', (array) $request->get_param( 'langs' ) ), (string) $request->get_param( 'engine' ) );
 
 		return is_wp_error( $result ) ? $result : new \WP_REST_Response( $result + array( 'posts' => count( $ids ) ) );

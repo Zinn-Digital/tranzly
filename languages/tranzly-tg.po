@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "хомӯш карда шудааст"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Кушодан"
 
@@ -625,8 +626,9 @@ msgstr "Маҳдудиятҳо ва иҷозатҳо захира шуданд."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Ин забон яке аз забонҳои ин сайт нест."
 
@@ -845,8 +847,8 @@ msgstr "Нақшаи ҳадди аққал як забонро ворид кун
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Шмо ҳуқуқи тарҷума кардани ин банду баст надоред."
 
@@ -855,11 +857,66 @@ msgstr "Шмо ҳуқуқи тарҷума кардани ин банду бас
 msgid "This item already has a version in that language."
 msgstr "Ин банбаст аллакай дар он забон як версия дорад."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Он муҳаррики тарҷума дар ин сомона дастнорас аст."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Муҳаррикҳои гуногун барои ҳар як забон, ивазкунии худкор ва маҳдудияти хароҷот хусусиятҳои Tranzly Pro мебошанд."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Ҳар як забон бояд яке аз забоnҳои сайт бошад ва муҳаррики дастрас дошта бошад."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Феҳристи эҳтиётӣ танҳо метавонад муҳаррикҳои дастрасро номбар кунад."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Лимити моҳона маблағе бо доллари US, сифр ё зиёда аз он, барои муҳаррики дастрас аст."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Пешниҳодҳои тарҷума ва лаҳни дилхоҳ барои ҳар як забон хусусиятҳои Tranzly Pro мебошанд. Рӯйхати тарҷуманашавандаҳо ройгон аст."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Логовоти луғат бояд аз рӯи яке аз забонҳои сомона гурӯҳбандӣ карда шаванд."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Оҳанг барои ҳар як забони сомона муқаррар карда мешавад: расмияти пешфарз, бештар ё камтар, баробари дастурҳои иловагӣ."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Қимати %s аз ҷумлаи интихобҳои иҷозадодашуда нест."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Навбати заминавӣ дар ин сайт дастнорас аст."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Вазифаи тарҷума ҳамчун шахсе иҷро мешавад, ки онро оғоз мекунад, аз ин рӯ корбар бояд ворид шуда бошад."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Дар он интихоб ягон чизе нест, ки шумо онро тарҷума кунед."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Ин ашё қисми кори тарҷума нест."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Шмо ҳуқуқ надоред ин тарҷумаро иваз кунед."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Он матнро дар ин ҷо тарҷума кардан ғайр�
 msgid "That media text cannot be translated here."
 msgstr "Он матни расонаӣ дар ин ҷо тарҷума шуда наметавонад."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Тарҷума метавонад нашр шавад ё ҳамчун пешнавис нигоҳ дошта шавад."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Шмо ҳуқуқи нашр кардани ин гуна мундариҷаро надоред."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Ин банбаст аллакай ба ҳамин забон навишта шудааст."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Шмо ҳуқуқ надоред ин тарҷумаро иваз кунед."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ин тарҷума аз ҷониби шахс таҳрир шудааст (ё ворид карда шудааст), аз ин рӯ он муҳофизат карда мешавад. Барои бори дигар тарҷума кардани он, онро қулфкушоӣ кунед."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ягон муҳаррики тарҷума ҳанӯз танзим нашудааст. Калидро барои он дар Tranzly → Engines илова кунед."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Он муҳаррики тарҷума дар ин сомона дастнорас аст."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Он муҳаррики тарҷума ҳанӯз танзим нашудааст: аввал калиди онро илова кунед."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Ҳамин матн дар айни замон аз ҷониби супориши дигар тарҷума шуда истодааст; ин элемент аз ҳамин ҷавоб истифода хоҳад кард."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Ягон муҳаррики тарҷума натавонист ин ҷузъро қабул кунад."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Муҳаррик барои ҳар як қисми ин элемент тарҷумаро барнагардонд. Ҳеҷ чиз тағйир наёфт."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Модели сунъӣ"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s барои ҳар як қисми ин банду баст тарҷума барнагардонд. Ҳеҷ чиз тағйир наёфт."
+msgid "AI model (%1$s %2$s)"
+msgstr "Модели AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s дар айни замон мушкилот дорад. Пас аз лаҳзае дубора кӯшиш кунед ё муҳаррики дигареро истифода баред."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Сомонаи шумо ба %s пайваст шуда натавонист. Боварӣ ҳосил кунед, ки он метавонад пайвастҳои беруниро барқарор кунад, сипас дубора кӯшиш кунед."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s калиди API-и шуморо қабул накард. Калидро дар Tranzly → Муҳаррикон санҷед."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Ҳисоби %s-и шумо лимит ё тавозуни худро истифода бурд. Онро пур кунед ё аз муҳаррики дигар истифода баред."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s хоҳиш кард, ки суръатро суст кунем. Он ба таври худкор бори дигар кӯшиш карда мешавад."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Ин матн барои %s якбора хеле тӯлонӣ аст. Мундариҷаро тақсим кунед ё муҳаррики дигареро истифода баред."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s аз тарҷумаи ин мундариҷа саркашӣ кард. Муҳаррики дигареро санҷед ё онро дастӣ тарҷума кунед."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s ин забоonро тарҷума намекунад. Барои он муҳаррики дигареро интихоб кунед."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Лимити хароҷоти инмоҳа барои %s пур шуд, аз ин рӯ дигар чизе ба он фиристода нашуд. Лимитро дар Tranzly → Engines зиёд кунед ё то моҳи оянда интизор шавед."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Tarjima бо %s аз сабабе номуваффақ шуд, ки Tranzly онро муайян карда натавонист. Тафсилот дар зер оварда шудаанд."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1025,6 +1150,302 @@ msgstr "Версияҳои бета ба насбҳои Pro-и лисензия�
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Танзимотро ҳифз кардан"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Аввалин муҳаррики танзимшуда"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Kalit захира шуд. Он ба таври рамзгузоришуда нигоҳ дошта мешавад ва дигар ҳеҷ гоҳ нишон дода намешавад."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Танзимоти муҳаррик захира карда шуданд."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Луғат захира шуд."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Калитҳои шумо"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly хидматҳои тарҷумаро бо ҳисоби шахсии худ даъват мекунад. Калитҳо дар пойгоҳи додаи шумо бо рамзгузорӣ захира карда мешаванд ва танҳо ба ҳамон хидмате фиристода мешаванд, ки ба он тааллуқ доранд. Калитҳои модели AI дар танзимоти AI муқаррар карда мешаванд."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s Калиди API"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Захира шуд: %s. Барои иваз кардани он калиди навро ворид кунед ё барои нест кардани он майдони холиро захира кунед."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Ягон калид захира нашудааст."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Ноҳияи Azure (барои захираи глобалӣ холӣ гузоред)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Захира кардани калит"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Санҷиши истифодаи DeepL-и ман"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Аз %2$s аломати муқарраршуда %1$s аломат дар ин давраи ҳисобдорӣ истифода шудааст."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Кадом муҳарrik тарҷума мекунад"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Ҳанӯз ягон муҳарриқ танзим нашудааст. Барои оғози тарҷума калидеро дар боло захира кунед (ё модели сунъии зеҳниро танзим намоед)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Муҳаррики пешфарз"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Як муҳаррики гуногун барои ҳар як забон, муроҷиати худкор ва лимити хароҷоти моҳона аз хусусиятҳои Tranzly Pro мебошанд."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Муҳаррик барои %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Мотори пешфарз"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Агар муҳаррик аз кор монад ё ба маҳдудият расад, инҳоро бо ин тартиб санҷед"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Маҳдудиятҳои хароҷоти моҳона"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Вақте ки муҳаррик ба ҳадди ниҳоии худ мерасад, то моҳи оянда ба он чизи дигар фиристода намешавад ва ҳисоботи тарҷумаи ноком сабабро мегӯяд. Барои бе ҳадди ниҳоӣ мондан холӣ гузоред."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (моҳи ҷорӣ сарф шуд: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Захираи ҳарфҳои калон"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Луғат ва калимаҳое, ки ҳеҷ гоҳ тарҷума намешаванд"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Ҳеҷ гоҳ ин калимаҳоро тарҷума накунед (як калима дар як сатр)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Номҳои бренд ва маҳсулот дар ҳама гуна муҳаррик бетағйир боқӣ мемонанд."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Тарҷумаҳои афзалиятнок ва оҳанги мувофиқ барои ҳар як забон хусусиятҳои Tranzly Pro мебошанд."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Тарҷумаҳои афзалиятнок (якто дар ҳар сатр: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Расмият"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Пешфарз"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Формалӣ"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Норасмӣ"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Дастурҳои услуб (шунавандагон, овози бренд)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Захираи луғат"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Кор бо %d тарҷума барои иҷро оғоз шуд. Он дар замина кор мекунад: Шумо метавонед ин саҳифаро пӯшед."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Боз дар навбат истодааст."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Иҷро шуда истодааст"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Анҷом ёфт"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Бекор карда шуд"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Tarҷuma дар пасзамина"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Аvvал дар ҷадвали Engines муҳаррики тарҷумаро насб кунед."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Ҳамаашро тарҷума кунед"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Ба дарун"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Бо"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Мотори ҳар як забон"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Тарҷумаҳоро нашр кунед (дар ғайри сурат онҳо ҳамчун лоиҳа захира карда мешаванд)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Ҳисоб кардани арзиш"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d эҷодиёт, %2$s рамз. Нархи ин муҳаррик пешакӣ маълум нест."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d паём, %2$s аломат: тақрибан $%3$s дар ҳисоби худ."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Tarҷumai tarҷuma kuned"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Корҳо"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Ҳанӯз ягон вазифаи тарҷума вуҷуд надорад."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Вазифаи %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d аз %2$d тарҷума шуд, %3$d қатъ шуд, %4$d гузаронида шуд (муҳофизатшуда ё аллакай бо ҳамин забон)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Иҷрои ин корро қатъ кунед"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Дидани он ки чӣ ноком шуд ва чаро"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Мундариҷа"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Забон"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Чӣ хато кард"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Ислоҳ кардан"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Тафсилот"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Аз нав кӯшиш кардан бо"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Хudди ҳамон муҳаррик"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Аз нав кӯшиш кардан"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Тарҷума бо даст"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Забонҳо ва танзимотҳо"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Муҳаррикҳо"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Вазифаҳои тарҷума"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

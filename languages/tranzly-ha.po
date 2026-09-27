@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "an kashe"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Buɗe"
 
@@ -625,8 +626,9 @@ msgstr "An adoke da izini an adana."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Wannan harshe ba ya cikin harsunan da wannan shafin ke amfani da su."
 
@@ -845,8 +847,8 @@ msgstr "Lisƙa aƙalla harshe ɗaya."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Ba a baka izinin fassara wannan abu ba."
 
@@ -855,11 +857,66 @@ msgstr "Ba a baka izinin fassara wannan abu ba."
 msgid "This item already has a version in that language."
 msgstr "Wannan abu yana da fasali a cikin wannan harshe tuni."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Ba a samun wannan injin fassara a wannan shafin ba."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Injini daban-daban ga kowane harshe, madadin atomatik, da iyakokin kashe kudi sune fasalolin Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Dole kowane harshen ya zama daya daga cikin harsunan shafin, tare da injin da ke akwai."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Jerin madadin na iya sanya suna ne kawai ga injinan da ake da su."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Wani iyaka na wata-wata adadi ne a cikin US dollars, sifili ko fiye da haka, don injin da yake a sama."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Abubuwan da aka fi so na fassara da kuma sautin magana a kowane harshe fasali ne na Tranzly Pro. Jerin abubuwan da kada a fassara kyauta ne."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Dole ne a raba shigarwar ƙamus bisa ga ɗaya daga cikin harsunan shafin."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Ana saita sautin ne ga kowane harshen shafin: tsarin ladabi na asali, sama ko kasa, tare da karin umarni na zabi."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Darajar %s ba ta cikin abubuwan da aka yarda da su ba."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Babu layin baya a wannan shafin."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Ana gudanar da aikin fassara a matsayin mutumin da ya kaddamar da shi, don haka dole ne mai amfani ya shiga tsarin."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Babu abin da aka ba ka izinin fassara a cikin wannan zabi."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Wannan abu ba wani bangare bane na aikin fassara."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Ba a ba ku izinin canza wannan fassarar ba."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Ba za a iya fassara wannan rubutu a nan ba."
 msgid "That media text cannot be translated here."
 msgstr "Ba za a iya fassara rubutun kafofin watsa labarai a nan ba."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Ana iya buga fassarar ko a adana ta a matsayin daftari."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Ba a ba ka izinin buga irin wannan abun ciki ba."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Wannan abu an riga an rubuta shi a wannan harshen."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Ba a ba ku izinin canza wannan fassarar ba."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Wannan fassarar mutum ne ya gyara ta (ko kuma aka shigo da ita), don haka tana da kariya. Buɗe ta don sake fassara ta."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ba a saita injin fassara ba tukuna. Ƙara maɓalli don ɗaya a cikin Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Ba a samun wannan injin fassara a wannan shafin ba."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ba a saita injin fassarar nan ba tukuna: da farko a ƙara maɓallinsa."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Ana fassara rubutun iri ɗaya ta wani aiki yanzu haka; wannan abun zai yi amfani da waccan amsar."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Babu wani injinin fassarar da zai iya ɗaukar wannan abu."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Injiniya bai dawo da fassarar kowane bangare na wannan abu ba. Ba a canza komai ba."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Samfurin AI"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s bai dawo da fassarar kowane bangare na wannan abu ba. Ba a canza komai ba."
+msgid "AI model (%1$s %2$s)"
+msgstr "Samfurin AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s na fuskantar matsaloli a halin yanzu. Sake gwadawa nan ba da jimawa ba, ko kuma ka yi amfani da wani injin daban."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Shafinka bai iya isa ga %s ba. Tabbatar cewa yana iya yin haɗin waje, sannan a sake gwadawa."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s bai karɓi maɓallin API ɗinka ba. Duba maɓallin da ke cikin Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Asusunka na %s ya ƙare ko kuma ya ƙare ma'aunin kuɗinsa. Cika shi da su, ko kuma ka yi amfani da wata injin ɗin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s ya buƙaci mu rage gudu. Za a sake gwadawa ta atomatik."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Wannan rubutu yana da tsayi sosai ga %s a lokaci guda. Raba abubuwan da ke ciki, ko kuma yi amfani da wani inji daban."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s ya ki fassar wannan abun ciki. Gwada wata injin ɗin, ko ka fassara shi da hannu."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s baya fassara wannan harshe. Zaɓi wani injin daban don shi."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "An kai ga iyakar kashe kudi na wannan wata na %s, don haka babu wani abu da aka kara turawa zuwa gare shi. Ƙara iyakar a Tranzly → Engines, ko kuma jira har zuwa wata mai zuwa."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Fassarar tare da %s ta gaza saboda dalilin da Tranzly bai iya ganewa ba. Ga cikakken bayanin a kasa."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Ana ba da sigogin Beta ga shigarwar Pro masu lasisi waɗannan da ke haɗ
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Ajiye saituna"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Injin na farko da aka saita"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "An adana maɓallin. An adana shi a boye kuma ba za a sake nuna shi ba."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "An adana saitunan injin."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "An adana ƙamus ɗin."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Makullan ku"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly na kiran ayyukan fassara ta amfani da asusun ku na kanku. Ana adana maɓallan a rufe a cikin bayanan bayananku kuma ana aika su ne kawai zuwa sabis ɗin da suke ciki. Ana saita maɓallan samfurin AI a cikin saitunan AI."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s Makullin API"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "An adana: %s. Shigar da sabon maɓalli don maye gurbinsa, ko a adana fanko don cire shi."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Ba a adana maɓalli ba."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Yankin Azure (bar shi a fanko don albarkatun duniya)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Adana maɓalli"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Bincika yawan amfani na da DeepL"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "An yi amfani da haruffa %1$s daga cikin %2$s a wannan lokacin na biyan kuɗi."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Wanne injini ne ke fassara"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Ba a saita wani inji ba tukuna. Ajiye madogara a sama (ko a saita samfurin AI) don fara fassara."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Injin tsohuwa (tsohuwar injin)"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Wani injiniya daban ga kowane harshe, madadin mai zuwa ta atomatik, da iyakokin kashe kuɗi na wata-wata fasaloli ne na Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Injin don %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Injin tsohuwar akawa"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Idan wani inji ya gaza ko ya kai iyaka, ka gwada waɗannan na gaba, a cikin wannan tsari"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Iyaka kudaden wata-wata"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Lokacin da injiniya ya kai ga iyakarsa, ba a aika masa da wani abu ba har sai wata mai zuwa kuma rahoton fassarar da ba ta yi nasara ba yana bayanin dalilin. Bar shi babu komai don rashin iyaka."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (wanda aka kashe a wannan wata: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Ajiye manyan haruffa"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Ƙamus da kalmomin da ba a taɓa fassara su ba"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Kada a taba fassara wadannan kalmomi (daya a kowace layi)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Sunayen alama da samfurka suna nan yadda suke, tare da kowane inji."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Fassarorin da aka fi so da kuma salon magana a kowane harshe sune fasalolin Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Fassarar da aka fi so (daya kowace layiya: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Girma da mutunci"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Na asali"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Na gida da waje"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Ba a tsara ba"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Umarnin salo (marubuta, murya mai alama)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Ajiye ƙamus"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "An fara aikin tare da fassara %d da za a yi. Yana gudana a bangon baya: zaka iya rufe wannan shafin."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "An sake saka shi a layin jira."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Yana gudana"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "An kammala"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "An soke"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Fassara a baya"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Sanya injin fassara a cikin shafin Injin da farko."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Fassara kowane"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Zuwa cikin"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Tare da"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Injin kowane harshe da kansa"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Bugaci fassarorin (in ba haka ba za a adana su a matsayin zane-zane)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Kiyasta farashin"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "Rubutattun posts %1$d, haruffa %2$s. Farashin wannan injin ba a san shi a gaba ba."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d wallafe-wallafe, %2$s haruffa: kimanin $%3$s a kan asusunka."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Fara fassarwa"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Ayuka"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Babu ayyukan fassara tukuna."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Aiki %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d na %2$d an fassara, %3$d ya gaza, %4$d an tsallake (an kiyaye ko riga a cikin wannan harshen)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Dakatar da wannan aikin"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Ga abin da ya gaza da dalili"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Abubuwan ciki"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Harshe"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Abin da ya lalace"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Gyara shi"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Bayani"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Sake gwadawa tare da"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Injin ɗaya"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Maimaita"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Fassara da hannu"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Harsuna da saituna"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Injinuna"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Ayyukan fassara"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

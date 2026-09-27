@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Schema {
 
 	/** Bump when a table definition below changes; dbDelta() applies the difference. */
-	public const VERSION = '1';
+	public const VERSION = '2';
 
 	/** Option holding the installed schema version. */
 	public const OPTION = 'tranzly_schema_version';
@@ -53,7 +53,7 @@ final class Schema {
 	/**
 	 * The table names for the current site (multisite: each site has its own).
 	 *
-	 * @return array{groups: string, relations: string, staging: string}
+	 * @return array{groups: string, relations: string, staging: string, jobs: string, items: string, memory: string}
 	 */
 	public static function tables(): array {
 		global $wpdb;
@@ -62,6 +62,9 @@ final class Schema {
 			'groups'    => $wpdb->prefix . 'tranzly_groups',
 			'relations' => $wpdb->prefix . 'tranzly_relations',
 			'staging'   => $wpdb->prefix . 'tranzly_legacy_staging',
+			'jobs'      => $wpdb->prefix . 'tranzly_jobs',
+			'items'     => $wpdb->prefix . 'tranzly_job_items',
+			'memory'    => $wpdb->prefix . 'tranzly_memory',
 		);
 	}
 
@@ -115,6 +118,59 @@ final class Schema {
   lang varchar(35) NOT NULL DEFAULT '',
   peers longtext NOT NULL,
   PRIMARY KEY  (post_id)
+) {$charset};"
+		);
+
+		// v2 (T2): background translation jobs, one row per (object, language) to do, and the
+		// translation memory. `claim` + `lease_until` let several workers share a job without
+		// doing an item twice, and let a worker killed mid-item hand it back after its lease.
+		dbDelta(
+			"CREATE TABLE {$t['jobs']} (
+  id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  status varchar(20) NOT NULL DEFAULT 'queued',
+  engine varchar(40) NOT NULL DEFAULT '',
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_gmt datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  finished_gmt datetime DEFAULT NULL,
+  options longtext NOT NULL,
+  PRIMARY KEY  (id),
+  KEY status (status)
+) {$charset};"
+		);
+		dbDelta(
+			"CREATE TABLE {$t['items']} (
+  id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  job_id bigint(20) unsigned NOT NULL,
+  object_type varchar(20) NOT NULL DEFAULT 'post',
+  object_id bigint(20) unsigned NOT NULL,
+  lang varchar(35) NOT NULL,
+  status varchar(20) NOT NULL DEFAULT 'queued',
+  attempts smallint(5) unsigned NOT NULL DEFAULT 0,
+  engine varchar(40) NOT NULL DEFAULT '',
+  claim char(32) NOT NULL DEFAULT '',
+  lease_until datetime DEFAULT NULL,
+  engine_used varchar(40) NOT NULL DEFAULT '',
+  result_id bigint(20) unsigned NOT NULL DEFAULT 0,
+  error_code varchar(60) NOT NULL DEFAULT '',
+  error_message text NOT NULL,
+  updated_gmt datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  UNIQUE KEY one_item (job_id,object_type,object_id,lang),
+  KEY work (job_id,status,lease_until),
+  KEY claim (claim)
+) {$charset};"
+		);
+		dbDelta(
+			"CREATE TABLE {$t['memory']} (
+  hash char(40) NOT NULL,
+  source_lang varchar(35) NOT NULL,
+  target_lang varchar(35) NOT NULL,
+  translation longtext NOT NULL,
+  engine varchar(40) NOT NULL DEFAULT '',
+  state varchar(10) NOT NULL DEFAULT 'ready',
+  reserved_until datetime DEFAULT NULL,
+  created_gmt datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (hash)
 ) {$charset};"
 		);
 

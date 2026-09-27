@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-26T13:56:07+00:00",
+    "translation-revision-date": "2026-09-26T14:03:23+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -12,6 +12,9 @@
             },
             "Remove": [
                 "Sil"
+            ],
+            "Open": [
+                "A\u00e7"
             ],
             "About": [
                 "Haqq\u0131nda"
@@ -87,6 +90,213 @@
             ],
             "Save settings": [
                 "Parametrl\u0259ri yadda saxla"
+            ],
+            "First engine that is set up": [
+                "Qura\u015fd\u0131r\u0131lm\u0131\u015f ilk m\u00fch\u0259rrik"
+            ],
+            "Key saved. It is stored encrypted and never shown again.": [
+                "A\u00e7ar yadda saxland\u0131. O, \u015fifr\u0259l\u0259nmi\u015f \u015f\u0259kild\u0259 saxlan\u0131l\u0131r v\u0259 bir daha he\u00e7 vaxt g\u00f6st\u0259rilmir."
+            ],
+            "Engine settings saved.": [
+                "M\u00fch\u0259rrik parametrl\u0259ri yadda saxlan\u0131ld\u0131."
+            ],
+            "Glossary saved.": [
+                "L\u00fc\u011f\u0259t yadda saxlan\u0131ld\u0131."
+            ],
+            "Your keys": [
+                "Sizin a\u00e7arlar\u0131n\u0131z"
+            ],
+            "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings.": [
+                "Tranzly t\u0259rc\u00fcm\u0259 xidm\u0259tl\u0259rini sizin \u00f6z hesab\u0131n\u0131z vasit\u0259sil\u0259 \u00e7a\u011f\u0131r\u0131r. A\u00e7ar s\u00f6zl\u0259r veril\u0259nl\u0259r bazan\u0131zda \u015fifr\u0259l\u0259nmi\u015f \u015f\u0259kild\u0259 saxlan\u0131l\u0131r v\u0259 yaln\u0131z aid olduqlar\u0131 xidm\u0259t\u0259 g\u00f6nd\u0259rilir. S\u00fcni intellekt modelinin a\u00e7arlar\u0131 S\u00fcni intellekt parametrl\u0259rind\u0259 t\u0259yin edilir."
+            ],
+            "%s API key": [
+                "%s API a\u00e7ar\u0131"
+            ],
+            "Saved: %s. Enter a new key to replace it, or save an empty field to remove it.": [
+                "Yadda saxlan\u0131ld\u0131: %s. Onu \u0259v\u0259z etm\u0259k \u00fc\u00e7\u00fcn yeni a\u00e7ar daxil edin v\u0259 ya onu silm\u0259k \u00fc\u00e7\u00fcn sah\u0259ni bo\u015f saxlay\u0131b yadda saxlay\u0131n."
+            ],
+            "No key saved.": [
+                "He\u00e7 bir a\u00e7ar saxlan\u0131lmay\u0131b."
+            ],
+            "Azure region (leave empty for a global resource)": [
+                "Azure region (qlobal resurs \u00fc\u00e7\u00fcn bo\u015f burax\u0131n)"
+            ],
+            "Save key": [
+                "A\u00e7ar\u0131 saxla"
+            ],
+            "Check my DeepL usage": [
+                "DeepL istifademi yoxla"
+            ],
+            "%1$s of %2$s characters used this billing period.": [
+                "Bu hesablama d\u00f6vr\u00fcnd\u0259 %2$s simvoldan %1$s simvol istifad\u0259 olundu."
+            ],
+            "Which engine translates": [
+                "Hans\u0131 m\u00fch\u0259rrik t\u0259rc\u00fcm\u0259 edir"
+            ],
+            "No engine is set up yet. Save a key above (or set up an AI model) to start translating.": [
+                "H\u0259l\u0259 he\u00e7 bir m\u00fch\u0259rrik qurulmay\u0131b. T\u0259rc\u00fcm\u0259y\u0259 ba\u015flamaq \u00fc\u00e7\u00fcn yuxar\u0131da a\u00e7ar yadda saxlay\u0131n (v\u0259 ya S\u00fcni \u0130ntellekt modeli qura\u015fd\u0131r\u0131n)."
+            ],
+            "Default engine": [
+                "Standart m\u00fch\u0259rrik"
+            ],
+            "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
+                "H\u0259r dil \u00fc\u00e7\u00fcn f\u0259rqli m\u00fch\u0259rrik, avtomatik ehtiyat ke\u00e7id v\u0259 ayl\u0131q x\u0259rc limitl\u0259ri Tranzly Pro x\u00fcsusiyy\u0259tl\u0259ridir."
+            ],
+            "Engine for %s": [
+                "%s \u00fc\u00e7\u00fcn m\u00fch\u0259rrik"
+            ],
+            "The default engine": [
+                "Defolt m\u00fch\u0259rrik"
+            ],
+            "If an engine fails or reaches a limit, try these next, in this order": [
+                "\u018fg\u0259r m\u00fch\u0259rrik s\u0131radan \u00e7\u0131xarsa v\u0259 ya h\u00fcduda \u00e7atsa, bu ard\u0131c\u0131ll\u0131qla sonrak\u0131 se\u00e7iml\u0259ri s\u0131nay\u0131n"
+            ],
+            "Monthly spending caps": [
+                "Ayl\u0131q x\u0259rc limitl\u0259ri"
+            ],
+            "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap.": [
+                "M\u00fch\u0259rrik \u00f6z limitin\u0259 \u00e7atd\u0131qda, g\u0259l\u0259n aya q\u0259d\u0259r ona he\u00e7 n\u0259 g\u00f6nd\u0259rilmir v\u0259 u\u011fursuz t\u0259rc\u00fcm\u0259 hesabat\u0131 bunun s\u0259b\u0259bini g\u00f6st\u0259rir. Limit t\u0259yin etm\u0259m\u0259k \u00fc\u00e7\u00fcn bo\u015f burax\u0131n."
+            ],
+            "%1$s (spent this month: $%2$s)": [
+                "%1$s (bu ay x\u0259rcl\u0259n\u0259n: $%2$s)"
+            ],
+            "Save caps": [
+                "Ba\u015fl\u0131qlar\u0131n yadda saxlan\u0131lmas\u0131"
+            ],
+            "Glossary and words never translated": [
+                "L\u00fc\u011f\u0259t v\u0259 he\u00e7 vaxt t\u0259rc\u00fcm\u0259 olunmayan s\u00f6zl\u0259r"
+            ],
+            "Never translate these words (one per line)": [
+                "Bu s\u00f6zl\u0259ri he\u00e7 vaxt t\u0259rc\u00fcm\u0259 etm\u0259yin (h\u0259r s\u0259tird\u0259 bir s\u00f6z)"
+            ],
+            "Brand and product names stay exactly as they are, with every engine.": [
+                "Brend v\u0259 m\u0259hsul adlar\u0131 h\u0259r bir m\u00fch\u0259rrikd\u0259 oldu\u011fu kimi qal\u0131r."
+            ],
+            "Preferred translations and tone per language are Tranzly Pro features.": [
+                "Tranzly Pro x\u00fcsusiyy\u0259tl\u0259ridir: \u00fcst\u00fcn tutulan t\u0259rc\u00fcm\u0259l\u0259r v\u0259 ton."
+            ],
+            "Preferred translations (one per line: term = translation)": [
+                "\u00dcst\u00fcn tutulan t\u0259rc\u00fcm\u0259l\u0259r (h\u0259r s\u0259tird\u0259 bir: term = translation)"
+            ],
+            "Formality": [
+                "R\u0259smiyy\u0259t"
+            ],
+            "Default": [
+                "Varsay\u0131lan"
+            ],
+            "Formal": [
+                "R\u0259smi"
+            ],
+            "Informal": [
+                "Qeyri-r\u0259smi"
+            ],
+            "Style instructions (audience, brand voice)": [
+                "\u00dcslub t\u0259limatlar\u0131 (auditoriya, brend s\u0259si)"
+            ],
+            "Save glossary": [
+                "Glossari\u0307ni\u0307 yadda saxla"
+            ],
+            "Job started with %d translations to do. It runs in the background: you can close this page.": [
+                "\u0130\u015f icra edilm\u0259li olan %d t\u0259rc\u00fcm\u0259 il\u0259 ba\u015flad\u0131. O, fonda i\u015fl\u0259yir: bu s\u0259hif\u0259ni ba\u011flaya bil\u0259rsiniz."
+            ],
+            "Queued again.": [
+                "Yenid\u0259n n\u00f6vb\u0259d\u0259dir."
+            ],
+            "Running": [
+                "\u0130\u015fl\u0259yir"
+            ],
+            "Finished": [
+                "Tamamland\u0131"
+            ],
+            "Cancelled": [
+                "L\u0259\u011fv edilib"
+            ],
+            "Translate in the background": [
+                "Arxa planda t\u0259rc\u00fcm\u0259 et"
+            ],
+            "Set up a translation engine in the Engines tab first.": [
+                "\u018fvv\u0259lc\u0259 M\u00fch\u0259rrikl\u0259r s\u0259hif\u0259sind\u0259 t\u0259rc\u00fcm\u0259 m\u00fch\u0259rriki qura\u015fd\u0131r\u0131n."
+            ],
+            "Translate every": [
+                "H\u0259r birini t\u0259rc\u00fcm\u0259 et"
+            ],
+            "Into": [
+                "Daxil et"
+            ],
+            "With": [
+                "\u0130l\u0259"
+            ],
+            "Each language\u2019s own engine": [
+                "H\u0259r dilin \u00f6z m\u00fch\u0259rriki"
+            ],
+            "Publish the translations (otherwise they are saved as drafts)": [
+                "T\u0259rc\u00fcm\u0259l\u0259ri d\u0259rc edin (\u0259ks halda qaralama kimi saxlan\u0131l\u0131r)"
+            ],
+            "Estimate the cost": [
+                "X\u0259rci hesablay\u0131n"
+            ],
+            "%1$d posts, %2$s characters. The price for this engine is not known in advance.": [
+                "%1$d yaz\u0131\u015fma, %2$s simvol. Bu m\u00fch\u0259rrikin qiym\u0259ti \u0259vv\u0259lc\u0259d\u0259n m\u0259lum deyil."
+            ],
+            "%1$d posts, %2$s characters: about $%3$s on your own account.": [
+                "%1$d yaz\u0131, %2$s simvol: \u00f6z hesab\u0131n\u0131zda t\u0259xmin\u0259n $%3$s."
+            ],
+            "Start translating": [
+                "T\u0259rc\u00fcm\u0259y\u0259 ba\u015fla"
+            ],
+            "Jobs": [
+                "Tap\u015f\u0131r\u0131qlar"
+            ],
+            "No translation jobs yet.": [
+                "H\u0259l\u0259 he\u00e7 bir t\u0259rc\u00fcm\u0259 tap\u015f\u0131r\u0131\u011f\u0131 yoxdur."
+            ],
+            "Job %1$d \u2014 %2$s": [
+                "\u0130\u015f %1$d \u2014 %2$s"
+            ],
+            "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)": [
+                "%1$d \/ %2$d t\u0259rc\u00fcm\u0259 edildi, %3$d u\u011fursuz oldu, %4$d \u00f6t\u00fcr\u00fcld\u00fc (qorunur v\u0259 ya art\u0131q h\u0259min dild\u0259dir)"
+            ],
+            "Stop this job": [
+                "Bu i\u015fi dayand\u0131r"
+            ],
+            "See what failed and why": [
+                "N\u0259yin u\u011fursuz oldu\u011funu v\u0259 s\u0259b\u0259bini g\u00f6r\u00fcn"
+            ],
+            "Content": [
+                "M\u0259zmun"
+            ],
+            "Language": [
+                "Dil"
+            ],
+            "What went wrong": [
+                "N\u0259 s\u0259hv getdi"
+            ],
+            "Fix it": [
+                "D\u00fcz\u0259lt"
+            ],
+            "Details": [
+                "T\u0259f\u0259rr\u00fcatlar"
+            ],
+            "Retry with": [
+                "yenid\u0259n c\u0259hd edin"
+            ],
+            "The same engine": [
+                "Eyni m\u00fch\u0259rrik"
+            ],
+            "Retry": [
+                "Yenid\u0259n c\u0259hd et"
+            ],
+            "Translate by hand": [
+                "\u018fll\u0259 t\u0259rc\u00fcm\u0259 et"
+            ],
+            "Languages and settings": [
+                "Dill\u0259r v\u0259 parametrl\u0259r"
+            ],
+            "Engines": [
+                "M\u00fch\u0259rrikl\u0259r"
+            ],
+            "Translation jobs": [
+                "T\u0259rc\u00fcm\u0259 tap\u015f\u0131r\u0131qlar\u0131"
             ]
         }
     }

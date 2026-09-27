@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "ပိတ်ထားသည်"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "ဖွင့်ရန်"
 
@@ -625,8 +626,9 @@ msgstr "ကန့်သတ်ချက်များနှင့် ခွင�
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "ထိုဘာသာစကားသည် ဤဆိုက်၏ ဘာသာစကားများထဲတွင် မပါဝင်ပါ။"
 
@@ -845,8 +847,8 @@ msgstr "အနည်းဆုံး ဘာသာစကား တစ်ခုက�
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "ဤပစ္စည်းကို ဘာသာပြန်ဆိုခွင့် မရှိပါ။"
 
@@ -855,11 +857,66 @@ msgstr "ဤပစ္စည်းကို ဘာသာပြန်ဆိုခ�
 msgid "This item already has a version in that language."
 msgstr "ဤပစ္စည်းတွင် ထိုဘာသာစကားဖြင့် ဗားရှင်းတစ်ခုပြီးသား ရှိနှင့်ပြီးဖြစ်သည်။"
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "ဤဆိုဒ်တွင် ယင်းဘာသာပြန်အင်ဂျင်ကို မရနိုင်ပါ။"
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "ဘာသာစကားတစ်ခုလျှင် အင်ဂျင်အမျိုးမျိုး၊ အလိုအလျောက် အရန်နှင့် ကုန်ကျငွေ ကန့်သတ်ချက်များမှာ Tranzly Pro ၏ အင်္ဂါရပ်များ ဖြစ်ကြသည်။"
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "ဘာသာစကားတစ်ခုစီသည် ရနိုင်သော အင်ဂျင်တစ်ခုပါရှိသည့် ဆိုက်၏ ဘာသာစကားများထဲမှ တစ်ခု ဖြစ်ရပါမည်။"
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "အရန်စာရင်းတွင် ရရှိနိုင်သော အင်ဂျင်များကိုသာ ဖော်ပြရပါမည်။"
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "လစဉ် ကန့်သတ်ချက် ဆိုသည်မှာ ရရှိနိုင်သော အင်ဂျင်တစ်ခုအတွက် US ဒေါ်လာဖြင့် သုည သို့မဟုတ် ထို့ထက်ပိုသော ပမာဏတစ်ခု ဖြစ်သည်။"
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "ဘာသာစကားအလိုက် နှစ်သက်ဖွယ် ဘာသာပြန်ဆိုချက်များနှင့် လေသံမှာ Tranzly Pro ၏ လုပ်ဆောင်ချက်များ ဖြစ်ပါသည်။ ဘာသာပြန်ရန်မလိုသော စာရင်းမှာ အခမဲ့ ဖြစ်ပါသည်။"
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "ဝေါဟာရ အဘိဓာန် သွင်းချက်များကို ဆိုက်၏ ဘာသာစကားတစ်ခုခုအလိုက် အုပ်စုဖွဲ့ရပါမည်။"
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "သံကို ဆိုက်ဘာသာစကားအလိုက် သတ်မှတ်သည်- ပုံစံတကျဖြစ်မှု ပုံသေ၊ အများအပြား သို့မဟုတ် အနည်းငယ်၊ ထို့ပြင် ရွေးချယ်နိုင်သော ညွှန်ကြားချက်များ။"
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s အတွက် တန်ဖိုးသည် ခွင့်ပြုထားသော ရွေးချယ်မှုများထဲတွင် မပါဝင်ပါ။"
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "ဤဆိုက်တွင် နောက်ခံ တန်းစီစနစ်ကို အသုံးမပြုနိုင်ပါ။"
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "ဘာသာပြန်ဆိုမှုအလုပ်တစ်ခုကို ၎င်းကိုစတင်သူ၏ အကောင့်ဖြင့် လုပ်ဆောင်သောကြောင့် အသုံးပြုသူတစ်ဦးသည် အကောင့်ဝင်ထားရပါမည်။"
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "ထိုရွေးချယ်မှုတွင် သင်ဘာသာပြန်ဆိုခွင့်ရှိသည့် မည်သည့်အရာမျှ မရှိပါ။"
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "ထိုပစ္စည်းသည် ဘာသာပြန်ဆိုရေး အလုပ်တစ်ခု၏ အစိတ်အပိုင်း မဟုတ်ပါ။"
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "ထိုဘာသာပြန်ချက်ကို ပြောင်းလဲခွင့်မရှိပါ။"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "ထိုစာသားကို ဤနေရာတွင် ဘာသ�
 msgid "That media text cannot be translated here."
 msgstr "ထိုမီဒီယာစာသားကို ဤနေရာတွင် ဘာသာပြန်၍မရပါ။"
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "ဘာသာပြန်ချက်တစ်ခုကို ထုတ်ဝေနိုင်သည် သို့မဟုတ် မူကြမ်းအဖြစ် သိမ်းဆည်းထားနိုင်သည်။"
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "ဤကဲ့သို့သော အကြောင်းအရာမျိုးကို သင် ထုတ်ဝေခွင့်မရှိပါ။"
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "ဤပစ္စည်းကို ထိုဘာသာစကားဖြင့် ပြီးသား ရေးသားထားပြီးဖြစ်သည်။"
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "ထိုဘာသာပြန်ချက်ကို ပြောင်းလဲခွင့်မရှိပါ။"
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ဤဘာသာပြန်ချက်ကို လူကိုယ်တိုင် ပြင်ဆင်ထားပြီးဖြစ်သဖြင့် (သို့မဟုတ် တင်သွင်းထားသဖြင့်) ၎င်းကို ကာကွယ်ထားသည်။ ၎င်းကို ထပ်မံဘာသာပြန်ရန်အတွက် သော့ဖွင့်ပါ။"
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ဘာသာပြန်ဆိုရေး အင်ဂျင်ကို ယခုထိ မသတ်မှတ်ရသေးပါ။ Tranzly → Engines တွင် တစ်ခုအတွက် သော့ချက်တစ်ခုကို ထည့်ပါ။"
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "ဤဆိုဒ်တွင် ယင်းဘာသာပြန်အင်ဂျင်ကို မရနိုင်ပါ။"
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ထိုဘာသာပြန်စက်ကို မသတ်မှတ်ရသေးပါ- ၎င်း၏သော့ကို ဦးစွာထည့်ပါ။"
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "ယခုအချိန်တွင် တူညီသောစာသားကို အခြားအလုပ်တစ်ခုဖြင့် ဘာသာစကားပြန်ဆိုနေပြီး၊ ဤအရာအတွက် ယင်းအဖြေကို အသုံးပြုမည်ဖြစ်ပါသည်။"
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "ဘာသာပြန်ဆိုသည့်အင်ဂျင် မည်သည်မျှ ဤပစ္စည်းကို မယူဆောင်နိုင်ပါ။"
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "အင်ဂျင်သည် ဤအရာ၏ အစိတ်အပိုင်းတိုင်းအတွက် ဘာသာပြန်ဆိုမှုကို မပြန်ပေးခဲ့ပါ။ ဘာသာပြန်ဆိုမှု တစ်စုံတစ်ရာ ပြောင်းလဲခဲ့ခြင်း မရှိပါ။"
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "AI မော်ဒယ်"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s သည် ဤအရာ၏ အစိတ်အပိုင်းတိုင်းအတွက် ဘာသာပြန်ဆိုချက်ကို မပြန်ဆိုခဲ့ပါ။ မည်သည့်အရာမျှ ပြောင်းလဲခြင်း မရှိပါ။"
+msgid "AI model (%1$s %2$s)"
+msgstr "AI မော်ဒယ် (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s တွင် ယခုအခါ ပြဿနာများ ရှိနေပါသည်။ ခဏနေမှ ထပ်ကြိုးစားပါ၊ သို့မဟုတ် အခြားအင်ဂျင်တစ်ခုကို အသုံးပြုပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "သင့်ဆိုဒ်သည် %s သို့ မချိတ်ဆက်နိုင်ပါ။ ၎င်းသည် ပြင်ပသို့ ချိတ်ဆက်မှုများ ပြုလုပ်နိုင်ကြောင်း စစ်ဆေးပြီးနောက် ထပ်မံကြိုးစားပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s သည် သင်၏ API သော့ချက်ကို လက်မခံပါ။ Tranzly → Engines တွင် သော့ချက်ကို စစ်ဆေးပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "သင့်၏ %s အကောင့်သည် ၎င်း၏ ခွဲတမ်း သို့မဟုတ် လက်ကျန်ငွေ ကုန်ဆုံးသွားပါပြီ။ ၎င်းတို့ထံတွင် ငွေဖြည့်ပါ သို့မဟုတ် အခြား အင်ဂျင်တစ်ခုကို အသုံးပြုပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s က အရှိန်လျှော့ချပေးရန် တောင်းဆိုထားပါသည်။ ၎င်းကို အလိုအလျောက် ထပ်မံကြိုးစားပါမည်။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "ဤစာသားသည် %s အတွက် တစ်ကြိမ်တည်းတွင် ရှည်လွန်းနေပါသည်။ အကြောင်းအရာကို ပိုင်းခြားပါ သို့မဟုတ် အခြားအင်ဂျင်တစ်ခုကို အသုံးပြုပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s သည် ဤအကြောင်းအရာကို ဘာသာပြန်ဆိုရန် ငြင်းဆိုခဲ့သည်။ အခြားအင်ဂျင်တစ်ခုကို စမ်းကြည့်ပါ သို့မဟုတ် လက်ဖြင့် ဘာသာပြန်ပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s သည် ဤဘာသာစကားကို ဘာသာမပြန်ဆိုနိုင်ပါ။ ၎င်းအတွက် အခြားအင်ဂျင်တစ်ခုကို ရွေးချယ်ပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s အတွက် ယခုလ သုံးစွဲမှု ကန့်သတ်ချက် ပြည့်သွားပြီဖြစ်သောကြောင့် နောက်ထပ် မပို့တော့ပါ။ Tranzly → Engines တွင် ကန့်သတ်ချက်ကို တိုးပါ သို့မဟုတ် နောက်လအထိ စောင့်ပါ။"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Tranzly က အကြောင်းရင်းကို မသိရှိနိုင်သောကြောင့် %s ဖြင့် ဘာသာပြန်ဆိုမှု မအောင်မြင်ပါ။ အသေးစိတ်အချက်အလက်များမှာ အောက်ပါအတိုင်း ဖြစ်ပါသည်။"
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "ဘီတာ ဗားရှင်းများကို ၎င်း�
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "ဆက်တင်များကို သိမ်းဆည်းရန်"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "ပထမဦးဆုံး သတ်မှတ်ထားသော အင်ဂျင်"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "သော့ကို သိမ်းဆည်းပြီးပါပြီ။ ၎င်းကို ကုဒ်ဝှက်ထားရှိမည်ဖြစ်ပြီး နောက်တစ်ကြိမ် ပြန်မပြပါ။"
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "အင်ဂျင် ဆက်တင်များကို သိမ်းဆည်းပြီးပါပြီ။"
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "ဝေါဟာရ အဘိဓာန်ကို သိမ်းဆည်းပြီးပါပြီ။"
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "သင့်၏ သော့များ"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly သည် သင်၏ကိုယ်ပိုင်အကောင့်ဖြင့် ဘာသာပြန်ဆိုရေးဝန်ဆောင်မှုများကို ခေါ်ဆိုပါသည်။ သော့ချက်များကို သင့်ဒေတာဘေ့စ်တွင် ကုဒ်ဝှက်ထားရှိပြီး ၎င်းတို့သက်ဆိုင်ရာ ဝန်ဆောင်မှုသို့သာ ပေးပို့ပါသည်။ AI မော်ဒယ်သော့ချက်များကို AI ဆက်တင်များတွင် သတ်မှတ်ထားသည်။"
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API သော့ချက်"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "သိမ်းဆည်းပြီးပါပြီ - %s။ ၎င်းကို အစားထိုးရန် သော့ချက်အသစ်တစ်ခုကို ထည့်ပါ၊ သို့မဟုတ် ၎င်းကို ဖယ်ရှားရန် ကွက်လပ်ကို သိမ်းဆည်းပါ။"
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "သော့ချက် သိမ်းဆည်းထားခြင်း မရှိပါ။"
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure ဒေသ (ကမ္ဘာလုံးဆိုင်ရာ အရင်းအမြစ်အတွက် အလွတ်ထားပါ)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "သော့ချက်ကို သိမ်းဆည်းရန်"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "ကျွန်ုပ်၏ DeepL အသုံးပြုမှုကို စစ်ဆေးပါ"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "ယခု ငွေတောင်းခံသည့်ကာလအတွက် စာလုံးရေ %2$s တွင် %1$s ကို အသုံးပြုထားသည်။"
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "မည်သည့် အင်ဂျင်က ဘာသာပြန်သည်"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "အင်ဂျင်ကို ယခုထိ မသတ်မှတ်ရသေးပါ။ ဘာသာပြန်ဆိုခြင်း စတင်ရန် အထက်ပါ သော့ချက်ကို သိမ်းဆည်းပါ (သို့မဟုတ် AI မော်ဒယ်တစ်ခုကို သတ်မှတ်ပါ)။"
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "မူလအင်ဂျင်"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "ဘာသာစကားတစ်ခုလျှင် အင်ဂျင်တစ်မျိုးစီ၊ အလိုအလျောက် အရန်ပြောင်းလဲခြင်းနှင့် လစဉ်သုံးစွဲမှု ကန့်သတ်ချက်များမှာ Tranzly Pro ၏ လုပ်ဆောင်ချက်များ ဖြစ်သည်။"
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "%s အတွက် အင်ဂျင်"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "မူလအင်ဂျင်"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "အင်ဂျင် ချို့ယွင်းသွားလျှင် သို့မဟုတ် ကန့်သတ်ချက်သို့ ရောက်ရှိသွားလျှင် ဤအရာများကို ဤအစဉ်အတိုင်း ဆက်လက်စမ်းသပ်ပါ"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "လစဉ်သုံးစွဲမှု ကန့်သတ်ချက်များ"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "အင်ဂျင်တစ်ခုသည် ၎င်း၏ ကန့်သတ်ချက်သို့ ရောက်ရှိသွားပါက လာမည့်လအထိ ၎င်းထံ သို့ မည်သည်ကိုမျှ ထပ်မံပေးပို့မည် မဟုတ်ဘဲ၊ စာဘာသာပြန်ဆိုမှု မအောင်မြင်ကြောင်း အစီရင်ခံစာတွင် အကြောင်းရင်းကို ဖော်ပြထားမည် ဖြစ်သည်။ ကန့်သတ်ချက် မထားရှိလိုပါက ဗလာအတိုင်း ထားခဲ့ပါ။"
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ယခုလတွင် သုံးစွဲခဲ့သည်မှာ: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "စာလုံးအကြီးများကို သိမ်းဆည်းရန်"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "ဝေါဟာရများနှင့် ဘယ်တော့မှ ဘာသာမပြန်ဆိုသော စကားလုံးများ"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "ဤစကားလုံးများကို ဘယ်သောအခါမှ မဘာသာပြန်ပါ (တစ်ကြောင်းလျှင် တစ်လုံးစီ)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "ကုန်အမှတ်တံဆိပ်နှင့် ထုတ်ကုန်အမည်များသည် အင်ဂျင်တိုင်းတွင် ရှိသည့်အတိုင်း အတိအကျ ဆက်လက်တည်ရှိနေမည်ဖြစ်သည်။"
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "ဘာသာစကားတစ်ခုချင်းစီအလိုက် သီးသန့်နှစ်သက်သည့် ဘာသာပြန်များနှင့် လေသံတို့ကို သတ်မှတ်ခြင်းမှာ Tranzly Pro ၏ လုပ်ဆောင်ချက်များ ဖြစ်ပါသည်။"
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "အကြိုက်ဆုံး ဘာသာပြန်ဆိုချက်များ (တစ်ကြောင်းလျှင် တစ်ခုစီ- ဝေါဟာရ = ဘာသာပြန်ဆိုချက်)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "ပုံစံကျမှု"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "ပုံသေ"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "တရားဝင်"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "တရားဝင်မဟုတ်သော"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "စတိုင် ညွှန်ကြားချက်များ (ပရိသတ်၊ အမှတ်တံဆိပ် အသံ)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "ဝေါဟာရ အဘိဓာန်ကို သိမ်းဆည်းရန်"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "ဘာသာပြန်ဆိုရန် လုပ်ဆောင်ချက် %d ခုဖြင့် အလုပ် စတင်ခဲ့ပါပြီ။ ၎င်းကို နောက်ခံတွင် လုပ်ဆောင်နေပါသည် - ဤစာမျက်နှာကို ပိတ်နိုင်ပါသည်။"
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "ထပ်မံတန်းစီထားပါသည်။"
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "လည်ပတ်နေသည်"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "ပြီးစီးပါပြီ"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "ဖျက်သိမ်းပြီး"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "နောက်ခံတွင် ဘာသာပြန်ပါ"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "ပထမဦးစွာ Engines တဘ်တွင် ဘာသာပြန်အင်ဂျင်တစ်ခုကို သတ်မှတ်ပါ။"
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "အားလုံးကို ဘာသာပြန်ပါ"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "သို့"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "နှင့်အတူ"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "ဘာသာစကားတစ်ခုချင်းစီ၏ ကိုယ်ပိုင်အင်ဂျင်"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "ဘာသာပြန်ဆိုချက်များကို ထုတ်ဝေပါ (မဟုတ်ပါက ၎င်းတို့ကို မူကြမ်းများအဖြစ် သိမ်းဆည်းထားမည်ဖြစ်သည်)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "ကုန်ကျစရိတ်ကို ခန့်မှန်းရန်"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d ခုသော ပို့စ်များ၊ %2$s အက္ခရာများ။ ဤအင်ဂျင်အတွက် စျေးနှုန်းကို ကြိုတင်မသိရပါ။"
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d ခုသော ပို့စ်များ၊ %2$s လုံးရေ - သင့်ကိုယ်ပိုင် အကောင့်တွင် $%3$s ခန့်။"
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "ဘာသာပြန်ခြင်း စတင်ရန်"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "အလုပ်များ"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "ဘာသာပြန်ဆိုရန် ဘာသာပြန်အလုပ်များ မရှိသေးပါ။"
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "အလုပ် %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d/%2$d ဘာသာပြန်ပြီး၊ %3$d ခု မအောင်မြင်ပါ၊ %4$d ခု ကျော်သွားပါပြီ (ကာကွယ်ထားသည် သို့မဟုတ် ထိုဘာသာစကားဖြင့် ရှိနှင့်ပြီးပါသည်)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "ဤအလုပ်ကို ရပ်ရန်"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "ဘာပျက်စီးသွားပြီး အဘယ်ကြောင့်ဖြစ်သည်ကို ကြည့်ပါ"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "အကြောင်းအရာ"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "ဘာသာစကား"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "ဘာမှားသွားသလဲ"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "ပြင်ဆင်ပါ"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "အသေးစိတ်အချက်အလက်များ"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "ဖြင့် ထပ်ကြိုးစားပါ"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "တူညီသော အင်ဂျင်"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "ထပ်ကြိုးစားရန်"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "လက်ဖြင့် ဘာသာပြန်ရန်"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "ဘာသာစကားများနှင့် ဆက်တင်များ"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "အင်ဂျင်များ"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "ဘာသာပြန်လုပ်ငန်းများ"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "Đã tắt"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Mở"
 
@@ -625,8 +626,9 @@ msgstr "Đã lưu giới hạn và quyền."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Ngôn ngữ đó không phải là một trong các ngôn ngữ của trang web này."
 
@@ -845,8 +847,8 @@ msgstr "Liệt kê ít nhất một ngôn ngữ."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Bạn không được phép dịch mục này."
 
@@ -855,11 +857,66 @@ msgstr "Bạn không được phép dịch mục này."
 msgid "This item already has a version in that language."
 msgstr "Mục này đã có phiên bản bằng ngôn ngữ đó."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Công cụ dịch đó không khả dụng trên trang web này."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Các công cụ dịch khác nhau cho từng ngôn ngữ, tính năng dự phòng tự động và giới hạn chi phí là các tính năng của Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Mỗi ngôn ngữ phải là một trong các ngôn ngữ của trang web, với một công cụ khả dụng."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Danh sách dự phòng chỉ có thể đặt tên cho các công cụ khả dụng."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Hạn mức hàng tháng là một số tiền bằng US đô la, từ 0 trở lên, dành cho một công cụ hiện có."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Bản dịch ưu tiên và giọng điệu theo từng ngôn ngữ là tính năng của Tranzly Pro. Danh sách không dịch là miễn phí."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Các mục từ trong thuật ngữ phải được nhóm theo một trong các ngôn ngữ của trang web."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Giọng điệu được thiết lập theo ngôn ngữ trang web: mức độ trang trọng mặc định, nhiều hơn hoặc ít hơn, cộng với các hướng dẫn tùy chọn."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Giá trị cho %s không nằm trong các lựa chọn cho phép."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Hàng đợi nền không khả dụng trên trang web này."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Công việc dịch thuật chạy dưới tư cách của người khởi chạy nó, vì vậy người dùng phải đăng nhập."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Không có nội dung nào bạn được phép dịch trong đoạn lựa chọn đó."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Mục đó không thuộc công việc dịch thuật."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Bạn không được phép thay đổi bản dịch đó."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Không thể dịch văn bản đó ở đây."
 msgid "That media text cannot be translated here."
 msgstr "Không thể dịch văn bản đa phương tiện đó ở đây."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Bản dịch có thể được xuất bản hoặc lưu dưới dạng bản nháp."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Bạn không được phép xuất bản loại nội dung này."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Mục này đã được viết bằng ngôn ngữ đó."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Bạn không được phép thay đổi bản dịch đó."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Bản dịch này đã được chỉnh sửa bởi một người dùng (hoặc được nhập vào), do đó nó đã được bảo vệ. Hãy mở khóa để dịch lại."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Chưa có công cụ dịch nào được thiết lập. Thêm khóa cho một công cụ trong Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Công cụ dịch đó không khả dụng trên trang web này."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Công cụ dịch đó chưa được thiết lập: hãy thêm khóa của nó trước."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Văn bản này đang được dịch bởi một tác vụ khác; mục này sẽ sử dụng kết quả đó."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Không có công cụ dịch thuật nào có thể xử lý mục này."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Công cụ dịch không trả về bản dịch cho mọi phần của mục này. Không có gì thay đổi."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Mô hình AI"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s không trả về bản dịch cho mọi phần của mục này. Không có gì thay đổi."
+msgid "AI model (%1$s %2$s)"
+msgstr "Mô hình AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s hiện đang gặp sự cố. Vui lòng thử lại sau hoặc sử dụng công cụ tìm kiếm khác."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Trang web của bạn không thể kết nối tới %s. Hãy kiểm tra xem trang web có thể thiết lập kết nối đi hay không, sau đó thử lại."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s đã không chấp nhận khóa API của bạn. Hãy kiểm tra khóa trong Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Tài khoản %s của bạn đã dùng hết hạn mức hoặc số dư. Vui lòng nạp thêm tiền vào tài khoản đó hoặc sử dụng một engine khác."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s đã yêu cầu chúng tôi tạm dừng. Thao tác này sẽ được thử lại tự động."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Văn bản này quá dài đối với %s trong một lần. Hãy chia nhỏ nội dung hoặc sử dụng bộ máy khác."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s từ chối dịch nội dung này. Hãy thử công cụ khác hoặc tự dịch thủ công."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s không dịch ngôn ngữ này. Hãy chọn một công cụ dịch khác cho ngôn ngữ đó."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Đã đạt đến hạn mức chi tiêu trong tháng này cho %s, vì vậy không có thêm dữ liệu nào được gửi đến. Hãy nâng hạn mức trong Tranzly → Engines hoặc đợi cho đến tháng sau."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Bản dịch với %s đã thất bại vì một lý do mà Tranzly không thể xác định. Chi tiết ở bên dưới."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Phiên bản thử nghiệm (beta) được cung cấp cho các cài đ�
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Lưu cài đặt"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Công cụ đầu tiên được thiết lập"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Đã lưu khóa. Khóa được lưu trữ mã hóa và sẽ không hiển thị lại."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Đã lưu cài đặt công cơ chế."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Đã lưu từ điển."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Khóa của bạn"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly gọi các dịch vụ dịch thuật bằng tài khoản của riêng bạn. Các khóa được lưu trữ mã hóa trong cơ sở dữ liệu của bạn và chỉ được gửi đến dịch vụ mà chúng thuộc về. Các khóa mô hình AI được thiết lập trong phần cài đặt AI."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "Khóa API %s"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Đã lưu: %s. Nhập một khóa mới để thay thế, hoặc lưu một trường trống để xóa."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Chưa có khóa nào được lưu."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Khu vực Azure (để trống nếu là tài nguyên toàn cầu)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Lưu khóa"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Kiểm tra mức sử dụng DeepL của tôi"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Đã sử dụng %1$s trên tổng số %2$s ký tự trong chu kỳ thanh toán này."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Công cụ dịch nào"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Chưa có công cụ dịch nào được thiết lập. Hãy lưu một khóa ở trên (hoặc thiết lập một mô hình AI) để bắt đầu dịch."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Công cụ mặc định"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Một công cụ dịch khác nhau cho mỗi ngôn ngữ, tính năng dự phòng tự động và giới hạn chi tiêu hàng tháng là các tính năng của Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Công cụ cho %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Công cụ mặc định"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Nếu một công cụ gặp sự cố hoặc đạt đến giới hạn, hãy thử các bước tiếp theo sau theo thứ tự này"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Ḥn mức chi tiêu hàng tháng"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Khi một công cụ đạt đến hạn mức, sẽ không có gì được gửi thêm đến công cụ đó cho đến tháng sau và báo cáo dịch thuật thất bại sẽ nêu rõ lý do. Để trống nếu không có hạn mức."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (đã chi tiêu tháng này: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Lưu chữ hoa"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Bảng thuật ngữ và các từ không bao giờ được dịch"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Không bao giờ dịch các từ này"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Tên thương hiệu và sản phẩm được giữ nguyên trên mọi công cụ."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Bản dịch ưu tiên và giọng điệu theo từng ngôn ngữ là tính năng của Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Bản dịch ưu tiên (mỗi dòng một mục: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Tính trang trọng"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Mặc định"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Trang trọng"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Không chính thức"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Hướng dẫn phong cách (đối tượng, giọng điệu thương hiệu)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Lưu thuật ngữ"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Công việc đã bắt đầu với %d bản dịch cần thực hiện. Quá trình này chạy ở chế độ nền: bạn có thể đóng trang này lại."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Đã xếp hàng lại."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Đang chạy"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Đã hoàn tất"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Dịch trong nền"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Hãy thiết lập một công cụ dịch thuật trong tab Engines trước."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Dịch mọi thứ"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Vào trong"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Với"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Công cụ riêng của từng ngôn ngữ"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Xuất bản các bản dịch (nếu không chúng sẽ được lưu dưới dạng bản nháp)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Ước tính chi phí"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d bài viết, %2$s ký tự. Giá của công cụ này không được biết trước."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d bài viết, %2$s ký tự: khoảng $%3$s trên tài khoản của riêng bạn."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Bắt đầu dịch"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Tác vụ"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Chưa có tác vụ dịch nào."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Công việc %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "Đã dịch %1$d/%2$d, %3$d thất bại, %4$d đã bỏ qua (được bảo vệ hoặc đã ở ngôn ngữ đó)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Dừng tác vụ này"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Xem những gì đã thất bại và lý do tại sao"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Nội dung"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Đã xảy ra lỗi gì"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Sửa lỗi"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Chi tiết"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Thử lại bằng"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Cùng một công cụ"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Thử lại"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Dịch thủ công"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Ngôn ngữ và cài đặt"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Động cơ"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Các công việc dịch thuật"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

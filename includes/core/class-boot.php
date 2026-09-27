@@ -23,14 +23,27 @@ require_once __DIR__ . '/class-content.php';
 require_once __DIR__ . '/class-legacy-graph.php';
 require_once __DIR__ . '/class-legacy-import.php';
 require_once __DIR__ . '/class-network.php';
+require_once __DIR__ . '/class-edition.php';
+require_once __DIR__ . '/class-engine-settings.php';
+require_once __DIR__ . '/class-glossary.php';
+require_once __DIR__ . '/class-memory.php';
+require_once __DIR__ . '/class-queue.php';
 require_once dirname( __DIR__ ) . '/engines/interface-engine.php';
 require_once dirname( __DIR__ ) . '/engines/class-registry.php';
+require_once dirname( __DIR__ ) . '/engines/class-failure.php';
+require_once dirname( __DIR__ ) . '/engines/class-deepl.php';
+require_once dirname( __DIR__ ) . '/engines/class-ai.php';
 require_once __DIR__ . '/class-translator.php';
 require_once dirname( __DIR__ ) . '/api/class-language-switch.php';
 require_once dirname( __DIR__ ) . '/api/functions-api.php';
 require_once dirname( __DIR__ ) . '/api/class-rest-engines.php';
+require_once dirname( __DIR__ ) . '/api/class-rest-jobs.php';
 require_once dirname( __DIR__ ) . '/api/class-rest-content.php';
 require_once dirname( __DIR__ ) . '/cli/class-cli.php';
+
+// The background queue's runner. It must load before `plugins_loaded`, where it elects the newest
+// copy on the site (WooCommerce and other plugins bundle it too); ours may or may not be the one used.
+require_once dirname( __DIR__, 2 ) . '/vendor/woocommerce/action-scheduler/action-scheduler.php';
 
 /**
  * One entry point for the plugin's bootstrap, so the files outside this directory change by one
@@ -49,12 +62,41 @@ final class Boot {
 		Strings::register();
 		Legacy_Import::register();
 		Network::register();
+		Queue::register();
+		add_action( 'tranzly_register_engines', array( self::class, 'register_engines' ), 5 );
 		\ZinnDigital\Tranzly\Api\Language_Switch::register();
 		\ZinnDigital\Tranzly\Api\Rest_Content::register();
 		\ZinnDigital\Tranzly\Api\Rest_Engines::register();
+		\ZinnDigital\Tranzly\Api\Rest_Jobs::register();
 		\ZinnDigital\Tranzly\Cli\Cli::register();
 		self::premium();
 	}
+
+	/**
+	 * The engines Tranzly ships: DeepL always; the AI models when the AI core is in this build;
+	 * Google and Microsoft with Pro.
+	 *
+	 * @param \ZinnDigital\Tranzly\Engines\Registry $registry The registry.
+	 * @return void
+	 */
+	public static function register_engines( $registry ): void {
+		$registry->add( new \ZinnDigital\Tranzly\Engines\DeepL() );
+		if ( \ZinnDigital\Tranzly\Engines\Ai::available() ) {
+			$registry->add( new \ZinnDigital\Tranzly\Engines\Ai() );
+		}
+		foreach ( self::$pro_engines as $class ) {
+			if ( class_exists( $class ) ) {
+				$registry->add( new $class() );
+			}
+		}
+	}
+
+	/**
+	 * Pro engine classes loaded by premium().
+	 *
+	 * @var array<int, string>
+	 */
+	private static array $pro_engines = array();
 
 	/**
 	 * The Pro-only parts of the core: the Polylang/WPML compatibility layer (tz-dev4).
@@ -70,6 +112,12 @@ final class Boot {
 		if ( is_readable( $file ) && function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code() ) {
 			require_once $file;
 			\ZinnDigital\Tranzly\Api\Compat::register();
+		}
+		$engines = dirname( __DIR__ ) . '/engines/pro_' . '_premium_only'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
+		if ( is_readable( $engines . '/class-google.php' ) && function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code() ) {
+			require_once $engines . '/class-google.php';
+			require_once $engines . '/class-microsoft.php';
+			self::$pro_engines = array( '\\ZinnDigital\\Tranzly\\Engines\\Pro\\Google', '\\ZinnDigital\\Tranzly\\Engines\\Pro\\Microsoft' );
 		}
 	}
 
@@ -91,7 +139,7 @@ final class Boot {
 	public static function uninstall(): void {
 		global $wpdb;
 		Schema::uninstall();
-		foreach ( array( Options::OPTION, Secrets::OPTION, Legacy_Import::OPTION, Legacy_Import::STATUS_OPTION ) as $option ) {
+		foreach ( array( Options::OPTION, Secrets::OPTION, Legacy_Import::OPTION, Legacy_Import::STATUS_OPTION, Engine_Settings::OPTION, Engine_Settings::SPEND, Glossary::OPTION, 'tranzly_deepl_glossaries' ) as $option ) {
 			delete_option( $option );
 		}
 		$like = $wpdb->esc_like( 'tranzly_strings_' ) . '%';
@@ -102,5 +150,10 @@ final class Boot {
 		delete_post_meta_by_key( Strings::MEDIA_META );
 		delete_post_meta_by_key( Legacy_Import::STATUS_META );
 		wp_clear_scheduled_hook( Legacy_Import::HOOK );
+		delete_transient( 'tranzly_deepl_targets' );
+		if ( function_exists( 'as_unschedule_all_actions' ) ) {
+			as_unschedule_all_actions( Queue::WORK );
+			as_unschedule_all_actions( Queue::WATCHDOG );
+		}
 	}
 }

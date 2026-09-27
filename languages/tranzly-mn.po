@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "унтраасан"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Нээх"
 
@@ -625,8 +626,9 @@ msgstr "Хязгаар болон зөвшөөрлүүдийг хадчихав.
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Энэ хэл нь энэ сайтын хэл биш байна."
 
@@ -845,8 +847,8 @@ msgstr "Дояад таot нэг хэл жагсаана уу."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Энэ зүйлийг орчуулахыг хориглоно."
 
@@ -855,11 +857,66 @@ msgstr "Энэ зүйлийг орчуулахыг хориглоно."
 msgid "This item already has a version in that language."
 msgstr "Энэ зүйл уг хэл дээр хэдийнэ хувилбартай байна."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Энэ сайт дээр уг орчуулгын систем байхгүй байна."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Хэл бүрд өөр хөдөлгүүр ашиглах, автомат нөөцлөлт болон зарцуулалтын хязгаар нь Tranzly Pro функцууд юм."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Хэл тус бүр нь боломжтой хөдөлгүүртэй, сайтын хэлнүүдийн нэг байх ёстой."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Нөөц жагсаалтад зөвхөн боломжтой хөдөлгүүрүүдийн нэрийг оруулж болно."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Сар тутмын хязгаар гэдэг нь боломжтой хөдөлгүүрт зориулсан US долларын дүн юм, тэг эсвэл түүнээс дээш."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Хэл бүрийн илүүд үзэх орчуулга болон аялга нь Tranzly Pro функцууд юм. Орчуулахгүй үгсийн жагсаалт үнэгүй."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Тайлбар толь бичгийн бичлэгүүдийг тухайн сайтын хэл тус бүрээр нь бүлэглэсэн байх ёстой."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Өнгө аясыг сайтын хэл тус бүрээр тохируулна: хэлбэр байдлын үндсэн утга (их эсвэл бага) болон нэмэлт зааварчилгаа."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s-ийн утга зөвшөөрөгдсөн сонголтуудын нэг биш байна."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Энэ сайт дээр арын дэвсгэрийн дараалал байхгүй байна."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "О орчуулгын ажлыг эхлүүлсэн хүний эрхээр гүйцэтгэдэг тул хэрэглэгч системд нэвтэрсэн байх шаардлагатай."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Энэ сонголтод таны орчуулахыг зөвшөөрсөн зүйл байхгүй байна."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Э тэр зүйл нь орчуулгын ажлын хэсэг биш байна."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Та энэ орчуулгыг өөрчлөх эрхгүй байна."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Энэ текстийг энд орчуулах боломжгүй ба�
 msgid "That media text cannot be translated here."
 msgstr "Энэ медиа текстийг энд орчуулах боломжгүй байна."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Орчуулгыг нийтлэх эсвэл ноорог хэлбэрээр хадгалах боломжтой."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Та энэ төрлийн контентыг нийтлэхийг хориглоно."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Энэ зүйл аль хэдийн тухайн хэл дээр бичигдсэн байна."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Та энэ орчуулгыг өөрчлөх эрхгүй байна."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Энэ орчуулгыг хүн зассан (эсвэл импортолсон) тул хамгаалагдсан байна. Дахин орчуулахын тулд түгжээг нь тайлна уу."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Орчуулгын систем тохируулаагүй байна. Tranzly → Engines хэсгээс нэгийд нь түлхүүр нэмнэ үү."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Энэ сайт дээр уг орчуулгын систем байхгүй байна."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Энэ орчуулгын систем хараахан тохируулагдаагүй байна: эхлээд түүний түлхүүрийг нэмнэ үү."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Яг одоо өөр нэг ажлаар энэ текстийг орчуулж байгаа тул энэ зүйл уг хариултыг ашиглах болно."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Ямар ч орчуулгын систем энэ зүйлийг орчуулж чадсангүй."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Хөдөлгүүр энэ зүйлийн бүх хэсэгт орчуулга буцааж өгсөннгүй. Юу ч өөрчлөгдөөгүй."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "AI загвар"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s нь энэ зүйлийн бүх хэсэгт орчуулга буцаасангүй. Юу ч өөрчлөгдөөгүй."
+msgid "AI model (%1$s %2$s)"
+msgstr "AI загвар (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s я язаг асуудалтай байна. Тун удалгүй дахин оролдох эсвэл өөр мотор ашиглана уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Таны сайт %s руу холбогдож чадсангүй. Гадагшаа чиглэсэн холболт хийх боломжтой эсэхээ шалгаад дахин оролдоно уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s нь таны API түлхүүрийг хүлээн авсангүй. Tranzly → Engines хэсгээс түлхүүрээ шалгана уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Таны %s дансны квот эсвэл үлдэгдэл дууссан байна. Үүнийгээ цэнэглэх эсвэл өөр систем ашиглана уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s бидэнд түр амсхийхийг хүссэн юм. Үүнийг автоматаар дахин оролдох болно."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Энэ текстийг %s-д нэг дор хэтэрхий урт байна. Агуулгыг хуваах эсвэл өөр хөдөлгүүр ашиглана уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s энэ агуулгыг орчуулахаас татгалзлаа. Өөр хөдөлгүүр туршиж үзэх эсвэл гараар орчуулна уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s энэ хэлийг орчуулдаггүй. Үүний тулд өөр өөр хөдөлгүүр сонгоно уу."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Энэ сарын %s-ийн зарцуулалтын дээд хязгаар хүрсэн тул үүн рүү өөр зүйл илгээгээгүй байна. Tranzly → Engines хэсгээс дээд хязгаарыг нэмэгдүүлэх эсвэл дараа сар хүртэл хүлээнэ үү."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Tranzly тодорхойлж чадаагүй шалтгаанаар %s ашигласан орчуулга амжилтгүй боллоо. Дэлгэрэнгүй мэдээллийг дор харуулав."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1025,6 +1150,302 @@ msgstr "Бета хувилбаруудыг өөрийн бүртгэлд хол
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Тохиргоог хадгалах"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Тохируулсан анхны хөдөлгүүр"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Түлхүүрийг хадгаллаа. Үүнийг шифрлэн хадгалсан бөгөөд дахин хэзээ ч харуулахгүй."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Хөдөлгүүрийн тохиргоог хадчихав."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Тайлбар толь хадгалагдлаа."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Таны түлхүүрүүд"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly нь орчуулгын үйлчилгээг таны өөрийн бүртгэлээр дууддаг. Түлхүүрүүд нь таны өгөгдлийн санд шифрлэгдэн хадгалагддаг бөгөөд зөвхөн хамаарах үйлчилгээ рүүгээ л илгээгддэг. AI загварын түлхүүрүүдийг AI тохиргоонд тохируулна."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API түлхүүр"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Хarsan: %s. Үүнийг солихын туoin шинэ түлхүүр оруулна уу, эсвэл устахын тулд хоосон талбарыг хадгална уу."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Түлхүүр хадгалагдаагүй байна."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure бүс нутаг (глобаль нөөцийн хувьд хоосон үлдээнэ үү)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Түлхүүр хадгалах"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "DeepL ашиглалтыг шалгах"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Энэ тооцооны хугацаанд ашигласан: %1$s / %2$s тэмдэгт."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Аль хөдөлгүүр орчуулж байна"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Ямар ч хөдөлгүүр тохируулагдаагүй байна. Орчуулж эхлэхийн тулд дээрх түлхүүрийг хадгална уу (эсвэл AI загвар тохируулна уу)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Үндсэн хөдөлгүүр"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Хэл тус бүрд өөр хөдөлгүүр, автоматаар нөөцөд шилжих болон сарын зарцуулалтын хязгаар нь Tranzly Pro функций юм."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "%s-д зориулсан хөдөлгүүр"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Үндсэн хөдөлгүүр"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Хэрэглүүр ажиллахаа болих эсвэл хязгаартаа хүрсэн тохиолдолд дараах зүйлсийг энэ дарааллаар туршиж үзнэ үү"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Сар бүрийн зарцуулалтын хязгаар"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Хөдөлгүүр хязгаартаа хүрэхэд дараагийн сар хүртэл түүн рүү өөр зүйл илгээгдэхгүй бөгөөд амжилтгүй болсон орчуулгын тайланд шалтгааныг нь харуулна. Хязгаар тогтоохгүй бол хоосон үлдээгээрэй."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (энэ сард зарцуулсан: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Хадгалах хязгаарлалт"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Хэлний тайлбар толь бичиг болон хэзээ ч орчуулагддаггүй үгс"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Эдгээр үгийг хэзээ ч бүү орчуул (мөр тус бүрээр)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Брэнд болон бүтээгдэхүүний нэрс ямар ч хөдөлгүүрт яг хэвээрээ үлдэнэ."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Тeleчлэг ба өнгө аясыг хэл тус бүрээр тохируулах нь Tranzly Pro функцууд юм."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Илүүд үзэх орчуулгууд (мөр тус бүрт: нэр томьёо = орчуулга)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Албан ёсны байдал"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Үндсэн"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Албан ёсны"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Албан бус"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Загварын заавар (үзэгчид, брэндийн дуу хоолой)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Тolyar хадгалах"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Ажил %d орчуулга хийхээр эхэллээ. Энэ нь арын горимд ажиллах тул та энэ хуудсыг хааж болно."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Дахин дараалалд оруулсан."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Ажиллаж байна"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Дууссан"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Цуцлагдсан"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Фоноор орчуулах"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Эхлээд Engines таб дээр орчуулгын хөдөлгүүр тохируулна уу."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Бүгдийг орчуулах"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Дотор"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Үүнтэй хамт"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Хэл бүрийн өөрийн хөдөлгүүр"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Орчуулгыг нийтлэх (үгүй бол ноорог хэлбэрээр хадгалагдана)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Өртгийг тооцоолох"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d нийтлэл, %2$s тэмдэгт. Энэ хөдөлгүүрийн үнэ урьдчилан мэдэгдээгүй байна."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d нийтлэл, %2$s тэмдэгт: өөрийн дансанд ойролцоогоор $%3$s."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Орчуулж эхлэх"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Даалгаврууд"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Орчуулгын ажил одоогоор байхгүй байна."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Ажил %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d / %2$d орчуулагдсан, %3$d амжилтгүй болсон, %4$d алгассан (хамгаалагдсан эсвэл уг хэл дээр аль хэдийн байгаа)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Энэ ажлыг зогсоох"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Юу бүтэлгүйтсэн, яагаад бүтэлгүйтсэнийг харна уу"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Аcуулга"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Хэл"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Юu буруу болсон бэ"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Засах"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Дэлгэрэнгүй"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Дахин оролдох:"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Ижил хөдөлгүүр"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Дахин оролдох"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Гараар орчуулах"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Хэл болон тохиргоо"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Хөдөлгүүрүүд"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Орчуулгын ажлууд"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

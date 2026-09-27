@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "ປິດໃຊ້ງານແລ້ວ"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "ເປີດ"
 
@@ -626,8 +627,9 @@ msgstr "ບັນທຶກຂີດຈຳກັດ ແລະ ສິດທິແ�
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "ພາສານັ້ນບໍ່ແມ່ນພາສາໜຶ່ງຂອງເວັບໄຊນີ້."
 
@@ -848,8 +850,8 @@ msgstr "ກະລຸນາລະບຸຢ່າງໜ້ອຍໜຶ່ງພາ
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ແປລາຍການນີ້."
 
@@ -858,11 +860,66 @@ msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ແ
 msgid "This item already has a version in that language."
 msgstr "ລາຍການນີ້ມີເວີຊັນໃນພາສານັ້ນແລ້ວ."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "ໂປຣແກຣມແປພາສານັ້ນບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "ເຄື່ອງຈັກທີ່ແຕກຕ່າງກັນຕໍ່ພາສາ, ການສະໜັບສະໜູນແບບອັດຕະໂນມັດ ແລະ ວົງເງິນການໃຊ້ຈ່າຍແມ່ນຄຸນສົມບັດຂອງ Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "ແຕ່ລະພາສາຕ້ອງເປັນພາສາໜຶ່ງຂອງເວັບໄຊ, ໂດຍມີເຄື່ອງຈັກທີ່ພ້ອມນຳໃຊ້."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "ບັນຊີລາຍຊື່ສຳຮອງອາດຈະລະບຸໄດ້ສະເພາະເຄື່ອງຈັກຊອກຫາທີ່ມີຢູ່ເທົ່ານັ້ນ."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "ຂອບເຂດຈຳກັດຕໍ່ເດືອນແມ່ນຈຳນວນເງິນໃນສະກຸນເງິນ US ໂດລາ, ເຊິ່ງແມ່ນສູນ ຫຼື ຫຼາຍກວ່າ, ສຳລັບເຄື່ອງຈັກທີ່ມີໃຫ້ໃຊ້ງານ."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "ການແປພາສາທີ່ຕ້ອງການ ແລະ ລະດັບສຽງເວົ້າຕາມແຕ່ລະພາສາ ແມ່ນຟີເຈີຂອງ Tranzly Pro. ລາຍການຄຳສັບທີ່ບໍ່ຕ້ອງແປແມ່ນນຳໃຊ້ຟຣີ."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "ລາຍການຄຳສັບຕ້ອງຖືກຈັດກຸ່ມຕາມໜຶ່ງໃນພາສາຂອງເວັບໄຊ."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "ໂຕນສຽງຖືກກຳນົດຕາມພາສາຂອງເວັບໄຊ: ຄວາມເປັນທາງການແມ່ນຄ່າເລີ່ມຕົ້ນ, ຫລາຍຂຶ້ນຫລືໜ້ອຍລົງ, ພ້ອມດ້ວຍຄຳແນະນຳເພີ່ມເຕີມທາງເລືອກ."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "ຄ່າສຳລັບ %s ບໍ່ແມ່ນໜຶ່ງໃນບັນດາຕົວເລືອກທີ່ອະນຸຍາດ."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "ຄິວເຮັດວຽກຢູ່ພື້ນຫຼັງບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "ວຽກການແປພາສາຈະດຳເນີນການໂດຍບຸກຄະລາກອນຜູ້ທີ່ເປັນຜູ້ເລີ່ມຕົ້ນມັນ, ດັ່ງນັ້ນຜູ້ໃຊ້ຈຶ່ງຕ້ອງໄດ້ເຂົ້າສູ່ລະບົບ."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "ບໍ່ມີຫຍັງທີ່ເຈົ້າໄດ້ຮັບອະນຸຍາດໃຫ້ແປໃນການເລືອກນັ້ນ."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "ລາຍການນັ້ນບໍ່ແມ່ນສ່ວນໜຶ່ງຂອງວຽກການແປ."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "ທ່ານ​ບໍ່​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ​ໃຫ້​ປ່ຽນ​ການ​ແປ​ນັ້ນ."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -891,44 +948,112 @@ msgstr "ຂໍ້ຄວາມນັ້ນບໍ່ສາມາດແປຢູ່
 msgid "That media text cannot be translated here."
 msgstr "ຂໍ້ຄວາມສື່ນັ້ນບໍ່ສາມາດແປໄດ້ທີ່ນີ້."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "ການແປສາມາດເຜີຍແຜ່ ຫຼື ເກັບໄວ້ເປັນຮ່າງໄດ້."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເຜີຍແຜ່ເນື້ອຫາປະເພດນີ້."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "ລາຍການນີ້ຖືກຂຽນເປັນພາສານັ້ນຢູ່ແລ້ວ."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "ທ່ານ​ບໍ່​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ​ໃຫ້​ປ່ຽນ​ການ​ແປ​ນັ້ນ."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ການແປນີ້ຖືກແກ້ໄຂໂດຍບຸກຄົນ (ຫລື ນໍາເຂົ້າ), ດັ່ງນັ້ນມັນຈຶ່ງຖືກປົກປ້ອງ. ປົດລັອກມັນເພື່ອແປມັນອີກຄັ້ງ."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ຍັງບໍ່ທັນມີການຕັ້ງຄ່າເຄື່ອງຈັກແປພາສາເທື່ອ. ໃຫ້ເພີ່ມຄີສຳລັບເຄື່ອງຈັກໃນ Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "ໂປຣແກຣມແປພາສານັ້ນບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ເຄື່ອງມືແປພາສານັ້ນຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າ: ກະລຸນາເພີ່ມຄີຂອງມັນກ່ອນ."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "ຂໍ້ຄວາມດຽວກັນນີ້ກຳລັງຖືກແປໂດຍງານອື່ນຢູ່ໃນຂະນະນີ້; ລາຍການນີ້ຈະໃຊ້ຄຳຕອບນັ້ນ."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "ບໍ່ມີເຄື່ອງມືແປພາສາໃດສາມາດຮັບເອົາລາຍການນີ້ໄດ້."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "ເຄື່ອງຈັກບໍ່ໄດ້ສົ່ງຄືນການແປສຳລັບທຸກສ່ວນຂອງລາຍການນີ້. ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "ແບບຈຳລອງ AI"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s ບໍ່ໄດ້ສົ່ງຄືນການແປສຳລັບທຸກສ່ວນຂອງລາຍການນີ້. ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
+msgid "AI model (%1$s %2$s)"
+msgstr "ຮູບແບບ AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s ກໍາລັງປະສົບປັບຫາໃນຂະນະນີ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນບຶດໜຶ່ງ, ຫຼື ໃຊ້ເຄື່ອງມືອື່ນ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "ເວັບໄຊຂອງທ່ານບໍ່ສາມາດເຊື່ອມຕໍ່ຫາ %s ໄດ້. ກະລຸນາ ກວດສອບວ່າເວັບໄຊສາມາດເຊື່ອມຕໍ່ອອກພາຍນອກໄດ້, ແລ້ວລອງໃໝ່ອີກຄັ້ງ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s ບໍ່ໄດ້ຮັບຮອງເອົາ API key ຂອງທ່ານ. ກະລຸນາ ກວດສອບ key ດັ່ງກ່າວ ໃນ Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "ບັນຊີ %s ຂອງທ່ານໄດ້ໃຊ້ໂຄຕ້າ ຫຼື ຍອດເງິນໝົດແລ້ວ. ໃຫ້ເຕີມເງິນໃສ່ບັນຊີດັ່ງກ່າວ ຫຼື ໃຊ້ເອັນຈິນອື່ນ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s ໄດ້ຂໍໃຫ້ພວກເຮົາຫຼຸດຄວາມໄວລົງ. ມັນຈະຖືກລອງໃໝ່ໂດຍອັດຕະໂນມັດ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "ຂໍ້ຄວາມນີ້ຍາວເກີນໄປສຳລັບ %s ໃນຄັ້ງດຽວ. ກະລຸນາແບ່ງເນື້ອຫາ, ຫຼືໃຊ້ເຄື່ອງມືອື່ນ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s ໄດ້ປະຕິເສດການແປເນື້ອຫານີ້. ກະລຸນາລອງເຄື່ອງມືອື່ນ, ຫຼືແປດ້ວຍຕົນເອງ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s ບໍ່ແປພາສານີ້. ກະລຸນາເລືອກເຄື່ອງຈັກອື່ນສຳລັບມັນ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "ວົງເງິນການໃຊ້ຈ່າຍຂອງເດືອນນີ້ສໍາລັບ %s ໄດ້ຮອດກຳນົດແລ້ວ, ດັ່ງນັ້ນຈຶ່ງບໍ່ມີການສົ່ງຫຍັງເພີ່ມເຕີມໄປຫາ ມັນ. ເພີ່ມວົງເງິນໃນ Tranzly → Engines, ຫຼືລໍຖ້າຈົນຮອດເດືອນໜ້າ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "ການແປດ້ວຍ %s ບໍ່ສຳເລັດດ້ວຍເຫດຜົນທີ່ Tranzly ບໍ່ສາມາດລະບຸໄດ້. ລາຍລະອຽດແມ່ນຢູ່ດ້ານລຸ່ມນີ້."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1027,6 +1152,302 @@ msgstr "ເວີຊັນເບຕ້າແມ່ນສະໜອງໃຫ້ແ
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "ບັນທຶກການຕັ້ງຄ່າ"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "ເຄື່ອງຈັກທຳອິດທີ່ຖືກຕັ້ງຄ່າ"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "ບັນທຶກກະແຈແລ້ວ. ມັນຖືກເກັບຮັກສາໄວ້ແບບເຂົ້າລະຫັດ ແລະ ຈະບໍ່ສະແດງຂຶ້ນອີກເລີຍ."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "ການຕັ້ງຄ່າເຄື່ອງຈັກຖືກບັນທຶກແລ້ວ."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "ບັນທຶກອຸທົມຄຳສັບແລ້ວ."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "ກະແຈຂອງທ່ານ"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly ຮຽກໃຊ້ບໍລິການແປພາສາດ້ວຍບັນຊີຂອງທ່ານເອງ. ລະຫັດລັບຈະຖືກເກັບຮັກສາໄວ້ແບບເຂົ້າລະຫັດໃນຖານຂໍ້ມູນຂອງທ່ານ ແລະ ຖືກສົ່ງໄປຫາບໍລິການທີ່ພວກມັນເປັນເຈົ້າຂອງເທົ່ານັ້ນ. ລະຫັດລັບຂອງຮູບແບບ AI ຖືກຕັ້ງຄ່າໄວ້ໃນການຕັ້ງຄ່າ AI."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s ກະແຈ API"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "ບັນທຶກແລ້ວ: %s. ປ້ອນຄີໃໝ່ເພື່ອທົດແທນ, ຫຼື ບັນທຶກຊ່ອງຫວ່າງປ່າວເພື່ອລຶບອອກ."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "ບໍ່ມີກະແຈຖືກບັນທຶກໄວ້."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "ພາກພື້ນ Azure (ປະຫວ່າງໄວ້ສໍາລັບຊັບພະຍາກອນທົ່ວໂລກ)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "ບັນທຶກກະແຈ"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "ກວດສອບການໃຊ້ງານ DeepL ຂອງຂ້ອຍ"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "ໃຊ້ໄປແລ້ວ %1$s ຈາກທັງໝົດ %2$s ຕົວອັກສອນໃນຮອບບິນນີ້."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "ເຄື່ອງຈັກໃດແປ"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "ຍັງບໍ່ທັນມີເຄື່ອງຈັກຖືກຕັ້ງຄ່າເທື່ອ. ບັນທຶກຄີຢູ່ຂ້າງເທິງ (ຫຼື ຕັ້ງຄ່າຮູບແບບ AI) ເພື່ອເລີ່ມຕົ້ນການແປ."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "ເຄື່ອງຈັກເລີ່ມຕົ້ນ"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "ເຄື່ອງຈັກທີ່ແຕກຕ່າງກັນຕໍ່ພາສາ, ການສຳຮອງອັດຕະໂນມັດ ແລະ ວົງເງິນການໃຊ້ຈ່າຍປະຈຳເດືອນ ແມ່ນຄຸນສົມບັດຂອງ Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "ໂປຣແກຣມສຳລັບ %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "ເຄື່ອງຈັກເລີ່ມຕົ້ນ"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "ຖ້າເຄື່ອງຈັກເກີດຄວາມຜິດພາດ ຫຼື ໄປຮອດຂີດຈຳກັດ, ໃຫ້ລອງເຮັດຕາມຂັ້ນຕອນເຫຼົ່ານີ້ຕາມລຳດັບ"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "ຂອບເຂດການໃຊ້ຈ່າຍຕໍ່ເດືອນ"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "ເມື່ອເຄື່ອງຈັກຮອດຂີດຈຳກັດຂອງມັນ, ຈະບໍ່ມີການສົ່ງຫຍັງໄປຫາອີກຈົນກວ່າຈະຮອດເດືອນໜ້າ ແລະ ບົດລາຍງານການແປທີ່ລົ້ມເຫຼວຈະບອກເຫດຜົນ. ປະຫວ່າງໄວ້ເພື່ອບໍ່ໃຫ້ມີຂີດຈຳກັດ."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ໃຊ້ຈ່າຍໃນເດືອນນີ້: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "ບັນທຶກຂີດຈຳກັດ"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "ອຸປະກອນຄຳສັບ ແລະ ຄຳສັບທີ່ບໍ່ເຄີຍຖືກແປ"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "ຫ້າມແປຄຳສັບເຫຼົ່ານີ້ (ໜຶ່ງຄຳຕໍ່ໜຶ່ງບັນທັດ)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "ຊື່ແບນ ແລະ ຜະລິດຕະພັນແມ່ນຮັກສາໄວ້ຄືເກົ່າຢ່າງແນ່ນອນ, ສໍາລັບທຸກເຄື່ອງຈັກ."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "ການແປທີ່ມັກ ແລະ ໂຕນສຽງຕາມແຕ່ລະພາສາແມ່ນຄຸນສົມບັດຂອງ Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "ການແປທີ່ມັກ (ໜຶ່ງຄຳສັບຕໍ່ແຖວ: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "ຄວາມເປັນທາງການ"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "ຄ່າເລີ່ມຕົ້ນ"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "ທາງການ"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "ບໍ່ເປັນທາງການ"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "ຄຳແນະນຳດ້ານຮູບແບບ (ຜູ້ມຸ່ງຫວັງ, ສຽງຂອງແບຣນ)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "ບັນທຶກຄຳສັບອະທິບາຍ"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "ວຽກໄດ້ເລີ່ມຕົ້ນດ້ວຍ %d ການແປທີ່ຈະຕ້ອງເຮັດ. ມັນກຳລັງແລ່ນຢູ່ເບື້ອງຫຼັງ: ທ່ານສາມາດປິດໜ້ານີ້ໄດ້."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "ເຂົ້າຄິວອີກຄັ້ງ."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "ກຳລັງທຳງານ"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "ສຳເລັດແລ້ວ"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "ແປໃນພື້ນຫຼັງ"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "ກະລຸນາຕັ້ງຄ່າເຄື່ອງມືແປພາສາໃນແທັບ ເຄື່ອງມື (Engines) ກ່ອນ."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "ແປທຸກອັນ"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "ເຂົ້າໄປໃນ"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "ດ້ວຍ"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "ເຄື່ອງຈັກຂອງແຕ່ລະພາສາ"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "ເຜີຍແຜ່ການແປ (ຖ້າບໍ່ດັ່ງນັ້ນພວກມັນຈະຖືກບັນທຶກເປັນຮ່າງ)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "ຄາດຄະເນຄ່າໃຊ້ຈ່າຍ"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d ບົດຄວາມ, %2$s ຕົວອັກສອນ. ລາຄາສຳລັບເຄື່ອງມືນີ້ບໍ່ເປັນທີ່ຮູ້ຈັກລ່ວງໜ້າ."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d ບົດຄວາມ, %2$s ຕົວອັກສອນ: ປະມານ $%3$s ໃນບັນຊີຂອງທ່ານເອງ."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "ເລີ່ມແປ"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "ວຽກ"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "ຍັງບໍ່ມີວຽກແປພາສາເທື່ອ."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "ວຽກ %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "ແປແລ້ວ %1$d ຈາກ %2$d, ຜິດພາດ %3$d, ຂ້າມໄປ %4$d (ຖືກປົກປ້ອງ ຫຼື ເປັນພາສານັ້ນຢູ່ແລ້ວ)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "ຢຸດວຽກນີ້"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "ເບິ່ງສິ່ງທີ່ລົ້ມເຫຼວ ແລະ ເຫດຜົນ"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "ເນື້ອຫາ"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "ພາສາ"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "ມີຫຍັງຜິດພາດຂຶ້ນ"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "ແກ້ໄຂມັນ"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "ລາຍລະອຽດ"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "ລອງໃໝ່ອີກຄັ້ງດ້ວຍ"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "ເຄື່ອງຈັກດຽວກັນ"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "ລອງໃໝ່ອີກຄັ້ງ"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "ແປດ້ວຍມື"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "ພາສາ ແລະ ການຕັ້ງຄ່າ"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "ເຄື່ອງຈັກ"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "ວຽກແປພາສາ"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

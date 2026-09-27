@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "tí a pa kuro"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Ṣí"
 
@@ -625,8 +626,9 @@ msgstr "Awon opin ati awon ase ti wa ni fipamọ."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Asẹ yẹn kii ṣe ọkan ninu awọn ede aaye yii."
 
@@ -845,8 +847,8 @@ msgstr "Ṣe àkọsílẹ o kere ju èdè kan."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "A kò gba ọ laaye lati tumọ ohun yii."
 
@@ -855,11 +857,66 @@ msgstr "A kò gba ọ laaye lati tumọ ohun yii."
 msgid "This item already has a version in that language."
 msgstr "Ohun kan náà ti wà nígbà kan náà nínú èdè yẹn."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Ẹrọ ìtumọ̀ yẹn kò sí lórí ojú òpó wẹ́bù yìí."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Àwọn ẹ̀rọ ọ̀tọ̀ọ̀tọ̀ fún èdè kọ̀ọ̀kan, ìpadàbẹ́yìn aládàáṣe ati àwọn ààlà ìnáwó jẹ́ àwọn ànímọ́ Tranzly Pro."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Gbogbo èdè gbọdọ̀ jẹ́ ọ̀kan nínú àwọn èdè ojú òpó wẹ́bù náà, pẹ̀lú ẹ̀rọ ìtumọ̀ tó wà látọwọ́."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Àtòjọ ìtìlẹ́yìn le sọ àwọn ẹ̀rọ tó wà nìkan."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Àpèjọ alápá kan lóṣù jẹ́ iye kan ní US dọ́là, òdo tàbí jẹ́ bẹ́ẹ̀ lọ, fún ẹ̀rọ kan tó wà."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Àwọn ìtumọ̀ tí a fẹ́ràn àti ohùn fún èdè kọ̀ọ̀kan jẹ́ ẹ̀ya ara Tranzly Pro. Àtòjọ àwọn nǹkan tí a kò gbọdọ̀ túmọ̀ jẹ́ ọ̀fẹ́."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "A gbọdọ ṣajọ awọn titẹ sii akọọlẹ ọrọ nipasẹ ọkan ninu awọn ede aaye naa."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "A ti n ṣeto ohùn (Tone) fún èdè ojula kọọkan: aiyipada ìfọ̀kanbẹlẹ, diẹ tabi ju bẹẹ lọ, pẹlu awọn ilana aṣayan."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Iye fún %s kò sí nínú àwọn àṣàyàn tí a gbà láèyè."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Kò sí ìlànà ìpìlẹ̀ (background queue) lórí ojú òpó wẹ́bù yìí."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Iṣẹ ìtumọ̀ kan ń ṣiṣẹ́ gẹ́gẹ́ bí ẹni tí ó bẹ̀rẹ̀ rẹ̀, nítorí náà olùlò gbọ́dọ̀ ti wọlé."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Kò sí ohun kankan tí o ní àṣẹ láti túmọ̀ sí inú àṣàyàn yẹn."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Ohun yẹn kii ṣe apakan iṣẹ iṣtumọ kan."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "A kỢ fẹ́ kí o yí ìtumọ̀ yẹn padà."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "A kò lè ṣe ìtumọ̀ ọ̀rọ̀ yẹn níhìn-ín."
 msgid "That media text cannot be translated here."
 msgstr "A ko le tumọ ọrọ media yẹn nibi."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Ìtúmọ̀ lè jẹ́ kí á gbé jáde tàbí kí á fi sílẹ̀ gẹ́gẹ́ bí àkọọ́lẹ̀ àkọ́kọ́."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "A kò yọ̀ǹda fún ọ láti gbé irú àkó-kọ́pù báyìí jáde."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Nǹkan yìí ti wà ní kíkọ ní èdè yẹn tẹ́lẹ̀."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "A kỢ fẹ́ kí o yí ìtumọ̀ yẹn padà."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "A è yí ìtumọ̀ yìí padà (tàbí a kó o wọlé), nítorí náà ó ní ààbò. Ṣí i láti tún tumọ̀ rẹ̀ lẹ́ẹ̀kan sí i."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Kò tíì sí ẹ̀rọ ìtumọ̀ kankan tí a ti ṣètò. Fi bọ́tìnnì kan kún fún ọ̀kan nínú Tranzly → Engines."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Ẹrọ ìtumọ̀ yẹn kò sí lórí ojú òpó wẹ́bù yìí."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ẹrọ ìtumọ̀ yẹn kò tíì ṣètò: fi kún bọ́tìnnì rẹ̀ kọ́kọ́."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Awon nkan kann na ni iṣẹ miiran n tumọ lọwọlọwọ; ohun yii yoo lo idahun yẹn."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Kò sí ẹ̀rọ ìtumọ̀ kan tí ó lè mú ohun èlò yìí."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Ẹrọ náà kò dá ìtumọ̀ padà fún apá kan nínú ohun èlò yìí. Kò sí ohun tí a yí padà."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Àpẹẹrẹ AI"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s ko da ìtumọ̀ padà fún gbogbo apá ohun èlò yìí. Kò sí ohun tí a yí padà."
+msgid "AI model (%1$s %2$s)"
+msgstr "Àwòṣe AI (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s nira lọ́wọ́ lọ́wọ́ báyìí. Gbìyànjú lẹ́ẹ̀kan si ní kíákíà, tàbí lo ẹ̀rọ mìíràn."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Oju-wẹẹti rẹ ko le de ọdọ %s. Ṣayẹwo pe o le ṣe awọn asopọ ti njade, lẹhinna tun gbiyanju lẹẹkan si."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s kọ bọtọ́nisì API rẹ. Ṣayẹwo bọtọ́nisì na ni Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Akọọlẹ %s rẹ ti lo ipin tabi iwọntunwọnsi rẹ tan. Fikun-un pẹlu wọn, tabi lo ẹ̀rọ miiran."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s bi wa pe ki a dinku. A o tun gbiyanju rẹ laifọwọyi."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Ọ̀rọ̀ yìí ti gùn jù fún %s ní ẹ̀ẹ̀kan soso. Pín àwọn ohun inú rẹ̀, tàbí kí o lo ẹ̀rọ mìíràn."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s kọ lati tumọ akoonu yii. Gbiyanju ẹrọ miiran, tabi tumọ rẹ pẹlu ọwọ."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s ko tumọ ede yii. Yan ẹ̀rọ miiran fun un."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Awon owo ti a fi si eka %s ti pe osu yii, nitorina ko si ohun miiran ti a ran si. Mu owo na goke ni Tranzly → Engines, tabi duro de osu to n bo."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Ìtumọ̀ pẹ̀lú %s kùnà fún ìdí kan tí Tranzly kò lè mọ̀. Àwọn kúlẹ̀kúlẹ̀ rẹ̀ wà ní ìsàlẹ̀ yìí."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Awon eya beta ni a n se afihan won fun awon fifi sori Pro ti o ni iwe-as
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Fi àwọn ètò pamọ́"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Ẹ̀rọ àkọ́kọ́ tí a ṣètò"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Bọtìnì náà ti fipamọ́. A ti fi ìkọ̀gbọ̀nsẹ̀ pamọ́ kò sì ní hàn mọ́ láé."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "A ti fipamọ awọn eto ẹ̀rọ náà."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "A ti fi Glossary pamọ́."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Awọn kọ́ọ̀sì rẹ"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly npe awọn iṣẹ itumọ pẹlu akọọlẹ tirẹ. A n fipamọ awọn kọọti ti a ti paroko sinu ibi ipamọ data rẹ, a si n ran wọn nikan si iṣẹ ti wọn jẹ ti wọn. A n ṣeto awọn kọọti awoṣe AI ninu awọn eto AI."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "Bọtììlì API %s"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "A ti fipamọ: %s. Tẹ bọtọ titun sẹ́ ti o ba fẹ ropo rẹ, tabi fi aaye ti o ṣofo pamọ lati yọ kuro."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Ko si bọtini ti o fipamọ."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Agbègbè Azure (fi sílẹ̀ ní ṣóńṣó fún ohun àmúṣọrọ̀ kárí ayé)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Fi bọtini pamọ"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Ṣàyẹ̀wọ́n lílò DeepL mi"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "%1$s ninu %2$s àwọn ohun kikọ ni a ti lo ni àsìkò ìwé-owó yii."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Èwo nínú ẹ̀rọ ló ń túmọ̀"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Kò tíì sí êngìn tí a ṣètò. Fipamọ́ bọ́tìsì kan sí òkè (tàbí kí o ṣètò àwòṣe AI kan) láti bẹ̀rẹ̀ ìtumọ̀."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Ẹrọ aiyipada"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Ẹrọ kan pato fun ede kọọkan, atilẹyin adaṣe ati opin inawo osooṣu jẹ awọn ẹya Tranzly Pro."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Ẹrọ fún %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Ẹnjini aiyipada"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Tí ẹ̀rọ kan bá kuna tàbí tí ó dé ìwọ̀n, gbìyànjú àwọn wọ̀nyí lẹ́yìn náà, ní ìtòlẹ́sẹẹsẹ yìí"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Àwọn ìnáwó oṣooṣù"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Nigbati ẹ̀rọ kan ba de opin rẹ̀, kò sí ohun miiran ti a fi ranṣẹ si titi di oṣu ti n bọ ati pe ijabọ itumọ ti o kuna sọ idi rẹ. Fi silẹ ni ṣofo fun ko si opin."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ti ná lọ oṣù yìí: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Fi awọn àpòòpọ̀ pamọ́"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Giolosari ati Awọn ọrọ ti a ko tumọ ri"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Ẹ má ṣe túmọ̀ àwọn ọ̀rọ̀ wọ̀nyí rárá (ọ̀kọ̀ọ̀kan fún ìlà kọ̀ọ̀kan)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Awọn orukọ ami iyasọtọ ati ọja ma n wa bi wọ́n ṣe wà, pẹ̀lu gbogbo ẹ̀rọ."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Awọn itumọ ti o fẹ ati ohun ohun fun ede kọọkan jẹ awọn ẹya ara Tranzly Pro."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Àwọn ìtumọ̀ tí a fẹ́ràn (ọ̀kan fún ìlà kọ̀ọ̀kan: term = translation)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Ìgbékalẹ̀ Ìbáṣepọ̀"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Àìṣàyàn"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Aṣa ibùwọlé"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Tirẹ-ṣe-ti-o-wọ́pọ̀"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Àwọn ìlànà ìrísí (àwọn olùgbọ́, ohùn àmì-ọjà)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Fi ìtumọ pamọ"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "A bẹrẹ iṣẹ pẹlu %d awọn itumọ lati ṣe. O nṣiṣẹ ni abẹlẹ: o le pa oju-iwe yii."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "A tún ti gbé sínú àtòjọ."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Ó ń lọ"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Ti parẹ"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Ti fagile"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Túmọ̀ ní ìpìlẹ̀ adani"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Fi ẹ̀rọ ìtumọ sílẹ̀ ní tàbù Ìtumọ (Engines) ní àkọ́kọ́."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Tumọ gbogbo rẹ"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Sínú"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Pẹlu"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Èrò kọ̀ọ̀kan fún èdè rẹ̀"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Ṣe àtẹ̀jáde àwọn ìtumọ̀ náà (bí bẹ́ẹ̀ kọ́ a óò fi wọ́n pamọ́ gẹ́gẹ́ bí àkọọ́lẹ̀ àkọ́bẹ̀rẹ̀)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Fojú aisiye iye owo naa"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d àwọn atẹ̀jáde, %2$s àwọn álífábẹ̀tì. Iye owó fún ẹ̀rọ yìí kò mọ tẹ́lẹ̀."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "Àwọn ìfiránṣẹ́ %1$d, àwọn àlífábẹ̀tì %2$s: ó fẹ́rẹ̀ẹ́ jẹ́ $%3$s lórí àkántì ara rẹ."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Bẹrẹ titumọ"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Àwọn iṣẹ́"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Ko si awọn iṣẹ itumọ kankan sibẹṣẹ."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Iṣẹ %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d ninu %2$d ti a tumọ, %3$d kuna, %4$d foju fo (aabo tabi ti wa ni ede yẹn tẹlẹ)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Dúró iṣẹ yii"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Wo ohun ti o kuna ati idi rẹ̀"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Akoonu"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Èdè"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Kí ni ó ṣe aṣiṣe"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Gbọ̀ rẹ̀"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Àwọn kúlẹ̀kúlẹ̀"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Tun gbiyanju pẹlu"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Ẹrọ kan náà"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Tun gbiyanju"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Tumọ pẹlu ọwọ"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Àwọn èdè àti ètò"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Àwọn Ẹrọ"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Àwọn iṣẹ́ ìtumọ̀"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

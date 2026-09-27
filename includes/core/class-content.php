@@ -35,6 +35,13 @@ final class Content {
 	private const COPY_META = array( '_thumbnail_id', '_wp_page_template' );
 
 	/**
+	 * Marks a translation between its creation and its link: `<source id>:<language>`. A worker
+	 * killed in that window leaves the draft behind with this mark, and the next attempt adopts it
+	 * instead of making a second, orphaned copy.
+	 */
+	private const PENDING_META = '_tranzly_pending_translation';
+
+	/**
 	 * Hook the clean-up.
 	 *
 	 * @return void
@@ -160,24 +167,11 @@ final class Content {
 			$parent = Relations::translations( 'post', (int) $source->post_parent )[ $code ] ?? (int) $source->post_parent;
 		}
 
-		$new_id = wp_insert_post(
-			wp_slash(
-				array(
-					'post_type'      => $source->post_type,
-					'post_status'    => 'draft',
-					'post_title'     => $source->post_title,
-					'post_content'   => $source->post_content,
-					'post_excerpt'   => $source->post_excerpt,
-					'post_parent'    => $parent,
-					'menu_order'     => $source->menu_order,
-					'comment_status' => $source->comment_status,
-					'ping_status'    => $source->ping_status,
-					'post_password'  => $source->post_password,
-					'post_author'    => get_current_user_id() > 0 ? get_current_user_id() : (int) $source->post_author,
-				)
-			),
-			true
-		);
+		$marker = $source_id . ':' . $code;
+		$new_id = self::unfinished_translation( $marker );
+		if ( 0 === $new_id ) {
+			$new_id = self::insert_translation( $source, $parent, $marker );
+		}
 		if ( is_wp_error( $new_id ) ) {
 			return $new_id;
 		}
@@ -213,6 +207,7 @@ final class Content {
 			wp_delete_post( (int) $new_id, true );
 			return $linked;
 		}
+		delete_post_meta( (int) $new_id, self::PENDING_META );
 
 		/**
 		 * Fires after Tranzly creates a post translation.
@@ -310,5 +305,50 @@ final class Content {
 	 */
 	public static function on_deleted_term( $term_id ): void {
 		Relations::delete( 'term', (int) $term_id );
+	}
+
+	/**
+	 * The draft a killed worker left between creating a translation and linking it, if any.
+	 *
+	 * @param string $marker `<source id>:<language>`.
+	 * @return int The draft's ID, or 0.
+	 */
+	private static function unfinished_translation( string $marker ): int {
+		global $wpdb;
+		$id = (int) $wpdb->get_var(
+			$wpdb->prepare( 'SELECT post_id FROM %i WHERE meta_key = %s AND meta_value = %s ORDER BY post_id LIMIT 1', $wpdb->postmeta, self::PENDING_META, $marker )
+		);
+
+		return $id > 0 && null !== get_post( $id ) && array() === Relations::translations( 'post', $id ) ? $id : 0;
+	}
+
+	/**
+	 * Insert the draft copy of `$source`, marked as not yet linked.
+	 *
+	 * @param \WP_Post $source The original.
+	 * @param int      $parent_id The parent the copy gets.
+	 * @param string   $marker `<source id>:<language>`.
+	 * @return int|\WP_Error
+	 */
+	private static function insert_translation( \WP_Post $source, int $parent_id, string $marker ) {
+		return wp_insert_post(
+			wp_slash(
+				array(
+					'post_type'      => $source->post_type,
+					'post_status'    => 'draft',
+					'post_title'     => $source->post_title,
+					'post_content'   => $source->post_content,
+					'post_excerpt'   => $source->post_excerpt,
+					'post_parent'    => $parent_id,
+					'menu_order'     => $source->menu_order,
+					'comment_status' => $source->comment_status,
+					'ping_status'    => $source->ping_status,
+					'post_password'  => $source->post_password,
+					'meta_input'     => array( self::PENDING_META => $marker ),
+					'post_author'    => get_current_user_id() > 0 ? get_current_user_id() : (int) $source->post_author,
+				)
+			),
+			true
+		);
 	}
 }

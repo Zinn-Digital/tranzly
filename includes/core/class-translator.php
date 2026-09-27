@@ -10,6 +10,7 @@ declare( strict_types = 1 );
 namespace ZinnDigital\Tranzly\Core;
 
 use ZinnDigital\Tranzly\Engines\Engine;
+use ZinnDigital\Tranzly\Engines\Failure;
 use ZinnDigital\Tranzly\Engines\Registry;
 use ZinnDigital\Tranzly\Languages;
 
@@ -55,13 +56,13 @@ final class Translator {
 	 * @return int|\WP_Error The translation's ID.
 	 */
 	public static function translate_post( int $source_id, string $lang, string $engine_id = '', array $args = array() ) {
-		$engine = self::engine( $engine_id );
-		if ( is_wp_error( $engine ) ) {
-			return $engine;
-		}
 		$code = Languages::resolve( $lang );
 		if ( null === $code ) {
 			return new \WP_Error( 'tranzly_unknown_language', __( 'That language is not one of this site\'s languages.', 'tranzly' ), array( 'status' => 400 ) );
+		}
+		$chain = self::chain( $engine_id, $code );
+		if ( is_wp_error( $chain ) ) {
+			return $chain;
 		}
 		if ( ! Content::can_translate_post( $source_id ) ) {
 			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to translate this item.', 'tranzly' ), array( 'status' => 403 ) );
@@ -101,10 +102,12 @@ final class Translator {
 
 		$post     = get_post( $source_id );
 		$segments = self::post_segments( $post );
-		$result   = self::run( $engine, $segments, $source_lang, $code );
-		if ( is_wp_error( $result ) ) {
-			return $result;
+		$ran      = self::run( $chain, $segments, $source_lang, $code );
+		if ( is_wp_error( $ran ) ) {
+			return $ran;
 		}
+		$result = $ran['texts'];
+		$engine = $ran['engine'];
 
 		if ( null === $target ) {
 			$made = Content::create_post_translation( $source_id, $code );
@@ -169,13 +172,13 @@ final class Translator {
 	 * @return int|\WP_Error The translation's term ID.
 	 */
 	public static function translate_term( int $term_id, string $lang, string $engine_id = '', array $args = array() ) {
-		$engine = self::engine( $engine_id );
-		if ( is_wp_error( $engine ) ) {
-			return $engine;
-		}
 		$code = Languages::resolve( $lang );
 		if ( null === $code ) {
 			return new \WP_Error( 'tranzly_unknown_language', __( 'That language is not one of this site\'s languages.', 'tranzly' ), array( 'status' => 400 ) );
+		}
+		$chain = self::chain( $engine_id, $code );
+		if ( is_wp_error( $chain ) ) {
+			return $chain;
 		}
 		if ( ! Content::can_translate_term( $term_id ) ) {
 			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to translate this item.', 'tranzly' ), array( 'status' => 403 ) );
@@ -194,10 +197,12 @@ final class Translator {
 				'format' => 'html',
 			);
 		}
-		$result = self::run( $engine, $segments, $source_lang, $code );
-		if ( is_wp_error( $result ) ) {
-			return $result;
+		$ran = self::run( $chain, $segments, $source_lang, $code );
+		if ( is_wp_error( $ran ) ) {
+			return $ran;
 		}
+		$result = $ran['texts'];
+		$engine = $ran['engine'];
 
 		$slug = sanitize_title( $result['name'] ?? '' );
 		if ( null === $target ) {
@@ -325,45 +330,151 @@ final class Translator {
 	}
 
 	/**
-	 * Call the engine once per format and check it answered every key.
+	 * The engines to try, in order: the one named (a person chose it: no fallback), or the
+	 * language's chain from the settings (Pro: per-language engine, then the fallback list).
 	 *
-	 * @param Engine                                             $engine   The engine.
+	 * @param string $engine_id An engine id, or empty.
+	 * @param string $lang      Target language.
+	 * @return array<int, Engine>|\WP_Error
+	 */
+	public static function chain( string $engine_id, string $lang ) {
+		if ( '' !== $engine_id ) {
+			$one = self::engine( $engine_id );
+			return is_wp_error( $one ) ? $one : array( $one );
+		}
+		$chain = array();
+		foreach ( Engine_Settings::chain( $lang ) as $id ) {
+			$engine = Registry::instance()->get( $id );
+			if ( null !== $engine && $engine->is_configured() ) {
+				$chain[] = $engine;
+			}
+		}
+
+		return array() === $chain ? self::engine( '' ) : $chain;
+	}
+
+	/**
+	 * Translate segments: from memory where possible (Pro), the rest through the chain — each
+	 * engine within its monthly cap, the next one taking over when one fails (Pro).
+	 *
+	 * @param array<int, Engine>                                 $chain    Engines, in order.
 	 * @param array<string, array{text: string, format: string}> $segments The segments.
 	 * @param string                                             $source   Source language.
 	 * @param string                                             $target   Target language.
-	 * @return array<string, string>|\WP_Error
+	 * @return array{texts: array<string, string>, engine: Engine}|\WP_Error
 	 */
-	private static function run( Engine $engine, array $segments, string $source, string $target ) {
-		$by_format = array();
-		foreach ( $segments as $key => $segment ) {
-			$format                                = ( $segment['format'] ?? 'text' ) === 'html' ? 'html' : 'text';
-			$by_format[ $format ][ (string) $key ] = (string) $segment['text'];
-		}
+	private static function run( array $chain, array $segments, string $source, string $target ) {
+		$options = Glossary::options_for( $target );
 
 		/**
-		 * Filters the options passed to the engine (do-not-translate list, formality,
-		 * instructions — T2 fills these per language).
+		 * Filters the options passed to the engine (do-not-translate list, glossary, formality,
+		 * instructions).
 		 *
 		 * @param array<string, mixed> $options Options.
 		 * @param string               $target  The target language.
-		 * @param Engine               $engine  The engine.
+		 * @param Engine               $engine  The first engine of the chain.
 		 */
-		$options = (array) apply_filters( 'tranzly_engine_options', array(), $target, $engine );
+		$options = (array) apply_filters( 'tranzly_engine_options', $options, $target, $chain[0] );
 
+		$out      = array();
+		$missing  = array(); // format => key => text.
+		$reserved = array(); // key => memory key.
+		$memory   = Memory::enabled();
+		$keys     = array();
+		foreach ( $segments as $key => $segment ) {
+			$format = ( $segment['format'] ?? 'text' ) === 'html' ? 'html' : 'text';
+			$text   = (string) $segment['text'];
+			if ( $memory ) {
+				$keys[ (string) $key ] = Memory::key( $text, $format, $source, $target, $options );
+			}
+			$missing[ $format ][ (string) $key ] = $text;
+		}
+		if ( $memory ) {
+			$hits = Memory::lookup( array_values( $keys ) );
+			foreach ( $missing as $format => $texts ) {
+				foreach ( $texts as $key => $text ) {
+					if ( isset( $hits[ $keys[ $key ] ] ) ) {
+						$out[ $key ] = $hits[ $keys[ $key ] ];
+						unset( $missing[ $format ][ $key ] );
+					}
+				}
+			}
+			foreach ( $missing as $texts ) {
+				foreach ( $texts as $key => $text ) {
+					if ( ! Memory::reserve( $keys[ $key ], $source, $target ) ) {
+						foreach ( $reserved as $mine ) {
+							Memory::release( $mine );
+						}
+						return new \WP_Error( 'tranzly_memory_busy', __( 'The same text is being translated by another job right now; this item will use that answer.', 'tranzly' ), array( 'status' => 409 ) );
+					}
+					$reserved[ $key ] = $keys[ $key ];
+				}
+			}
+		}
+		$missing = array_filter( $missing );
+		if ( array() === $missing ) {
+			return array(
+				'texts'  => $out,
+				'engine' => $chain[0],
+			);
+		}
+
+		$last = null;
+		foreach ( $chain as $engine ) {
+			$cost = 0.0;
+			foreach ( $missing as $texts ) {
+				$cost += (float) ( $engine->estimate( $texts, $target )['cost_usd'] ?? 0 );
+			}
+			if ( Engine_Settings::over_cap( $engine->id(), $cost ) ) {
+				$last = Failure::make( Failure::CAP, $engine );
+				continue;
+			}
+			$answer = self::call( $engine, $missing, $source, $target, $options );
+			if ( is_wp_error( $answer ) ) {
+				$last = $answer;
+				continue;
+			}
+			Engine_Settings::add_spend( $engine->id(), $cost );
+			foreach ( $answer as $key => $translation ) {
+				$out[ $key ] = $translation;
+				if ( isset( $reserved[ $key ] ) ) {
+					Memory::store( $reserved[ $key ], $translation, $engine->id() );
+					unset( $reserved[ $key ] );
+				}
+			}
+
+			return array(
+				'texts'  => $out,
+				'engine' => $engine,
+			);
+		}
+
+		foreach ( $reserved as $mine ) {
+			Memory::release( $mine );
+		}
+
+		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this item.', 'tranzly' ), array( 'status' => 400 ) );
+	}
+
+	/**
+	 * One engine, once per format, checked to have answered every key.
+	 *
+	 * @param Engine                               $engine  The engine.
+	 * @param array<string, array<string, string>> $missing format => key => text.
+	 * @param string                               $source  Source language.
+	 * @param string                               $target  Target language.
+	 * @param array<string, mixed>                 $options Engine options.
+	 * @return array<string, string>|\WP_Error
+	 */
+	private static function call( Engine $engine, array $missing, string $source, string $target, array $options ) {
 		$out = array();
-		foreach ( $by_format as $format => $texts ) {
+		foreach ( $missing as $format => $texts ) {
 			$answer = $engine->translate( $texts, $source, $target, array( 'format' => $format ) + $options );
 			if ( is_wp_error( $answer ) ) {
 				return $answer;
 			}
-			$missing = array_diff_key( $texts, (array) $answer );
-			if ( array() !== $missing ) {
-				return new \WP_Error(
-					'tranzly_engine_incomplete',
-					/* translators: %s: a translation engine's name. */
-					sprintf( __( '%s did not return a translation for every part of this item. Nothing was changed.', 'tranzly' ), $engine->label() ),
-					array( 'status' => 502 )
-				);
+			if ( array() !== array_diff_key( $texts, (array) $answer ) ) {
+				return Failure::make( Failure::UNKNOWN, $engine, __( 'The engine did not return a translation for every part of this item. Nothing was changed.', 'tranzly' ) );
 			}
 			foreach ( $texts as $key => $unused ) {
 				$out[ $key ] = (string) $answer[ $key ];

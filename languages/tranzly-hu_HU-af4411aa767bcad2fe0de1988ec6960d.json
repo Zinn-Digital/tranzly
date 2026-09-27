@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-26T13:56:07+00:00",
+    "translation-revision-date": "2026-09-26T14:03:23+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -12,6 +12,9 @@
             },
             "Remove": [
                 "T\u00f6rl\u00e9s"
+            ],
+            "Open": [
+                "Megnyit\u00e1s"
             ],
             "About": [
                 "R\u00f3lunk"
@@ -87,6 +90,213 @@
             ],
             "Save settings": [
                 "Be\u00e1ll\u00edt\u00e1sok ment\u00e9se"
+            ],
+            "First engine that is set up": [
+                "Az els\u0151 be\u00e1ll\u00edtott motor"
+            ],
+            "Key saved. It is stored encrypted and never shown again.": [
+                "Kulcs elmentve. Titkos\u00edtva t\u00e1roljuk, \u00e9s soha t\u00f6bb\u00e9 nem jelenik meg."
+            ],
+            "Engine settings saved.": [
+                "A motorbe\u00e1ll\u00edt\u00e1sok elmentve."
+            ],
+            "Glossary saved.": [
+                "Sz\u00f3jegyz\u00e9k elmentve."
+            ],
+            "Your keys": [
+                "Kulcsai"
+            ],
+            "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings.": [
+                "A Tranzly a saj\u00e1t fi\u00f3kj\u00e1val h\u00edvja meg a ford\u00edt\u00e1si szolg\u00e1ltat\u00e1sokat. A kulcsok titkos\u00edtva vannak t\u00e1rolva az adatb\u00e1zis\u00e1ban, \u00e9s csak abba a szolg\u00e1ltat\u00e1sba ker\u00fclnek elk\u00fcld\u00e9sre, amelyikhez tartoznak. A mesters\u00e9gesintelligencia-modell kulcsai az AI-be\u00e1ll\u00edt\u00e1sokban vannak megadva."
+            ],
+            "%s API key": [
+                "%s API-kulcs"
+            ],
+            "Saved: %s. Enter a new key to replace it, or save an empty field to remove it.": [
+                "Mentve: %s. Adjon meg egy \u00faj kulcsot a lecser\u00e9l\u00e9s\u00e9hez, vagy mentse \u00fcresen a mez\u0151t az elt\u00e1vol\u00edt\u00e1s\u00e1hoz."
+            ],
+            "No key saved.": [
+                "Nincs mentett kulcs."
+            ],
+            "Azure region (leave empty for a global resource)": [
+                "Azure r\u00e9gi\u00f3 (hagyja \u00fcresen egy glob\u00e1lis er\u0151forr\u00e1shoz)"
+            ],
+            "Save key": [
+                "Kulcs ment\u00e9se"
+            ],
+            "Check my DeepL usage": [
+                "DeepL-haszn\u00e1lat ellen\u0151rz\u00e9se"
+            ],
+            "%1$s of %2$s characters used this billing period.": [
+                "%1$s \/ %2$s karakter felhaszn\u00e1lva ebben a sz\u00e1ml\u00e1z\u00e1si id\u0151szakban."
+            ],
+            "Which engine translates": [
+                "Melyik motor ford\u00edt"
+            ],
+            "No engine is set up yet. Save a key above (or set up an AI model) to start translating.": [
+                "M\u00e9g nincs be\u00e1ll\u00edtva motor. Mentse el a fenti kulcsot (vagy \u00e1ll\u00edtson be egy AI-modellt) a ford\u00edt\u00e1s megkezd\u00e9s\u00e9hez."
+            ],
+            "Default engine": [
+                "Alap\u00e9rtelmezett motor"
+            ],
+            "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
+                "A Tranzly Pro funkci\u00f3i k\u00f6z\u00e9 tartozik a nyelvenk\u00e9nti elt\u00e9r\u0151 motor, az automatikus visszal\u00e9p\u00e9s \u00e9s a havi kiad\u00e1si korl\u00e1t."
+            ],
+            "Engine for %s": [
+                "Motor ehhez: %s"
+            ],
+            "The default engine": [
+                "Az alap\u00e9rtelmezett motor"
+            ],
+            "If an engine fails or reaches a limit, try these next, in this order": [
+                "Ha egy motor meghib\u00e1sodik vagy el\u00e9ri a korl\u00e1tj\u00e1t, pr\u00f3b\u00e1lja meg a k\u00f6vetkez\u0151ket, ebben a sorrendben"
+            ],
+            "Monthly spending caps": [
+                "Havi k\u00f6lt\u00e9si limitek"
+            ],
+            "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap.": [
+                "Ha egy motor el\u00e9ri a korl\u00e1tj\u00e1t, a k\u00f6vetkez\u0151 h\u00f3napig semmit sem k\u00fcld\u00fcnk neki, \u00e9s a sikertelen ford\u00edt\u00e1sok jelent\u00e9se megadja az okot. Hagyja \u00fcresen a korl\u00e1t n\u00e9lk\u00fclis\u00e9ghez."
+            ],
+            "%1$s (spent this month: $%2$s)": [
+                "%1$s (ebben a h\u00f3napban elk\u00f6ltve: $%2$s)"
+            ],
+            "Save caps": [
+                "Sapka ment\u00e9se"
+            ],
+            "Glossary and words never translated": [
+                "Sz\u00f3jegyz\u00e9k \u00e9s soha le nem ford\u00edtott szavak"
+            ],
+            "Never translate these words (one per line)": [
+                "Ezeket a szavakat soha ne ford\u00edtsd le"
+            ],
+            "Brand and product names stay exactly as they are, with every engine.": [
+                "A m\u00e1rka- \u00e9s a term\u00e9knevek minden motorn\u00e1l pontosan \u00fagy maradnak, ahogy vannak."
+            ],
+            "Preferred translations and tone per language are Tranzly Pro features.": [
+                "A prefer\u00e1lt ford\u00edt\u00e1sok \u00e9s a hangnem nyelvenk\u00e9nt a Tranzly Pro funkci\u00f3i."
+            ],
+            "Preferred translations (one per line: term = translation)": [
+                "El\u0151nyben r\u00e9szes\u00edtett ford\u00edt\u00e1sok (soronk\u00e9nt egy: kifejez\u00e9s = ford\u00edt\u00e1s)"
+            ],
+            "Formality": [
+                "Alkalmazkod\u00e1s"
+            ],
+            "Default": [
+                "Alap\u00e9rtelmezett"
+            ],
+            "Formal": [
+                "Form\u00e1lis"
+            ],
+            "Informal": [
+                "Inform\u00e1lis"
+            ],
+            "Style instructions (audience, brand voice)": [
+                "St\u00edlusutas\u00edt\u00e1sok (c\u00e9lk\u00f6z\u00f6ns\u00e9g, m\u00e1rkahang)"
+            ],
+            "Save glossary": [
+                "Sz\u00f3jegyz\u00e9k ment\u00e9se"
+            ],
+            "Job started with %d translations to do. It runs in the background: you can close this page.": [
+                "A feladat elindult %d elv\u00e9gzend\u0151 ford\u00edt\u00e1ssal. A h\u00e1tt\u00e9rben fut: ezt az oldalt bebezheti."
+            ],
+            "Queued again.": [
+                "\u00dajra sorban \u00e1ll."
+            ],
+            "Running": [
+                "Fut\u00e1s alatt"
+            ],
+            "Finished": [
+                "K\u00e9sz"
+            ],
+            "Cancelled": [
+                "T\u00f6r\u00f6lve"
+            ],
+            "Translate in the background": [
+                "Ford\u00edt\u00e1s a h\u00e1tt\u00e9rben"
+            ],
+            "Set up a translation engine in the Engines tab first.": [
+                "El\u0151sz\u00f6r \u00e1ll\u00edtson be egy ford\u00edt\u00f3motort a Motorok lapon."
+            ],
+            "Translate every": [
+                "\u00d6sszes ford\u00edt\u00e1sa"
+            ],
+            "Into": [
+                "Ide"
+            ],
+            "With": [
+                "Ezzel:"
+            ],
+            "Each language\u2019s own engine": [
+                "Mindegyik nyelv saj\u00e1t motorja"
+            ],
+            "Publish the translations (otherwise they are saved as drafts)": [
+                "Tegye k\u00f6zz\u00e9 a ford\u00edt\u00e1sokat (k\u00fcl\u00f6nben v\u00e1zlatk\u00e9nt lesznek mentve)"
+            ],
+            "Estimate the cost": [
+                "K\u00f6lts\u00e9g becsl\u00e9se"
+            ],
+            "%1$d posts, %2$s characters. The price for this engine is not known in advance.": [
+                "%1$d bejegyz\u00e9s, %2$s karakter. Ennek a motornak az \u00e1ra el\u0151re nem ismert."
+            ],
+            "%1$d posts, %2$s characters: about $%3$s on your own account.": [
+                "%1$d bejegyz\u00e9s, %2$s karakter: mintegy $%3$s a saj\u00e1t fi\u00f3kj\u00e1n."
+            ],
+            "Start translating": [
+                "Ford\u00edt\u00e1s ind\u00edt\u00e1sa"
+            ],
+            "Jobs": [
+                "Feladatok"
+            ],
+            "No translation jobs yet.": [
+                "M\u00e9g nincsenek ford\u00edt\u00e1si feladatok."
+            ],
+            "Job %1$d \u2014 %2$s": [
+                "%1$d. feladat \u2014 %2$s"
+            ],
+            "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)": [
+                "%1$d \/ %2$d leford\u00edtva, %3$d sikertelen, %4$d kihagyva (v\u00e9dett vagy m\u00e1r szerepel abban a nyelven)"
+            ],
+            "Stop this job": [
+                "Feladat le\u00e1ll\u00edt\u00e1sa"
+            ],
+            "See what failed and why": [
+                "Tekintse meg, hogy mi \u00e9s mi\u00e9rt hi\u00fasult meg"
+            ],
+            "Content": [
+                "Tartalom"
+            ],
+            "Language": [
+                "Nyelv"
+            ],
+            "What went wrong": [
+                "Mi romlott el"
+            ],
+            "Fix it": [
+                "Jav\u00edt\u00e1s"
+            ],
+            "Details": [
+                "R\u00e9szletek"
+            ],
+            "Retry with": [
+                "\u00dajrapr\u00f3b\u00e1l\u00e1s ezzel:"
+            ],
+            "The same engine": [
+                "Ugyanaz a motor"
+            ],
+            "Retry": [
+                "\u00dajrapr\u00f3b\u00e1l\u00e1s"
+            ],
+            "Translate by hand": [
+                "K\u00e9zi ford\u00edt\u00e1s"
+            ],
+            "Languages and settings": [
+                "Nyelvek \u00e9s be\u00e1ll\u00edt\u00e1sok"
+            ],
+            "Engines": [
+                "Motorok"
+            ],
+            "Translation jobs": [
+                "Ford\u00edt\u00e1si feladatok"
             ]
         }
     }

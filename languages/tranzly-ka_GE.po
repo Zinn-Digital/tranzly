@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "გათიშული"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "გახსნა"
 
@@ -625,8 +626,9 @@ msgstr "შეზღუდვები და უფლებები შენ
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "ეს ენა ამ საიტის ენების სიაში არ არის."
 
@@ -845,8 +847,8 @@ msgstr "ჩამოთვალეთ მინიმუმ ერთი ენ
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "ამ ელემენტის თარგმნის უფლება არ გაქვთ."
 
@@ -855,11 +857,66 @@ msgstr "ამ ელემენტის თარგმნის უფლე
 msgid "This item already has a version in that language."
 msgstr "ამ ელემენტს უკვე აქვს ვერსია ამ ენაზე."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "ეს თარგმანის ძრავა ამ საიტზე მიუწვდომელია."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "თითოეულ ენაზე განსხვავებული ძრავები, ავტომატური სარეზერვო ასლი და ხარჯების ლიმიტი არის Tranzly Pro-ს ფუნქციები."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "თითოეული ენა უნდა იყოს საიტის ერთ-ერთი ენა ხელმისაწვდომი ძრავით."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "სარეზერვო სიაში შეიძლება მხოლოდ ხელმისაწვდომი ძრავები იყოს მითითებული."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "ყოველთვიური ლიმიტი არის თანხა US დოლარში, ნულის ან მეტის ოდენობით, ხელმისაწვდომი ძრავისთვის."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "ს სასურველი თარგმანები და ტონი თითოეული ენისთვის არის Tranzly Pro ფუნქცია. თარგმნის აკრძალული სიების ფუნქცია უფასოა."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "ლექსიკონის ჩანაწერები დაჯგუფებული უნდა იყოს საიტის ერთ-ერთი ენის მიხედვით."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "ტონი განისაზღვრება თითოეული საიტის ენის მიხედვით: ნაგულისხმევი ფორმალობა, მეტ-ნაკლებად, პლუს სურვილისამებრ ინსტრუქციები."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s-ის მნიშვნელობა არ შედის დაშვებულ ვარიანტებში."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "ფონური რიგი ამ საიტზე მიუწვდომელია."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "თარგმანის დავალება ეშვება იმ პირის სახელით, ვინც ის დაიწყო, ამიტომ მომხმარებელი შესული უნდა იყოს სისტემაში."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "ამ არჩევანში თარგმნის უფლება არ გაქვთ."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "ეს ელემენტი არ არის თარგმანის დავალების ნაწილი."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "თქვენ არ გაქვთ ამ თარგმანის შეცვლის უფლება."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "ამ ტექსტის თარგმნა აქ შეუძ�
 msgid "That media text cannot be translated here."
 msgstr "ამ მედია ტექსტის თარგმნა აქ შეუძლებელია."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "თარგმანი შეიძლება გამოქვეყნდეს ან შენახული იყოს დროებით ვერსიად."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "თქვენ არ გაქვთ ამ ტიპის კონტენტის გამოქვეყნების უფლება."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "ეს ელემენტი უკვე დაწერილია ამ ენაზე."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "თქვენ არ გაქვთ ამ თარგმანის შეცვლის უფლება."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ეს თარგმანი რედაქტირებულია ადამიანის მიერ (ან იმპორტირებულია), ამიტომ ის დაცულია. განბლოკეთ ის ხელახლა სათარგმნად."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "არცერთი თარგმანის ძრავა ჯერ არ არის დაყენებული. დაამატეთ ერთი მათგანის გასაღები Tranzly → Engines-ში."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "ეს თარგმანის ძრავა ამ საიტზე მიუწვდომელია."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ეს თარგმანის ძრავა ჯერ არ არის კონფიგურირებული: ჯერ დაამატეთ მისი გასაღები."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "ამ ტექსტს ახლავე თარგმნის სხვა დავალება; ეს ელემენტი გამოიყენებს იმ პასუხს."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "არცერთ თარგმანის ძრავას არ შეეძლო ამ ელემენტის მიღება."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "ძრავმა ამ ელემენტის ყველა ნაწილისთვის თარგმანი არ დააბრუნა. არაფერი შეცვლილა."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "AI მოდელი"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s-მა არ დააბრუნა თარგმანი ამ ელემენტის ყველა ნაწილისთვის. არაფერი შეცვლილა."
+msgid "AI model (%1$s %2$s)"
+msgstr "AI მოდელი (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s ამჟამად პრობლემებს აწყდება. სცადეთ მოგვიანებით, ან გამოიყენეთ სხვა ძრავი."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "თქვენი საიტი ვერ უკავშირდება %s. შეამოწმეთ, შეუძლია თუ არა მას გამავალი კავშირების დამყარება და სცადეთ თავიდან."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s-ma არ მიიღო თქვენი API გასაღები. შეამოწმეთ გასაღები Tranzly → Engines-ში."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "თქვენი %s ანგარიშის კვოტა ან ბალანსი ამოიწურა. შეავსეთ იგი ან გამოიყენეთ სხვა ძრავი."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s-მა მთხოვრა სიჩქარის შემცირება. ის ავტომატურად განმეორდება."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "ეს ტექსტი ძალიან გრძელია %s-ისთვის ერთბაშად. გაყავით შიგთავსი ან გამოიყენეთ სხვა ძრავა."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s-მა უარი თქვა ამ შიგთავსის თარგმანზე. სცადეთ სხვა ძრავი ან თარგმნეთ ხელით."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s არ თარგმნის ამ ენას. აირჩიეთ სხვა ძრავა მისთვის."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s-ის ამ თთვის ხარჯვის ლიმიტი მიღწეულია, ამიტომ მასში მეტი აღარ გაგზავნილა. გაზარდეთ ლიმიტი Tranzly → Engines-ში ან დაელოდეთ მომავალ თვეს."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "%s-ით თარგმნა ვერ მოხერხდა მიზეზის გამო, რომელიც Tranzly-მ ვერ ამოიცნო. დეტალები მოცემულია ქვემოთ."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1025,6 +1150,302 @@ msgstr "ბეტა ვერსიები შემოთავაზებ�
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "პარამეტრების შენახვა"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "პირველი ძრავა, რომელიც არის კონფიგურირებული"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "გასაღები შენახულია. იგი ინახება დაშიფრული სახით და ხელახლა აღარ გამოჩნდება."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "ძრავის პარამეტრები შენახულია."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "გლოსარი შენახულია."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "თქვენი გასაღებები"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly ახორციელებს თარგმნის სერვისების გამოძახებას თქვენი საკუთარი ანგარიშით. გასაღებები ინახება დაშიფრული სახით თქვენს მონაცემთა ბაზაში და იგზავნება მხოლოდ იმ სერვისთან, რომელსაც ისეკუთვნის. AI მოდელის გასაღებები მითითებულია AI პარამეტრებში."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API გასაღები"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "შენახულია: %s. ჩაწერეთ ახალი გასაღები მის შესაცვლელად, ან შეინახეთ ცარიელი ველი მის წასაშლელად."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "არცერთი გასაღები არ არის შენახული."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure რეგიონი (დატოვეთ ცარიელი გლობალური რურსისთვის)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "გასაღების შენახვა"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "DeepL გამოყენების შემოწმება"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "ამ საგადასახადო პერიოდში გამოყენებულია %1$s %2$s სიმბოლოდან."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "რომელი ენგი თარგმნის"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "არცერთი ძრავა ჯერ არ არის კონფიგურირებული. თარგმანის დასაწყებად შეინახეთ გასაღები ზემოთ (ან დააკონფიგურირეთ AI მოდელი)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "ნაგულისხმევი ძრავა"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "თითოეულ ენაზე განსხვავებული ძრავა, ავტომატური სარეზერვო ასლი და ყოველთვიური ხარჯების ლიმიტი არის Tranzly Pro-ს ფუნქციები."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "ძრავა %s-ისთვის"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "ნაგულისხმევი ძრავი"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "თუ ძრავა გაითიშა ან ლიმიტს მიაღწია, სცადეთ შემდეგი, ამ თანმიმდევრობით"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "ყოველთვიური ხარჯვის ლიმიტები"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "როდესაც ძრავა ლიმიტს მიაღწევს, მასთან მეტი აღარაფერი გაიგზავნება მომავალ თვემდე და თარგმანის წარუმატებლობის ანგარიში მიზეზს მიუთითებს. დატოვეთ ცარიელი ლიმიტის არარსებობისთვის."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ამ თვეში დახარჯულია: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Caps-ის შენახვა"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "გლოსარი და სიტყვები, რომლებიც არასდროს ითარგმნება"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "არასოდეს თარგმნოთ ეს სიტყვები (თითო თითო ხაზზე)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "ბრენდისა და პროდუქტის სახელები ზუსტად ისე რჩება, როგორც არის, ყველა ძრავისთვის."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Tranzly Pro ფუნქციაა სასურველი თარგმანებისა და ტონის მართვა თითოეული ენისთვის."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "სასურველი თარგმანები (თითო თითო ხაზზე: ტერმინი = თარგმანი)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "ფორმალურობა"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "ფორმალური"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "არაფორმალური"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "სტილის ინსტრუქციები (აუდიტორია, ბრენდის ხმა)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "გლოსარის შენახვა"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "დავალება დაიწყო შესასრულებელი %d თარგმანით. ის ფონურ რეჟიმში მუშაობს: შეგიძლიათ ეს გვერდი დახუროთ."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "ხელახლა რიგში."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "მუშაობს"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "დასრულებულია"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "გაუქმებული"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "ფონურ რეჟიმში თარგმნა"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "ჯერ დააინსტალირეთ თარგმნის ძრავა „ძრავების“ ჩანართში."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "ყველას თარგმნა"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "შორის"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "-ით"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "თtieuli ენის საკუთარი ძრავა"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "გამოაქვეყნეთ თარგმანები (წინააღმდეგ შემთხვევაში ისინი შეინახება შავიზნების სახით)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "ღირებულების შეფასება"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d პოსტი, %2$s სიმბოლო. ამ ძრავის ფასი წინასწარ უცნობია."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d პოსტი, %2$s სიმბოლო: დაახლოებით $%3$s თქვენს საკუთარ ანგარიშზე."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "თარგმანის დაწყება"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "დავალებები"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "ჯერ არ არის თარგმანის დავალებები."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "დავალება %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "თარგმნილია %1$d (%2$d-დან), წარუმატებელია: %3$d, გამოტოვებულია: %4$d (დაცული ან უკვე ამ ენაზეა)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "ამ საქმის შეჩერება"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "იხილეთ რა და რატომ ჩავარდა"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "შიგთავსი"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "ენა"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "რა ვერ მოხერხდა"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "გასწორება"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "დეტალები"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "ხელახლა ცდა ამით"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "იგივე ძრავა"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "თავიდან ცდა"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "ხელით თარგმნა"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "ენები და პარამეტრები"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "ძრავები"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "თარგმანის დავალებები"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

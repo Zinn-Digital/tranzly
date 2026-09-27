@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-26T13:56:07+00:00",
+    "translation-revision-date": "2026-09-26T14:03:23+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -12,6 +12,9 @@
             },
             "Remove": [
                 "\u79fb\u9664"
+            ],
+            "Open": [
+                "\u6253\u5f00"
             ],
             "About": [
                 "\u5173\u4e8e"
@@ -87,6 +90,213 @@
             ],
             "Save settings": [
                 "\u4fdd\u5b58\u8bbe\u7f6e"
+            ],
+            "First engine that is set up": [
+                "\u7b2c\u4e00\u4e2a\u914d\u7f6e\u7684\u5f15\u64ce"
+            ],
+            "Key saved. It is stored encrypted and never shown again.": [
+                "\u5bc6\u94a5\u5df2\u4fdd\u5b58\u3002\u7cfb\u7edf\u4f1a\u5c06\u5176\u52a0\u5bc6\u5b58\u50a8\uff0c\u4e14\u7edd\u4e0d\u4f1a\u518d\u6b21\u663e\u793a\u3002"
+            ],
+            "Engine settings saved.": [
+                "\u5f15\u64ce\u8bbe\u7f6e\u5df2\u4fdd\u5b58\u3002"
+            ],
+            "Glossary saved.": [
+                "\u5df2\u4fdd\u5b58\u8bcd\u6c47\u8868\u3002"
+            ],
+            "Your keys": [
+                "\u60a8\u7684\u5bc6\u94a5"
+            ],
+            "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings.": [
+                "Tranzly \u4f7f\u7528\u60a8\u81ea\u5df1\u7684\u8d26\u6237\u8c03\u7528\u7ffb\u8bd1\u670d\u52a1\u3002\u5bc6\u94a5\u5728\u6570\u636e\u5e93\u4e2d\u4ee5\u52a0\u5bc6\u65b9\u5f0f\u5b58\u50a8\uff0c\u4e14\u4ec5\u53d1\u9001\u81f3\u5176\u6240\u5c5e\u7684\u670d\u52a1\u3002AI \u6a21\u578b\u5bc6\u94a5\u5728 AI \u8bbe\u7f6e\u4e2d\u8fdb\u884c\u914d\u7f6e\u3002"
+            ],
+            "%s API key": [
+                "%s API \u5bc6\u94a5"
+            ],
+            "Saved: %s. Enter a new key to replace it, or save an empty field to remove it.": [
+                "\u5df2\u4fdd\u5b58\uff1a%s\u3002\u8bf7\u8f93\u5165\u65b0\u5bc6\u94a5\u8fdb\u884c\u66ff\u6362\uff0c\u6216\u4fdd\u5b58\u7a7a\u5b57\u6bb5\u4ee5\u5c06\u5176\u5220\u9664\u3002"
+            ],
+            "No key saved.": [
+                "\u672a\u4fdd\u5b58\u5bc6\u94a5\u3002"
+            ],
+            "Azure region (leave empty for a global resource)": [
+                "Azure \u533a\u57df\uff08\u7559\u7a7a\u5219\u8868\u793a\u5168\u5c40\u8d44\u6e90\uff09"
+            ],
+            "Save key": [
+                "\u4fdd\u5b58\u5bc6\u94a5"
+            ],
+            "Check my DeepL usage": [
+                "\u68c0\u67e5\u6211\u7684 DeepL \u4f7f\u7528\u60c5\u51b5"
+            ],
+            "%1$s of %2$s characters used this billing period.": [
+                "\u672c\u8ba1\u8d39\u5468\u671f\u5df2\u4f7f\u7528 %1$s \/ %2$s \u4e2a\u5b57\u7b26\u3002"
+            ],
+            "Which engine translates": [
+                "\u54ea\u4e2a\u5f15\u64ce\u8d1f\u8d23\u7ffb\u8bd1"
+            ],
+            "No engine is set up yet. Save a key above (or set up an AI model) to start translating.": [
+                "\u5c1a\u672a\u8bbe\u7f6e\u5f15\u64ce\u3002\u8bf7\u5728\u4e0a\u65b9\u4fdd\u5b58\u5bc6\u94a5\uff08\u6216\u8bbe\u7f6e AI \u6a21\u578b\uff09\u4ee5\u5f00\u59cb\u7ffb\u8bd1\u3002"
+            ],
+            "Default engine": [
+                "\u9ed8\u8ba4\u5f15\u64ce"
+            ],
+            "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
+                "\u6bcf\u4e2a\u8bed\u8a00\u4f7f\u7528\u4e0d\u540c\u7684\u5f15\u64ce\u3001\u81ea\u52a8\u56de\u9000\u4ee5\u53ca\u6bcf\u6708\u6d88\u8d39\u4e0a\u9650\u662f Tranzly Pro \u7684\u529f\u80fd\u3002"
+            ],
+            "Engine for %s": [
+                "%s \u5f15\u64ce"
+            ],
+            "The default engine": [
+                "\u9ed8\u8ba4\u5f15\u64ce"
+            ],
+            "If an engine fails or reaches a limit, try these next, in this order": [
+                "\u5982\u679c\u5f15\u64ce\u5931\u6548\u6216\u8fbe\u5230\u9650\u5236\uff0c\u8bf7\u6309\u4ee5\u4e0b\u987a\u5e8f\u4f9d\u6b21\u5c1d\u8bd5\uff1a"
+            ],
+            "Monthly spending caps": [
+                "\u6bcf\u6708\u6d88\u8d39\u4e0a\u9650"
+            ],
+            "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap.": [
+                "\u5f53\u5f15\u64ce\u8fbe\u5230\u5176\u4e0a\u9650\u65f6\uff0c\u76f4\u5230\u4e0b\u4e2a\u6708\u624d\u4f1a\u5411\u5176\u53d1\u9001\u66f4\u591a\u5185\u5bb9\uff0c\u4e14\u7ffb\u8bd1\u5931\u8d25\u62a5\u544a\u4f1a\u8bf4\u660e\u539f\u56e0\u3002\u7559\u7a7a\u5219\u8868\u793a\u4e0d\u8bbe\u4e0a\u9650\u3002"
+            ],
+            "%1$s (spent this month: $%2$s)": [
+                "%1$s\uff08\u672c\u6708\u5df2\u6d88\u8d39\uff1a$%2$s\uff09"
+            ],
+            "Save caps": [
+                "\u4fdd\u5b58\u5927\u5199\u5b57\u6bcd"
+            ],
+            "Glossary and words never translated": [
+                "\u672f\u8bed\u8868\u4e0e\u6c38\u4e0d\u7ffb\u8bd1\u7684\u8bcd\u6c47"
+            ],
+            "Never translate these words (one per line)": [
+                "\u6c38\u4e0d\u7ffb\u8bd1\u8fd9\u4e9b\u8bcd\uff08\u6bcf\u884c\u4e00\u4e2a\uff09"
+            ],
+            "Brand and product names stay exactly as they are, with every engine.": [
+                "\u54c1\u724c\u548c\u4ea7\u54c1\u540d\u79f0\u5728\u6240\u6709\u5f15\u64ce\u4e2d\u90fd\u4fdd\u6301\u539f\u6837\u3002"
+            ],
+            "Preferred translations and tone per language are Tranzly Pro features.": [
+                "\u9996\u9009\u7ffb\u8bd1\u548c\u6bcf\u79cd\u8bed\u8a00\u7684\u8bed\u8c03\u662f Tranzly Pro \u7684\u529f\u80fd\u3002"
+            ],
+            "Preferred translations (one per line: term = translation)": [
+                "\u9996\u9009\u7ffb\u8bd1\uff08\u6bcf\u884c\u4e00\u4e2a\uff1a\u672f\u8bed = \u7ffb\u8bd1\uff09"
+            ],
+            "Formality": [
+                "\u6b63\u5f0f\u7a0b\u5ea6"
+            ],
+            "Default": [
+                "\u9ed8\u8ba4"
+            ],
+            "Formal": [
+                "\u6b63\u5f0f"
+            ],
+            "Informal": [
+                "\u975e\u6b63\u5f0f"
+            ],
+            "Style instructions (audience, brand voice)": [
+                "\u98ce\u683c\u8bf4\u660e\uff08\u53d7\u4f17\u3001\u54c1\u724c\u8bed\u8c03\uff09"
+            ],
+            "Save glossary": [
+                "\u4fdd\u5b58\u8bcd\u6c47\u8868"
+            ],
+            "Job started with %d translations to do. It runs in the background: you can close this page.": [
+                "\u4efb\u52a1\u5df2\u5f00\u59cb\uff0c\u5171\u6709 %d \u4e2a\u7ffb\u8bd1\u5f85\u5904\u7406\u3002\u4efb\u52a1\u5728\u540e\u53f0\u8fd0\u884c\uff0c\u60a8\u53ef\u4ee5\u5173\u95ed\u6b64\u9875\u9762\u3002"
+            ],
+            "Queued again.": [
+                "\u5df2\u91cd\u65b0\u52a0\u5165\u961f\u5217\u3002"
+            ],
+            "Running": [
+                "\u8fd0\u884c\u4e2d"
+            ],
+            "Finished": [
+                "\u5df2\u5b8c\u6210"
+            ],
+            "Cancelled": [
+                "\u5df2\u53d6\u6d88"
+            ],
+            "Translate in the background": [
+                "\u5728\u540e\u53f0\u7ffb\u8bd1"
+            ],
+            "Set up a translation engine in the Engines tab first.": [
+                "\u8bf7\u5148\u5728\u201c\u5f15\u64ce\u201d\u6807\u7b7e\u9875\u4e2d\u8bbe\u7f6e\u7ffb\u8bd1\u5f15\u64ce\u3002"
+            ],
+            "Translate every": [
+                "\u5168\u90e8\u7ffb\u8bd1"
+            ],
+            "Into": [
+                "\u5bfc\u5165"
+            ],
+            "With": [
+                "\u5e26\u6709"
+            ],
+            "Each language\u2019s own engine": [
+                "\u6bcf\u79cd\u8bed\u8a00\u4e13\u5c5e\u7684\u5f15\u64ce"
+            ],
+            "Publish the translations (otherwise they are saved as drafts)": [
+                "\u53d1\u5e03\u7ffb\u8bd1\uff08\u5426\u5219\u5b83\u4eec\u5c06\u53e6\u5b58\u4e3a\u8349\u7a3f\uff09"
+            ],
+            "Estimate the cost": [
+                "\u4f30\u7b97\u8d39\u7528"
+            ],
+            "%1$d posts, %2$s characters. The price for this engine is not known in advance.": [
+                "%1$d \u7bc7\u5e16\u5b50\uff0c%2$s \u4e2a\u5b57\u7b26\u3002\u6b64\u5f15\u64ce\u7684\u4ef7\u683c\u672a\u77e5\u3002"
+            ],
+            "%1$d posts, %2$s characters: about $%3$s on your own account.": [
+                "%1$d \u7bc7\u6587\u7ae0\uff0c%2$s \u4e2a\u5b57\u7b26\uff1a\u60a8\u7684\u8d26\u6237\u5927\u7ea6\u9700\u8981 $%3$s\u3002"
+            ],
+            "Start translating": [
+                "\u5f00\u59cb\u7ffb\u8bd1"
+            ],
+            "Jobs": [
+                "\u4efb\u52a1"
+            ],
+            "No translation jobs yet.": [
+                "\u6682\u65e0\u7ffb\u8bd1\u4efb\u52a1\u3002"
+            ],
+            "Job %1$d \u2014 %2$s": [
+                "\u4f5c\u4e1a %1$d \u2014 %2$s"
+            ],
+            "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)": [
+                "\u5df2\u7ffb\u8bd1 %1$d \/ %2$d\uff0c\u5931\u8d25 %3$d\uff0c\u5df2\u8df3\u8fc7 %4$d\uff08\u53d7\u4fdd\u62a4\u6216\u5df2\u662f\u8be5\u8bed\u8a00\uff09"
+            ],
+            "Stop this job": [
+                "\u505c\u6b62\u6b64\u4f5c\u4e1a"
+            ],
+            "See what failed and why": [
+                "\u67e5\u770b\u5931\u8d25\u7684\u9879\u76ee\u53ca\u539f\u56e0"
+            ],
+            "Content": [
+                "\u5185\u5bb9"
+            ],
+            "Language": [
+                "\u8bed\u8a00"
+            ],
+            "What went wrong": [
+                "\u54ea\u91cc\u51fa\u9519\u4e86"
+            ],
+            "Fix it": [
+                "\u4fee\u590d"
+            ],
+            "Details": [
+                "\u8be6\u7ec6\u4fe1\u606f"
+            ],
+            "Retry with": [
+                "\u91cd\u8bd5\uff1a"
+            ],
+            "The same engine": [
+                "\u540c\u4e00\u5f15\u64ce"
+            ],
+            "Retry": [
+                "\u91cd\u8bd5"
+            ],
+            "Translate by hand": [
+                "\u624b\u52a8\u7ffb\u8bd1"
+            ],
+            "Languages and settings": [
+                "\u8bed\u8a00\u4e0e\u8bbe\u7f6e"
+            ],
+            "Engines": [
+                "\u5f15\u64ce"
+            ],
+            "Translation jobs": [
+                "\u7ffb\u8bd1\u4efb\u52a1"
             ]
         }
     }

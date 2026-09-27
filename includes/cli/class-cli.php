@@ -12,6 +12,7 @@ namespace ZinnDigital\Tranzly\Cli;
 use ZinnDigital\Tranzly\Core\Content;
 use ZinnDigital\Tranzly\Core\Legacy_Import;
 use ZinnDigital\Tranzly\Core\Network;
+use ZinnDigital\Tranzly\Core\Queue;
 use ZinnDigital\Tranzly\Core\Relations;
 use ZinnDigital\Tranzly\Core\Translator;
 use ZinnDigital\Tranzly\Engines\Registry;
@@ -396,6 +397,124 @@ final class Cli {
 			}
 		}
 		\WP_CLI::success( sprintf( '%d site(s) set up.', $count ) );
+	}
+
+	/**
+	 * Background translation jobs.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <action>
+	 * : create | status | failures | retry | cancel | run
+	 *
+	 * [<id>...]
+	 * : create: post IDs. status/failures/cancel/run: the job ID. retry: the item ID.
+	 *
+	 * [--lang=<codes>]
+	 * : create: languages, comma-separated.
+	 *
+	 * [--post-type=<type>]
+	 * : create: every post of this type in the default language.
+	 *
+	 * [--engine=<id>]
+	 * : create/retry: the engine (retry: try another one).
+	 *
+	 * [--publish]
+	 * : create: publish the translations.
+	 *
+	 * [--force]
+	 * : create: also overwrite protected translations.
+	 *
+	 * [--format=<format>]
+	 * : table, json or yaml.
+	 * ---
+	 * default: yaml
+	 * ---
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp tranzly jobs create --lang=de,fr --post-type=page --user=admin
+	 *     wp tranzly jobs status 12
+	 *     wp tranzly jobs failures 12
+	 *     wp tranzly jobs retry 345 --engine=deepl
+	 *     wp tranzly jobs run 12      # work the job here instead of waiting for the queue runner
+	 *
+	 * @param array<int, string>    $args  Positional.
+	 * @param array<string, string> $assoc Flags.
+	 * @return void
+	 */
+	public function jobs( array $args, array $assoc ): void {
+		$action = array_shift( $args ) ?? '';
+		$format = $assoc['format'] ?? 'yaml';
+		switch ( $action ) {
+			case 'create':
+				$langs = array();
+				foreach ( explode( ',', (string) ( $assoc['lang'] ?? '' ) ) as $wanted ) {
+					$code = self::language( trim( $wanted ) );
+					if ( null === $code ) {
+						\WP_CLI::error( sprintf( '"%s" is not one of this site\'s languages.', $wanted ) );
+					}
+					$langs[] = $code;
+				}
+				$ids = array_map( 'intval', $args );
+				if ( isset( $assoc['post-type'] ) ) {
+					$ids = array_merge( $ids, \ZinnDigital\Tranzly\Api\Rest_Jobs::sources_of_type( (string) $assoc['post-type'] ) );
+				}
+				$made = Queue::create(
+					$ids,
+					$langs,
+					(string) ( $assoc['engine'] ?? '' ),
+					array(
+						'status' => isset( $assoc['publish'] ) ? 'publish' : '',
+						'force'  => isset( $assoc['force'] ),
+					)
+				);
+				if ( is_wp_error( $made ) ) {
+					\WP_CLI::error( $made->get_error_message() );
+				}
+				\WP_CLI::success( sprintf( 'Job %d: %d item(s) queued%s.', $made['id'], $made['items'], $made['not_allowed'] > 0 ? sprintf( ', %d post(s) you may not translate left out', $made['not_allowed'] ) : '' ) );
+				return;
+			case 'status':
+				self::print( Queue::progress( (int) ( $args[0] ?? 0 ) ), $format );
+				return;
+			case 'failures':
+				$rows = Queue::failures( (int) ( $args[0] ?? 0 ) );
+				\WP_CLI\Utils\format_items( 'yaml' === $format ? 'table' : $format, $rows, array( 'item', 'post', 'lang', 'engine', 'class', 'message' ) );
+				return;
+			case 'retry':
+				$done = Queue::retry( (int) ( $args[0] ?? 0 ), (string) ( $assoc['engine'] ?? '' ) );
+				if ( is_wp_error( $done ) ) {
+					\WP_CLI::error( $done->get_error_message() );
+				}
+				\WP_CLI::success( 'Queued again.' );
+				return;
+			case 'cancel':
+				Queue::cancel( (int) ( $args[0] ?? 0 ) );
+				\WP_CLI::success( 'Cancelled.' );
+				return;
+			case 'run':
+				$job = (int) ( $args[0] ?? 0 );
+				do {
+					Queue::work( $job );
+					$progress = Queue::progress( $job );
+				} while ( null !== $progress && 'running' === $progress['status'] && ( $progress['counts']['queued'] + $progress['counts']['running'] ) > 0 && self::claimable_soon( $job ) );
+				self::print( Queue::progress( $job ), $format );
+				return;
+			default:
+				\WP_CLI::error( 'Use create, status, failures, retry, cancel or run.' );
+		}
+	}
+
+	/**
+	 * Is any queued item of a job due within a minute (so `run` should keep going)?
+	 *
+	 * @param int $job Job ID.
+	 * @return bool
+	 */
+	private static function claimable_soon( int $job ): bool {
+		global $wpdb;
+
+		return null !== $wpdb->get_var( $wpdb->prepare( "SELECT id FROM %i WHERE job_id = %d AND status IN ('queued','running') AND ( lease_until IS NULL OR lease_until <= %s ) LIMIT 1", \ZinnDigital\Tranzly\Core\Schema::tables()['items'], $job, gmdate( 'Y-m-d H:i:s', time() + 60 ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table; WP-CLI only.
 	}
 
 	/**

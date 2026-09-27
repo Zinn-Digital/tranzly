@@ -17,3 +17,32 @@
 	margin-inline-start: 0;
 	list-style: none;
 }
+
+// Engines and Translation jobs tabs (T2). Logical properties only (CLAUDE.md §2.7: RTL).
+.tranzly-admin__tabs .components-tab-panel__tab-content {
+	padding-block-start: 16px;
+}
+
+.tranzly-engines__key,
+.tranzly-engines__language,
+.tranzly-jobs__job {
+	margin-block-end: 24px;
+	padding-block-end: 16px;
+	border-block-end: 1px solid #dcdcde;
+}
+
+.tranzly-engines__pro {
+	color: #50575e;
+	font-style: italic;
+}
+
+.tranzly-engines__fallback,
+.tranzly-jobs fieldset {
+	margin-block: 12px;
+}
+
+.tranzly-jobs__failures td,
+.tranzly-jobs__failures th {
+	text-align: start;
+	vertical-align: top;
+}

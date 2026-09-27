@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "անջատված"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Բացել"
 
@@ -625,8 +626,9 @@ msgstr "Սահմանափակումները և թույլտվություններ
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Այդ լեզուն այս կայքի լեզուներից չէ:"
 
@@ -845,8 +847,8 @@ msgstr "Նշեք առնվազն մեկ լեզու:"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Դուք իրավունք չունեք թարգմանելու այս տարրը:"
 
@@ -855,11 +857,66 @@ msgstr "Դուք իրավունք չունեք թարգմանելու այս տ�
 msgid "This item already has a version in that language."
 msgstr "Այս տարրն արդեն ունի տարբերակ այդ լեզվով։"
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Այս կայքում թարգմանական շարժիչը հասանելի չէ:"
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Տարբեր շարժիչներ յուրաքանչյուր լեզվի համար, ավտոմատ պահուստային տարբերակ և ծախսերի սահմանաչափեր Tranzly Pro-ի հնարավորություններն են:"
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Յուրաքանչյուր լեզու պետք է լինի կայքի լեզուներից մեկը՝ հասանելի շարժիչով:"
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Resursen-ը պարունակում է միայն հասանելի շարժիչների անունները:"
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Ամսական սահմանաչափը հասանելի մշակման համակարգի համար նախատեսված գումար է US դոլարով (զրո կամ ավելի)։"
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Նախընտրվող թարգմանությունները և տոնը ըստ լեզվի Tranzly Pro հնարավորություններ են։ Չթարգմանվողների ցանկն անվճար է։"
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Բառարանի գրառումները պետք է խմբավորվեն կայքի լեզուներից մեկով:"
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Տոնայնությունը սահմանվում է ըստ կայքի լեզվի՝ լռելյայն պաշտոնականություն, ավելի կամ պակաս, գումարած՝ լրացուցիչ հրահանգներ:"
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s-ի արժեքը թույլատրված տարբերակներից չէ:"
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Ֆոնային հերթը հասանելի չէ այս կայքում:"
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Թարգմանության առաջադրանքն աշխատում է այն անձի փոխարեն, ով այն սկսում է, ուստի օգտատերը պետք է մուտք գործած լինի համակարգ:"
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Այդ ընտրության մեջ թարգմանելու ոչ մի բան չկա:"
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Այդ տարրը թարգմանական առաջադրանքի մաս չէ:"
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Ձեզ թույլատրված չէ փոխել այդ թարգմանությունը:"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Այդ տեքստն այստեղ չի կարող թարգմանվել:"
 msgid "That media text cannot be translated here."
 msgstr "Այդ մեդիատեքստը չի կարող թարգմանվել այստեղ:"
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Թարգմանությունը կարող է հրապարակվել կամ պահպանվել որպես սևագիր։"
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Դուք իրավունք չունեք հրապարակելու այս տեսակի բովանդակություն։"
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Այս տարրն արդեն գրված է այդ լեզվով:"
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Ձեզ թույլատրված չէ փոխել այդ թարգմանությունը:"
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Այս թարգմանությունը խմբագրվել է մարդու կողմից (կամ ներմուծվել), ուստի այն պաշտպանված է: Ապակողպեք այն՝ կրկին թարգմանելու համար:"
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ոև մի թարգմանական շարժիչ դեռ կարգավորված չէ։ Ավելացրեք դրանցից մեկի բանալին Tranzly → Engines բաժնում։"
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Այս կայքում թարգմանական շարժիչը հասանելի չէ:"
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Այդ թարգմանական շարժիչը դեռևս կարգավորված չէ. նախ ավելացրեք դրա բանալին:"
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Նույն տեքստը հենց հիմա թարգմանվում է մեկ այլ առաջադրանքի կողմից. այս տարրը կօգտագործի այդ պատասխանը:"
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Ոչ մի թարգմանական շարժիչ չկարողացավ վերցնել այս տարրը:"
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Շարժիչը չի վերադարձրել թարգմանություն այս տարրի յուրաքանչյուր մասի համար: Ոչինչ չի փոխվել:"
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "ԱԻ մոդել"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s-ը չի վերադարձրել այս տարրի բոլոր մասերի թարգմանությունը: Ոչինչ չի փոխվել:"
+msgid "AI model (%1$s %2$s)"
+msgstr "Արհեստական ​​բանականության մոդել (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s-ը ներկայումս խնդիրներ ունի: Փորձեք մի փոքր ուշ կամ օգտագործեք այլ շարժիչ:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Ձեր կայքը չկարողացավ միանալ %s: Ստուգեք, որ այն կարող է ելքային միացումներ կատարել, այնուհետև նորից փորձեք:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s-ը չընդունեց ձեր API բանալին: Ստուգեք բանալին Tranzly → Engines բաժնում:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "Ձեր %s հաշիվը սպառել է իր սահմանաչափը կամ մնացորդը: Համալրեք այն կամ օգտագործեք այլ շարժիչ:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s-ը խնդրեց դանդաղեցնել։ Այն կրկին կփորձարկվի ավտոմատ կերպով։"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Այս տեքստը չափազանց երկար է %s-ի համար՝ միանգամից մշակելու համար: Բաժանեք բովանդակությունը կամ օգտագործեք այլ շարժիչ:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s-ը հրաժարվեց թարգմանել այս բովանդակությունը: Փորձեք մեկ այլ շարժիչ կամ թարգմանեք ձեռքով:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s-ը չի թարգմանում այս լեզուն։ Ընտրեք այլ շարժիչ դրա համար։"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s-ի այս ամսվա ծախսերի սահմանաչափը հասել է, ուստի դրան այլևս ոչինչ չի ուղարկվել։ Բարձրացրեք սահմանաչափը Tranzly → Engines բաժնում կամ սպասեք մինչև հաջորդ ամիս:"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "%s-ի հետ թարգմանությունը ձախողվեց այն պատճառով, որ Tranzly-ն չկարողացավ պարզել: Մանրամասները ստորև են:"
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1025,6 +1150,302 @@ msgstr "Բետա տարբերակներն առաջարկվում են արտոն
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Պահպանել կարգավորումները"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Առաջին շարժիչը, որը կարգավորված է"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Բանալին պահպանված է: Այն պահվում է գաղտնագրված վիճակում և երբեք այլևս չի ցուցադրվում:"
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Շարժիչի կարգավորումները պահպանված են:"
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Բառարանը պահպանված է:"
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Ձեր բանալիները"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly-ն թարգմանական ծառայություններին կանչում է ձեր սեփական հաշվով: Բանալիները պահվում են գաղտնագրված ձեր տվյալների բազայում և երբեք չեն ուղարկվում բացի այն ծառայությանը, որին պատկանում են: AI մոդելի բանալիները սահմանվում են AI կարգավորումներում:"
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API բանալի"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Պահպանված է՝ %s։ Մուտքագրեք նոր բանալի այն փոխարինելու համար կամ պահպանեք դատարկ դաշտ՝ այն հեռացնելու համար։"
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Բանալի պահված չէ։"
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure տարածաշրջան (թողեք դատարկ գլոբալ ռեսուրսի համար)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Պահպանել բանալին"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "Ստուգել իմ DeepL-ի օգտագործումը"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "%1$s / %2$s նիշ օգտագործված է այս վճարային ժամանակահատվածում:"
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Ո՞ր շարժիչն է թարգմանում"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Որևէ շարժիչ դեռ կարգավորված չէ։ Թարգմանությունը սկսելու համար պահպանեք բանալին վերևում (կամ կարգավորեք արհեստական բանականության մոդել)։"
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Լռելյայն շարժիչ"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Յուրաքանչյուր լեզվի համար առանձին շարժիչը, ավտոմատ պահուստային տարբերակը և ամսական ծախսերի սահմանաչափերը Tranzly Pro-ի հնարավորություններն են։"
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Շարժիչ %s-ի համար"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Լռելյայն շարժիչը"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Եթե ​​շարժիչը խափանվում է կամ հասնում է սահմանաչափի, փորձեք սրանք հետևյալ հերթականությամբ՝"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Ամսական ծախսերի սահմանաչափեր"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Երբ շարժիչը հասնում է իր սահմանաչափին, մինչև հաջորդ ամիս դրան այլևս ոչինչ չի ուղարկվում, և թարգմանության ձախողման հաշվետվությունը ցույց է տալիս պատճառը: Թողեք դատարկ՝ առանց սահմանաչափի համար:"
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ծախսվել է այս ամիս՝ $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Պահպանել կափարիչները"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Բառարան և երբեք չթարգմանվող բառեր"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Երբեք մի թարգմանեք այս բառերը (յուրաքանչյուր տողում մեկը)"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Բրենդի և արտադրանքի անունները մնում են այնպես, ինչպես կան, յուրաքանչյուր շարժիչի դեպքում:"
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Նախընտրվող թարգմանությունները և տոնայնությունը ըստ լեզվի Tranzly Pro հնարավորություններ են։"
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Նախընտրելի թարգմանություններ (յուրաքանչյուր տողում մեկը՝ տերմին = թարգմանություն)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Ձևականություն"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Լռելյայն"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Պաշտոնական"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Ոչ պաշտոնական"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Ոճական հրահանգներ (լսարան, ապրանքանիշի ձայն)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Պահպանել բառարանը"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Աշխատանքը սկսվել է կատարելու %d թարգմանությամբ: Այն աշխատում է հետին պլանում. կարող եք փակել այս էջը:"
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Կրկին հերթում է։"
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Գործարկվում է"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Ավարտված է"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Չեղարկված"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Թարգմանել հետին պլանում"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Նախ կարգավորեք թարգմանական շարժիչ «Շարժիչներ» ներդիրում:"
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Թարգմանել բոլորը"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Մինչև"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Ավելացնել"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Յուրաքանչյուր լեզվի սեփական շարժիչը"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Հրապարակեք թարգմանությունները (հակառակ դեպքում դրանք կպահպանվեն որպես սևագիր)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Գնահատել արժեքը"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d գրառում, %2$s նիշ։ Այս շարժիչի գինը նախապես հայտնի չէ։"
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d գրառում, %2$s նիշ. մոտ $%3$s ձեր սեփական հաշվին:"
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Սկսել թարգմանությունը"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Աշխատանքներ"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Թարգմանչական առաջադրանքներ դեռ չկան։"
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "Առաջադրանք %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "Թարգմանված է %1$d-ը %2$d-ից, ձախողվել է՝ %3$d, բաց է թողնված՝ %4$d (պաշտպանված կամ արդեն այդ լեզվով)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Դադարեցնել այս աշխատանքը"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Տեսեք, թե ինչը ձախողվեց և ինչու"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Բովանդակություն"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Լեզու"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Ինչն է սխալ գնացել"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Շտկել այն"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Մանրամասներ"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Կրկին փորձել՝"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Նույն շարժիչը"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Կրկին փորձել"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Թարգմանել ձեռքով"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Լեզուներ և կարգավորումներ"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Շարժիչներ"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Թարգմանչական առաջադրանքներ"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

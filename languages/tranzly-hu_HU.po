@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "kikapcsolva"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Megnyitás"
 
@@ -625,8 +626,9 @@ msgstr "Korlátok és engedélyek elmentve."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Az a nyelv nem tartozik az oldal által támogatott nyelvek közé."
 
@@ -845,8 +847,8 @@ msgstr "Adjon meg legalább egy nyelvet."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Ezt az elemet nem fordíthatja le."
 
@@ -855,11 +857,66 @@ msgstr "Ezt az elemet nem fordíthatja le."
 msgid "This item already has a version in that language."
 msgstr "Ennek az elemnek már létezik változata az adott nyelven."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Ez a fordítómotor nem érhető el ezen a webhelyen."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "A nyelvenkénti különböző motorok, az automatikus visszalépés és a költségkeretek Tranzly Pro funkciók."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Minden nyelvnek a webhely egyik nyelvének kell lennie, elérhető motorral."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "A tartalék lista csak elérhető motorokat tartalmazhat."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "A havi korlát egy nulla vagy annál nagyobb, US-dollárban megadott összeg egy elérhető motorra vonatkozóan."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "A részenkénti előnyben részesített fordítások és a hangnem a Tranzly Pro funkciói. A nem fordítandó kifejezések listája ingyenes."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "A szójegyzék bejegyzéseit a webhely egyik nyelve szerint kell csoportosítani."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "A hangnem webhelynyelvenként van beállítva: alapértelmezett formalitás, többé-kevésbé, plusz választható utasítások."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "A(z) %s értéke nem szerepel az engedélyezett lehetőségek között."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "A háttérsor nem érhető el ezen a webhelyen."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "A fordítási feladatot az indító személy nevében futtatja a rendszer, ezért egy felhasználónak be kell lennie jelentkezve."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Ebben a kiválasztásban semmi sincs, amit lefordíthatna."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Az elem nem része a fordítási feladatnak."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Nem engedélyezett a fordítás módosítása."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Ez a szöveg itt nem fordítható le."
 msgid "That media text cannot be translated here."
 msgstr "Az a médiaszöveg itt nem fordítható le."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "A fordítás közzétehető vagy piszkozatként is menthető."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Nem engedélyezett ilyen típusú tartalom közzététele."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Ez az elem már le van fordítva annyira."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Nem engedélyezett a fordítás módosítása."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ezt a fordítást egy személy szerkesztette (vagy importálta), így védett. Oldja fel a zárolását az újbóli lefordításához."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Még nincs beállítva fordítómotor. Adjon hozzá egy kulcsot a Tranzly → Motorok menüpontban."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Ez a fordítómotor nem érhető el ezen a webhelyen."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Az a fordítómotor még nincs beállítva: először adja hozzá a kulcsát."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Ugyanezt a szöveget éppen egy másik feladat fordítja; ez az elem azt a választ fogja használni."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Egyik fordítómotor sem tudta átvenni ezt az elemet."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "A motor nem adott vissza fordítást a tétel minden részéhez. Semmi sem változott."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "MI-modell"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "A(z) %s nem adott vissza fordítást az elem minden részéhez. Semmi sem lett módosítva."
+msgid "AI model (%1$s %2$s)"
+msgstr "MI-modell (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s jelenleg problémákba ütközik. Próbálja meg újra rövidesen, vagy használjon másik motort."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "A webhelye nem tudta elérni a következőt: %s. Ellenőrizze, hogy képes-e kimenő kapcsolatokat létesíteni, majd próbálja újra."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s nem fogadta el az API-kulcsot. Ellenőrizze a kulcsot itt: Tranzly → Engines."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "A(z) %s fiókod kimerítette a keretét vagy az egyenlegét. Töltsd fel azt, vagy használj másik motort."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s azt kérte, hogy lassítsunk. A rendszer automatikusan újra megpróbálja."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Ez a szöveg túl hosszú a(z) %s számára egy lépésben. Ossza fel a tartalmat, vagy használjon másik motort."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s elutasította e tartalom lefordítását. Próbáljon meg egy másik motort, vagy fordítsa le kézzel."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "A %s nem fordítja ezt a nyelvet. Válasszon másik motort hozzá."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "Elérte a(z) %s ehavi költségkeretét, így további adatok küldésére nem került sor. Növelje a keretet itt: Tranzly → Engines, vagy várjon a következő hónapig."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "A(z) %s fordítás a(z) Tranzly által be nem azonosított ok miatt meghiúsult. A részletek alább láthatók."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "A béta verziók a licencelt Pro telepítések számára érhetők el, a
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Beállítások mentése"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Az első beállított motor"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Kulcs elmentve. Titkosítva tároljuk, és soha többé nem jelenik meg."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "A motorbeállítások elmentve."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Szójegyzék elmentve."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Kulcsai"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "A Tranzly a saját fiókjával hívja meg a fordítási szolgáltatásokat. A kulcsok titkosítva vannak tárolva az adatbázisában, és csak abba a szolgáltatásba kerülnek elküldésre, amelyikhez tartoznak. A mesterségesintelligencia-modell kulcsai az AI-beállításokban vannak megadva."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API-kulcs"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Mentve: %s. Adjon meg egy új kulcsot a lecseréléséhez, vagy mentse üresen a mezőt az eltávolításához."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Nincs mentett kulcs."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure régió (hagyja üresen egy globális erőforráshoz)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Kulcs mentése"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "DeepL-használat ellenőrzése"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "%1$s / %2$s karakter felhasználva ebben a számlázási időszakban."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Melyik motor fordít"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Még nincs beállítva motor. Mentse el a fenti kulcsot (vagy állítson be egy AI-modellt) a fordítás megkezdéséhez."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Alapértelmezett motor"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "A Tranzly Pro funkciói közé tartozik a nyelvenkénti eltérő motor, az automatikus visszalépés és a havi kiadási korlát."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "Motor ehhez: %s"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Az alapértelmezett motor"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Ha egy motor meghibásodik vagy eléri a korlátját, próbálja meg a következőket, ebben a sorrendben"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Havi költési limitek"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Ha egy motor eléri a korlátját, a következő hónapig semmit sem küldünk neki, és a sikertelen fordítások jelentése megadja az okot. Hagyja üresen a korlát nélküliséghez."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (ebben a hónapban elköltve: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Sapka mentése"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Szójegyzék és soha le nem fordított szavak"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Ezeket a szavakat soha ne fordítsd le"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "A márka- és a terméknevek minden motornál pontosan úgy maradnak, ahogy vannak."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "A preferált fordítások és a hangnem nyelvenként a Tranzly Pro funkciói."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Előnyben részesített fordítások (soronként egy: kifejezés = fordítás)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Alkalmazkodás"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Formális"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Informális"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Stílusutasítások (célközönség, márkahang)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Szójegyzék mentése"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "A feladat elindult %d elvégzendő fordítással. A háttérben fut: ezt az oldalt bebezheti."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Újra sorban áll."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Futás alatt"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Kész"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Törölve"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Fordítás a háttérben"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Először állítson be egy fordítómotort a Motorok lapon."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Összes fordítása"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Ide"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Ezzel:"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Mindegyik nyelv saját motorja"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Tegye közzé a fordításokat (különben vázlatként lesznek mentve)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Költség becslése"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d bejegyzés, %2$s karakter. Ennek a motornak az ára előre nem ismert."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d bejegyzés, %2$s karakter: mintegy $%3$s a saját fiókján."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Fordítás indítása"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Feladatok"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Még nincsenek fordítási feladatok."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "%1$d. feladat — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d / %2$d lefordítva, %3$d sikertelen, %4$d kihagyva (védett vagy már szerepel abban a nyelven)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Feladat leállítása"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Tekintse meg, hogy mi és miért hiúsult meg"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Tartalom"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Nyelv"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Mi romlott el"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Javítás"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Részletek"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Újrapróbálás ezzel:"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Ugyanaz a motor"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Újrapróbálás"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Kézi fordítás"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Nyelvek és beállítások"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Motorok"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Fordítási feladatok"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

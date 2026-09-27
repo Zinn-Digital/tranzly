@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "өшірілген"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Ашу"
 
@@ -625,8 +626,9 @@ msgstr "Лимиттер мен рұқсаттар сақталды."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Бұл тіл – бұл сайттың тілдерінің бірі емес."
 
@@ -845,8 +847,8 @@ msgstr "Kem дегенде бір тілді көрсетіңіз."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Бұл элементті аударуға рұқсат етілмеген."
 
@@ -855,11 +857,66 @@ msgstr "Бұл элементті аударуға рұқсат етілмеге
 msgid "This item already has a version in that language."
 msgstr "Бұл элементтің бұл тілдегі нұсқасы қазірдің өзінде бар."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Бұл аударма тетігі бұл сайтта қолжетімді емес."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Tranzly Pro мүмкіндіктеріне тілдер бойынша әртүрлі қозғалтқыштар, автоматты резервтік көшіру және шығындар шектеулері кіреді."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Әрбір тіл қолжетімді қозғалтқышы бар сайт тілдерінің бірі болуы тиіс."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Қосалқы тізім тек қолжетімді қозғалтқыштарды ғана атай алады."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Ай сайынғы лимит – бұл қолжетімді қозғалтқыш үшін US долларымен көрсетілген нөл немесе одан да көп сома."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Tranzly Pro мүмкіндіктеріне тіл бойынша қалаулы аудармалар мен тон кіреді. Аудармау тізімі тегін."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Сөздік жазбалары сайт тілдерінің бірі бойынша топтастырылуы тиіс."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Тон әр сайт тілі үшін жеке орнатылады: әдепкі ресмилік (көбірек немесе азырақ) және қосымша нұсқаулар."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s үшін мән рұқсат етілген нұсқалардың бірі емес."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Бұл сайтта фондық кезек қолжетімді емес."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Аударым жұмысы оны бастаған адамның атынан орындалады, сондықтан пайдаланушы жүйеге кірген болуы тиіс."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Бұл таңдауда аударуға рұқсат етілген ештеңе жоқ."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Бұл элемент аударма тапсырмасының бөлігі емес."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Бұл аударманы өзгертуге тыйым салынған."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Бұл мәтінді бұл жерде аудару мүмкін еме
 msgid "That media text cannot be translated here."
 msgstr "Бұл медиа мәтінді мұнда аудару мүмкін емес."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Аударманы жариялауға немесе жоба ретінде сақтауға болады."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Бұл түрдегі мазмұнды жариялауға рұқсат етілмейді."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Бұл элемент қазірдің өзінде сол тілде жазылған."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Бұл аударманы өзгертуге тыйым салынған."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Бұл аударма адам тарапынан өңделген (немесе импортталған), сондықтан ол қорғалған. Оны қайтадан аудару үшін құлпын ашыңыз."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Әзірге ешқандай аударма қозғалтқышы орнатылмаған. Tranzly → Engines бөлімінен оған арналған кілтті қосыңыз."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Бұл аударма тетігі бұл сайтта қолжетімді емес."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Бұл аударма қозғалтқышы әлі бапталған жоқ: алдымен оның кілтін қосыңыз."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Бұл мәтінді басқа тапсырма қазірдің өзінде аударып жатыр; бұл элемент сол жауапты пайдаланады."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Ешбір аударма жүйесі бұл элементті ала алмады."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Қозғалтқыш бұл элементтің әрбір бөлігі үшін аударманы қайтармады. Ештеңе өзгертілмеді."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "AI моделі"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s бұл элементтің әрбір бөлігі үшін аударманы қайтармады. Ештеңе өзгертілген жоқ."
+msgid "AI model (%1$s %2$s)"
+msgstr "AI моделі (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s жүйесінде қазір ақаулар орын алуда. Біраз уақыттан кейін қайта көріңіз немесе басқа қозғалтқышты пайдаланыңыз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Сіздің сайтыңыз %s мекенжайына қол жеткізе алмады. Шығыс қосылымдарды жасай алатынын тексеріп, қайтадан көріңіз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s API кілтіңізді қабылдамады. Tranzly → Engines бөлімінен кілтті тексеріңіз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "%s тіркелгіңіздің квотасы немесе балансы таусылды. Оны толықтырыңыз немесе басқа қозғалтқышты пайдаланыңыз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s бізге жылдамдықты бәсеңдетуді сұрады. Ол автоматты түрде қайта әрекет жасалады."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Бұл мәтін бір уақытта %s үшін тым ұзын. Мазмұнды бөліңіз немесе басқа қозғалтқышты пайдаланыңыз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s бұл мазмұнды аударудан бас тартты. Басқа қозғалтқышты қолданып көріңіз немесе оны қолмен аударыңыз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s бұл тілді аудармайды. Оған басқа қозғалтқышты таңдаңыз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s үшін осы айдағы шығындар шегіне жетті, сондықтан оған басқа ештеңе жіберілмеді. Tranzly → Engines бөлімінен шекті көтеріңіз немесе келесі айды күтіңіз."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "Tranzly анықтай алмаған себеп бойынша %s тіліндегі аударма сәтсіз аяқталды. Толық мәліметтер төменде берілген."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1025,6 +1150,302 @@ msgstr "Бета-нұсқалар өз тіркелгісіне қосылған
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Поonдарды сақтау"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Қатарынан бірінші болып бапталатын қозғалтқыш"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Кілт сақталды. Ол шифрланған түрде сақталады және қайтып ешқашан көрсетілмейді."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Қозғалтқыш параметрлері сақталды."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Сөздік сақталды."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Сіздің кілттеріңіз"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly аударма қызметтерін өзіңіздің жеке аккаунт арқылы шақырады. Кілттер дерекқорда шифрланған күйде сақталады және тек өзі тиесілі қызметке ғана жіберіледі. Жасанды интеллект модельдерінің кілттері AI параметрлерінде орнатылады."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API кілті"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Сақталды: %s. Оны ауыстыру үшін жаңа кілтті енгізіңіз немесе жою үшін өрісті бос күйінде сақтаңыз."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Ешбір кілт сақталмаған."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure аймағы (жаһандық ресурс үшін бос қалдырыңыз)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Кілтті сақтау"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "DeepL пайдалануды тексеру"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Бұл есеп айырысу кезеңінде %2$s таңбаның %1$s пайдаланылды."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Қай қозғалтқыш аударады"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Әзірге ешқандай қозғалтқыш орнатылмаған. Аударманы бастау үшін жоғарыдағы кілтті сақтаңыз (немесе AI үлгісін баптаңыз)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Әдепкі қозғалтқыш"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Әр тілге арналған бөлек қозғалтқыш, автоматты түрде қосалқы нұсқаға өту және ай сайынғы шығыс лимиттері — Tranzly Pro мүмкіндіктері."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "%s үшін қозғалтқыш"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Әдепкі қозғалтқыш"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Егер қозғалтқыш істен шықса немесе шектеуге жетсе, мыналарды келесі ретпен көріңіз"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Ай сайынгы шығындар шектері"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Қозғалтқыш өз лимитіне жеткенде, келесі айға дейін оған ештеңе жіберілмейді және сәтсіз аударма туралы есеп себебін көрсетеді. Лимит қоймау үшін бос қалдырыңыз."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (осы айда жұмсалғаны: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Бас әріптерді сақтау"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Сөздік және ешқашан аударылмайтын сөздер"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Бұл сөздерді ешқашан аудармаңыз"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Бренд пен өнім атаулары барлық қозғалтқыштарда дәл сол күйінде қалады."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Tranzly Pro мүмкіндіктеріне тіл бойынша таңдаулы аудармалар мен тон кіреді."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Қалас аудармалар (жолына біреуден: термин = аударма)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Формальділік"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Әдепкі көрсеткіш"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Ресми"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Бейресми"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Стиль нұсқаулары (санат, бренд дауысы)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Сөздікті сақтау"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "Жұмыс %d аудармамен басталды. Ол фонда жұмыс істейді: бұл бетті жабуға болады."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Қайта кезекке қойылды."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Жұмыс істеп тұр"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Аяқталды"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "Болдырылмаған"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Фон режиmінде аудару"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Алдымен «Қозғалтқыштар» қойындысында аударма қозғалтқышын орнатыңыз."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Барлығын аудару"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "Ішіне"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "Қатысуымен"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Әр тілдің өз қозғалтқышы"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Аудандарды жариялаңыз (әйтпесе олар жоба ретінде сақталады)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Құнын бағалау"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d жазба, %2$s таңба. Бұл қозғалтқыштың бағасы алдын ала белгісіз."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d жазба, %2$s таңба: өз аккаунтиңізде шамамен $%3$s."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Аударуды бастау"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "Тапсырмалар"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Әзірге аударма тапсырмалары жоқ."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "%1$d тапсырмасы — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d / %2$d аударылды, %3$d сәтсіз аяқталды, %4$d аттап өтілді (қорғалған немесе бұл тілде бұрыннан бар)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Бұл тапсырманы тоқтату"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Не сәтсіз болғанын және не үшін екенін көру"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "Мазмұн"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Тіл"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Не дұрыс болды"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Жөндеу"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Мәліметтер"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Қайта көру:"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Со сол қозғалтқыш"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Қайта көру"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Қолмен аудару"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Тілдер және параметрлер"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Моторлар"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Аударма тапсырмалары"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."

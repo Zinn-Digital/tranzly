@@ -340,6 +340,7 @@ msgid "turned off"
 msgstr "kapalı"
 
 #: includes/ai-core/class-admin.php:487
+#: src/admin/Jobs.js:426
 msgid "Open"
 msgstr "Aç"
 
@@ -625,8 +626,9 @@ msgstr "Sınırlar ve izinler kaydedildi."
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:242
-#: includes/core/class-translator.php:64
-#: includes/core/class-translator.php:176
+#: includes/core/class-queue.php:125
+#: includes/core/class-translator.php:61
+#: includes/core/class-translator.php:175
 msgid "That language is not one of this site's languages."
 msgstr "Bu dil, bu sitenin dillerinden biri değil."
 
@@ -845,8 +847,8 @@ msgstr "En az bir dil seçin."
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:245
-#: includes/core/class-translator.php:67
-#: includes/core/class-translator.php:179
+#: includes/core/class-translator.php:68
+#: includes/core/class-translator.php:182
 msgid "You are not allowed to translate this item."
 msgstr "Bu öğeyi çevirmenize izin verilmiyor."
 
@@ -855,11 +857,66 @@ msgstr "Bu öğeyi çevirmenize izin verilmiyor."
 msgid "This item already has a version in that language."
 msgstr "Bu öğenin zaten bu dilde bir versiyonu var."
 
+#: includes/core/class-engine-settings.php:65
+#: includes/core/class-translator.php:321
+msgid "That translation engine is not available on this site."
+msgstr "Bu çeviri motoru bu sitede kullanılmıyor."
+
+#: includes/core/class-engine-settings.php:71
+msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
+msgstr "Farklı diller için farklı motorlar, otomatik yedekleme ve harcama limitleri Tranzly Pro özellikleridir."
+
+#: includes/core/class-engine-settings.php:78
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr "Her dil, kullanılabilir bir motora sahip olan sitenin dillerinden biri olmalıdır."
+
+#: includes/core/class-engine-settings.php:88
+msgid "The fallback list may only name available engines."
+msgstr "Yedek liste yalnızca kullanılabilir motorları içerebilir."
+
+#: includes/core/class-engine-settings.php:97
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr "Aylık üst sınır, kullanılabilir bir motor için sıfır veya daha fazla olan US cinsinden bir tutardır."
+
+#: includes/core/class-glossary.php:65
+msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
+msgstr "Tercih edilen çeviriler ve dil başına ton, Tranzly Pro özellikleridir. Çevrilmeyecekler listesi ücretsizdir."
+
+#: includes/core/class-glossary.php:73
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr "Terimler sözlüğü girdileri, sitenin dillerinden birine göre gruplandırılmalıdır."
+
+#: includes/core/class-glossary.php:90
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
+msgstr "Ton, site diline göre ayarlanır: varsayılan resmiyet, az ya da çok ve isteğe bağlı talimatlar."
+
 #. translators: %s: a settings field name.
 #: includes/core/class-options.php:101
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s için girilen değer izin verilen seçeneklerden biri değil."
+
+#: includes/core/class-queue.php:116
+msgid "The background queue is not available on this site."
+msgstr "Bu sitede arka plan kuyruğu kullanılamıyor."
+
+#: includes/core/class-queue.php:119
+msgid "A translation job runs as the person who starts it, so a user must be signed in."
+msgstr "Bir çeviri işi onu başlatan kişinin yetkileriyle çalışır, bu nedenle bir kullanıcının oturum açmış olması gerekir."
+
+#: includes/core/class-queue.php:146
+msgid "There is nothing you are allowed to translate in that selection."
+msgstr "Bu seçimde çevirmenize izin verilen hiçbir şey yok."
+
+#: includes/core/class-queue.php:340
+#: includes/core/class-queue.php:387
+msgid "That item is not part of a translation job."
+msgstr "Bu öğe bir çeviri işinin parçası değildir."
+
+#: includes/core/class-queue.php:398
+#: includes/core/class-translator.php:86
+msgid "You are not allowed to change that translation."
+msgstr "Bu çeviriyi değiştirmenize izin verilmemektedir."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
 #: includes/core/class-relations.php:176
@@ -888,44 +945,112 @@ msgstr "Bu metin burada çevrilemez."
 msgid "That media text cannot be translated here."
 msgstr "Bu medya metni burada çevrilemez."
 
-#: includes/core/class-translator.php:71
+#: includes/core/class-translator.php:72
 msgid "A translation can be published or kept as a draft."
 msgstr "Bir çeviri yayınlanabilir veya taslak olarak saklanabilir."
 
-#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:76
 msgid "You are not allowed to publish this kind of content."
 msgstr "Bu tür içerikler yayımlamanıza izin verilmiyor."
 
-#: includes/core/class-translator.php:79
+#: includes/core/class-translator.php:80
 msgid "This item is already written in that language."
 msgstr "Bu öğe zaten bu dilde yazılmış."
 
-#: includes/core/class-translator.php:85
-msgid "You are not allowed to change that translation."
-msgstr "Bu çeviriyi değiştirmenize izin verilmemektedir."
-
-#: includes/core/class-translator.php:91
-#: includes/core/class-translator.php:185
+#: includes/core/class-translator.php:92
+#: includes/core/class-translator.php:188
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Bu çeviri bir kişi tarafından düzenlendiği (veya içe aktarıldığı) için koruma altındadır. Yeniden çevirmek için kilidini açın."
 
-#: includes/core/class-translator.php:316
+#: includes/core/class-translator.php:321
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Henüz hiçbir çeviri motoru ayarlanmadı. Tranzly → Engines bölümünden bir anahtar ekleyin."
 
-#: includes/core/class-translator.php:316
-msgid "That translation engine is not available on this site."
-msgstr "Bu çeviri motoru bu sitede kullanılmıyor."
-
-#: includes/core/class-translator.php:319
+#: includes/core/class-translator.php:324
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Bu çeviri motoru henüz ayarlanmadı: önce anahtarını ekleyin."
 
-#. translators: %s: a translation engine's name.
-#: includes/core/class-translator.php:362
+#: includes/core/class-translator.php:406
+msgid "The same text is being translated by another job right now; this item will use that answer."
+msgstr "Aynı metin şu anda başka bir iş tarafından çevriliyor; bu öğe bu yanıtı kullanacak."
+
+#: includes/core/class-translator.php:454
+msgid "No translation engine could take this item."
+msgstr "Hiçbir çeviri motoru bu öğeyi alamadı."
+
+#: includes/core/class-translator.php:475
+msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr "Motor, bu öğenin her kısmı için bir çeviri döndürmedi. Hiçbir şey değiştirilmedi."
+
+#: includes/engines/class-ai.php:65
+msgid "AI model"
+msgstr "Yapay zeka modeli"
+
+#. translators: 1: an AI provider, 2: a model name.
+#: includes/engines/class-ai.php:67
 #, php-format
-msgid "%s did not return a translation for every part of this item. Nothing was changed."
-msgstr "%s, bu öğenin her kısmı için bir çeviri döndürmedi. Hiçbir şey değiştirilmedi."
+msgid "AI model (%1$s %2$s)"
+msgstr "Yapay zeka modeli (%1$s %2$s)"
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:94
+#, php-format
+msgid "%s is having problems right now. Try again shortly, or use another engine."
+msgstr "%s şu anda sorun yaşıyor. Kısa süre içinde tekrar deneyin veya başka bir altyapı kullanın."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:97
+#, php-format
+msgid "Your site could not reach %s. Check that it can make outgoing connections, then try again."
+msgstr "Siteniz %s adresine ulaşamadı. Giden bağlantı kurabildiğinden emin olun ve tekrar deneyin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:100
+#, php-format
+msgid "%s did not accept your API key. Check the key in Tranzly → Engines."
+msgstr "%s API anahtarınızı kabul etmedi. Anahtarı Tranzly → Engines bölümünden kontrol edin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:103
+#, php-format
+msgid "Your %s account has used up its quota or balance. Top it up with them, or use another engine."
+msgstr "%s hesabınız kota veya bakiyesini doldurdu. Onlarla yükleme yapın veya başka bir motor kullanın."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:106
+#, php-format
+msgid "%s asked us to slow down. It will be tried again automatically."
+msgstr "%s yavaşlamamızı istedi. Otomatik olarak tekrar denenecektir."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:109
+#, php-format
+msgid "This text is too long for %s in one go. Split the content, or use another engine."
+msgstr "Bu metin, %s için tek seferde çok uzun. İçeriği bölün veya başka bir altyapı kullanın."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:112
+#, php-format
+msgid "%s refused to translate this content. Try another engine, or translate it by hand."
+msgstr "%s bu içeriği çevirmeyi reddetti. Başka bir motor deneyin veya elle çevirin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:115
+#, php-format
+msgid "%s does not translate this language. Choose another engine for it."
+msgstr "%s bu dili çevirmiyor. Bunun için başka bir motor seçin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:118
+#, php-format
+msgid "This month's spending cap for %s is reached, so nothing more was sent to it. Raise the cap in Tranzly → Engines, or wait until next month."
+msgstr "%s için bu ayki harcama sınırına ulaşıldı, bu nedenle kendisine başka bir şey gönderilmedi. Tranzly → Engines bölümünden sınırı yükseltin veya gelecek ayı bekleyin."
+
+#. translators: %s: a translation service's name.
+#: includes/engines/class-failure.php:121
+#, php-format
+msgid "The translation with %s failed for a reason Tranzly could not identify. The details are below."
+msgstr "%s ile çeviri, Tranzly'nin tanımlayamadığı bir nedenle başarısız oldu. Ayrıntılar aşağıdadır."
 
 #: includes/engines/class-registry.php:76
 msgid "An engine id must be lowercase letters, digits and hyphens."
@@ -1024,6 +1149,302 @@ msgstr "Beta sürümleri, hesaplarına bağlı olan lisanslı Pro kurulumlarına
 #: src/admin/App.js:255
 msgid "Save settings"
 msgstr "Ayarları kaydet"
+
+#: src/admin/Engines.js:82
+msgid "First engine that is set up"
+msgstr "Kurulan ilk motor"
+
+#: src/admin/Engines.js:105
+msgid "Key saved. It is stored encrypted and never shown again."
+msgstr "Anahtar kaydedildi. Şifrelenmiş olarak saklanır ve bir daha asla gösterilmez."
+
+#: src/admin/Engines.js:115
+msgid "Engine settings saved."
+msgstr "Motor ayarları kaydedildi."
+
+#: src/admin/Engines.js:137
+msgid "Glossary saved."
+msgstr "Sözlük kaydedildi."
+
+#: src/admin/Engines.js:158
+msgid "Your keys"
+msgstr "Anahtarlarınız"
+
+#: src/admin/Engines.js:160
+msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
+msgstr "Tranzly, çeviri servislerini kendi hesabınızla çağırır. Anahtarlar veritabanınızda şifrelenmiş olarak saklanır ve yalnızca ait oldukları servise gönderilir. Yapay zeka model anahtarları, yapay zeka ayarlarında belirlenir."
+
+#. translators: %s: a translation service's name.
+#: src/admin/Engines.js:178
+#, js-format
+msgid "%s API key"
+msgstr "%s API anahtarı"
+
+#. translators: %s: the last characters of a saved key, masked.
+#: src/admin/Engines.js:185
+#, js-format
+msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
+msgstr "Kaydedildi: %s. Değiştirmek için yeni bir anahtar girin veya kaldırmak için alanı boş bırakarak kaydedin."
+
+#: src/admin/Engines.js:191
+msgid "No key saved."
+msgstr "Kayıtlı anahtar yok."
+
+#: src/admin/Engines.js:204
+msgid "Azure region (leave empty for a global resource)"
+msgstr "Azure bölgesi (genel kaynak için boş bırakın)"
+
+#: src/admin/Engines.js:218
+msgid "Save key"
+msgstr "Anahtarı kaydet"
+
+#: src/admin/Engines.js:226
+msgid "Check my DeepL usage"
+msgstr "DeepL kullanımımi kontrol et"
+
+#. translators: 1: characters used, 2: the account's limit.
+#: src/admin/Engines.js:236
+#, js-format
+msgid "%1$s of %2$s characters used this billing period."
+msgstr "Bu faturalandırma döneminde %1$s / %2$s karakter kullanıldı."
+
+#: src/admin/Engines.js:250
+msgid "Which engine translates"
+msgstr "Hangi motor çeviriyor"
+
+#: src/admin/Engines.js:255
+msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
+msgstr "Henüz hiçbir motor ayarlanmadı. Çeviriye başlamak için yukarıya bir anahtar kaydedin (veya bir yapay zeka modeli ayarlayın)."
+
+#: src/admin/Engines.js:263
+msgid "Default engine"
+msgstr "Varsayılan altyapı"
+
+#: src/admin/Engines.js:272
+msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
+msgstr "Her dil için farklı bir motor, otomatik yedekleme ve aylık harcama limitleri Tranzly Pro özellikleridir."
+
+#. translators: %s: a language name.
+#: src/admin/Engines.js:285
+#, js-format
+msgid "Engine for %s"
+msgstr "%s için Altyapı"
+
+#: src/admin/Engines.js:294
+msgid "The default engine"
+msgstr "Varsayılan altyapı"
+
+#: src/admin/Engines.js:315
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr "Bir motor arızalanırsa veya bir sınıra ulaşırsa, sırasıyla şunları deneyin"
+
+#: src/admin/Engines.js:348
+msgid "Monthly spending caps"
+msgstr "Aylık harcama limitleri"
+
+#: src/admin/Engines.js:352
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr "Bir motor sınırına ulaştığında, sonraki aya kadar ona başka bir şey gönderilmez ve başarısız çeviri raporu bunun nedenini belirtir. Sınır koymamak için boş bırakın."
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/admin/Engines.js:366
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr "%1$s (bu ay harcanan: $%2$s)"
+
+#: src/admin/Engines.js:395
+msgid "Save caps"
+msgstr "Kapsamlıları kaydet"
+
+#: src/admin/Engines.js:402
+msgid "Glossary and words never translated"
+msgstr "Terimler ve asla çevrilmeyen kelimeler"
+
+#: src/admin/Engines.js:410
+msgid "Never translate these words (one per line)"
+msgstr "Bu kelimeleri asla çevirme"
+
+#: src/admin/Engines.js:414
+msgid "Brand and product names stay exactly as they are, with every engine."
+msgstr "Marka ve ürün adları, her motorla tamamen aynı kalır."
+
+#: src/admin/Engines.js:425
+msgid "Preferred translations and tone per language are Tranzly Pro features."
+msgstr "Tercih edilen çeviriler ve dil başına ton, Tranzly Pro özellikleridir."
+
+#: src/admin/Engines.js:440
+msgid "Preferred translations (one per line: term = translation)"
+msgstr "Tercih edilen çeviriler (her satırda bir tane: terim = çeviri)"
+
+#: src/admin/Engines.js:460
+msgid "Formality"
+msgstr "Resmiyet"
+
+#: src/admin/Engines.js:468
+msgid "Default"
+msgstr "Varsayılan"
+
+#: src/admin/Engines.js:475
+msgid "Formal"
+msgstr "Resmi"
+
+#: src/admin/Engines.js:482
+msgid "Informal"
+msgstr "Resmi Değil"
+
+#: src/admin/Engines.js:505
+msgid "Style instructions (audience, brand voice)"
+msgstr "Biçim yönergeleri (hedef kitle, marka sesi)"
+
+#: src/admin/Engines.js:537
+msgid "Save glossary"
+msgstr "Sözlüğü kaydet"
+
+#. translators: %d: how many post/language pairs the job holds.
+#: src/admin/Jobs.js:133
+#, js-format
+msgid "Job started with %d translations to do. It runs in the background: you can close this page."
+msgstr "İş, yapılacak %d çeviriyle başlatıldı. Arka planda çalışıyor: bu sayfayı kapatabilirsiniz."
+
+#: src/admin/Jobs.js:164
+msgid "Queued again."
+msgstr "Tekrar kuyruğa alındı."
+
+#: src/admin/Jobs.js:188
+msgid "Running"
+msgstr "Çalışıyor"
+
+#: src/admin/Jobs.js:189
+msgid "Finished"
+msgstr "Tamamlandı"
+
+#: src/admin/Jobs.js:190
+msgid "Cancelled"
+msgstr "İptal Edildi"
+
+#: src/admin/Jobs.js:205
+msgid "Translate in the background"
+msgstr "Arka planda çevir"
+
+#: src/admin/Jobs.js:210
+msgid "Set up a translation engine in the Engines tab first."
+msgstr "Önce Motorlar sekmesinden bir çeviri motoru ayarlayın."
+
+#: src/admin/Jobs.js:219
+msgid "Translate every"
+msgstr "Tümünü çevir"
+
+#: src/admin/Jobs.js:230
+msgid "Into"
+msgstr "İçine"
+
+#: src/admin/Jobs.js:258
+msgid "With"
+msgstr "İle"
+
+#: src/admin/Jobs.js:263
+msgid "Each language’s own engine"
+msgstr "Her dilin kendi motoru"
+
+#: src/admin/Jobs.js:279
+msgid "Publish the translations (otherwise they are saved as drafts)"
+msgstr "Çevirileri yayınlayın (aksi takdirde taslak olarak kaydedilir)"
+
+#: src/admin/Jobs.js:293
+msgid "Estimate the cost"
+msgstr "Maliyeti hesapla"
+
+#. translators: 1: number of posts, 2: characters.
+#: src/admin/Jobs.js:300
+#, js-format
+msgid "%1$d posts, %2$s characters. The price for this engine is not known in advance."
+msgstr "%1$d gönderi, %2$s karakter. Bu motorun fiyatı önceden bilinmemektedir."
+
+#. translators: 1: number of posts, 2: characters, 3: an amount in US dollars.
+#: src/admin/Jobs.js:309
+#, js-format
+msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
+msgstr "%1$d gönderi, %2$s karakter: kendi hesabınızda yaklaşık $%3$s."
+
+#: src/admin/Jobs.js:327
+msgid "Start translating"
+msgstr "Çeviriye başla"
+
+#: src/admin/Jobs.js:333
+msgid "Jobs"
+msgstr "İşler"
+
+#: src/admin/Jobs.js:335
+msgid "No translation jobs yet."
+msgstr "Henüz çeviri görevi yok."
+
+#. translators: 1: job number, 2: job status.
+#: src/admin/Jobs.js:343
+#, js-format
+msgid "Job %1$d — %2$s"
+msgstr "İş %1$d — %2$s"
+
+#. translators: 1: translated, 2: total, 3: failed, 4: skipped.
+#: src/admin/Jobs.js:350
+#, js-format
+msgid "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)"
+msgstr "%1$d / %2$d çevrildi, %3$d başarısız oldu, %4$d atlandı (korumalı veya zaten bu dilde)"
+
+#: src/admin/Jobs.js:367
+msgid "Stop this job"
+msgstr "Bu görevi durdur"
+
+#: src/admin/Jobs.js:375
+msgid "See what failed and why"
+msgstr "Neyin başarısız olduğunu ve nedenini görün"
+
+#: src/admin/Jobs.js:389
+msgid "Content"
+msgstr "İçerik"
+
+#: src/admin/Jobs.js:392
+msgid "Language"
+msgstr "Dil"
+
+#: src/admin/Jobs.js:395
+msgid "What went wrong"
+msgstr "Ne yanlış gitti"
+
+#: src/admin/Jobs.js:401
+msgid "Fix it"
+msgstr "Düzelt"
+
+#: src/admin/Jobs.js:436
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: src/admin/Jobs.js:450
+msgid "Retry with"
+msgstr "Şununla yeniden dene"
+
+#: src/admin/Jobs.js:462
+msgid "The same engine"
+msgstr "Aynı motor"
+
+#: src/admin/Jobs.js:490
+msgid "Retry"
+msgstr "Yeniden Dene"
+
+#: src/admin/Jobs.js:501
+msgid "Translate by hand"
+msgstr "Elden çevir"
+
+#: src/admin/Root.js:23
+msgid "Languages and settings"
+msgstr "Diller ve ayarlar"
+
+#: src/admin/Root.js:25
+msgid "Engines"
+msgstr "Altyapılar"
+
+#: src/admin/Root.js:26
+msgid "Translation jobs"
+msgstr "Çeviri işleri"
 
 #: src/editor/index.js:17
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
