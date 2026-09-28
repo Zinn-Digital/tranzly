@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® хариу өгсөн боловч энэ залгаас ойлгох холболтоор хариулаагүй байна. Юу ч хадгалагдсангүй."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Энэ сайт холболтоо мартжээ. Zinn Digital®-д яг одоо мэдэгдэх боломжгүй байсан тул дэмжлэгийн ажилтнууд үүнийг өөрсдийн талаасаа устгах хүртэл ашиглагдаагүй гэж үзэх болно."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Энэ сайтын ашиглахаар тохируулсан Zinn Digital® хаяг нь аюулгүй (https) хаяг биш тул юу ч илгээгдсэнгүй."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "Энэ сайт дээрээс Zinn Digital®-тэй холбогдох боломжгүй байна. Сайт гадагшаа холболт үүсгэж чадаж байгаа эсэхийг шалгаад дахин оролдоно уу."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Энэ сайтын Zinn Digital® руу холбогдох холболтыг цуцалсан байна. Үргэлжлүүлэхийн тулд дахин холбоно уу."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® энэ сайтын холболтыг цаашид хүлээн зөвшөөрөхгүй. Үргэлжлүүлэхийн тулд дахин холбоно уу."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Энэхүү сайт эсвэл хаягаас хэт олон хүсэлт илгээгдсэн байна. Түр хүлээгээд дахин оролдоно уу."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® энэ хүсэлтийг хүлээж авч чадсангүй. Имэйл хаяг болон мессежээ шалгаад дахин оролдоно уу."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® хүсэлтийг яг одоо боловсруулах боломжгүй байна. Хэдэн минутын дараа дахин оролдоно уу."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "Энэ сайтод лиценз олгох үйлчилгээ боломжгүй байна."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "Энд туршилтыг эхлүүлэх боломжгүй байна. Үүний оронд туршилтын хуудас дээр үргэлжлүүлнэ үү."
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Хэл тус бүрд нэг нийтлэл, хооронд нь холбосон"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Таны хуучин Tranzly орчуулгыг хадгална"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Фоноор орчуулах"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "WordPress болон PHP-ийн хамгийн сүүлийн үеийн хувилбар, хувилбар бүрээр туршигдсан"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Зураг төслөөрх аюулгүй байдал"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "58 хэл дээрх интерфэйс, баруунаас зүүн тийш бичих системд бэлэн"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Хязгааргүй хэлнүүд"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (одоогийн интеграцчилал, хадгалагдсан)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "Өөрийн түлхүүр бүхий AI загварууд"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation болон Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Хэл тус бүрд өөр хөдөлгүүр"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Автомат нөөцөд шилжих"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Эхлэхээс өмнөх үнийн тооцоо"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Орчуулгын санах ой"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Хөдөлгүүр бүрийн үгийн тайлбар болон орчуулахгүй жагсаалт"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Өнгө аяс болон хэв маягийн зааварчилгаа"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Нийтлэл, хуудас болон захиалгат нийтлэлийн төрлүүд"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Аюулгүйгээр орчуулагдсан блокууд"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Ангилал, шошго болон захиалгат таксономиуд"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Цэсүүд"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich хуудсууд"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen болон WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: бүх зүйл"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "SEO-ийн дөрвөн том залгаасад зориулсан SEO талбарууд"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Хувийн талбарууд"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Загвар болон залгаасны текст (мөрүүд)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Медиа"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Блокын загварууд: загвар болон хэв маяг"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Виджетүүд болон сайтын гарчиг/уриа үг"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Нэг товшилтоор нэг нийтлэлийг орчуулах"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "Бүх сайтыг бөөнөөр орчуулах"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Шинэ болон шинэчлэгдсэн агуулгыг автоматаар орчуулах"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Хажуугаар нь харьцуулж орчуулах засварлагч"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Визуал фронтенд засварлагч"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "Хянан батлах"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "Хүний орчуулагчдад зориулсан экспорт ба импорт"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "WPML, Polylang эсвэл TranslatePress-ээс шилжих"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Орчуулгын төлөв байдлын самбар"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "URL дэх хэл: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Хэл тус бүрээр дэд домэйн эсвэл тусдаа домэйнүүд"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Орчуулсан хаягууд"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang шошго, зөв хийгдсэн"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Хрүсэлт гаргасан сайт map-ууд"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "Зөв хэл болон каноник тагууд"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "Орчуулагдаагүй хуудаснуудыг хайлтын системээс нуух"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "Зочны хэлийг санал болгох"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Блок засварлагчид зориулсан шилжүүлэгч блок"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Page Builder Sandwich-эд зориулсан Switcher элемент"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Elementor, Bricks болон бусад бүтээгчдэд зориулсан шилжүүлэгч"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Цэсний зүйл, виджет болон богино код"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Хөвөгч шилжүүлэгч"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Хүртээмжтэй сэлгэгч"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API болон загварын функцууд"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Өөрийн орчуулгын системийг нэмэх"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Hook-ууд, REST API болон WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Polylang/WPML функцүүдэд зориулсан нийцтэй байдлын давхарга"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Бүх үндсэн AI үйлчилгээ үзүүлэгчдэд өөрийн түлхүүрийг ашиглаарай"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "Загварын жагсаалт автоматаар шинэчлэгдэнэ"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "Бид шинэчлэлтээр санал болгож буй загваруудыг оруулдаг"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Өөрийн загварыг нэг алхамаар нэмнэ үү"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Техникійн мэдлэггүй хэрэглэгчдэд зориулсан энгийн тохиргоо"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Түлхүүрүүдийг шифрлэсэн байдлаар хадгалдаг бөгөөд бидэн рүү хэзээ ч илгээдэггүй"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Алдааны мессежийг арилгах"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Ашиглалт болон өртгийн бүртгэл"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "Үүr бүрийн хиймэл оюун ухааны эрхүүд"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Нэг түлхүүр, хоёр залгаас"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Орчин үеийн админ дэлгэцүүд"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Тохиргооны мастер"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Суuлгасан тусламж"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "Хоёр залгаас хоорондын харилцан сурталчилгаа"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® хостингийн урамшуулал"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Freemius-ээр дамжуулан Pro лиценз олгох (хамгийн сүүлийн үеийн SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Pro-гийн үнэгүй туршилт"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Багц: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd-д олгосон"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Манай бусад залгаасуудтай адил GitHub руу синк хийгдсэн"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "Гараар хийсэн засварууд хамгаалагдсан"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Орчуулга амжилтгүй болсон тухай тайлан"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Ямар ч орчуулгыг хялбархан засварлах"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Үнэгүй хувилбар дахь орчуулахгүй жагсаалт"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce олон валюттой"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "AI-гийн чанарын шалгалт"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Зөвхөн зарим хэл дээр контентыг харуулах"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Олон хэлний SEO аудит"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Маягт орчуулах"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Сэтгэгдэл болон үнэлгээг орчуулах"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Хэл тус бүрд өөр зураг"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Хөдөлгүүр тус бүрийн сарын зарцуулалтын дээд хязгаар"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Олон хэл дээрх сайтын хайлт"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Хурдны амлалт, туршигдсан"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Олон сайтын дэмжлэг"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "Staging болон локал сайт нь лиценз зарцуулдаггүй"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Баримт бичгийн сайт болон богино хэмжээний видео гарын авлагууд"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Санал хүсэлт болон шинэ боломжийн хүсэлтийн товчлуур"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Бета шинэчлэлтийн суваг"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Тэргүүн зэргийн дэмжлэг"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Алдаа мэдээлэгч болон тусламжийн тасалбарууд"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Freemius-ийг бүрэн ашиглах"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Урьдчилан тохируулгаараа идэвхтэй байдаг мөрөнд ул мөр үлдээхгүй front end"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Сан суурь"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Орчуулгын хөдөлгүүрүүд"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Юu орчуулагддаг вэ"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "Ажлын урсгал"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO ба URL"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Хэл солигч"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Хөгжүүлэгчид"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "AI түлхүүрүүд болон загварууд"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Админ болон лиценз"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "Илүү олон боломж"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Лиценз болон дэмжлэг"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Хурдан бөгөөд олон хэл дээр ажиллах WordPress-т зориулсан хостинг"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Энэхүү плагиныг бүтээсэн багийн санал болгож буй, хурд болон олон хэл дээрх сайтуудад зориулан тохируулсан Managed WordPress hosting."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® хостингийг харах"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "ZinnHub дээр WordPress мэргэжилтэн хөлслөх"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "WordPress-ийн дизайн, хөгжүүлэлт, орчуулга болон SEO-ийн ажилд зориулсан фрилансерүүдийн зах зээл."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHub-д зочлох"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Масс сайтын болон PBN хостинг"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd бол олон сайтыг нэгэн зэрэг байршуулж, удирдах манай платформ юм."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "PBN.ltd-д зочлох"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Page Builder Sandwich Pro болон Tranzly Pro хувилбаруудыг хамтад нь аваарай"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "Энэхүү багц нь ижил төлөвлөгөө болон сайтын хязгаарлалттайгаар хоёр залгаасыг тус тусад нь худалдаж авахаас хямд өртөгтэй."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Багцыг үзэх"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%s авах"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Интеграци идэвхтэй: %1$s болон %2$s хамтран ажиллаж байна"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s идэвхтэй байгаа тул хоёр залгаас хоёулаа нэг багц AI үйлчилгээний түлхүүр болон нэг тохиргооны дэлгэцийг хуваалцана."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Tranzly ашиглан энэ сайтыг орчуулаарай"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Page Builder Sandwich ашиглан хуудсыг харагдах байдлаар нь бүтээх"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s, Zinn Digital®-оос"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Орчуулсан хаяг, SEO мэдээлэл болон хэл солих товчлуурын тусламжтайгаар хуудас бүрийг олон хэлээр нийтлээрэй. Энд бүтээсэн хуудаснуудтай ажиллана."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Хурдан, хайлтын системд ул мөр үлдээдэггүй блокуудыг ашиглан хуудсаа шууд засварлагч дотор бүтээгээрэй. Таны бүтээсэн бүхэн Tranzly-аар орчуулагдана."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s нь мөн ижил багийн бүтээгдэхүүн бөгөөд энэ залгаастай хамт ажилладаг."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Энэ сайтыг эхлээд холбохыг зөвшөөрнө үү."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Хүчинтэй имэйл хаяг оруулна уу."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Эхлээд тусламжийн мэдээлэл илгээхэд зөвшөөрнө үү."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Гарчиг болон зурвас бичнэ үү."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Туслах баг хариу өгөх боломжтой имэйл хаягийг оруулна уу."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "Site эзэмшигчийн үүсгэсэн түр хугацааны дэмжлэг авах хандах эрх. Хугацаа нь дуусахад автоматаар устах болно."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "1, 3 эсвэл 7 өдрийг сонгоно уу."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Зөвхөн энэ дэлгэцэнд нэвтэрсэн сайт администратор л түр хугацааны дэмжлэгийн хандалт үүсгэх боломжтой."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Өвөрмөц хэрэглэгчийн нэр сонгох боломжгүй байна. Дахин оролдоно уу."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® дэмжлэг (түр)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Энэхүү түр дэмжлэгийн хандалт хугацаа нь дууссан байна."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "Бичиж болон дахин бичиж байна"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Оrчуулга"
 
@@ -115,6 +745,9 @@ msgstr "Та өөрийн түлхүүрээ авчрах тул ашиглас�
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "Дараагийнх"
 
@@ -217,6 +850,7 @@ msgstr "Тест"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Устгах"
@@ -621,6 +1255,8 @@ msgstr "AI хүсэлт хараахан хийгдээгүй байна."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Дууссан"
 
@@ -682,11 +1318,11 @@ msgstr "Орчуулга нь эх хувьтайгаа ижил төрлийн 
 msgid "Choose one of the site's other languages."
 msgstr "Site-ийн бусад хэлнүүдийн нэгийг сонгоно уу."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Энэхүү плагины хувилбарт админ дэлгэцийн скриптүүд байхгүй байна. Үүнийг албан ёсны багц ашиглан дахин суулгана уу."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Энэ дэлгэцэнд JavaScript шаардлагатай."
 
@@ -1596,7 +2232,7 @@ msgstr "Лиценз одоо худалдаж авах"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "Цуцлах"
 
@@ -2111,6 +2747,7 @@ msgstr "Цагаан шошгоны горимыг идэвхгүй болгож
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Салгах"
 
@@ -2351,6 +2988,7 @@ msgstr "Хугацаа дуусах хугацаа"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Хүчинтөрөгч нь дууссан"
 
@@ -2417,6 +3055,8 @@ msgstr "Шинэчлэлийг дуусгахын тулд дараах алхм
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Үнэгүй"
 
@@ -2796,6 +3436,7 @@ msgstr "Урт хугацааны хуулбар"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Зурвас"
 
@@ -3031,6 +3672,7 @@ msgstr "Энэ плагинд PHP-ийн илүү шинэ хувилбар ша
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Үгүй"
@@ -3203,6 +3845,7 @@ msgstr "Таны вэбсайттай тасралтгүй нийцтэй бай
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Бусад"
 
@@ -3971,6 +4614,7 @@ msgstr "Site-ийн ID"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Сайтууд"
 
@@ -4067,7 +4711,7 @@ msgstr "Туршилтын хугацааг эхлүүлж байна"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Төлөв"
 
@@ -4368,6 +5012,7 @@ msgstr "Та %1$s-д хэр сэтгэл хангалуун байна вэ? %3$
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Төрөл"
 
@@ -5121,13 +5766,6 @@ msgstr "Энэ тохиргоо асаалттай эсвэл унтраалтт
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "Орчуулагдаагүй хуудсуудыг хайлтын системээс нуух нь Tranzly Pro-ийн нэг хэсэг юм."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Хэл солигч"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Хэлнүүд"
@@ -5307,6 +5945,691 @@ msgstr "Текстийн хэмжээ"
 msgid "Switcher"
 msgstr "Шилжүүлэгч"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Тойм хэсэгт нуусан саналаа дахин харуулах"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Бүгд"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d сонгосон"
+msgstr[1] "%d сонгосон"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Юу ч олдсонгүй."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Энэ хуудсан дээрх бүгдийг сонгох"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Сонгох"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Хуудаснууд"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Өмнөх"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "%1$d / %2$d хуудас"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "%s-г хэдхэн минутын дотор тохируулаарай"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Тохиргоог эхлүүлэх"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Энэ сайт"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Хэвлэл"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Энэ лиценз дээрх сайтууд"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Хувилбар"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Энэ нь туршилтын эсвэл локал хуулбар шиг харагдаж байгаа тул таны лиценз дэх сайтыг ашиглахгүй."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Pro ямар боломж нэмдгийг үзэх"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Шилжих"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Хувийн"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Бизнес"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Агентлаг"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Дурын тооны сайтууд"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Хязгааргүй сайт"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d сайт"
+msgstr[1] "%d сайт"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Про"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s турus"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Таны туршилтын хугацаа эхэллээ. Про хувилбарын бүх боломжийг харахын тулд хуудсаа шинэчлэнэ үү."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "Туршилтыг эхлүүлэх боломжгүй байв."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Нэмэлт боломж"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Багтсан"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "О ороогүй"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Таны лиценз"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%2$d-оос %1$d ашиглагдаж байна"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Суах"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "Сайтын стажинг, тест болон локалхост хуулбарууд үнэ төлбөргүй бөгөөд таны сайтын лимитэд хэзээ ч тооцогдохгүй."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Таны төлөвлөгөөнд тэргүүн ээлжийн тусламж үйлчилгээ багтсан болно."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Лиценз болон төлбөр тооцоогоо удирдах"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Pro-оор илүүг авна уу"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Кар шаардлагагүйгээр үнэгүй %d хоногийн туршилтыг эхлүүлнэ үү"
+msgstr[1] "Кар шаардлагагүйгээр үнэгүй %d хоногийн туршилтыг эхлүүлнэ үү"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Төлөвлөгөө болон үнийг харах"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Tranzly болон Page Builder Sandwich-г хамтдаа ашиглах уу? Уг багц нь хоёр Pro залгаасыг хямдралтай үнээр багтаасан болно."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Таны лиценпийн хугацаа дууссан байна. Шинэчлэлтүүд болон Про боломжуудыг үргэлжлүүлэн ашиглахын тулд үүнийг суншина уу."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Яг одоо сунгах"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Багцуудыг харьцуулах"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Боломжуудыг хайх"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Бүс нутаг"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Багтсан зүйлтер:"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Ямар ч боломж таарахгүй байна."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Төлөвлөгөөний боломжууд"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Нуух"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "Плугины дэлгэц дээр үүнийг идэвхжүүлнэ үү"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Суулгах"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Төлөв байдал"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Суулгах"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Төлөвлөгөө ба лиценз"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Нэмэлтүүд"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Тусламж авах"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Санал хүсэлт"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "Таны сонголтыг хадгалж чадсангүй."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "Суулгах төлөвийг хадгалж чадсангүй."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "Миний компьюетртай тааруулах"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Цайвар"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Харанхуй"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Өнгөний схем"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Тусламж"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Энэ дэлгэцийн заавар"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Аялалаар зочлох"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Тусламж авах эсвэл алдаа мэдээлэх"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Заoin-ний дэлгэцүүд"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "Үүнийг хадгалж чадсангүй."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Холбоо барихаас өмнө"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "Таны хүсэлтийг энэ сайтнаас уг залгаасыг бүтээгч %s рүү илгээж байна. Бид дараах мэдээллийг илгээж байна:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "таны и-мэйл хаяг болон нэр, ингэснээр бид хариу өгөх боломжтой болно;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "таны бичсэн гарчиг болон зурвас;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "таны лицензийн ID, ингэснээр төлбөр төлсөн хэрэглэгчид тэргүүлэх ач холбогдол олох болно;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "зөвхөн та тэмдэглэгээ хийсэн тохиолдолд: сайтын дэлгэрэнгүй мэдээлэл (WordPress болон PHP хувилбарууд, загвар, залгаасууд, нууц үг, имэйл хаягийг хассан алдааны бүртгэлийн хэсэг), үүнийг илгээхээсээ өмнө унших боломжтой;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "зөвхөн хэрэв та тэдгээрийг нэмбэл: таны сайтын нэвтрэх нэр нууцлагдсан байдлаар хадгалагдаж, таны хүсэлт хаагдсанаас хойш 30 хоногийн дараа устгагдана."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Нууцлалын бодлого"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Би зөвшөөрч байна, үргэлжлүүлэх"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "Холболтыг шалгах боломжгүй байна."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "Энэ ажилласангүй. Дахин оролдоно уу."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital®-ийн тусламж энэ сайтыг салгасан байна."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Zinn Digital® support нь энэ сайтыг дэмжихээ больсон байна."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Та энэ сайтын холболтыг салгасан байна."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Энэ сайтыг дэмжлэгтэй холбох"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Холбогдсон. Хариуг %s руу илгээнэ."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Холбогдоогүй байна. Та доор цахим шуудангийн хаягаа оруулж хүсэлт илгээх боломжтой; холбогдсоноор үүнийг дахин дахин бичих шаардлагагүй болно."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "И-мэйл хаяг"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Таны нэр (заавал биш)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Би энэ сайтыг Zinn Digital®-ийн дэмжлэгтэй холбохыг зөвшөөрч байна. Энэ нь тухайн сайтын хаяг, WordPress болон PHP-ийн хувилбарууд болон залгаасын хувилбарыг илгээх бөгөөд хэдийд ч эндээс эсвэл Zinn Digital®-ээр дамжуулан холболтоо салгах боломжтой."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Холбох"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Тусламж хэрэгтэй байна"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Алдаа мэдээлэх"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Санал хүсэлт илгээх"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Боломж хүсэх"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "Сайтын дэлгэрэнгүй мэдээллийг унших боломжгүй байна."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "Таны хүсэлтийг илгээж чадсангүй. Хэдэн минутын дараа дахин оролдоно уу."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress админ"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Файлын менежер"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Санал хүсэлт болон шинэ боломжийн хүсэлтүүд"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Таны лавлагааны дугаар %s бөгөөд бидний хариу имэйлээр ирэх болно."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "Энэ юу тухай вэ?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "(И-мэйлээр) хариулах"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Гарчиг"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Та юу хийсэн бэ, юу хүлээж байсан бэ, харин оронд нь юу болсон бэ?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Сайтын дэлгэрэнгүй мэдээллийг оруулна уу (хувилбарууд, загвар, нэмэлт залгаасууд, алдааны бүртгэлийн хэсэг)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Яг юу илгээгдэж байгааг яг таг харна уу"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Ачаалж байна…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Дэмжлэг үзүүлэх нэвтрэх нэр (заавал биш, шифрлэгдсэн хэлбэрээр хадгалагдана)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "Нэвтрэх нэрийг зөвхөн нууц үгийн хамт илгээнэ. Мөрүүдийг тал дундуур нь орхилгүйгээр бүтнээр нь үлдээнэ үү."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Нэвтрэх хаяг"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Хэрэглэгчийн нэр"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Нууц үг"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Нэвтрэх нэмэх"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Түр зуурын дэмжлэгийн нэвтрэлт үүсгэх"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Манай тусламжийн багт зориулсан тусдаа хэрэглэгч бөгөөд хэрэглэгчид, залгаас суулгах эсвэл код засварлах эрхгүй. Энэ нь хугацаа нь дуусахад эсвэл доор та үүнийг цуцалсан үед автоматаар устгагдах болно."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Тийм, %d хоногийн турш"
+msgstr[1] "Тийм, %d хоногийн турш"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Илгээх"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "Жагсаалтыг ачаалж чадсангүй."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "Энэ нэвтрэлтийг устгах боломжгүй байна."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Түр зуурын дэмжлэгийн нэвтрэлтүүд"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Байхгүй. Хэрэв та энд нэвтрэх эрх үүсгэвэл л дэмжлэгийн баг энэ сайт руу нэвтрэх боломжтой."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "хугацаа нь дууссан, устгагдаж байна"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "%s хугацаа дуусна"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Одоо хүчингүй болгох"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "%2$d-р алхмын %1$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "Аялалыг хаах"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Буцах"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Бүх зүйл нэг дор"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Эдгээр хуудаснууд нь залгаасын бүх дэлгэц рүү хөтөлнө: тохируулга, тохиргоо, таны лиценз, тусламж болон бусад."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Дэлгэц бүр дээрх тусламж"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Тантай хамт байгаа дэлгэцийн гарын авлага, энэхүү танилцуулгатай танилцах эсвэл биднээс тусламж хүсэхийн тулд энэ цэсийг нээнэ үү."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Цайвар эсвэл бараан"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Хүрээлэн буй орчны гэрэлт, бараан эсвэл таны компьютерын тохиргоотой ижилхэн загвараас сонгоно уу. Таны сонголт зөвхөн танд зориулагдан хадгалагдах болно."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Тавтай морилно уу"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Энэхүү богино хэмжээний танилцуулга нь юу хаана байгааг харуулна. Та Escape товчийг дарж хүссэн үедээ орхиж болно."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "Таны сайтын ерөнхий харагдац"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "Энд тохиргооны явц, таны төлөвлөгөө болон дараагийн хийх шаардлагатай зүйлсийг харуулна."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Таны төлөвлөгөө, энэ нь хчнээн сайтыг хамрах болон сайтын энэ хуулбар уг хязгаарлалтад хамаарах эсэх."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Pro хувилбарыг турших эсвэл шинэчлэх"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Карт шаардлагагүйгээр үнэгүй туршилтыг эхлүүлж, шинэчилж эсвэл сунгах үйлдлийг бүгдийг эндээс хийгээрэй."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Онцлог бүр болон түүнийг багтаасан төлөвлөгөө. Онцлогоор хайх эсвэл нэг удаад нэг хэсгийг харуулах."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Zinn Digital®-ын бусад үйлчилгээ"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Энэ зал-алттай хамтран ажилладаг нэмэлт өргөтгөлүүд болон ижил багийн үйлчилгээ. Бусад дэлгэц дээр нуусан картуудыг энд дахин харуулах боломжтой."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Илүү хурдан тусламж авахын тулд холбогдох"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "Холбогдох нь сонголттой. Энэ нь танд цахим шуудангаа бүртгэл бүрт бичихгүйгээр хүсэлт илгээх боломжийг олгох бөгөөд та хүссэн үедээ холболтоо салгах боломжтой."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Тусламж хүсэх эсвэл алдаа мэдэгдэх"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Ю болсныг тайлбарлана уу. Та сайтын мэдээллийг хавсаргах эсэхээ өөрөө шийдэх бөгөөд үүнд ямар мэдээлэл байгааг эхлээд нарийвчлан харах боломжтой."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Түр зуурын дэмжлэгийн хандалт"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Хэрэв дэмжлэгийн баг таны сайт руу нэвтэрч үзэх шаардлагатай бол энд түр нэвтрэх эрх үүсгэнэ үү. Энэ нь хугацаа нь дуусахад автоматаар устах бөгөөд та хүссэн үедээ устгах боломжтой."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Бидэнд юу бүтээхээ хэлнэ үү"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Санал, шинэ боломжийн хүсэлт эсвэл аливаа сэтгэгдлээ илгээнэ үү. Энэ нь шууд баг руу очих болно."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "Энэ нь хэдэн минут зарцуулж, %s-г энэ сайт дээр шууд ажиллахаар тохируулах болно. Та дараа нь бүх зүйлийг өөрчлөх боломжтой."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Та бэлэн боллоо. Хэрэзь ямар нэг зүйл хүссэнээр ажиллахгүй бол бид нэгхэн товшилтын зайтай байна."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "Алхам %1$d / %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Дуusгах"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Тохиргоог алгасах"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -5336,7 +6659,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Pro багц болон үнийг үзэх"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Хэлүүд"
 
@@ -5554,6 +6878,14 @@ msgstr "Загварын заавар (үзэгчид, брэндийн дуу �
 msgid "Save glossary"
 msgstr "Тolyar хадгалах"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Тохиргоо"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Орчуулгын систем"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5571,10 +6903,6 @@ msgstr "Ажиллаж байна"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Дууссан"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Фоноор орчуулах"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5653,7 +6981,7 @@ msgid "Content"
 msgstr "Аcуулга"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Хэл"
 
@@ -5700,47 +7028,47 @@ msgstr "Хадгалсан. Таны засварыг машинаар орчу�
 msgid "The same menu, translated"
 msgstr "Ижил цэс, орчуулагдсан"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Хэл тус бүрд тусдаа цэс"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Анфред байдлаар цэс бүрийг орчуулдаг: холбоосууд нь гарчигтай хамт орчуулагдсан хуудсууд руу чиглэнэ. Үүний оронд энд тухайн хэлэнд зориулсан тусдаа цэсийг сонгоно уу."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Хуваалцсан текст"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Аль текст"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Цэсний шошго"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Загвар, толгой хэсэг, хөл хэсэг болон загварууд"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Загвар, толгой хэсэг, хөл хэсэг болон паттернууд (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Дутуу текстийг орчуулах"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Энд орчуулах текст байхгүй байна."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Хүний засварласан, хамгаалагдсан"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Засварыг хадгалах"
 
@@ -5823,13 +7151,9 @@ msgid "Problem"
 msgstr "Асуудал"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Засах"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Хөвөгч шилжүүлэгч"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5909,7 +7233,7 @@ msgstr "Elementor болон Bricks виджетүүд нь Tranzly Pro-ийн �
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Хадгалах"
 
@@ -6045,27 +7369,27 @@ msgstr "Хадгалагдлаа. Таны өөрчилсөн хэсгүүдий
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "Энэ орчуулгын байршил засварлагч дээр өөрчлөгдсөн тул зарим хэсэг нь эх хувилбартайгаа таарахаа больсон байна. Хосгүй хэсгүүдийг хоосон харуулсан бөгөөд үлдсэнийг нь засварлагч дээр засна уу."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Засварлагчийг нээх"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Эх хувь (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Орчуулга (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Өөрчлөлтийг хадгалах"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Редакторт нээх"
 
@@ -6139,28 +7463,28 @@ msgstr "Одоогоор орчуулагдаагүй (хуулбар)"
 msgid "Save this post first, then translate it here."
 msgstr "Энэ нийтлэлийг эхлээд хадгалж, дараа нь энд орчуулна уу."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Зэрэгцүүлэн байрлуулах"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Үзэх"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Дахин орчуулахын тулд түгжээг тайлна уу"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Хамгаалах"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "О орчуулгыг нийтлэх"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6168,69 +7492,69 @@ msgstr[0] "%d хэл рүү орчуулах"
 msgstr[1] "%d хэл рүү орчуулах"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: орчуулагдсан."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Энэ блокийг харуулах"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "Бүх хэл дээр"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Згvвсэн хэлнүүдэд л"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "Ticked гэсэн тэмдэглэгээгүй бүх хэл дээр"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Хэл тус бүрээрх зураг"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Уншигчдад өөр хэл дээр өөр зураг, тухайлбал үгтэй баннер үзүүлэх."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%s зургийг солих"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "%s дүрсийг сонгох"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Эх зургийг ашиглах"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Энэ орчуулгыг засах"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Хадгалж байна…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Орчуулсан текст. Засварлахын тулд Enter дарна уу."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Орчуулгыг засахын тулд хүрээлэгдсэн аливаа текстийг дарна уу."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Энэ хуудаснаас энд за засварлах орчуулсан текст олдсонгүй. Үүний оронд хажуу талын зэрэгцүүлсэн засварлагчийг ашиглана уу."
 

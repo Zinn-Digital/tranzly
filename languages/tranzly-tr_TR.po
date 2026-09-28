@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,636 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® yanıt verdi ancak bu eklentinin anladığı türden bir bağlantıyla değil. Hiçbir şey kaydedilmedi."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Bu sitenin bağlantısı unutuldu. Zinn Digital® şu anda bilgilendirilemediği için destek ekibi, kendi taraflarından kaldırılana kadar siteyi kullanılmıyor olarak görecektir."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Bu sitenin kullanacak şekilde ayarlandığı Zinn Digital® adresi güvenli (https) bir adres olmadığından hiçbir şey gönderilmedi."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "Zinn Digital® sitesinden bu konuma ulaşılamadı. Sitenin dışarıya bağlantı kurabildiğini kontrol edin ve tekrar deneyin."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Bu sitenin Zinn Digital® bağlantısı iptal edildi. Devam etmek için yeniden bağlayın."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® artık bu sitenin bağlantısını tanımıyor. Devam etmek için yeniden bağlayın."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Bu siteden veya adresten çok fazla istek gönderildi. Biraz bekleyin ve tekrar deneyin."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® bu isteği kabul edemedi. E-posta adresini ve mesajı kontrol edin, ardından tekrar deneyin."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® isteği şu anda işleyemedi. Birkaç dakika sonra tekrar deneyin."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "Lisanslama hizmeti bu sitede kullanılamıyor."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "Deneme burada başlatılamadı. Bunun yerine deneme sayfasından devam edin."
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Her dil için bir yazı, birbirine bağlı"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Eski Tranzly çevirilerinizi saklar"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Arka planda çevir"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "Her sürümde test edilen en son WordPress ve PHP sürümleri"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Tasarım gereği güvenlik"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "58 dilde arayüz, sağdan sola yazı Desteği hazır"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Sınırsız dil"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (mevcut entegrasyon, tutuldu)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "Kendi anahtarınızla yapay zeka modelleri"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Çeviri ve Microsoft Çevirmen"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Her dil için farklı motor"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Otomatik geri dönüş"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Başlamadan önce maliyet tahmini"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Çeviri belleği"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Her motor için sözlük ve çevri̇lmeyecekler li̇stesi̇"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Ton ve stil talimatları"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Yazılar, sayfalar ve özel yazı türleri"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Bloklar güvenle çevrildi"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Kategoriler, etiketler ve özel taksonomiler"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Menüler"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich sayfaları"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen ve WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: her şey"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "Büyük SEO eklentilerinin dördü için SEO alanları"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Özel alanlar"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Tema ve eklenti metinleri (dizgeler)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Ortam"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Blok temaları: şablonlar ve desenler"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Bileşenler ve site başlığı/sloganı"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Tek tıklamayla bir gönderi çevirin"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "Tüm siteyi toplu olarak çevir"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Yeni ve güncellenmiş içeriği otomatik olarak çevir"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Yan yana çeviri düzenleyicisi"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Görsel ön uç düzenleyicisi"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "İnceleme ve onay"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "İnsan çevirmenler için dışa aktarma ve içe aktarma"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "WPML, Polylang veya TranslatePress'ten geçiş yapın"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Çeviri durumu paneli"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "URL'deki Dil: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Dil başına alt alan adları veya ayrı alan adları"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Çevrilen URL uzantıları"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang etiketleri, doğru şekilde"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Çevrilmiş site haritaları"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "Doğru dil ve canonical etiketleri"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "Çevrilmemiş sayfaları arama motorlarından gizle"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "Ziyaretçinin dilini öner"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Blok düzenleyici için Değiştirici bloğu"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Page Builder Sandwich için Değiştirici öğesi"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Elementor, Bricks ve diğer oluşturucular için Değiştirici"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Menü öğesi, widget ve kısa kod"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Kayan değiştirici"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Erişilebilir değiştirici"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API ve şablon fonksiyonları"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Kendi çeviri motorunuzu ekleyin"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Kancalar, REST API ve WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Polylang/WPML fonksiyonları için uyumluluk katmanı"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Tüm ana AI sağlayıcıları için kendi anahtarınızı getirin"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "Model listesi kendini güncelliyor"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "Güncellemelerde önerilen modelleri sunuyoruz"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Kendiniz tek adımda bir model ekleyin"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Teknik bilgisi olmayan kullanıcılar için kolay kurulum"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Anahtarlar şifrelenmiş olarak saklanır, asla bize gönderilmez"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Hata mesajlarını temizle"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Kullanım ve maliyet günlüğü"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "Rol bazlı yapay zeka izinleri"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Tek anahtar, iki eklenti"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Modern yönetim ekranları"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Kurulum sihirbazı"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Yerleşik yardım"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "İki eklenti arasında çapraz tanıtım"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® barındırma promosyonu"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Freemius aracılığıyla Pro lisanslama (en son SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Pro'nun ücretsiz deneme sürümü"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Paket: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd'ye atfedilmiştir"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Diğer eklentilerimiz gibi GitHub ile senkronize edildi"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "Manuel düzenlemeler korunuyor"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Çeviri başarısızlık raporu"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Herhangi bir çeviriyi kolayca düzenleyin"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Ücretsiz sürümde çevrilemeyecekler listesi"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce çoklu para birimi"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "Yapay zeka kalite kontrolü"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Yalnızca bazı dillerde içerik göster"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Çok dilli SEO denetimi"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Formları çevir"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Yorumları ve değerlendirmeleri çevir"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Dil başına farklı görseller"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Motor başına aylık harcama sınırı"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Çok dilli site araması"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Hız sözü, test edildi"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Çoklu site desteği"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "Staging ve yerel siteler lisans harcamaz"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Dokümantasyon sitesi ve kısa video kılavuzları"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Geri bildirim ve özellik isteği düğmesi"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Beta güncelleme kanalı"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Öncelikli destek"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Hata bildirici ve destek talepleri"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Freemius'ü tam olarak kullanın"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Varsayılan olarak açık olan ayak izi bırakmayan arayüz"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Altyapı"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Çeviri motorları"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Ne çevrilir"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "İş Akışı"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO ve URL'ler"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Dil değiştirici"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Geliştiriciler"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "YZ anahtarları ve modelleri"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Yönetici ve lisanslama"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "Daha fazla özellik"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Lisanslama ve destek"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Hızlı ve çok dilli WordPress için tasarlanmış barındırma"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Bu eklentiyi geliştiren ekipten hız ve çok dilli siteler için optimize edilmiş Yönetilen WordPress barındırma hizmeti."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® barındırma hizmetini inceleyin"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "ZinnHub'ta bir WordPress uzmanı tutun"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "WordPress tasarımı, geliştirilmesi, çevirisi ve SEO çalışmaları için bir serbest çalışan pazarı."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHub'ı Ziyaret Et"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Toplu site ve PBN barındırma"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd, birçok siteyi aynı anda barındırmak ve yönetmek için kullandığımız platformumuzdur."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "PBN.ltd sitesini ziyaret edin"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Page Builder Sandwich Pro ve Tranzly Pro'yu birlikte edinin"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "Bu paket, her iki eklentinin de aynı planlarda ve site limitlerinde ayrı ayrı satın alınmasından daha ucuzdur."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Paketi görüntüle"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%s Al"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Entegrasyon etkin: %1$s ve %2$s birlikte çalışıyor"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s bu sitede aktif durumdadır; bu nedenle her iki eklenti de tek bir Yapay Zeka sağlayıcı anahtar kümesini ve bunlar için tek bir ayar ekranını paylaşır."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Tranzly ile bu siteyi çevirin"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Page Builder Sandwich ile sayfaları görsel olarak oluşturun"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "Zinn Digital® şirketinden %s"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Çevrilen adresler, SEO verileri ve bir dil seçici ile her sayfayı birçok dilde yayınlayın. Burada oluşturduğunuz sayfalarla çalışır."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Sayfaları hızlı, arama motoru izi bırakmayan bloklarla doğrudan düzenleyicide tasarlayın. Oluşturduğunuz her şey Tranzly ile çevrilir."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s, aynı ekip tarafından geliştirilmiştir ve bu eklentiyle birlikte çalışır."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Önce bu sitenin bağlanmasını onaylayın."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Geçerli bir e-posta adresi girin."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Önce destek bilgilerinin gönderilmesini kabul edin."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Bir konu ve bir mesaj yazın."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Destek ekibinin yanıt verebileceği bir e-posta adresi girin."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "Site sahibi tarafından oluşturulan geçici destek erişimi. Süresi dolduğunda otomatik olarak silinir."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "1, 3 veya 7 gün seçin."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Geçici destek erişimini yalnızca bu ekranda oturum açmış bir site yöneticisi oluşturabilir."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Benzersiz bir kullanıcı adı seçilemedi. Tekrar deneyin."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® desteği (geçici)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Bu geçici destek erişiminin süresi doldu."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +711,8 @@ msgid "Writing and rewriting"
 msgstr "Yazma ve yeniden yazma"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Çeviri"
 
@@ -115,6 +746,9 @@ msgstr "Kendi anahtarınızı getirirsiniz, böylece kullandıklarınız için d
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "İleri"
 
@@ -217,6 +851,7 @@ msgstr "Test"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Kaldır"
@@ -621,6 +1256,8 @@ msgstr "Henüz hiç yapay zeka isteği yapılmadı."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Tamamlandı"
 
@@ -682,11 +1319,11 @@ msgstr "Bir çeviri, orijinaliyle aynı türde içerik olmalıdır."
 msgid "Choose one of the site's other languages."
 msgstr "Sitenin diğer dillerinden birini seçin."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Eklentinin bu kopyasında yönetici ekranının betikleri eksik. Eklentiyi yayınlanmış bir paketten yeniden yükleyin."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Bu ekran için JavaScript gerekiyor."
 
@@ -1596,7 +2233,7 @@ msgstr "Şimdi bir lisans satın alın"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "İptal"
 
@@ -2111,6 +2748,7 @@ msgstr "Beyaz etiket modu devre dışı bırakılıyor"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Bağlantıyı Kes"
 
@@ -2352,6 +2990,7 @@ msgstr "Bitiş Tarihi"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Süresi Dolmuş"
 
@@ -2418,6 +3057,8 @@ msgstr "Yükseltmeyi tamamlamak için lütfen bu adımları izleyin"
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Ücretsiz"
 
@@ -2797,6 +3438,7 @@ msgstr "Uzun Vadeli Yinelenen"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Mesaj"
 
@@ -3032,6 +3674,7 @@ msgstr "Bu eklenti daha yeni bir PHP sürümü gerektiriyor."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Hayır"
@@ -3204,6 +3847,7 @@ msgstr "Web sitenizin uyumluluğunun devamı için, isteğe bağlı olarak %s ş
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Diğer"
 
@@ -3972,6 +4616,7 @@ msgstr "Site Kimliği"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Siteler"
 
@@ -4068,7 +4713,7 @@ msgstr "Deneme başlatılıyor"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Durum"
 
@@ -4369,6 +5014,7 @@ msgstr "%1$s ürününü şimdiye kadar nasıl buldunuz? %3$d günlük ücretsiz
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Tür"
 
@@ -5122,13 +5768,6 @@ msgstr "Bu ayar açık veya kapalıdır."
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "Çevrilmemiş sayfaları arama motorlarından gizlemek Tranzly Pro'nun bir parçasıdır."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Dil değiştirici"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Diller"
@@ -5308,6 +5947,691 @@ msgstr "Metin boyutu"
 msgid "Switcher"
 msgstr "Geçiş Yapıcı"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Genel Bakış sayfasında gizlenen önerileri yeniden göster"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Tümü"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d seçildi"
+msgstr[1] "%d seçildi"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Hiçbir şey eşleşmiyor."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Bu sayfadakilerin tümünü seç"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Seç"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Önceki"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "Sayfa %1$d / %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "%syi birkaç dakika içinde kurun"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Kuruluma başla"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Bu site"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Sürüm"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Bu lisanstaki siteler"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Sürüm"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Bu bir hazırlık veya yerel kopya gibi görünüyor, bu nedenle lisansınızda bir site harcamaz."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Pro'nun sunduklarını görün"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Git"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Kişisel"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Kurumsal"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Ajans"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Herhangi sayıda site"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Sınırsız site"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d site"
+msgstr[1] "%d site"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Pro"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s deneme sürümü"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Deneme sürümünüz başladı. Tüm Pro özelliklerini görmek için sayfayı yeniden yükleyin."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "Deneme başlatılamadı."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Özellik"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Dahil"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "Dahil değil"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Lisansınız"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%1$d / %2$d kullanımda"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Yenileniyor"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "Bir sitenin hazırlık (staging), test ve yerel sunucu kopyaları ücretsizdir ve hiçbir zaman site sınırınıza dahil edilmez."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Planınız öncelikli destek içermektedir."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Lisans ve faturalandırmanızı yönetin"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Pro ile daha fazlasını elde edin"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Kredi kartı gerekmeden %d günlük ücretsiz deneme başlatın"
+msgstr[1] "Kredi kartı gerekmeden %d günlük ücretsiz deneme başlatın"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Planları ve fiyatları görün"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Tranzly ve Page Builder Sandwich birlikte nasıl kullanılır? Paket, her iki Pro eklentiyi de daha düşük bir fiyata içerir."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Lisansınızın süresi doldu. Güncellemeleri ve Pro özelliklerini almaya devam etmek için lisansınızı yenileyin."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Şimdi yenile"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Planları karşılaştırın"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Özelliklerde ara"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Alan"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Dahil olduğu plan:"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Eşleşen özellik bulunamadı."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Plana göre özellikler"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Gizle"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "Eklentiler ekranından etkinleştirin"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Kur"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Genel Bakış"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Kurulum"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Planlar ve lisans"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Eklentiler"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Yardım al"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Geri bildirim"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "Seçiminiz kaydedilemedi."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "Kurulum durumu kaydedilemedi."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "Bilgisayarımla eşleştir"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Açık"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Koyu"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Renk şeması"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Yardım"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Bu ekran için kılavuz"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Tura katılın"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Yardım alın veya bir hata bildirin"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Eklenti ekranları"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "Bu kaydedilemedi."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Destek ekibiyle iletişime geçmeden önce"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "İsteğiniz bu siteden, bu eklentiyi oluşturan %s adresine gönderilir. Gönderdiğimiz bilgiler:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "yanıt verebilmemiz için e-posta adresiniz ve adınız;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "yazdığınız konu ve mesaj;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "lisans kimliğiniz, böylece ödeme yapan müşteriler öncelik alır;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "yalnızca siz işaretlerseniz: göndermeden önce okuyabileceğiniz site ayrıntıları (şifreler ve e-posta adresleri çıkarılmış olarak WordPress ve PHP sürümleri, tema, eklentiler ve hata günlüğünün bir alıntısı);"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "yalnızca siz eklerseniz: siteniz için giriş bilgileri; şifrelenmiş olarak saklanır ve talebiniz kapatıldıktan 30 gün sonra silinir."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Gizlilik politikası"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Kabul ediyorum, devam et"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "Bağlantı kontrol edilemedi."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "Bu işe yaramadı. Tekrar deneyin."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital® desteği bu siteyle bağlantıyı kesti."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Zinn Digital® desteği artık bu siteyi tanımıyor."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Bu siteyle olan bağlantınızı kestiniz."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Bu siteyi desteğe bağlayın"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Bağlandı. Yanıtlar şuraya gidecek: %s."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Bağlı değil. Aşağıya e-posta adresinizi girerek yine de bir istek gönderebilirsiniz; bağlantı kurmak her seferinde bu bilgiyi yazma gerekliliğini ortadan kaldırır."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "E-posta adresi"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Adınız (isteğe bağlı)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Bu sitenin Zinn Digital® desteğine bağlanmasını kabul ediyorum. Bu işlem, sitenin adresini, WordPress ve PHP sürümleri ile eklenti sürümünü gönderir ve bağlantı buradan veya Zinn Digital® tarafından her zaman kesilebilir."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Bağlan"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Yardıma ihtiyacım var"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Hata bildir"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Geri bildirim gönder"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Özellik isteğinde bulun"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "Site detayları okunamadı."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "İsteğiniz gönderilemedi. Birkaç dakika içinde tekrar deneyin."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress yöneticisi"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Dosya yöneticisi"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Geri bildirim ve özellik istekleri"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Gönderildi. Referans numaranız %s olup, yanıtımız e-posta ile gönderilecektir."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "Bu ne hakkında?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "E-postayı yanıtla"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Konu"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Ne yaptınız, ne bekliyordunuz ve bunun yerine ne oldu?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Site detaylarını dahil et (sürümler, tema, eklentiler, hata günlüğü alıntısı)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Tam olarak ne gönderildiğini görün"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Yükleniyor…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Destek için oturum açma bilgileri (isteğe bağlı, şifrelenmiş olarak saklanır)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "Bir oturum açma bilgisi yalnızca parolasıyla birlikte gönderilir. Bir satırı yarı dolu bırakmak yerine hiç bırakmayın."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Giriş adresi"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Şifre"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Giriş ekle"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Geçici bir destek oturum açma bilgisi oluştur"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Destek ekibimiz için, kullanıcılara, eklenti yüklemeye veya kod düzenlemeye erişimi olmayan ayrı bir kullanıcı. Süresi dolduğunda veya aşağıdan iptal ettiğinizde otomatik olarak silinir."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Evet, %d gün boyunca"
+msgstr[1] "Evet, %d gün boyunca"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Gönder"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "Liste yüklenemedi."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "Bu oturum açma bilgisi kaldırılamadı."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Geçici destek oturum açma bilgileri"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Hiçbiri. Destek ekibi, yalnızca burada bir oturum açma bilgisi oluşturmanız durumunda bu siteye giriş yapabilir."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "süresi dolmuş, kaldırılıyor"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "%s tarihinde sona eriyor"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Hemen iptal et"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "%2$d adımın %1$d. adımı"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "Turu kapat"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Geri"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Her şey tek bir yerde"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Bu sekmeleler eklentinin her ekranına yönlendirir: kurulum, ayarlar, lisansınız, yardım ve daha fazlası."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Her ekranda yardım"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Bulunduğunuz ekranın kılavuzu, bu tur veya bizden yardım istemek için bu menüyü açın."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Açık veya koyu"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Açık, koyu veya bilgisayarınızla aynı olanı seçin. Seçiminiz yalnızca sizin için hatırlanır."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Hoş Geldiniz"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Bu kısa tur, öğelerin nerede olduğunu gösterir. İstediğiniz zaman Escape tuşuyla çıkabilirsiniz."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "Bir bakışta siteniz"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "Kurulum ilerlemeniz ve planınız, yapılması gereken bir sonraki adımla birlikte burada gösterilir."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Planınız, kaç siteyi kapsadığı ve bu site kopyasının söz konusu limite dahil olup olmadığı."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Pro'yu Deneyin veya Yükseltin"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Kart gerektirmeyen, yükseltme veya yenileme yapılabilen ücretsiz bir deneme sürümünü buranın tamamından başlatın."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Her özellik ve bunu içeren plan. Bir özellik arayın veya aynı anda tek bir alanı gösterin."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Zinn Digital® hakkında daha fazlası"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Bu eklentiyle çalışan eklentiler ve aynı ekipten servisler. Diğer ekranlarda gizlediğiniz kartlar burada tekrar gösterilebilir."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Daha hızlı yardım için bağlanın"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "Bağlantı kurmak isteğe bağlıdır. Her seferinde e-postanızı yazmadan istek göndermenizi sağlar ve istediğiniz zaman bağlantıyı kesebilirsiniz."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Yardım isteyin veya bir hata bildirin"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Ne olduğunu açıklayın. Site bilgilerini ekleyip eklememeyi siz seçersiniz ve tam olarak ne içerdiğini önceden görebilirsiniz."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Geçici destek erişimi"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Destek ekibinin sitenize göz atması gerekirse buradan geçici bir oturum açma bilgisi oluşturun. Süresi dolduğunda otomatik olarak silinir ve istediğiniz zaman silebilirsiniz."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Ne inşa etmemizi istediğinizi bize bildirin"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Bir fikir, özellik talebi veya herhangi bir geri bildirim gönderin. Doğrudan ekibe ulaşır."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "Bu işlem birkaç dakika sürer ve %s öğesini bu sitede hemen çalışacak şekilde ayarlar. Her şeyi daha sonra değiştirebilirsiniz."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Hazırsınız. Her şey beklendiğiniz gibi çalışmazsa, bir tık uzağınızdayız."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "Adım %1$d / %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Bitir"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Kurulumu atla"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd CEO'su Neil Lock tarafından oluşturulmuştur"
@@ -5336,7 +6660,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Pro planları ve fiyatlandırmayı inceleyin"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Diller"
 
@@ -5554,6 +6879,14 @@ msgstr "Biçim yönergeleri (hedef kitle, marka sesi)"
 msgid "Save glossary"
 msgstr "Sözlüğü kaydet"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Çeviri motoru"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5571,10 +6904,6 @@ msgstr "Çalışıyor"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Tamamlandı"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Arka planda çevir"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5653,7 +6982,7 @@ msgid "Content"
 msgstr "İçerik"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Dil"
 
@@ -5700,47 +7029,47 @@ msgstr "Kaydedildi. Düzeltmeleriniz makine çevirisine karşı korumalıdır."
 msgid "The same menu, translated"
 msgstr "Aynı menü, çevrildi"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Her dil için ayrı bir menü"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Varsayılan olarak her menü çevrilir: bağlantıları, başlıklarıyla birlikte çevrilmiş sayfalara yönlendirir. Bunun yerine buradaki bir dil için kendine ait bir menü seçin."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Paylaşılan metin"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Hangi metin"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Menü etiketleri"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Şablonlar, üstbilgiler, altbilgiler ve desenler"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Şablonlar, üstbilgiler, altbilgiler ve desenler (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Eksik metni çevir"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Çevrilecek metin yok."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Bir insan tarafından düzeltildi, korumalı"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Düzeltmeleri kaydet"
 
@@ -5823,13 +7152,9 @@ msgid "Problem"
 msgstr "Sorun"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Düzenle"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Kayan değiştirici"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5909,7 +7234,7 @@ msgstr "Elementor ve Bricks widget'ları Tranzly Pro'nun bir parçasıdır."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Kaydet"
 
@@ -6045,27 +7370,27 @@ msgstr "Kaydedildi. Değiştirdiğiniz parçalar bir kişi tarafından onayland�
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "Bu çevirinin düzeni editörde değiştirildiğinden, bazı parçalar artık orijinaliyle eşleşmiyor. Eşleşeni olmayan parçalar boş gösteriliyor; kalanı editörde düzenleyin."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Düzenleyiciyi aç"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Orijinal (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Çeviri (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Değişiklikleri kaydet"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Düzenleyicide aç"
 
@@ -6139,28 +7464,28 @@ msgstr "Henüz çevrilmedi (bir kopya)"
 msgid "Save this post first, then translate it here."
 msgstr "Önce bu gönderiyi kaydedin, ardından burada çevirin."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Yanyana"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Görüntüle"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Tekrar çevrilebilmesi için kilidini aç"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Koru"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "Çevirileri yayınla"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6168,69 +7493,69 @@ msgstr[0] "%d dile çevir"
 msgstr[1] "%d dile çevir"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: çevrildi."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Bu bloğu göster"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "Her dilde"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Yalnızca işaretlenen dillerde"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "İşaretlenenler dışındaki her dilde"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Dil başına görsel"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Okuyuculara bir dil için başka bir görsel gösterin, örneğin üzerinde kelimeler bulunan bir banner."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%s görselini değiştir"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "Bir %s görseli seçin"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Orijinal görseli kullan"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Bu çeviriyi düzelt"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Kaydediliyor…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Çevrilmiş metin. Düzeltmek için Enter tuşuna basın."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Çevirisini düzeltmek için etrafı çizgili herhangi bir metne tıklayın."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Bu sayfada düzenlenecek çevrilmiş metin bulunamadı. Bunun yerine yan yana düzenleyiciyi kullanın."
 

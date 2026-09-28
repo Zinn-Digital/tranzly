@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,636 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® は応答しましたが、このプラグインが認識できる接続ではありませんでした。何も保存されませんでした。"
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "このサイトは接続を喪失しました。現在 Zinn Digital® に通知できなかったため、サポートスタッフ側で削除されるまで未使用として扱われます。"
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "このサイトで使用するように設定されているZinn Digital®のアドレスは安全なアドレス（https）ではないため、何も送信されませんでした。"
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "このサイトから Zinn Digital® に接続できませんでした。サイトが外向きの接続を行えることを確認してから、もう一度お試しください。"
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "このサイトの Zinn Digital® への接続が取り消されました。続行するには、再度接続してください。"
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® では、このサイトの接続を認識できなくなりました。続行するには、再接続してください。"
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "このサイトまたはアドレスからのリクエストが多すぎます。しばらく待ってから、もう一度お試しください。"
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® はこのリクエストを受け付けることができませんでした。メールアドレスとメッセージを確認し、もう一度お試しください。"
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® ではただいまリクエストを処理できませんでした。数分後にもう一度お試しください。"
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "このサイトではライセンスサービスを利用できません。"
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "ここでは体験版を開始できませんでした。代わりに体験版ページで続けてください。"
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "言語ごとに1つの投稿を作成し、相互にリンクします"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "古い Tranzly 翻訳を保持します"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "バックグラウンドで翻訳する"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "毎回テスト済みの最新の WordPress と PHP"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "設計段階からのセキュリティ"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "58言語のインターフェース、右横書き（RTL）対応"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "無制限の言語"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL（現在の連携機能を維持）"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "独自キーを使ったAIモデル"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud 翻訳および Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "言語ごとに異なるエンジン"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "自動フォールバック"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "開始前の費用見積もり"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "翻訳メモリ"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "すべてのエンジン用用語集および翻訳除外リスト"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "トーンとスタイルに関する指示"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "投稿、固定ページ、カスタム投稿タイプ"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "ブロックは安全に翻訳されました"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "カテゴリー、タグ、カスタムタクソノミー"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "メニュー"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich ページ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor、Bricks、Divi、Beaver Builder、Oxygen、および WPBakery に対応"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: すべて"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "4大SEOプラグインすべてのSEOフィールド"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "カスタムフィールド"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "テーマとプラグインのテキスト（文字列）"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "メディア"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "ブロックテーマ: テンプレートとパターン"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "ウィジェットとサイトのタイトル/キャッチフレーズ"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "ワンクリックで1件の投稿を翻訳"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "サイト全体を一括翻訳"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "新しく更新されたコンテンツを自動翻訳する"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "並べて比較できる翻訳エディター"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "ビジュアルフロントエンドエディター"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "確認と承認"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "人間翻訳者のためのエクスポートとインポート"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "WPML、Polylang、または TranslatePress から乗り換える"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "翻訳ステータスダッシュボード"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "URL内の言語: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "言語ごとのサブドメインまたは独立したドメイン"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "翻訳されたスラッグ"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflangタグの正しい実装方法"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "翻訳されたサイトマップ"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "言語とcanonicalタグの修正"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "検索エンジンから未翻訳ページを非表示にする"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "訪問者の言語を提案する"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "ブロックエディター用のスイッチャーブロック"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Page Builder Sandwich のスイッチャー要素"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Elementor、Bricks、その他のビルダー用スイッチャー"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "メニュー項目、ウィジェット、ショートコード"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "フローティングスイッチャー"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "アクセシビリティスイッチャー"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API およびテンプレート関数"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "独自の翻訳エンジンを追加する"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "フック、REST API、WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Polylang/WPML 関数用の互換性レイヤー"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "主要なAIプロバイダーすべてで独自のキーを使用する"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "モデルリストが自動更新されます"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "アップデートで推奨モデルをプッシュ配信します"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "1ステップで自分でモデルを追加する"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "専門知識が不要なシンプルなセットアップ"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "暗号化されて保存され、弊社には送信されません"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "エラーメッセージをクリア"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "使用量とコストのログ"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "役割ごとのAI権限"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "1つのキーで、両方のプラグインに対応"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "モダンな管理画面"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "セットアップウィザード"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "組み込みヘルプ"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "2つのプラグイン間のクロスプロモーション"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® ホスティング プロモーション"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Freemius による Pro ライセンス（最新 SDK）"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Proの無料トライアル"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "バンドル: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd に帰属"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "GitHub と同様に他のプラグインと同期されます"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "手動編集は保護されています"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "翻訳失敗レポート"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "すべての翻訳を簡単に編集"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "無料版の翻訳除外リスト"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce マルチ通貨"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "AI品質チェック"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "特定の言語でのみコンテンツを表示する"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "多言語SEO診断"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "フォームを翻訳"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "コメントとレビューを翻訳する"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "言語ごとに異なる画像"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "エンジンごとの月間利用上限額"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "多言語サイト内検索"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "スピード保証、テスト済み"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "マルチサイト対応"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "ステージングサイトおよびローカルサイトはライセンスを消費しません"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "ドキュメントサイトと短い動画ガイド"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "フィードバック・機能リクエストボタン"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "ベータ版アップデートチャンネル"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "優先サポート"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "バグ報告とサポートチケット"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Freemiusを十分に活用する"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "デフォルトで有効な、フットプリントフリーのフロントエンド"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "基盤"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "翻訳エンジン"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "翻訳される対象"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "ワークフロー"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEOとURL"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "言語切り替え機能"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "開発者"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "AIキーとモデル"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "管理者とライセンス"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "機能を追加"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "ライセンスとサポート"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "高速で多言語対応のWordPressに特化したホスティング"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "このプラグインの開発チームが提供する、速度と多言語サイトに最適化されたマネージド WordPress ホスティング。"
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® のホスティングを見る"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "ZinnHubでWordPressの専門家を雇う"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "WordPress のデザイン、開発、翻訳、SEO 業務のためのフリーランスマーケットプレイス。"
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHubにアクセス"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "一括サイトおよびPBNホスティング"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltdは、複数のサイトを同時にホスティングおよび管理するためのプラットフォームです。"
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "PBN.ltd にアクセス"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Page Builder Sandwich Pro と Tranzly Pro をまとめて手に入れよう"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "このバンドルは、同じプランとサイト制限で両方のプラグインを別々に購入するよりも安くなります。"
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "バンドルを見る"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%sを取得"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "連携有効: %1$s と %2$s が連携して動作します"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s がこのサイトで有効になっているため、両方のプラグインで1つのAIプロバイダーキーのセットと、それらの設定画面が共有されます。"
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Tranzlyでこのサイトを翻訳する"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Page Builder Sandwichで視覚的にページを作成する"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "Zinn Digital® からの %s"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "翻訳edされたアドレス、SEOデータ、言語スイッチャーを備え、すべてのページを多言語で公開できます。ここで作成したページで動作します。"
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "高速でSEOフットプリントを残さないブロックを使用し、エディター上で直接ページをデザインできます。作成したすべてのコンテンツはTranzlyで翻訳されます。"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%sは同じチームによって開発されており、このプラグインと連携して動作します。"
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "まずこのサイトの接続に同意してください。"
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "有効なメールアドレスを入力してください。"
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "サポート情報の事前送信に同意する。"
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "件名とメッセージを入力してください。"
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "サポートからの返信先となるメールアドレスを入力してください。"
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "サイト所有者によって作成された一時的なサポートアクセスです。有効期限が切れると自動的に削除されます。"
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "1日、3日、または7日を選択してください。"
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "この画面にサインインしているサイト管理者のみが、一時的なサポートアクセスを作成できます。"
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "一意のユーザー名を選択できませんでした。もう一度お試しください。"
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® サポート（一時的）"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "この一時的なサポートアクセスの有効期限が切れています。"
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +711,8 @@ msgid "Writing and rewriting"
 msgstr "書き込みと書き換え"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "翻訳"
 
@@ -115,6 +746,9 @@ msgstr "独自ドメインのキーを使用するため、利用分はプロバ
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "次へ"
 
@@ -217,6 +851,7 @@ msgstr "テスト"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "削除"
@@ -621,6 +1256,8 @@ msgstr "AIリクエストはまだ行われていません。"
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "完了"
 
@@ -682,11 +1319,11 @@ msgstr "翻訳は、原文と同じ種類のコンテンツでなければなり
 msgid "Choose one of the site's other languages."
 msgstr "サイトの他の言語のいずれかを選択してください。"
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "このプラグインのコピーには管理画面のスクリプトがありません。リリースされたパッケージから再インストールしてください。"
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "この画面を表示するにはJavaScriptが必要です。"
 
@@ -1596,7 +2233,7 @@ msgstr "今すぐライセンスを購入"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -2111,6 +2748,7 @@ msgstr "ホワイトレーベルモードを無効化中"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "切断する"
 
@@ -2351,6 +2989,7 @@ msgstr "有効期限"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "期限切れ"
 
@@ -2417,6 +3056,8 @@ msgstr "アップグレードを完了するには、以下の手順に従って
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "無料"
 
@@ -2796,6 +3437,7 @@ msgstr "長期重複"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "メッセージ"
 
@@ -3031,6 +3673,7 @@ msgstr "このプラグインには、より新しいバージョンのPHPが必
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "いいえ"
@@ -3203,6 +3846,7 @@ msgstr "Webサイトの継続的な互換性を確保するため、オプショ
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "その他"
 
@@ -3971,6 +4615,7 @@ msgstr "サイトID"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "サイト"
 
@@ -4067,7 +4712,7 @@ msgstr "トライアルを開始中"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "状態"
 
@@ -4368,6 +5013,7 @@ msgstr "%1$sの使い心地はいかがですか？%3$d日間の無料トライ�
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "タイプ"
 
@@ -5121,13 +5767,6 @@ msgstr "この設定はオンまたはオフです。"
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "検索エンジンから未翻訳ページを非表示にすることは、Tranzly Proに含まれています。"
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "言語切り替え機能"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "言語"
@@ -5307,6 +5946,687 @@ msgstr "テキストサイズ"
 msgid "Switcher"
 msgstr "スイッチャー"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "概要で非表示にしたサジェストを再度表示する"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "すべて"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d件選択中"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "一致する項目がありません。"
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "このページのすべてを選択"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "選択"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "ページ"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "前へ"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "%1$d ページ / 全 %2$d ページ"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "数分で %s を設定する"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "セットアップを開始"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "このサイト"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "エディション"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "このライセンスのサイト"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "バージョン"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "これはステージングコピーまたはローカルコピーとみなされるため、ライセンス上のサイト数としてはカウントされません。"
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Proで利用できる機能を見る"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "移動先:"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "個人"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "ビジネス"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "代理店"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "すべてのサイト"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "無制限のサイト"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "サイト数: %d"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "プロ"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%sのトライアル"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "体験期間が開始されました。ページを再読み込みして、すべてのPro機能をご確認ください。"
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "試用期間を開始できませんでした。"
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "機能"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "含まれています"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "未含有"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "お客様のライセンス"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%1$d / %2$d 使用中"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "更新日"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "ステージング環境、テスト環境、およびローカルホスト上のサイトコピーは無料であり、サイト数の制限には一切カウントされません。"
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "お客様のプランには優先サポートが含まれています。"
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "ライセンスと請求の管理"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Proプランをもっと活用する"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "クレジットカード登録不要で、%d日間の無料トライアルを開始する"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "プランと料金を見る"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "TranzlyとPage Builder Sandwichを一緒に使用しますか？バンドルには両方のProプラグインが割引価格で含まれています。"
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "ライセンスの有効期限が切れました。アップデートとPro機能を引き続きご利用いただくには、更新してください。"
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "今すぐ更新"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "プランを比較する"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "機能の検索"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "エリア"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "含まれるプラン:"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "該当する機能はありません。"
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "プラン別の機能"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "非表示"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "プラグイン画面で有効化してください"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "インストールする"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "概要"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "セットアップ"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "プランとライセンス"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "アドオン"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "ヘルプを取得"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "フィードバック"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "選択内容を保存できませんでした。"
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "セットアップの状態を保存できませんでした。"
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "このコンピューターと一致させる"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "ライト"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "ダーク"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "配色"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "ヘルプ"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "この画面のガイド"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "ツアーを見る"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "ヘルプを取得するかバグを報告する"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "プラグイン画面"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "保存できませんでした。"
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "サポートにお問い合わせいただく前に"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "このリクエストは、このサイトからこのプラグインを作成した %s に送信されます。送信される情報："
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "返信ができるよう、メールアドレスとお名前"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "作成する件名とメッセージ、"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "お客様のライセンスID（有料プランをご利用のお客様が優先的にサポートを受けられるためです）；"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "チェックを入れた場合のみ送信されるもの：サイトの詳細情報（WordPressおよびPHPのバージョン、テーマ、プラグイン、パスワードやメールアドレスを除外したエラーログの抜粋）。送信前に内容を確認することができます。"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "サイトのログイン情報（追加された場合のみ）は、暗号化されて保存され、リクエストのクローズから30日後に削除されます。"
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "プライバシーポリシー"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "同意して続行"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "接続を確認できませんでした。"
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "うまくいきませんでした。もう一度お試しください。"
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital® サポートにより、このサイトの接続が解除されました。"
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Zinn Digital® サポートはこのサイトを認識しなくなりました。"
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "このサイトの接続を解除しました。"
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "このサイトをサポートに接続する"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "接続されました。返信先は %s です。"
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "接続されていません。以下の欄にメールアドレスを入力してリクエストを送信することも可能です。接続すると、毎回入力する手間が省けます。"
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "メールアドレス"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "お名前（任意）"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "このサイトをZinn Digital®のサポートに接続することに同意します。この操作により、サイトのアドレス、WordPressおよびPHPのバージョン、プラグインのバージョンが送信されます。サポートの接続は、ここから、またはZinn Digital®によっていつでも解除できます。"
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "接続"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "ヘルプが必要ですか"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "バグを報告"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "フィードバックを送信"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "機能をリクエストする"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "サイトの詳細を読み込めませんでした。"
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "リクエストを送信できませんでした。数分後にもう一度お試しください。"
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress 管理画面"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "ファイルマネージャー"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "フィードバックと機能リクエスト"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "送信しました。お客様の参照番号は %s です。返信は電子メールでお送りします。"
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "お問い合わせ内容は何ですか？"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "返信する (メール)"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "件名"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "どのように操作しましたか？また、どのような結果を期待していましたが、実際にはどうなりましたか？"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "サイトの詳細を含める（バージョン、テーマ、プラグイン、エラーログの抜粋）"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "送信される内容を正確に確認する"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "読み込み中…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "サポート用ログイン情報（任意、暗号化して保存）"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "ログイン情報は必ずパスワードと共送信してください。中途半端に入力するくらいなら、行ごと空欄にしてください。"
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "ログインアドレス"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "ユーザー名"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "パスワード"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "ログインを追加"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "一時的なサポートログインを作成する"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "ユーザー、プラグインのインストール、コードの編集へのアクセス権を持たない、サポートチーム用の専用ユーザーです。有効期限が切れた場合、または以下の設定でアクセス権を取り消した時に自動的に削除されます。"
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "はい (%d 日間)"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "送信"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "リストを読み込めませんでした。"
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "そのログイン情報は削除できませんでした。"
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "一時サポートログイン"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "なし。サポートがこのサイトにログインするには、こちらでログイン情報を作成する必要があります。"
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "期限切れ、削除中"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "%sに有効期限切れ"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "今すぐ取り消す"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "%1$dステップ目（全%2$dステップ）"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "ツアーを閉じる"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "戻る"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "すべてのデータを一元管理"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "これらのタブから、セットアップ、設定、ライセンス、ヘルプなど、プラグインのすべての画面にアクセスできます。"
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "すべての画面にヘルプ"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "現在表示中の画面のガイドやこのツアーを表示したり、サポートに問い合わせたりするには、このメニューを開いてください。"
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "ライトまたはダーク"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "ライト、ダーク、またはお使いのコンピュータの設定と同じものから選択できます。選択内容はあなた専用に記憶されます。"
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "ようこそ"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "この短いツアーでは、各機能の配置をご案内します。Escapeキーを押すと、いつでも終了できます。"
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "サイトの概要"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "ここにはセットアップの進捗状況とお客様のプランが表示され、次に実行すべきおすすめのタスクが案内されます。"
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "お客様のプラン、そのプランで利用できるサイト数、およびこのサイトの複製がその制限数に含まれるかどうか。"
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Proを試すか、アップグレードする"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "カード登録不要で無料トライアルを開始、アップグレードや更新もすべてここから行えます。"
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "すべての機能と、それが含まれるプラン。機能を検索するか、エリアごとに1つずつ表示します。"
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Zinn Digital® のその他の情報"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "このプラグインと連携するプラグイン、および同じチームによるサービス。他の画面で非表示にしたカードを、ここで再度表示できます。"
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "より迅速なサポートのために接続する"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "接続は任意です。接続すると、毎回メールアドレスを入力しなくてもリクエストを送信できるようになり、いつでも切断できます。"
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "ヘルプを求めるかバグを報告する"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "何が起きたのかを説明してください。サイト情報を添付するかどうかはご自身で選択でき、添付される内容を事前に正確に確認することができます。"
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "一時的なサポートアクセス"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "サポートチームがサイト内部を確認する必要がある場合は、こちらから一時的なログインを作成してください。有効期限が切れると自動的に削除され、いつでも手動で削除できます。"
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "開発してほしい機能をお聞かせください"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "アイデア、機能のリクエスト、その他のフィードバックをお送りください。チームに直接届きます。"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "これには数分かかり、%sを設定してこのサイトですぐに動作するようにします。後からすべて変更できます。"
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "準備が整いました。万が一予期しない動作が発生した場合は、いつでもお気軽にお問い合わせください。"
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "ステップ %1$d / %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "完了"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "セットアップをスキップ"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® LtdのCEO、ネイル・ロック（Neil Lock）による開発"
@@ -5335,7 +6655,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Proプランと料金を見る"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "言語"
 
@@ -5553,6 +6874,14 @@ msgstr "スタイル指示（ターゲット層、ブランドボイス）"
 msgid "Save glossary"
 msgstr "用語集を保存"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "設定"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "翻訳エンジン"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6899,6 @@ msgstr "実行中"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "完了"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "バックグラウンドで翻訳する"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6977,7 @@ msgid "Content"
 msgstr "コンテンツ"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "言語"
 
@@ -5699,47 +7024,47 @@ msgstr "保存しました。修正内容は機械翻訳から保護されます
 msgid "The same menu, translated"
 msgstr "翻訳された同じメニュー"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "言語ごとの個別のメニュー"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "デフォルトでは、各メニューは翻訳され、そのリンクは対応するタイトルとともに翻訳されたページにつながります。代わりに、言語ごとに独自のメニューをここで選択してください。"
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "共有テキスト"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "どのテキスト"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "メニューラベル"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "テンプレート、ヘッダー、フッター、パターン"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "テンプレート、ヘッダー、フッター、パターン (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "未翻訳のテキストを翻訳する"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "ここには翻訳するテキストはありません。"
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "人間による修正済み、保護済み"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "修正を保存"
 
@@ -5822,13 +7147,9 @@ msgid "Problem"
 msgstr "問題"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "編集"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "フローティングスイッチャー"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7229,7 @@ msgstr "Elementor および Bricks のウィジェットは Tranzly Pro に含�
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "保存"
 
@@ -6044,27 +7365,27 @@ msgstr "保存しました。変更された部分は人手による確認済み
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "エディター内でこの翻訳のレイアウトが変更されたため、一部の部分が元のテキストとペアでなくなりました。パートナーのない部分は空欄で表示されます。残りの部分はエディターで編集してください。"
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "エディターを開く"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "オリジナル (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "翻訳 (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "変更を保存"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "エディターで開く"
 
@@ -6138,97 +7459,97 @@ msgstr "未翻訳（コピー）"
 msgid "Save this post first, then translate it here."
 msgstr "まずこの投稿を保存してから、ここで翻訳してください。"
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "並べて比較"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "表示"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "再度翻訳できるようにロックを解除します"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "保護する"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "翻訳を公開する"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
 msgstr[0] "%d言語に翻訳する"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: 翻訳済み"
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "このブロックを表示する"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "すべての言語において"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "チェックされた言語のみ"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "チェックの入っている言語を除くすべての言語において"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "言語ごとの画像"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "言語の読者に別の画像（文字入りのバナーなど）を表示します。"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%sの画像を置き換える"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "%s のイメージを選択"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "元の画像を使用"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "翻訳を修正する"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "保存中…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "翻訳されたテキスト。Enter キーを押して修正します。"
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "枠で囲まれたテキストをクリックして、翻訳を修正してください。"
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "このページには、ここで編集できる翻訳済みのテキストが見つかりませんでした。代わりにサイドバイサイドエディターを使用してください。"
 

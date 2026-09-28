@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® ਨੇ ਜਵਾਬ ਦਿੱਤਾ, ਪਰ ਅਜਿਹੇ ਕਨੈਕਸ਼ਨ ਨਾਲ ਨਹੀਂ ਜਿਸ ਨੂੰ ਇਹ ਪਲੱਗਇਨ ਸਮਝਦਾ ਹੋਵੇ। ਕੁਝ ਵੀ ਸੇਵ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।"
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "ਇਸ ਸਾਈਟ ਦਾ ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਖਤਮ ਹੋ ਗਿਆ ਹੈ। Zinn Digital® ਨੂੰ ਇਸ ਬਾਰੇ ਹੁਣੇ ਨਹੀਂ ਦੱਸਿਆ ਜਾ ਸਕਿਆ, ਇਸ ਲਈ ਸਹਾਇਤਾ ਅਮਲਾ ਇਸ ਨੂੰ ਉਦੋਂ ਤੱਕ ਅਣਵਰਤਿਆ ਦੇਖੇਗਾ ਜਦੋਂ ਤੱਕ ਇਸਨੂੰ ਉਹਨਾਂ ਦੇ ਪਾਸੋਂ ਹਟਾਇਆ ਨਹੀਂ ਜਾਂਦਾ।"
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Zinn Digital® ਦਾ ਜੋ ਪਤਾ ਇਸ ਸਾਈਟ ਨੂੰ ਵਰਤਣ ਲਈ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ, ਉਹ ਇੱਕ ਸੁਰੱਖਿਅਤ (https) ਪਤਾ ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਕੁਝ ਵੀ ਨਹੀਂ ਭੇਜਿਆ ਗਿਆ ਸੀ।"
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "ਇਸ ਸਾਈਟ ਤੋਂ Zinn Digital® ਨਾਲ ਸੰਪਰਕ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਜਾਂਚ ਕਰੋ ਕਿ ਸਾਈਟ ਆਊਟਗੋਇੰਗ ਕਨੈਕਸ਼ਨ ਬਣਾ ਸਕਦੀ ਹੈ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "ਇਸ ਸਾਈਟ ਦਾ Zinn Digital® ਨਾਲ ਕਨੈਕਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਇਸਨੂੰ ਦੁਬਾਰਾ ਕਨੈਕਟ ਕਰੋ।"
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® ਹੁਣ ਇਸ ਸਾਈਟ ਦੇ ਕਨੈਕਸ਼ਨ ਨੂੰ ਨਹੀਂ ਪਛਾਣਦਾ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਇਸ ਨੂੰ ਦੁਬਾਰਾ ਕਨੈਕਟ ਕਰੋ।"
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "ਇਸ ਸਾਈਟ ਜਾਂ ਪਤੇ ਤੋਂ ਬਹੁਤ ਸਾਰੀਆਂ ਬੇਨਤੀਆਂ ਭੇਜੀਆਂ ਗਈਆਂ ਹਨ। ਥੋੜ੍ਹੀ ਦੇਰ ਉਡੀਕ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® ਇਸ ਬੇਨਤੀ ਨੂੰ ਸਵੀਕਾਰ ਨਹੀਂ ਕਰ ਸਕਿਆ। ਈਮੇਲ ਪਤਾ ਅਤੇ ਸੁਨੇਹਾ ਚੈੱਕ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® ਇਸ ਸਮੇਂ ਬੇਨਤੀ ਨੂੰ ਸੰਭਾਲਣ ਵਿੱਚ ਅਸਮਰੱਥ ਸੀ। ਕੁਝ ਮਿੰਟਾਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "ਇਸ ਸਾਈਟ 'ਤੇ ਲਾਇਸੈਂਸਿੰਗ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "ਇੱਥੇ ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ। ਇਸ ਦੀ ਬਜਾਏ ਅਜ਼ਮਾਇਸ਼ ਪੰਨੇ 'ਤੇ ਜਾਰੀ ਰੱਖੋ।"
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "ਹਰੇਕ ਭਾਸ਼ਾ ਲਈ ਇੱਕ ਪੋਸਟ, ਆਪਸ ਵਿੱਚ ਲਿੰਕ ਕੀਤੀ ਗਈ"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "ਤੁਹਾਡੇ ਪੁਰਾਣੇ Tranzly ਅਨੁਵਾਦਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਦਾ ਹੈ"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "ਪਿਛੋਕੜ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "ਨਵੀਨਤਮ WordPress ਅਤੇ PHP, ਹਰੇਕ ਰਿਲੀਜ਼ ਉੱਤੇ ਟੈਸਟ ਕੀਤੇ ਗਏ"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "ਡਿਜ਼ਾਈਨ ਦੁਆਰਾ ਸੁਰੱਖਿਆ"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "58 ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਇੰਟਰਫੇਸ, ਸੱਜੇ-ਤੋਂ-ਖੱਬੇ (RTL) ਲਈ ਤਿਆਰ"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "ਅਸੀਮਤ ਭਾਸ਼ਾਵਾਂ"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (ਮੌਜੂਦਾ ਏਕੀਕਰਣ, ਰੱਖਿਆ ਗਿਆ)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "ਆਪਣੀ ਖੁਦ ਦੀ ਕੁੰਜੀ ਨਾਲ ਏ.ਆਈ. ਮਾਡਲ"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation ਅਤੇ Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "ਹਰੇਕ ਭਾਸ਼ਾ ਲਈ ਵੱਖਰਾ ਇੰਜਣ"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "ਆਟੋਮੈਟਿਕ ਫਾਲਬੈਕ"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਲਾਗਤ ਦਾ ਅਨੁਮਾਨ"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "ਅਨੁਵਾਦ ਮੈਮੋਰੀ"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "ਹਰੇਕ ਇੰਜਣ ਲਈ ਸ਼ਬਦਾਵਲੀ ਅਤੇ ਡੂ-ਨਾਟ-ਟ੍ਰਾਂਸਲੇਟ ਸੂਚੀ"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "ਟੋਨ ਅਤੇ ਸਟਾਈਲ ਹਦਾਇਤਾਂ"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "ਪੋਸਟਾਂ, ਪੰਨੇ ਅਤੇ ਕਸਟਮ ਪੋਸਟ ਕਿਸਮਾਂ"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "ਬਲਾਕ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਅਨੁਵਾਦ ਕੀਤੇ ਗਏ"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "ਸ਼੍ਰੇਣੀਆਂ, ਟੈਗ ਅਤੇ ਕਸਟਮ ਟੈਕਸੋਨੋਮੀਜ਼"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "ਮੀਨੂ"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich ਸਫ਼ੇ"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen ਅਤੇ WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: ਸਭ ਕੁਝ"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "ਸਾਰੇ ਚਾਰ ਵੱਡੇ SEO ਪਲੱਗਇਨਾਂ ਲਈ SEO ਖੇਤਰ"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "ਕਸਟਮ ਫੀਲਡਾਂ"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "ਥੀਮ ਅਤੇ ਪਲੱਗਇਨ ਟੈਕਸਟ (ਸਟਰਿੰਗ)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "ਮੀਡੀਆ"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "ਬਲਾਕ ਥੀਮ: ਟੈਂਪਲੇਟ ਅਤੇ ਪੈਟਰਨ"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "ਵਿਜੇਟ ਅਤੇ ਸਾਈਟ ਦਾ ਸਿਰਲੇਖ/ਟੈਗਲਾਈਨ"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "ਇੱਕ ਕਲਿੱਕ ਵਿੱਚ ਇੱਕ ਪੋਸਟ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "ਪੂਰੀ ਸਾਈਟ ਦਾ ਬਲਕ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "ਨਵੇਂ ਅਤੇ ਅੱਪਡੇਟ ਕੀਤੇ ਗਏ ਸਮੱਗਰੀ ਦਾ ਆਟੋ-ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "ਨਾਲ-ਨਾਲ ਅਨੁਵਾਦ ਸੰਪਾਦਕ"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "ਵਿਜ਼ੂਅਲ ਫਰੰਟ-ਐਂਡ ਐਡੀਟਰ"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "ਸਮੀਖਿਆ ਅਤੇ ਮਨਜ਼ੂਰੀ"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "ਮਨੁੱਖੀ ਅਨੁਵਾਦਕਾਂ ਲਈ ਨਿਰਯਾਤ ਅਤੇ ਆਯਾਤ"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "WPML, Polylang ਜਾਂ TranslatePress ਤੋਂ ਸwiṭch ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "ਅਨੁਵਾਦ ਸਥਿਤੀ ਡੈਸ਼ਬੋਰਡ"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "URL ਵਿੱਚ ਭਾਸ਼ਾ: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "ਹਰੇਕ ਭਾਸ਼ਾ ਲਈ ਉਪ-ਡੋਮੇਨ ਜਾਂ ਵੱਖਰੇ ਡੋਮੇਨ"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "ਅਨੁਵਾਦ ਕੀਤੇ ਸਲੱਗ"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang ਟੈਗਸ, ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਕੀਤੇ ਗਏ"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "ਅਨੁਵਾਦ ਕੀਤੇ ਗਏ ਸਾਈਟਮੈਪ"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "ਭਾਸ਼ਾ ਅਤੇ ਕੈਨੋਨਿਕਲ ਟੈਗਸ ਨੂੰ ਸਹੀ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "ਖੋਜ ਇੰਜਣਾਂ ਤੋਂ ਅਨੁਵਾਦ ਨਾ ਕੀਤੇ ਪੰਨੇ ਛੁਪਾਓ"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "visitors ਦੀ ਭਾਸ਼ਾ ਸੁਝਾਓ"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "ਬਲਾਕ ਸੰਪਾਦਕ ਲਈ ਸਵਿੱਚਰ ਬਲਾਕ"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Page Builder Sandwich ਲਈ ਸਵਿੱਚਰ ਤੱਤ"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Elementor, Bricks ਅਤੇ ਹੋਰ ਬਿਲਡਰਾਂ ਲਈ ਸਵਿੱਚਰ"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "ਮੀਨੂ ਆਈਟਮ, ਵਿਜੇਟ ਅਤੇ ਸ਼ਾਰਟਕੋਡ"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "ਫਲੋਟਿੰਗ ਸਵਿੱਚਰ"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "ਪਹੁੰਚਯੋਗ ਸਵਿੱਚਰ"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API ਅਤੇ ਟੈਮਪਲੇਟ ਫੰਕਸ਼ਨ"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "ਆਪਣਾ ਖੁਦ ਦਾ ਅਨੁਵਾਦ ਇੰਜਣ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "ਹੁੱਕਸ (Hooks), REST API ਅਤੇ WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Polylang/WPML ਫੰਕਸ਼ਨਾਂ ਲਈ ਅਨੁਕੂਲਤਾ ਪਰਤ"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "ਸਾਰੇ ਮੁੱਖ AI ਪ੍ਰਦਾਤਾਵਾਂ ਲਈ ਆਪਣੀ ਖੁਦ ਦੀ ਕੁੰਜੀ ਲਿਆਓ"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "ਮਾਡਲ ਸੂਚੀ ਆਪਣੇ ਆਪ ਅੱਪਡੇਟ ਹੁੰਦੀ ਹੈ"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "ਅਸੀਂ ਅੱਪਡੇਟਾਂ ਵਿੱਚ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ ਮਾਡਲਾਂ ਨੂੰ ਪੁਸ਼ ਕਰਦੇ ਹਾਂ"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "ਇੱਕ ਕਦਮ ਵਿੱਚ ਆਪਣੇ ਆਪ ਇੱਕ ਮਾਡਲ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "ਗੈਰ-ਤਕਨੀਕੀ ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਆਸਾਨ ਸੈੱਟਅੱਪ"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "ਕੁੰਜੀਆਂ ਇਨਕ੍ਰਿਪਟਡ ਸਟੋਰ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ, ਕਦੇ ਵੀ ਸਾਨੂੰ ਨਹੀਂ ਭੇਜੀਆਂ ਜਾਂਦੀਆਂ"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "ਗਲਤੀ ਸੁਨੇਹੇ ਸਾਫ਼ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "ਵਰਤੋਂ ਅਤੇ ਲਾਗਤ ਲੌਗ"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "ਪ੍ਰਤੀ-ਭੂਮਿਕਾ AI ਇਜਾਜ਼ਤਾਂ"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "ਇੱਕ ਕੁੰਜੀ, ਦੋਵੇਂ ਪਲੱਗਇਨ"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "ਆਧੁਨਿਕ ਪ੍ਰਬੰਧਕ ਸਕ੍ਰੀਨਾਂ"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "ਸੈੱਟਅੱਪ ਵਿਜ਼ਰਡ"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "ਬਿਲਟ-ਇਨ ਮਦਦ"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "ਦੋ ਪਲੱਗਇਨਾਂ ਵਿਚਕਾਰ ਕਰਾਸ-ਪ੍ਰਮੋਸ਼ਨ"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® ਹੋਸਟਿੰਗ ਪ੍ਰਮੋਸ਼ਨ"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Freemius ਰਾਹੀਂ ਪ੍ਰੋ ਲਾਇਸੈਂਸਿੰਗ (ਨਵੀਨਤਮ SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "ਪ੍ਰੋ ਦਾ ਮੁਫ਼ਤ ਟਰਾਇਲ"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "ਬੰਡਲ: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd ਦੇ ਖਾਤੇ ਵਿੱਚ ਜਮ੍ਹਾਂ ਕੀਤਾ ਗਿਆ"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "ਸ ਸਾਡੇ ਹੋਰ ਪਲੱਗਇਨਾਂ ਵਾਂਗ GitHub ਨਾਲ ਸਿੰਕ ਕੀਤਾ ਗਿਆ ਹੈ"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "ਮੈਨੂਅਲ ਸੋਧਾਂ ਸੁਰੱਖਿਅਤ ਹਨ"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "ਅਸਫਲ ਅਨੁਵਾਦ ਰਿਪੋਰਟ"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "ਕੋਈ ਵੀ ਅਨੁਵਾਦ ਆਸਾਨੀ ਨਾਲ ਸੋਧੋ"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "ਮੁਫ਼ਤ ਸੰਸਕਰਣ ਵਿੱਚ ਅਨੁਵਾਦ ਨਾ ਕਰਨ ਵਾਲੀ ਸੂਚੀ"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce ਮਲਟੀ-ਕਰੰਸੀ"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "AI ਗੁਣਵੱਤਾ ਜਾਂਚ"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "ਸਿਰਫ਼ ਕੁਝ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਸਮੱਗਰੀ ਦਿਖਾਓ"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "ਬਹੁ-ਭਾਸ਼ਾਈ SEO ਆਡਿਟ"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "ਫ਼ਾਰਮ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "ਟਿੱਪਣੀਆਂ ਅਤੇ ਸਮੀਖਿਆਵਾਂ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "ਹਰੇਕ ਭਾਸ਼ਾ ਲਈ ਵੱਖਰੀਆਂ ਤਸਵੀਰਾਂ"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "ਪ੍ਰਤੀ ਇੰਜਣ ਮਹੀਨਾਵਾਰ ਖਰਚ ਦੀ ਸੀਮਾ"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "ਬਹੁ-ਭਾਸ਼ਾਈ ਸਾਈਟ ਖੋਜ"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "ਸਪੀਡ ਦਾ ਵਾਅਦਾ, ਟੈਸਟ ਕੀਤਾ ਗਿਆ"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "ਮਲਟੀਸਾਈਟ ਸਹਾਇਤਾ"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "ਸਟੇਜਿੰਗ ਅਤੇ ਸਥਾਨਕ ਸਾਈਟਾਂ ਲਾਇਸੈਂਸ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰਦੀਆਂ"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "ਦਸਤਾਵੇਜ਼ ਸਾਈਟ ਅਤੇ ਛੋਟੀਆਂ ਵੀਡੀਓ ਗਾਈਡਾਂ"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "ਫੀਡਬੈਕ ਅਤੇ ਫੀਚਰ-ਬੇਨਤੀ ਬਟਨ"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "ਬੀਟਾ ਅੱਪਡੇਟ ਚੈਨਲ"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "ਪਰਿਮੁੱਖ ਸਹਾਇਤਾ"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "ਬੱਗ ਰਿਪੋਰਟਰ ਅਤੇ ਸਹਾਇਤਾ ਟਿਕਟਾਂ"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Freemius ਦੀ ਪurਈ ਵਰਤੋਂ ਕਰੋ"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "ਫੁੱਟਪ੍ਰਿੰਟ-ਮੁਕਤ ਫਰੰਟ ਐਂਡ, ਮੂਲ ਰੂਪ ਵਿੱਚ ਚਾਲੂ ਹੈ"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "ਫਾਉਂਡੇਸ਼ਨ"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "ਅਨੁਵਾਦ ਇੰਜਣ"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "ਕੀ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "ਵਰਕਫਲੋ"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO ਅਤੇ URL"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "ਭਾਸ਼ਾ ਸਵਿੱਚਰ"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "ਡਿਵੈਲਪਰ"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "AI ਕੁੰਜੀਆਂ ਅਤੇ ਮਾਡਲ"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "ਐਡਮਿਨ ਅਤੇ ਲਾਇਸੈਂਸਿੰਗ"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "ਹੋਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "ਲਾਇਸੈਂਸਿੰਗ ਅਤੇ ਸਹਾਇਤਾ"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "ਤੇਜ਼, ਬਹੁਭਾਸ਼ਾਈ WordPress ਲਈ ਬਣੀ ਹੋਸਟਿੰਗ"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "ਮੈਨੇਜਡ WordPress ਹੋਸਟਿੰਗ ਉਸ ਟੀਮ ਵੱਲੋਂ ਜੋ ਇਸ ਪਲੱਗਇਨ ਨੂੰ ਬਣਾਉਂਦੀ ਹੈ, ਗਤੀ ਲਈ ਅਤੇ ਕਈ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਸਾਈਟਾਂ ਲਈ ਅਨੁਕੂਲਿਤ।"
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® ਹੋਸਟਿੰਗ ਦੇਖੋ"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "ZinnHub 'ਤੇ ਇੱਕ WordPress ਮਾਹਰ ਨੂੰ ਹਾਇਕ ਕਰੋ"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "WordPress ਡਿਜ਼ਾਈਨ, ਵਿਕਾਸ, ਅਨੁਵਾਦ ਅਤੇ SEO ਕਾਰਜ ਲਈ ਇੱਕ ਫ੍ਰੀਲਾਂਸ ਮਾਰਕੀਟਪਲੇਸ।"
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHub 'ਤੇ ਜਾਓ"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "ਬਲਕ ਸਾਈਟ ਅਤੇ PBN ਹੋਸਟਿੰਗ"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd ਇੱਕੋ ਸਮੇਂ ਕਈ ਸਾਈਟਾਂ ਨੂੰ ਹੋਸਟ ਕਰਨ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰਨ ਲਈ ਸਾਡਾ ਪਲੇਟਫਾਰਮ ਹੈ।"
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "PBN.ltd 'ਤੇ ਜਾਓ"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Page Builder Sandwich Pro ਅਤੇ Tranzly Pro ਨੂੰ ਇਕੱਠੇ ਪ੍ਰਾਪਤ ਕਰੋ"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "ਇਹ ਬੰਡਲ ਸਮਾਨ ਪਲਾਨਾਂ ਅਤੇ ਸਾਈਟ ਸੀਮਾਵਾਂ 'ਤੇ, ਦੋਵਾਂ ਪਲੱਗਇਨਾਂ ਨੂੰ ਵੱਖਰੇ ਤੌਰ 'ਤੇ ਖਰੀਦਣ ਨਾਲੋਂ ਘੱਟ ਕੀਮਤ ਦਾ ਹੈ।"
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "ਬੰਡਲ ਦੇਖੋ"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%s ਪ੍ਰਾਪਤ ਕਰੋ"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਸਰਗਰਮ ਹੈ: %1$s ਅਤੇ %2$s ਮਿਲ ਕੇ ਕੰਮ ਕਰਦੇ ਹਨ"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "ਇਸ ਸਾਈਟ 'ਤੇ %s ਕਿਰਿਆਸ਼ੀਲ ਹੈ, ਇਸ ਲਈ ਦੋਵੇਂ ਪਲੱਗਇਨ AI ਪ੍ਰਦਾਤਾ ਕੁੰਜੀਆਂ ਦਾ ਇੱਕ ਸੈੱਟ ਅਤੇ ਉਹਨਾਂ ਲਈ ਇੱਕ ਸੈਟਿੰਗ ਸਕ੍ਰੀਨ ਸਾਂਝੀ ਕਰਦੇ ਹਨ।"
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Tranzly ਨਾਲ ਇਸ ਸਾਈਟ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Page Builder Sandwich ਨਾਲ ਵਿਜ਼ੂਅਲ ਤੌਰ 'ਤੇ ਪੇਜ ਬਣਾਓ"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s, Zinn Digital® ਵੱਲੋਂ"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "ਅਨੁਵਾਦਿਤ ਪਤਿਆਂ, SEO ਡੇਟਾ ਅਤੇ ਭਾਸ਼ਾ ਸਵਿੱਚਰ ਨਾਲ ਹਰ ਪੰਨੇ ਨੂੰ ਕਈ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਪ੍ਰਕਾਸ਼ਤ ਕਰੋ। ਇੱਥੇ ਤੁਹਾਡੇ ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਪੰਨਿਆਂ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ।"
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "ਤੇਜ਼ ਅਤੇ ਫੁੱਟਪ੍ਰਿੰਟ-ਮੁਕਤ ਬਲਾਕਾਂ ਨਾਲ ਸਿੱਧਾ ਐਡੀਟਰ ਵਿੱਚ ਪੰਨੇ ਡਿਜ਼ਾਈਨ ਕਰੋ। ਤੁਸੀਂ ਜੋ ਵੀ ਬਣਾਉਂਦੇ ਹੋ ਉਹ Tranzly ਨਾਲ ਅਨੁਵਾਦ ਹੋ ਜਾਂਦਾ ਹੈ।"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s ਉਸੇ ਟੀਮ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਹੈ ਅਤੇ ਇਸ ਪਲੱਗਇਨ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ।"
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "ਪਹਿਲਾਂ ਇਸ ਸਾਈਟ ਨੂੰ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹੋਵੋ।"
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "ਇੱਕ ਵੈਧ ਈ-ਮੇਲ ਪਤਾ ਦਾਖਲ ਕਰੋ।"
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਸਹਾਇਤਾ ਜਾਣਕਾਰੀ ਭੇਜਣ ਲਈ ਸਹਿਮਤ ਹੋਵੋ।"
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "ਇੱਕ ਵਿਸ਼ਾ ਅਤੇ ਇੱਕ ਸੁਨੇਹਾ ਲਿਖੋ।"
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "ਇੱਕ ਈ-ਮੇਲ ਪਤਾ ਦਾਖਲ ਕਰੋ ਜਿਸ ਉੱਤੇ ਸਪੋਰਟ ਜਵਾਬ ਦੇ ਸਕੇ।"
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "ਸਾਈਟ ਮਾਲਕ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਅਸਥਾਈ ਸਹਾਇਤਾ ਪਹੁੰਚ (support access)। ਮਿਆਦ ਲੰਘਣ 'ਤੇ ਇਹ ਆਪਣੇ ਆਪ ਹਟਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "1, 3 ਜਾਂ 7 ਦਿਨ ਚੁਣੋ।"
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "ਸਿਰਫ਼ ਇੱਕ ਸਾਈਟ ਪ੍ਰਸ਼ਾਸਕ, ਜੋ ਇਸ ਸਕ੍ਰੀਨ ਵਿੱਚ ਸਾਈਨ ਇਨ ਹੈ, ਅਸਥਾਈ ਸਪੋਰਟ ਐਕਸੈਸ ਬਣਾ ਸਕਦਾ ਹੈ।"
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "ਇੱਕ ਵਿਲੱਖਣ ਯੂਜ਼ਰ ਨਾਮ ਨਹੀਂ ਚੁਣਿਆ ਜਾ ਸਕਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® ਸਹਾਇਤਾ (ਅਸਥਾਈ)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "ਇਹ ਅਸਥਾਈ ਸਹਾਇਤਾ ਪਹੁੰਚ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ।"
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "ਲਿਖਣਾ ਅਤੇ ਦੁਬਾਰਾ ਲਿਖਣਾ"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "ਅਨੁਵਾਦ"
 
@@ -115,6 +745,9 @@ msgstr "ਤuਸੀਂ ਆਪਣੀ ਖੁਦ ਦੀ ਕੁੰਜੀ ਲਿਆਉ
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "ਅਗਲਾ"
 
@@ -217,6 +850,7 @@ msgstr "ਟੈਸਟ"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -621,6 +1255,8 @@ msgstr "ਅਜੇ ਤੱਕ ਕੋਈ ਵੀ AI ਬੇਨਤੀਆਂ ਨਹੀ�
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "ਹੋ ਗਿਆ"
 
@@ -682,11 +1318,11 @@ msgstr "ਅਨੁਵਾਦ ਉਸੇ ਤਰ੍ਹਾਂ ਦੀ ਸਮੱਗਰ�
 msgid "Choose one of the site's other languages."
 msgstr "ਸਾਈਟ ਦੀਆਂ ਹੋਰ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਚੁਣੋ।"
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "ਪਲੱਗਇਨ ਦੀ ਇਸ ਕਾਪੀ ਵਿੱਚੋਂ ਐਡਮਿਨ ਸਕ੍ਰੀਨ ਦੀਆਂ ਸਕ੍ਰਿਪਟਾਂ ਗਾਇਬ ਹਨ। ਇਸਨੂੰ ਕਿਸੇ ਜਾਰੀ ਕੀਤੇ ਪੈਕੇਜ ਤੋਂ ਦੁਬਾਰਾ ਇੰਸਟਾਲ ਕਰੋ।"
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "ਇਸ ਸਕ੍ਰੀਨ ਲਈ ਜਾਵਾਸਕ੍ਰਿਪਟ ਦੀ ਲੋੜ ਹੈ।"
 
@@ -1596,7 +2232,7 @@ msgstr "ਹੁਣੇ ਲਾਇਸੈਂਸ ਖਰੀਦੋ"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
@@ -2111,6 +2747,7 @@ msgstr "ਵਾਈਟ-ਲੇਬਲ ਮੋਡ ਨੂੰ ਅਯੋਗ ਕੀਤਾ 
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "ਡਿਸਕਨੈਕਟ ਕਰੋ"
 
@@ -2351,6 +2988,7 @@ msgstr "ਮਿਆਦ ਪੁੱਗਣਾ"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "ਮਿਆਦ ਪੁੱਗੀ"
 
@@ -2417,6 +3055,8 @@ msgstr "ਅੱਪਗ੍ਰੇਡ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਕਿ�
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "ਮੁਫ਼ਤ"
 
@@ -2796,6 +3436,7 @@ msgstr "ਲੰਬੇ ਸਮੇਂ ਦੀ ਡੁਪਲੀਕੇਟ"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "ਸੁਨੇਹਾ"
 
@@ -3031,6 +3672,7 @@ msgstr "ਇਸ ਪਲੱਗਇਨ ਨੂੰ PHP ਦੇ ਇੱਕ ਨਵੇਂ �
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "ਨਹੀਂ"
@@ -3203,6 +3845,7 @@ msgstr "ਤੁਹਾਡੀ ਵੈੱਬਸਾਈਟ ਨਾਲ ਨਿਰੰਤਰ
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "ਹੋਰ"
 
@@ -3971,6 +4614,7 @@ msgstr "ਸਾਈਟ ਆਈ.ਡੀ."
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "ਸਾਈਟਾਂ"
 
@@ -4067,7 +4711,7 @@ msgstr "ਟਰਾਇਲ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "ਸਥਿਤੀ"
 
@@ -4368,6 +5012,7 @@ msgstr "ਤੁਹਾਨੂੰ ਹੁਣ ਤੱਕ %1$s ਕਿਹੋ ਜਿਹਾ
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
@@ -5121,13 +5766,6 @@ msgstr "ਇਹ ਸੈਟਿੰਗ ਚਾਲੂ ਜਾਂ ਬੰਦ ਹੈ।"
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "ਸਰਚ ਇੰਜਣਾਂ ਤੋਂ ਅਨੁਵਾਦ ਨਾ ਕੀਤੇ ਪੰਨਿਆਂ ਨੂੰ ਲੁਕਾਉਣਾ Tranzly Pro ਦਾ ਹਿੱਸਾ ਹੈ।"
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "ਭਾਸ਼ਾ ਸਵਿੱਚਰ"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "ਭਾਸ਼ਾਵਾਂ"
@@ -5307,6 +5945,691 @@ msgstr "ਟੈਕਸਟ ਦਾ ਆਕਾਰ"
 msgid "Switcher"
 msgstr "ਸਵਿੱਚਰ"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "ਸਮੀਖਿਆ 'ਤੇ ਲੁਕਾਏ ਗਏ ਸੁਝਾਅ ਦੁਬਾਰਾ ਦਿਖਾਓ"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "ਸਾਰੇ"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d ਚੁਣੇ ਗਏ"
+msgstr[1] "%d ਚੁਣੇ ਗਏ"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "ਕੁਝ ਵੀ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।"
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "ਇs ਪੇਜ 'ਤੇ ਸਭ ਕੁਝ ਚੁਣੋ"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "ਚੁਣੋ"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "ਪੰਨੇ"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "ਪਿਛਲਾ"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "ਸਫ਼ਾ %1$d ਦਾ %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ %s ਸੈੱਟਅੱਪ ਕਰੋ"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "ਸੈੱਟਅੱਪ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "ਇਹ ਸਾਈਟ"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "ਐਡੀਸ਼ਨ"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "ਇਸ ਲਾਇਸੰਸ ਉੱਤੇ ਸਾਈਟਾਂ"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "ਵਰਜਨ"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "ਇਹ ਇੱਕ ਸਟੇਜਿੰਗ ਜਾਂ ਸਥਾਨਕ ਕਾਪੀ ਜਾਪਦੀ ਹੈ, ਇਸ ਲਈ ਇਹ ਤੁਹਾਡੇ ਲਾਇਸੰਸ 'ਤੇ ਕਿਸੇ ਸਾਈਟ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰਦੀ ਹੈ।"
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "ਦੇਖੋ ਪ੍ਰੋ ਕੀ ਜੋੜਦਾ ਹੈ"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "ਇੱਥੇ ਜਾਓ"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "ਨਿੱਜੀ"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "ਕਾਰੋਬਾਰ"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "ਏਜੰਸੀ"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "ਕੋਈ ਵੀ ਸਾਈਟਾਂ ਦੀ ਗਿਣਤੀ"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "ਅਸੀਮਤ ਸਾਈਟਾਂ"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d ਸਾਈਟ"
+msgstr[1] "%d ਸਾਈਟਾਂ"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "ਪ੍ਰੋ"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s ਅਜ਼ਮਾਇਸ਼"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "ਤੁਹਾਡੀ ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ। ਸਾਰੀਆਂ Pro ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਦੇਖਣ ਲਈ ਪੰਨੇ ਨੂੰ ਰੀਲੋਡ ਕਰੋ।"
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "ਫੀਚਰ"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "ਸ਼ਾਮਿਲ ਹੈ"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "ਤੁਹਾਡਾ ਲਾਇਸੰਸ"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%2$d ਵਿੱਚੋਂ %1$d ਵਰਤੋਂ ਵਿੱਚ ਹਨ"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "ਨਵੀਨੀਕਰਨ ਹੁੰਦਾ ਹੈ"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "ਕਿਸੇ ਸਾਈਟ ਦੀਆਂ ਸਟੇਜਿੰਗ, ਟੈਸਟ ਅਤੇ ਲੋਕਲਹੋਸਟ ਕਾਪੀਆਂ ਮੁਫ਼ਤ ਹੁੰਦੀਆਂ ਹਨ ਅਤੇ ਕਦੇ ਵੀ ਤੁਹਾਡੀ ਸਾਈਟ ਦੀ ਸੀਮਾ ਵਿੱਚ ਨਹੀਂ ਗਿਣੀਆਂ ਜਾਂਦੀਆਂ।"
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "ਤੁਹਾਡੀ ਯੋਜਨਾ ਵਿੱਚ ਤਰਜੀਹੀ ਸਹਾਇਤਾ ਸ਼ਾਮਲ ਹੈ।"
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "ਆਪਣਾ ਲਾਇਸੈਂਸ ਅਤੇ ਬਿਲਿੰਗ ਪ੍ਰਬੰਧਿਤ ਕਰੋ"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Pro ਨਾਲ ਹੋਰ ਪ੍ਰਾਪਤ ਕਰੋ"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "ਮੁਫ਼ਤ %d ਦਿਨਾਂ ਦੀ ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਕਰੋ, ਕਿਸੇ ਕਾਰਡ ਦੀ ਲੋੜ ਨਹੀਂ"
+msgstr[1] "ਮੁਫ਼ਤ %d ਦਿਨਾਂ ਦੀ ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਕਰੋ, ਕਿਸੇ ਕਾਰਡ ਦੀ ਲੋੜ ਨਹੀਂ"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "ਪਲਾਨ ਅਤੇ ਕੀਮਤਾਂ ਦੇਖੋ"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "ਕੀ Tranzly ਅਤੇ Page Builder Sandwich ਨੂੰ ਇਕੱਠੇ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਸ ਬੰਡਲ ਵਿੱਚ ਘੱਟ ਕੀਮਤ ਵਿੱਚ ਦੋਵੇਂ Pro ਪਲੱਗਇਨ ਸ਼ਾਮਲ ਹਨ।"
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "ਤੁਹਾਡਾ ਲਾਇਸੰਸ ਖਤਮ ਹੋ ਗਿਆ ਹੈ। ਅੱਪਡੇਟ ਅਤੇ ਪ੍ਰੋ ਫੀਚਰ ਪ੍ਰਾਪਤ ਕਰਦੇ ਰਹਿਣ ਲਈ ਇਸਦਾ ਨਵੀਨੀਕਰਨ ਕਰੋ।"
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "ਹੁਣੇ ਨਵੀਨੀਕਰਨ ਕਰੋ"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "ਯੋਜਨਾਵਾਂ ਦੀ ਤੁਲਨਾ ਕਰੋ"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "ਖੋਜ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "ਖੇਤਰ"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "ਕੋਈ ਫੀਚਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।"
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "ਪਲਾਨ ਅਨੁਸਾਰ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "ਛੁਪਾਓ"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "ਪਲੱਗਇਨ ਸਕ੍ਰੀਨ 'ਤੇ ਇਸ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰੋ"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "ਇੰਸਟਾਲ ਕਰੋ"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "ਸਰਵਣਰੇਖਾ"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "ਸੈੱਟਅੱਪ"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "ਯੋਜਨਾਵਾਂ ਅਤੇ ਲਾਇਸੈਂਸ"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "ਐਡ-ਆਨ"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "ਮਦਦ ਲਵੋ"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "ਫੀਡਬੈਕ"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "ਤੁਹਾਡੀ ਪਸੰਦ ਨੂੰ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "ਸੈੱਟਅੱਪ ਸਥਿਤੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "ਮੇਰੇ ਕੰਪਿਊਟਰ ਨਾਲ ਮੇਲ ਕਰੋ"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "ਹਲਕਾ"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "ਗੂੜ੍ਹਾ"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "ਰੰਗ ਸਕੀਮ"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "ਮਦਦ"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "ਇਸ ਸਕ੍ਰੀਨ ਲਈ ਗਾਈਡ"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "ਟੂਰ ਲਓ"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "ਮਦਦ ਲਓ ਜਾਂ ਕਿਸੇ ਖਾਮੀ (bug) ਦੀ ਰਿਪੋਰਟ ਕਰੋ"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "ਪਲੱਗਇਨ ਸਕ੍ਰੀਨਾਂ"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "ਉਹ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "ਸਪੋਰਟ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "ਤੁਹਾਡੀ ਬੇਨਤੀ ਇਸ ਸਾਈਟ ਤੋਂ %s ਨੂੰ ਭੇਜੀ ਜਾਂਦੀ ਹੈ, ਜੋ ਇਸ ਪਲੱਗਇਨ ਨੂੰ ਬਣਾਉਂਦੇ ਹਨ। ਅਸੀਂ ਭੇਜਦੇ ਹਾਂ:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "ਤੁਹਾਡਾ ਈ-ਮੇਲ ਪਤਾ ਅਤੇ ਨਾਮ, ਤਾਂ ਜੋ ਅਸੀਂ ਜਵਾਬ ਦੇ ਸਕੀਏ;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "ਜਿਹੜਾ ਵਿਸ਼ਾ ਅਤੇ ਸੁਨੇਹਾ ਤੁਸੀਂ ਲਿਖਦੇ ਹੋ;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "ਤੁਹਾਡੀ ਲਾਇਸੈਂਸ ਆਈ.ਡੀ., ਤਾਂ ਜੋ ਭੁਗਤਾਨ ਕਰਨ ਵਾਲੇ ਗਾਹਕਾਂ ਨੂੰ ਪਹਿਲ ਮਿਲੇ;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "ਸਿਰਫ਼ ਜੇਕਰ ਤੁਸੀਂ ਇਸਨੂੰ ਟਿੱਕ ਕਰਦੇ ਹੋ: ਸਾਈਟ ਦੇ ਵੇਰਵੇ (WordPress ਅਤੇ PHP ਸੰਸਕਰਣ, ਥੀਮ, ਪਲੱਗਇਨ, ਪਾਸਵਰਡ ਅਤੇ ਈ-ਮੇਲ ਪਤੇ ਹਟਾ ਕੇ ਗਲਤੀ ਲੌਗ ਦਾ ਇੱਕ ਅੰਸ਼), ਜਿਸਨੂੰ ਤੁਸੀਂ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਪੜ੍ਹ ਸਕਦੇ ਹੋ;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "ਸਿਰਫ਼ ਜੇ ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਜੋੜਦੇ ਹੋ: ਤੁਹਾਡੀ ਸਾਈਟ ਲਈ ਲੌਗਇਨ, ਐਨਕ੍ਰਿਪਟ ਕਰਕੇ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਤੁਹਾਡੀ ਬੇਨਤੀ ਬੰਦ ਹੋਣ ਤੋਂ 30 ਦਿਨਾਂ ਬਾਅਦ ਮਿਟਾ ਦਿੱਤੇ ਜਾਂਦੇ ਹਨ।"
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "ਪਰਦਾਦਾਰੀ ਨੀਤੀ"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "ਮੈਂ ਸਹਿਮਤ ਹਾਂ, ਜਾਰੀ ਰੱਖੋ"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "ਉਹ ਕੰਮ ਨਹੀਂ ਕੀਤਾ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital® ਸਪੋਰਟ ਨੇ ਇਸ ਸਾਈਟ ਦਾ ਕਨੈਕਸ਼ਨ ਕੱਟ ਦਿੱਤਾ ਹੈ।"
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Zinn Digital® ਸਹਾਇਤਾ ਹੁਣ ਇਸ ਸਾਈਟ ਨੂੰ ਨਹੀਂ ਪਛਾਣਦੀ ਹੈ।"
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "ਤੁਸੀਂ ਇਸ ਸਾਈਟ ਨੂੰ ਡਿਸਕਨੈਕਟ ਕਰ ਦਿੱਤਾ ਹੈ।"
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "ਸਹਾਇਤਾ ਲਈ ਇਸ ਸਾਈਟ ਨੂੰ ਕਨੈਕਟ ਕਰੋ"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "ਕੁਨੈਕਟਡ। ਜਵਾਬ %s ਨੂੰ ਜਾਂਦੇ ਹਨ।"
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਤੁਸੀਂ ਹੇਠਾਂ ਆਪਣਾ ਈ-ਮੇਲ ਪਤਾ ਦੇ ਕੇ ਫਿਰ ਵੀ ਬੇਨਤੀ ਭੇਜ ਸਕਦੇ ਹੋ; ਕਨੈਕਟ ਕਰਨ ਨਾਲ ਇਸ ਨੂੰ ਹਰ ਵਾਰ ਟਾਈਪ ਕਰਨ ਦੀ ਬੱਚਤ ਹੁੰਦੀ ਹੈ।"
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "ਈ-ਮੇਲ ਪਤਾ"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "ਤੁਹਾਡਾ ਨਾਮ (ਵਿਕਲਪਕ)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "ਮੈਂ ਇਸ ਸਾਈਟ ਨੂੰ Zinn Digital® ਸਪੋਰਟ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹਾਂ। ਇਹ ਇਸ ਸਾਈਟ ਦਾ ਪਤਾ, WordPress ਅਤੇ PHP ਵਰਜਨ ਅਤੇ ਪਲੱਗਇਨ ਵਰਜਨ ਭੇਜਦਾ ਹੈ, ਅਤੇ ਇਸਨੂੰ ਕਿਸੇ ਵੀ ਸਮੇਂ ਇੱਥੋਂ ਜਾਂ Zinn Digital® ਦੁਆਰਾ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "ਕਨੈਕਟ ਕਰੋ"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "ਮੈਨੂੰ ਮਦਦ ਚਾਹੀਦੀ ਹੈ"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "ਬੱਗ ਦੀ ਰਿਪੋਰਟ ਕਰੋ"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "ਫੀਡਬੈਕ ਭੇਜੋ"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "ਇੱਕ ਫੀਚਰ ਦੀ ਬੇਨਤੀ ਕਰੋ"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "ਸਾਈਟ ਦੇ ਵੇਰਵੇ ਪੜ੍ਹੇ ਨਹੀਂ ਜਾ ਸਕੇ।"
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "ਤੁਹਾਡੀ ਬੇਨਤੀ ਭੇਜੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress ਐਡਮਿਨ"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "ਫਾਈਲ ਮੈਨੇਜਰ"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "ਫੀਡਬੈਕ ਅਤੇ ਫੀਚਰ ਬੇਨਤੀਆਂ"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "ਭੇਜ ਦਿੱਤਾ ਗਿਆ। ਤੁਹਾਡਾ ਹਵਾਲਾ %s ਹੈ, ਅਤੇ ਸਾਡਾ ਜਵਾਬ ਈ-ਮੇਲ ਰਾਹੀਂ ਆਵੇਗਾ।"
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "ਇਹ ਕਿਸ ਬਾਰੇ ਹੈ?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "(ਈਮੇਲ) ਦਾ ਜਵਾਬ ਦਿਓ"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "ਵਿਸ਼ਾ"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "ਤੁਸੀਂ ਕੀ ਕੀਤਾ, ਤੁਹਾਨੂੰ ਕੀ ਉਮੀਦ ਸੀ, ਅਤੇ ਇਸਦੀ ਬਜਾਏ ਕੀ ਹੋਇਆ?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "ਸਾਈਟ ਦੇ ਵੇਰਵੇ ਸ਼ਾਮਲ ਕਰੋ (ਵਰਜਨ, ਥੀਮ, ਪਲੱਗਇਨ, ਗਲਤੀ ਲੌਗ ਦਾ ਅੰਸ਼)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "ਬਿਲਕੁਲ ਦੇਖੋ ਕਿ ਕੀ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "ਸਪੋਰਟ ਲਈ ਲੌਗਿਨ (ਵਿਕਲਪਿਕ, ਐਨਕ੍ਰਿਪਟਡ ਸਟੋਰ ਕੀਤੇ ਗਏ)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "ਇੱਕ ਲੌਗਇਨ ਸਿਰਫ਼ ਇਸਦੇ ਪਾਸਵਰਡ ਨਾਲ ਹੀ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ। ਇੱਕ ਕਤਾਰ ਨੂੰ ਅੱਧੀ ਭਰਨ ਦੀ ਬਜਾਏ ਛੱਡ ਦੇਣਾ ਬਿਹਤਰ ਹੈ।"
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "ਲਾਗਇਨ ਪਤਾ"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "ਯੂਜ਼ਰਨੇਮ"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "ਪਾਸਵਰਡ"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "ਲਾਗਇਨ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "ਇੱਕ ਅਸਥਾਈ ਸਹਾਇਤਾ ਲੌਗਇਨ ਬਣਾਓ"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਲਈ ਇੱਕ ਵੱਖਰਾ ਉਪਭੋਗਤਾ, ਜਿਸ ਕੋਲ ਉਪਭੋਗਤਾਵਾਂ, ਪਲੱਗਇਨ ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਂ ਕੋਡ ਸੰਪਾਦਨ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ। ਜਦੋਂ ਇਹ ਮਿਆਦ ਪੁੱਗ ਜਾਂਦੀ ਹੈ, ਜਾਂ ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਇਸਨੂੰ ਹੇਠਾਂ ਰੱਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਇਹ ਆਪਣੇ ਆਪ ਮਿਟਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "ਹਾਂ, %d ਦਿਨ ਲਈ"
+msgstr[1] "ਹਾਂ, %d ਦਿਨਾਂ ਲਈ"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "ਭੇਜੋ"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "ਲਿਸਟ ਲੋਡ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "ਉਹ ਲੌਗਇਨ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।"
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "ਆਰਜ਼ੀ ਸਹਾਇਤਾ ਲੌਗਇਨ"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "ਕੋਈ ਨਹੀਂ। ਸਹਾਇਤਾ ਟੀਮ ਇਸ ਸਾਈਟ 'ਤੇ ਸਿਰਫ਼ ਤਾਂ ਹੀ ਲੌਗ ਇਨ ਕਰ ਸਕਦੀ ਹੈ ਜੇਕਰ ਤੁਸੀਂ ਇੱਥੇ ਲੌਗਇਨ ਬਣਾਉਂਦੇ ਹੋ।"
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "ਮਿਆਦ ਪੂਰੀ ਹੋ ਚੁੱਕੀ ਹੈ, ਹਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "%s ਨੂੰ ਮਿਆਦ ਪੁੱਗਦੀ ਹੈ"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "ਹੁਣੇ ਰੱਦ ਕਰੋ"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "ਕਦਮ %1$d ਦਾ %2$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "ਟੂਰ ਬੰਦ ਕਰੋ"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "ਪਿੱਛੇ"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "ਸਭ ਕੁਝ ਇੱਕੋ ਥਾਂ 'ਤੇ"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "ਇਹ ਟੈਬਾਂ ਪਲੱਗਇਨ ਦੀ ਹਰ ਸਕ੍ਰੀਨ ਤੱਕ ਲੈ ਜਾਂਦੀਆਂ ਹਨ: ਸੈੱਟਅੱਪ, ਸੈਟਿੰਗਾਂ, ਤੁਹਾਡਾ ਲਾਇਸੈਂਸ, ਮਦਦ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ।"
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "ਹਰੇਕ ਸਕ੍ਰੀਨ 'ਤੇ ਮਦਦ"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "ਆਪਣੀ ਮੌਜੂਦਾ ਸਕ੍ਰੀਨ ਲਈ ਗਾਈਡ, ਇਸ ਟੂਰ, ਜਾਂ ਸਾਡੇ ਤੋਂ ਮਦਦ ਮੰਗਣ ਲਈ ਇਸ ਮੀਨੂ ਨੂੰ ਖੋਲ੍ਹੋ।"
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "ਲਾਈਟ ਜਾਂ ਡਾਰਕ"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "ਹਲਕਾ, ਗੂੜ੍ਹਾ, ਜਾਂ ਆਪਣੇ ਕੰਪਿਊਟਰ ਵਾਲਾ ਹੀ ਚੁਣੋ। ਤੁਹਾਡੀ ਚੋਣ ਸਿਰਫ਼ ਤੁਹਾਡੇ ਲਈ ਹੀ ਯਾਦ ਰੱਖੀ ਜਾਂਦੀ ਹੈ।"
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "ਜੀ ਆਇਆਂ ਨੂੰ"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "ਇਹ ਛੋਟਾ ਟੂਰ ਦਿਖਾਉਂਦਾ ਹੈ ਕਿ ਕਿਹੜੀ ਚੀਜ਼ ਕਿੱਥੇ ਹੈ। ਤੁਸੀਂ Escape ਨਾਲ ਇਸ ਨੂੰ ਕਿਸੇ ਵੀ ਸਮੇਂ ਛੱਡ ਸਕਦੇ ਹੋ।"
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "ਇੱਕ ਨਜ਼ਰ ਵਿੱਚ ਤੁਹਾਡੀ ਸਾਈਟ"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "ਸੈੱਟਅੱਪ ਦੀ ਪ੍ਰਗਤੀ ਅਤੇ ਤੁਹਾਡੀ ਪਲਾਨ ਇੱਥੇ ਦਿਖਾਈ ਜਾਂਦੀ ਹੈ, ਨਾਲ ਹੀ ਅਗਲਾ ਕਰਨਯੋਗ ਕੰਮ ਵੀ।"
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "ਤੁਹਾਡੀ ਯੋਜਨਾ, ਇਹ ਕਿੰਨੀਆਂ ਸਾਈਟਾਂ ਨੂੰ ਕਵਰ ਕਰਦੀ ਹੈ, ਅਤੇ ਕੀ ਸਾਈਟ ਦੀ ਇਹ ਕਾਪੀ ਉਸ ਸੀਮਾ ਵਿੱਚ ਗਿਣੀ ਜਾਂਦੀ ਹੈ।"
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "ਪ੍ਰੋ ਅਜ਼ਮਾਓ ਜਾਂ ਅੱਪਗ੍ਰੇਡ ਕਰੋ"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "ਬਿਨਾਂ ਕਿਸੇ ਕਾਰਡ ਦੇ ਮੁਫ਼ਤ ਅਜ਼ਮਾਇਸ਼ ਸ਼ੁਰੂ ਕਰੋ, ਅੱਪਗ੍ਰੇਡ ਕਰੋ, ਜਾਂ ਰੀਨਿਊ ਕਰੋ, ਇਹ ਸਭ ਕੁਝ ਇੱਥੋਂ ਹੀ।"
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "ਹਰ ਇੱਕ ਫੀਚਰ ਅਤੇ ਉਹ ਪਲਾਨ ਜਿਸ ਵਿੱਚ ਇਹ ਸ਼ਾਮਲ ਹੈ। ਕਿਸੇ ਫੀਚਰ ਦੀ ਖੋਜ ਕਰੋ ਜਾਂ ਇੱਕ ਵਾਰ ਵਿੱਚ ਇੱਕ ਖੇਤਰ ਦਿਖਾਓ।"
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Zinn Digital® ਤੋਂ ਹੋਰ"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "ਪਲੱਗਇਨ ਜੋ ਇਸ ਨਾਲ ਕੰਮ ਕਰਦੇ ਹਨ, ਅਤੇ ਉਸੇ ਟੀਮ ਦੀਆਂ ਸੇਵਾਵਾਂ। ਜਿਹੜੇ ਕਾਰਡ ਤੁਸੀਂ ਹੋਰ ਸਕ੍ਰੀਨਾਂ 'ਤੇ ਲੁਕਾਏ ਸਨ, ਉਨ੍ਹਾਂ ਨੂੰ ਇੱਥੇ ਦੁਬਾਰਾ ਦਿਖਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "ਤੇਜ਼ ਮਦਦ ਲਈ ਕਨੈਕਟ ਕਰੋ"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "ਕਨੈਕਟ ਕਰਨਾ ਮਰਜ਼ੀ 'ਤੇ ਨਿਰਭਰ ਹੈ। ਇਹ ਤੁਹਾਨੂੰ ਹਰ ਵਾਰ ਆਪਣਾ ਈ-ਮੇਲ ਟਾਈਪ ਕੀਤੇ ਬਿਨਾਂ ਬੇਨਤੀਆਂ ਭੇਜਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਜਦੋਂ ਚਾਹੋ ਡਿਸਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ।"
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "ਮਦਦ ਲਈ ਪੁੱਛੋ ਜਾਂ ਕਿਸੇ ਬੱਗ ਦੀ ਰਿਪੋਰਟ ਕਰੋ"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "ਦੱਸੋ ਕੀ ਹੋਇਆ। ਤੁਸੀਂ ਸਾਈਟ ਦੀ ਜਾਣਕਾਰੀ ਨੱਥੀ ਕਰਨੀ ਹੈ ਜਾਂ ਨਹੀਂ, ਇਹ ਤੁਸੀਂ ਚੁਣਦੇ ਹੋ, ਅਤੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਬਿਲਕੁਲ ਦੇਖ ਸਕਦੇ ਹੋ ਕਿ ਇਸ ਵਿੱਚ ਕੀ ਹੈ।"
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "ਅਸਥਾਈ ਸਹਾਇਤਾ ਪਹੁੰਚ"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "ਜੇਕਰ ਸਪੋਰਟ ਨੂੰ ਤੁਹਾਡੀ ਸਾਈਟ ਦੇ ਅੰਦਰ ਦੇਖਣ ਦੀ ਲੋੜ ਹੈ, ਤਾਂ ਇੱਥੇ ਇੱਕ ਅਸਥਾਈ ਲੌਗਇਨ ਬਣਾਓ। ਇਹ ਸਮਾਂ ਸਮਾਪਤ ਹੋਣ 'ਤੇ ਆਪਣੇ ਆਪ ਮਿਟ ਜਾਂਦਾ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਇਸਨੂੰ ਕਿਸੇ ਵੀ ਸਮੇਂ ਹਟਾ ਸਕਦੇ ਹੋ।"
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "ਾਨੂੰ ਦੱਸੋ ਕਿ ਕੀ ਬਣਾਉਣਾ ਹੈ"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "ਇੱਕ ਵਿਚਾਰ, ਇੱਕ ਫੀਚਰ ਬੇਨਤੀ ਜਾਂ ਕੋਈ ਵੀ ਫੀਡਬੈਕ ਭੇਜੋ। ਇਹ ਸਿੱਧਾ ਟੀਮ ਕੋਲ ਜਾਂਦਾ ਹੈ।"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "ਇਸ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗਦੇ ਹਨ ਅਤੇ ਇਹ %s ਨੂੰ ਸੈੱਟਅੱਪ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਇਹ ਇਸ ਸਾਈਟ 'ਤੇ ਤੁਰੰਤ ਕੰਮ ਕਰੇ। ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਸਭ ਕੁਝ ਬਦਲ ਸਕਦੇ ਹੋ।"
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "ਤੁਸੀਂ ਤਿਆਰ ਹੋ। ਜੇਕਰ ਕੋਈ ਵੀ ਚੀਜ਼ ਉਮੀਦ ਮੁਤਾਬਕ ਕੰਮ ਨਹੀਂ ਕਰਦੀ, ਤਾਂ ਅਸੀਂ ਸਿਰਫ਼ ਇੱਕ ਕਲਿੱਕ ਦੀ ਦੂਰੀ 'ਤੇ ਹਾਂ।"
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "ਕਦਮ %1$d ਦਾ %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "ਸਮਾਪਤ ਕਰੋ"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "ਸੈੱਟਅੱਪ ਛੱਡੋ"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -5337,7 +6660,8 @@ msgid "See the Pro plans and pricing"
 msgstr "ਪ੍ਰੋ ਯੋਜਨਾਵਾਂ ਅਤੇ ਕੀਮਤਾਂ ਦੇਖੋ"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "ਭਾਸ਼ਾਵਾਂ"
 
@@ -5555,6 +6879,14 @@ msgstr "ਸ਼ੈਲੀ ਦੀਆਂ ਹਦਾਇਤਾਂ (ਦਰਸ਼ਕ, ਬ
 msgid "Save glossary"
 msgstr "ਸ਼ਬਦਾਵਲੀ ਸੇਵ ਕਰੋ"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "ਅਨੁਵਾਦ ਇੰਜਣ"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5572,10 +6904,6 @@ msgstr "ਚੱਲ ਰਿਹਾ ਹੈ"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "ਪੂਰਾ ਹੋ ਗਿਆ"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "ਪਿਛੋਕੜ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5654,7 +6982,7 @@ msgid "Content"
 msgstr "ਸਮੱਗਰੀ"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
@@ -5701,47 +7029,47 @@ msgstr "ਸੰਭਾਲਿਆ ਗਿਆ। ਤੁਹਾਡੀਆਂ ਸੋਧਾ
 msgid "The same menu, translated"
 msgstr "ਉਹੀ ਮੇਨੂ, ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "ਹਰੇਕ ਭਾਸ਼ਾ ਲਈ ਇੱਕ ਵੱਖਰਾ ਮੀਨੂ"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "ਮੂਲ ਰੂਪ ਵਿੱਚ ਹਤ ਮੀਨੂ ਦਾ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਂਦਾ ਹੈ: ਇਸ ਦੇ ਲਿੰਕ ਉਹਨਾਂ ਦੇ ਸਿਰਲੇਖਾਂ ਸਮੇਤ ਅਨੁਵਾਦ ਕੀਤੇ ਪੰਨਿਆਂ ਵੱਲ ਲੈ ਜਾਂਦੇ ਹਨ। ਇਸ ਦੀ ਬਜਾਏ ਇੱਥੇ ਕਿਸੇ ਭਾਸ਼ਾ ਲਈ ਇਸਦਾ ਆਪਣਾ ਮੀਨੂ ਚੁਣੋ।"
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "ਸਾਂਝਾ ਪਾਠ"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "ਕਿਹੜਾ ਟੈਕਸਟ"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "ਮੀਨੂ ਲੇਬਲ"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "ਟੈਂਪਲੇਟ, ਹੈਡਰ, ਫੁੱਟਰ ਅਤੇ ਪੈਟਰਨ"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "ਟੈਂਪਲੇਟ, ਹੈਡਰ, ਫੁੱਟਰ ਅਤੇ ਪੈਟਰਨ (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "ਗਾਇਬ ਹੋਇਆ ਟੈਕਸਟ ਅਨੁਵਾਦ ਕਰੋ"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "ਇੱਥੇ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਕੋਈ ਟੈਕਸਟ ਨਹੀਂ ਹੈ।"
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "ਕਿਸੇ ਵਿਅਕਤੀ ਦੁਆਰਾ ਸੋਧਿਆ ਗਿਆ, ਸੁਰੱਖਿਅਤ"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "ਸੋਧਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
@@ -5824,13 +7152,9 @@ msgid "Problem"
 msgstr "ਸਮੱਸਿਆ"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "ਸੋਧੋ"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "ਫਲੋਟਿੰਗ ਸਵਿੱਚਰ"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5910,7 +7234,7 @@ msgstr "Elementor ਅਤੇ Bricks ਵਿਜੇਟਸ Tranzly Pro ਦਾ ਹਿ�
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "ਸੇਵ ਕਰੋ"
 
@@ -6046,27 +7370,27 @@ msgstr "ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ। ਤੁਹਾਡੇ �
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "ਇਸ ਅਨੁਵਾਦ ਦਾ ਲੇਆਉਟ ਐਡੀਟਰ ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਸੀ, ਇਸ ਲਈ ਕੁਝ ਹਿੱਸੇ ਹੁਣ ਅਸਲ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ। ਬਿਨਾਂ ਜੋੜੀਦਾਰ ਵਾਲੇ ਹਿੱਸੇ ਖਾਲੀ ਦਿਖਾਏ ਗਏ ਹਨ; ਬਾਕੀ ਨੂੰ ਐਡੀਟਰ ਵਿੱਚ ਸੰਪਾਦਿਤ ਕਰੋ।"
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "ਸੰਪਾਦਕ ਖੋਲ੍ਹੋ"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "ਅਸਲ (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "ਅਨੁਵਾਦ (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "ਤਬਦੀਲੀਆਂ ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "ਸੰਪਾਦਕ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
@@ -6140,28 +7464,28 @@ msgstr "ਅਜੇ ਅਨੁਵਾਦ ਨਹੀਂ ਕੀਤਾ ਗਿਆ (ਇੱ
 msgid "Save this post first, then translate it here."
 msgstr "ਪਹਿਲਾਂ ਇਸ ਪੋਸਟ ਨੂੰ ਸੇਵ ਕਰੋ, ਫਿਰ ਇਸਨੂੰ ਇੱਥੇ ਅਨੁਵਾਦ ਕਰੋ।"
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "ਨਾਲੋ-ਨਾਲ"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "ਦੇਖੋ"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "ਇਸਨੂੰ ਅਨਲੌਕ ਕਰੋ ਤਾਂ ਜੋ ਇਸਦਾ ਦੁਬਾਰਾ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾ ਸਕੇ"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "ਤਰਜਮੇ ਪ੍ਰਕਾਸ਼ਤ ਕਰੋ"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6169,69 +7493,69 @@ msgstr[0] "%d ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ
 msgstr[1] "%d ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ।"
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "ਇਹ ਬਲਾਕ ਦਿਖਾਓ"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "ਹਰ ਭਾਸ਼ਾ ਵਿੱਚ"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "ਸਿਰਫ਼ ਚੁਣੀਆਂ ਗਈਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "ਟਿਕ ਕੀਤੀਆਂ ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "ਪ੍ਰਤੀ ਭਾਸ਼ਾ ਚਿੱਤਰ"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "ਕਿਸੇ ਭਾਸ਼ਾ ਦੇ ਪਾਠਕਾਂ ਲਈ ਕੋਈ ਹੋਰ ਚਿੱਤਰ ਦਿਖਾਓ, ਉਦਾਹਰਣ ਵਜੋਂ ਇਸ ਉੱਤੇ ਸ਼ਬਦਾਂ ਵਾਲਾ ਇੱਕ ਬੈਨਰ।"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%s ਚਿੱਤਰ ਨੂੰ ਬਦਲੋ"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "ਇੱਕ %s ਚਿੱਤਰ ਚੁਣੋ"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "ਅਸਲ ਚਿੱਤਰ ਦੀ ਵਰਤੋਂ ਕਰੋ"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "ਇਸ ਅਨੁਵਾਦ ਨੂੰ ਠੀਕ ਕਰੋ"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "ਸੰਭਾਲ ਰਿਹਾ ਹੈ…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਪਾਠ। ਇਸਨੂੰ ਸੋਧਣ ਲਈ Enter ਦਬਾਓ।"
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "ਉਸਦੇ ਅਨੁਵਾਦ ਨੂੰ ਠੀਕ ਕਰਨ ਲਈ ਕਿਸੇ ਵੀ ਆਉਟਲਾਈਨ ਕੀਤੇ ਟੈਕਸਟ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।"
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "ਇਸ ਸਫ਼ੇ 'ਤੇ ਇੱਥੇ ਸੰਪਾਦਿਤ ਕਰਨ ਲਈ ਕੋਈ ਅਨੁਵਾਦਿਤ ਲਿਖਤ ਨਹੀਂ ਮਿਲੀ। ਇਸਦੀ ਵਰਤੋਂ ਦੀ ਬਜਾਏ ਨਾਲ-ਨਾਲ (side-by-side) ਵਾਲੇ ਸੰਪਾਦਕ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
 

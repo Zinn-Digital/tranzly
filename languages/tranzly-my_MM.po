@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® က ဖြေကြားခဲ့သော်လည်း ဤပလပ်အင် နားလည်သော ချိတ်ဆက်မှုဖြင့် မဟုတ်ပါ။ မည်သည့်အရာမျှ သိမ်းဆည်းမထားပါ။"
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "ဤဆိုဒ်သည် ၎င်း၏ချိတ်ဆက်မှုကို မေ့သွားခဲ့သည်။ Zinn Digital® အား ယခုချက်ချင်း အကြောင်းမကြားနိုင်ခဲ့ပါ၊ ထို့ကြောင့် ၎င်းတို့ဘက်မှ ဖယ်ရှားသည်အထိ ပံ့ပိုးကူညီရေး ဝန်ထမ်းများက ၎င်းကို အသုံးမပြုတော့ဟု မြင်တွေ့ရလိမ့်မည်။"
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "ဤဆိုဒ်အသုံးပြုရန် သတ်မှတ်ထားသော Zinn Digital® လိပ်စာသည် လုံခြုံသော (https) လိပ်စာ မဟုတ်သောကြောင့် မည်သည့်အရာမျှ ပို့ဆောင်မပေးခဲ့ပါ။"
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "ဤဆိုက်မှ Zinn Digital® သို့ ချိတ်ဆက်၍မရပါ။ ဆိုက်သည် အပြင်သို့ ထွက်သည့်ချိတ်ဆက်မှုများ ပြုလုပ်နိုင်ခြင်း ရှိမရှိ စစ်ဆေးပြီးနောက် ထပ်မံကြိုးစားပါ။"
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "ဤဆိုက်၏ Zinn Digital® နှင့် ချိတ်ဆက်မှုအား ပယ်ဖျက်လိုက်ပါပြီ။ ဆက်လက်အသုံးပြုရန် ၎င်းကို ထပ်မံချိတ်ဆက်ပါ။"
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® သည် ဤဆိုက်၏ ချိတ်ဆက်မှုကို နောက်ထပ် မသိမှတ်တော့ပါ။ ဆက်လက်လုပ်ဆောင်ရန် ၎င်းကို ထပ်မံချိတ်ဆက်ပါ။"
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "ဤဆိုဒ် သို့မဟုတ် လိပ်စာမှ မေတ္တာရပ်ခံချက် အလွန်အကျွံ ပေးပို့ထားပါသည်။ ခေတ္တစောင့်ဆိုင်းပြီးမှ ထပ်ကြိုးစားပါ။"
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® သည် ဤတောင်းဆိုချက်ကို လက်မခံနိုင်ပါ။ အီးမေးလ်လိပ်စာနှင့် မက်ဆေ့ချ်ကို စစ်ဆေးပြီး ထပ်ကြိုးစားပါ။"
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® သည် ယခုလောလောဆယ်တွင် တောင်းဆိုမှုကို မလုပ်ဆောင်နိုင်ပါ။ မိနစ်အနည်းငယ်ကြာမှ ထပ်ကြိုးစားပါ။"
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "ဤဆိုဒ်တွင် လိုင်စင်ဝန်ဆောင်မှုကို အသုံးမပြုနိုင်ပါ။"
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "ဤနေရာတွင် စမ်းသပ်ကာလကို စတင်၍မရပါ။ ယင်းအစား စမ်းသပ်ကာလ စာမျက်နှာတွင် ဆက်လက်လုပ်ဆောင်ပါ။"
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "ဘာသာစကားတစ်ခုလျှင် ပို့စ်တစ်ခုစီ၊ အားလုံးချိတ်ဆက်ထားသည်"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "သင့်၏ ရှေးဦး Tranzly ဘာသာပြန်ဆိုချက်များကို ထိန်းသိမ်းထားပေးသည်"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "နောက်ခံတွင် ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "နောက်ဆုံးပေါ် WordPress နှင့် PHP၊ ထွက်ရှိမှုတိုင်းတွင် စမ်းသပ်ပြီး"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "ဒီဇိုင်းပိုင်းမှလုံခြုံရေး"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "ဘာသာစကား ၅၈ မျိုးဖြင့် အသုံးပြုနိုင်ပြီး ညာမှဘယ်သို့ ရေးသားသည့်စနစ်ကို အသင့်ပါရှိသည်"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "ဘာသာစကား အကန့်အသတ်မရှိ"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (လက်ရှိ ပေါင်းစပ်မှုကို ထိန်းသိမ်းထားသည်)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "သင့်ကိုယ်ပိုင်သော့ချက်ပါရှိသော AI မော်ဒယ်များ"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation နှင့် Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "ဘာသာစကားတစ်ခုလျှင် အင်ဂျင်တစ်ခုစီ"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "အလိုအလျောက် ပြန်လည်ပြောင်းလဲအသုံးပြုမှု"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "မစတင်မီ ကုန်ကျစရိတ် ခန့်မှန်းချက်"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "ဘာသာပြန်မှတ်ဉာဏ်"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "အင်ဂျင်တိုင်းအတွက် ဝေါဟာရအဘိဓာန်နှင့် ဘာသာမပြန်ရန် စာရင်း"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "သံနှင့် စတိုင် ညွှန်ကြားချက်များ"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "ပို့စ်များ၊ စာမျက်နှာများနှင့် စိတ်ကြိုက်ပို့စ် အမျိုးအစားများ"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "လုံခြုံစွာ ဘာသာပြန်ဆိုပြီးသော ပိတ်ပင်ချက်များ"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "အမျိုးအစားများ၊ တဂ်များနှင့် စိတ်ကြိုက် တက္ဆိုနိုမီများ"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "မီနူးများ"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich စာမျက်နှာများ"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor၊ Bricks၊ Divi၊ Beaver Builder၊ Oxygen နှင့် WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: အားလုံး"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "အဓိက SEO ပလပ်ဂင် လေးခုလုံးအတွက် SEO ကွက်လပ်များ"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "စိတ်ကြိုက်အကွက်များ"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "အပြင်အဆင်နှင့် ပလပ်အင် စာသားများ (စာသားများ)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "မီဒီယာ"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "ဘလောက် အပြင်အဆင်များ- နမူနာပုံစံများနှင့် ပုံစံများ"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "ဝစ်ဂျက်များနှင့် ဆိုက်ခေါင်းစဉ်/ဆောင်ပုဒ်"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "တစ်ချက်နှိပ်ရုံဖြင့် ပို့စ်တစ်ခုကို ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "ဆိုဒ်တစ်ခုလုံးကို အစုလိုက် ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "အသစ်နှင့် အပ်ဒိတ်လုပ်ထားသော အကြောင်းအရာများကို အလိုအလျောက် ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "ဘေးချင်းယှဉ် ဘာသာပြန်အယ်ဒီတာ"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "မြင်ကွင်းပြင်ပထမပိုင်း တည်းဖြတ်သူ"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "သုံးသပ်ချက်နှင့် အတည်ပြုချက်"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "လူသား ဘာသာပြန်သူများအတွက် တင်ပို့ခြင်းနှင့် တင်သွင်းခြင်း"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "WPML၊ Polylang သို့မဟုတ် TranslatePress မှ ပြောင်းပါ"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "ဘာသာပြန်ဆိုမှု အခြေအနေ ဒိုင်ခွက်"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "URL ထ တွင် ဘာသာစကား - /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "ဘာသာစကားတစ်ခုလျှင် အောက်ခံဒိုမိန်းများ သို့မဟုတ် သီးခြားဒိုမိန်းများ"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "ဘာသာပြန်ထားသော စာမျက်နှာခေါင်းစဉ်များ"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang တဂ်များ၊ တိကျမှန်ကန်စွာ လုပ်ဆောင်ခြင်း"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "ဘာသာပြန်ထားသော ဆိုက်မြေပုံများ"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "ဘာသာစကားနှင့် canonical tags များကို ပြင်ဆင်ပါ"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "ရှာဖွေရေး အင်ဂျင်များမှ ဘာသာမပြန်ရသေးသော စာမျက်နှာများကို ဖုံးကွယ်ပါ"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "visitor ၏ ဘာသာစကားကို အကြံပြုပါ"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Block တည်းဖြတ်ကိရိယာအတွက် ပြောင်းလဲကိရိယာ Block"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Page Builder Sandwich အတွက် Switcher element"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Elementor၊ Bricks နှင့် အခြားသော builder များအတွက် Switcher"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "မီနူးအကြောင်းအရာ၊ ဝစ်ဂျက်နှင့် ရှော့ကုဒ်"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "မျောပါနေသော ပြောင်းစက်"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "လွယ်ကူစွာပြောင်းလဲနိုင်သည့်ကိရိယာ"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API နှင့် ပုံစံတူ လုပ်ဆောင်ချက်များ"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "သင့်ကိုယ်ပိုင် ဘာသာပြန်အင်ဂျင်ကို ထည့်ပါ"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Hooks၊ REST API နှင့် WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Polylang/WPML လုပ်ဆောင်ချက်များအတွက် လိုက်ဖက်ညီမှုအလွှာ"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "ပင်မ AI ပံ့ပိုးပေးသူ အားလုံးအတွက် သင့်ကိုယ်ပိုင် Key ကို ယူဆောင်အသုံးပြုပါ"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "မော်ဒယ်စာရင်းသည် ကိုယ့်အလိုလို အပ်ဒိတ်ဖြစ်သည်"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "မွမ်းမံမှုများတွင် အကြံပြုထားသော မော်ဒယ်များကို ကျွန်ုပ်တို့ ထည့်သွင်းပေးပါသည်"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "အဆင့်တစ်ဆင့်ဖြင့် မော်ဒယ်တစ်ခုကို သင်ကိုယ်တိုင် ထည့်ပါ"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "နည်းပညာပိုင်းဆိုင်ရာ အသိပညာမရှိသူများအတွက် ရိုးရှင်းလွယ်ကူသော သတ်မှတ်ချက်ပြင်ဆင်မှု"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "သော့များကို ကုဒ်ဝှက်ထားပြီး သိမ်းဆည်းထားပြီး၊ ကျွန်ုပ်တို့ထံသို့ လုံးဝ မပေးပို့ပါ။"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "အမှား မက်ဆေ့ချ်များကို ရှင်းလင်းရန်"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "အသုံးပြုမှုနှင့် ကုန်ကျစရိတ် မှတ်တမ်း"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "အခန်းကဏ္ဍအလိုက် AI ခွင့်ပြုချက်များ"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "သော့ချက်တစ်ခုတည်း၊ ပလပ်အင်နှစ်ခုလုံး"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "ခေတ်မီ စီမံခန့်ခွဲမှု မျက်နှာပြင်များ"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "တပ်ဆင်ခြင်း လက်ထောက်"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "ပါရှိပြီးသား အကူအညီ"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "ပလပ်အင်နှစ်ခုကြား အပြန်အလှန် ပရိုမိုးရှင်းလုပ်ခြင်း"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® ဟော်စ်တင် ပရိုမိုးရှင်း"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Freemius (နောက်ဆုံးပေါ် SDK) မှတစ်ဆင့် Pro လိုင်စင်ရယူခြင်း"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Pro ၏ အခမဲ့ စမ်းသပ်သုံးစွဲမှု"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Zinn Digital® Ltd သို့ အသိအမှတ်ပြုထားသည်"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "ကျွန်ုပ်တို့၏ အခြားသော ပလပ်အင်များကဲ့သို့ပင် GitHub သို့ စင့်ခ်လုပ်ထားသည်"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "လက်စဖြင့် ပြင်ဆင်မှုများကို ကာကွယ်ထားသည်"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "ဘာသာပြန်ဆိုမှု မအောင်မြင်ကြောင်း အစီရင်ခံစာ"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "ဘာသာပြန်ချက်တိုင်းကို လွယ်ကူစွာ တည်းဖြတ်ပါ"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "အခမဲ့ဗားရှင်းတွင် ဘာသာပြန်ရန်မလိုသော စာရင်း"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce ဘက်စုံငွေကြေးသုံးစွဲမှု"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "AI အရည်အသွေး စစ်ဆေးခြင်း"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "အချို့သော ဘာသာစကားများတွင်သာ အကြောင်းအရာကို ပြသရန်"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "ဘာသာစကားမျိုးစုံသုံး SEO စစ်ဆေးခြင်း"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "ပုံစံများကို ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "မှတ်ချက်များနှင့် သုံးသပ်ချက်များကို ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "ဘာသာစကားအလိုက် ပုံများ ကွဲပြားခြင်း"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "အင်ဂျင်တစ်လုံးလျှင် လစဉ်သုံးစွဲမှု ကန့်သတ်ချက်"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "ဘာသာစကားမျိုးစုံ သုံးနိုင်သော ဆိုဒ်ရှာဖွေမှု"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "အမြန်နှုန်း ကတိကဝတ်၊ စမ်းသပ်ပြီး"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Multisite ထောက်ပံ့မှု"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "စမ်းသပ်ဆိုက်များနှင့် ဒေသတွင်းဆိုက်များသည် လိုင်စင်ကို မသုံးစွဲပါ"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "စာရွက်စာတမ်းဆိုက်နှင့် ဗီဒီယိုလမ်းညွှန်တိုများ"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "တုံ့ပြန်ချက်နှင့် လုပ်ဆောင်ချက်အသစ် တောင်းဆိုရန် ခလုတ်"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "ဘီတာ အပ်ဒိတ်ချန်နယ်"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "ဦးစားပေး ပံ့ပိုးကူညီမှု"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "အမှားတင်ပြသူနှင့် ပံ့ပိုးကူညီမှု လက်မှတ်များ"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Freemius ကို အပြည့်အဝ အသုံးပြုပါ"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "ပုံရိပ်ကင်းစင်သော ရှေ့ပိုင်း၊ မူရင်းအတိုင်း ဖွင့်ထားသည်"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "ဖောင်ဒေးရှင်း"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "ဘာသာပြန်ဆိုရေး အင်ဂျင်များ"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "ဘာသာပြန်ဆိုမည့်အရာများ"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "လုပ်ငန်းစဉ်"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO နှင့် URL များ"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "ဘာသာစကားပြောင်းစက်"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "ဆော့ဖ်ဝဲရေးသားသူများ"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "AI သော့ချက်များနှင့် မော်ဒယ်များ"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "စီမံခန့်ခွဲသူနှင့် လိုင်စင်ထုတ်ပေးခြင်း"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "နောက်ထပ် အင်္ဂါရပ်များ"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "လိုင်စင်နှင့် ပံ့ပိုးကူညီမှု"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "မြန်ဆန်ပြီး ဘာသာစကားမျိုးစုံသုံး WordPress အတွက် တည်ဆောက်ထားသော ဟိုစတင်င်မ်"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "ဤ ပလပ်ဖဂ်ကို ဖန်တီးထားသည့် အဖွဲ့ထံမှ အရှိန်အဟုန်နှင့် ဘာသာစကားအမျိုးမျိုးရှိသော ဆိုက်များအတွက် အထူးပြင်ဆင်ထားသော Managed WordPress hosting ဖြစ်ပါသည်။"
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® ၏ ဟို့စ်တင်းကို ကြည့်ပါ"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "ZinnHub တွင် WordPress ကျွမ်းကျင်သူတစ်ဦးကို ငှားရမ်းပါ"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "WordPress ဒီဇိုင်း၊ တီထွင်ဖန်တီးမှု၊ ဘာသာပြန်ဆိုမှုနှင့် SEO လုပ်ငန်းများအတွက် လွတ်လပ်သော ဝန်ဆောင်မှုဈေးကွက်တစ်ခု။"
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHub သို့ ဝင်ရောက်ပါ"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "ဆိုက်အများအပြားနှင့် PBN ဟော့စတင်းပြုလုပ်ခြင်း"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd သည် ဆိုက်များစွာကို တစ်ပြိုင်နက် ဟိုစ်တင်ရန်နှင့် စီမံခန့်ခွဲရန်အတွက် ကျွန်ုပ်တို့၏ ပလပ်ဖောင်း ဖြစ်သည်။"
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "PBN.ltd သို့ ဝင်ရောက်ပါ"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Page Builder Sandwich Pro နှင့် Tranzly Pro တို့ကို ပူးတွဲရယူပါ"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "ပက်ကေ့ချ်ကို ဝယ်ယူခြင်းသည် တူညီသော ပလန်များနှင့် ဆိုက်ကန့်သတ်ချက်များအောက်တွင် ပလပ်အင်နှစ်ခုစလုံးကို သီးခြားစီဝယ်ယူခြင်းထက် ကုန်ကျစရိတ် ပိုသက်သာသည်။"
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "ပက်ကေ့ဂျ်ကို ကြည့်ရှုပါ"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%s ရယူရန်"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "ပေါင်းစပ်မှု လုပ်ဆောင်နေပါသည် - %1$s နှင့် %2$s တို့ အတူတကွ လုပ်ဆောင်နေပါသည်"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s သည်ဤဆိုက်တွင် အသက်ဝင်နေသောကြောင့် ပလပ်အင်နှစ်ခုလုံးသည် AI ဝန်ဆောင်မှုပေးသူ ကီးတစ်စုံနှင့် အပြင်အဆင် မျက်နှာပြင်တစ်ခုတည်းကို အတူတကွ မျှဝေသုံးစွဲပါသည်။"
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Tranzly ဖြင့် ဤဆိုက်ကို ဘာသာပြန်ပါ"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Page Builder Sandwich ဖြင့် စာမျက်နှာများကို ရုပ်မြင်သံကြား တည်ဆောက်ပါ"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s၊ Zinn Digital® မှ"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "ဘာသာပြန်ထားသော လိပ်စာများ၊ SEO အချက်အလက်များနှင့် ဘာသာစကားပြောင်းစက်တို့ဖြင့် စာမျက်နှာတိုင်းကို ဘာသာစကားများစွာဖြင့် ထုတ်ဝေပါ။ ဤနေရာတွင် သင်တည်ဆောက်ထားသော စာမျက်နှာများနှင့် အလုပ်လုပ်ပါသည်။"
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "မြန်ဆန်၍ ရှာဖွေရေးအင်ဂျင်ခြေရာလက်ရာကင်းစင်သော ဘလောက်များဖြင့် တည်းဖြတ်သူတွင် စာမျက်နှာများကို တိုက်ရိုက်ဒီဇိုင်းဆွဲပါ။ သင်တည်ဆောက်သမျှ အရာရာတိုင်းသည် Tranzly ဖြင့် ဘာသာပြန်ဆိုပြီးသား ဖြစ်သွားပါသည်။"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s ကို အတူတူအဖွဲ့သားများက ဖန်တီးထားပြီး ဤပလပ်ဂင်နှင့်အတူ တွဲဖက်အလုပ်လုပ်ပါသည်။"
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "ဤဆိုက်ကို ဦးစွာချိတ်ဆက်ရန် သဘောတူပါ။"
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "မှန်ကန်သော အီးမေးလ်လိပ်စာတစ်ခုကို ထည့်ပါ။"
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "ပံ့ပိုးကူညီရေးအချက်အလက်များကို ဦးစွာပေးပို့ရန် သဘောတူပါ။"
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "ခေါင်းစဉ်တစ်ခုနှင့် မက်ဆေ့ချ်တစ်ခု ရေးပါ။"
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "ပံ့ပိုးကူညီရေးအဖွဲ့မှ ပြန်လည်ဖြေကြားနိုင်သည့် အီးမေးလ်လိပ်စာတစ်ခုကို ထည့်ပါ။"
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "ဆိုဒ်ပိုင်ရှင်က ဖန်တီးထားသော ယာယီပံ့ပိုးကူညီမှု အသုံးပြုခွင့်။ သက်တမ်းကုန်ဆုံးသည့်အခါ ၎င်းကို အလိုအလျောက် ဖျက်ပစ်ပါမည်။"
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "၁ ရက်၊ ၃ ရက် သို့မဟုတ် ၇ ရက်ကို ရွေးပါ။"
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "ဤမျက်နှာပြင်သို့ ဝင်ရောက်ထားသော ဆိုက်စီမံခန့်ခွဲသူတစ်ဦးသာလျှင် ယာယီပံ့ပိုးမှုအသုံးပြုခွင့်ကို ဖန်တီးနိုင်သည်။"
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "သီးသန့် အသုံးပြုသူအမည်ကို ရွေးချယ်၍ မရပါ။ ထပ်မံကြိုးစားကြည့်ပါ။"
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® ပံ့ပိုးကူညီမှု (ယာယီ)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "ဤ ယာယီပံ့ပိုးကူညီမှု အသုံးပြုခွင့် သက်တမ်းကုန်သွားပါပြီ။"
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "ရေးသားခြင်းနှင့် ပြန်လည်ရေးသားခြင်း"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "ဘာသာပြန်ဆိုချက်"
 
@@ -115,6 +745,9 @@ msgstr "သင်သည် သင်၏ကိုယ်ပိုင်ကီး�
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "နောက်သို့"
 
@@ -217,6 +850,7 @@ msgstr "စမ်းသပ်ရန်"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "ဖယ်ရှားရန်"
@@ -621,6 +1255,8 @@ msgstr "AI တောင်းဆိုမှုများကို ပြု�
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "ပြီးပါပြီ"
 
@@ -682,11 +1318,11 @@ msgstr "ဘာသာပြန်ဆိုချက်တစ်ခုသည် �
 msgid "Choose one of the site's other languages."
 msgstr "ဆိုက်၏ အခြားဘာသာစကားများထဲမှ တစ်ခုကို ရွေးချယ်ပါ။"
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "ဤ ပလပ်အင်မိတ္တူတွင် စီမံခန့်ခွဲသူ မျက်နှာပြင်၏ စာသားစခရစ်များ ပျောက်ဆုံးနေပါသည်။ ဖြန့်ချိထားသော ပက်ကေ့ဂျ်မှတစ်ဆင့် ၎င်းကို ပြန်လည်ထည့်သွင်းပါ။"
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "ဤမျက်နှာပြင်သည် JavaScript ကို လိုအပ်ပါသည်။"
 
@@ -1596,7 +2232,7 @@ msgstr "လိုင်စင်ကို ယခုဝယ်ယူပါ"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "မဖျက်တော့ပါ"
 
@@ -2111,6 +2747,7 @@ msgstr "ဝှိုက်လေဘယ် မုဒ်ကို ပိတ်န�
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "ချိတ်ဆက်မှုဖြုတ်ရန်"
 
@@ -2351,6 +2988,7 @@ msgstr "သက်တမ်းကုန်ဆုံးရက်"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "သက်တမ်းကုန်ဆုံးပြီ"
 
@@ -2417,6 +3055,8 @@ msgstr "အဆင့်မြှင့်တင်မှုကို ပြီ�
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "အခမဲ့"
 
@@ -2796,6 +3436,7 @@ msgstr "ရေရှည်မိတ္တူပွား"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "မက်ဆေ့ဂျ်"
 
@@ -3031,6 +3672,7 @@ msgstr "ဤပလပ်အင်အတွက် PHP ဗားရှင်းအ�
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "မဟုတ်ပါ"
@@ -3203,6 +3845,7 @@ msgstr "သင့်ဝဘ်ဆိုက်နှင့် ဆက်လက်�
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "အခြား"
 
@@ -3971,6 +4614,7 @@ msgstr "ဆိုက် ID"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "ဆိုက်များ"
 
@@ -4067,7 +4711,7 @@ msgstr "စမ်းသပ်ကာလ စတင်နေသည်"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "ပြည်နယ်"
 
@@ -4368,6 +5012,7 @@ msgstr "%1$s ကို ဘယ်လိုသဘောရလဲ။ %3$d ရက်
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "အမျိုးအစား"
 
@@ -5121,13 +5766,6 @@ msgstr "ဤဆက်တင်ကို ဖွင့်ထားသည် သိ�
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "ရှာဖွေရေးအင်ဂျင်များမှ ဘာသာမပြန်ရသေးသော စာမျက်နှာများကို ဖုံးကွယ်ထားခြင်းသည် Tranzly Pro ၏ တစ်စိတ်တစ်ပိုင်း ဖြစ်ပါသည်။"
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "ဘာသာစကားပြောင်းစက်"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "ဘာသာစကားများ (ခွဲမီနူးအဖြစ်)"
@@ -5307,6 +5945,687 @@ msgstr "စာသား အတိုင်းအတာ"
 msgid "Switcher"
 msgstr "ပြောင်းလဲစက်"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "overview ပေါ်ရှိ ဖုံးကွယ်ထားသော အကြံပြုချက်များကို ထပ်မံပြသပါ"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "အားလုံး"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "ရွေးချယ်ထားသည် - %d ခု"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "ဘာမျှ မကိုက်ညီပါ။"
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "ဤစာမျက်နှာရှိ အားလုံးကို ရွေးချယ်ပါ"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "ရွေးချယ်ရန်"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "စာမျက်နှာများ"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "ယခင်"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "စာမျက်နှာ %1$d / %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "%s ကို မိနစ်ပိုင်းအတွင်း စနစ်ထည့်သွင်းပါ"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "စတင် သတ်မှတ်မည်"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "ဤဆိုက်"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "ထုတ်ဝေမှု"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "ဤလိုင်စင်အောက်ရှိ ဆိုက်များ"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "မူကွဲ"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "ဤသည်မှာ စတေဂျင်း သို့မဟုတ် ဒေသတွင်း မိတ္တူတစ်ခုဖြစ်ပုံရသောကြောင့် သင်၏လိုင်စင်ပေါ်ရှိ ဝဘ်ဆိုက်တစ်ခုကို အသုံးမပြုပါ။"
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Pro က ဘာတွေထပ်တိုးပေးလဲဆိုတာ ကြည့်ပါ"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "သို့ သွားရန်"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "ကိုယ်ပိုင်"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "လုပ်ငန်း"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "အေဂျင်စီ"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "ဆိုက်မည်သည့်အရေအတွက်မဆို"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "ဝဘ်ဆိုဒ် အကန့်အသတ်မရှိ"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "site %d ခု"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "ပရို"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s စမ်းသပ်အသုံးပြုမှု"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "သင့်၏ စမ်းသပ်သုံးစွဲမှု စတင်နေပါပြီ။ Pro အင်္ဂါရပ်အားလုံးကို ကြည့်ရှုရန် စာမျက်နှာကို ပြန်လည်လုပ်ဆောင်ပါ။"
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "စမ်းသပ်မှုကို စတင်၍မရပါ။"
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "လုပ်ဆောင်ချက်"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "ပါဝင်သည်"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "မပါဝင်ပါ"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "သင့်လိုင်စင်"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "အသုံးပြုနေသည် %1$d/%2$d"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "သက်တမ်းတိုးသည်"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "ဝဘ်ဆိုဒ်တစ်ခု၏ စတိတ်ဂျင်း၊ စမ်းသပ်မှုနှင့် လိုကယ်ဟို့စ် (localhost) မိတ္တူများသည် အခမဲ့ဖြစ်ပြီး သင့်ဝဘ်ဆိုဒ် ကန့်သတ်ချက်တွင် မည်သည့်အခါမျှ ထည့်သွင်းရေတွက်မည် မဟုတ်ပါ။"
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "သင့် ပလန်တွင် ဦးစားပေး ပံ့ပိုးကူညီမှု ပါဝင်သည်။"
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "လိုင်စင်နှင့် ဘေလ်ပေးချေမှုကို စီမံပါ"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Pro ဖြင့် ပိုမိုရယူပါ"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "အခမဲ့ %d ရက် စမ်းသုံးမှုကို စတင်ပါ၊ ကတ် မလိုအပ်ပါ"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "ပလန်များနှင့် ဈေးနှုန်းများကို ကြည့်ရှုပါ"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Tranzly နှင့် Page Builder Sandwich ကို အတူတကွ သုံးမည်လား။ အဆိုပါ ပက်ကေ့ခ်ျတွင် Pro ပလပ်ဂင် နှစ်ခုစလုံးကို တန်ဖိုးနှုန်းသက်သာစွာဖြင့် ထည့်သွင်းပေးထားပါသည်။"
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "သင့်လိုင်စင် သက်တမ်းကုန်သွားပါပြီ။ အပ်ဒိတ်များနှင့် Pro အင်္ဂါရပ်များကို ဆက်လက်ရယူရန် ၎င်းကို သက်တမ်းတိုးပါ။"
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "ယခု သက်တမ်းတိုးပါ"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "ပလန်များကို နှိုင်းယှဉ်ပါ"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "အင်္ဂါရပ်များကို ရှာဖွေပါ"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "ဧရိယာ"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "တွင် ပါဝင်သည်"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "အင်္ဂါရပ် တစ်ခုမျှ မကိုက်ညီပါ။"
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "အစီအစဉ်အလိုက် လုပ်ဆောင်ချက်များ"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "ဝှက်ရန်"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "ပလပ်အင်များ မျက်နှာပြင်တွင် ယင်းကို အသက်သွင်းပါ"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "ထည့်သွင်းပါ"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "သုံးသပ်ချက်"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "တပ်ဆင်ခြင်း"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "အစီအစဉ်များနှင့် လိုင်စင်"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "ထပ်ဆောင်းများ"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "အကူအညီရယူရန်"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "အကြံပြုချက်များ"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "သင်၏ ရွေးချယ်မှုကို သိမ်းဆည်း၍ မရပါ။"
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "setup အခြေအနေကို သိမ်းဆည်း၍မရပါ။"
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "ကျွန်ုပ်၏ ကွန်ပျူတာနှင့် ကိုက်ညီပါသည်"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "အလင်း"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "အမှောင်"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "အရောင် အပြင်အဆင်"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "အကူအညီ"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "ဤမျက်နှာပြင်အတွက် လမ်းညွှန်ချက်"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "ခရီးစဉ်ကိုကြည့်ရှုရန်"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "အကူအညီရယူရန် သို့မဟုတ် ချို့ယွင်းချက်တစ်ခုကို သတင်းပို့ရန်"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "ပလပ်ဂင် မျက်နှာပြင်များ"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "၎င်းကို သိမ်းဆည်း၍မရပါ။"
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "ပံ့ပိုးကူညီမှုကို မဆက်သွယ်မီ"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "သင့်ထံမှ တောင်းဆိုချက်ကို ဤဆိုက်မှ %s ထံသို့ ပေးပို့ထားပြီး ၎င်းတို့သည် ဤပလပ်အင်ကို ပြုလုပ်သူ ဖြစ်ပါသည်။ ကျွန်ုပ်တို့ ပေးပို့သည်များမှာ-"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "သင့်၏ အီးမေးလ်လိပ်စာနှင့် အမည်တို့ဖြစ်ပြီး၊ ၎င်းတို့မှတစ်ဆင့် ကျွန်ုပ်တို့ ပြန်လည်ဖြေကြားနိုင်မည်ဖြစ်ပါသည်။"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "သင်ရေးသားသည့် ခေါင်းစဉ်နှင့် မက်ဆေ့ချ်၊"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "သင့်လိုင်စင် ID (ငွေပေးချေထားသော သုံးစွဲသူများ ဦးစားပေးရရှိစေရန်)၊"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "သင် အမှတ်အသားပြုမှသာလျှင် - ဝက်ဘ်ဆိုက် အသေးစိတ်အချက်အလက်များ (WordPress နှင့် PHP ဗားရှင်းများ၊ သီးမားဒီဇိုင်း၊ ပလပ်ဂင်များ၊ စကားဝှက်များနှင့် အီးမေးလ်လိပ်စာများကို ဖယ်ရှားထားသော အမှားမှတ်တမ်း အကျဉ်းချုပ်) ဖြစ်ပြီး၊ ယင်းတို့ကို မပို့မီ သင် ဖတ်ရှုနိုင်ပါသည်၊"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "သင့်ဆိုဒ်အတွက် အသုံးပြုသူအမည်နှင့် စကားဝှက်များကို ထည့်သွင်းမှသာလျှင် ကုဒ်ဝှက်၍ သိမ်းဆည်းမည်ဖြစ်ပြီး သင်၏တောင်းဆိုမှုကို ပိတ်သိမ်းပြီး ရက် ၃၀ အကြာတွင် ဖျက်ပစ်မည်ဖြစ်သည်။"
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "ကိုယ်ရေးလုံခြုံမှု မူဝါဒ"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "ကျွန်ုပ် သဘောတူပါသည်၊ ဆက်လက်လုပ်ဆောင်ပါ"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "ချိတ်ဆက်မှုကို စစ်ဆေး၍မရပါ။"
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "အလုပ်မလုပ်ပါ။ ထပ်စမ်းပါ။"
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital® support သည် ဤဆိုက်ကို ချိတ်ဆက်မှုဖြတ်တောက်လိုက်ပါပြီ။"
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Zinn Digital® support တွင် ဤဆိုက်ကို ထပ်မံအတည်မပြုတော့ပါ။"
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "ဤဆိုက်ကို သင်ချိတ်ဆက်မှုဖြတ်ထားသည်။"
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "ပံ့ပိုးကူညီမှုနှင့် ဤဆိုက်ကို ချိတ်ဆက်ပါ"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "ချိတ်ဆက်ပြီးပါပြီ။ အကြောင်းပြန်ချက်များကို %s သို့ ပို့ပါမည်။"
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "ချိတ်ဆက်မထားပါ။ အောက်ပါအီးမေးလ်လိပ်စာဖြင့် တောင်းဆိုချက်ကို ဆက်လက်ပေးပို့နိုင်ပါသည်; ချိတ်ဆက်ထားခြင်းဖြင့် အကြိမ်တိုင်း ထည့်သွင်းရခြင်းမှ ကင်းဝေးစေပါသည်။"
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "အီးမေးလ် လိပ်စာ"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "သင့်အမည် (မဖြစ်မနေ မဟုတ်ပါ)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Zinn Digital® ပံ့ပိုးကူညီမှုနှင့် ဤဆိုက်ကို ချိတ်ဆက်ရန် သဘောတူပါသည်။ ၎င်းသည် ဤဆိုက်၏လိပ်စာ၊ WordPress နှင့် PHP ဗားရှင်းများနှင့် ပလပ်ဂင်ဗားရှင်းတို့ကို ပေးပို့ပြီး ဤနေရာမှဖြစ်စေ၊ Zinn Digital® မှဖြစ်စေ အချိန်မရွေး ချိတ်ဆက်မှုကို ဖြတ်တောက်နိုင်သည်။"
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "ချိတ်ဆက်ရန်"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "အကူအညီလိုပါသည်"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "အမှားအယွင်း တစ်ခုကို တိုင်ကြားရန်"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "တုံ့ပြန်ချက်ပေးပို့ရန်"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "အင်္ဂါရပ်အသစ် တောင်းဆိုရန်"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "ဆိုဒ် အသေးစိတ်အချက်အလက်များကို ဖတ်ရှု၍မရပါ။"
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "သင်၏ တောင်းဆိုချက်ကို ပေးပို့နိုင်ခြင်း မရှိပါ။ မိနစ်အနည်းငယ်ကြာပြီးနောက် ထပ်မံကြိုးစားပါ။"
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress အေဂျင်စီ စီမံခန့်ခွဲသူ"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "ဖိုင်မန်နေဂျာ"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "တုံ့ပြန်ချက်နှင့် အင်္ဂါရပ် တောင်းဆိုချက်များ"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "သင့်၏ ရညျညှှနျးမှုမသတျမတျခကျြမှာ %s ဖြစ်ပြီး၊ ကျွန်ုပ်တို့၏ အကြောင်းပြန်မှုကို အီးမေးလ်မှတစ်ဆင့် ပေးပို့ပါမည်။"
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "ဘာကို ဆိုလိုတာလဲ။"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "အီးမေးလ်သို့ ပြန်ကြားရန်"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "အကြောင်းအရာ"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "သင် အဘယ်အရာ ပြုလုပ်ခဲ့သနည်း၊ အဘယ်အရာ မျှော်လင့်ခဲ့သနည်း၊ ၎င်းအစား အဘယ်အရာ ဖြစ်ပျက်ခဲ့သနည်း။"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "ဆိုက်အသေးစိတ်အချက်အလက်များ (ဗားရှင်းများ၊ အပြင်အဆင်၊ ပလပ်အင်များနှင့် အမှားအယွင်း မှတ်တမ်းအပိုင်းအစ) ကို ထည့်သွင်းပါ"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "ဘာတွေပေးပို့လိုက်တယ်ဆိုတာကို အတိအကျကြည့်ပါ"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "ဖွင့်နေသည်..."
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "ပံ့ပိုးကူညီမှုအတွက် အကောင့်ဝင်ရန်အချက်အလက်များ (ရွေးချယ်နိုင်သည်၊ ကုဒ်ဝှက်၍ သိမ်းဆည်းသည်)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "အသုံးပြုသူအမည်ကို စကားဝှက်နှင့်အတူသာ ပေးပို့သည်။ တစ်ဝက်တစ်ပျက်သာဖြည့်ထားခြင်းထက် စာကြောင်းတစ်ကြောင်းကို ချန်လှပ်ထားပါ။"
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "ဝင်ရောက်သည့် လိပ်စာ"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "သုံးစွဲသူအမည်"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "စကားဝှက်"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "လော့အင်အသစ် ထည့်ရန်"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "ယာယီပံ့ပိုးကူညီရေးအကောင့်ဝင်ရောက်မှုတစ်ခု ဖန်တီးပါ"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "အသုံးပြုသူများ၊ ပလပ်ဂင် ထည့်သွင်းခြင်း သို့မဟုတ် ကုဒ် ပြင်ဆင်ခြင်းများ ပြုလုပ်ခွင့်မရှိသော ကျွန်ုပ်တို့၏ ပံ့ပိုးကူညီရေးအဖွဲ့အတွက် သီးသန့် အသုံးပြုသူ အကောင့်တစ်ခု ဖြစ်ပါသည်။ ၎င်း၏ သက်တမ်းကုန်ဆုံးသည့်အခါ သို့မဟုတ် အောက်တွင် သင် ရုပ်သိမ်းလိုက်သည့် အခါတိုင်း ၎င်းကို အလိုအလျောက် ဖျက်ပစ်မည် ဖြစ်သည်။"
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "ဟုတ်ကဲ့၊ ရက်ပေါင်း %d အတွက်"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "ပို့မည်"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "စာရင်းကို ဝန်ဆောင်မှုပေး၍ မရပါ။"
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "ထိုဝင်ရောက်မှုအချက်အလက်ကို ဖယ်ရှား၍မရပါ။"
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "ယာယီပံ့ပိုးကူညီရေး အကောင့်ဝင်ရောက်မှုများ"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "None။ ဤနေရာတွင် အကောင့်တစ်ခု ဖန်တီးမှသာ ပံ့ပိုးကူညီရေးအဖွဲ့သည် ဤဆိုဒ်သို့ ဝင်ရောက်နိုင်မည်ဖြစ်သည်။"
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "သက်တမ်းကုန်ဆုံးသွားပြီ၊ ဖယ်ရှားနေသည်"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "%s တွင် သက်တမ်းကုန်ဆုံးမည်"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "ယခုပင် ရုပ်သိမ်းပါ"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "အဆင့် %1$d / %2$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "ခရီးစဉ်ကို ပိတ်မည်"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "နောက်သို့"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "အရာအားလုံး တစ်နေရာတည်းတွင်"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "ဤတabများသည် ပလပ်အင်၏ စနစ်ထည့်သွင်းမှု၊ ဆက်တင်များ၊ သင်၏လိုင်စင်၊ အကူအညီနှင့် အခြားအရာများစသည့် မျက်နှာပြင်အားလုံးသို့ ပို့ဆောင်ပေးသည်။"
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "မျက်နှာပြင်တိုင်းတွင် အကူအညီ"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "ယခုသင်ရောက်ရှိနေသော မျက်နှာပြင်အတွက် လမ်းညွှန်ချက်၊ ဤခရီးစဉ်အတွက် သို့မဟုတ် ကျွန်ုပ်တို့ကို အကူအညီတောင်းခံရန် ဤမီနူးကို ဖွင့်ပါ။"
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "အလင်း သို့မဟုတ် အမှောင်"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "အလင်း၊ အမှောင် သို့မဟုတ် သင့်ကွန်ပျူတာ၏ ပုံစံအတိုင်း ရွေးချယ်ပါ။ သင့်ရွေးချယ်မှုကို သင့်အတွက်သာ မှတ်သားထားမည်ဖြစ်သည်။"
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "ကြိုဆိုပါသည်"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "ဤအကျဉ်းချုပ်ခရီးစဉ်က အရာရာဘယ်မှာရှိသည်ကို ပြသပေးပါသည်။ Escape ကိုနှိပ်၍ အချိန်မရွေး ထွက်ခွာနိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "တစ်ချက်ကြည့်ရုံဖြင့် သင်၏ဆိုဒ်"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "ဆက်တိုက်လုပ်ဆောင်ရမည့်အရာနှင့်အတူ ထည့်သွင်းသတ်မှတ်မှု တိုးတက်မှုနှင့် သင်၏အစီအစဉ်ကို ဤနေရာတွင် ပြသထားပါသည်။"
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "သင့်ရဲ့ ပလန်၊ ၎င်းက လွှမ်းခြုံပေးထားတဲ့ ဆိုက်အရေအတွက်၊ နဲ့ ဒီဆိုက်မိတ္တူဟာ အဲဒီကန့်သတ်ချက်ထဲမှာ အကျုံးဝင်မဝင်ဆိုတာပါ။"
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Pro ကို စမ်းသုံးပါ သို့မဟုတ် အဆင့်မြှင့်ပါ"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "ကတ်ပြားမလိုဘဲ အခမဲ့စမ်းသုံးမှုကို စတင်ပါ၊ အဆင့်မြှင့်တင်ပါ သို့မဟုတ် သက်တမ်းတိုးပါ၊ အားလုံးကို ဤနေရာမှ လုပ်ဆောင်နိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "အင်္ဂါရပ်တိုင်းနှင့် ၎င်းပါဝင်သော ပလန်။ အင်္ဂါရပ်တစ်ခုကို ရှာပါ သို့မဟုတ် တစ်ကြိမ်လျှင် နယ်ပယ်တစ်ခုကို ပြပါ။"
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Zinn Digital® မှ ပbိုမိုများပြားသော အချက်အလက်များ"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "ယင်းနှင့် တွဲဖက်အလုပ်လုပ်သော ပလပ်အင်များနှင့် တူညီသော အသင်းမှ ဝန်ဆောင်မှုများ။ အခြားမျက်နှာပြင်များတွင် ဖုံးကွယ်ထားခဲ့သော ကတ်များကို ဤနေရာတွင် ပြန်လည်ပြသနိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "ပိုမိုမြန်ဆန်သော အကူအညီအတွက် ချိတ်ဆက်ပါ"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "ချိတ်ဆက်ခြင်းသည် စိတ်ကြိုက်ပြုလုပ်နိုင်ပါသည်။ ၎င်းသည် သင်၏ အီးမေးလ်ကို အကြိမ်တိုင်း ရိုက်ထည့်စရာမလိုဘဲ တောင်းဆိုချက်များကို ပေးပို့နိုင်စေပြီး၊ သင်နှစ်သက်သည့်အချိန်တိုင်း ပြန်လည်ဖြုတ်ထားနိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "အကူအညီတောင်းပါ သို့မဟုတ် ဘပ်ခ်တစ်ခုကို သတင်းပို့ပါ"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "ဘာဖြစ်ပျက်ခဲ့သည်ကို ဖော်ပြပါ။ ဆိုက်အချက်အလက်ကို ပူးတွဲရန် သို့မဟုတ် မပူးတွဲရန် သင် ရွေးချယ်နိုင်ပြီး ၎င်းတွင် မည်သည့်အရာများ ပါဝင်သည်ကို ပထမဦးစွာ အတိအကျ ကြည့်ရှုနိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "ယာယီ အထောက်အပံ့ ရယူခွင့်"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "အကူအညီပေးရေးအဖွဲ့မှ သင့်ဝက်ဘ်ဆိုက်အတွင်းပိုင်းကို ဝင်ရောက်ကြည့်ရှုရန် လိုအပ်ပါက ဤနေရာတွင် ယာယီဝင်ရောက်ခွင့် အကောင့်တစ်ခု ဖန်တီးပါ။ ၎င်း၏ သက်တမ်းကုန်ဆုံးပါက အလိုအလျောက် ပျက်ပြယ်သွားမည်ဖြစ်ပြီး သင့်အနေဖြင့်လည်း ကြိုက်နှစ်သက်သည့်အချိန်တွင် ပြန်လည်ဖျက်ဆီးနိုင်ပါသည်။"
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "ဘာတည်ဆောက်ရမလဲဆိုတာ ကျွန်ုပ်တို့ကို ပြောပြပါ"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "အကြံဉာဏ်၊ လုပ်ဆောင်ချက်တောင်းဆိုမှု သို့မဟုတ် တုံ့ပြန်ချက်တစ်ခုခုကို ပေးပို့ပါ။ ၎င်းသည် အဖွဲ့ထံသို့ တိုက်ရိုက်ရောက်ရှိမည်ဖြစ်သည်။"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "ဤလုပ်ငန်းစဉ်သည် မိနစ်အနည်းငယ်ကြာမြင့်မည်ဖြစ်ပြီး %s ကို ဤဝက်ဘ်ဆိုက်တွင် ချက်ချင်းအသုံးပြုနိုင်ရန် ပြင်ဆင်ပေးပါမည်။ အရာအားလုံးကို နောက်မှ ပြန်လည်ပြောင်းလဲနိုင်ပါသည်။"
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "သင် အဆင်သင့်ဖြစ်ပါပြီ။ တစ်စုံတစ်ရာ မျှော်လင့်ထားသည့်အတိုင်း အလုပ်မလုပ်ပါက၊ ကျွန်ုပ်တို့သည် တစ်ချက်နှိပ်ရုံဖြင့် အသင့်ရှိနေပါသည်။"
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "အဆင့် %1$d ၏ %2$d- %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "ပြီးဆုံးရန်"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "ဆက်တင်ကို ကျော်ရန်"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd ၏ CEO ဖြစ်သူ Neil Lock မှ တည်ဆောက်သည်"
@@ -5335,7 +6654,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Pro အစီအစဉ်များနှင့် ဈေးနှုန်းများကို ကြည့်ပါ"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "ဘာသာစကားများ"
 
@@ -5553,6 +6873,14 @@ msgstr "စတိုင် ညွှန်ကြားချက်များ (
 msgid "Save glossary"
 msgstr "ဝေါဟာရ အဘိဓာန်ကို သိမ်းဆည်းရန်"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "ဆက်တင်များ"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "ဘာသာပြန်စက်အင်ဂျင်"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6898,6 @@ msgstr "လည်ပတ်နေသည်"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "ပြီးစီးပါပြီ"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "နောက်ခံတွင် ဘာသာပြန်ပါ"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6976,7 @@ msgid "Content"
 msgstr "အကြောင်းအရာ"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "ဘာသာစကား"
 
@@ -5699,47 +7023,47 @@ msgstr "သိမ်းဆည်းပြီးပါပြီ။ သင်၏ �
 msgid "The same menu, translated"
 msgstr "ဘာသာပြန်ထားသော တူညီသည့် မီနူး"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "ဘာသာစကားတစ်ခုလျှင် သီးသန့်မီနူးတစ်ခု"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "မူလအားဖြင့် မီနူးတစ်ခုစီကို ဘာသာပြန်ဆိုထားသည်- ၎င်း၏လင့်ခ်များသည် ခေါင်းစဉ်များပါရှိသော ဘာသာပြန်ထားသော စာမျက်နှာများဆီသို့ ပို့ဆောင်ပေးသည်။ ဤနေရာတွင် ဘာသာစကားတစ်ခုအတွက် သီးသန့်မီနူးတစ်ခုကို ရွေးချယ်ပါ။"
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "မျှဝေထားသော စာသား"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "မည်သည့်စာသား"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "မီနူး လေဘယ်လ်များ"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "ပုံစံပလိတ်များ၊ ခေါင်းစီးများ၊ အောက်ခြေစာများနှင့် ပုံစံများ"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "ပုံစံပလိတ်များ၊ ခေါင်းစီးများ၊ အောက်ခြေစာများနှင့် ပုံစံများ (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "ပျောက်ဆုံးနေသော စာသားကို ဘာသာပြန်ပါ"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "ဘာသာပြန်ရန် စာသား မရှိပါ။"
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "လူတစ်ဦးမှ ပြင်ဆင်ပြီး၊ အကာအကွယ်ပေးထားသည်"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "ပြင်ဆင်ချက်များကို သိမ်းဆည်းရန်"
 
@@ -5822,13 +7146,9 @@ msgid "Problem"
 msgstr "ပြဿနာ"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "ပြင်ဆင်ရန်"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "မျောပါနေသော ပြောင်းစက်"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7228,7 @@ msgstr "Elementor နှင့် Bricks ဝစ်ဂျက်များသည
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "သိမ်းဆည်းရန်"
 
@@ -6044,27 +7364,27 @@ msgstr "သိမ်းဆည်းပြီးပါပြီ။ သင်ပ�
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "ဤဘာသာပြန်၏ အပြင်အဆင်ကို တည်းဖြတ်သူတွင် ပြောင်းလဲခဲ့သောကြောင့် အချို့သော အပိုင်းများသည် မူရင်းနှင့် ယခုအခါ မကိုက်ညီတော့ပါ။ တွဲဖက်မရှိသော အပိုင်းများကို အလွတ်ပြထားပါသည်။ ကျန်ရှိသည်များကို တည်းဖြတ်သူတွင် ပြင်ဆင်ပါ။"
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "တည်းဖြတ်စက်ကို ဖွင့်ပါ"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "မူရင်း (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "ဘာသာပြန်ဆိုချက် (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "ပြောင်းလဲမှုများကို သိမ်းဆည်းရန်"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "စာတည်းဖြတ်စက်တွင် ဖွင့်ပါ"
 
@@ -6138,97 +7458,97 @@ msgstr "မဘာသာပြန်ရသေးပါ (မိတ္တူ)"
 msgid "Save this post first, then translate it here."
 msgstr "ဤပို့စ်ကို ဦးစွာ သိမ်းဆည်းပါ၊ ထို့နောက် ဤနေရာတွင် ဘာသာပြန်ပါ။"
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "ဘေးချင်းယှဉ်"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "ကြည့်ရှုရန်"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "နောက်တစ်ကြိမ် ဘာသာပြန်နိုင်ရန် သော့ဖွင့်ပါ"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "ကာကွယ်ရန်"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "ဘာသာပြန်ချက်များကို ထုတ်ဝေရန်"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
 msgstr[0] "ဘာသာစကား %d မျိုးသို့ ဘာသာပြန်ပါ"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: ဘာသာပြန်ပြီးပါပြီ။"
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "ဤဘလောက်ကို ပြပါ"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "ဘာသာစကားတိုင်းတွင်"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "အမှန်ခြစ်ထားသော ဘာသာစကားများတွင်သာ"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "အမှန်ခြစ်ထားသော ဘာသာစကားများမှလွဲ၍ ဘာသာစကားတိုင်းတွင်"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "ဘာသာစကားအလိုက် ပုံရိပ်"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "စာသားပါသော ဘန်နာကဲ့သို့သော နိုင်ငံခြားဘာသာစကားဖြင့် ဖတ်ရှုသူများအတွက် အခြားပုံတစ်ပုံကို ပြသပါ။"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%s ပုံကို အစားထိုးရန်"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "%s ရုပ်ပုံကို ရွေးပါ"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "မူရင်းပုံကို အသုံးပြုရန်"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "ဤဘာသာပြန်ချက်ကို ပြင်ပါ"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "သိမ်းဆည်းနေသည်..."
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "ဘာသာပြန်ထားသော စာသား။ ၎င်းကို ပြင်ဆင်ရန် Enter ကို နှိပ်ပါ။"
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "အဝိုင်းရံထားသော စာသားကို နှိပ်၍ ၎င်း၏ဘာသာပြန်ဆိုမှုကို ပြင်ဆင်ပါ။"
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "ဤစာမျက်နှာတွင် တည်းဖြတ်ရန်အတွက် ဘာသာပြန်ဆိုထားသော စာသား မတွေ့ရှိပါ။ ၎င်း၏အစား ဘေးချင်းယှဉ်တွဲ တည်းဖြတ်သူကို အသုံးပြုပါ။"
 

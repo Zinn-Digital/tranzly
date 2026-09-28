@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® odpowiedział, ale w sposób nieobsługiwany przez tę wtyczkę. Nic nie zostało zapisane."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Ta strona utraciła swoje połączenie. Nie udało się powiadomić usługi Zinn Digital® w tej chwili, więc personel pomocy technicznej będzie widzieć ją jako nieużywaną, dopóki nie zostanie usunięta po ich stronie."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Adres Zinn Digital®, którego użycie skonfigurowano dla tej witryny, nie jest bezpiecznym adresem (https), więc nic nie zostało wysłane."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "Nie udało się połączyć z Zinn Digital® z tej strony. Sprawdź, czy witryna może nawiązywać połączenia wychodzące, a następnie spróbuj ponownie."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Połączenie tej witryny z usługą Zinn Digital® zostało odwołane. Połącz ją ponownie, aby kontynuować."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® nie rozpoznaje już połączenia tej witryny. Połącz ją ponownie, aby kontynuować."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Wysłano zbyt wiele żądań z tej witryny lub adresu. Odczekaj chwilę i spróbuj ponownie."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® nie mogło przetworzyć tego żądania. Sprawdź adres e-mail oraz wiadomość, a następnie spróbuj ponownie."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® nie może teraz obsłużyć żądania. Spróbuj ponownie za kilka minut."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "Usługa licencjonowania jest niedostępna w tej witrynie."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "Nie udało się tutaj rozpocząć wersji próbnej. Zamiast tego kontynuuj na stronie wersji próbnej."
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Jeden post na język, połączone ze sobą"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Zachowuje Twoje stare tłumaczenia Tranzly"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Tłumacz w tle"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "Najnowsze wersje WordPress i PHP, testowane przy każdym wydaniu"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Bezpieczeństwo w fazie projektowania"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "Interfejs w 58 językach, gotowy na układ od prawej do lewej"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Nieograniczona liczba języków"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (obecna integracja, zachowana)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "Modele AI z własnym kluczem"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation i Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Inny silnik dla każdego języka"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Automatyczne przekierowanie zapasowe"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Szacunkowy koszt przed rozpoczęciem"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Pamięć tłumaczeń"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Słowniczek i lista wyrazów niepodlegających tłumaczeniu dla każdego silnika"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Ton i styl - instrukcje"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Wpisy, strony i niestandardowe typy wpisów"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Zablokowane bezpiecznie"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Kategorie, tagi i taksonomie niestandardowe"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Menu"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Strony Page Builder Sandwich"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen i WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: wszystko"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "Pola SEO dla wszystkich czterech głównych wtyczek SEO"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Pola niestandardowe"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Teksty (ciągi znaków) motywów i wtyczek"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Media"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Motywy blokowe: szablony i wzorce"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Widżety oraz tytuł i slogan witryny"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Przetłumacz jeden post jednym kliknięciem"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "Przetłumacz masowo całą witrynę"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Automatyczne tłumaczenie nowych i zaktualizowanych treści"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Edytor tłumaczeń obok siebie"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Wizualny edytor interfeisu"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "Przegląd i zatwierdzenie"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "Eksport i import dla tłumaczy ludzkich"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "Przejdź z WPML, Polylang lub TranslatePress"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Pulpit nawigacyjny statusu tłumaczenia"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "Język w adresie URL: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Poddomeny lub osobne domeny dla każdego języka"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Przetłumaczone adresy URL"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "znaczniki hreflang właściwie wdrożone"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Przetłumaczone sity witryny"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "Popraw język i tagi kanoniczne"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "Ukryj nieprzetłumaczone strony przed wyszukiwarkami internetowymi"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "Zaproponuj język odwiedzającego"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Blok przełącznika dla edytora bloków"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Element przełącznika dla Page Builder Sandwich"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Przełącznik dla Elementor, Bricks i innych kreatorów"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Element menu, widget i skrótowy kod"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Pływający przełącznik"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Przełącznik dostępności"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "Funkcje interfejsu API i szablonów PHP"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Dodaj własny silnik tłumaczeń"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Haki, REST API i WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Warstwa kompatybilności dla funkcji Polylang/WPML"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Przynieś własny klucz dla wszystkich głównych dostawców sztucznej inteligencji"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "Lista modeli aktualizuje się sama"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "W aktualizacjach wdrażamy polecane modele"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Dodaj model samodzielnie w jednym kroku"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Prosta konfiguracja dla użytkowników nietechnicznych"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Klucze są przechowywane w postaci zaszyfrowanej, nigdy nie są do nas wysyłane"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Wyczyść komunikaty o błędach"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Rejestr użycia i kosztów"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "Uprawnienia AI dla ról"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Jeden klucz, obie wtyczki"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Nowoczesne ekrany administracyjne"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Kreator konfiguracji"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Wbudowana pomoc"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "Krzyżowa promocja pomiędzy tymi dwoma wtyczkami"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Promocja hostingu Zinn Digital®"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Licencjonowanie Pro za pośrednictwem Freemius (najnowszy SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Bezpłatna wersja próbna pakietu Pro"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Pakiet: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Przypisano Zinn Digital® Ltd"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Zsynchronizowane z GitHub tak jak inne nasze wtyczki"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "Ręczne modyfikacje są chronione"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Raport o nieudanych tłumaczeniach"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Łatwa edycja każdego tłumaczenia"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Lista elementów niepodlegających tłumaczeniu w wersji darmowej"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "Wielo walutowość WooCommerce"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "Kontrola jakości AI"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Pokaż treść tylko w wybranych językach"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Wielojęzyczny audyt SEO"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Przetłumacz formularze"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Przetłumacz komentarze i opinie"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Różne obrazy dla każdego języka"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Miesięczny limit wydatków na silnik"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Wielojęzyczne wyszukiwanie w witrynie"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Przetestowana obietnica szybkości"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Obsługa wielu witryn"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "Strony testowe i lokalne nie zużywają licencji"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Strona dokumentacji i krótkie filmy instruktażowe"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Przycisk opinii i zgłaszania funkcji"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Kanał aktualizacji beta"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Priorytetowe wsparcie"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Zgłaszanie błędów i zgłoszenia pomocy technicznej"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "W pełni korzystaj z Freemius"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Bez śladu SEO, domyślnie włączone"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Fundacja"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Silniki tłumaczące"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Co podlega tłumaczeniu"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "Przepływ pracy"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO i adresy URL"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Przełącznik języka"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Programiści"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "Klucze i modele AI"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Administrator i licencjonowanie"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "Więcej funkcji"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Licencjonowanie i pomoc techniczna"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Hosting stworzony z myślą o szybkim, wielojęzycznym WordPress"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Hosting zarządzany WordPress od zespołu, który tworzy tę wtyczkę, zoptymalizowany pod kątem prędkości i dla stron w wielu językach."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zobacz hosting Zinn Digital®"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "Zatrudnij eksperta WordPress w ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "Rynek dla freelancerów zajmujących się projektowaniem, tworzeniem, tłumaczeniami oraz pozycjonowaniem stron na platformie WordPress."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "Odwiedź ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Masowy hosting witryn i PBN"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd to nasza platforma do hostowania i zarządzania wieloma witrynami jednocześnie."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "Odwiedź PBN.ltd"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Kup Page Builder Sandwich Pro i Tranzly Pro razem"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "Pakiet kosztuje mniej niż zakup obu wtyczek osobno, przy tych samych planach i limitach witryn."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Zobacz pakiet"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "Pobierz %s"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Integracja aktywna: %1$s i %2$s współpracują"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s jest aktywny w tej witrynie, więc obie wtyczki korzystają z jednego zestawu kluczy dostawcy sztucznej inteligencji oraz jednego ekranu ustawień dla nich."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Przetłumacz tę witrynę za pomocą Tranzly"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Twórz strony wizualnie za pomocą Page Builder Sandwich"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s od Zinn Digital®"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Opublikuj każdą stronę w wielu językach, z przetłumaczonymi adresami, danymi SEO i przełącznikiem języków. Działa ze stronami tworzonymi tutaj."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Projektuj strony bezpośrednio w edytorze za pomocą szybkich bloków niepozostawiających śladów w wyszukiwarkach. Wszystko, co zbudujesz, tłumaczy się za pomocą Tranzly."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s jest tworzony przez ten sam zespół i działa razem z tą wtyczką."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Najpierw wyraź zgodę na połączenie tej witryny."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Wprowadź prawidłowy adres e-mail."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Najpierw wyraź zgodę na przesłanie informacji o wsparciu."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Napisz temat i wiadomość."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Wprowadź adres e-mail, na który pomoc techniczna może odpowiedzieć."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "Tymczasowy dostęp do pomocy technicznej utworzony przez właściciela witryny. Zostaje on automatycznie usunięty po wygaśnięciu."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "Wybierz 1, 3 lub 7 dni."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Tylko administrator strony, zalogowany na tym ekranie, może utworzyć tymczasowy dostęp do pomocy technicznej."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Nie udało się wybrać unikalnej nazwy użytkownika. Spróbuj ponownie."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Wsparcie techniczne Zinn Digital® (tymczasowe)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Ten tymczasowy dostęp do pomocy technicznej wygasł."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "Zapisywanie i ponowne zapisywanie"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Tłumaczenie"
 
@@ -115,6 +745,9 @@ msgstr "Dostarczasz własny klucz, więc płacisz dostawcy bezpośrednio za to, 
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "Dalej"
 
@@ -217,6 +850,7 @@ msgstr "Test"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Usuń"
@@ -621,6 +1255,8 @@ msgstr "Nie wykonano jeszcze żadnych żądań sztucznej inteligencji."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Gotowe"
 
@@ -682,11 +1318,11 @@ msgstr "Tłumaczenie musi być tego samego rodzaju treścią co oryginał."
 msgid "Choose one of the site's other languages."
 msgstr "Wybierz jeden z pozostałych języków witryny."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Skrypty ekranu administratora są niedostępne w tej kopii wtyczki. Zainstaluj ją ponownie z wydanego pakietu."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Ten ekran wymaga obsługi języka JavaScript."
 
@@ -1596,7 +2232,7 @@ msgstr "Kup licencję teraz"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -2111,6 +2747,7 @@ msgstr "Wyłączanie trybu white-label"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Rozłącz"
 
@@ -2351,6 +2988,7 @@ msgstr "Wygaśnięcie"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Wygasła"
 
@@ -2417,6 +3055,8 @@ msgstr "Wykonaj poniższe kroki, aby ukończyć uaktualnienie"
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Bezpłatny"
 
@@ -2796,6 +3436,7 @@ msgstr "Duplikat długoterminowy"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Wiadomość"
 
@@ -3031,6 +3672,7 @@ msgstr "Ta wtyczka wymaga nowszej wersji PHP."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Nie"
@@ -3203,6 +3845,7 @@ msgstr "Aby zapewnić ciągłą kompatybilność ze swoją witryną, możesz opc
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Inne"
 
@@ -3971,6 +4614,7 @@ msgstr "Identyfikator strony"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Witryny"
 
@@ -4067,7 +4711,7 @@ msgstr "Rozpoczynanie wersji próbnej"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Stan"
 
@@ -4368,6 +5012,7 @@ msgstr "Jak na razie podoba Ci się %1$s? Przetestuj wszystkie nasze funkcje pre
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Typ"
 
@@ -5121,13 +5766,6 @@ msgstr "To ustawienie jest włączone lub wyłączone."
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "Ukrywanie nieprzetłumaczonych stron przed wyszukiwarkami jest częścią Tranzly Pro."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Przełącznik języka"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Języki"
@@ -5307,6 +5945,695 @@ msgstr "Rozmiar tekstu"
 msgid "Switcher"
 msgstr "Przełącznik"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Pokaż ponownie ukryte sugestie w podsumowaniu"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Wszystkie"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "Zaznaczono: %d"
+msgstr[1] "Zaznaczono: %d"
+msgstr[2] "Zaznaczono: %d"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Brak wyników."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Zaznacz wszystko na tej stronie"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Wybierz"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Strony"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Poprzednia"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "Strona %1$d z %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "Skonfiguruj %s w kilka minut"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Rozpocznij konfigurację"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Ta witryna"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Edycja"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Witryny w ramach tej licencji"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Wersja"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Wygląda to na kopię testową lub lokalną, więc nie zużywa ona witryny z Twojej licencji."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Zobacz, co dodaje pakiet Pro"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Przejdź do"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Prywatne"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Biznes"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Agencja"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Dowolna liczba witryn"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Nielimitowane strony"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d witryna"
+msgstr[1] "%d witryn"
+msgstr[2] "%d witryn"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Pro"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "okres próbny: %s"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Twoja wersja próbna została rozpoczęta. Odśwież stronę, aby zobaczyć wszystkie funkcje w wersji Pro."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "Nie udało się uruchomić okresu próbnego."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Funkcja"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Zawarte w cenie"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "Nieujęte"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Twoja licencja"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%1$d z %2$d w użyciu"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Odnawia się"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "Kopie próbne, testowe i w środowisku localhost są bezpłatne i nigdy nie wliczają się do limitu witryn."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Twój plan obejmuje wsparcie priorytetowe."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Zarządzaj licencją i rozliczeniami"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Zyskaj więcej z planem Pro"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Rozpocznij bezpłatny %d-dniowy okres próbny, karta nie jest wymagana"
+msgstr[1] "Rozpocznij bezpłatny %d-dniowy okres próbny, karta nie jest wymagana"
+msgstr[2] "Rozpocznij bezpłatny %d-dniowy okres próbny, karta nie jest wymagana"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Zobacz plany i cennik"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Chcesz używać razem Tranzly i Page Builder Sandwich? Ten pakiet zawiera obie wtyczki w wersji Pro w niższej cenie."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Twoja licencja wygasła. Odnów ją, aby nadal otrzymywać aktualizacje i funkcje Pro."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Odnów teraz"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Porównaj plany"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Wyszukaj funkcje"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Obszar"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Zawarte w"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Żadna funkcja nie pasuje."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Funkcje w planie"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Ukryj"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "Aktywuj ją na ekranie Wtyczek"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Zainstaluj"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Przegląd"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Konfiguracja"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Plany i licencja"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Dodatki"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Uzyskaj pomoc"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Opinie"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "Nie udało się zapisać Twojego wyboru."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "Nie udało się zapisać stanu konfiguracji."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "Dopasuj do mojego komputera"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Jasny"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Ciemny"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Schemat kolorów"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Pomoc"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Przewodnik po tym ekranie"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Rozpocznij wycieczkę"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Uzyskaj pomoc lub zgłoś błąd"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Ekrany wtyczek"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "Nie udało się tego zapisać."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Przed skontaktowaniem się z pomocą techniczną"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "Twoja prośba jest wysyłana z tej witryny do %s, twórców tej wtyczki. Wysyłamy:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "Twój adres e-mail i imię, abyśmy mogli odpowiedzieć;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "temat i wiadomość, które piszesz;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "Twój identyfikator licencji, dzięki czemu klienci opłacający abonament mają priorytet;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "tylko jeśli zaznaczysz to pole: szczegóły witryny (wersje WordPress i PHP, motyw, wtyczki, fragment dziennika błędów z usuniętymi hasłami i adresami e-mail), które możesz przeczytać przed wysłaniem;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "tylko jeśli je dodasz: dane logowania do witryny, przechowywane w postaci zaszyfrowanej i usuwane 30 dni po zamknięciu Twojego zgłoszenia."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Polityka prywatności"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Zgadzam się, kontynuuj"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "Nie udało się sprawdzić połączenia."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "To zadanie się nie powiodło. Spróbuj ponownie."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Wsparcie Zinn Digital® odłączyło tę witrynę."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Pomoc techniczna Zinn Digital® nie obsługuje już tej witryny."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Odłączyłeś tę witrynę."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Połącz tę witrynę z pomocą techniczną"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Połączono. Odpowiedzi trafiają do %s."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Nie połączono. Nadal możesz wysłać zapytanie, podając swój adres e-mail poniżej; połączenie pozwala uniknąć wpisywania go za każdym razem."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "Adres e-mail"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Twoje imię (opcjonalnie)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Wyrażam zgodę na połączenie tej witryny z wsparciem Zinn Digital®. Spowoduje to przesłanie adresu tej witryny, wersji WordPress i PHP oraz wersji wtyczki. Połączenie można w każdej chwili rozłączyć stąd lub za pośrednictwem Zinn Digital®."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Połącz"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Potrzebuję pomocy"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Zgłoś błąd"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Prześlij opinię"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Zaproponuj funkcję"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "Nie udało się odczytać szczegółów witryny."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "Nie udało się wysłać Twojego żądania. Spróbuj ponownie za kilka minut."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "Panel administracyjny WordPress"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Menedżer plików"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Opinie i zgłoszenia funkcji"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Wysłano. Twój numer referencyjny to %s, a nasza odpowiedź nadejdzie pocztą elektroniczną."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "O co chodzi?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "Odpowiedz na (e-mail)"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Temat"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Co zrobiłeś, czego się spodziewałeś i co stało się w zamian?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Dołącz szczegóły strony (wersje, motyw, wtyczki, fragment dziennika błędów)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Zobacz dokładnie, co jest wysyłane"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Ładowanie…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Dane logowania do pomocy technicznej (opcjonalnie, przechowywane w postaci zaszyfrowanej)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "Dane logowania są wysyłane tylko wraz z hasłem. Lepiej pominąć wiersz niż zostawić go w połowie wypełnionym."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Adres logowania"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Hasło"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Dodaj logowanie"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Utwórz tymczasowy login do pomocy technicznej"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Osobny użytkownik dla naszego zespołu wsparcia, bez dostępu do użytkowników, instalacji wtyczek ani edycji kodu. Zostaje automatycznie usunięty po wygaśnięciu lub w momencie jego cofnięcia poniżej."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Tak, przez %d dzień"
+msgstr[1] "Tak, przez %d dni"
+msgstr[2] "Tak, przez %d dni"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Wyślij"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "Nie udało się załadować listy."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "Nie udało się usunąć tego loginu."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Tymczasowe logowania do pomocy technicznej"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Brak. Wsparcie techniczne może zalogować się do tej witryny tylko wtedy, gdy utworzysz tutaj dla niego dane logowania."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "wygasłe, usuwane"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "wygasa %s"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Cofnij teraz"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "Krok %1$d z %2$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "Zamknij wycieczkę"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Wstecz"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Wszystko w jednym miejscu"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Te karty prowadzą do każdego ekranu wtyczki: konfiguracji, ustawień, Twojej licencji, pomocy i innych."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Pomoc na każdym ekranie"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Otwórz to menu, aby wyświetlić przewodnik po bieżącym ekranie, tę wycieczkę lub poprosić nas o pomoc."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Jasny lub ciemny"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Wybierz jasny, ciemny lub taki sam jak w komputerze. Twój wybór zostanie zapamiętany tylko dla Ciebie."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Witamy"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Ta krótka wycieczka pokazuje, co i gdzie się znajduje. Możesz ją w każdej chwili przerwać, naciskając klawisz Escape."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "Twoja witryna w skrócie"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "Tutaj widoczny jest postęp konfiguracji i Twój plan oraz kolejna przydatna czynność do wykonania."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Twój plan, liczba stron internetowych, które obejmuje, oraz informacja, czy ta kopia strony wlicza się do tego limitu."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Wypróbuj wersję Pro lub uaktualnij"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Rozpocznij bezpłatny okres próbny bez karty, uaktualnij plan lub odnów go – wszystko z jednego miejsca."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Każda funkcja i plan, w którym się znajduje. Wyszukaj funkcję lub wyświetl jeden obszar naraz."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Więcej od Zinn Digital®"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Wtyczki, które współpracują z tą, oraz usługi od tego samego zespołu. Tutaj można ponownie wyświetlić karty ukryte na innych ekranach."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Połącz, aby uzyskać szybszą pomoc"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "Połączenie jest opcjonalne. Umożliwia ono wysyłanie zgłoszeń bez konieczności wpisywania adresu e-mail za każdym razem, a w każdej chwili możesz je rozłączyć."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Poproś o pomoc lub zgłoś błąd"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Opisz, co się stało. Możesz zdecydować, czy chcesz dołączyć informacje o witrynie, i możesz najpierw dokładnie zobaczyć, co one zawierają."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Tymczasowy dostęp do pomocy technicznej"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Jeśli pomoc techniczna musi zajrzeć do Twojej witryny,utwórz tutaj tymczasowy login. Usuwa się on automatycznie po wygaśnięciu i możesz go w każdej chwili usunąć."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Powiedz nam, co zbudować"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Prześlij pomysł, prośbę o nową funkcję lub jakąkolwiek opinię. Trafia ona bezpośrednio do zespołu."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "To zajmuje kilka minut i konfiguruje %s tak, aby od razu działało na tej stronie. Wszystko można zmienić później."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Wszystko gotowe. Jeśli cokolwiek nie działa zgodnie z oczekiwaniami, wystarczy jedno kliknięcie, aby uzyskać pomoc."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "Krok %1$d z %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Zakończ"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Pomiń konfigurację"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Stworzone przez Neil Lock, CEO Zinn Digital® Ltd"
@@ -5335,7 +6662,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Zobacz plany Pro i cennik"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Języki"
 
@@ -5553,6 +6881,14 @@ msgstr "Wskazówki dotyczące stylu (odbiorcy, głos marki)"
 msgid "Save glossary"
 msgstr "Zapisz słowniczek"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Silnik tłumaczeń"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6906,6 @@ msgstr "Uruchomiony"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Ukończono"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Tłumacz w tle"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6984,7 @@ msgid "Content"
 msgstr "Zawartość"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Język"
 
@@ -5699,47 +7031,47 @@ msgstr "Zapisano. Twoje poprawki są chronione przed tłumaczeniem maszynowym."
 msgid "The same menu, translated"
 msgstr "Przetłumaczone to samo menu"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Osobne menu dla każdego języka"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Domyślnie każde menu jest tłumaczone: jego odnośniki prowadzą do przetłumaczonych stron wraz z ich tytułami. Tutaj można wybrać osobne menu dla danego języka."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Współdzielony tekst"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Który tekst"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Etykiety menu"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Szablony, nagłówki, stopki i wzorce"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Szablony, nagłówki, stopki i wzorce (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Przetłumacz brakujący tekst"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Brak tekstu do przetłumaczenia."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Sprawdzone przez człowieka, chronione"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Zapisz poprawki"
 
@@ -5822,13 +7154,9 @@ msgid "Problem"
 msgstr "Problem"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Edytuj"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Pływający przełącznik"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7236,7 @@ msgstr "Widżety Elementor i Bricks są częścią Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Zapisz"
 
@@ -6044,27 +7372,27 @@ msgstr "Zapisano. Zmodyfikowane elementy zostały oznaczone jako zweryfikowane p
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "Układ tego tłumaczenia został zmieniony w edytorze, dlatego niektóre fragmenty nie pasują już do oryginału. Fragmenty bez pary są wyświetlane jako puste; edytuj pozostałe w edytorze."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Otwórz edytor"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Oryginał (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Tłumaczenie (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Zapisz zmiany"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Otwórz w edytorze"
 
@@ -6138,28 +7466,28 @@ msgstr "Jeszcze nieprzetłumaczone (kopia)"
 msgid "Save this post first, then translate it here."
 msgstr "Najpierw zapisz ten post, a następnie przetłumacz go tutaj."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Widok obok siebie"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Wyświetl"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Odblokuj, aby można było przetłumaczyć ponownie"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Zabezpiecz"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "Opublikuj tłumaczenia"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6168,69 +7496,69 @@ msgstr[1] "Przetłumacz na %d języków"
 msgstr[2] "Przetłumacz na %d języków"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: przetłumaczono."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Pokaż ten blok"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "We wszystkich językach"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Tylko w zaznaczonych językach"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "W każdym języku oprócz zaznaczonych"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Obraz wg języka"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Pokaż czytelnikom posługującym się danym językiem inny obraz, na przykład baner z napisem."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "Zamień obraz %s"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "Wybierz obraz %s"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Użyj oryginalnego obrazu"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Popraw to tłumaczenie"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Zapisywanie…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Przetłumaczony tekst. Naciśnij klawisz Enter, aby go poprawić."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Kliknij dowolny tekst w ramce, aby poprawić jego tłumaczenie."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Na tej stronie nie znaleziono przetłumaczonego tekstu do edycji. Zamiast tego skorzystaj z edytora dwustronnego."
 

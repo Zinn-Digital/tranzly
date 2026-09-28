@@ -4,7 +4,7 @@
  * Plugin Name:       Tranzly
  * Plugin URI:        https://zinndigital.com/wordpress-plugins/tranzly
  * Description:       Multilingual WordPress, one post per language: linked translations of posts, pages, categories, media text, widgets and the site title, with your old Tranzly translations imported.
- * Version:           3.1.1
+ * Version:           3.3.0
  * Requires at least: 6.8
  * Requires PHP:      8.2
  * Author:            Neil Lock — CEO, Zinn Digital® Ltd
@@ -35,7 +35,7 @@ if ( function_exists( 'tranzly_fs' ) ) {
     tranzly_fs()->set_basename( false, __FILE__ );
     return;
 }
-define( 'TRANZLY_VERSION', '3.1.1' );
+define( 'TRANZLY_VERSION', '3.3.0' );
 define( 'TRANZLY_FILE', __FILE__ );
 define( 'TRANZLY_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TRANZLY_URL', plugin_dir_url( __FILE__ ) );
@@ -50,23 +50,30 @@ if ( !function_exists( 'tranzly_fs' ) ) {
         if ( !isset( $tranzly_fs ) ) {
             require_once __DIR__ . '/vendor/freemius/start.php';
             $tranzly_fs = fs_dynamic_init( array(
-                'id'               => '6843',
-                'slug'             => 'tranzly',
-                'premium_slug'     => 'tranzly-premium',
-                'type'             => 'plugin',
-                'public_key'       => 'pk_41c863827b360a912566ffb91d7fd',
-                'is_premium'       => false,
-                'premium_suffix'   => 'Pro',
-                'has_addons'       => false,
-                'has_paid_plans'   => true,
-                'is_org_compliant' => true,
-                'menu'             => array(
+                'id'                             => '6843',
+                'slug'                           => 'tranzly',
+                'premium_slug'                   => 'tranzly-premium',
+                'type'                           => 'plugin',
+                'public_key'                     => 'pk_41c863827b360a912566ffb91d7fd',
+                'bundle_id'                      => '40216',
+                'bundle_public_key'              => 'pk_1bcbfe8657c755d37d4b8a4c29f46',
+                'bundle_license_auto_activation' => true,
+                'is_premium'                     => false,
+                'premium_suffix'                 => 'Pro',
+                'has_addons'                     => false,
+                'has_paid_plans'                 => true,
+                'trial'                          => array(
+                    'days'               => 14,
+                    'is_require_payment' => false,
+                ),
+                'is_org_compliant'               => true,
+                'menu'                           => array(
                     'slug'       => 'tranzly',
                     'first-path' => 'admin.php?page=tranzly',
                     'contact'    => false,
                     'support'    => false,
                 ),
-                'is_live'          => true,
+                'is_live'                        => true,
             ) );
         }
         return $tranzly_fs;

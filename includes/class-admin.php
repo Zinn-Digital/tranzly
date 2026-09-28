@@ -72,13 +72,18 @@ final class Admin {
 			wp_die( esc_html__( 'Sorry, you are not allowed to access this page.', 'tranzly' ), 403 );
 		}
 
-		echo '<div class="wrap"><h1>' . esc_html__( 'Tranzly', 'tranzly' ) . '</h1>';
+		// The page heading is the admin shell's; printing a second one here would give the screen
+		// two <h1>s. The fallbacks below carry their own, because the shell never renders there.
+		// wp-header-end: WordPress places admin notices here, above the shell, rather than inside
+		// the shell's own header (common.js moves them after the first .wrap h1 otherwise).
+		echo '<div class="wrap"><hr class="wp-header-end">';
 		if ( ! is_readable( TRANZLY_DIR . 'build/settings.asset.php' ) ) {
+			echo '<h1>' . esc_html__( 'Tranzly', 'tranzly' ) . '</h1>';
 			// A source checkout that was never built. Say so rather than show an empty page.
 			echo '<div class="notice notice-error"><p>' . esc_html__( 'The admin screen\'s scripts are missing from this copy of the plugin. Reinstall it from a released package.', 'tranzly' ) . '</p></div>';
 		}
 		echo '<div id="tranzly-admin-root"></div>';
-		echo '<noscript><p>' . esc_html__( 'This screen needs JavaScript.', 'tranzly' ) . '</p></noscript></div>';
+		echo '<noscript><h1>' . esc_html__( 'Tranzly', 'tranzly' ) . '</h1><p>' . esc_html__( 'This screen needs JavaScript.', 'tranzly' ) . '</p></noscript></div>';
 	}
 
 	/**
@@ -106,6 +111,7 @@ final class Admin {
 		);
 		wp_set_script_translations( self::HANDLE, 'tranzly', TRANZLY_DIR . 'languages' );
 		wp_add_inline_script( self::HANDLE, 'window.tranzlyAdmin = ' . wp_json_encode( self::data() ) . ';', 'before' );
+		\ZinnDigital\Tranzly\AdminKit\Kit::enqueue( self::HANDLE );
 
 		if ( is_readable( TRANZLY_DIR . 'build/settings.css' ) ) {
 			wp_enqueue_style( self::HANDLE, TRANZLY_URL . 'build/settings.css', array( 'wp-components' ), (string) ( $asset['version'] ?? TRANZLY_VERSION ) );

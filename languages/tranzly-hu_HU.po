@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "A Zinn Digital® válaszolt, de nem olyan kapcsolattal, amelyet ez a bővítmény felismer. Semmi sem lett elmentve."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Ez a webhely elvesztette a kapcsolatát. A Zinn Digital® jelenleg nem értesíthető, így az ügyfélszolgálat nem használtként fogja látni mindaddig, amíg el nem távolítják a saját oldalukon."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "A Zinn Digital® cím, amelynek használatára ez a webhely be van állítva, nem biztonságos (https) cím, ezért semmi sem lett elküldve."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "A Zinn Digital® webhely nem érhető el erről az oldalról. Ellenőrizze, hogy az oldal képes-e kimenő kapcsolatokat létesíteni, majd próbálja újra."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Ennek a webhelynek a kapcsolata a Zinn Digital® szolgáltatással megszűnt. A folytatáshoz csatlakoztassa újra."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "A Zinn Digital® többé nem ismeri el ennek a webhelynek a kapcsolatát. A folytatáshoz csatlakoztassa újra."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Túl sok kérés érkezett erről a webhelyről vagy címről. Várjon egy kicsit, majd próbálja újra."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "A Zinn Digital® nem tudta elfogadni ezt a kérést. Ellenőrizze az e-mail címet és az üzenetet, majd próbálja újra."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "A Zinn Digital® nem tudta feldolgozni a kérést. Próbálja meg újra néhány perc múlva."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "A licencelési szolgáltatás nem érhető el ezen az oldalon."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "A próbaverziót itt nem lehetett elindítani. Ehelyett a próbaverzió oldalán folytassa."
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Egy bejegyzés nyelvenként, egymáshoz kapcsolva"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Megőrzi a régi Tranzly fordításait"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Fordítás a háttérben"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "Legfrissebb WordPress és PHP, minden kiadásban tesztelve"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Biztonság a tervezéstől kezdve"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "Interfész 58 nyelven, jobbról balra olvasható támogatással"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Korlátlan nyelv"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (a jelenlegi integráció megőrizve)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "Mesterséges intelligencia modellek saját kulccsal"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation és Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Külön motor nyelvenként"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Automatikus visszalépés"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Költségbecslés mielőtt elkezdené"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Fordítási memória"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Szójegyzék és lefordíthatatlan kifejezések listája minden motorhoz"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Stílus és hangnem utasításai"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Bejegyzések, oldalak és egyéni bejegyzéstípusok"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Biztonságosan lefordított blokkok"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Kategóriák, címkék és egyéni rendszertanok"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Menük"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich oldalak"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen és WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: minden"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "SEO mezők mind a négy nagy SEO bővítményhez"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Egyéni mezők"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Téma- és bővítménytámogatás (karakterláncok)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Média"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Blokktémák: sablonok és minták"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Widgetek és webhelycím/szlogen"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Fordítson le egy bejegyzést egyetlen kattintással"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "A teljes webhely tömeges fordítása"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Új és frissített tartalom automatikus fordítása"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Egymás melletti fordításszerkesztő"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Vizuális felületszerkesztő"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "Áttekintés és jóváhagyás"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "Exportálás és importálás emberi fordítók számára"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "Váltson át WPML, Polylang vagy TranslatePress rendszerről"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Fordítási állapot irányítópult"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "Nyelv az URL-ben: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Aldomainek vagy külön domainek nyelvenként"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Lefordított URL-címek"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang-címkék, helyesen alkalmazva"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Lefordított oldaltérképek"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "A helyes nyelv és a kanonikus címkék"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "A lefordítatlan oldalak elrejtése a keresőmotorok elől"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "A látogató nyelvének javaslata"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Váltóblokk a blokkszerkesztőhöz"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Váltó elem a Page Builder Sandwichhez"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Váltó az Elementorhoz, Brickshez és más szerkesztőkhöz"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Menüelem, widget és shortcode"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Lebegő váltó"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Akadálymentes váltó"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API és sablonfüggvények"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Adja hozzá saját fordítómotorját"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Hookok, REST API és WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Kompatibilitási réteg a Polylang/WPML funkciókhoz"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Használja saját kulcsát az összes nagyobb mesterségesintelligencia-szolgáltatóhoz"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "A modellista magától frissül"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "Ajánlott modelleket küldünk a frissítésekben"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Adjon hozzá egy modellt saját maga egyetlen lépésben"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Egyszerű beállítás nem műszaki felhasználók számára"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Titkosítva tárolt kulcsok, soha nem kerülnek hozzánk"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Hibaüzenetek törlése"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Használati és költségnapló"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "Szerepkörönkénti MI-engedélyek"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Egy kulcs, mindkét bővítmény"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Modern adminisztrációs felületek"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Telepítővarázsló"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Beépített súgó"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "Keresztpromóció a két bővítmény között"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Zinn Digital® tárhely promóció"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Pro licencelés a Freemius-on keresztül (legújabb SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Pro ingyenes próbaverzió"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Csomag: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "A Zinn Digital® Ltd számlájára jóváírva"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Szinkronizálva a GitHub felületére, akárcsak a többi bővítményünk"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "A kézi szerkesztések védve vannak"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Sikertelen fordítási jelentés"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Bármely fordítás egyszerű szerkesztése"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Tiltólista az ingyenes verzióban"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce multi-currency"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "MI minőségellenőrzés"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Tartalom megjelenítése csak bizonyos nyelveken"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Többnyelvű SEO-audit"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Űrlapok fordítása"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Hozzászólások és vélemények fordítása"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Különböző képek nyelvenként"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Havi költségkeret motoronként"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Többnyelvű webhelykeresés"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Sebességígéret tesztelve"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Többwebhely-támogatás"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "A teszt- és a helyi oldalak nem használnak fel licencet"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Dokumentációs oldal és rövid videós útmutatók"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Visszajelzés és funkciókérelem gomb"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Béta frissítési csatorna"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Kiemelt támogatás"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Hibabejelentő és támogatási jegyek"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "A Freemius teljes körű használata"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Lábnyommentes felület, alapértelmezés szerint bekapcsolva"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Alapítvány"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Fordítómotorok"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Mi kerül fordításra"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "Munkafolyamat"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO és URL-ek"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Nyelvváltó"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Fejlesztők"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "MI-kulcsok és modellek"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Adminisztráció és licencek"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "További funkciók"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Licencelés és támogatás"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Gyors és többny nyelvű WordPresshez fejlesztett tárhely"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Felügyelt WordPress-tárhely a bővítmény készítőitől, a sebességre és a többnyelvű webhelyekre hangolva."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Zinn Digital® tárhely megtekintése"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "Béreljen fel egy WordPress szakértőt a ZinnHubon"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "Egy szabadúszó piactér a WordPress tervezési, fejlesztési, fordítási és SEO-munkákhoz."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "ZinnHub megtekintése"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Tömeges webhely- és PBN-tárhely"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "A PBN.ltd a platformunk, amellyel egyszerre számos webhelyet üzemeltethet és kezelhet."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "Látogasson el a PBN.ltd webhelyre"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Szerezze meg a Page Builder Sandwich Pro és a Tranzly Pro csomagot együtt"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "A csomag olcsóbb, mint mindkét bővítményt külön-külön megvásárolni, ugyanazokkal a csomagokkal és oldallammitekkel."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Csomag megtekintése"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "%s beszerzése"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Integráció aktív: %1$s és %2$s együtt működnek"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s aktív ezen a webhelyen, így mindkét bővítmény egyetlen AI-szolgáltatói kulcskészletet és egyetlen beállítási képernyőt használ ezekhez."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Fordítsa le ezt a webhelyet a Tranzly használatával"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Készítsen oldalakat vizuálisan a Page Builder Sandwich segítségével"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s a Zinn Digital® kínálatából"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Publikáljon minden oldalt számos nyelven, fordított címekkel, SEO-adatokkal és nyelvi váltóval. Az itt épített oldalakkal működik."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Tervezzen oldalakat közvetlenül a szerkesztőben gyors, keresőoptimalizálási nyom nélküli blokkokkal. Minden, amit felépít, fordítható a Tranzly segítségével."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "A %s ugyanattól a csapattól származik, és ezzel a bővítménnyel együtt működik."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Előbb járuljon hozzá a webhely csatlakoztatásához."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Adjon meg egy érvényes e-mail címet."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Előbb járuljon hozzá a támogatási információk elküldéséhez."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Írjon meg egy tárgyat és egy üzenetet."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Adjon meg egy e-mail címet, amelyre az ügyfélszolgálat válaszolhat."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "A webhely tulajdonosa által létrehozott ideiglenes támogatási hozzáférés. A lejáratakor automatikusan törlődik."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "Válasszon 1, 3 vagy 7 napot."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Csak a webhelygazda ezen a képernyőn bejelentkezve hozhat létre ideiglenes ügyfélszolgálati hozzáférést."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Nem sikerült egyedi felhasználónevet választani. Próbálja újra."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Zinn Digital® támogatás (ideiglenes)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Ez az ideiglenes ügyfélszolgálati hozzáférés lejárt."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "Írás és újraírás"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Fordítás"
 
@@ -115,6 +745,9 @@ msgstr "Ön hozza a saját kulcsát, így a felhasznált erőforrásokért közv
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "Következő"
 
@@ -217,6 +850,7 @@ msgstr "Teszt"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Törlés"
@@ -621,6 +1255,8 @@ msgstr "Még nem történtek MI-kérelmek."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Kész"
 
@@ -682,11 +1318,11 @@ msgstr "A fordításnak az eredetivel azonos típusú tartalomnak kell lennie."
 msgid "Choose one of the site's other languages."
 msgstr "Válassza ki a webhely egyik másik nyelvét."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "A adminisztrációs képernyő parancsfájljai hiányoznak a bővítmény ezen példányából. Telepítse újra egy kiadott csomagból."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Ehhez a képernyőhöz JavaScript szükséges."
 
@@ -1596,7 +2232,7 @@ msgstr "Licenc vásárlása most"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -2111,6 +2747,7 @@ msgstr "A fehér címkés mód letiltása"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Leválasztás"
 
@@ -2351,6 +2988,7 @@ msgstr "Lejárati idő"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Lejárt"
 
@@ -2417,6 +3055,8 @@ msgstr "Kérjük, kövesse az alábbi lépéseket a frissítés befejezéséhez"
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Ingyenes"
 
@@ -2796,6 +3436,7 @@ msgstr "Hosszú távú duplikátum"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Üzenet"
 
@@ -3031,6 +3672,7 @@ msgstr "Ehhez a bővítményhez a PHP újabb verziója szükséges."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Nem"
@@ -3203,6 +3845,7 @@ msgstr "A webhelyével való folyamatos kompatibilitás érdekében tetszés sze
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Egyéb"
 
@@ -3971,6 +4614,7 @@ msgstr "Webhelyazonosító"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Webhelyek"
 
@@ -4067,7 +4711,7 @@ msgstr "Próbaidőszak indítása"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Állapot"
 
@@ -4368,6 +5012,7 @@ msgstr "Hogy tetszik eddig a(z) %1$s? Tesztelje az összes prémium %2$s funkci�
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Típus"
 
@@ -5121,13 +5766,6 @@ msgstr "Ez a beállítás be vagy ki van kapcsolva."
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "A lefordítatlan oldalak elrejtése a keresőmotorok elől a Tranzly Pro része."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Nyelvváltó"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Nyelvek"
@@ -5307,6 +5945,691 @@ msgstr "Szövegméret"
 msgid "Switcher"
 msgstr "Váltó"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Rejtett javaslatok újbóli megjelenítése az Áttekintésben"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Mind"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d kiválasztva"
+msgstr[1] "%d kiválasztva"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Nincs találat."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Összes kijelölése ezen az oldalon"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Kijelölés"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Oldalak"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Előző"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "%1$d. / %2$d. oldal"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "Állítsa be a(z) %s lehetőséget néhány perc alatt"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Beállítás indítása"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Ez a webhely"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Kiadás"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Webhelyek ezen a licencen"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Verzió"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Ez egy teszt- vagy helyi másolatnak tűnik, így nem foglal le egy webhelyet az Ön licencén."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Nézze meg, mit nyújt a Pro"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Ugrás erre:"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Személyes"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Üzleti"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Ügynökség"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Bármennyi webhely"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Korlátlan webhely"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d webhely"
+msgstr[1] "%d webhely"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Pro"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s próbaidőszak"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Megkezdődött az próbaidőszaka. Töltse újra az oldalt, hogy megtekintse az összes Pro funkciót."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "A próbaidőszakot nem sikerült elindítani."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Funkció"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Tartalmazza"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "Nincs benne"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Az Ön licence"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "használatban: %1$d / %2$d"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Megújulás"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "A webhely teszt-, staging- és localhost-másolatai ingyenesek, és soha nem számítanak bele a webhelykorlátba."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Az előfizetése elsőbbségi ügyfélszolgálatot tartalmaz."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Licenc és számlázás kezelése"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Több a Pro csomaggal"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Kezdjen meg egy ingyenes %d napos próbaidőszakot kártya nélkül"
+msgstr[1] "Kezdjen meg egy ingyenes %d napos próbaidőszakot kártya nélkül"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Csomagok és árak megtekintése"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Használja együtt a Tranzly és a Page Builder Sandwich bővítményeket? A csomag mindkét Pro bővítményt olcsóbban tartalmazza."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Az licence lejárt. Újítsa meg a frissítések és a Pro funkciók megtartásához."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Megújítás most"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Csomagok összehasonlítása"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Funkciók keresése"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Terület"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Benne van ebben:"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Nincs egyező funkció."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Funkciók csomagonként"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Elrejtés"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "A Bővítmények képernyőn aktiválhatja"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Telepítés"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Áttekintés"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Beállítás"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Csomagok és licenc"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Kiegészítők"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Segítség kérése"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Visszajelzés"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "A választását nem sikerült menteni."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "A beállítási állapotot nem sikerült menteni."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "A számítógépem beállításainak átvétele"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Világos"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Sötét"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Színséma"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Súgó"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Útmutató ehhez a képernyőhöz"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Túra indítása"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Kérjen segítséget vagy jelentsen be egy hibát"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Bővítményképernyők"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "Ezt nem sikerült menteni."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Mielőtt felvenné a kapcsolatot az ügyfélszolgálattal"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "A kérését erről a webhelyről elküldtük a(z) %s részére, amely ezt a bővítményt készítette. Az alábbiakat küldjük el:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "az Ön e-mail címe és neve, hogy válaszolhassunk;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "a tárgy és az üzenet, amelyet ír;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "az Ön licencazonosítója, így a fizető ügyfelek élveznek elsőbbséget;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "csak akkor, ha bejelöli: webhelyadatok (WordPress és PHP verziók, téma, bővítmények, a hibanapló kivonata eltávolított jelszavakkal és e-mail címekkel), amelyeket küldés előtt elolvashat;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "csak akkor, ha Ön megadja azokat: az Ön webhelyéhez tartozó bejelentkezési adatok, amelyeket titkosítva tárolunk, és a kérésének lezárása után 30 nappal törlünk."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Adatvédelmi irányelvek"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Elfogadom, folytatás"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "A kapcsolatot nem sikerült ellenőrizni."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "Ez nem sikerült. Próbálja meg újra."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "A Zinn Digital® ügyfélszolgálata leválasztotta ezt a webhelyet."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "A Zinn Digital® ügyfélszolgálata már nem ismeri fel ezt a webhelyet."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Leválasztotta ezt a webhelyet."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Kapcsolja össze ezt a webhelyet az ügyfélszolgálattal"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Csatlakoztatva. A válaszok ide futnak be: %s."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Nincs kapcsolat. Továbbra is elküldhet egy kérést az alábbi e-mail címmel; a csatlakozással megspórolhatja a beírását minden alkalommal."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "E-mail cím"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Az Ön neve (nem kötelező)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Egyetértök azzal, hogy ezt a webhelyet csatlakoztassam a Zinn Digital® ügyfélszolgálatához. Ez elküldi a webhely címét, a WordPress- és PHP-verziókat, valamint a bővítmény verzióját, és bármikor leválasztható innen vagy a Zinn Digital® általi művelettel."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Csatlakozás"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Segítségre van szükségem"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Hiba jelentése"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Visszajelzés küldése"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Funkció igénylése"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "A webhely adatai nem olvashatók be."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "A kérését nem sikerült elküldeni. Próbálja meg újra néhány perc múlva."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress admin"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Fájlkezelő"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Visszajelzések és funkciókérések"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Elküldve. Az Ön hivatkozási száma %s, válaszunkat e-mailben küldjük meg."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "Miről szól?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "Válasz erre (e-mail)"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Tárgy"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Mit tett, mire számított, és mi történt helyette?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Webhelyadatok megadása (verziók, téma, bővítmények, hibanapló-kivonat)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Lásd pontosan, hogy mi kerül elküldésre"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Betöltés…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Ügyfélszolgálati bejelentkezési adatok (opcionális, titkosítva tárolva)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "A bejelentkezési adatok csak a hozzájuk tartozó jelszóval együtt kerülnek elküldésre. Inkább hagyjon ki egy sort, mint hogy félig legyen kitöltve."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Bejelentkezési cím"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Jelszó"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Bejelentkezés hozzáadása"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Ideiglenes támogatási bejelentkezés létrehozása"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Külön felhasználó a ügyfélszolgálati csapatunk számára, hozzáférés nélkül a felhasználókhoz, a bővítmények telepítéséhez vagy a kódszerkesztéshez. A rendszer automatikusan törli, amikor lejár, vagy amikor alább visszavonja."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Igen, %d napig"
+msgstr[1] "Igen, %d napig"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Küldés"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "A listát nem sikerült betölteni."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "A bejelentkezési adatokat nem sikerült eltávolítani."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Ideiglenes támogatási bejelentkezések"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Nincs. Az ügyfélszolgálat csak akkor tud bejelentkezni erre a webhelyre, ha itt létrehoz egy bejelentkezési fiókot."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "lejárt, törlés alatt"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "lejár: %s"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Azonnali visszavonás"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "%1$d. lépés a(z) %2$d-ből"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "A kör bezárása"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Vissza"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Minden egy helyen"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Ezek a fülek a bővítmény minden képernyőjére elvezetnek: a beállításokhoz, a licenchez, a súgóhoz és egyebekhez."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Segítség minden képernyőn"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Nyissa meg ezt a menüt az aktuális képernyőhöz tartozó útmutatóért, az alábbi körutazásért, vagy ha segítséget szeretne kérni tőlünk."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Világos vagy sötét"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Válasszon világos, sötét vagy a számítógépével megegyező témát. A választását csak az Ön számára jegyezzük meg."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Üdvözöljük"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Ez a rövid bemutató megmutatja, mi hol található. Bikorkiléphet az Escape billentyűvel."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "A webhelyed egy pillantásra"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "A beállítás előrehaladása és az Ön csomagja itt látható, a következő legfontosabb teendővel együtt."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Az Ön csomapja, hogy hány webhelyre vonatkozik, és hogy a webhely ezen másolata beszámít-e ebbe a limitbe."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Próbálja ki a Pro verziót vagy váltson magasabb csomagra"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Indítson ingyenes próbaidőszakot kártya nélkül, váltson magasabb csomagra, vagy újítson meg mindent innen."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Minden funkció és a csomag, amely tartalmazza. Keressen egy funkcióra, vagy jelenítsen meg egyszerre egy területet."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Továbbiak innen: Zinn Digital®"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Bővítmények, amelyek kompatibilisek ezzel, valamint a ugyanattól a csapattól származó szolgáltatások. A más képernyőkön elrejtett kártyák itt ismét megjeleníthetők."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Kapcsolódás a gyorsabb segítségért"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "A csatlakozás nem kötelező. Lehetővé teszi, hogy anélkül küldjön kéréseket, hogy minden alkalommal be kellene írnia az e-mail címét, és bármikor leválaszthatja magát."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Kérjen segítséget vagy jelentsen egy hibát"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Írja le, hogy mi történt. Ön döntheti el, hogy csatolja-e a webhely adatait, és előtte pontosan megtekintheti azok tartalmát."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Ideiglenes támogatási hozzáférés"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Ha az ügyfélszolgálatnak be kell néznie a webhelyére, itt hozzon létre egy ideiglenes bejelentkezési adatot. Ez a lejártakor magától törlődik, és bármikor eltávolíthatja."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Mondja el, mit építsünk meg"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Küldjön be egy ötletet, funkciókérelmet vagy bármilyen visszajelzést. Ez közvetlenül a csapathoz kerül."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "Ez néhány percet vesz igénybe, és beállítja a(z) %s szolgáltatást, hogy azonnal működjön ezen a webhelyen. Később bármit módosíthat."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Készen áll. Ha bármi nem a várt szerint működik, egyetlen kattintásra vagyunk."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "%1$d. lépés / %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Befejezés"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Beállítás átugrása"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Készítette: Neil Lock, a Zinn Digital® Ltd vezérigazgatója"
@@ -5335,7 +6658,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Tekintse meg a Pro csomagokat és árakat"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Nyelvek"
 
@@ -5553,6 +6877,14 @@ msgstr "Stílusutasítások (célközönség, márkahang)"
 msgid "Save glossary"
 msgstr "Szójegyzék mentése"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Beállítások"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Fordítómotor"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6902,6 @@ msgstr "Futás alatt"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Kész"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Fordítás a háttérben"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6980,7 @@ msgid "Content"
 msgstr "Tartalom"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Nyelv"
 
@@ -5699,47 +7027,47 @@ msgstr "Mentve. A módosításai védve vannak a gépi fordítástól."
 msgid "The same menu, translated"
 msgstr "Ugyanez a menü lefordítva"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Külön menü nyelvenként"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Alapértelmezés szerint minden menü le van fordítva: a hivatkozásai a lefordított oldalakra vezetnek, a címeikkel együtt. Itt inkább válasszon egyedi menüt egy adott nyelvhez."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Megosztott szöveg"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Melyik szöveg"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Menücímkék"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Sablonok, fejlécék, láblécek és minták"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Sablonok, fejlécek, láblécek és minták (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Hiányzó szöveg fordítása"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Itt nincs lefordítandó szöveg."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Személy által javítva, védett"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Javítások mentése"
 
@@ -5822,13 +7150,9 @@ msgid "Problem"
 msgstr "Probléma"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Szerkesztés"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Lebegő váltó"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7232,7 @@ msgstr "Az Elementor és a Bricks widgetek a Tranzly Pro részét képezik."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Mentés"
 
@@ -6044,27 +7368,27 @@ msgstr "Mentve. Az Ön által módosított részek ember által ellenőrzőskén
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "A fordítás elrendezése megváltozott a szerkesztőben, így néhány darab már nem párosul az eredetivel. A pár nélküli darabok üresen jelennek meg; a többit a szerkesztőben szerkessze."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Szerkesztő megnyitása"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Eredeti (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Fordítás (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Változtatások mentése"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Megnyitás a szerkesztőben"
 
@@ -6138,28 +7462,28 @@ msgstr "Még nincs lefordítva (másolat)"
 msgid "Save this post first, then translate it here."
 msgstr "Előbb mentse el ezt a bejegyzést, majd fordítsa le itt."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Egymás mellett"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Megtekintés"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Oldja fel, hogy újra lefordítható legyen"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Védelem"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "Fordítások közzététele"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6167,69 +7491,69 @@ msgstr[0] "Fordítás %d nyelvre"
 msgstr[1] "Fordítás %d nyelvre"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: lefordítva."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Blokk megjelenítése"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "Minden nyelven"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Csak a bejelölt nyelveken"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "Minden nyelven, kivéve a bejelölteket"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Kép nyelvenként"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Másik kép megjelenítése egy adott nyelv olvasóinak, például egy szöveget tartalmazó szalaghirdetés."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "%s kép cseréje"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "Válasszon ki egy %s képet"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Eredeti kép használata"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Fordítás javítása"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Mentés…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Lefordított szöveg. A javításhoz nyomja meg az Enter billentyűt."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Kattintson bármilyen keretezett szövegre a fordítás helyesbítéséhez."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Nem található lefordított szöveg ezen az oldalon a szerkesztéshez. Ehelyett használja az egymás melletti szerkesztőt."
 

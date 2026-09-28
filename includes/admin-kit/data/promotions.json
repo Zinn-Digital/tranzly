@@ -1,0 +1,16 @@
+{
+	"$comment": [
+		"The upsell / cross-sell registry (features adm-4, adm-5, sh-r7). Every card the kit can show on OUR screens comes from this list, plus whatever a plugin adds through the `<prefix>_kit_promotions` filter. Adding a product later (Zinn SEO, docs/843 S4) is a new row here: `kind: plugin` with its main_files and site, and the generic plugin copy renders it with no code change.",
+		"`kind` picks the copy: hosting | marketplace | platform | plugin | bundle. The copy itself lives in PHP (Promotions::copy()) so it is translated into every locale; a row carries no sentence of its own.",
+		"`url` must be on a host scripts/wp-promo-check.py allow-lists and must carry no query string (WordPress.org guideline 7: no referral tracking in dashboard advertising).",
+		"`slot`: `promo` rows form the hosting promotion card; `cross-sell` rows form the other card. The Add-ons screen lists every row."
+	],
+	"promotions": [
+		{ "id": "zinn-hosting", "kind": "hosting", "slot": "promo", "brand": "Zinn Digital®", "url": "https://zinndigital.com/hosting/wordpress" },
+		{ "id": "zinnhub", "kind": "marketplace", "slot": "promo", "brand": "ZinnHub", "url": "https://zinnhub.com/" },
+		{ "id": "pbn-ltd", "kind": "platform", "slot": "promo", "brand": "PBN.ltd", "url": "https://pbn.ltd/" },
+		{ "id": "tranzly", "kind": "plugin", "slot": "cross-sell", "product": "tranzly" },
+		{ "id": "page-builder-sandwich", "kind": "plugin", "slot": "cross-sell", "product": "page-builder-sandwich" },
+		{ "id": "bundle", "kind": "bundle", "slot": "cross-sell" }
+	]
+}

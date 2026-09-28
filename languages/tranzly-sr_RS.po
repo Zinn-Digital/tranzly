@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® je odgovorio, ali ne sa vezom koju ovaj dodatak razume. Ništa nije sačuvano."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Ovaj sajt je izgubio svoju vezu. Zinn Digital® nije mogao da bude obavešten u ovom trenutku, tako da će osoblje za podršku videti da se ne koristi sve dok se ne ukloni sa njihove strane."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Adresa Zinn Digital® na koju je ovaj sajt podešen nije bezbedna (https) adresa, tako da ništa nije poslato."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "Zinn Digital® se nije mogao kontaktirati sa ove lokacije. Proverite da li sajt može da ostvaruje odlazne veze, pa pokušajte ponovo."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Veza ovog sajta sa Zinn Digital® je opozvana. Povežite ga ponovo da biste nastavili."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® više ne prepoznaje vezu ove lokacije. Povežite je ponovo da biste nastavili."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Previše zahteva je poslato sa ove lokacije ili adrese. Sačekajte malo, pa pokušajte ponovo."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® nije mogao da prihvati ovaj zahtev. Proverite adresu e-pošte i poruku, pa pokušajte ponovo."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® trenutno nije mogao da obradi zahtev. Pokušajte ponovo za nekoliko minuta."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "Usluga licenciranja nije dostupna na ovoj lokaciji."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "Proбно коришћење није могло овде да се покрене. Уместо тога, наставите на страници за пробно коришћење."
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Jedna objava po jeziku, međusobno povezana"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Čuva vaše stare Tranzly prevode"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Prevedi u pozadini"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "Najnoviji WordPress i PHP, testirani sa svakim izdanjem"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Bezbednost u samom dizajnu"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "Interfejs na 58 jezika, prilagođen za s desna na levo"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Neograničeni jezici"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (trenutna integracija, zadržano)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "AI modeli sa vašim sopstvenim ključem"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation i Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Različit endžin po jeziku"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Automatski rezervni sistem"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Procena troškova pre početka"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Memorija prevoda"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Rečnik i lista reči koje se ne prevode za svaki mehanizam"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Тон и стил упутства"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Objave, strane i prilagođeni tipovi objava"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Blokovi bezbedno prevedeni"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Kategorije, oznake i prilagođene taksonomije"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Meniji"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Page Builder Sandwich stranice"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen i WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: sve"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "SEO polja za sva četiri velika SEO dodatka"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Prilagođena polja"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Tekst teme i dodataka (niske)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Медији"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Blok teme: šabloni i obrasci"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Vidžeti i naziv/slogan sajta"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Prevedite jednu objavu jednim klikom"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "Grupno prevedite ceo sajt"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Automatsko prevođenje novog i ažuriranog sadržaja"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Uređivač prevoda uporedo"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Vizuelni vizuelni uređivač interfejsa"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "Pregled i odobrenje"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "Izvoz i uvoz za ljudske prevodioce"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "Pređite sa WPML, Polylang ili TranslatePress"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Kontrolna tabla statusa prevoda"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "Jezik u URL-u: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Poddomeni ili zasebni domeni po jeziku"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Prevedeni slug-ovi"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "hreflang oznake, urađene kako treba"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Prevedene sitemape"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "Ispravan jezik i kanonske oznake"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "Sakrij stranice koje nisu prevedene od pretraživača"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "Predloži jezik posetioca"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Blok sklopnika za uređivač blokova"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Element za prebacivanje za Page Builder Sandwich"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Prekidač za Elementor, Bricks i druge graditelje"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Stavka menija, vidžet i skortkod"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Plutajući prekidač"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Pristupačni prebacivač"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "PHP API i funkcije šablona"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Dodajte sopstveni mašinski prevod"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Hooks, REST API i WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Sloj kompatibilnosti za Polylang/WPML funkcije"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Donesite sopstveni ključ za sve glavne AI providere"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "Lista modela se sama ažurira"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "Preporučene modele isporučujemo u ažuriranjima"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Dodajte model sami u jednom koraku"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Jednostavno podešavanje za tehnički manje iskusne korisnike"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Ključevi se čuvaju u šifrovanom obliku i nikada se ne šalju nama"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Obriši poruke o greškama"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Evidencija korišćenja i troškova"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "AI dozvole po ulogama"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Jedan ključ, oba dodatka"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Moderni administrativni ekrani"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Čarobnjak za podešavanje"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Ugrađena pomoć"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "Unakrsna promocija između ova dva dodatka"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Promocija hostinga za Zinn Digital®"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Pro licenciranje preko Freemius (najnoviji SDK)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Besplatna probna verzija Pro paketa"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Paket: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Pripisano kompaniji Zinn Digital® Ltd"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Sinhronizovano sa GitHub kao i naši drugi dodaci"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "Ručne izmene su zaštićene"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Izveštaj o neuspešnom prevodu"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Lako uredite bilo koji prevod"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Lista stavki koje se ne prevode u besplatnoj verziji"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce više valuta"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "Proverka kvaliteta veštačke inteligencije"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Prikaži sadržaj samo na određenim jezicima"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Višejezična SEO revizija"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Prevedi obrasce"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Prevedi komentare i recenzije"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Različite slike po jeziku"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Mesečni limit potrošnje po endžinu"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Вишејезична претрага сајта"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Brza garancija, testirano"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Podrška za više sajtova"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "Testni i lokalni sajtovi ne troše licencu"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Dokumentacija i kratki video vodiči"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Dugme za povratne informacije i zahteve za funkcijama"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Kanal za beta ažuriranja"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Prioritetna podrška"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Prijavljivač grešaka i tiketi podrške"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Iskoristite Freemius u potpunosti"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Front end bez tragova, uključen podrazumevano"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Temelj"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Mašine za prevođenje"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Šta se prevodi"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "Radni proces"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO i URL adrese"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Jezik ekrana"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Програмери"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "AI ključevi i modeli"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Administrator i licenciranje"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "Više funkcija"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Licenciranje i podrška"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Hosting prilagođen za brz, višejezični WordPress"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Upravljani WordPress hosting od tima koji je napravio ovaj dodatak, prilagođen za brzinu i za sajtove na mnogo jezika."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Pogledajte Zinn Digital® hosting"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "Unajmite WordPress stručnjaka na platformi ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "Tržište slobodnih profesionalaca za dizajn, razvoj, prevod i SEO rad za WordPress."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "Posetite ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Masovni hosting sajtova i PBN-a"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd je naša platforma za istovremeno hostovanje i upravljanje većim brojem sajtova."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "Posetite PBN.ltd"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Nabavite Page Builder Sandwich Pro i Tranzly Pro zajedno"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "Paket košta manje nego kupovina oba dodatka zasebno, sa istim paketima i ograničenjima sajtova."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Pogledajte paket"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "Nabavite %s"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Integracija je aktivna: %1$s i %2$s rade zajedno"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s je aktivan na ovom sajtu, tako da oba dodatka dele jedan skup ključeva AI provajdera i jedan ekran sa podešavanjima za njih."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Prevedite ovaj sajt pomoću Tranzly"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Vizuelno pravite stranice pomoću Page Builder Sandwich"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s, kompanije Zinn Digital®"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Objavite svaku stranicu na više jezika, sa prevedenim adresama, SEO podacima i biračem jezika. Radi sa stranicama koje kreirate ovde."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Dizajnirajte stranice direktno u uređivaču pomoću brzih blokova bez SEO tragova. Sve što napravite prevodi se pomoću Tranzly."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s je kreirao isti tim i radi u kombinaciji sa ovim dodatkom."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Prvo se složite sa povezivanjem ovog sajta."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Unesite važeću adresu e-pošte."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Prvo se složite sa slanjem podrške."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Napišite temu i poruku."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Unesite adresu e-pošte na koju podrška može da odgovori."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "Privremeni pristup za podršku kreirao je vlasnik sajta. On se automatski briše kada istekne."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "Izaberite 1, 3 ili 7 dana."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Samo administrator sajta, prijavljen na ovaj ekran, može kreirati privremeni pristup za podršku."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Jedinstveno korisničko ime nije moglo biti izabrano. Pokušajte ponovo."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Podrška za Zinn Digital® (privremeno)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Ovaj privremeni pristup za podršku je istekao."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "Писање и преписивање"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Prevod"
 
@@ -115,6 +745,9 @@ msgstr "Vi sami donosite ključ, tako da plaćate direktno provajderu ono što p
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "Sledeće"
 
@@ -217,6 +850,7 @@ msgstr "Тестирајте"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Ukloni"
@@ -621,6 +1255,8 @@ msgstr "Još uvek nisu upućeni nikakvi zahtevi ka veštačkoj inteligenciji."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Završeno"
 
@@ -682,11 +1318,11 @@ msgstr "Превод мора бити исте врсте садржаја ка
 msgid "Choose one of the site's other languages."
 msgstr "Izaberite jedan od drugih jezika sajta."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Skripte administratorskog ekrana nedostaju u ovoj kopiji dodataka. Ponovo je instalirajte iz zvaničnog paketa."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Ovaj ekran zahteva JavaScript."
 
@@ -1596,7 +2232,7 @@ msgstr "Kupite licencu odmah"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "Otkaži"
 
@@ -2111,6 +2747,7 @@ msgstr "Onemogućavanje režima sa belom oznakom"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Prekini vezu"
 
@@ -2351,6 +2988,7 @@ msgstr "Isticanje"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Isteklo"
 
@@ -2417,6 +3055,8 @@ msgstr "Molimo vas da pratite ove korake kako biste završili nadogradnju"
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Besplatno"
 
@@ -2796,6 +3436,7 @@ msgstr "Dugoročna duplikat"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Poruka"
 
@@ -3031,6 +3672,7 @@ msgstr "Ovaj dodatak zahteva noviju verziju PHP-a."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Ne"
@@ -3203,6 +3845,7 @@ msgstr "Radi stalne kompatibilnosti sa vašim veb-sajtom, opcionalno možete doz
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Ostalo"
 
@@ -3971,6 +4614,7 @@ msgstr "ID sajta"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Сајтови"
 
@@ -4067,7 +4711,7 @@ msgstr "Pokretanje probnog perioda"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Stanje"
 
@@ -4368,6 +5012,7 @@ msgstr "Kako vam se za sada dopada %1$s? Testirajte sve naše %2$s premijum funk
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Tip"
 
@@ -5121,13 +5766,6 @@ msgstr "Ovo podešavanje je uključeno ili isključeno."
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "Skrivanje neprevedenih stranica od pretraživača je deo paketa Tranzly Pro."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Jezik ekrana"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Језици"
@@ -5307,6 +5945,695 @@ msgstr "Veličina teksta"
 msgid "Switcher"
 msgstr "Prekidač"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Ponovo prikaži sakrivene predloge na Pregledu"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Sve"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d izabrano"
+msgstr[1] "%d izabrano"
+msgstr[2] "%d izabrano"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Ниšta se ne poklapa."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Изаберите све на овој страници"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Izaberi"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Stranice"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Prethodno"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "Strana %1$d od %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "Podesite %s za nekoliko minuta"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Покрени подешавање"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Ovaj sajt"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Izdanje"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Sajtovi na ovoj licenci"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Verzija"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Ovo liči na probnu ili lokalnu kopiju, tako da ne troši sajt na vašoj licenci."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Pogledajte šta Pro nudi"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Idi na"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Lično"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Biznis"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Агенција"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Bilo koji broj sajtova"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Neograničeno sajtova"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d sajt"
+msgstr[1] "%d sajtova"
+msgstr[2] "%d sajtova"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Pro"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s probni period"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Vaša probna verzija je počela. Osvežite stranicu da biste videli svaku Pro funkciju."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "Proba nije mogla da se pokrene."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Funkcija"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Uključeno"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "Nije uključeno"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Vaša licenca"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%1$d од %2$d се користи"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Obnavlja se"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "Kopije sajta za testiranje, probu i rad na lokalnom računaru su besplatne i nikada se ne računaju u ograničenje broja sajtova."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Vaš paket uključuje prioritetnu podršku."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Upravljajte licencom i fakturisanjem"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Dobijte više uz Pro"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Započnite besplatnu probnu verziju od %d dana, bez potrebe za karticom"
+msgstr[1] "Započnite besplatnu probnu verziju od %d dana, bez potrebe za karticom"
+msgstr[2] "Započnite besplatnu probnu verziju od %d dana, bez potrebe za karticom"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Pogledajte planove i cene"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Želite li da koristite Tranzly i Page Builder Sandwich zajedno? Paket uključuje oba Pro dodatka po nižoj ceni."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Vaša licenca je istekla. Obnovite je da biste nastavili da dobijate ažuriranja i Pro funkcije."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Obnovite odmah"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Uporedite pakete"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Pretraži funkcije"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Oblast"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Uključeno u"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Nijedna funkcija ne odgovara."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Funkcije po paketima"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Sakrij"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "Aktivirajte ga na ekranu Dodaci"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Instaliraj ga"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Pregled"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Podešavanje"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Planovi i licenca"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Dodaci"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Potražite pomoć"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Повратне информације"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "Vaš izbor nije mogao biti sačuvan."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "Stanje podešavanja nije moguće sačuvati."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "Усклади са мојим рачунаром"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Svetla"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Tamno"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Шема боја"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Помоћ"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Vodič za ovaj ekran"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Покрени обилазак"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Potražite pomoć ili prijavite grešku"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Екрани додатака"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "To nije moglo biti sačuvano."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Pre nego što kontaktirate podršku"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "Vaš zahtev se sa ovog sajta šalje kompaniji %s, koja je tvorac ovog dodatka. Šaljemo:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "vaša adresa e-pošte i ime, kako bismo mogli da odgovorimo;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "predmet i poruku koju napišete;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "vaš ID licence, tako da kupci koji plaćaju imaju prioritet;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "samo ako je označite: detalji sajta (verzije za WordPress i PHP, tema, dodaci, izvod iz dnevnika grešaka sa uklonjenim lozinkama i adresama e-pošte), koje možete pročitati pre slanja;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "samo ako ih dodate: podatke za prijavu na vaš sajt, koji se čuvaju u enkriptovanom obliku i brišu se 30 dana nakon što se vaš zahtev zatvori."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Politika privatnosti"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Slažem se, nastavi"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "Veza nije mogla biti proverena."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "To nije uspelo. Pokušajte ponovo."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Zinn Digital® podrška je isključila ovaj sajt."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Podrška za Zinn Digital® više ne prepoznaje ovaj sajt."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Prekinuli ste vezu sa ovim sajtom."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Povežite ovaj sajt sa podrškom"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Povezano. Odgovori idu na %s."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Niste povezani. Ipak možete poslati zahtev sa svojom adresom e-pošte ispod; povezivanje štedi vreme jer nećete morati da je unosite svaki put."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "E-adresa"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Vaše ime (opcionalno)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Slažem se da povežem ovaj sajt sa Zinn Digital® podrškom. Time se šalju adresa ovog sajta, verzije WordPress-a i PHP-a, kao i verzija dodatka, a veza se može prekinuti u bilo kom trenutku odavde ili preko Zinn Digital®-a."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Poveži"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Potrebna mi je pomoć"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Prijavi grešku"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Pošaljite povratne informacije"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Zatražite funkciju"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "Detalji sajta nisu mogli biti pročitani."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "Vaš zahtev nije mogao biti poslat. Pokušajte ponovo za nekoliko minuta."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress администрација"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Menadžer datoteka"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Povratne informacije i zahtevi za funkcijama"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Poslato. Vaša referenca je %s, a naš odgovor stići će putem e-pošte."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "O čemu se radi?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "Odgovori na (e-mail)"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Predmet"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Šta ste uradili, šta ste očekivali i šta se umesto toga desilo?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Uključite detalje o sajtu (verzije, tema, dodaci, izvod iz dnevnika grešaka)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Pogledajte tačno šta se šalje"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Učitavanje…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Prijava za podršku (opcionalno, čuva se šifrovano)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "Prijava se šalje samo sa lozinkom. Bolje izostavite ceo red nego da ostane polovično popunjen."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Adresa za prijavu"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Корисничко име"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Lozinka"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Dodaj prijavu"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Kreirajte privremenu prijavu za podršku"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Poseban korisnik za naš tim za podršku, bez pristupa korisnicima, instalaciji dodataka ili uređivanju koda. Briše se automatski kada istekne ili kada ga opozovete u nastavku."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Da, za %d dan"
+msgstr[1] "Da, %d dana"
+msgstr[2] "Da, %d dana"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Pošalji"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "Lista nije mogla da se učita."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "Ta prijava se nije mogla ukloniti."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Privremene prijave za podršku"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Nema. Podrška može da se prijavi na ovaj sajt samo ako ovde kreirate nalog za prijavu."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "isteklo, uklanja se"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "ističe %s"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Opozovite odmah"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "Korak %1$d od %2$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "Zatvori obilazak"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Nazad"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Sve na jednom mestu"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Ove kartice vode do svakog ekrana dodatka: podešavanja, postavke, vaša licenca, pomoć i još mnogo toga."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Pomoć na svakom ekranu"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Otvorite ovaj meni za vodič kroz ekran na kojem se nalazite, ovu obilazak ili da zatražite pomoć od nas."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Svetlo ili tamno"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Izaberite svetlu, tamnu ili istu kao na vašem računaru. Vaš izbor je zapamćen samo za vas."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Dobrodošli"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Ova kratka turneja pokazuje gde se šta nalazi. Možete je napustiti u bilo kom trenutku pomoću tastera Escape."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "Vaš sajt na prvi pogled"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "Napredak podešavanja i vaš paket su prikazani ovde, zajedno sa sledećom preporučenom aktivnošću."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Vaš paket, broj sajtova koje pokriva i da li ova kopija sajta ulazi u taj limit."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Isprobajte Pro ili nadogradite"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Započnite besplatnu probnu verziju bez kartice, nadogradite ili obnovite, sve odavde."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Svaka funkcija i paket koji je sadrži. Potražite funkciju ili prikažite jednu po jednu oblast."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Još od Zinn Digital®"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Dodaci koji rade sa ovim, kao i usluge istog tima. Kartice koje ste sakrili na drugim ekranima mogu se ponovo prikazati ovde."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Povežite se za bržu pomoć"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "Povezivanje je opcionalno. Omogućava vam da šaljete zahteve bez unosa adrese e-pošte svaki put, a možete se odjaviti kad god poželite."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Zatražite pomoć ili prijavite grešku"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Opišite šta se dogodilo. Možete sami da odlučite da li ćete priložiti informacije o sajtu, a pre toga možete tačno da vidite šta one sadrže."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Privremeni pristup podršci"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Ako podrška treba da zaviri u vaš sajt, kreirajte privremenu prijavu ovde. Ona se sama briše kada istekne, a možete je ukloniti u bilo kom trenutku."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Recite nam šta da gradimo"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Pošaljite ideju, zahtev za funkciju ili bilo kakve povratne informacije. To ide direktno timu."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "Ovo traje nekoliko minuta i podešava %s tako da odmah radi na ovom sajtu. Sve možete promeniti kasnije."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Spremni ste. Ako nešto ne radi po očekivanjima, udaljeni smo samo jedan klik."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "Korak %1$d od %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Završi"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Preskoči podešavanje"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Izradio Neil Lock, izvršni direktor kompanije Zinn Digital® Ltd"
@@ -5335,7 +6662,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Pogledajte Pro planove i cene"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Jezici"
 
@@ -5553,6 +6881,14 @@ msgstr "Uputstva za stil (publika, glas brenda)"
 msgid "Save glossary"
 msgstr "Сачувај речник"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Mašina za prevođenje"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6906,6 @@ msgstr "Pokreće se"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Završeno"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Prevedi u pozadini"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6984,7 @@ msgid "Content"
 msgstr "Sadržaj"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Jezik"
 
@@ -5699,47 +7031,47 @@ msgstr "Sačuvano. Vaše ispravke su zaštićene od mašinskog prevoda."
 msgid "The same menu, translated"
 msgstr "Isti meni, prevedeno"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Poseban meni po jeziku"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Podrazumevano je svaki meni preveden: njegovi linkovi vode do prevedenih stranica, zajedno sa njihovim nazivima. Umesto toga, izaberite poseban meni za određeni jezik ovde."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Deljeni tekst"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Koji tekst"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Oznake menija"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Šabloni, zaglavlja, podnožja i šabloni"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Šabloni, zaglavlja, podnožja i šabloni (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Prevedi tekst koji nedostaje"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Ovde nema teksta za prevođenje."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Ispravila osoba, zaštićeno"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Сачувај исправке"
 
@@ -5822,13 +7154,9 @@ msgid "Problem"
 msgstr "Problem"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Uredi"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Plutajući prekidač"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7236,7 @@ msgstr "Elementor i Bricks vidžeti su deo Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Сачувај"
 
@@ -6044,27 +7372,27 @@ msgstr "Sačuvano. Delovi koje ste promenili označeni su kao pregledani od stra
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "Raspored ovog prevoda je promenjen u uređivaču, tako da se neki delovi više ne podudaraju sa originalom. Delovi bez para se prikazuju prazni; uredite ostale u uređivaču."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Otvorite uređivač"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Originalno (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Превод (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Sačuvaj izmene"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Отвори у уређивачу"
 
@@ -6138,28 +7466,28 @@ msgstr "Još nije prevedeno (kopija)"
 msgid "Save this post first, then translate it here."
 msgstr "Sačuvajte ovu objavu prvo, pa je prevedite ovde."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Uporedo"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Prikaži"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Otključajte da bi se moglo ponovo prevesti"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Zaštiti"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "Objavi prevode"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
@@ -6168,69 +7496,69 @@ msgstr[1] "Prevedi na %d jezika"
 msgstr[2] "Prevedi na %d jezika"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: prevedeno."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Prikaži ovaj blok"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "На сваком језику"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Samo na označenim jezicima"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "Na svim jezicima osim onih koji su označeni"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Slika po jeziku"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Prikažite drugu sliku čitaocima određenog jezika, na primer baner sa tekstom."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "Zamenite %s sliku"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "Izaberite %s sliku"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Koristi originalnu sliku"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Ispravite ovaj prevod"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Čuvanje…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Prevedeni tekst. Pritisnite Enter da biste ga ispravili."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Kliknite na bilo koji tekst uokvirenim linijom da biste ispravili njegov prevod."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Na ovoj stranici nije pronađen nijedan prevedeni tekst za uređivanje. Umesto toga koristite uređivač sa prikazom uporedo."
 

@@ -66,6 +66,24 @@ require_once __DIR__ . '/ai-core/load.php';
 );
 
 /*
+ * The shared admin kit (wp/packages/zinn-admin-kit, rendered into admin-kit/ by
+ * wp/bin/build-admin-kit.php): the shell around the settings screen — overview, plans, add-ons,
+ * help and support, the setup wizard. Our own screens only; it adds nothing to other admin pages.
+ */
+require_once __DIR__ . '/admin-kit/load.php';
+\ZinnDigital\Tranzly\AdminKit\Kit::boot(
+	array(
+		'slug'           => 'tranzly',
+		'name'           => 'Tranzly',
+		'version'        => TRANZLY_VERSION,
+		'fs'             => 'tranzly_fs',
+		'menu_slug'      => \ZinnDigital\Tranzly\Admin::SLUG,
+		'rest_namespace' => \ZinnDigital\Tranzly\Rest::NAMESPACE,
+		'file'           => TRANZLY_FILE,
+	)
+);
+
+/*
  * ⛔⛔ THE PREMIUM LAYER LOADS ONLY WHEN ITS FILE IS PRESENT AND THE LICENCE ALLOWS IT.
  *
  * The free package (house and licensing-service alike) drops the whole premium-only directory,

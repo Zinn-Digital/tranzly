@@ -13,7 +13,8 @@ msgstr ""
 #: tranzly.php
 #: includes/class-admin.php:55
 #: includes/class-admin.php:56
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "Tranzly"
 msgstr "Tranzly"
 
@@ -36,6 +37,635 @@ msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
 #: tranzly.php
 msgid "https://zinndigital.com"
 msgstr "https://zinndigital.com"
+
+#: includes/admin-kit/class-connection.php:96
+msgid "Zinn Digital® answered, but not with a connection this plugin understands. Nothing was saved."
+msgstr "Zinn Digital® memberikan respons, tetapi bukan dengan koneksi yang dipahami oleh plugin ini. Tidak ada yang disimpan."
+
+#: includes/admin-kit/class-connection.php:161
+msgid "This site has forgotten its connection. Zinn Digital® could not be told just now, so support staff will see it as unused until it is removed on their side."
+msgstr "Situs ini telah kehilangan koneksinya. Zinn Digital® tidak dapat diberi tahu saat ini, sehingga staf dukungan akan melihatnya sebagai tidak digunakan hingga dihapus di sisi mereka."
+
+#: includes/admin-kit/class-engine.php:69
+msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
+msgstr "Alamat Zinn Digital® yang disetel untuk digunakan situs ini bukan alamat yang aman (https), sehingga tidak ada yang dikirim."
+
+#: includes/admin-kit/class-engine.php:92
+msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
+msgstr "Zinn Digital® tidak dapat dihubungi dari situs ini. Periksa apakah situs dapat membuat koneksi keluar, lalu coba lagi."
+
+#: includes/admin-kit/class-engine.php:130
+msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
+msgstr "Koneksi situs ini ke Zinn Digital® telah dicabut. Hubungkan kembali untuk melanjutkan."
+
+#: includes/admin-kit/class-engine.php:133
+msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
+msgstr "Zinn Digital® tidak lagi mengenali koneksi situs ini. Hubungkan kembali untuk melanjutkan."
+
+#: includes/admin-kit/class-engine.php:136
+msgid "Too many requests were sent from this site or address. Wait a little, then try again."
+msgstr "Terlalu banyak permintaan yang dikirim dari situs atau alamat ini. Tunggu sebentar, lalu coba lagi."
+
+#: includes/admin-kit/class-engine.php:139
+msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
+msgstr "Zinn Digital® tidak dapat menerima permintaan ini. Periksa alamat email dan pesan tersebut, lalu coba lagi."
+
+#: includes/admin-kit/class-engine.php:142
+msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr "Zinn Digital® saat ini tidak dapat memproses permintaan tersebut. Coba lagi dalam beberapa menit."
+
+#: includes/admin-kit/class-licence.php:253
+msgid "The licensing service is not available on this site."
+msgstr "Layanan lisensi tidak tersedia di situs ini."
+
+#: includes/admin-kit/class-licence.php:275
+msgid "The trial could not be started here. Continue on the trial page instead."
+msgstr "Percobaan tidak dapat dimulai di sini. Lanjutkan di halaman percobaan sebagai gantinya."
+
+#: includes/admin-kit/class-matrix.php:274
+msgid "One post per language, linked together"
+msgstr "Satu postingan per bahasa, ditautkan bersama"
+
+#: includes/admin-kit/class-matrix.php:275
+msgid "Keeps your old Tranzly translations"
+msgstr "Menyimpan terjemahan Tranzly lama Anda"
+
+#: includes/admin-kit/class-matrix.php:276
+#: src/admin/Jobs.js:211
+msgid "Translate in the background"
+msgstr "Terjemahkan di latar belakang"
+
+#: includes/admin-kit/class-matrix.php:277
+msgid "Latest WordPress and PHP, tested every release"
+msgstr "WordPress dan PHP terbaru, telah diuji pada setiap rilis"
+
+#: includes/admin-kit/class-matrix.php:278
+msgid "Security by design"
+msgstr "Keamanan berdasarkan desain"
+
+#: includes/admin-kit/class-matrix.php:279
+msgid "Interface in 58 languages, right-to-left ready"
+msgstr "Antarmuka dalam 58 bahasa, siap untuk teks dari kanan ke kiri"
+
+#: includes/admin-kit/class-matrix.php:280
+msgid "Unlimited languages"
+msgstr "Bahasa tak terbatas"
+
+#: includes/admin-kit/class-matrix.php:281
+msgid "DeepL (the current integration, kept)"
+msgstr "DeepL (integrasi saat ini, dipertahankan)"
+
+#: includes/admin-kit/class-matrix.php:282
+msgid "AI models with your own key"
+msgstr "Model AI dengan kunci Anda sendiri"
+
+#: includes/admin-kit/class-matrix.php:283
+msgid "Google Cloud Translation and Microsoft Translator"
+msgstr "Google Cloud Translation dan Microsoft Translator"
+
+#: includes/admin-kit/class-matrix.php:284
+msgid "Different engine per language"
+msgstr "Mesin berbeda per bahasa"
+
+#: includes/admin-kit/class-matrix.php:285
+msgid "Automatic fallback"
+msgstr "Pencadangan otomatis"
+
+#: includes/admin-kit/class-matrix.php:286
+msgid "Cost estimate before you start"
+msgstr "Perkiraan biaya sebelum Anda mulai"
+
+#: includes/admin-kit/class-matrix.php:287
+msgid "Translation memory"
+msgstr "Memori terjemahan"
+
+#: includes/admin-kit/class-matrix.php:288
+msgid "Glossary and do-not-translate list for every engine"
+msgstr "Glosarium dan daftar jangan-diterjemahkan untuk setiap mesin"
+
+#: includes/admin-kit/class-matrix.php:289
+msgid "Tone and style instructions"
+msgstr "Instruksi nada dan gaya"
+
+#: includes/admin-kit/class-matrix.php:290
+msgid "Posts, pages and custom post types"
+msgstr "Post, halaman, dan jenis pos kustom"
+
+#: includes/admin-kit/class-matrix.php:291
+msgid "Blocks translated safely"
+msgstr "Blok berhasil diterjemahkan"
+
+#: includes/admin-kit/class-matrix.php:292
+msgid "Categories, tags and custom taxonomies"
+msgstr "Kategori, tag, dan taksonomi kustom"
+
+#: includes/admin-kit/class-matrix.php:293
+msgid "Menus"
+msgstr "Menu"
+
+#: includes/admin-kit/class-matrix.php:294
+msgid "Page Builder Sandwich pages"
+msgstr "Halaman Page Builder Sandwich"
+
+#: includes/admin-kit/class-matrix.php:295
+msgid "Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery"
+msgstr "Elementor, Bricks, Divi, Beaver Builder, Oxygen, dan WPBakery"
+
+#: includes/admin-kit/class-matrix.php:296
+msgid "WooCommerce: everything"
+msgstr "WooCommerce: semuanya"
+
+#: includes/admin-kit/class-matrix.php:297
+msgid "SEO fields for all four big SEO plugins"
+msgstr "Kolom SEO untuk keempat plugin SEO besar"
+
+#: includes/admin-kit/class-matrix.php:298
+msgid "Custom fields"
+msgstr "Kolom kustom"
+
+#: includes/admin-kit/class-matrix.php:299
+msgid "Theme and plugin text (strings)"
+msgstr "Teks tema dan plugin (string)"
+
+#: includes/admin-kit/class-matrix.php:300
+msgid "Media"
+msgstr "Media"
+
+#: includes/admin-kit/class-matrix.php:301
+msgid "Block themes: templates and patterns"
+msgstr "Tema blok: templat dan pola"
+
+#: includes/admin-kit/class-matrix.php:302
+msgid "Widgets and site title/tagline"
+msgstr "Widget dan judul/slogan situs"
+
+#: includes/admin-kit/class-matrix.php:303
+msgid "Translate one post in one click"
+msgstr "Terjemahkan satu postingan dalam satu klik"
+
+#: includes/admin-kit/class-matrix.php:304
+msgid "Bulk translate the whole site"
+msgstr "Terjemahkan seluruh situs secara massal"
+
+#: includes/admin-kit/class-matrix.php:305
+msgid "Auto-translate new and updated content"
+msgstr "Terjemahkan otomatis konten baru dan yang diperbarui"
+
+#: includes/admin-kit/class-matrix.php:306
+msgid "Side-by-side translation editor"
+msgstr "Editor terjemahan berdampingan"
+
+#: includes/admin-kit/class-matrix.php:307
+msgid "Visual front-end editor"
+msgstr "Editor front-end visual"
+
+#: includes/admin-kit/class-matrix.php:308
+msgid "Review and approval"
+msgstr "Tinjauan dan persetujuan"
+
+#: includes/admin-kit/class-matrix.php:309
+msgid "Export and import for human translators"
+msgstr "Ekspor dan impor untuk penerjemah manusia"
+
+#: includes/admin-kit/class-matrix.php:310
+msgid "Switch from WPML, Polylang or TranslatePress"
+msgstr "Beralih dari WPML, Polylang atau TranslatePress"
+
+#: includes/admin-kit/class-matrix.php:311
+msgid "Translation status dashboard"
+msgstr "Dasbor status terjemahan"
+
+#: includes/admin-kit/class-matrix.php:312
+msgid "Language in the URL: /de/, /fr/"
+msgstr "Bahasa di URL: /de/, /fr/"
+
+#: includes/admin-kit/class-matrix.php:313
+msgid "Subdomains or separate domains per language"
+msgstr "Subdomain atau domain terpisah per bahasa"
+
+#: includes/admin-kit/class-matrix.php:314
+msgid "Translated slugs"
+msgstr "Slug yang diterjemahkan"
+
+#: includes/admin-kit/class-matrix.php:315
+msgid "hreflang tags, done right"
+msgstr "tag hreflang, dengan benar"
+
+#: includes/admin-kit/class-matrix.php:316
+msgid "Translated sitemaps"
+msgstr "Sitemap yang diterjemahkan"
+
+#: includes/admin-kit/class-matrix.php:317
+msgid "Correct language and canonical tags"
+msgstr "Koreksi bahasa dan tag kanonis"
+
+#: includes/admin-kit/class-matrix.php:318
+msgid "Hide untranslated pages from search engines"
+msgstr "Sembunyikan halaman yang belum diterjemahkan dari mesin pencari"
+
+#: includes/admin-kit/class-matrix.php:319
+msgid "Suggest the visitor's language"
+msgstr "Sarankan bahasa pengunjung"
+
+#: includes/admin-kit/class-matrix.php:320
+msgid "Switcher block for the block editor"
+msgstr "Blok pengalih untuk penyunting blok"
+
+#: includes/admin-kit/class-matrix.php:321
+msgid "Switcher element for Page Builder Sandwich"
+msgstr "Elemen pengalih untuk Page Builder Sandwich"
+
+#: includes/admin-kit/class-matrix.php:322
+msgid "Switcher for Elementor, Bricks and other builders"
+msgstr "Pengalih untuk Elementor, Bricks, dan pembuat lainnya"
+
+#: includes/admin-kit/class-matrix.php:323
+msgid "Menu item, widget and shortcode"
+msgstr "Item menu, widget, dan shortcode"
+
+#: includes/admin-kit/class-matrix.php:324
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Peralih mengapung"
+
+#: includes/admin-kit/class-matrix.php:325
+msgid "Accessible switcher"
+msgstr "Pengalih Aksesibel"
+
+#: includes/admin-kit/class-matrix.php:326
+msgid "PHP API and template functions"
+msgstr "Fungsi API dan templat PHP"
+
+#: includes/admin-kit/class-matrix.php:327
+msgid "Add your own translation engine"
+msgstr "Tambahkan mesin terjemahan Anda sendiri"
+
+#: includes/admin-kit/class-matrix.php:328
+msgid "Hooks, REST API and WP-CLI"
+msgstr "Hook, REST API, dan WP-CLI"
+
+#: includes/admin-kit/class-matrix.php:329
+msgid "Compatibility layer for Polylang/WPML functions"
+msgstr "Lapisan kompatibilitas untuk fungsi Polylang/WPML"
+
+#: includes/admin-kit/class-matrix.php:330
+msgid "Bring your own key for all main AI providers"
+msgstr "Bawa kunci Anda sendiri untuk semua penyedia AI utama"
+
+#: includes/admin-kit/class-matrix.php:331
+msgid "Model list updates itself"
+msgstr "Daftar model memperbarui sendiri"
+
+#: includes/admin-kit/class-matrix.php:332
+msgid "We push recommended models in updates"
+msgstr "Kami mendorong model yang direkomendasikan dalam pembaruan"
+
+#: includes/admin-kit/class-matrix.php:333
+msgid "Add a model yourself in one step"
+msgstr "Tambahkan model sendiri dalam satu langkah"
+
+#: includes/admin-kit/class-matrix.php:334
+msgid "Simple setup for non-technical users"
+msgstr "Pengaturan sederhana bagi pengguna non-teknis"
+
+#: includes/admin-kit/class-matrix.php:335
+msgid "Keys stored encrypted, never sent to us"
+msgstr "Kunci disimpan secara terenkripsi, tidak pernah dikirimkan kepada kami"
+
+#: includes/admin-kit/class-matrix.php:336
+msgid "Clear error messages"
+msgstr "Hapus pesan kesalahan"
+
+#: includes/admin-kit/class-matrix.php:337
+msgid "Usage and cost log"
+msgstr "Log penggunaan dan biaya"
+
+#: includes/admin-kit/class-matrix.php:338
+msgid "Per-role AI permissions"
+msgstr "Izin AI per peran"
+
+#: includes/admin-kit/class-matrix.php:339
+msgid "One key, both plugins"
+msgstr "Satu kunci, kedua plugin"
+
+#: includes/admin-kit/class-matrix.php:340
+msgid "Modern admin screens"
+msgstr "Layar admin modern"
+
+#: includes/admin-kit/class-matrix.php:341
+msgid "Setup wizard"
+msgstr "Panduan penyiapan"
+
+#: includes/admin-kit/class-matrix.php:342
+msgid "Built-in help"
+msgstr "Bantuan bawaan"
+
+#: includes/admin-kit/class-matrix.php:343
+msgid "Cross-promotion between the two plugins"
+msgstr "Promosi silang antara kedua plugin tersebut"
+
+#: includes/admin-kit/class-matrix.php:344
+msgid "Zinn Digital® hosting promotion"
+msgstr "Promosi hosting Zinn Digital®"
+
+#: includes/admin-kit/class-matrix.php:345
+msgid "Pro licensing through Freemius (latest SDK)"
+msgstr "Lisensi pro melalui Freemius (SDK terbaru)"
+
+#: includes/admin-kit/class-matrix.php:346
+msgid "Free trial of Pro"
+msgstr "Uji coba gratis Pro"
+
+#: includes/admin-kit/class-matrix.php:347
+msgid "Bundle: Page Builder Sandwich Pro + Tranzly Pro"
+msgstr "Paket: Page Builder Sandwich Pro + Tranzly Pro"
+
+#: includes/admin-kit/class-matrix.php:348
+msgid "Credited to Zinn Digital® Ltd"
+msgstr "Dikreditkan kepada Zinn Digital® Ltd"
+
+#: includes/admin-kit/class-matrix.php:349
+msgid "Synced to GitHub like our other plugins"
+msgstr "Disinkronkan ke GitHub seperti plugin kami yang lain"
+
+#: includes/admin-kit/class-matrix.php:350
+msgid "Manual edits are protected"
+msgstr "Suntingan manual dilindungi"
+
+#: includes/admin-kit/class-matrix.php:351
+msgid "Failed translation report"
+msgstr "Laporan terjemahan gagal"
+
+#: includes/admin-kit/class-matrix.php:352
+msgid "Edit any translation easily"
+msgstr "Edit terjemahan apa pun dengan mudah"
+
+#: includes/admin-kit/class-matrix.php:353
+msgid "Do-not-translate list in the free version"
+msgstr "Daftar jangan diterjemahkan di versi gratis"
+
+#: includes/admin-kit/class-matrix.php:354
+msgid "WooCommerce multi-currency"
+msgstr "WooCommerce multi-currency"
+
+#: includes/admin-kit/class-matrix.php:355
+msgid "AI quality check"
+msgstr "Pemeriksaan kualitas AI"
+
+#: includes/admin-kit/class-matrix.php:356
+msgid "Show content only in some languages"
+msgstr "Tampilkan konten hanya dalam beberapa bahasa"
+
+#: includes/admin-kit/class-matrix.php:357
+msgid "Multilingual SEO audit"
+msgstr "Audit SEO Multilingual"
+
+#: includes/admin-kit/class-matrix.php:358
+msgid "Translate forms"
+msgstr "Terjemahkan formulir"
+
+#: includes/admin-kit/class-matrix.php:359
+msgid "Translate comments and reviews"
+msgstr "Terjemahkan komentar dan ulasan"
+
+#: includes/admin-kit/class-matrix.php:360
+msgid "Different images per language"
+msgstr "Gambar berbeda per bahasa"
+
+#: includes/admin-kit/class-matrix.php:361
+msgid "Monthly spend cap per engine"
+msgstr "Batas pengeluaran bulanan per mesin"
+
+#: includes/admin-kit/class-matrix.php:362
+msgid "Multilingual site search"
+msgstr "Pencarian situs multibahasa"
+
+#: includes/admin-kit/class-matrix.php:363
+msgid "Speed promise, tested"
+msgstr "Janji kecepatan, teruji"
+
+#: includes/admin-kit/class-matrix.php:364
+msgid "Multisite support"
+msgstr "Dukungan multisitus"
+
+#: includes/admin-kit/class-matrix.php:365
+msgid "Staging and local sites don't use up a licence"
+msgstr "Situs penahapan dan lokal tidak menghabiskan lisensi"
+
+#: includes/admin-kit/class-matrix.php:366
+msgid "Docs site and short video guides"
+msgstr "Situs dokumentasi dan panduan video singkat"
+
+#: includes/admin-kit/class-matrix.php:367
+msgid "Feedback and feature-request button"
+msgstr "Tombol umpan balik dan permintaan fitur"
+
+#: includes/admin-kit/class-matrix.php:368
+msgid "Beta updates channel"
+msgstr "Saluran pembaruan beta"
+
+#: includes/admin-kit/class-matrix.php:369
+msgid "Priority support"
+msgstr "Dukungan prioritas"
+
+#: includes/admin-kit/class-matrix.php:370
+msgid "Bug reporter and support tickets"
+msgstr "Pelapor bug dan tiket dukungan"
+
+#: includes/admin-kit/class-matrix.php:371
+msgid "Use Freemius fully"
+msgstr "Gunakan Freemius sepenuhnya"
+
+#: includes/admin-kit/class-matrix.php:372
+msgid "Footprint-free front end, on by default"
+msgstr "Front end bebas jejak digital, aktif secara default"
+
+#: includes/admin-kit/class-matrix.php:383
+msgid "Foundation"
+msgstr "Fondasi"
+
+#: includes/admin-kit/class-matrix.php:384
+msgid "Translation engines"
+msgstr "Mesin terjemahan"
+
+#: includes/admin-kit/class-matrix.php:385
+msgid "What gets translated"
+msgstr "Apa yang diterjemahkan"
+
+#: includes/admin-kit/class-matrix.php:386
+msgid "Workflow"
+msgstr "Alur Kerja"
+
+#: includes/admin-kit/class-matrix.php:387
+msgid "SEO and URLs"
+msgstr "SEO dan URL"
+
+#: includes/admin-kit/class-matrix.php:388
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Pengalih bahasa"
+
+#: includes/admin-kit/class-matrix.php:389
+msgid "Developers"
+msgstr "Pengembang"
+
+#: includes/admin-kit/class-matrix.php:390
+msgid "AI keys and models"
+msgstr "Kunci dan model AI"
+
+#: includes/admin-kit/class-matrix.php:391
+msgid "Admin and licensing"
+msgstr "Admin dan perizinan"
+
+#: includes/admin-kit/class-matrix.php:392
+msgid "More features"
+msgstr "Fitur lainnya"
+
+#: includes/admin-kit/class-matrix.php:393
+msgid "Licensing and support"
+msgstr "Lisensi dan dukungan"
+
+#: includes/admin-kit/class-promotions.php:155
+msgid "Hosting built for fast, multilingual WordPress"
+msgstr "Hosting yang dirancang untuk WordPress yang cepat dan multibahasa"
+
+#: includes/admin-kit/class-promotions.php:156
+msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
+msgstr "Penyelenggaraan WordPress terkelola dari tim yang membuat plugin ini, dioptimalkan untuk kecepatan dan situs dalam berbagai bahasa."
+
+#: includes/admin-kit/class-promotions.php:157
+msgid "See Zinn Digital® hosting"
+msgstr "Lihat hosting Zinn Digital®"
+
+#: includes/admin-kit/class-promotions.php:164
+msgid "Hire a WordPress expert on ZinnHub"
+msgstr "Sewa seorang ahli WordPress di ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:165
+msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
+msgstr "Sebuah pasar lepas untuk desain, pengembangan, penerjemahan, dan pekerjaan SEO WordPress."
+
+#: includes/admin-kit/class-promotions.php:166
+msgid "Visit ZinnHub"
+msgstr "Kunjungi ZinnHub"
+
+#: includes/admin-kit/class-promotions.php:173
+msgid "Bulk site and PBN hosting"
+msgstr "Hosting situs massal dan PBN"
+
+#: includes/admin-kit/class-promotions.php:174
+msgid "PBN.ltd is our platform for hosting and managing many sites at once."
+msgstr "PBN.ltd adalah platform kami untuk mengosting dan mengelola banyak situs sekaligus."
+
+#: includes/admin-kit/class-promotions.php:175
+msgid "Visit PBN.ltd"
+msgstr "Kunjungi PBN.ltd"
+
+#: includes/admin-kit/class-promotions.php:182
+msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
+msgstr "Dapatkan Page Builder Sandwich Pro dan Tranzly Pro secara bersamaan"
+
+#: includes/admin-kit/class-promotions.php:183
+msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
+msgstr "Paket ini lebih murah daripada membeli kedua plugin secara terpisah, pada paket dan batas situs yang sama."
+
+#: includes/admin-kit/class-promotions.php:184
+msgid "See the bundle"
+msgstr "Lihat bundel"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:194
+#, php-format
+msgid "Get %s"
+msgstr "Dapatkan %s"
+
+#. translators: 1: this plugin's name, 2: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:196
+#, php-format
+msgid "Integration active: %1$s and %2$s work together"
+msgstr "Integrasi aktif: %1$s dan %2$s bekerja sama"
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:198
+#, php-format
+msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
+msgstr "%s aktif di situs ini, sehingga kedua plugin tersebut berbagi satu kumpulan kunci penyedia AI dan satu layar pengaturan untuknya."
+
+#: includes/admin-kit/class-promotions.php:214
+msgid "Translate this site with Tranzly"
+msgstr "Terjemahkan situs ini dengan Tranzly"
+
+#: includes/admin-kit/class-promotions.php:217
+msgid "Build pages visually with Page Builder Sandwich"
+msgstr "Bangun halaman secara visual dengan Page Builder Sandwich"
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:221
+#, php-format
+msgid "%s, from Zinn Digital®"
+msgstr "%s, dari Zinn Digital®"
+
+#: includes/admin-kit/class-promotions.php:233
+msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
+msgstr "Terbitkan setiap halaman dalam berbagai bahasa, lengkap dengan alamat yang diterjemahkan, data SEO, dan tombol pengalih bahasa. Berfungsi dengan halaman yang Anda buat di sini."
+
+#: includes/admin-kit/class-promotions.php:236
+msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
+msgstr "Rancang halaman langsung di editor dengan blok cepat tanpa footprint. Semua yang Anda bangun diterjemahkan dengan Tranzly."
+
+#. translators: %s: a plugin's name.
+#: includes/admin-kit/class-promotions.php:240
+#, php-format
+msgid "%s is made by the same team and works alongside this plugin."
+msgstr "%s dibuat oleh tim yang sama dan bekerja berdampingan dengan plugin ini."
+
+#: includes/admin-kit/class-rest.php:238
+msgid "Agree to connecting this site first."
+msgstr "Setujui penyambungan situs ini terlebih dahulu."
+
+#: includes/admin-kit/class-rest.php:248
+msgid "Enter a valid e-mail address."
+msgstr "Masukkan alamat email yang valid."
+
+#: includes/admin-kit/class-support.php:78
+msgid "Agree to sending support information first."
+msgstr "Setujui pengiriman informasi dukungan terlebih dahulu."
+
+#: includes/admin-kit/class-support.php:86
+msgid "Write a subject and a message."
+msgstr "Tulis subjek dan pesan."
+
+#: includes/admin-kit/class-support.php:89
+msgid "Enter an e-mail address support can reply to."
+msgstr "Masukkan alamat email tempat dukungan dapat membalas."
+
+#: includes/admin-kit/class-support.php:113
+msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
+msgstr "Akses dukungan sementara yang dibuat oleh pemilik situs. Akses ini akan dihapus secara otomatis saat masa berlakunya habis."
+
+#: includes/admin-kit/class-temp-access.php:130
+msgid "Choose 1, 3 or 7 days."
+msgstr "Pilih 1, 3, atau 7 hari."
+
+#: includes/admin-kit/class-temp-access.php:133
+msgid "Only a site administrator, signed in to this screen, can create temporary support access."
+msgstr "Hanya administrator situs yang masuk ke layar ini yang dapat membuat akses dukungan sementara."
+
+#: includes/admin-kit/class-temp-access.php:145
+msgid "A unique user name could not be chosen. Try again."
+msgstr "Nama pengguna unik tidak dapat dipilih. Coba lagi."
+
+#: includes/admin-kit/class-temp-access.php:155
+#: includes/admin-kit/class-temp-access.php:360
+msgid "Zinn Digital® support (temporary)"
+msgstr "Dukungan Zinn Digital® (sementara)"
+
+#: includes/admin-kit/class-temp-access.php:300
+msgid "This temporary support access has expired."
+msgstr "Akses dukungan sementara ini telah kedaluwarsa."
 
 #: includes/ai-core/class-admin.php:59
 #: includes/ai-core/class-admin.php:60
@@ -80,8 +710,8 @@ msgid "Writing and rewriting"
 msgstr "Penulisan dan penulisan ulang"
 
 #: includes/ai-core/class-admin.php:103
-#: src/compare/index.js:130
-#: src/pro__premium_only/visual/index.js:24
+#: src/compare/index.js:132
+#: src/pro__premium_only/visual/index.js:27
 msgid "Translation"
 msgstr "Terjemahan"
 
@@ -115,6 +745,9 @@ msgstr "Anda membawa kunci Anda sendiri, sehingga Anda membayar penyedia secara 
 #: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
+#: src/admin-kit/DataList.js:288
+#: src/admin-kit/Tour.js:124
+#: src/admin-kit/Wizard.js:126
 msgid "Next"
 msgstr "Berikutnya"
 
@@ -217,6 +850,7 @@ msgstr "Uji"
 #: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
+#: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Hapus"
@@ -621,6 +1255,8 @@ msgstr "Belum ada permintaan AI yang dibuat."
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3777
+#: src/admin-kit/Tour.js:128
+#: src/admin-kit/Wizard.js:58
 msgid "Done"
 msgstr "Selesai"
 
@@ -682,11 +1318,11 @@ msgstr "Terjemahan harus berupa jenis konten yang sama dengan aslinya."
 msgid "Choose one of the site's other languages."
 msgstr "Pilih salah satu bahasa situs lainnya."
 
-#: includes/class-admin.php:78
+#: includes/class-admin.php:83
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr "Skrip untuk layar admin tidak ada dalam salinan plugin ini. Instal ulang dari paket yang dirilis."
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:86
 msgid "This screen needs JavaScript."
 msgstr "Layar ini memerlukan JavaScript."
 
@@ -1596,7 +2232,7 @@ msgstr "Beli lisensi sekarang"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
-#: src/pro__premium_only/visual/index.js:35
+#: src/pro__premium_only/visual/index.js:38
 msgid "Cancel"
 msgstr "Batal"
 
@@ -2111,6 +2747,7 @@ msgstr "Menonaktifkan mode label putih"
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
+#: src/admin-kit/Support.js:253
 msgid "Disconnect"
 msgstr "Putuskan Sambungan"
 
@@ -2351,6 +2988,7 @@ msgstr "Kedaluwarsa"
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3918
+#: src/admin-kit/PlansScreen.js:143
 msgid "Expired"
 msgstr "Kedaluwarsa"
 
@@ -2417,6 +3055,8 @@ msgstr "Silakan ikuti langkah-langkah ini untuk menyelesaikan peningkatan"
 
 #: includes/freemius-strings.php:1102
 #: includes/freemius-strings.php:3978
+#: src/admin-kit/plans.js:33
+#: src/admin-kit/plans.js:65
 msgid "Free"
 msgstr "Gratis"
 
@@ -2796,6 +3436,7 @@ msgstr "Duplikat Jangka Panjang"
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
+#: src/admin-kit/Support.js:490
 msgid "Message"
 msgstr "Pesan"
 
@@ -3031,6 +3672,7 @@ msgstr "Plugin ini memerlukan versi PHP yang lebih baru."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Tidak"
@@ -3203,6 +3845,7 @@ msgstr "Untuk kompatibilitas berkelanjutan dengan situs web Anda, Anda dapat sec
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
+#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr "Lainnya"
 
@@ -3971,6 +4614,7 @@ msgstr "ID Situs"
 
 #: includes/freemius-strings.php:2297
 #: includes/freemius-strings.php:5171
+#: src/admin-kit/PlansScreen.js:120
 msgid "Sites"
 msgstr "Situs"
 
@@ -4067,7 +4711,7 @@ msgstr "Memulai uji coba"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
-#: src/compare/index.js:116
+#: src/compare/index.js:118
 msgid "State"
 msgstr "Status"
 
@@ -4368,6 +5012,7 @@ msgstr "Bagaimana kesan Anda terhadap %1$s sejauh ini? Uji semua fitur premium %
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
+#: src/admin-kit/Support.js:551
 msgid "Type"
 msgstr "Tipe"
 
@@ -5121,13 +5766,6 @@ msgstr "Pengaturan ini aktif atau nonaktif."
 msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
 msgstr "Menyembunyikan halaman yang belum diterjemahkan dari mesin pencari merupakan bagian dari Tranzly Pro."
 
-#: includes/switcher/class-places.php:256
-#: includes/switcher/class-widget.php:27
-#: includes/switcher/pro__premium_only/class-bricks-element.php:51
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
-msgid "Language switcher"
-msgstr "Pengalih bahasa"
-
 #: includes/switcher/class-places.php:266
 msgid "Languages (as a submenu)"
 msgstr "Bahasa"
@@ -5307,6 +5945,687 @@ msgstr "Ukuran teks"
 msgid "Switcher"
 msgstr "Pengalih"
 
+#: src/admin-kit/Addons.js:35
+msgid "Show hidden suggestions on the Overview again"
+msgstr "Tampilkan kembali saran tersembunyi di Ringkasan"
+
+#: src/admin-kit/DataList.js:142
+msgid "All"
+msgstr "Semua"
+
+#. translators: %d: number of selected rows.
+#: src/admin-kit/DataList.js:159
+#, js-format
+msgid "%d selected"
+msgid_plural "%d selected"
+msgstr[0] "%d dipilih"
+
+#: src/admin-kit/DataList.js:186
+msgid "Nothing matches."
+msgstr "Tidak ada yang cocok."
+
+#: src/admin-kit/DataList.js:209
+msgid "Select all on this page"
+msgstr "Pilih semua di halaman ini"
+
+#: src/admin-kit/DataList.js:234
+msgid "Select"
+msgstr "Pilih"
+
+#: src/admin-kit/DataList.js:266
+msgid "Pages"
+msgstr "Halaman"
+
+#: src/admin-kit/DataList.js:273
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#. translators: 1: current page, 2: number of pages.
+#: src/admin-kit/DataList.js:278
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr "Halaman %1$d dari %2$d"
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Overview.js:52
+#, js-format
+msgid "Set up %s in a few minutes"
+msgstr "Atur %s dalam beberapa menit"
+
+#: src/admin-kit/Overview.js:65
+msgid "Start setup"
+msgstr "Mulai penyiapan"
+
+#: src/admin-kit/Overview.js:75
+msgid "This site"
+msgstr "Situs ini"
+
+#: src/admin-kit/Overview.js:80
+#: src/admin-kit/PlansScreen.js:116
+msgid "Edition"
+msgstr "Edisi"
+
+#: src/admin-kit/Overview.js:85
+msgid "Sites on this licence"
+msgstr "Situs pada lisensi ini"
+
+#: src/admin-kit/Overview.js:93
+msgid "Version"
+msgstr "Versi"
+
+#: src/admin-kit/Overview.js:98
+msgid "This looks like a staging or local copy, so it does not use up a site on your licence."
+msgstr "Ini tampak seperti salinan pementasan atau salinan lokal, sehingga tidak menggunakan situs pada lisensi Anda."
+
+#: src/admin-kit/Overview.js:109
+msgid "See what Pro adds"
+msgstr "Lihat yang ditambahkan Pro"
+
+#: src/admin-kit/Overview.js:117
+msgid "Go to"
+msgstr "Menuju ke"
+
+#: src/admin-kit/plans.js:27
+msgid "Personal"
+msgstr "Pribadi"
+
+#: src/admin-kit/plans.js:29
+msgid "Business"
+msgstr "Bisnis"
+
+#: src/admin-kit/plans.js:31
+msgid "Agency"
+msgstr "Agensi"
+
+#: src/admin-kit/plans.js:45
+msgid "Any number of sites"
+msgstr "Jumlah situs berapa pun"
+
+#: src/admin-kit/plans.js:48
+#: src/admin-kit/PlansScreen.js:123
+msgid "Unlimited sites"
+msgstr "Situs tak terbatas"
+
+#. translators: %d: number of sites.
+#: src/admin-kit/plans.js:52
+#, js-format
+msgid "%d site"
+msgid_plural "%d sites"
+msgstr[0] "%d situs"
+
+#: src/admin-kit/plans.js:68
+msgid "Pro"
+msgstr "Pro"
+
+#. translators: %s: plan name.
+#: src/admin-kit/plans.js:73
+#, js-format
+msgid "%s trial"
+msgstr "%s uji coba"
+
+#: src/admin-kit/PlansScreen.js:45
+msgid "Your trial has started. Reload the page to see every Pro feature."
+msgstr "Uji coba Anda telah dimulai. Muat ulang halaman untuk melihat semua fitur Pro."
+
+#: src/admin-kit/PlansScreen.js:57
+msgid "The trial could not be started."
+msgstr "Percobaan tidak dapat dimulai."
+
+#: src/admin-kit/PlansScreen.js:70
+msgid "Feature"
+msgstr "Fitur"
+
+#: src/admin-kit/PlansScreen.js:80
+msgid "Included"
+msgstr "Termasuk"
+
+#: src/admin-kit/PlansScreen.js:87
+msgid "Not included"
+msgstr "Tidak termasuk"
+
+#: src/admin-kit/PlansScreen.js:111
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr "Lisensi Anda"
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:129
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr "%1$d dari %2$d digunakan"
+
+#: src/admin-kit/PlansScreen.js:144
+msgid "Renews"
+msgstr "Memperbarui"
+
+#: src/admin-kit/PlansScreen.js:156
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr "Salinan pementasan, pengujian, dan localhost dari sebuah situs bersifat gratis dan tidak pernah dihitung ke dalam batas situs Anda."
+
+#: src/admin-kit/PlansScreen.js:164
+#: src/admin-kit/Support.js:452
+msgid "Your plan includes priority support."
+msgstr "Paket Anda mencakup dukungan prioritas."
+
+#: src/admin-kit/PlansScreen.js:176
+msgid "Manage your licence and billing"
+msgstr "Kelola lisensi dan penagihan Anda"
+
+#: src/admin-kit/PlansScreen.js:190
+msgid "Get more with Pro"
+msgstr "Dapatkan lebih banyak dengan Pro"
+
+#. translators: %d: number of days.
+#: src/admin-kit/PlansScreen.js:212
+#, js-format
+msgid "Start a free %d-day trial, no card needed"
+msgid_plural "Start a free %d-day trial, no card needed"
+msgstr[0] "Mulai uji coba gratis %d hari, tanpa kartu kredit"
+
+#: src/admin-kit/PlansScreen.js:227
+msgid "See plans and prices"
+msgstr "Lihat paket dan harga"
+
+#: src/admin-kit/PlansScreen.js:236
+msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
+msgstr "Gunakan Tranzly dan Page Builder Sandwich bersama-sama? Paket bundel ini mencakup kedua plugin Pro tersebut dengan harga lebih hemat."
+
+#: src/admin-kit/PlansScreen.js:248
+msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
+msgstr "Lisensi Anda telah kedaluwarsa. Perbarui untuk terus mendapatkan pembaruan dan fitur Pro."
+
+#: src/admin-kit/PlansScreen.js:253
+msgid "Renew now"
+msgstr "Perpanjang sekarang"
+
+#: src/admin-kit/PlansScreen.js:261
+#: src/admin-kit/tours.js:76
+msgid "Compare the plans"
+msgstr "Bandingkan paket"
+
+#: src/admin-kit/PlansScreen.js:272
+msgid "Search features"
+msgstr "Cari fitur"
+
+#: src/admin-kit/PlansScreen.js:279
+msgid "Area"
+msgstr "Area"
+
+#: src/admin-kit/PlansScreen.js:288
+msgid "Included in"
+msgstr "Termasuk dalam"
+
+#: src/admin-kit/PlansScreen.js:298
+msgid "No feature matches."
+msgstr "Tidak ada fitur yang cocok."
+
+#: src/admin-kit/PlansScreen.js:302
+msgid "Features by plan"
+msgstr "Fitur menurut paket"
+
+#: src/admin-kit/PromoCard.js:42
+#: src/admin-kit/PromoCard.js:95
+msgid "Hide"
+msgstr "Sembunyikan"
+
+#: src/admin-kit/PromoCard.js:104
+msgid "Activate it on the Plugins screen"
+msgstr "Aktifkan di layar Plugin"
+
+#: src/admin-kit/PromoCard.js:114
+msgid "Install it"
+msgstr "Pasang"
+
+#: src/admin-kit/Shell.js:49
+msgid "Overview"
+msgstr "Ringkasan"
+
+#: src/admin-kit/Shell.js:51
+msgid "Setup"
+msgstr "Pemasangan"
+
+#: src/admin-kit/Shell.js:52
+msgid "Plans and licence"
+msgstr "Paket dan lisensi"
+
+#: src/admin-kit/Shell.js:53
+msgid "Add-ons"
+msgstr "Add-on"
+
+#: src/admin-kit/Shell.js:54
+#: src/admin-kit/Wizard.js:72
+msgid "Get help"
+msgstr "Dapatkan bantuan"
+
+#: src/admin-kit/Shell.js:55
+msgid "Feedback"
+msgstr "Umpan balik"
+
+#: src/admin-kit/Shell.js:76
+msgid "Your choice could not be saved."
+msgstr "Pilihan Anda tidak dapat disimpan."
+
+#: src/admin-kit/Shell.js:96
+msgid "The setup state could not be saved."
+msgstr "Status penyiapan tidak dapat disimpan."
+
+#: src/admin-kit/Shell.js:105
+msgid "Match my computer"
+msgstr "Cocokkan dengan komputer saya"
+
+#: src/admin-kit/Shell.js:106
+msgid "Light"
+msgstr "Terang"
+
+#: src/admin-kit/Shell.js:107
+msgid "Dark"
+msgstr "Gelap"
+
+#: src/admin-kit/Shell.js:171
+msgid "Colour scheme"
+msgstr "Skema warna"
+
+#: src/admin-kit/Shell.js:200
+msgid "Help"
+msgstr "Bantuan"
+
+#: src/admin-kit/Shell.js:209
+msgid "Guide to this screen"
+msgstr "Panduan untuk layar ini"
+
+#: src/admin-kit/Shell.js:221
+msgid "Take the tour"
+msgstr "Ikuti tur"
+
+#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Support.js:433
+msgid "Get help or report a bug"
+msgstr "Dapatkan bantuan atau laporkan bug"
+
+#: src/admin-kit/Shell.js:246
+msgid "Plugin screens"
+msgstr "Layar plugin"
+
+#: src/admin-kit/Support.js:48
+msgid "That could not be saved."
+msgstr "Hal tersebut tidak dapat disimpan."
+
+#: src/admin-kit/Support.js:91
+msgid "Before you contact support"
+msgstr "Sebelum Anda menghubungi dukungan"
+
+#. translators: %s: company name.
+#: src/admin-kit/Support.js:98
+#, js-format
+msgid "Your request is sent from this site to %s, who make this plugin. We send:"
+msgstr "Permintaan Anda dikirim dari situs ini ke %s, pembuat plugin ini. Kami mengirimkan:"
+
+#: src/admin-kit/Support.js:107
+msgid "your e-mail address and name, so we can reply;"
+msgstr "alamat email dan nama Anda, agar kami dapat membalas;"
+
+#: src/admin-kit/Support.js:113
+msgid "the subject and message you write;"
+msgstr "subjek dan pesan yang Anda tulis;"
+
+#: src/admin-kit/Support.js:119
+msgid "your licence ID, so paying customers get priority;"
+msgstr "ID lisensi Anda, sehingga pelanggan berbayar mendapatkan prioritas;"
+
+#: src/admin-kit/Support.js:125
+msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
+msgstr "hanya jika Anda mencentangnya: detail situs (versi WordPress dan PHP, tema, plugin, kutipan log kesalahan dengan kata sandi dan alamat email yang dihapus), yang dapat Anda baca sebelum mengirim;"
+
+#: src/admin-kit/Support.js:131
+msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
+msgstr "hanya jika Anda menambahkannya: login untuk situs Anda, disimpan secara terenkripsi dan dihapus 30 hari setelah permintaan Anda ditutup."
+
+#: src/admin-kit/Support.js:139
+msgid "Privacy policy"
+msgstr "Kebijakan privasi"
+
+#: src/admin-kit/Support.js:143
+msgid "I agree, continue"
+msgstr "Saya setuju, lanjutkan"
+
+#: src/admin-kit/Support.js:173
+msgid "The connection could not be checked."
+msgstr "Koneksi tidak dapat diperiksa."
+
+#: src/admin-kit/Support.js:196
+msgid "That did not work. Try again."
+msgstr "Itu tidak berhasil. Coba lagi."
+
+#: src/admin-kit/Support.js:204
+msgid "Zinn Digital® support disconnected this site."
+msgstr "Dukungan Zinn Digital® telah memutuskan sambungan situs ini."
+
+#: src/admin-kit/Support.js:208
+msgid "Zinn Digital® support no longer recognises this site."
+msgstr "Dukungan Zinn Digital® tidak lagi mengenali situs ini."
+
+#: src/admin-kit/Support.js:212
+msgid "You disconnected this site."
+msgstr "Anda telah memutuskan sambungan situs ini."
+
+#: src/admin-kit/Support.js:219
+msgid "Connect this site to support"
+msgstr "Hubungkan situs ini ke dukungan"
+
+#. translators: %s: e-mail address.
+#: src/admin-kit/Support.js:234
+#, js-format
+msgid "Connected. Replies go to %s."
+msgstr "Terhubung. Balasan dikirim ke %s."
+
+#: src/admin-kit/Support.js:261
+msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
+msgstr "Tidak tersambung. Anda tetap dapat mengirimkan permintaan dengan alamat email Anda di bawah ini; tersambung akan menghemat waktu Anda untuk mengetiknya setiap kali."
+
+#: src/admin-kit/Support.js:269
+msgid "E-mail address"
+msgstr "Alamat email"
+
+#: src/admin-kit/Support.js:275
+#: src/admin-kit/Support.js:479
+msgid "Your name (optional)"
+msgstr "Nama Anda (opsional)"
+
+#: src/admin-kit/Support.js:283
+msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
+msgstr "Saya setuju untuk menghubungkan situs ini dengan dukungan Zinn Digital®. Tindakan ini akan mengirimkan alamat situs ini, versi WordPress dan PHP, serta versi plugin, dan dapat diputus kapan saja dari sini atau oleh Zinn Digital®."
+
+#: src/admin-kit/Support.js:303
+msgid "Connect"
+msgstr "Hubungkan"
+
+#: src/admin-kit/Support.js:332
+msgid "I need help"
+msgstr "Saya butuh bantuan"
+
+#: src/admin-kit/Support.js:333
+msgid "Report a bug"
+msgstr "Laporkan bug"
+
+#: src/admin-kit/Support.js:338
+msgid "Send feedback"
+msgstr "Kirim masukan"
+
+#: src/admin-kit/Support.js:342
+msgid "Request a feature"
+msgstr "Ajukan fitur"
+
+#: src/admin-kit/Support.js:364
+msgid "The site details could not be read."
+msgstr "Detail situs tidak dapat dibaca."
+
+#: src/admin-kit/Support.js:407
+msgid "Your request could not be sent. Try again in a few minutes."
+msgstr "Permintaan Anda tidak dapat dikirim. Coba lagi dalam beberapa menit."
+
+#: src/admin-kit/Support.js:418
+msgid "WordPress admin"
+msgstr "WordPress admin"
+
+#: src/admin-kit/Support.js:421
+msgid "File manager"
+msgstr "Pengelola file"
+
+#: src/admin-kit/Support.js:423
+msgid "cPanel"
+msgstr "cPanel"
+
+#: src/admin-kit/Support.js:424
+msgid "FTP / SFTP"
+msgstr "FTP / SFTP"
+
+#: src/admin-kit/Support.js:434
+msgid "Feedback and feature requests"
+msgstr "Masukan dan permintaan fitur"
+
+#. translators: %s: request reference, e.g. ZT-ABC234.
+#: src/admin-kit/Support.js:445
+#, js-format
+msgid "Sent. Your reference is %s, and our reply will come by e-mail."
+msgstr "Terkirim. Referensi Anda adalah %s, dan balasan kami akan dikirim melalui email."
+
+#: src/admin-kit/Support.js:465
+msgid "What is it about?"
+msgstr "Tentang apa ini?"
+
+#: src/admin-kit/Support.js:473
+msgid "Reply to (e-mail)"
+msgstr "Balas ke (e-mail)"
+
+#: src/admin-kit/Support.js:485
+msgid "Subject"
+msgstr "Subjek"
+
+#: src/admin-kit/Support.js:493
+msgid "What did you do, what did you expect, and what happened instead?"
+msgstr "Apa yang Anda lakukan, apa yang Anda harapkan, dan apa yang terjadi sebagai gantinya?"
+
+#: src/admin-kit/Support.js:506
+msgid "Include site details (versions, theme, plugins, error log excerpt)"
+msgstr "Sertakan detail situs (versi, tema, plugin, cuplikan log kesalahan)"
+
+#: src/admin-kit/Support.js:523
+msgid "See exactly what is sent"
+msgstr "Lihat dengan tepat apa yang dikirim"
+
+#: src/admin-kit/Support.js:530
+msgid "Loading…"
+msgstr "Memuat…"
+
+#: src/admin-kit/Support.js:536
+msgid "Logins for support (optional, stored encrypted)"
+msgstr "Masuk untuk dukungan (opsional, disimpan secara terenkripsi)"
+
+#: src/admin-kit/Support.js:542
+msgid "A login is only sent with its password. Leave a row out rather than half-filled."
+msgstr "Masuk hanya dikirimkan dengan kata sandinya. Tinggalkan baris kosong daripada mengisinya setengah-setengah."
+
+#: src/admin-kit/Support.js:560
+msgid "Login address"
+msgstr "Alamat masuk"
+
+#: src/admin-kit/Support.js:571
+msgid "Username"
+msgstr "Nama Pengguna"
+
+#: src/admin-kit/Support.js:584
+msgid "Password"
+msgstr "Kata Sandi"
+
+#: src/admin-kit/Support.js:619
+msgid "Add a login"
+msgstr "Tambahkan login"
+
+#: src/admin-kit/Support.js:626
+msgid "Create a temporary support login"
+msgstr "Buat login dukungan sementara"
+
+#: src/admin-kit/Support.js:630
+msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
+msgstr "Pengguna terpisah untuk tim dukungan kami, tanpa akses ke pengguna, instalasi plugin, atau pengeditan kode. Ini akan dihapus secara otomatis saat masa berlakunya habis, atau kapan pun Anda mencabutnya di bawah."
+
+#. translators: %d: number of days.
+#: src/admin-kit/Support.js:645
+#, js-format
+msgid "Yes, for %d day"
+msgid_plural "Yes, for %d days"
+msgstr[0] "Ya, selama %d hari"
+
+#: src/admin-kit/Support.js:669
+msgid "Send"
+msgstr "Kirim"
+
+#: src/admin-kit/Support.js:694
+msgid "The list could not be loaded."
+msgstr "Daftar tidak dapat dimuat."
+
+#: src/admin-kit/Support.js:709
+msgid "That login could not be removed."
+msgstr "Login tersebut tidak dapat dihapus."
+
+#: src/admin-kit/Support.js:721
+msgid "Temporary support logins"
+msgstr "Login dukungan sementara"
+
+#: src/admin-kit/Support.js:733
+msgid "None. Support can only log in to this site if you create a login here."
+msgstr "Tidak ada. Dukungan hanya dapat masuk ke situs ini jika Anda membuat login di sini."
+
+#: src/admin-kit/Support.js:745
+msgid "expired, being removed"
+msgstr "kedaluwarsa, sedang dihapus"
+
+#. translators: %s: date and time.
+#: src/admin-kit/Support.js:751
+#, js-format
+msgid "expires %s"
+msgstr "kedaluwarsa %s"
+
+#: src/admin-kit/Support.js:764
+msgid "Revoke now"
+msgstr "Cabut sekarang"
+
+#. translators: 1: this step, 2: number of steps.
+#: src/admin-kit/Tour.js:98
+#, js-format
+msgid "Step %1$d of %2$d"
+msgstr "Langkah %1$d dari %2$d"
+
+#: src/admin-kit/Tour.js:109
+msgid "Close the tour"
+msgstr "Tutup tur"
+
+#: src/admin-kit/Tour.js:116
+#: src/admin-kit/Wizard.js:114
+msgid "Back"
+msgstr "Kembali"
+
+#: src/admin-kit/tours.js:13
+msgid "Everything in one place"
+msgstr "Semuanya di satu tempat"
+
+#: src/admin-kit/tours.js:14
+msgid "These tabs lead to every screen of the plugin: setup, settings, your licence, help and more."
+msgstr "Tab ini mengarah ke setiap layar plugin: penyiapan, pengaturan, lisensi Anda, bantuan, dan lainnya."
+
+#: src/admin-kit/tours.js:21
+msgid "Help on every screen"
+msgstr "Bantuan di setiap layar"
+
+#: src/admin-kit/tours.js:22
+msgid "Open this menu for the guide to the screen you are on, this tour, or to ask us for help."
+msgstr "Buka menu ini untuk panduan ke layar yang sedang Anda buka, tur ini, atau untuk meminta bantuan kepada kami."
+
+#: src/admin-kit/tours.js:29
+msgid "Light or dark"
+msgstr "Terang atau gelap"
+
+#: src/admin-kit/tours.js:30
+msgid "Choose light, dark, or the same as your computer. Your choice is remembered for you only."
+msgstr "Pilih mode terang, gelap, atau sama seperti komputer Anda. Pilihan Anda hanya akan disimpan untuk Anda."
+
+#: src/admin-kit/tours.js:39
+#: src/admin-kit/Wizard.js:41
+msgid "Welcome"
+msgstr "Selamat Datang"
+
+#: src/admin-kit/tours.js:40
+msgid "This short tour shows where things are. You can leave it at any time with Escape."
+msgstr "Tur singkat ini menunjukkan letak berbagai hal. Anda dapat keluar kapan saja dengan menekan Escape."
+
+#: src/admin-kit/tours.js:48
+msgid "Your site at a glance"
+msgstr "Sekilas tentang situs Anda"
+
+#: src/admin-kit/tours.js:49
+msgid "Setup progress and your plan are shown here, with the next thing worth doing."
+msgstr "Kemajuan penyiapan dan paket Anda ditampilkan di sini, beserta langkah selanjutnya yang perlu dilakukan."
+
+#: src/admin-kit/tours.js:61
+msgid "Your plan, how many sites it covers, and whether this copy of the site counts toward that limit."
+msgstr "Paket Anda, jumlah situs yang dicakupnya, dan apakah salinan situs ini dihitung dalam batas tersebut."
+
+#: src/admin-kit/tours.js:68
+msgid "Try Pro or upgrade"
+msgstr "Coba Pro atau tingkatkan"
+
+#: src/admin-kit/tours.js:69
+msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgstr "Mulai uji coba gratis tanpa kartu, tingkatkan, atau perpanjang, semuanya dari sini."
+
+#: src/admin-kit/tours.js:77
+msgid "Every feature and the plan that includes it. Search for a feature or show one area at a time."
+msgstr "Setiap fitur dan paket yang menyertakannya. Cari fitur atau tampilkan satu bagian dalam satu waktu."
+
+#: src/admin-kit/tours.js:86
+msgid "More from Zinn Digital®"
+msgstr "Lainnya dari Zinn Digital®"
+
+#: src/admin-kit/tours.js:87
+msgid "Plugins that work with this one, and services from the same team. Cards you hid on other screens can be shown again here."
+msgstr "Plugin yang kompatibel dengan plugin ini, dan layanan dari tim yang sama. Kartu yang Anda sembunyikan di layar lain dapat ditampilkan kembali di sini."
+
+#: src/admin-kit/tours.js:96
+msgid "Connect for faster help"
+msgstr "Hubungkan untuk bantuan lebih cepat"
+
+#: src/admin-kit/tours.js:97
+msgid "Connecting is optional. It lets you send requests without typing your e-mail each time, and you can disconnect whenever you like."
+msgstr "Menghubungkan bersifat opsional. Ini memungkinkan Anda mengirim permintaan tanpa mengetik alamat e-mail Anda setiap kali, dan Anda dapat memutuskan sambungan kapan saja Anda mau."
+
+#: src/admin-kit/tours.js:104
+msgid "Ask for help or report a bug"
+msgstr "Minta bantuan atau laporkan bug"
+
+#: src/admin-kit/tours.js:105
+msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
+msgstr "Jelaskan apa yang terjadi. Anda dapat memilih untuk melampirkan informasi situs, dan Anda dapat melihat dengan tepat apa isinya terlebih dahulu."
+
+#: src/admin-kit/tours.js:112
+msgid "Temporary support access"
+msgstr "Akses dukungan sementara"
+
+#: src/admin-kit/tours.js:113
+msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
+msgstr "Jika dukungan perlu melihat ke dalam situs Anda, buatlah login sementara di sini. Login tersebut akan terhapus sendiri saat kedaluwarsa, dan Anda dapat menghapusnya kapan saja."
+
+#: src/admin-kit/tours.js:122
+msgid "Tell us what to build"
+msgstr "Beritahu kami apa yang ingin dibangun"
+
+#: src/admin-kit/tours.js:123
+msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
+msgstr "Kirimkan ide, permintaan fitur, atau masukan apa pun. Pesan tersebut akan langsung diteruskan ke tim."
+
+#. translators: %s: plugin name.
+#: src/admin-kit/Wizard.js:46
+#, js-format
+msgid "This takes a few minutes and sets up %s so it works on this site straight away. You can change everything later."
+msgstr "Proses ini membutuhkan waktu beberapa menit dan mengatur %s agar langsung berfungsi di situs ini. Anda dapat mengubah semuanya nanti."
+
+#: src/admin-kit/Wizard.js:62
+msgid "You are ready. If anything does not work as expected, we are one click away."
+msgstr "Anda sudah siap. Jika ada yang tidak berfungsi seperti yang diharapkan, kami hanya berjarak satu klik."
+
+#. translators: 1: step number, 2: number of steps, 3: step title.
+#: src/admin-kit/Wizard.js:89
+#, js-format
+msgid "Step %1$d of %2$d: %3$s"
+msgstr "Langkah %1$d dari %2$d: %3$s"
+
+#: src/admin-kit/Wizard.js:119
+msgid "Finish"
+msgstr "Selesai"
+
+#: src/admin-kit/Wizard.js:131
+msgid "Skip setup"
+msgstr "Lewati pengaturan"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Dibangun oleh Neil Lock, CEO dari Zinn Digital® Ltd"
@@ -5335,7 +6654,8 @@ msgid "See the Pro plans and pricing"
 msgstr "Lihat paket dan harga Pro"
 
 #: src/admin/App.js:113
-#: src/editor/visibility.js:42
+#: src/admin/index.js:29
+#: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Bahasa"
 
@@ -5553,6 +6873,14 @@ msgstr "Instruksi gaya (audiens, suara merek)"
 msgid "Save glossary"
 msgstr "Simpan glosarium"
 
+#: src/admin/index.js:22
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: src/admin/index.js:34
+msgid "Translation engine"
+msgstr "Mesin terjemahan"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -5570,10 +6898,6 @@ msgstr "Berjalan"
 #: src/admin/Jobs.js:195
 msgid "Finished"
 msgstr "Selesai"
-
-#: src/admin/Jobs.js:211
-msgid "Translate in the background"
-msgstr "Terjemahkan di latar belakang"
 
 #: src/admin/Jobs.js:216
 msgid "Set up a translation engine in the Engines tab first."
@@ -5652,7 +6976,7 @@ msgid "Content"
 msgstr "Konten"
 
 #: src/admin/Jobs.js:398
-#: src/admin/MenusTab.js:211
+#: src/admin/MenusTab.js:217
 msgid "Language"
 msgstr "Bahasa"
 
@@ -5699,47 +7023,47 @@ msgstr "Tersimpan. Koreksi Anda dilindungi dari penerjemahan mesin."
 msgid "The same menu, translated"
 msgstr "Menu yang sama, diterjemahkan"
 
-#: src/admin/MenusTab.js:169
+#: src/admin/MenusTab.js:172
 msgid "A separate menu per language"
 msgstr "Menu terpisah per bahasa"
 
-#: src/admin/MenusTab.js:172
+#: src/admin/MenusTab.js:178
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr "Secara default, setiap menu diterjemahkan: tautannya mengarah ke halaman yang diterjemahkan, beserta judulnya. Pilih menu tersendiri untuk suatu bahasa di sini."
 
-#: src/admin/MenusTab.js:207
+#: src/admin/MenusTab.js:213
 msgid "Shared text"
 msgstr "Teks bersama"
 
-#: src/admin/MenusTab.js:222
+#: src/admin/MenusTab.js:228
 msgid "Which text"
 msgstr "Teks mana"
 
-#: src/admin/MenusTab.js:227
+#: src/admin/MenusTab.js:233
 msgid "Menu labels"
 msgstr "Label menu"
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:238
 msgid "Templates, headers, footers and patterns"
 msgstr "Templat, tajuk, footer, dan pola"
 
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:242
 msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Templat, tajuk, kaki halaman, dan pola (Pro)"
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:258
 msgid "Translate the missing text"
 msgstr "Terjemahkan teks yang hilang"
 
-#: src/admin/MenusTab.js:257
+#: src/admin/MenusTab.js:264
 msgid "There is no text to translate here."
 msgstr "Tidak ada teks untuk diterjemahkan di sini."
 
-#: src/admin/MenusTab.js:268
+#: src/admin/MenusTab.js:279
 msgid "Corrected by a person, protected"
 msgstr "Dikoreksi oleh seseorang, dilindungi"
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:302
 msgid "Save corrections"
 msgstr "Simpan koreksi"
 
@@ -5822,13 +7146,9 @@ msgid "Problem"
 msgstr "Masalah"
 
 #: src/admin/SeoAudit.js:163
-#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Ubah"
-
-#: src/admin/Switchers.js:86
-msgid "Floating switcher"
-msgstr "Peralih mengapung"
 
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
@@ -5908,7 +7228,7 @@ msgstr "Widget Elementor dan Bricks adalah bagian dari Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
-#: src/pro__premium_only/visual/index.js:32
+#: src/pro__premium_only/visual/index.js:35
 msgid "Save"
 msgstr "Simpan"
 
@@ -6044,27 +7364,27 @@ msgstr "Tersimpan. Bagian yang Anda ubah ditandai sebagai telah diperiksa oleh s
 msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
 msgstr "Tata letak terjemahan ini telah diubah di editor, sehingga beberapa bagian tidak lagi berpasangan dengan aslinya. Bagian tanpa pasangan ditampilkan kosong; edit sisanya di editor."
 
-#: src/compare/index.js:96
+#: src/compare/index.js:97
 msgid "Open the editor"
 msgstr "Buka editor"
 
 #. translators: %s: a language tag such as en-US.
-#: src/compare/index.js:105
+#: src/compare/index.js:107
 #, js-format
 msgid "Original (%s)"
 msgstr "Asli (%s)"
 
 #. translators: %s: a language tag such as de-DE.
-#: src/compare/index.js:112
+#: src/compare/index.js:114
 #, js-format
 msgid "Translation (%s)"
 msgstr "Terjemahan (%s)"
 
-#: src/compare/index.js:162
+#: src/compare/index.js:167
 msgid "Save changes"
 msgstr "Simpan perubahan"
 
-#: src/compare/index.js:164
+#: src/compare/index.js:170
 msgid "Open in the editor"
 msgstr "Buka di editor"
 
@@ -6138,97 +7458,97 @@ msgstr "Belum diterjemahkan (salinan)"
 msgid "Save this post first, then translate it here."
 msgstr "Simpan postingan ini terlebih dahulu, lalu terjemahkan di sini."
 
-#: src/editor/translations-panel.js:148
+#: src/editor/translations-panel.js:149
 msgid "Side by side"
 msgstr "Berdampingan"
 
-#: src/editor/translations-panel.js:153
+#: src/editor/translations-panel.js:154
 msgid "View"
 msgstr "Lihat"
 
-#: src/editor/translations-panel.js:161
+#: src/editor/translations-panel.js:164
 msgid "Unlock so it can be translated again"
 msgstr "Buka kunci agar dapat diterjemahkan kembali"
 
-#: src/editor/translations-panel.js:176
+#: src/editor/translations-panel.js:179
 msgid "Protect"
 msgstr "Lindungi"
 
-#: src/editor/translations-panel.js:184
+#: src/editor/translations-panel.js:187
 msgid "Publish the translations"
 msgstr "Publikasikan terjemahan"
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:196
+#: src/editor/translations-panel.js:199
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
 msgstr[0] "Terjemahkan ke dalam %d bahasa"
 
 #. translators: %s: a language code.
-#: src/editor/translations-panel.js:214
+#: src/editor/translations-panel.js:217
 #, js-format
 msgid "%s: translated."
 msgstr "%s: diterjemahkan."
 
-#: src/editor/visibility.js:46
+#: src/editor/visibility.js:57
 msgid "Show this block"
 msgstr "Tampilkan blok ini"
 
-#: src/editor/visibility.js:49
+#: src/editor/visibility.js:62
 msgid "In every language"
 msgstr "Dalam setiap bahasa"
 
-#: src/editor/visibility.js:50
+#: src/editor/visibility.js:66
 msgid "Only in the languages ticked"
 msgstr "Hanya dalam bahasa yang dicentang"
 
-#: src/editor/visibility.js:51
+#: src/editor/visibility.js:73
 msgid "In every language except those ticked"
 msgstr "Dalam semua bahasa kecuali yang dicentang"
 
-#: src/pro__premium_only/editor/index.js:45
+#: src/pro__premium_only/editor/index.js:48
 msgid "Image per language"
 msgstr "Gambar per bahasa"
 
-#: src/pro__premium_only/editor/index.js:49
+#: src/pro__premium_only/editor/index.js:52
 msgid "Show another image to readers of a language, for example a banner with words on it."
 msgstr "Tampilkan gambar lain kepada pembaca dari suatu bahasa, misalnya spanduk dengan teks di atasnya."
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:82
+#: src/pro__premium_only/editor/index.js:88
 #, js-format
 msgid "Replace the %s image"
 msgstr "Ganti gambar %s"
 
 #. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:87
+#: src/pro__premium_only/editor/index.js:96
 #, js-format
 msgid "Choose a %s image"
 msgstr "Pilih gambar %s"
 
-#: src/pro__premium_only/editor/index.js:108
+#: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
 msgstr "Gunakan gambar asli"
 
-#: src/pro__premium_only/visual/index.js:17
 #: src/pro__premium_only/visual/index.js:19
+#: src/pro__premium_only/visual/index.js:22
 msgid "Correct this translation"
 msgstr "Perbaiki terjemahan ini"
 
-#: src/pro__premium_only/visual/index.js:45
+#: src/pro__premium_only/visual/index.js:48
 msgid "Saving…"
 msgstr "Menyimpan…"
 
-#: src/pro__premium_only/visual/index.js:73
+#: src/pro__premium_only/visual/index.js:76
 msgid "Translated text. Press Enter to correct it."
 msgstr "Teks terjemahan. Tekan Enter untuk memperbaikinya."
 
-#: src/pro__premium_only/visual/index.js:97
+#: src/pro__premium_only/visual/index.js:105
 msgid "Click any outlined text to correct its translation."
 msgstr "Klik teks apa pun yang digariskan untuk memperbaiki terjemahannya."
 
-#: src/pro__premium_only/visual/index.js:101
+#: src/pro__premium_only/visual/index.js:109
 msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr "Tidak ada teks terjemahan yang ditemukan di halaman ini untuk diedit di sini. Gunakan editor berdampingan sebagai gantinya."
 
