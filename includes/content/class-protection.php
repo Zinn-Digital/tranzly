@@ -51,8 +51,8 @@ final class Protection {
 		if ( ! $after instanceof \WP_Post || ! $before instanceof \WP_Post || wp_is_post_revision( $after ) || wp_is_post_autosave( $after ) ) {
 			return;
 		}
-		if ( get_current_user_id() <= 0 || ! self::is_translation( (int) $post_id ) ) {
-			return;
+		if ( get_current_user_id() <= 0 || Translator::is_writing( (int) $post_id ) || ! self::is_translation( (int) $post_id ) ) {
+			return; // Nobody signed in, or Tranzly's own machine write: not a person's edit.
 		}
 		if ( $after->post_title === $before->post_title && $after->post_content === $before->post_content && $after->post_excerpt === $before->post_excerpt ) {
 			return; // A status or date change is not an edit of the words.

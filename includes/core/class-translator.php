@@ -44,6 +44,20 @@ final class Translator {
 	public const PROTECTED = array( 'human', 'legacy' );
 
 	/**
+	 * The translation Tranzly itself is writing right now (0 when none).
+	 *
+	 * ⛔ Protection's `post_updated` marker cannot tell this write from a person's edit — the queue
+	 * runs as the job's owner, so there IS a current user — and the `machine` marker is written
+	 * only after `wp_update_post()` returns. A worker SIGKILLed between the two left the
+	 * translation marked `human`, so the resumed job skipped it as protected and it could never be
+	 * re-translated again (main's post-merge suite, 2026-09-28: done 499, skipped 1). An in-memory
+	 * flag dies with the process, so a kill can no longer leave a false `human` behind.
+	 *
+	 * @var int
+	 */
+	private static int $writing = 0;
+
+	/**
 	 * Translate a post into a language, creating the translation when it does not exist.
 	 *
 	 * @param int                  $source_id The original post.
@@ -181,8 +195,13 @@ final class Translator {
 		 * @param \WP_Post              $post       The original.
 		 * @param string                $code       The target language.
 		 */
-		$update = (array) apply_filters( 'tranzly_translated_post_fields', $update, $texts, $post, $code );
-		$saved  = wp_update_post( wp_slash( $update ), true );
+		$update        = (array) apply_filters( 'tranzly_translated_post_fields', $update, $texts, $post, $code );
+		self::$writing = (int) $target;
+		try {
+			$saved = wp_update_post( wp_slash( $update ), true );
+		} finally {
+			self::$writing = 0;
+		}
 		if ( is_wp_error( $saved ) ) {
 			return $saved;
 		}
@@ -552,6 +571,16 @@ final class Translator {
 		}
 
 		return $out;
+	}
+
+	/**
+	 * Is Tranzly itself writing this translation right now (not a person)?
+	 *
+	 * @param int $post_id A post.
+	 * @return bool
+	 */
+	public static function is_writing( int $post_id ): bool {
+		return 0 !== self::$writing && self::$writing === $post_id;
 	}
 
 	/**

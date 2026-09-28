@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.7.0
+Stable tag: 3.8.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -147,6 +147,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.8.0 =
+* Fix: a translation job stopped at the exact moment a translation was saved no longer marks it as edited by a person, so the resumed job finishes it and it can be translated again later.
 
 = 3.7.0 =
 * Admin screens: screen readers see one page structure (the admin shell no longer adds a second main area inside WordPress's own).
