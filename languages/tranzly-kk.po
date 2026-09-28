@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Барлық төрт үлкен SEO плагиніне арналған SEO өрістері"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Таңдамалы өрістер"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Бір басу арқылы бір жазбаны аудару"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Бүкіл сайтты жаппай аудару"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Визуалды интерфейс редакторы"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Қарау және мақұлдау"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Адам аудармашылары үшін экспорттау және импорттау"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "WPML, Polylang немесе TranslatePress жүйесінен ауысыңыз"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce көп валюtалы"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "AI сапасын тексеру"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Не аударылады"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Жұмыс процесі"
 
@@ -852,6 +858,7 @@ msgstr "Тест"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Жою"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Қолданылу мақсаты"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Модель"
 
@@ -1303,7 +1311,7 @@ msgstr "Лимиттер мен рұқсаттар сақталды."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Бұл тіл – бұл сайттың тілдерінің бірі емес."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Бұл мазмұн түрі аударылмайды."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "%s мәтіні бұл сайтта жоқ. Бетті қайта жүктеңіз."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Бұл мәтінді ешқандай аударма жүйесі өңдей алмады."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Басқа тілдеріңіздің бірін таңдаңыз."
 
@@ -1422,7 +1435,8 @@ msgstr "Бұл бетті аудару"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Бұл элементті аударуға рұқсат етілмеген."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Бұл элементтің бұл тілдегі нұсқасы қазірдің өзінде бар."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Бұл аударма тетігі бұл сайтта қолжетімді емес."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s үшін мән рұқсат етілген нұсқалардың бірі емес."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Бұл сайтта фондық кезек қолжетімді емес."
 
@@ -1489,6 +1504,7 @@ msgstr "Бұл элемент аударма тапсырмасының бөлі
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Бұл аударманы өзгертуге тыйым салынған."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Бұл элемент қазірдің өзінде сол тілде жазылған."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Бұл аударма адам тарапынан өңделген (немесе импортталған), сондықтан ол қорғалған. Оны қайтадан аудару үшін құлпын ашыңыз."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Бұл элемент жоқ."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Әзірге ешқандай аударма қозғалтқышы орнатылмаған. Tranzly → Engines бөлімінен оған арналған кілтті қосыңыз."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Бұл аударма қозғалтқышы әлі бапталған жоқ: алдымен оның кілтін қосыңыз."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Бұл мәтінді басқа тапсырма қазірдің өзінде аударып жатыр; бұл элемент сол жауапты пайдаланады."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Ешбір аударма жүйесі бұл элементті ала алмады."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Қозғалтқыш бұл элементтің әрбір бөлігі үшін аударманы қайтармады. Ештеңе өзгертілмеді."
 
@@ -1671,6 +1691,7 @@ msgstr "%1$s параметрін %2$s ішіне біріктіргіңіз к�
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Әрекеттер"
 
@@ -4712,6 +4733,7 @@ msgstr "Сынақ нұсқасын бастау"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Күйі"
@@ -5014,6 +5036,7 @@ msgstr "%1$s өнімі сізге ұнап жатыр ма? %3$d күндік �
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Түрі"
 
@@ -5692,6 +5715,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s бұрын"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Қайталанатын элементтері бар блоктар және синхрондалған үлгілер"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Пікірлер мен шолулар"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "%s тілінен автоматты түрде аударылған."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce валюталары"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Валюта"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Бағам көзі дүкеннің валютасы болып табылатын %s үшін бағамды көрсетпейді."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" — бұл WooCommerce танымайтын валюта немесе ол дүкеннің өз валютасы."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "%s үшін нөлден жоғары ставканы енгізіңіз, мысалы, 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Дөңгелектеу қадамдары мен баға соңындағы мәндер 0.05 немесе 0.99 сияқты сомалар болып табылады."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Тапсырыс бойынша өрістер (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Әр өріс үшін аударуды, көшіруді немесе бос қалдыруды таңдаңыз."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Формалар (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Мөлшерлемелерді өзім енгіземін"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Еуропа орталық банкі, күн сайын жаңартылады (тегін, тіркелу қажет емес)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Еуропалық орталық банк %d деп жауап берді. Соңғы мөлшерлемелер өзгеріссіз қалды."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Еуропалық орталық банктің арнасы ешқандай ставкаларды ұстаған жоқ. Соңғы ставкалар сақталады."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Бұл бағам көзі қолжетімсіз."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEO плагиндері (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Тақырып пен плагин мәтіні"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Бұл тақырып немесе плагин бұл сайтта белсенді емес."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Тіл ұсынысы"
@@ -5946,11 +6062,134 @@ msgstr "Мәтін өлшемі"
 msgid "Switcher"
 msgstr "Ауыстырғыш"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(тақырып жоқ)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Мұнда түзететін ешнәрсе жоқ."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Бұл сайтта ешқандай мазмұн түрі аударылмайды."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Бұл сайтта бұл мазмұн түрі аударылмаған."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Бұл таңдауда аударылатын ештеңе жоқ."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Аудару үшін кемінде бір тілді таңдаңыз."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Аудармаларды экспорттауға рұқсат етілмеген."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Импорттау үшін XLIFF немесе CSV файлын таңдаңыз."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Бұл Tranzly XLIFF немесе CSV файлы емес. Алдымен біреуін экспорттап, аударыңыз да, осында импорттаңыз."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Файлды импорттау үшін сақтау мүмкін болмады. `uploads` қалтасына жазу құқығы бар-жоғын тексеріңіз."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Бұл импорт енді жоқ. Файлды қайта жүктеңіз."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Бұл бет бұл сайтта енді жоқ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Бұл файл бұл сайтта жоқ тілге арналған."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "%1$s %2$d сілтемесін жасау мүмкін емес: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "%1$d-жазба: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Бұл сайтта бұл плагиннен ешқандай дерек табылмады."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Бұл осы сайттағы ешбір нәрсенің аудармасы емес."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Тексерілетін мәтін жоқ."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Жасанды интеллект параметрлері бұл құрастыруға кірмейді."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Жасанды интеллект провайдері жауап бермеді."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "AI моделі бұл беттің әрбір бөлігін бағалаған жоқ. Қайтадан көріңіз немесе басқа модельді таңдаңыз."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Аударушы"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Аударманы шолушы"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Рецензент бұл аудармаға өзгерістер енгізуді сұрады."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Рецензент бұл аудармаға өзгертулер енгізуді сұрады: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Бұл аударма тексерушіні күтуде. Оны жариялау (тексеруші ретінде) оны мақұлдайды."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Тек аударманы ғана тексеруге болады."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Түпнұсқа өзгерген кезде не болатынын таңдаңыз: ештеңе етпеу, оның аудармаларын ескірген деп белгілеу немесе оларды қайтадан аудару."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Сапа шегі 0 бен 100 аралығындағы ұпай болып табылады."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Жалпы шолу бетінде жасырын ұсыныстарды қайта көрсету"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Барлығы"
 
@@ -5975,6 +6214,8 @@ msgid "Select"
 msgstr "Таңдау"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Беттер"
 
@@ -6225,28 +6466,28 @@ msgstr "Жарық"
 msgid "Dark"
 msgstr "Қараңғы"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Түс схемасы"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Көмек"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Бұл экранға арналған нұсқаулық"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Tурмен танысу"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Көмеk алу немесе қате туралы хабарлау"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Плагин экрандары"
 
@@ -6661,6 +6902,7 @@ msgstr "Pro жоспарлары мен бағаларын көру"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Тілдер"
@@ -6887,6 +7129,213 @@ msgstr "Параметрлер"
 msgid "Translation engine"
 msgstr "Аудару қозғалтқышы"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Tranzly бұл сайтта не аударады"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "табылды, сіздің контентіңізбен аударылды"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "бұл сайтта жоқ"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Tranzly Pro көмегімен: Elementor, Bricks, Divi, Beaver Builder, Oxygen және WPBakery беттері; WooCommerce-тегі барлық нәрсе, келушінің валютасындағы бағалармен; Yoast SEO, Rank Math, SEOPress және All in One SEO өрістері; ACF, Meta Box және Pods өрістері; формалар және олардың электрондық хаттары; сайтыңыздың тақырыбы мен плагиндерінің өз мәтіні; сондай-ақ пікірлер мен шолулар."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Дүкен мәтіні мен электрондық хаттар"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Электрондық пошта тақырыптары мен айдарлар, төлем және жеткізу әдістерінің атаулары, сондай-ақ тапсырыс беру ескертулері. Әр тапсырыстың электрондық хаттары ол жасалған тілде жіберіледі."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Формалар және олардың электрондық хаттары"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Әрбір форма жазбалардың бір тізімін сақтайды; оның белгілері, түймелері, хабарламалары мен электрондық пошталары келушінің тілінде көрсетіледі."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Сақталды."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Әзірге ешқандай ACF, Meta Box немесе Pods өрістері анықталмаған."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Өріс"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Қайда"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Ауданда"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Аудармада %s қатесіне не болады"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Аудару"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Күйінше көшіріп алыңыз"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Бос қалдыру"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Дүкен валютасы"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Валюталар"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Басқа валюталардағы бағаларды көрсету (дүкеннің өз валютасы — %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Валюта бағамдары"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Тарифтер соңғы рет %s жаңартылды."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Баamамдар әлі алынған жоқ."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Тарифтерді қазір жаңарту"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Жаңа валюта"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Таңдау…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Бағасы (әр %s үшін)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Тарифті қолмен енгізсеңіз, ол сақталады: күнделікті жаңарту оны өзгертпейді."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Дөңгелектеу"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Жоқ"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Соңын дөңгектеу"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Жақын мәнге дейін дөңгелектеу"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Төмен қарай дөңгелету"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Мынаған дейін дөңгелеу (мысалы, 1, 0.05 немесе 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Бағалар (мысалы, 0.99) мына мәнмен аяқталады"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Валюта қосу"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Қай келушілерге қай валюта көрсетіледі"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Ел бойынша: екі әріпті ел коды (мысалы, CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "%s келушілері"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Келушілерге таңдауға рұқсат беріңіз (қысқа код [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Бағалар енді cookie файлына немесе келушінің еліне байланысты: беттің кэші \"tranzly_currency\" cookie файлы бойынша өзгеретініне немесе дүкен беттерін қоспайтынына көз жеткізіңіз."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Валюталарды сақтау"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Тақырыбыңыз бен плагиндеріңіз өзі шығаратын сөздер (түймелер, белгілер). Тақырыпты немесе плагинды бір рет оқып шығыңыз, содан кейін оның мәтінін осында аударыңыз; сіздің аудармаңыз плагиннің өзінікінен басым түседі."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d мәтін"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "әлі оқылған жоқ"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Қайта оқу"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Мәтінін оқу"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Аудару"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6946,6 +7395,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d жазба, %2$s таңба: өз аккаунтиңізде шамамен $%3$s."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Аударуды бастау"
 
@@ -6983,6 +7433,11 @@ msgstr "Мазмұн"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Тіл"
 
@@ -7017,11 +7472,13 @@ msgstr "Мәзірлер сақталды."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d мәтін аударылды."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Сақталды. Түзетулеріңіз машиналық аудармадан қорғалған."
 
@@ -7058,48 +7515,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Үлгілер, тақырыптар, төменгі колонтитулдар және өрнектер (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Жетіспейтін мәтінді аудару"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Мұнда аударылатын мәтін жоқ."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Адам тарапынан түзетілген, қорғалған"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Өзгерістерді сақтау"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Тілдер және параметрлер"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Моторлар"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Аударма тапсырмалары"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Мекенжайлар мен SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Тіл ауыстырғыштары"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO аудиті"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Мәзірлер және ортақ мәтін"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Аудару күйі"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Интеграциялар"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7144,6 +7614,7 @@ msgid "The whole language has been checked."
 msgstr "Бүкіл тіл тексерілді."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Бет"
 
@@ -7152,17 +7623,198 @@ msgid "Problem"
 msgstr "Ақаулық"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Өңдеу"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "%1$d тапсырмасы басталды: фон режимінде %2$d бет аударылып жатыр. Оны «Аударма тапсырмалары» бөлімінен қадағалаңыз."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d аударма фон режимінде тексеріліп жатыр. Ұпайлар келген сайын осында көрсетіледі."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Жoқ"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Ескірген"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Аударылған"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Бір адам өңдеген"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Машиналық аударма"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Tezserуdі kútýde"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Adamның тексеруі қажет"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Барлығы"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Жаңартылған"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly әлі де қай ескі аудармалардың ескіргенін анықтап жатыр. Бұл процес жүріп жатқанда «ескірген» сандары өсе түседі."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Мазмұн түрі"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Барлық мазмұн"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Орташа сапа"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d аударылған (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Көрсету"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Барлығын аударып шығу"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Барлық ескірген элементтерді жаңарту"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "AI арқылы сапаны тексеру"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Ұпайы төмен беттерді қайта аударыңыз"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Мұнда ештеңе жоқ."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Сапа"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "жеке тұлға арқылы"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "тексерілуді күтуде"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Қатар қою"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Көбірек көрсету"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Бүкіл сайтты жаппай аудару (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Tranzly Pro көмегімен контент түрлері мен тілдерді таңдаңыз, бағалауды көріңіз және бүкіл сайтты бір сәтте аударыңыз."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d фондық тапсырма іске қосылды, әр тілге біреуден. Оларды «Аударма тапсырмалары» бөлімінен қадағалаңыз."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Мазмұн түрлері"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Нені аудару керек"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Тек жетіспейтіні"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Tek ғана мерзімі өткендер"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Барлығы (адам өңдеген беттер өзгеріссіз қалады)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Бағалау"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d бет, %2$s таңба. Бұл қызмет бағаны жарияламайды."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d бет, %2$s таңба, шамамен $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Мәтінді табу"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "Тағы %d: тізімді тарылту үшін \"Мәтінді табу\" деп теріңіз."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Қандай тақырыпта болсын, әр беттің бұрышындағы кішкентай түйме, ешқандай баптаусыз."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Қайда"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7362,6 +8014,199 @@ msgstr "%s көмегімен бірлесіп жұмыс істеуде."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Әр мекенжай сөзі 2 мен 12 аралығындағы кіші әріптерден, цифрлардан немесе дефистерден тұруы тиіс."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Жаңарту кезінде автоматты түрде аудару, рецензент рөлдері, аудармашыларға арналған XLIFF экспорттау, WPML, Polylang немесе TranslatePress жүйесінен ауысу және AI сапасын тексеру Tranzly Pro мүмкіндіктерімен бірге келеді."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Түпнұсқа өзгерген кезде"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Bet өңделген кезде"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Оның аудармаларын ескірген деп белгілеу"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Оның аудармаларын фон режимінде қайта аудару"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Ешнтең етпеу"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Адам өңдеген аударма ешқашан үстіне жазылып кетпейді; оның орнына ескірген деп белгіленеді."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Жаңа беттер жарияланған кезде оларды әрбір тілге аударыңыз"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Екінші AI моделі әр аударманы түпнұсқасымен қатар оқып шығады, оған баға қояды және қателерді атайды. Ол AI параметрлеріндегі өз AI кілтіңізді пайдаланады. Тексеруді Аударма күйі арқылы бастаңыз."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "AI провайдері"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Жасанды интеллект параметрлерінің жалпы моделі"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Ұсынылатын"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Бұл ұпайдан төменгі беттің адам тарапынан тексерілуі қажет"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Тек рецензент мақұлдаған аудармаларды ғана жариялаңыз"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Adamдарға Аудармашы рөлін беріңіз (түпнұсқаларды емес, аудармаларды өңдейді, жариялай алмайды) немесе Аударманы тексеруші рөлін беріңіз (сонымен қатар бекітеді). Тексерушілер сонымен қатар «Күтудегі» («Pending») астындағы «Жазбалар» және «Беттер» тізімдерінде күтіп тұрған барлық нәрсені табады; онда біреуін жариялау оны бекітеді."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Пайдаланушыларды басқару"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Тексеруді күтіп тұрған ештеңе жоқ."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Аударушыға арналған ескертпе (міндетті емес)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Қатар оқып шығу"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Мақұлдау"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Өзгерістерді сұрау"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d аударма импортталды және машиналық аудармадан қорғалды."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Аударушылар үшін экспорттау және импорттау"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Әлі аударылған жоқ"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Бұрын аударылған"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Пішімдеу"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (аудару құралдары)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (электрондық кестелер)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Файлды жүктеу"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Аударылған файлды импорттау"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Болдырылмады: %1$d сілтеме жойылды, %2$d импортталған бет жойылды."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Құрғақ іске қосу, ештеңе өзгерген жоқ:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Импортталды:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d тіл қосылды, %2$d аударма байланыстырылды, %3$d бет құрастырылды, %4$d мәтін."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Алдымен басқа плагинді өшіріңіз (оның мекенжайлары мен ауыстырғыштері Tranzly-мен қақтығысады). Оның деректері өз орнында қалады, сондықтан қайта қоса аласыз; «Болдырмау» әрекеті импорт қосқан нәрсені дәл жояды."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Бұл сайтта осы плагиннен ешқандай дерек жоқ."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Тілдер: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "әлі белсенді: алдымен оны өшіріңіз."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Тесттік іске қосу"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Импорттау"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Импортты болдырмау"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Пікірлер мен өнім шолулары"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Әрбір тіл өзінікін сақтайды"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Әр нұсқадағы әр тілдегі пікірлерді көрсету"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Олардың барлығын оқырман тіліне аударып көрсету"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Аудару мақұлданған әрбір пікір үшін сіздің аударма қозғалтқышыңызды пайдаланады. Спам және модерацияны күтіп тұрған пікірлер ешқашан жіберілмейді."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Сақталды. Өзгерткен бөліктеріңіз адам тарапынан тексерілді деп белгіленді және бұл аударма машиналық аудармадан қорғалған."
@@ -7394,11 +8239,6 @@ msgstr "Өзгерістерді сақтау"
 msgid "Open in the editor"
 msgstr "Редактордан ашу"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Машиналық аударма"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Adam тексерген"
@@ -7406,10 +8246,6 @@ msgstr "Adam тексерген"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Импортталған"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Әлі аударылған жоқ"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7463,10 +8299,6 @@ msgstr "Әлі аударылмаған (көшірме)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Алдымен бұл жазбаны сақтаңыз, содан кейін мұнда аударыңыз."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Қатар қою"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

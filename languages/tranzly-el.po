@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Πεδία SEO και για τα τέσσερα μεγάλα πρόσθετα SEO"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Προσαρμοσμένα πεδία"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Μεταφράστε μία δημοσίευση με ένα κλικ"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Μαζική μετάφραση ολόκληρου του ιστότοπου"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Οπτικός επεξεργαστής διεπαφής"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Έλεγχος και έγκριση"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Εξαγωγή και εισαγωγή για ανθρώπους μεταφραστές"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Μετάβαση από WPML, Polylang ή TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "Πολλαπλά νομίσματα WooCommerce"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Έλεγχος ποιότητας AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Τι μεταφράζεται"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Ροή εργασίας"
 
@@ -852,6 +858,7 @@ msgstr "Δοκιμή"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Κατάργηση"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Χρησιμοποιείται για"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Μοντέλο"
 
@@ -1303,7 +1311,7 @@ msgstr "Τα όρια και τα δικαιώματα αποθηκεύτηκα�
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Αυτή η γλώσσα δεν είναι μία από τις γλώσσες αυτού του ιστότοπου."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Αυτό το είδος περιεχομένου δεν μεταφράζεται."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Το κείμενο %s δεν βρίσκεται πλέον σε αυτόν τον ιστότοπο. Ανανεώστε τη σελίδα."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Καμία μηχανή μετάφρασης δεν μπόρεσε να αποδώσει αυτό το κείμενο."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Επιλέξτε μία από τις άλλες γλώσσες σας."
 
@@ -1422,7 +1435,8 @@ msgstr "Μετάφραση σε αυτή τη σελίδα"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Δεν επιτρέπεται να μεταφράσετε αυτό το στοιχείο."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Αυτό το στοιχείο διαθέτει ήδη μια έκδοση σε αυτή τη γλώσσα."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Αυτή η μηχανή μετάδοσης δεν είναι διαθέσιμη σε αυτόν τον ιστότοπο."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Η τιμή για το %s δεν είναι μία από τις επιτρεπόμενες επιλογές."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Η ουρά παρασκηνίου δεν είναι διαθέσιμη σε αυτόν τον ιστότοπο."
 
@@ -1489,6 +1504,7 @@ msgstr "Αυτό το στοιχείο δεν αποτελεί μέρος μια
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Δεν σας επιτρέπεται να αλλάξετε αυτή τη μετάφραση."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Αυτό το στοιχείο έχει ήδη γραφτεί σε αυτή τη γλώσσα."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Αυτή η μετάφραση έχει επεξεργαστεί από άνθρωπο (ή έχει εισαχθεί), επομένως προστατεύεται. Ξεκλειδώστε την για να τη μεταφράσετε ξανά."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Αυτό το στοιχείο δεν υπάρχει."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Δεν έχει ρυθμιστεί ακόμη καμία μηχανή μετάφρασης. Προσθέστε ένα κλειδί για μία στο Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Αυτή η μηχανή μετάφρασης δεν έχει ρυθμιστεί ακόμη: προσθέστε πρώτα το κλειδί της."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Το ίδιο κείμενο μεταφράζεται από άλλη εργασία αυτή τη στιγμή· αυτό το στοιχείο θα χρησιμοποιήσει αυτή την απάντηση."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Κανμία μηχανή μετάφρασης δεν μπόρεσε να αποδεχτεί αυτό το στοιχείο."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Η μηχανή δεν επέστρεψε μετάφραση για κάθε μέρος αυτού του στοιχείου. Δεν έγινε καμία αλλαγή."
 
@@ -1671,6 +1691,7 @@ msgstr "Θέλετε να συγχωνεύσετε το %1$s στο %2$s;"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Ενέργειες"
 
@@ -4711,6 +4732,7 @@ msgstr "Έναρξη δοκιμής"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Κατάσταση"
@@ -5013,6 +5035,7 @@ msgstr "Πώς σας φαίνεται το %1$s μέχρι τώρα; Δοκιμ
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Τύπος"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "πριν από %s"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Μπλοκ με επαναλαμβανόμενα στοιχεία και συγχρονισμένα μοτίβα"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Σχόλια και κριτικές"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Αυτόματη μετάφραση από %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Νομίσματα WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Νόμισμα"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Η πηγή τιμών δεν παρέχει προσφορά για το νόμισμα του καταστήματος %s."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "Το \"%s\" δεν είναι νόμισμα που γνωρίζει το WooCommerce, ή είναι το ίδιο το νόμισμα του καταστήματος."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Εισάγετε μια τιμή μεγαλύτερη από το μηδέν για το %s, όπως 0,92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Τα βήματα στρογγυλοποίησης και τα καταληκτικά ψηφία τιμών είναι ποσά, όπως 0.05 ή 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Προσαρμοσμένα πεδία (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Επιλέξτε μετάδοση, αντιγραφή ή αφήστε το κενό για κάθε πεδίο."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Φόρμες (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Καταχωρίζω τις χρεώσεις μόνος μου"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Εὐρωπαϊκὴ Κεντρικὴ Τράπεζα, ἐνημερώνεται καθημερινὰ (δωρεάν, δὲν ἀπαιτεῖται λογαριασμός)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Η Ευρωπαϊκή Κεντρική Τράπεζα απάντησε %d. Τα τελευταία επιτόκια διατηρούνται."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Η ροή της Ευρωπαϊκής Κεντρικής Τράπεζας δεν περιείχε επιτόκια. Διατηρούνται τα τελευταία επιτόκια."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Αυτή η πηγή συναλλαγματικής ισοτιμίας δεν είναι διαθέσιμη."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Πρόσθετα SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Κείμενο θέματος και προσθέτων"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Αυτό το θέμα ή το πρόσθετο δεν είναι ενεργό σε αυτόν τον ιστότοπο."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Πρόταση γλώσσας"
@@ -5945,11 +6061,134 @@ msgstr "Μέγεθος κειμένου"
 msgid "Switcher"
 msgstr "Εναλλαγή"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(χωρίς τίτλο)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Δεν υπάρχει τίποτα για διόρθωση εδώ."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Κανένας τύπος περιεχομένου δεν μεταφράζεται σε αυτόν τον ιστότοπο."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Αυτός ο τύπος περιεχομένου δεν έχει μεταφραστεί σε αυτόν τον ιστότοπο."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Δεν υπάρχει τίποτα προς μετάφραση σε αυτή την επιλογή."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Επιλέξτε τουλάχιστον μία γλώσσα για μετάφραση."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Δεν επιτρέπεται να εξάγετε μεταφράσεις."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Επιλέξτε ένα αρχείο XLIFF ή CSV για εισαγωγή."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Αυτό δεν είναι αρχείο Tranzly XLIFF ή CSV. Εξάγετε πρώτα ένα, μεταφράστε το και εισαγάγετέ το εδώ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Δεν ήταν δυνατή η αποθήκευση του αρχείου για εισαγωγή. Ελέγξτε ότι ο φάκελος μεταφορτώσεων έχει δικαιώματα εγγραφής."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Αυτή η εισαγωγή δεν υπάρχει πλέον. Ανεβάστε το αρχείο ξανά."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Αυτή η σελίδα δεν βρίσκεται πλέον σε αυτόν τον ιστότοπο."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Το αρχείο προορίζεται για μια γλώσσα που δεν διαθέτει αυτός ο ιστότοπος."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Δεν ήταν δυνατή η σύνδεση του %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Αάρθρο #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Δεν βρέθηκαν δεδομένα από αυτό το πρόσθετο σε αυτόν τον ιστότοπο."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Αυτή δεν είναι μετάφραση κανενός στοιχείου σε αυτόν τον ιστότοπο."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Δεν υπάρχει κείμενο προς έλεγχο."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Οι ρυθμίσεις τεχνητής νοημοσύνης δεν αποτελούν μέρος αυτής της έκδοσης."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Ο πάροχος τεχνητής νοημοσύνης δεν απάντησε."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Το μοντέλο τεχνητής νοημοσύνης δεν βαθμολόγησε κάθε μέρος αυτής της σελίδας. Δοκιμάστε ξανά ή επιλέξτε άλλο μοντέλο."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Μεταφραστής"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Ελεγκτής μετάφρασης"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Ένας αξιολογητής ζήτησε αλλαγές σε αυτήν τη μετάφραση."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Ένας αξιολογητής ζήτησε αλλαγές σε αυτή τη μετάφραση: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Ατή η μετάφραση αναμένει έγκριση. Η δημοσίευσή της (ως αξιολογητής) την εγκρίνει."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Μόνο μια μετάφραση μπορεί να αξιολογηθεί."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Επιλέξτε τι συμβαίνει όταν αλλάζει ένα πρωτότυπο: τίποτα, σήμανση των μεταφράσεών του ως παρωχημένων ή εκ νέου μετάφρασή τους."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Το όριο ποιότητας είναι μια βαθμολογία από 0 έως 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Εμφάνιση κρυφών προτάσεων στην Επισκόπηση ξανά"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Όλα"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "Επιλογή"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Σελίδες"
 
@@ -6224,28 +6465,28 @@ msgstr "Φωτεινό"
 msgid "Dark"
 msgstr "Σκοτεινό"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Χρωματικός συνδυασμός"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Οδηγός για αυτήν την οθόνη"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Κάντε την περιήγηση"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Λάβετε βοήθεια ή αναφέρετε ένα σφάλμα"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Οθόνες προσθέτων"
 
@@ -6659,6 +6900,7 @@ msgstr "Δείτε τα προγράμματα Pro και τις τιμές"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Γλώσσες"
@@ -6885,6 +7127,213 @@ msgstr "Ρυθμίσεις"
 msgid "Translation engine"
 msgstr "Μηχανή μετάφρασης"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Τι μεταφράζει το Tranzly σε αυτόν τον ιστότοπο"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "βρέθηκε, μεταφράστηκε με το περιεχόμενό σας"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "όχι σε αυτόν τον ιστότοπο"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Με το Tranzly Pro: σελίδες Elementor, Bricks, Divi, Beaver Builder, Oxygen και WPBakery· τα πάντα στο WooCommerce, με τιμές στο νόμισμα του επισκέπτη· τα πεδία SEO των Yoast SEO, Rank Math, SEOPress και All in One SEO· πεδία ACF, Meta Box και Pods· φόρμες και τα e-mail τους· τα κείμενα του θέματός σας και των προσθέτων σας· και σχόλια και κριτικές."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Κείμενα και μηνύματα ηλεκτρονικού ταχυδρομείου καταστήματος"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Τα θέματα και οι επικεφαλίδες των email, τα ονόματα των μεθόδων πληρωμής και αποστολής, καθώς και οι ειδοποιήσεις ολοκλήρωσης αγοράς. Τα email κάθε παραγγελίας αποστέλλονται στη γλώσσα στην οποία υποβλήθηκε."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Φόρμες και τα email τους"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Κάθε φόρμα διατηρεί μία λίστα καταχωρίσεων· οι ετικέτες, τα κουμπιά, τα μηνύματα και τα email της εμφανίζονται στη γλώσσα του επισκέπτη."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Αποθηκεύτηκε."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Δεν έχουν οριστεί ακόμη πεδία ACF, Meta Box ή Pods."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Πεδίο"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Πού"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Σε μετάφραση"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Τι συμβαίνει στο %s σε μια μετάφραση"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Μετάφρασέ το"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Αντιγράψτε το όπως είναι"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Αφήστε το κενό"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Το νόμισμα του καταστήματος"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Νομίσματα"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Εμφάνιση τιμών σε άλλα νομίσματα (του καταστήματος είναι %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Ισοτιμίες συναλλάγματος"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Οι τιμές ενημερώθηκαν τελευταία φορά στις %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Οι χρεώσεις δεν έχουν ανακτηθεί ακόμη."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Ενημερώστε τις τιμές τώρα"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Νέο νόμισμα"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Επιλογή…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Χρέωση (ανά 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Η καταχώριση μιας τιμής την διατηρεί: η ημερήσια ενημέρωση δεν θα την αλλάξει."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Στρογγυλοποίηση"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Κανένα"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Στρογγυλοποίηση προς τα πάνω"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Στρογγυλοποίηση στον πλησιέστερο"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Στρογγυλοποίηση προς τα κάτω"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Στρογγυλοποίηση σε (για παράδειγμα 1, 0,05 ή 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Οι τιμές λήγουν σε (για παράδειγμα 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Προσθήκη νομίσματος"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Ποιοι επισκέπτες βλέπουν ποιο νόμισμα"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Ανά χώρα: διψήφιος κωδικός χώρας (για παράδειγμα CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Επισκέπτες από %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Αφήστε τους επισκέπτες να επιλέξουν (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Οι τιμές εξαρτώνται πλέον από ένα cookie ή από τη χώρα του επισκέπτη: βεβαιωθείτε ότι η κρυφή μνήμη της σελίδας σας (page cache) ποικίλλει ανάλογα με το cookie \"tranzly_currency\" ή εξαιρεί τις σελίδες του καταστήματος."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Αποθήκευση νομισμάτων"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Οι λέξεις που εκτυπώνουν από μόνες τους το θέμα και τα πρόσθετα (κουμπιά, ετικέτες). Διαβάστε ένα θέμα ή πρόσθετο μία φορά και, στη συνέχεια, μεταφράστε το κείμενό του εδώ· η μετάφρασή σας υπερισχύει αυτής του πρόσθετου."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d κείμενα"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "μη αναγνωσμένο"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Εκ νέου ανάγνωση"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Διαβάστε το κείμενό του"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Μετάφραση"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6944,6 +7393,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d δημοσιεύσεις, %2$s χαρακτήρες: περίπου $%3$s στον λογαριασμό σας."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Ξεκινήστε τη μετάφραση"
 
@@ -6981,6 +7431,11 @@ msgstr "Περιεχόμενο"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Γλώσσα"
 
@@ -7015,11 +7470,13 @@ msgstr "Τα μενού αποθηκεύτηκαν."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "Μεταφράστηκαν %d κείμενα."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Αποθηκεύτηκε. Οι διορθώσεις σας προστατεύονται από τη μηχανική μετάφραση."
 
@@ -7056,48 +7513,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Πρότυπα, κεφαλίδες, υποσέλιδα και μοτίβα (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Μετάφραση του κειμένου που λείπει"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Δεν υπάρχει κείμενο για μετάφραση εδώ."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Διορθώθηκε από άνθρωπο, προστατευμένο"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Αποθήκευση διορθώσεων"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Γλώσσες και ρυθμίσεις"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Μηχανές"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Εργασίες μετάφρασης"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Διευθύνσεις και SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Εναλλαγές γλώσσας"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "Έλεγχος SEO"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Μενού και κοινόχρηστο κείμενο"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Κατάσταση μετάφρασης"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Ενσωματώσεις"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7142,6 +7612,7 @@ msgid "The whole language has been checked."
 msgstr "Ολόκληρη η γλώσσα έχει ελεγχθεί."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Σελίδα"
 
@@ -7150,17 +7621,198 @@ msgid "Problem"
 msgstr "Πρόβλημα"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Επεξεργασία"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Η εργασία %1$d ξεκίνησε: %2$d σελίδες μεταφράζονται στο παρασκήνιο. Παρακολουθήστε την στις Εργασίες μετάφρασης."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d μεταφράσεις ελέγχονται στο παρασκήνιο. Οι βαθμολογίες εμφανίζονται εδώ καθώς φτάνουν."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Απών"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Εκπρόθεσμο"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Μεταφρασμένο"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Επεξεργάστηκε από χρήστη"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Αυτόματα μεταφρασμένο"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Αναμονή για έλεγχο"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Απαιτεί ανθρώπινη ματιά"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Όλα"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Ενημερωμένο"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Το Tranzly εξακολουθεί να επεξεργάζεται ποιες παλαιότερες μεταφράσεις είναι ξεπερασμένες. Οι αριθμοί των «ξεπερασμένων» θα αυξάνονται όσο το κάνει."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Τύπος περιεχομένου"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Όλο το περιεχόμενο"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Μέση ποιότητα"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d μεταφρασμένα (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Εμφάνιση"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Μετάφραση όλων των στοιχείων που λείπουν"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Ενημέρωση όλων των παλαιών στοιχείων"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Ελέγξτε την ποιότητα με AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Μεταφράστε ξανά τις σελίδες με χαμηλή βαθμολογία"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Δεν υπάρχει τίποτα εδώ."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Ποιότητα"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "από άτομο"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "αναμένει έγκριση"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Δίπλα-δίπλα"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Προβολή περισσότερων"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Μαζική μετάφραση ολόκληρου του ιστότοπου (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Με το Tranzly Pro, επιλέξτε τύπους περιεχομένου και γλώσσες, δείτε την εκτίμηση και μεταφράστε ολόκληρο τον ιστότοπο με μία κίνηση."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d εργασίες υποβάθρου ξεκίνησαν, μία ανά γλώσσα. Παρακολουθήστε τες στις Εργασίες μετάφρασης."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Τύποι περιεχομένου"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Τι να μεταφράσετε"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Μόνο ό,τι λείπει"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Μόνο ό,τι είναι ξεπερασμένο"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Τα πάντα (οι σελίδες που έχουν επεξεργαστεί από άτομο παραμένουν ως έχουν)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Εκτίμηση"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d σελίδες, %2$s χαρακτήρες. Αυτή η μηχανή δεν δημοσιεύει τιμή."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d σελίδες, %2$s χαρακτήρες, περίπου $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Αναζήτηση κειμένου"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "Ακόμη %d: πληκτρολογήστε \"Εύρεση κειμένου\" για να περιορίσετε τη λίστα."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Ένα μικρό κουμπί σε μια γωνία κάθε σελίδας, σε οποιοδήποτε θέμα, χωρίς ρύθμιση."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Πού"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7360,6 +8012,199 @@ msgstr "Συνεργασία με: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Κάθε λέξη διεύθυνσης αποτελείται από 2 έως 12 πεζά γράμματα, ψηφία ή παύλες."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Η αυτόματη μετάφραση κατά την ενημέρωση, οι ρόλοι αξιολογητών, η εξαγωγή XLIFF για μεταφραστές, η μετάβαση από WPML, Polylang ή TranslatePress και ο ποιοτικός έλεγχος AI περιλαμβάνονται στο Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Όταν αλλάζει ένα πρωτότυπο"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Όταν μια σελίδα επεξεργάζεται"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Επισημάνετε τις μεταφράσεις του ως παλιές"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Μετάφραση των μεταφράσεών του ξανά στο παρασκήνιο"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Καμία ενέργεια"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Μια μετάφραση που έχει διορθωθεί από άνθρωπο δεν αντικαθιστάται ποτέ· αντίθετα, επισημαίνεται ως ξεπερασμένη."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Μεταφράστε νέες σελίδες σε κάθε γλώσσα όταν δημοσιεύονται"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Ένα δεύτερο μοντέλο τεχνητής νοημοσύνης διαβάζει κάθε μετάφραση δίπλα στο πρωτότυπό της, τη βαθμολογεί και κατονομάζει τα λάθη. Χρησιμοποιεί το δικό σας κλειδί τεχνητής νοημοσύνης από τις ρυθμίσεις τεχνητής νοημοσύνης. Ξεκινήστε έναν έλεγχο από την Κατάσταση μετάφρασης."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Πάροχος AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Το γενικό μοντέλο των ρυθμίσεων AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Προτεινόμενα"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Μια σελίδα χρειάζεται ανθρώπινη ματιά κάτω από αυτό το σκορ"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Δημοσιεύστε μόνο μεταφράσεις που έχει εγκρίνει ένας αξιολογητής"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Αναθέστε σε άτομα τον ρόλο Μεταφραστή (επεξεργάζεται μεταφράσεις, ποτέ τα πρωτότυπα, δεν μπορεί να δημοσιεύσει) ή τον ρόλο Ελεγκτή μετάφρασης (εγκρίνει επίσης). Οι ελεγκτές βρίσκουν επίσης όσα περιμένουν στις λίστες «Δημοσιεύσεις» και «Σελίδες» υπό την ένδειξη «Εκκρεμή»· η δημοσίευση ενός εξ αυτών το εγκρίνει."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Διαχείριση χρηστών"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Δεν υπάρχει τίποτα σε εκκρεμότητα για έλεγχο."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Σημείωση για τον μεταφραστή (προαιρετικά)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Παράλληλη ανάγνωση"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Έγκριση"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Ζητήστε αλλαγές"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d μεταφράσεις εισήχθησαν και προστατεύτηκαν από τη μηχανική μετάφραση."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Εξαγωγή και εισαγωγή για μεταφραστές"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Δεν έχει μεταφραστεί ακόμα"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Ήδη μεταφρασμένο"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Μορφή"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (εργalaia μετάφρασης)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (λογιστικά φύλλα)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Λήψη αρχείου"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Εισαγωγή μεταφρασμένου αρχείου"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Αναίρεση: αφαιρέθηκαν %1$d σύνδεσμοι, διαγράφηκαν %2$d εισαγόμενες σελίδες."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Δοκιμαστική εκτέλεση, δεν έγινε καμία αλλαγή:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Εισηγμένα:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "Προστέθηκαν %1$d γλώσσες, συνδέθηκαν %2$d μεταφράσεις, δημιουργήθηκαν %3$d σελίδες, %4$d κείμενα."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Απενεργοποιήστε πρώτα το άλλο πρόσθετο (οι διευθύνσεις και οι διακόπτες του θα συγκρούονταν με το Tranzly). Τα δεδομένα του παραμένουν στη θέση τους, ώστε να μπορείτε να το ενεργοποιήσετε ξανά· η Αναίρεση αφαιρεί ακριβώς ό,τι πρόσθεσε η εισαγωγή."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Δεν υπάρχουν δεδομένα από αυτό το πρόσθετο σε αυτόν τον ιστότοπο."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Γλώσσες: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "ακόμη ενεργό: απενεργοποιήστε το πρώτα."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Δοκιμαστική εκτέλεση"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Αναίρεση εισαγωγής"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Σχόλια και κριτικές προϊόντων"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Κάθε γλώσσα διατηρεί τη δική της"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Εμφάνιση των σχολίων κάθε γλώσσας σε κάθε έκδοση"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Εμφάνισή τους σε όλες, μεταφρασμένες στη γλώσσα του αναγνώστη"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Η μετάφραση χρησιμοποιεί τη μηχανή μετάφρασής σας για κάθε εγκεκριμένο σχόλιο. Τα ανεπιθύμητα μηνύματα και τα σχόλια που αναμένουν έγκριση δεν αποστέλλονται ποτέ."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Αποθηκεύτηκε. Τα τμήματα που αλλάξατε επισημαίνονται ως ελεγμένα από άτομο και αυτή η μετάφραση προστατεύεται από τη μηχανική μετάφραση."
@@ -7392,11 +8237,6 @@ msgstr "Αποθήκευση αλλαγών"
 msgid "Open in the editor"
 msgstr "Άνοιγμα στον επεξεργαστή"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Αυτόματα μεταφρασμένο"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Ελέγχθηκε από άτομο"
@@ -7404,10 +8244,6 @@ msgstr "Ελέγχθηκε από άτομο"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Εισηγμένα"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Δεν έχει μεταφραστεί ακόμα"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7461,10 +8297,6 @@ msgstr "Δεν έχει μεταφραστεί ακόμα (αντίγραφο)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Αποθηκεύστε αυτήν τη δημοσίευση πρώτα και μετά μεταφράστε την εδώ."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Δίπλα-δίπλα"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

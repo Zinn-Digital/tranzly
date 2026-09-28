@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Orqa fonda tarjima qilish"
             ],
+            "Custom fields": [
+                "Maxsus maydonlar"
+            ],
+            "Bulk translate the whole site": [
+                "Butun saytni ommaviy tarjima qilish"
+            ],
+            "Review and approval": [
+                "Ko'rib chiqish va tasdiqlash"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "WPML, Polylang yoki TranslatePress\u2019dan o\u2018ting"
+            ],
             "Floating switcher": [
                 "Suhbatni boshqaruvchi o\u2018tish tugmasi"
+            ],
+            "AI quality check": [
+                "AI sifatini tekshirish"
+            ],
+            "Workflow": [
+                "Ish jarayoni"
             ],
             "Next": [
                 "Keyingi"
@@ -25,11 +43,17 @@
             "Open": [
                 "Ochish"
             ],
+            "Model": [
+                "Model"
+            ],
             "About": [
                 "Haqida"
             ],
             "Done": [
                 "Bajarildi"
+            ],
+            "Actions": [
+                "Amallar"
             ],
             "Cancelled": [
                 "Bekor qilingan"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Saytlar"
             ],
+            "State": [
+                "Holat"
+            ],
             "Type": [
                 "Turi"
             ],
             "Upgrade": [
                 "Yangilash"
+            ],
+            "Comments and reviews": [
+                "Sharhlar va taqrizlar"
+            ],
+            "Currency": [
+                "Valyuta"
+            ],
+            "Theme and plugin text": [
+                "Mavzu va plagin matni"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Har bir til uchun subdomain va alohida domenlar Tranzly Pro tarkibiga kiradi."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Tarjima dvigateli"
             ],
+            "What Tranzly translates on this site": [
+                "Tranzly ushbu saytda nimani tarjima qilishi"
+            ],
+            "found, translated with your content": [
+                "topildi, kontentingiz bilan tarjima qilindi"
+            ],
+            "not on this site": [
+                "bu saytda emas"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Tranzly Pro yordamida: Elementor, Bricks, Divi, Beaver Builder, Oxygen va WPBakery sahifalari; WooCommerce'dagi hamma narsa, tashrif buyuruvchining valyutasidagi narxlar bilan; Yoast SEO, Rank Math, SEOPress va All in One SEO'ning SEO maydonlari; ACF, Meta Box va Pods maydonlari; formalari va ularning elektron xatlari; filmingiz va plaginlaringizning o'z matni; hamda izoh va sharhlar."
+            ],
+            "Shop text and e-mails": [
+                "Do'kon matni va elektron xatlar"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Elektron pochta mavzulari va sarlavhalari, to\u02bblov va yetkazib berish usullari nomlari hamda rasmiylashtiruv bildirishnomalari. Har bir buyurtmaning elektron xatlari u qaysi tilda berilgan bo\u02bblsa, o\u02bbsha tilda yuboriladi."
+            ],
+            "Forms and their e-mails": [
+                "Formalar va ularning elektron pochta xabarlari"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Har bir forma yozuvlar ro\u2018yxatini saqlaydi; uning yorliqlari, tugmalari, xabarlari va elektron pochta xabarlari tashrif buyuruvchining tilida ko\u2018rinadi."
+            ],
+            "Saved.": [
+                "Saqlandi."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Hali hech qanday ACF, Meta Box yoki Pods maydonlari aniqlanmagan."
+            ],
+            "Field": [
+                "Maydon"
+            ],
+            "Where": [
+                "Qayerda"
+            ],
+            "In a translation": [
+                "Tarjimada"
+            ],
+            "What happens to %s in a translation": [
+                "Tarjimada %s bilan nima sodir bo'ladi"
+            ],
+            "Translate it": [
+                "Tarjima qilish"
+            ],
+            "Copy it as it is": [
+                "Uni qanday bo'lsa, shunday nusxa ko'chiring"
+            ],
+            "Leave it empty": [
+                "Bo'sh qoldiring"
+            ],
+            "The shop\u2019s currency": [
+                "Do\u02bbkon valyutasi"
+            ],
+            "Currencies": [
+                "Valyutalar"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Boshqa valyutalardagi narxlarni ko'rsatish (do'konning o'niki: %s)"
+            ],
+            "Exchange rates": [
+                "Valyuta kurslari"
+            ],
+            "Rates last updated %s.": [
+                "Tariflar oxirgi marta %s da yangilandi."
+            ],
+            "Rates have not been fetched yet.": [
+                "Tariflar hali olinmagan."
+            ],
+            "Update the rates now": [
+                "Tarif\u043b\u0430\u0440\u043d\u0438 hozir yangilash"
+            ],
+            "New currency": [
+                "Yangi valyuta"
+            ],
+            "Choose\u2026": [
+                "Tanlang..."
+            ],
+            "Rate (per 1 %s)": [
+                "Kurs (1 %s uchun)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Stavka kiritish uni saqlab qoladi: kundalik yangilanish uni o'zgartirmaydi."
+            ],
+            "Rounding": [
+                "Yaxlitlash"
+            ],
+            "None": [
+                "Yo'q"
+            ],
+            "Round up": [
+                "O\u2018nlab yaxlitlash"
+            ],
+            "Round to the nearest": [
+                "Eng yaqiniga yaxlitlash"
+            ],
+            "Round down": [
+                "Pastga yaxlitlash"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Yaxlitlash (masalan, 1, 0.05 yoki 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Narxlar quyidagi raqam bilan tugaydi (masalan, 0.99)"
+            ],
+            "Add a currency": [
+                "Valyuta qo'shish"
+            ],
+            "Which visitors see which currency": [
+                "Qaysi tashrif buyuruvchilar qaysi valyutani ko'radi"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Mamlakat bo\u02bbyicha: ikki harfli mamlakat kodi (masalan, CH)"
+            ],
+            "Visitors from %s": [
+                "%s dan tashrif buyuruvchilar"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Tashrif buyuruvchilarga tanlash imkonini berish (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Narxlar endi kukiga yoki tashrif buyuruvchining mamlakatiga bog'liq: sahifa keshingiz \"tranzly_currency\" kukisi bo'yicha o'zgarishiga yoki do'kon sahifalarini istisno qilishiga e'tibor bering."
+            ],
+            "Save currencies": [
+                "Valyutalarni saqlash"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Mavzu va plaginlaringiz o'zi chiqaradigan so'zlar (tugmalar, yorliqlar). Mavzu yoki plaginni bir marta o'qing, so'ngra uning matnini shu yerda tarjima qiling; sizning tarjimangiz plaginning o'zinikidan ustun keladi."
+            ],
+            "%d texts": [
+                "%d ta matn"
+            ],
+            "not read yet": [
+                "o\u02bbqilmagan"
+            ],
+            "Read again": [
+                "Qayta o\u02bbqish"
+            ],
+            "Read its text": [
+                "Matnini o\u2018qish"
+            ],
+            "Translate": [
+                "Tarjima qilish"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Bajarilishi kerak bo'lgan %d ta tarjima bilan vazifa boshlandi. U fonda ishlaydi: bu sahifani yopishingiz mumkin."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Menyular va umumiy matn"
             ],
+            "Translation status": [
+                "Tarjima holati"
+            ],
+            "Integrations": [
+                "Integratsiyalar"
+            ],
             "No meta description": [
                 "Meta-tavsif yo\u2018q"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Tahrirlash"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "%1$d-vazifa boshlandi: %2$d ta sahifa fonda tarjima qilinmoqda. Uni \u201cTarjima vazifalari\u201d bo\u2018limida kuzating."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d ta tarjima fonda tekshirilmoqda. Ballar kelib tushishi bilan shu yerda ko'rinadi."
+            ],
+            "Missing": [
+                "Topilmadi"
+            ],
+            "Out of date": [
+                "Eskiroq"
+            ],
+            "Translated": [
+                "Tarjima qilingan"
+            ],
+            "Edited by a person": [
+                "Boshqa shaxs tomonidan tahrirlangan"
+            ],
+            "Machine translated": [
+                "Avtomatik tarjima qilingan"
+            ],
+            "Waiting for review": [
+                "Ko\u2018rib chiqish kutilmoqda"
+            ],
+            "Needs a human look": [
+                "Inson nazorati kerak"
+            ],
+            "Everything": [
+                "Hammasi"
+            ],
+            "Up to date": [
+                "Yangilangan"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly qaysi eski tarjimalar eskirganligini aniqlash ustida hali ham ishlamoqda. Shu jarayonda \"eskirgan\" raqamlar o'sib boradi."
+            ],
+            "Content type": [
+                "Kontent turi"
+            ],
+            "All content": [
+                "Barcha tarkib"
+            ],
+            "Average quality": [
+                "O\u2018rtacha sifat"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d tarjima qilindi (%2$d%%)"
+            ],
+            "Show": [
+                "Ko'rsatish"
+            ],
+            "Translate everything missing": [
+                "Barcha yetishmayotgan qismlarni tarjima qilish"
+            ],
+            "Update everything out of date": [
+                "Barcha eskirgan narsalarni yangilash"
+            ],
+            "Check the quality with AI": [
+                "Sun'iy intellekt yordamida sifatni tekshirish"
+            ],
+            "Translate the low-scoring pages again": [
+                "Past bali olgan sahifalarni qaytadan tarjima qiling"
+            ],
+            "Nothing here.": [
+                "Bu yerda hech narsa yo'q."
+            ],
+            "Quality": [
+                "Sifat"
+            ],
+            "by a person": [
+                "shaxs tomonidan"
+            ],
+            "waiting for review": [
+                "ko'rib chiqish kutilmoqda"
+            ],
+            "Side by side": [
+                "Yonma-yon"
+            ],
+            "Show more": [
+                "Ko'proq ko'rsatish"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Butun saytni ommaviy tarjima qilish (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Tranzly Pro yordamida kontent turlari va tillarni tanlang, taxminiy qiymatni ko'ring va butun saytni bir yo'la tarjima qiling."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d ta fon jarayoni boshlandi, har bir til uchun bittadan. Ularni Tarjima vazifalaridan kuzatib boring."
+            ],
+            "Content types": [
+                "Kontent turlari"
+            ],
+            "What to translate": [
+                "Nimani tarjima qilish kerak"
+            ],
+            "Only what is missing": [
+                "Faqat yetishmayotgani"
+            ],
+            "Only what is out of date": [
+                "Faqat eskirgan narsalar"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Barchasi (odam tomonidan tahrirlangan sahifalar o'zicha qoladi)"
+            ],
+            "Estimate": [
+                "Baholash"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d sahifa, %2$s belgi. Bu dvigatel narx e'lon qilmaydi."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d sahifa, %2$s belgi, taxminan $%3$s."
+            ],
+            "Find a text": [
+                "Matnni topish"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "Yana %d ta: ro\u02bbyxatni qisqartirish uchun \"Matnni topish\" deb yozing."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Har qanday mavzuda, sozlashlarsiz, har bir sahinaning burchagida kichik tugma."
-            ],
-            "Where": [
-                "Qayerda"
             ],
             "Off": [
                 "O\u2018chiq"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Har bir manzil so\u02bbzi 2 tadan 12 tagacha kichik harflar, raqamlar yoki defislardan iborat bo\u02bblishi kerak."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Yangilanishda avtomatik tarjima qilish, muharrir rollari, tarjimonlar uchun XLIFF eksporti, WPML, Polylang yoki TranslatePress'dan o'tish va sun'iy intellekt yordamida sifatni tekshirish Tranzly Pro bilan birga keladi."
+            ],
+            "When an original changes": [
+                "Asl nusxa o'zgarganda"
+            ],
+            "When a page is edited": [
+                "Sahifa tahrirlanganda"
+            ],
+            "Mark its translations out of date": [
+                "Ushbu tarjimalarni eskirgan deb belgilash"
+            ],
+            "Translate its translations again in the background": [
+                "Uni fon rejimida qayta tarjima qilish"
+            ],
+            "Do nothing": [
+                "Hech narsa qilmang"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Odam tahrir qilgan tarjima hech qachon ustidan yozib yuborilmaydi; uning o'rniga eskirgan deb belgilanadi."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Yangi sahifalar e'lon qilinganda ularni har bir tilga tarjima qiling"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Ikkinchi sun'iy intellekt modeli har bir tarjimani asl nusxasi yonidan o'qiydi, unga ball qo'yadi va xatolarni ko'rsatadi. U sun'iy intellekt sozlamalaridagi o'zingizning sun'iy intellekt kalitingizdan foydalanadi. Tarjima holatidan tekshiruvni boshlang."
+            ],
+            "AI provider": [
+                "Sun'iy intellekt provayderi"
+            ],
+            "The AI settings\u2019 general model": [
+                "AI sozlamalarining umumiy modeli"
+            ],
+            "Recommended": [
+                "Tavsiya etilgan"
+            ],
+            "A page needs a human look below this score": [
+                "Ushbu baldan pastdagi sahifa inson ko'zidan o'tishi kerak"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Faqat taqrizchi tasdiqlagan tarjimalarni chop eting"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Odamlarga Tarjimon rolini (faqat tarjimasini tahrirlaydi, asl nusxaga teginmaydi, chop eta olmaydi) yoki Tarjima taqrizchisi rolini (tasdiqlash huquqi ham bor) bering. Shuningdek, taqrizchilar \"Kutilmoqda\" ostidagi \"Yozuvlar\" va \"Sahifalar\" ro\u02bbyxatlarida kutilayotgan barcha narsalarni topadilar; u yerda bittasini chop etish uni tasdiqlaydi."
+            ],
+            "Manage users": [
+                "Foydalanuvchilarni boshqarish"
+            ],
+            "Nothing is waiting for review.": [
+                "Ko\u2018rib chiqish uchun hech narsa yo\u2018q."
+            ],
+            "Note for the translator (optional)": [
+                "Tarjimon uchun eslatma (ixtiyoriy)"
+            ],
+            "Read side by side": [
+                "Yonma-yon o\u2018qish"
+            ],
+            "Approve": [
+                "Tasdiqlash"
+            ],
+            "Ask for changes": [
+                "O'zgarishlarni so'rash"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d ta tarjima import qilindi va mashina tarjimasidan himoya qilindi."
+            ],
+            "Export and import for translators": [
+                "Tarjimonlar uchun eksport va import"
+            ],
+            "Not translated yet": [
+                "Hali tarjima qilinmagan"
+            ],
+            "Already translated": [
+                "Allaqachon tarjima qilingan"
+            ],
+            "Format": [
+                "Format"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (tarjima vositalari)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (jadval)"
+            ],
+            "Download the file": [
+                "Faylni yuklab olish"
+            ],
+            "Import a translated file": [
+                "Tarjima qilingan faylni import qilish"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Bajarilmadi: %1$d ta havola olib tashlandi, %2$d ta import qilingan sahifa o\u2018chirildi."
+            ],
+            "Dry run, nothing changed:": [
+                "Sinov rejimi, hech narsa o\u2018zgartirilmadi:"
+            ],
+            "Imported:": [
+                "Import qilindi:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d ta til qo'shildi, %2$d ta tarjima bog'landi, %3$d ta sahifa yaratildi, %4$d ta matn."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Avval boshqa plaginni o'chiring (uning manzillari va o'chirib-yoqgichlari Tranzly bilan ziddiyatga keladi). Uning ma'lumotlari o'z joyida qoladi, shuning uchun siz qaytadan yoqishingiz mumkin; Bekor qilish faqat import qo'shgan narsani olib tashlaydi."
+            ],
+            "No data from this plugin on this site.": [
+                "Bu saytda ushbu pligindan ma\u02bclumot yo\u02bbq."
+            ],
+            "Languages: %s": [
+                "Tillar: %s"
+            ],
+            "still active: switch it off first.": [
+                "hali ham faol: oldin uni o'chiring."
+            ],
+            "Dry run": [
+                "Sinov tariqasida bajarish"
+            ],
+            "Import": [
+                "Import qilish"
+            ],
+            "Undo the import": [
+                "Importni bekor qilish"
+            ],
+            "Comments and product reviews": [
+                "Sharhlar va mahsulot sharhlari"
+            ],
+            "Each language keeps its own": [
+                "Har bir til o'ziga xos saqlaydi"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Har bir versiya bo'yicha barcha tillardagi izohlarni ko'rsatish"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Ularning barchasini o'quvchi tiliga tarjima qilgan holda ko'rsatish"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Tarjima qilish tasdiqlangan har bir izoh uchun sizning tarjima mexanizmingizdan foydalanadi. Spam va moderatsiyani kutayotgan izohlar hech qachon yuborilmaydi."
             ]
         }
     }

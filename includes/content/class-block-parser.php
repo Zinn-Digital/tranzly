@@ -34,6 +34,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class Block_Parser {
 
+	/** An ISO 8601 date-time ("2026-10-03T10:00"): a machine value, although its T is a letter. */
+	public const ISO_DATETIME = '/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?$/';
+
+
 	/** Blocks whose content is code or markup, never prose. */
 	public const SKIP = array( 'core/code', 'core/html', 'core/shortcode', 'core/preformatted', 'core/freeform-code', 'core/missing' );
 
@@ -354,12 +358,23 @@ final class Block_Parser {
 	}
 
 	/**
-	 * Does a text hold anything a reader reads (a letter or a digit in any script)?
+	 * Does a text hold words a reader reads (a letter in any script)?
+	 *
+	 * ⛔ A value with no letter is NOT text: a number, a date, a time, a phone number or a price
+	 * ("10", "2024-03-01", "10:30", "+44 20 7946 0958", "$4.00") is a machine value a translation
+	 * engine can only damage (PBS data-table cells, event start/end, chart labels — the F6
+	 * contract, pinned by PBS's own contract test). An ISO 8601 date-time is a machine value too,
+	 * even though its "T" is a letter. The predicate is exactly: NOT text if (no \p{L}) OR it
+	 * matches `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?$`. "3 apples" is still text.
 	 *
 	 * @param string $text Text.
 	 * @return bool
 	 */
 	public static function has_words( string $text ): bool {
-		return 1 === preg_match( '/[\p{L}\p{N}]/u', html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+		$plain = trim( html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+		if ( 1 !== preg_match( '/\p{L}/u', $plain ) ) {
+			return false;
+		}
+		return 1 !== preg_match( self::ISO_DATETIME, $plain );
 	}
 }

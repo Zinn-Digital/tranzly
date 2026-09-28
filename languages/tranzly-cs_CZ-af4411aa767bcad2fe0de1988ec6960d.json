@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "P\u0159elo\u017eit na pozad\u00ed"
             ],
+            "Custom fields": [
+                "Vlastn\u00ed pole"
+            ],
+            "Bulk translate the whole site": [
+                "Hromadn\u00fd p\u0159eklad cel\u00e9ho webu"
+            ],
+            "Review and approval": [
+                "Kontrola a schv\u00e1len\u00ed"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "P\u0159ejd\u011bte z WPML, Polylang nebo TranslatePress"
+            ],
             "Floating switcher": [
                 "Plovouc\u00ed p\u0159ep\u00edna\u010d"
+            ],
+            "AI quality check": [
+                "Kontrola kvality AI"
+            ],
+            "Workflow": [
+                "Pracovn\u00ed postup"
             ],
             "Next": [
                 "Dal\u0161\u00ed"
@@ -25,11 +43,17 @@
             "Open": [
                 "Otev\u0159\u00edt"
             ],
+            "Model": [
+                "Model"
+            ],
             "About": [
                 "O aplikaci"
             ],
             "Done": [
                 "Hotovo"
+            ],
+            "Actions": [
+                "Akce"
             ],
             "Cancelled": [
                 "Zru\u0161eno"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Weby"
             ],
+            "State": [
+                "Stav"
+            ],
             "Type": [
                 "Typ"
             ],
             "Upgrade": [
                 "Upgradovat"
+            ],
+            "Comments and reviews": [
+                "Koment\u00e1\u0159e a recenze"
+            ],
+            "Currency": [
+                "M\u011bna"
+            ],
+            "Theme and plugin text": [
+                "Text \u0161ablon a plugin\u016f"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Subdom\u00e9ny a samostatn\u00e9 dom\u00e9ny pro ka\u017ed\u00fd jazyk jsou sou\u010d\u00e1st\u00ed Tranzly Pro."
@@ -751,6 +787,150 @@
             "Translation engine": [
                 "P\u0159ekladov\u00fd stroj"
             ],
+            "What Tranzly translates on this site": [
+                "Co Tranzly p\u0159ekl\u00e1d\u00e1 na tomto webu"
+            ],
+            "found, translated with your content": [
+                "nalezeno, p\u0159elo\u017eeno s va\u0161\u00edm obsahem"
+            ],
+            "not on this site": [
+                "nen\u00ed na tomto webu"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "S Tranzly Pro: str\u00e1nky v editorech Elementor, Bricks, Divi, Beaver Builder, Oxygen a WPBakery; v\u0161e v WooCommerce s cenami v m\u011bn\u011b n\u00e1v\u0161t\u011bvn\u00edka; SEO pole v Yoast SEO, Rank Math, SEOPress a All in One SEO; pole ACF, Meta Box a Pods; formul\u00e1\u0159e a jejich e-maily; vlastn\u00ed texty va\u0161eho \u0161ablony a plugin\u016f; a koment\u00e1\u0159e a recenze."
+            ],
+            "Shop text and e-mails": [
+                "Text a e-maily obchodu"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "P\u0159edm\u011bty a nadpisy e-mail\u016f, n\u00e1zvy platebn\u00edch a doru\u010dovac\u00edch metod a upozorn\u011bn\u00ed u pokladny. E-maily ke ka\u017ed\u00e9 objedn\u00e1vce se odes\u00edlaj\u00ed v jazyuce, ve kter\u00e9m byla zad\u00e1na."
+            ],
+            "Forms and their e-mails": [
+                "Formul\u00e1\u0159e a jejich e-maily"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Ka\u017ed\u00fd formul\u00e1\u0159 uchov\u00e1v\u00e1 jeden seznam z\u00e1znam\u016f; jeho \u0161t\u00edtky, tla\u010d\u00edtka, zpr\u00e1vy a e-maily se zobrazuj\u00ed v jazyce n\u00e1v\u0161t\u011bvn\u00edka."
+            ],
+            "Saved.": [
+                "Ulo\u017eeno."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Zat\u00edm nejsou definov\u00e1na \u017e\u00e1dn\u00e1 pole ACF, Meta Box ani Pods."
+            ],
+            "Field": [
+                "Pole"
+            ],
+            "Where": [
+                "Kde"
+            ],
+            "In a translation": [
+                "V p\u0159ekladu"
+            ],
+            "What happens to %s in a translation": [
+                "Co se stane s %s v p\u0159ekladu"
+            ],
+            "Translate it": [
+                "P\u0159elo\u017eit"
+            ],
+            "Copy it as it is": [
+                "Zkop\u00edrujte to tak, jak to je"
+            ],
+            "Leave it empty": [
+                "Ponechte pr\u00e1zdn\u00e9"
+            ],
+            "The shop\u2019s currency": [
+                "M\u011bna obchodu"
+            ],
+            "Currencies": [
+                "M\u011bny"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Zobrazit ceny v jin\u00fdch m\u011bn\u00e1ch (vlastn\u00ed m\u011bna obchodu je %s)"
+            ],
+            "Exchange rates": [
+                "Sm\u011bnn\u00e9 kurzy"
+            ],
+            "Rates last updated %s.": [
+                "Kurzy naposledy aktualizov\u00e1ny %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Sazby je\u0161t\u011b nebyly na\u010dteny."
+            ],
+            "Update the rates now": [
+                "Aktualizovat sazby ihned"
+            ],
+            "New currency": [
+                "Nov\u00e1 m\u011bna"
+            ],
+            "Choose\u2026": [
+                "Zvolit\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Sazba (za 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Zad\u00e1n\u00edm sazby ji zachov\u00e1te: denn\u00ed aktualizace ji nezm\u011bn\u00ed."
+            ],
+            "Rounding": [
+                "Zaokrouhlov\u00e1n\u00ed"
+            ],
+            "None": [
+                "\u017d\u00e1dn\u00e9"
+            ],
+            "Round up": [
+                "Zaokrouhlit nahoru"
+            ],
+            "Round to the nearest": [
+                "Zaokrouhlit na nejbli\u017e\u0161\u00ed"
+            ],
+            "Round down": [
+                "Zaokrouhlit dol\u016f"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Zaokrouhlit na (nap\u0159\u00edklad 1, 0,05 nebo 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Ceny kon\u010d\u00ed (nap\u0159\u00edklad 0,99)"
+            ],
+            "Add a currency": [
+                "P\u0159idat m\u011bnu"
+            ],
+            "Which visitors see which currency": [
+                "Kte\u0159\u00ed n\u00e1v\u0161t\u011bvn\u00edci vid\u00ed jakou m\u011bnu"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Podle zem\u011b: dvoup\u00edsmenn\u00fd k\u00f3d zem\u011b (nap\u0159\u00edklad CH)"
+            ],
+            "Visitors from %s": [
+                "N\u00e1v\u0161t\u011bvn\u00edci z lokality %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Nechte n\u00e1v\u0161t\u011bvn\u00edky vybrat (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Ceny nyn\u00ed z\u00e1vis\u00ed na souboru cookie nebo na zemi n\u00e1v\u0161t\u011bvn\u00edka: ujist\u011bte se, \u017ee va\u0161e mezipam\u011b\u0165 str\u00e1nky se m\u011bn\u00ed podle souboru cookie \u201etranzly_currency\u201c nebo \u017ee obchody nezahrnuje."
+            ],
+            "Save currencies": [
+                "Ulo\u017eit m\u011bny"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Slova, kter\u00e1 va\u0161e \u0161ablona a pluginy sama vypisuj\u00ed (tla\u010d\u00edtka, \u0161t\u00edtky). P\u0159e\u010dt\u011bte si \u0161ablonu nebo plugin jednou a pot\u00e9 zde p\u0159elo\u017ete jejich text; v\u00e1\u0161 p\u0159eklad m\u00e1 p\u0159ednost p\u0159ed vlastn\u00edm textem pluginu."
+            ],
+            "%d texts": [
+                "%d text\u016f"
+            ],
+            "not read yet": [
+                "dosud nep\u0159e\u010dteno"
+            ],
+            "Read again": [
+                "P\u0159e\u010d\u00edst znovu"
+            ],
+            "Read its text": [
+                "P\u0159e\u010d\u00edst jeho text"
+            ],
+            "Translate": [
+                "P\u0159elo\u017eit"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "\u00daloha byla spu\u0161t\u011bna a zb\u00fdv\u00e1 v n\u00ed dokon\u010dit %d p\u0159eklad\u016f. B\u011b\u017e\u00ed na pozad\u00ed, tuto str\u00e1nku m\u016f\u017eete zav\u0159\u00edt."
             ],
@@ -901,6 +1081,12 @@
             "Menus and shared text": [
                 "Naviga\u010dn\u00ed menu a sd\u00edlen\u00fd text"
             ],
+            "Translation status": [
+                "Stav p\u0159ekladu"
+            ],
+            "Integrations": [
+                "Integrace"
+            ],
             "No meta description": [
                 "\u017d\u00e1dn\u00fd meta popis"
             ],
@@ -940,11 +1126,128 @@
             "Edit": [
                 "Upravit"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "\u00daloha %1$d byla spu\u0161t\u011bna: na pozad\u00ed se p\u0159ekl\u00e1d\u00e1 %2$d str\u00e1nek. M\u016f\u017eete ji sledovat v \u010d\u00e1sti \u00dalohy p\u0159ekladu."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d p\u0159eklad\u016f se kontroluje na pozad\u00ed. Sk\u00f3re se zde objev\u00ed, jakmile doraz\u00ed."
+            ],
+            "Missing": [
+                "Chyb\u011bj\u00edc\u00ed"
+            ],
+            "Out of date": [
+                "Zastaral\u00e9"
+            ],
+            "Translated": [
+                "P\u0159elo\u017eeno"
+            ],
+            "Edited by a person": [
+                "Upraveno \u010dlov\u011bkem"
+            ],
+            "Machine translated": [
+                "Strojov\u011b p\u0159elo\u017eeno"
+            ],
+            "Waiting for review": [
+                "\u010cek\u00e1 na schv\u00e1len\u00ed"
+            ],
+            "Needs a human look": [
+                "Vy\u017eaduje lidsk\u00fd z\u00e1sah"
+            ],
+            "Everything": [
+                "V\u0161echno"
+            ],
+            "Up to date": [
+                "Aktu\u00e1ln\u00ed"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly st\u00e1le zji\u0161\u0165uje, kter\u00e9 star\u0161\u00ed p\u0159eklady jsou zastaral\u00e9. B\u011bhem toho budou \u010d\u00edsla \"zastaral\u00fdch\" p\u0159eklad\u016f nar\u016fstat."
+            ],
+            "Content type": [
+                "Typ obsahu"
+            ],
+            "All content": [
+                "V\u0161echny polo\u017eky"
+            ],
+            "Average quality": [
+                "Pr\u016fm\u011brn\u00e1 kvalita"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d p\u0159elo\u017eeno (%2$d%%)"
+            ],
+            "Show": [
+                "Zobrazit"
+            ],
+            "Translate everything missing": [
+                "P\u0159elo\u017eit v\u0161e chyb\u011bj\u00edc\u00ed"
+            ],
+            "Update everything out of date": [
+                "Aktualizujte v\u0161e, co nen\u00ed aktu\u00e1ln\u00ed"
+            ],
+            "Check the quality with AI": [
+                "Zkontrolujte kvalitu pomoc\u00ed AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "P\u0159elo\u017eit str\u00e1nky s n\u00edzk\u00fdm sk\u00f3re znovu"
+            ],
+            "Nothing here.": [
+                "Zde nen\u00ed nic."
+            ],
+            "Quality": [
+                "Kvalita"
+            ],
+            "by a person": [
+                "od osoby"
+            ],
+            "waiting for review": [
+                "\u010dek\u00e1 na schv\u00e1len\u00ed"
+            ],
+            "Side by side": [
+                "Vedle sebe"
+            ],
+            "Show more": [
+                "Zobrazit v\u00edce"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Hromadn\u00fd p\u0159eklad cel\u00e9ho webu (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "S Tranzly Pro si vyberte typy obsahu a jazyky, pod\u00edvejte se na odhad a p\u0159elo\u017ete cel\u00fd web nar\u00e1z."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "Spustilo se %d \u00faloh na pozad\u00ed, jedna pro ka\u017ed\u00fd jazyk. Sledujte jejich pr\u016fb\u011bh v \u010d\u00e1sti \u00dalohy p\u0159ekladu."
+            ],
+            "Content types": [
+                "Typy obsahu"
+            ],
+            "What to translate": [
+                "Co p\u0159elo\u017eit"
+            ],
+            "Only what is missing": [
+                "Pouze to, co chyb\u00ed"
+            ],
+            "Only what is out of date": [
+                "Pouze to, co je zastaral\u00e9"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "V\u0161echno (str\u00e1nky upraven\u00e9 osobou z\u016fstanou tak, jak jsou)"
+            ],
+            "Estimate": [
+                "Odhadnout"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d str\u00e1nek, %2$s znak\u016f. Tento n\u00e1stroj nezve\u0159ej\u0148uje cenu."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d stran, %2$s znak\u016f, p\u0159ibli\u017en\u011b $%3$s."
+            ],
+            "Find a text": [
+                "Naj\u00edt text"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d dal\u0161\u00edch: zadejte \u201eNaj\u00edt text\u201c pro z\u00fa\u017een\u00ed seznamu."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Mal\u00e9 tla\u010d\u00edtko v rohu ka\u017ed\u00e9 str\u00e1nky, na jak\u00e9mkoli \u0161ablon\u011b, bez nutnosti nastaven\u00ed."
-            ],
-            "Where": [
-                "Kde"
             ],
             "Off": [
                 "Vypnuto"
@@ -1086,6 +1389,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Ka\u017ed\u00e9 slovo adresy m\u00e1 2 a\u017e 12 mal\u00fdch p\u00edsmen, \u010d\u00edslic nebo poml\u010dek."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Automatick\u00fd p\u0159eklad p\u0159i aktualizaci, role revizor\u016f, export XLIFF pro p\u0159ekladatele, p\u0159echod z WPML, Polylang nebo TranslatePress a kontrola kvality AI jsou sou\u010d\u00e1st\u00ed verze Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Kdy\u017e se origin\u00e1l zm\u011bn\u00ed"
+            ],
+            "When a page is edited": [
+                "P\u0159i \u00faprav\u011b str\u00e1nky"
+            ],
+            "Mark its translations out of date": [
+                "Ozna\u010dit jeho p\u0159eklady za zastaral\u00e9"
+            ],
+            "Translate its translations again in the background": [
+                "P\u0159elo\u017eit jeho p\u0159eklady znovu na pozad\u00ed"
+            ],
+            "Do nothing": [
+                "Ned\u011blat nic"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "P\u0159eklad upraven\u00fd \u010dlov\u011bkem nen\u00ed nikdy p\u0159eps\u00e1n; m\u00edsto toho je ozna\u010den jako zastaral\u00fd."
+            ],
+            "Translate new pages into every language when they are published": [
+                "P\u0159elo\u017eit nov\u00e9 str\u00e1nky do v\u0161ech jazyk\u016f p\u0159i jejich publikov\u00e1n\u00ed"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Druh\u00fd model AI \u010dte ka\u017ed\u00fd p\u0159eklad vedle origin\u00e1lu, hodnot\u00ed jej a ozna\u010duje chyby. Vyu\u017e\u00edv\u00e1 v\u00e1\u0161 vlastn\u00ed kl\u00ed\u010d AI z nastaven\u00ed AI. Spus\u0165te kontrolu ze Stavu p\u0159ekladu."
+            ],
+            "AI provider": [
+                "Poskytovatel AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Hlavn\u00ed model nastaven\u00ed AI"
+            ],
+            "Recommended": [
+                "Doporu\u010deno"
+            ],
+            "A page needs a human look below this score": [
+                "Pod t\u00edmto sk\u00f3re pot\u0159ebuje str\u00e1nka lidsk\u00fd pohled"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Publikujte pouze p\u0159eklady schv\u00e1len\u00e9 recenzentem"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "P\u0159i\u0159a\u010fte lidem roli P\u0159ekladatel (upravuje p\u0159eklady, nikdy origin\u00e1ly, nem\u016f\u017ee publikovat) nebo roli Recenzent p\u0159eklad\u016f (tak\u00e9 schvaluje). Recenzenti tak\u00e9 najdou v\u0161e \u010dekaj\u00edc\u00ed v seznamech P\u0159\u00edsp\u011bvky a Str\u00e1nky pod polo\u017ekou \u201eKe schv\u00e1len\u00ed\u201c; publikov\u00e1n\u00edm polo\u017eky v tomto seznamu ji schv\u00e1l\u00edte."
+            ],
+            "Manage users": [
+                "Spr\u00e1va u\u017eivatel\u016f"
+            ],
+            "Nothing is waiting for review.": [
+                "Nic ne\u010dek\u00e1 na schv\u00e1len\u00ed."
+            ],
+            "Note for the translator (optional)": [
+                "Pozn\u00e1mka pro p\u0159ekladatele (voliteln\u00e9)"
+            ],
+            "Read side by side": [
+                "Zobrazit vedle sebe"
+            ],
+            "Approve": [
+                "Schv\u00e1lit"
+            ],
+            "Ask for changes": [
+                "Po\u017e\u00e1dat o zm\u011bny"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d p\u0159eklad\u016f bylo importov\u00e1no a chr\u00e1n\u011bno p\u0159ed strojov\u00fdm p\u0159ekladem."
+            ],
+            "Export and import for translators": [
+                "Export a import pro p\u0159ekladatele"
+            ],
+            "Not translated yet": [
+                "Zat\u00edm nep\u0159elo\u017eeno"
+            ],
+            "Already translated": [
+                "Ji\u017e p\u0159elo\u017eeno"
+            ],
+            "Format": [
+                "Form\u00e1t"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (p\u0159ekladov\u00e9 n\u00e1stroje)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (tabulkov\u00e9 procesory)"
+            ],
+            "Download the file": [
+                "St\u00e1hnout soubor"
+            ],
+            "Import a translated file": [
+                "Importovat p\u0159elo\u017een\u00fd soubor"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Vr\u00e1ceno: %1$d odkaz\u016f odstran\u011bno, %2$d importovan\u00fdch str\u00e1nek smaz\u00e1no."
+            ],
+            "Dry run, nothing changed:": [
+                "Zku\u0161ebn\u00ed b\u011bh, nic nebylo zm\u011bn\u011bno:"
+            ],
+            "Imported:": [
+                "Importov\u00e1no:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d jazyk\u016f p\u0159id\u00e1no, %2$d p\u0159eklad\u016f propojeno, %3$d str\u00e1nek sestaveno, %4$d text\u016f."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Nejprve vypn\u011bte druh\u00fd plugin (jeho adresy a p\u0159ep\u00edna\u010de by se tloukly s Tranzly). Jeho data z\u016fstanou tam, kde jsou, tak\u017ee se m\u016f\u017eete vr\u00e1tit zp\u011bt; funkce Zp\u011bt odstran\u00ed p\u0159esn\u011b to, co import p\u0159idal."
+            ],
+            "No data from this plugin on this site.": [
+                "Z tohoto pluginu nejsou na tomto webu \u017e\u00e1dn\u00e1 data."
+            ],
+            "Languages: %s": [
+                "Jazyky: %s"
+            ],
+            "still active: switch it off first.": [
+                "st\u00e1le aktivn\u00ed: nejd\u0159\u00edve ji vypn\u011bte."
+            ],
+            "Dry run": [
+                "Zku\u0161ebn\u00ed spu\u0161t\u011bn\u00ed"
+            ],
+            "Import": [
+                "Importovat"
+            ],
+            "Undo the import": [
+                "Vr\u00e1tit import zp\u011bt"
+            ],
+            "Comments and product reviews": [
+                "Koment\u00e1\u0159e a recenze produkt\u016f"
+            ],
+            "Each language keeps its own": [
+                "Ka\u017ed\u00fd jazyk si zachov\u00e1v\u00e1 sv\u016fj vlastn\u00ed"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Zobrazit koment\u00e1\u0159e ke ka\u017ed\u00e9mu jazyku u ka\u017ed\u00e9 verze"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Zobrazit v\u0161echny p\u0159elo\u017een\u00e9 do jazyka \u010dten\u00e1\u0159e"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "P\u0159ekl\u00e1d\u00e1n\u00ed vyu\u017e\u00edv\u00e1 v\u00e1\u0161 p\u0159ekladatelsk\u00fd n\u00e1stroj pro ka\u017ed\u00fd schv\u00e1len\u00fd koment\u00e1\u0159. Spam a koment\u00e1\u0159e \u010dekaj\u00edc\u00ed na moderov\u00e1n\u00ed se nikdy neodes\u00edlaj\u00ed."
             ]
         }
     }

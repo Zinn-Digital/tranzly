@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "सभी चारों बड़े SEO प्लगइन के लिए SEO फ़ील्ड"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "कस्टम फ़ील्ड"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "एक क्लिक में एक पोस्ट का अनुवाद करें"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "पूरे साइट का बल्क अनुवाद करें"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "विजुअल फ्रंट-एंड एडिटर"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "समीक्षा और अनुमोदन"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "मानव अनुवादकों के लिए निर्यात और आयात"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "WPML, Polylang या TranslatePress से स्विच करें"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce मल्टी-करेंसी"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "एआई गुणवत्ता जाँच"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "किसका अनुवाद होता है"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "वर्कफ़्लो"
 
@@ -852,6 +858,7 @@ msgstr "परीक्षण"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "हटाएँ"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "इसके लिए प्रयुक्त"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "मॉडल"
 
@@ -1303,7 +1311,7 @@ msgstr "सीमाएँ और अनुमतियाँ सहेजी �
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "वह भाषा इस साइट की भाषाओं में से एक नहीं है।"
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "इस प्रकार की सामग्री का अनुवाद नहीं किया जाता है।"
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "पाठ %s अब इस साइट पर नहीं है। पेज को रीलोड करें।"
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "कोई भी अनुवाद इंजन इस पाठ को नहीं ले सका।"
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "अपनी अन्य भाषाओं में से एक चुनें।"
 
@@ -1422,7 +1435,8 @@ msgstr "इस पृष्ठ पर अनुवाद करें"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "आपको इस आइटम का अनुवाद करने की अनुमति नहीं है।"
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "इस आइटम का उस भाषा में पहले से ही एक संस्करण मौजूद है।"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "वह अनुवाद इंजन इस साइट पर उपलब्ध नहीं है।"
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s के लिए मान स्वीकृत विकल्पों में से एक नहीं है।"
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "इस साइट पर बैकग्राउंड कतार उपलब्ध नहीं है।"
 
@@ -1489,6 +1504,7 @@ msgstr "वह आइटम किसी अनुवाद जॉब का ह
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "आपको वह अनुवाद बदलने की अनुमति नहीं है।"
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "यह आइटम पहले से ही उस भाषा में लिखा गया है।"
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "यह अनुवाद किसी व्यक्ति द्वारा संपादित (या आयात) किया गया था, इसलिए यह सुरक्षित है। इसे दोबारा अनुवाद करने के लिए अनलॉक करें।"
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "वह आइटम मौजूद नहीं है।"
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "अभी तक कोई अनुवाद इंजन सेट अप नहीं किया गया है। Tranzly → Engines में इसके लिए एक कुंजी जोड़ें।"
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "वह अनुवाद इंजन अभी सेट अप नहीं किया गया है: पहले उसकी कुंजी (key) जोड़ें।"
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "इसी पाठ का अनुवाद वर्तमान में एक अन्य जॉब द्वारा किया जा रहा है; इस आइटम में उसी उत्तर का उपयोग किया जाएगा।"
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "कोई भी अनुवाद इंजन इस आइटम को नहीं ले सका।"
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "इंजन ने इस आइटम के प्रत्येक भाग के लिए अनुवाद नहीं लौटाया। कुछ भी बदला नहीं गया।"
 
@@ -1671,6 +1691,7 @@ msgstr "क्या आप %1$s को %2$s में मिलाना चा
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "क्रियाएँ"
 
@@ -4711,6 +4732,7 @@ msgstr "ट्रायल शुरू हो रहा है"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "स्थिति"
@@ -5013,6 +5035,7 @@ msgstr "अब तक आपको %1$s कैसा लगा? %3$d-दिन �
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "प्रकार"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s पहले"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "दोहराई जाने वाली सामग्री वाले ब्लॉक्स और सिंक किए गए पैटर्न"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "टिप्पणियाँ और समीक्षाएँ"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "%s से स्वतः अनुवादित।"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce मुद्राएँ"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "मुद्रा"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "दर स्रोत दुकान की मुद्रा, %s, को उद्धृत नहीं करता है।"
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" WooCommerce की पहचानी गई मुद्रा नहीं है, या यह दुकान की अपनी मुद्रा है।"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "%s के लिए शून्य से अधिक दर दर्ज करें, जैसे 0.92।"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "राउंडिंग स्टेप्स और प्राइस एंडिंग्स 0.05 या 0.99 जैसी राशियाँ होती हैं।"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "कस्टम फ़ील्ड्स (ACF, मेटा बॉक्स, पॉड्स)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "प्रत्येक फ़ील्ड के लिए अनुवाद करें, कॉपी करें या खाली छोड़ें।"
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "फॉर्म्स (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "मैं खुद दरें दर्ज करता हूँ"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "यूरोपीय सेंट्रल बैंक, प्रतिदिन अपडेट किया जाता है (मुफ़्त, किसी खाते की आवश्यकता नहीं)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "यूरोपीय सेंट्रल बैंक ने %d उत्तर दिया। आखिरी दरें बरकरार रखी गई हैं।"
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "यूरोपीय केंद्रीय बैंक के फ़ीड में कोई दरें नहीं थीं। पिछली दरें बरकरार रखी गई हैं।"
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "वह विनिमय-दर स्रोत उपलब्ध नहीं है।"
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "एसईओ प्लगइन (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "थीम और प्लगइन टेक्स्ट"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "वह थीम या प्लगइन इस साइट पर सक्रिय नहीं है।"
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "भाषा सुझाव"
@@ -5945,11 +6061,134 @@ msgstr "पाठ का आकार"
 msgid "Switcher"
 msgstr "स्विचर"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(कोई शीर्षक नहीं)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "यहाँ ठीक करने के लिए कुछ नहीं है।"
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "इस साइट पर किसी भी सामग्री प्रकार का अनुवाद नहीं किया गया है।"
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "इस साइट पर वह सामग्री प्रकार अनूदित नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "उस चयन में अनुवाद करने के लिए कुछ नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "अनुवाद के लिए कम से कम एक भाषा चुनें।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "आपको अनुवाद निर्यात करने की अनुमति नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "आयात करने के लिए कोई XLIFF या CSV फ़ाइल चुनें।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "वह Tranzly XLIFF या CSV फ़ाइल नहीं है। पहले एक को निर्यात (एक्सपोर्ट) करें, उसका अनुवाद करें और यहाँ आयात (इंपोर्ट) करें।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "आयात के लिए फ़ाइल संग्रहीत नहीं की जा सकी। जाँचें कि अपलोड फ़ोल्डर लिखने योग्य है।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "वह इम्पोर्ट अब मौजूद नहीं है। फ़ाइल को दोबारा अपलोड करें।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "वह पृष्ठ अब इस साइट पर नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "यह फ़ाइल एक ऐसी भाषा के लिए है जो इस साइट पर उपलब्ध नहीं है।"
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "%1$s %2$d को लिंक नहीं किया जा सका: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "पोस्ट #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "इस साइट पर उस प्लगइन का कोई डेटा नहीं मिला।"
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "यह इस साइट की किसी भी चीज़ का अनुवाद नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "जाँच करने के लिए कोई टेक्स्ट नहीं है।"
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "एआई सेटिंग्स इस बिल्ड का हिस्सा नहीं हैं।"
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "एआई प्रदाता ने उत्तर नहीं दिया।"
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "AI मॉडल ने इस पेज के हर हिस्से का मूल्यांकन नहीं किया। दोबारा कोशिश करें, या कोई दूसरा मॉडल चुनें।"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "अनुवादक"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "अनुवाद समीक्षक"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "एक समीक्षक ने इस अनुवाद में बदलाव करने के लिए कहा है।"
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "एक समीक्षक ने इस अनुवाद में बदलाव का अनुरोध किया है: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "यह अनुवाद एक समीक्षक की प्रतीक्षा कर रहा है। इसे प्रकाशित करना (एक समीक्षक के रूप में) इसे स्वीकृत करता है।"
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "केवल एक अनुवाद की समीक्षा की जा सकती है।"
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "मूल सामग्री में बदलाव होने पर क्या होना चाहिए, यह चुनें: कुछ नहीं, इसके अनुवादों को पुराना के रूप में चिह्नित करें, या उन्हें फिर से अनुवाद करें।"
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "गुणवत्ता सीमा 0 से 100 तक का एक स्कोर है।"
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "अवलोकन पर छुए गए सुझाव फिर से दिखाएं"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "सभी"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "चुनें"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "पेज"
 
@@ -6224,28 +6465,28 @@ msgstr "हल्का"
 msgid "Dark"
 msgstr "डार्क"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "रंग योजना"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "सहायता"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "इस स्क्रीन के लिए मार्गदर्शिका"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "टूर लें"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "सहायता प्राप्त करें या किसी बग की रिपोर्ट करें"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "प्लगइन स्क्रीन"
 
@@ -6660,6 +6901,7 @@ msgstr "प्रो प्लान और मूल्य निर्धा�
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "भाषाएँ"
@@ -6886,6 +7128,213 @@ msgstr "सेटिंग्स"
 msgid "Translation engine"
 msgstr "अनुवाद इंजन"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "इस साइट पर Tranzly क्या अनुवाद करता है"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "मिला, आपकी सामग्री के साथ अनुवादित"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "इस साइट पर नहीं"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Tranzly Pro के साथ: Elementor, Bricks, Divi, Beaver Builder, Oxygen और WPBakery पृष्ठ; WooCommerce में सब कुछ, आगंतुक की मुद्रा में कीमतों के साथ; Yoast SEO, Rank Math, SEOPress और All in One SEO के SEO फ़ील्ड; ACF, Meta Box और Pods फ़ील्ड; फ़ॉर्म और उनके ई-मेल; आपकी थीम और प्लग-इन का अपना पाठ; और टिप्पणियाँ और समीक्षाएँ।"
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "दुकान का पाठ और ईमेल"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "ई-मेल विषय और शीर्षक, भुगतान और शिपिंग विधि के नाम, और चेकआउट सूचनाएँ। प्रत्येक ऑर्डर के ई-मेल उसी भाषा में भेजे जाते हैं जिसमें वह दिया गया था।"
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "फ़ॉर्म और उनके ईमेल"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "प्रत्येक फ़ॉर्म प्रविष्टियों की एक सूची रखता है; इसके लेबल, बटन, संदेश और ईमेल आगंतुक की भाषा में दिखाई देते हैं।"
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "सहेजा गया।"
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "अभी तक कोई एसीएफ, मेटा बॉक्स या पॉड्स फ़ील्ड परिभाषित नहीं की गई है।"
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "फ़ील्ड"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "कहाँ"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "एक अनुवाद में"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "एक अनुवाद में %s का क्या होता है"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "इसका अनुवाद करें"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "इसे वैसे ही कॉपी करें"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "इसे खाली छोड़ दें"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "दुकान की मुद्रा"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "मुद्राएँ"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "अन्य मुद्राओं में मूल्य दिखाएं (दुकान का अपना %s है)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "विनिमय दरें"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "दरें अंतिम बार %s को अपडेट की गईं।"
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "दर अभी तक प्राप्त नहीं किए गए हैं।"
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "अभी दरों को अपडेट करें"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "नई मुद्रा"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "चुनें…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "दर (प्रति 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "दर टाइप करने से वह सुरक्षित रहता है: दैनिक अपडेट इसे नहीं बदलेगा।"
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "पूर्णांकन"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "कोई नहीं"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "राउंड अप"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "निकटतम पर पूर्ण करें"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "नीचे पूर्णांक करें"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "इस तक गोल करें (उदाहरण के लिए 1, 0.05 या 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "कीमतें इस पर समाप्त होती हैं (उदाहरण के लिए 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "मुद्रा जोड़ें"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "कौन से आगंतुक कौन सी मुद्रा देखते हैं"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "देश के अनुसार: दो अक्षरों वाला देश कोड (उदाहरण के लिए CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "%s से आगंतुक"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "आगंतुकों को चुनने दें (शॉर्टकोड [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "अब कीमतें किसी कुकी या विज़िटर के देश पर निर्भर करती हैं: सुनिश्चित करें कि आपका पेज कैश \"tranzly_currency\" कुकी के अनुसार बदलता है, या शॉप पेजों को बाहर रखता है।"
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "मुद्राएँ सहेजें"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "आपके थीम और प्लगइन जो शब्द खुद प्रिंट करते हैं (बटन, लेबल)। किसी थीम या प्लगइन को एक बार पढ़ें, फिर उसका पाठ यहाँ अनुवादित करें; आपका अनुवाद प्लगइन के अपने अनुवाद पर भारी पड़ेगा।"
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d पाठ"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "अभी तक नहीं पढ़ा गया"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "फिर से पढ़ें"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "इसका पाठ पढ़ें"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "अनुवाद करें"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6945,6 +7394,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d पोस्ट, %2$s वर्ण: आपके स्वयं के खाते पर लगभग $%3$s।"
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "अनुवाद शुरू करें"
 
@@ -6982,6 +7432,11 @@ msgstr "सामग्री"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "भाषा"
 
@@ -7016,11 +7471,13 @@ msgstr "मेनू सहेज लिए गए।"
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d टेक्स्ट अनूदित किए गए।"
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "सहेजा गया। आपके सुधार मशीन अनुवाद से सुरक्षित हैं।"
 
@@ -7057,48 +7514,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "टेम्पलेट्स, हेडर, फूटर और पैटर्न (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "गायब पाठ का अनुवाद करें"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "यहाँ अनुवाद करने के लिए कोई पाठ नहीं है।"
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "एक व्यक्ति द्वारा सही किया गया, सुरक्षित"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "सुधार सहेजें"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "भाषाएँ और सेटिंग्स"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "इंजन"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "अनुवाद कार्य"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "पते और एसईओ"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "भाषा स्विचर्स"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "एसईओ ऑडिट"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "मेन्यू और साझा पाठ"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "अनुवाद की स्थिति"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "एकीकरण"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7143,6 +7613,7 @@ msgid "The whole language has been checked."
 msgstr "पूरे भाषा की जाँच कर ली गई है।"
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "पेज"
 
@@ -7151,17 +7622,198 @@ msgid "Problem"
 msgstr "समस्या"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "संपादित करें"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "जॉब %1$d शुरू हो गई है: पृष्ठभूमि में %2$d पृष्ठों का अनुवाद किया जा रहा है। अनुवाद जॉब्स में इसकी प्रगति देखें।"
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d अनुवाद पृष्ठभूमि में जाँचे जा रहे हैं। जैसे-जैसे स्कोर आते हैं, वे यहाँ दिखाई देते हैं।"
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "अनुपस्थित"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "पुराना"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "अनुवादित"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "किसी व्यक्ति द्वारा संपादित"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "मशीन से अनूदित"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "समीक्षा की प्रतीक्षा है"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "मानव निरीक्षण की आवश्यकता है"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "सब कुछ"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "अद्यतन"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly अभी भी यह पता लगा रहा है कि कौन से पुराने अनुवाद कालबाधित (out of date) हैं। ऐसा होने पर \"कालबाधित\" (out of date) संख्याएँ बढ़ती जाएंगी।"
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "सामग्री प्रकार"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "सभी सामग्री"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "औसत गुणवत्ता"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d अनुवादित (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "दिखाएँ"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "सब कुछ जो छूट गया है उसका अनुवाद करें"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "सभी पुराने हो चुके घटकों को अपडेट करें"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "AI के साथ गुणवत्ता की जाँच करें"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "कम स्कोर वाले पृष्ठों का फिर से अनुवाद करें"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "यहाँ कुछ नहीं है।"
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "गुणवत्ता"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "किसी व्यक्ति द्वारा"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "समीक्षा की प्रतीक्षा है"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "आमने-सामने"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "और दिखाएं"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "पूरे का एक साथ अनुवाद करें (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Tranzly Pro के साथ, सामग्री के प्रकार और भाषाएँ चुनें, अनुमान देखें, और पूरी साइट का एक बार में अनुवाद करें।"
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d पृष्ठभूमि कार्य शुरू हो गए हैं, प्रति भाषा एक। ट्रांसलेशन जॉब्स में उनका पालन करें।"
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "कंटेंट प्रकार"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "अनुवाद क्या करना है"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "केवल वही जो गायब है"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "केवल वही जो पुराना हो चुका है"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "सब कुछ (व्यक्ति द्वारा संपादित पृष्ठ वैसे ही रहेंगे)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "अनुमानित करें"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d पृष्ठ, %2$s वर्ण। यह इंजन मूल्य प्रकाशित नहीं करता है।"
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d पृष्ठ, %2$s वर्ण, लगभग $%3$s।"
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "एक पाठ खोजें"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d और: सूची को छोटा करने के लिए \"Find a text\" टाइप करें।"
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "बिना किसी सेटअप के, किसी भी थीम पर, हर पेज के कोने में एक छोटा बटन।"
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "कहाँ"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7361,6 +8013,199 @@ msgstr "%s के साथ मिलकर काम कर रहे हैं
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "प्रत्येक पता शब्द 2 से 12 छोटे अक्षरों, अंकों या हाइफ़न का होता है।"
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Tranzly Pro के साथ ऑटो-अपडेट ऑन-ट्रांसलेट, समीक्षक भूमिकाएँ, अनुवादकों के लिए XLIFF निर्यात, WPML, Polylang या TranslatePress से स्विच करना और AI गुणवत्ता जाँच मिलती है।"
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "जब मूल में बदलाव होता है"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "जब किसी पृष्ठ को संपादित किया जाता है"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "इसके अनुवादों को पुराना चिह्नित करें"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "इसके अनुवादों का बैकग्राउंड में फिर से अनुवाद करें"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "कुछ न करें"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "मानव द्वारा संपादित अनुवाद कभी भी अधिलेखित नहीं किया जाता है; इसके बजाय इसे पुराना चिह्नित कर दिया जाता है।"
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "जब नए पृष्ठ प्रकाशित हों, तो उन्हें हर भाषा में अनुवादित करें"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "दूसरा AI मॉडल अपने मूल के साथ प्रत्येक अनुवाद को पढ़ता है, उसका मूल्यांकन करता है और गलतियों को चिह्नित करता है। यह AI सेटिंग्स से आपकी अपनी AI कुंजी का उपयोग करता है। अनुवाद स्थिति से जाँच शुरू करें।"
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "एआई प्रदाता"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "एआई सेटिंग्स का सामान्य मॉडल"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "अनुशंसित"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "इस स्कोर से नीचे के पेज को इंसानी नज़र की ज़रूरत है"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "केवल वही अनुवाद प्रकाशित करें जिसे समीक्षक ने स्वीकृत किया हो"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "लोगों को अनुवादक (Translator) की भूमिका दें (जो अनुवाद संपादित करते हैं, मूल पाठ को कभी नहीं, और प्रकाशित नहीं कर सकते) या अनुवाद समीक्षक (Translation reviewer) की भूमिका दें (जो अनुमोदन भी करते हैं)। समीक्षक \"लंबित\" (Pending) के तहत पोस्ट और पेज सूचियों में प्रतीक्षा कर रहे सभी विषयों को भी ढूंढते हैं; वहां किसी एक को प्रकाशित करने से उसका अनुमोदन हो जाता है।"
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "उपयोगकर्ताओं को प्रबंधित करें"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "समीक्षा के लिए कुछ भी प्रतीक्षारत नहीं है।"
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "अनुवादक के लिए नोट (वैकल्पिक)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "आमने-सामने पढ़ें"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "स्वीकृत करें"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "परिवर्तन के लिए अनुरोध करें"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d अनुवाद आयात किए गए और मशीन अनुवाद से सुरक्षित किए गए।"
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "अनुवादकों के लिए निर्यात और आयात"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "अभी तक अनूदित नहीं"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "पहले से अनुवादित"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "प्रारूप"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (अनुवाद टूल)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (स्प्रेडशीट)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "फ़ाइल डाउनलोड करें"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "अनुdहित फ़ाइल आयात करें"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "पूर्ववत्: %1$d लिंक हटाए गए, %2$d आयातित पृष्ठ हटाए गए।"
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "ड्राई रन, कुछ भी बदला नहीं:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "आयात किया गया:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d भाषाएँ जोड़ी गईं, %2$d अनुवाद लिंक किए गए, %3$d पृष्ठ बनाए गए, %4$d पाठ।"
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "पहले दूसरे प्लगइन को बंद करें (उसके पते और स्विचर्स Tranzly से टकराएंगे)। उसका डेटा वहीं रहता है, ताकि आप वापस स्विच कर सकें; पूर्ववत करें (Undo) ठीक वही हटाता है जो आयात ने जोड़ा था।"
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "इस साइट पर इस प्लगइन से कोई डेटा नहीं है।"
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "भाषाएँ: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "अभी भी सक्रिय है: पहले इसे बंद करें।"
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "ड्राई रन"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "आयात करें"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "आयात पूर्ववत करें"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "टिप्पणियाँ और उत्पाद समीक्षाएँ"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "प्रत्येक भाषा अपनी खुद की रखती है"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "हर संस्करण पर हर भाषा की टिप्पणियाँ दिखाएँ"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "सभी दिखाएं, पाठक की भाषा में अनुवादित"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "अनुवाद करने के लिए प्रत्येक स्वीकृत टिप्पणी पर आपके अनुवाद इंजन का उपयोग किया जाता है। स्पैम और मॉडरेशन की प्रतीक्षा कर रही टिप्पणियों को कभी नहीं भेजा जाता है।"
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "सहेजा गया। आपके द्वारा बदले गए हिस्सों को किसी व्यक्ति द्वारा जाँच के रूप में चिह्नित किया गया है, और यह अनुवाद मशीन अनुवाद से सुरक्षित है।"
@@ -7393,11 +8238,6 @@ msgstr "परिवर्तन सहेजें"
 msgid "Open in the editor"
 msgstr "एडिटर में खोलें"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "मशीन से अनूदित"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "एक व्यक्ति द्वारा जाँच की गई"
@@ -7405,10 +8245,6 @@ msgstr "एक व्यक्ति द्वारा जाँच की ग�
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "आयातित"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "अभी तक अनूदित नहीं"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7462,10 +8298,6 @@ msgstr "अभी तक अनुवादित नहीं (एक कॉप
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "पहले इस पोस्ट को सेव करें, फिर यहाँ इसका अनुवाद करें।"
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "आमने-सामने"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "\u067e\u0647 \u0634\u0627\u0644\u064a\u062f \u06a9\u06d0 \u0698\u0628\u0627\u0693\u0647 \u0648\u06a9\u0693\u0626"
             ],
+            "Custom fields": [
+                "\u06ab\u0633\u067c\u0645 \u0633\u0627\u062d\u06d0"
+            ],
+            "Bulk translate the whole site": [
+                "\u067c\u0648\u0644\u0647 \u0648\u06cc\u0628 \u067e\u0627\u06bc\u0647 \u067e\u0647 \u0644\u0648\u06cc\u0647 \u06a9\u0686\u0647 \u0648\u0698\u0628\u0627\u0693\u0626"
+            ],
+            "Review and approval": [
+                "\u06a9\u062a\u0646\u0647 \u0627\u0648 \u062a\u0627\u06cc\u06cc\u062f"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "\u0644\u0647 WPML\u060c Polylang \u06cc\u0627 TranslatePress \u0685\u062e\u0647 \u0628\u062f\u0644 \u06a9\u0693\u0626"
+            ],
             "Floating switcher": [
                 "\u062a\u0644\u0648\u0648\u0646\u06a9\u06cc \u0633\u0648\u06cc\u0686\u0631"
+            ],
+            "AI quality check": [
+                "\u062f AI \u06a9\u06cc\u0641\u06cc\u062a \u0686\u06a9 \u06a9\u0648\u0644"
+            ],
+            "Workflow": [
+                "\u06a9\u0627\u0631\u064a \u0628\u0647\u06cc\u0631"
             ],
             "Next": [
                 "\u0628\u0644"
@@ -25,11 +43,17 @@
             "Open": [
                 "\u062e\u0644\u0627\u0635 \u06a9\u0693\u0626"
             ],
+            "Model": [
+                "\u0645\u0627\u0689\u0644"
+            ],
             "About": [
                 "\u067e\u0647 \u0627\u0693\u0647"
             ],
             "Done": [
                 "\u0628\u0634\u067e\u0693 \u0634\u0648"
+            ],
+            "Actions": [
+                "\u0639\u0645\u0644\u0648\u0646\u0647"
             ],
             "Cancelled": [
                 "\u0644\u063a\u0648\u0647 \u0634\u0648\u06cc"
@@ -58,11 +82,23 @@
             "Sites": [
                 "\u067e\u0627\u06bc\u06d0"
             ],
+            "State": [
+                "\u062d\u0627\u0644\u062a"
+            ],
             "Type": [
                 "\u0689\u0648\u0644"
             ],
             "Upgrade": [
                 "\u0644\u0648\u0693\u0648\u0644"
+            ],
+            "Comments and reviews": [
+                "\u0646\u0638\u0631\u0648\u0646\u0647 \u0627\u0648 \u0627\u0631\u0632\u0648\u0646\u06d0"
+            ],
+            "Currency": [
+                "\u0627\u0633\u0639\u0627\u0631"
+            ],
+            "Theme and plugin text": [
+                "\u062f \u0642\u0627\u0644\u0628 \u0627\u0648 \u067e\u0644\u06ab \u0627\u0646 \u0645\u062a\u0646"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "\u062f \u0647\u0631\u06d0 \u0698\u0628\u06d0 \u0644\u067e\u0627\u0631\u0647 \u0630\u06cc\u0644\u064a \u0689\u0648\u0645\u06cc\u0646\u0648\u0646\u0647 \u0627\u0648 \u062c\u0644\u0627 \u0689\u0648\u0645\u06cc\u0646\u0648\u0646\u0647 \u062f Tranzly Pro \u0628\u0631\u062e\u0647 \u062f\u064a."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "\u062f \u0698\u0628\u0627\u0693\u06d0 \u0645\u0627\u0634\u06cc\u0646"
             ],
+            "What Tranzly translates on this site": [
+                "\u067e\u0647 \u062f\u06d0 \u0633\u0627\u06cc\u067c \u06a9\u06d0 Tranzly \u0685\u0647 \u0634\u06cc \u0698\u0628\u0627\u0693\u064a"
+            ],
+            "found, translated with your content": [
+                "\u067e\u06cc\u062f\u0627 \u0634\u0648\u060c \u0633\u062a\u0627\u0633\u0648 \u062f \u0645\u0646\u0681\u067e\u0627\u0646\u06ab\u06d0 \u0633\u0631\u0647 \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc"
+            ],
+            "not on this site": [
+                "\u067e\u0647 \u062f\u06d0 \u0633\u0627\u06cc\u067c \u06a9\u06d0 \u0646\u0647 \u062f\u06cc"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "\u062f Tranzly Pro \u0633\u0631\u0647: \u062f Elementor\u060c Bricks\u060c Divi\u060c Beaver Builder\u060c Oxygen \u0627\u0648 WPBakery \u067e\u0627\u06bc\u06d0\u061b \u067e\u0647 WooCommerce \u06a9\u06d0 \u0647\u0631\u0685\u0647\u060c \u062f \u0644\u06cc\u062f\u0648\u0646\u06a9\u064a \u067e\u0647 \u0627\u0633\u0639\u0627\u0631\u0648 \u06a9\u06d0 \u062f \u0628\u06cc\u0648 \u0633\u0631\u0647\u061b \u062f Yoast SEO\u060c Rank Math\u060c SEOPress \u0627\u0648 All in One SEO \u062f SEO \u0633\u0627\u062d\u06d0\u061b \u062f ACF\u060c Meta Box \u0627\u0648 Pods \u0633\u0627\u062d\u06d0\u061b \u0641\u0648\u0631\u0645\u0648\u0646\u0647 \u0627\u0648 \u062f \u0647\u063a\u0648 \u0628\u0631\u06cc\u069a\u0646\u0627\u0644\u06cc\u06a9\u0648\u0646\u0647\u061b \u0633\u062a\u0627\u0633\u0648 \u062f \u062a\u06cc\u0645 \u0627\u0648 \u067e\u0644\u06af \u0627\u0646\u0648\u0646\u0648 \u062e\u067e\u0644 \u0645\u062a\u0646\u061b \u0627\u0648 \u0646\u0638\u0631\u0648\u0646\u0647 \u0627\u0648 \u0627\u0631\u0632\u0648\u0646\u06d0."
+            ],
+            "Shop text and e-mails": [
+                "\u062f \u0647\u067c\u06cd \u0645\u062a\u0646 \u0627\u0648 \u0628\u0631\u06cc\u069a\u0646\u0627\u0644\u06cc\u06a9\u0648\u0646\u0647"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "\u062f \u0628\u0631\u06d0\u069a\u0646\u0627\u0644\u06cc\u06a9 \u0645\u0648\u0636\u0648\u0639\u0627\u062a \u0627\u0648 \u0633\u0631\u0644\u06cc\u06a9\u0648\u0646\u0647\u060c \u062f \u062a\u0627\u062f\u06cc\u06d0 \u0627\u0648 \u0644\u06d0\u0696\u062f \u062f \u0645\u06cc\u062a\u0648\u062f \u0646\u0648\u0645\u0648\u0646\u0647\u060c \u0627\u0648 \u062f \u062a\u0635\u0641\u06cc\u06d0 \u062e\u0628\u0631\u062a\u06cc\u0627\u0648\u06d0. \u062f \u0647\u0631 \u0627\u0645\u0631 \u0628\u0631\u06d0\u069a\u0646\u0627\u0644\u06cc\u06a9\u0648\u0646\u0647 \u067e\u0647 \u0647\u063a\u0647 \u0698\u0628\u0647 \u06a9\u06d0 \u0644\u06d0\u0696\u0644 \u06a9\u06d0\u0696\u064a \u0686\u06d0 \u067e\u0647 \u06a9\u0648\u0645\u0647 \u06a9\u06d0 \u062b\u0628\u062a \u0634\u0648\u06cc \u0648\u064a."
+            ],
+            "Forms and their e-mails": [
+                "\u0641\u0648\u0631\u0645\u0648\u0646\u0647 \u0627\u0648 \u062f \u0647\u063a\u0648 \u0628\u0631\u06cc\u069a\u0646\u0627\u0644\u06cc\u06a9\u0648\u0646\u0647"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "\u0647\u0631 \u0641\u0648\u0631\u0645 \u062f \u062e\u067e\u0644\u0648 \u062f\u0627\u062e\u0644\u0648\u0646\u0648 \u06cc\u0648 \u0644\u0633\u062a \u0633\u0627\u062a\u06cc\u061b \u062f \u062f\u06d0 \u0646\u069a\u0627\u0646\u0648\u0646\u0647\u060c \u062a\u06bc\u06cd\u060c \u067e\u06cc\u063a\u0627\u0645\u0648\u0646\u0647 \u0627\u0648 \u0628\u0631\u06d0\u069a\u0646\u0627\u0644\u06cc\u06a9\u0648\u0646\u0647 \u062f \u0644\u06cc\u062f\u0648\u0646\u06a9\u064a \u067e\u0647 \u0698\u0628\u0647 \u069a\u06a9\u0627\u0631\u064a."
+            ],
+            "Saved.": [
+                "\u062e\u0648\u0646\u062f\u064a \u0634\u0648."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "\u0644\u0627 \u062a\u0631 \u0627\u0648\u0633\u0647 \u067e\u0648\u0631\u06d0 \u06a9\u0648\u0645 \u062f ACF\u060c Meta Box \u06cc\u0627 Pods \u0633\u0627\u062d\u06d0 \u0646\u0647 \u062f\u064a \u062a\u0639\u0631\u06cc\u0641 \u0634\u0648\u064a."
+            ],
+            "Field": [
+                "\u0641\u06cc\u0644\u0689"
+            ],
+            "Where": [
+                "\u0686\u06cc\u0631\u062a\u0647"
+            ],
+            "In a translation": [
+                "\u067e\u0647 \u0698\u0628\u0627\u0693\u0647 \u06a9\u06d0"
+            ],
+            "What happens to %s in a translation": [
+                "\u067e\u0647 \u0698\u0628\u0627\u0693\u0647 \u06a9\u06d0 %s \u062a\u0647 \u0685\u0647 \u067e\u06d0\u069a\u06cc\u0696\u064a"
+            ],
+            "Translate it": [
+                "\u0698\u0628\u0627\u0693\u0647 \u06a9\u0648\u0644"
+            ],
+            "Copy it as it is": [
+                "\u0644\u06a9\u0647 \u0685\u0646\u06ab\u0647 \u0686\u06d0 \u062f\u06cc\u060c \u0647\u063a\u0647 \u06a9\u0627\u067e\u064a \u06a9\u0693\u0626"
+            ],
+            "Leave it empty": [
+                "\u062e\u0627\u0644\u06cc \u067e\u0631\u06cc\u0696\u062f\u0626"
+            ],
+            "The shop\u2019s currency": [
+                "\u062f \u062f\u0648\u06a9\u0627\u0646 \u0627\u0633\u0639\u0627\u0631"
+            ],
+            "Currencies": [
+                "\u0627\u0633\u0639\u0627\u0631\u0648"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "\u067e\u0647 \u0646\u0648\u0631\u0648 \u0627\u0633\u0639\u0627\u0631\u0648 \u06a9\u06d0 \u0646\u0631\u062e\u0648\u0646\u0647 \u0648\u069a\u0627\u06cc\u0627\u0633\u062a (\u062f \u0647\u067c\u06cd \u062e\u067e\u0644 \u0627\u0633\u0639\u0627\u0631 %s \u062f\u064a)"
+            ],
+            "Exchange rates": [
+                "\u062f \u062a\u0628\u0627\u062f\u0644\u06d0 \u0646\u0631\u062e\u0648\u0646\u0647"
+            ],
+            "Rates last updated %s.": [
+                "\u0646\u0631\u062e\u0648\u0646\u0647 \u0648\u0631\u0648\u0633\u062a\u064a \u0681\u0644 \u067e\u0647 %s \u06a9\u06d0 \u062a\u0627\u0632\u0647 \u0634\u0648\u064a."
+            ],
+            "Rates have not been fetched yet.": [
+                "\u0646\u0631\u062e\u0648\u0646\u0647 \u0644\u0627 \u0646\u0647 \u062f\u064a \u062a\u0631\u0644\u0627\u0633\u0647 \u0634\u0648\u064a."
+            ],
+            "Update the rates now": [
+                "\u0627\u0648\u0633 \u0646\u0631\u062e\u0648\u0646\u0647 \u062a\u0627\u0632\u0647 \u06a9\u0693\u0626"
+            ],
+            "New currency": [
+                "\u0646\u0648\u06cc \u0627\u0633\u0639\u0627\u0631"
+            ],
+            "Choose\u2026": [
+                "\u0627\u0646\u062a\u062e\u0627\u0628\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "\u0646\u0631\u062e (\u062f \u0647\u0631 \u06f1 %s \u0644\u067e\u0627\u0631\u0647)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "\u062f \u0646\u0631\u062e \u0644\u06cc\u06a9\u0644 \u0647\u063a\u0647 \u0633\u0627\u062a\u064a: \u0648\u0631\u0681\u0646\u06cd \u062a\u0627\u0632\u0647 \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0628\u0647 \u06cc\u06d0 \u0628\u062f\u0644 \u0646\u0647 \u06a9\u0693\u064a."
+            ],
+            "Rounding": [
+                "\u06af\u0631\u062f\u0648\u0644"
+            ],
+            "None": [
+                "\u0647\u06cc\u0685 \u06cc\u0648 \u0647\u0645 \u0646\u0647"
+            ],
+            "Round up": [
+                "\u06af\u0631\u062f\u0648\u0644"
+            ],
+            "Round to the nearest": [
+                "\u062a\u0631 \u067c\u0648\u0644\u0648 \u0646\u0696\u062f\u06d0 \u062a\u0647 \u0631\u0627\u06ab\u0631\u0681\u0648\u0644"
+            ],
+            "Round down": [
+                "\u0644\u0627\u0646\u062f\u06d0 \u0631\u0627\u067c\u0648\u0644\u0648\u0644"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "\u062a\u0647 (\u062f \u0628\u06d0\u0644\u06ab\u06d0 \u067e\u0647 \u062a\u0648\u06ab\u0647 1\u060c 0.05 \u06cc\u0627 10) \u062a\u0647 \u0646\u0696\u062f\u06d0 \u06a9\u0693\u0626"
+            ],
+            "Prices end in (for example 0.99)": [
+                "\u0628\u06cc\u06d0 \u067e\u0647 \u062f\u06d0 \u067e\u0627\u06cc \u062a\u0647 \u0631\u0633\u06cc\u0696\u064a (\u062f \u0645\u062b\u0627\u0644 \u067e\u0647 \u062a\u0648\u06ab\u0647 0.99)"
+            ],
+            "Add a currency": [
+                "\u067e\u064a\u0633\u0648 \u0648\u0627\u062d\u062f \u0627\u0636\u0627\u0641\u0647 \u06a9\u0693\u0626"
+            ],
+            "Which visitors see which currency": [
+                "\u0643\u0648\u0645 \u0644\u06cc\u062f\u0648\u0646\u06a9\u064a \u06a9\u0648\u0645 \u0627\u0633\u0639\u0627\u0631\u0648 \u0648\u06cc\u0646\u064a"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "\u062f \u0647\u06d0\u0648\u0627\u062f \u0644\u0647 \u0645\u062e\u06d0: \u062f \u0647\u06d0\u0648\u0627\u062f \u062f\u0648\u0647 \u062a\u0648\u0631\u064a \u06a9\u0648\u0689 (\u062f \u0628\u06d0\u0644\u06ab\u06d0 \u067e\u0647 \u062a\u0648\u06ab\u0647 CH)"
+            ],
+            "Visitors from %s": [
+                "\u062f %s \u0685\u062e\u0647 \u0644\u06cc\u062f\u0646\u0647 \u06a9\u0648\u0648\u0646\u06a9\u064a"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "\u067e\u06d0\u0631\u0648\u062f\u0648\u0646\u06a9\u0648 \u062a\u0647 \u0627\u062c\u0627\u0632\u0647 \u0648\u0631\u06a9\u0693\u0626 \u0686\u06d0 \u0648\u067c\u0627\u06a9\u064a (\u0634\u0627\u0631\u067c \u06a9\u0648\u0689 [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "\u0628\u06cc\u06d0 \u0627\u0648\u0633 \u067e\u0647 \u06a9\u0648\u06a9\u064a \u06cc\u0627 \u062f \u0644\u06cc\u062f\u0648\u0646\u06a9\u064a \u067e\u0647 \u0647\u06d0\u0648\u0627\u062f \u067e\u0648\u0631\u06d0 \u0627\u0693\u0647 \u0644\u0631\u064a: \u0689\u0627\u0689 \u062a\u0631\u0644\u0627\u0633\u0647 \u06a9\u0693\u0626 \u0686\u06d0 \u0633\u062a\u0627\u0633\u0648 \u062f \u067e\u0627\u06bc\u06d0 \u06a9\u06cc\u0686 \u062f \"tranzly_currency\" \u06a9\u0648\u06a9\u064a \u0644\u0647 \u0645\u062e\u06d0 \u062a\u0648\u067e\u06cc\u0631 \u0644\u0631\u064a\u060c \u06cc\u0627 \u062f \u067e\u0644\u0648\u0631\u0646\u0681\u064a \u067e\u0627\u06bc\u06d0 \u062e\u0627\u0631\u062c\u0648\u064a."
+            ],
+            "Save currencies": [
+                "\u0627\u0633\u0639\u0627\u0631 \u062e\u0648\u0646\u062f\u064a \u06a9\u0693\u0626"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "\u0647\u063a\u0647 \u06a9\u0644\u0645\u06d0 \u0686\u06d0 \u0633\u062a\u0627\u0633\u0648 \u062a\u0645 \u0627\u0648 \u067e\u0644\u06af \u0627\u0646\u0648\u0646\u0647 \u06cc\u06d0 \u062e\u067e\u0644\u0647 \u0686\u0627\u067e\u0648\u064a (\u062a\u06bc\u06cd\u060c \u0644\u064a\u0628\u0644\u0648\u0646\u0647). \u06cc\u0648 \u0681\u0644 \u06cc\u0648 \u062a\u0645 \u06cc\u0627 \u067e\u0644\u06af \u0627\u0646 \u0648\u0644\u0648\u0644\u0626\u060c \u0628\u06cc\u0627 \u062f\u0644\u062a\u0647 \u062f \u0647\u063a\u06d0 \u0645\u062a\u0646 \u0648\u0698\u0628\u0627\u0693\u0626\u061b \u0633\u062a\u0627\u0633\u0648 \u0698\u0628\u0627\u0693\u0647 \u062f \u067e\u0644\u06af \u0627\u0646 \u067e\u0631 \u062e\u067e\u0644\u0648 \u0647\u063a\u0648 \u0628\u0631\u0644\u0627\u0633\u06d0 \u06a9\u06cc\u0696\u064a."
+            ],
+            "%d texts": [
+                "%d \u0645\u062a\u0646\u0648\u0646\u0647"
+            ],
+            "not read yet": [
+                "\u0644\u0627 \u062a\u0631 \u0627\u0648\u0633\u0647 \u0646\u0647 \u062f\u06cc \u0644\u0648\u0633\u062a\u0644 \u0634\u0648\u06cc"
+            ],
+            "Read again": [
+                "\u0628\u06cc\u0627 \u0644\u0648\u0633\u062a\u0644"
+            ],
+            "Read its text": [
+                "\u062f \u0647\u063a\u0647 \u0645\u062a\u0646 \u0648\u0644\u0648\u0644\u0626"
+            ],
+            "Translate": [
+                "\u0698\u0628\u0627\u0693\u0647"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "\u062f %d \u0698\u0628\u0627\u0693\u0648 \u0633\u0631\u0647 \u06a9\u0627\u0631 \u067e\u06cc\u0644 \u0634\u0648. \u062f\u0627 \u067e\u0647 \u0634\u0627\u0644\u06cc\u062f \u06a9\u06d0 \u067e\u0631\u0645\u062e \u0681\u064a: \u062a\u0627\u0633\u0648 \u06a9\u0648\u0644\u06cc \u0634\u0626 \u062f\u0627 \u067e\u0627\u06bc\u0647 \u0648\u062a\u0693\u0626."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "\u0645\u06cc\u0646\u0648\u06ab\u0627\u0646\u06d0 \u0627\u0648 \u0634\u0631\u06cc\u06a9 \u0634\u0648\u06cc \u0645\u062a\u0646"
             ],
+            "Translation status": [
+                "\u062f \u0698\u0628\u0627\u0693\u06d0 \u062d\u0627\u0644\u062a"
+            ],
+            "Integrations": [
+                "\u0627\u0646\u0636\u0645\u0627\u0645\u0648\u0646\u0647"
+            ],
             "No meta description": [
                 "\u0647\u06cc\u0685 \u0645\u06cc\u067c\u0627 \u062a\u0648\u0636\u06cc\u062d\u0627\u062a \u0634\u062a\u0648\u0646 \u0646\u0644\u0631\u064a"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "\u0633\u0645\u0648\u0644"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "\u062f\u0646\u062f\u0647 %1$d \u067e\u06cc\u0644 \u0634\u0648\u0647: %2$d \u0645\u062e\u0648\u0646\u0647 \u067e\u0647 \u0634\u0627\u0644\u06cc\u062f \u06a9\u06d0 \u0698\u0628\u0627\u0693\u0644 \u06a9\u06d0\u0696\u064a. \u062f\u0627 \u062f \u0698\u0628\u0627\u0693\u06d0 \u067e\u0647 \u062f\u0646\u062f\u0648 \u06a9\u06d0 \u062a\u0639\u0642\u06cc\u0628 \u06a9\u0693\u0626."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d \u0698\u0628\u0627\u0693\u06d0 \u067e\u0647 \u0634\u0627\u0644\u064a\u062f \u06a9\u06d0 \u0686\u06a9 \u06a9\u06d0\u0696\u064a. \u0646\u0645\u0631\u06d0 \u062f\u0644\u062a\u0647 \u062f \u0631\u0627\u062a\u0644\u0648 \u0633\u0631\u0647 \u0633\u0645 \u069a\u06a9\u0627\u0631\u064a."
+            ],
+            "Missing": [
+                "\u0646\u0634\u062a\u0647"
+            ],
+            "Out of date": [
+                "\u067e\u062e\u0648\u0627\u0646\u06cc \u0634\u0648\u06cc"
+            ],
+            "Translated": [
+                "\u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc"
+            ],
+            "Edited by a person": [
+                "\u062f \u06cc\u0648 \u06a9\u0633 \u0644\u062e\u0648\u0627 \u0633\u0645 \u0634\u0648\u06cc"
+            ],
+            "Machine translated": [
+                "\u067e\u0647 \u0645\u0627\u0634\u06cc\u0646 \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc"
+            ],
+            "Waiting for review": [
+                "\u062f \u0628\u06cc\u0627\u06a9\u062a\u0646\u06d0 \u067e\u0647 \u0627\u0646\u062a\u0638\u0627\u0631 \u062f\u06cc"
+            ],
+            "Needs a human look": [
+                "\u0628\u0634\u0631\u064a \u0643\u062a\u0646\u06d0 \u062a\u0647 \u0627\u0693\u062a\u06cc\u0627 \u0644\u0631\u064a"
+            ],
+            "Everything": [
+                "\u0647\u0631 \u0685\u0647"
+            ],
+            "Up to date": [
+                "\u062a\u0627\u0632\u0647 \u0634\u0648\u06cc"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly \u0644\u0627 \u0647\u0645 \u062f\u0627 \u0685\u06d0\u0693\u064a \u0686\u06d0 \u06a9\u0648\u0645\u06d0 \u0632\u0693\u06d0 \u0698\u0628\u0627\u0693\u06d0 \u0644\u0647 \u0648\u062e\u062a\u0647 \u062a\u06d0\u0631\u06d0 \u0634\u0648\u06d0 \u062f\u064a. \u062f \u062f\u06d0 \u067e\u0631\u0648\u0633\u06d0 \u067e\u0647 \u062a\u0631\u0685 \u06a9\u06d0 \u0628\u0647 \u062f \"\u0644\u0647 \u0648\u062e\u062a\u0647 \u062a\u06d0\u0631\u0648 \u0634\u0648\u0648\" \u0634\u0645\u06d0\u0631\u06d0 \u0632\u06cc\u0627\u062a\u06d0 \u0634\u064a."
+            ],
+            "Content type": [
+                "\u062f \u0645\u0646\u0681\u067e\u0627\u0646\u06ab\u06d0 \u0689\u0648\u0644"
+            ],
+            "All content": [
+                "\u067c\u0648\u0644 \u0645\u06cc\u0646\u0681\u067e\u0627\u0646\u06ab\u0647"
+            ],
+            "Average quality": [
+                "\u0645\u0646\u0681\u0646\u06cc \u06a9\u06cc\u0641\u06cc\u062a"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc (%2$d%%)"
+            ],
+            "Show": [
+                "\u069a\u0648\u062f\u0644"
+            ],
+            "Translate everything missing": [
+                "\u067c\u0648\u0644 \u067e\u0627\u062a\u06d0 \u0634\u0648\u064a \u0698\u0628\u0627\u0693\u0647 \u06a9\u0693\u0626"
+            ],
+            "Update everything out of date": [
+                "\u0647\u0631 \u0685\u0647 \u0686\u06d0 \u0648\u062e\u062a \u062a\u06cc\u0631 \u0634\u0648\u064a \u062f\u064a \u062a\u0627\u0632\u0647 \u06a9\u0693\u0626"
+            ],
+            "Check the quality with AI": [
+                "\u062f AI \u067e\u0647 \u0645\u0631\u0633\u062a\u0647 \u06a9\u06cc\u0641\u06cc\u062a \u0648\u0685\u06cc\u0693\u0626"
+            ],
+            "Translate the low-scoring pages again": [
+                "\u06a9\u0645 \u0646\u0645\u0631\u0647 \u0644\u0631\u0648\u0646\u06a9\u06d0 \u067e\u0627\u06bc\u06d0 \u0628\u06cc\u0627 \u0648\u0698\u0628\u0627\u0693\u0647"
+            ],
+            "Nothing here.": [
+                "\u062f\u0644\u062a\u0647 \u0647\u06d0\u0685 \u0646\u0647 \u0634\u062a\u0647."
+            ],
+            "Quality": [
+                "\u06a9\u06cc\u0641\u06cc\u062a"
+            ],
+            "by a person": [
+                "\u062f \u06cc\u0648 \u06a9\u0633 \u0644\u062e\u0648\u0627"
+            ],
+            "waiting for review": [
+                "\u062f \u0628\u06cc\u0627 \u06a9\u062a\u0646\u06d0 \u067e\u0647 \u062a\u0645\u0647 \u062f\u06cc"
+            ],
+            "Side by side": [
+                "\u062a\u0631 \u0685\u0646\u06ab \u067e\u0647 \u0685\u0646\u06ab"
+            ],
+            "Show more": [
+                "\u0646\u0648\u0631 \u069a\u06a9\u0627\u0631\u0647 \u06a9\u0693\u0626"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "\u062f \u067c\u0648\u0644 \u0633\u0627\u06cc\u067c \u0689\u0644\u0647 \u06cc\u06cc\u0632\u0647 \u0698\u0628\u0627\u0693\u0647 (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "\u062f Tranzly Pro \u0633\u0631\u0647\u060c \u062f \u0645\u0646\u0681\u067e\u0627\u0646\u06ab\u06d0 \u0689\u0648\u0644\u0648\u0646\u0647 \u0627\u0648 \u0698\u0628\u06d0 \u0648\u067c\u0627\u06a9\u0626\u060c \u0627\u067c\u06a9\u0644 \u0648\u06ab\u0648\u0631\u0626\u060c \u0627\u0648 \u067c\u0648\u0644\u0647 \u0648\u06cc\u0628 \u067e\u0627\u06bc\u0647 \u067e\u0647 \u06cc\u0648\u0647 \u0681\u0644\u064a \u0648\u0698\u0628\u0627\u0693\u0626."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d \u067e\u0633 \u0645\u0646\u0638\u0631 \u062f\u0646\u062f\u06d0 \u067e\u06cc\u0644 \u0634\u0648\u06d0\u060c \u067e\u0647 \u0647\u0631 \u06cc\u0648\u0647 \u0698\u0628\u0647 \u06a9\u06d0 \u06cc\u0648\u0647. \u0647\u063a\u0648\u06cc \u062f \u0698\u0628\u0627\u0693\u06d0 \u067e\u0647 \u062f\u0646\u062f\u0648 \u06a9\u06d0 \u062a\u0639\u0642\u06cc\u0628 \u06a9\u0693\u0626."
+            ],
+            "Content types": [
+                "\u062f \u0645\u06cc\u0646\u0681\u067e\u0627\u0646\u06ab\u06d0 \u0689\u0648\u0644\u0648\u0646\u0647"
+            ],
+            "What to translate": [
+                "\u062f \u0698\u0628\u0627\u0693\u06d0 \u0644\u067e\u0627\u0631\u0647 \u0685\u0647 \u062f\u064a"
+            ],
+            "Only what is missing": [
+                "\u06cc\u0648\u0627\u0632\u06d0 \u0647\u063a\u0647 \u0685\u0647 \u0686\u06d0 \u0648\u0631\u06a9 \u062f\u064a"
+            ],
+            "Only what is out of date": [
+                "\u06cc\u0648\u0627\u0632\u06d0 \u0647\u063a\u0647 \u0685\u0647 \u0686\u06d0 \u0644\u0647 \u0648\u062e\u062a\u0647 \u062a\u06cc\u0631 \u0634\u0648\u064a \u062f\u064a"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "\u0647\u0631 \u0685\u0647 (\u0647\u063a\u0647 \u067e\u0627\u06bc\u06d0 \u0686\u06d0 \u062f \u06cc\u0648 \u0634\u062e\u0635 \u0644\u062e\u0648\u0627 \u0633\u0645\u06d0 \u0634\u0648\u064a \u0648\u064a \u0647\u063a\u0633\u06d0 \u067e\u0627\u062a\u06d0 \u06a9\u06cc\u0696\u064a)"
+            ],
+            "Estimate": [
+                "\u0627\u067c\u06a9\u0644"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d \u0645\u062e\u0648\u0646\u0647\u060c %2$s \u062a\u0648\u0631\u064a. \u062f\u0627 \u0627\u0646\u062c\u064a\u0646 \u0628\u064a\u0647 \u0646\u0647 \u062e\u067e\u0631\u0648\u064a."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d \u0645\u062e\u0648\u0646\u0647\u060c %2$s \u062a\u0648\u0631\u064a\u060c \u0646\u0696\u062f\u06d0 $%3$s."
+            ],
+            "Find a text": [
+                "\u0645\u062a\u0646 \u067e\u06cc\u062f\u0627 \u06a9\u0693\u0626"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d \u0646\u0648\u0631: \u062f \u0644\u0633\u062a \u062f \u0645\u062d\u062f\u0648\u062f\u0648\u0644\u0648 \u0644\u067e\u0627\u0631\u0647 \"\u0645\u062a\u0646 \u067e\u06cc\u062f\u0627 \u06a9\u0693\u0626\" \u0648\u0644\u06cc\u06a9\u0626."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "\u067e\u0647 \u0647\u0631\u0647 \u0645\u0648\u0636\u0648\u0639 \u0627\u0648 \u067e\u0647 \u0647\u0631\u0647 \u067e\u0627\u06bc\u0647 \u06a9\u06d0 \u062f \u06a9\u0648\u0646\u062c \u06cc\u0648 \u06a9\u0648\u0686\u0646\u06cc \u062a\u06bc\u06cd\u060c \u067e\u0631\u062a\u0647 \u0644\u0647 \u06a9\u0648\u0645 \u062a\u0646\u0638\u06cc\u0645 \u0685\u062e\u0647."
-            ],
-            "Where": [
-                "\u0686\u06cc\u0631\u062a\u0647"
             ],
             "Off": [
                 "\u0628\u0646\u062f \u062f\u06cc"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "\u062f \u067e\u062a\u0647 \u0647\u0631\u0647 \u06a9\u0644\u0645\u0647 \u0644\u0647 \u06f2 \u062a\u0631 \u06f1\u06f2 \u067e\u0648\u0631\u06d0 \u062f \u06a9\u0648\u0686\u0646\u06cc\u0648 \u062a\u0648\u0631\u0648\u060c \u0639\u062f\u062f\u0648\u0646\u0648 \u06cc\u0627\u0647\u0627\u06cc\u0641\u0646\u0648\u0646\u0648 \u0685\u062e\u0647 \u062c\u0648\u0693\u0647 \u062f\u0647."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "\u067e\u0647 \u062a\u0627\u0632\u0647 \u06a9\u0648\u0644\u0648 \u06a9\u06d0 \u0627\u062a\u0648\u0645\u0627\u062a\u06cc\u06a9 \u0698\u0628\u0627\u0693\u0647\u060c \u062f \u06a9\u062a\u0648\u0646\u06a9\u064a \u0631\u0648\u0644\u0648\u0646\u0647\u060c \u062f \u0698\u0628\u0627\u0693\u0648\u0646\u06a9\u0648 \u0644\u067e\u0627\u0631\u0647 \u062f XLIFF \u0635\u0627\u062f\u0631\u0648\u0644\u060c \u0644\u0647 WPML\u060c Polylang \u06cc\u0627 TranslatePress \u0685\u062e\u0647 \u0628\u062f\u0644\u0648\u0644 \u0627\u0648 \u062f \u0645\u0635\u0646\u0648\u0639\u064a \u0681\u064a\u0631\u06a9\u062a\u06cc\u0627 \u062f \u06a9\u06cc\u0641\u06cc\u062a \u0645\u0639\u0627\u06cc\u0646\u0647 \u062f Tranzly Pro \u0633\u0631\u0647 \u0645\u0644 \u062f\u064a."
+            ],
+            "When an original changes": [
+                "\u06a9\u0644\u0647 \u0686\u06d0 \u0627\u0635\u0644\u064a \u0628\u062f\u0644\u0648\u0646 \u0648\u0645\u0648\u0645\u064a"
+            ],
+            "When a page is edited": [
+                "\u06a9\u0644\u0647 \u0686\u06d0 \u06cc\u0648 \u0645\u062e \u0633\u0645 \u0634\u064a"
+            ],
+            "Mark its translations out of date": [
+                "\u062e\u067e\u0644\u06d0 \u0698\u0628\u0627\u0693\u06d0 \u0632\u0627\u0693\u0647 \u0634\u0648\u064a \u067e\u0647 \u0646\u069a\u0647 \u06a9\u0693\u0626"
+            ],
+            "Translate its translations again in the background": [
+                "\u062f \u0647\u063a\u06d0 \u0698\u0628\u0627\u0693\u06d0 \u067e\u0647 \u0634\u0627\u0644\u064a\u062f \u06a9\u06d0 \u0628\u064a\u0627 \u0648\u0698\u0628\u0627\u0693\u0647"
+            ],
+            "Do nothing": [
+                "\u0647\u06cc\u0685 \u0645\u0647 \u06a9\u0648\u0626"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "\u062f \u06cc\u0648 \u06a9\u0633 \u0644\u062e\u0648\u0627 \u0633\u0645 \u0634\u0648\u06cc \u0698\u0628\u0627\u0693\u0647 \u0647\u06d0\u0685\u06a9\u0644\u0647 \u0646\u0647 \u062a\u0631\u062a\u06cc\u0628\u0647 \u06a9\u06d0\u0696\u064a\u060c \u0628\u0644\u06a9\u06d0 \u067e\u0631 \u0681\u0627\u06cc \u06cc\u06d0 \u062f \u0648\u062e\u062a \u062a\u06d0\u0631\u06d0 \u067e\u0647 \u062a\u0648\u06ab\u0647 \u0646\u069a\u0647 \u06a9\u06d0\u0696\u064a."
+            ],
+            "Translate new pages into every language when they are published": [
+                "\u06a9\u0644\u0647 \u0686\u06d0 \u0646\u0648\u064a \u0645\u062e\u0648\u0646\u0647 \u062e\u067e\u0631\u06d0\u0696\u064a\u060c \u0647\u063a\u0647 \u067c\u0648\u0644\u06d0 \u0698\u0628\u0648 \u062a\u0647 \u0648\u0698\u0628\u0627\u0693\u0626"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "\u062f\u0648\u06cc\u0645 \u0645\u0635\u0646\u0648\u0639\u064a \u0681\u064a\u0631\u06a9\u062a\u06cc\u0627 \u0645\u0627\u0689\u0644 \u0647\u0631\u0647 \u0698\u0628\u0627\u0693\u0647 \u062f \u0647\u063a\u06d0 \u062f \u0627\u0635\u0644\u064a \u0645\u062a\u0646 \u062a\u0631 \u0685\u0646\u06ab \u0644\u0648\u0644\u064a\u060c \u0646\u0645\u0631\u06d0 \u0648\u0631\u06a9\u0648\u064a \u0627\u0648 \u062a\u06d0\u0631\u0648\u062a\u0646\u06d0 \u067e\u0647 \u06ab\u0648\u062a\u0647 \u06a9\u0648\u064a. \u062f\u0627 \u062f \u0645\u0635\u0646\u0648\u0639\u064a \u0681\u064a\u0631\u06a9\u062a\u06cc\u0627 \u067e\u0647 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a\u0648 \u06a9\u06d0 \u0633\u062a\u0627\u0633\u0648 \u062f \u0645\u0635\u0646\u0648\u0639\u064a \u0681\u064a\u0631\u06a9\u062a\u06cc\u0627 \u062e\u067e\u0644 \u06a9\u0644\u064a \u06a9\u0627\u0631\u0648\u064a. \u062f \u0698\u0628\u0627\u0693\u06d0 \u062d\u0627\u0644\u062a \u0685\u062e\u0647 \u0645\u0639\u0627\u06cc\u0646\u0647 \u067e\u06cc\u0644 \u06a9\u0693\u0626."
+            ],
+            "AI provider": [
+                "\u062f \u0645\u0635\u0646\u0648\u0639\u064a \u0681\u064a\u0631\u06a9\u062a\u06cc\u0627 \u0686\u0645\u062a\u0648 \u06a9\u0648\u0646\u06a9\u06cc"
+            ],
+            "The AI settings\u2019 general model": [
+                "\u062f AI \u062f \u062a\u0646\u0638\u06cc\u0645\u0627\u062a\u0648 \u0639\u0645\u0648\u0645\u064a \u0645\u0627\u0689\u0644"
+            ],
+            "Recommended": [
+                "\u0648\u0693\u0627\u0646\u062f\u06cc\u0632 \u0634\u0648\u06cc"
+            ],
+            "A page needs a human look below this score": [
+                "\u062f \u062f\u06d0 \u0646\u0645\u0631\u06d0 \u0644\u0627\u0646\u062f\u06d0 \u067e\u0627\u06bc\u06d0 \u062a\u0647 \u062f \u0627\u0646\u0633\u0627\u0646 \u0644\u06cc\u062f\u0646\u06d0 \u0627\u0693\u062a\u06cc\u0627 \u062f\u0647"
+            ],
+            "Publish only translations a reviewer approved": [
+                "\u06cc\u0648\u0627\u0632\u06d0 \u0647\u063a\u0647 \u0698\u0628\u0627\u0693\u06d0 \u062e\u067e\u0631\u06d0 \u06a9\u0693\u0626 \u0686\u06d0 \u06cc\u0648 \u0627\u0631\u0632\u0648\u0648\u0646\u06a9\u064a \u062a\u0627\u06cc\u06cc\u062f \u06a9\u0693\u06d0 \u0648\u064a"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "\u062e\u0644\u06a9\u0648 \u062a\u0647 \u062f \u0698\u0628\u0627\u0693\u0646 \u0631\u0648\u0644 \u0648\u0631\u06a9\u0693\u0626 (\u0698\u0628\u0627\u0693\u06d0 \u0633\u0645\u0648\u064a\u060c \u0647\u06cc\u0685\u06a9\u0644\u0647 \u0627\u0635\u0644\u064a \u0646\u0647\u060c \u0646\u0634\u064a \u062e\u067e\u0631\u0648\u0644\u06cc) \u06cc\u0627 \u062f \u0698\u0628\u0627\u0693\u06d0 \u062f \u0627\u0631\u0632\u0648\u0646\u06a9\u064a \u0631\u0648\u0644 (\u062a\u0627\u06cc\u06cc\u062f\u0648\u064a \u0647\u0645). \u0627\u0631\u0632\u0648\u0646\u06a9\u064a \u0647\u0645 \u067e\u0647 \"Pending\" (\u067e\u0627\u062a\u06d0) \u0644\u0627\u0646\u062f\u06d0 \u062f \u067e\u0648\u0633\u067c\u0648\u0646\u0648 \u0627\u0648 \u067e\u0627\u06bc\u0648 \u067e\u0647 \u0644\u0633\u062a\u0648\u0646\u0648 \u06a9\u06d0 \u0647\u0631 \u0685\u0647 \u0686\u06d0 \u0645\u0646\u062a\u0638\u0631 \u0648\u064a\u060c \u0645\u0648\u0645\u064a\u061b \u0647\u0644\u062a\u0647 \u062f \u06cc\u0648\u06d0 \u062e\u067e\u0631\u0648\u0644 \u0647\u063a\u06d0 \u062a\u0627\u06cc\u06cc\u062f\u0648\u064a."
+            ],
+            "Manage users": [
+                "\u06a9\u0627\u0631\u0648\u0648\u0646\u06a9\u064a \u0627\u062f\u0627\u0631\u0647 \u06a9\u0648\u0644"
+            ],
+            "Nothing is waiting for review.": [
+                "\u062f \u0628\u06cc\u0627\u06a9\u062a\u0646\u06d0 \u067e\u0647 \u062a\u0645\u0647 \u0647\u06d0\u0685 \u0646\u0634\u062a\u0647."
+            ],
+            "Note for the translator (optional)": [
+                "\u062f \u0698\u0628\u0627\u0693\u0646 \u0644\u067e\u0627\u0631\u0647 \u06cc\u0627\u062f\u069a\u062a (\u0627\u062e\u062a\u064a\u0627\u0631\u064a)"
+            ],
+            "Read side by side": [
+                "\u062a\u0631 \u0685\u0646\u06ab \u067e\u0647 \u062a\u0631 \u0685\u0646\u06ab \u0644\u0648\u0633\u062a\u0644"
+            ],
+            "Approve": [
+                "\u0645\u0646\u0638\u0648\u0631\u0648\u0644"
+            ],
+            "Ask for changes": [
+                "\u062f \u0628\u062f\u0644\u0648\u0646\u0648\u0646\u0648 \u063a\u0648\u069a\u062a\u0646\u0647 \u0648\u06a9\u0693\u0626"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d \u0698\u0628\u0627\u0693\u06d0 \u0648\u0627\u0631\u062f \u0634\u0648\u06d0 \u0627\u0648 \u062f \u0645\u0627\u0634\u06cc\u0646\u064a \u0698\u0628\u0627\u0693\u06d0 \u0685\u062e\u0647 \u062e\u0648\u0646\u062f\u064a \u0634\u0648\u06d0."
+            ],
+            "Export and import for translators": [
+                "\u062f \u0698\u0628\u0627\u0693\u0648\u0646\u06a9\u0648 \u0644\u067e\u0627\u0631\u0647 \u0635\u0627\u062f\u0631\u0648\u0644 \u0627\u0648 \u0648\u0627\u0631\u062f\u0648\u0644"
+            ],
+            "Not translated yet": [
+                "\u062a\u0631 \u0627\u0648\u0633\u0647 \u0646\u0647 \u062f\u06cc \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc"
+            ],
+            "Already translated": [
+                "\u067e\u062e\u0648\u0627 \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06cc"
+            ],
+            "Format": [
+                "\u0628\u06bc\u0647"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF \u06f1.\u06f2 (\u062f \u0698\u0628\u0627\u0693\u06d0 \u0648\u0633\u0627\u06cc\u0644)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (\u0633\u067e\u0631\u0689 \u0634\u06cc\u067c\u0648\u0646\u0647)"
+            ],
+            "Download the file": [
+                "\u0641\u0627\u06cc\u0644 \u0689\u0627\u0648\u0646\u0644\u0648\u0689 \u06a9\u0693\u0626"
+            ],
+            "Import a translated file": [
+                "\u06cc\u0648\u06d0 \u0698\u0628\u0627\u0693\u0644 \u0634\u0648\u06d0 \u062f\u0648\u062a\u0646\u06d0 \u062a\u0647 \u0648\u0627\u0631\u062f\u0648\u0644"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "\u0633\u0631 \u062a\u0647 \u0648\u0646\u0647 \u0631\u0633\u06d0\u062f\u0644: %1$d \u0644\u06cc\u0646\u06a9\u0648\u0646\u0647 \u0644\u06cc\u0631\u06d0 \u0634\u0648\u0644\u060c %2$d \u0648\u0627\u0631\u062f \u0634\u0648\u064a \u0645\u062e\u0648\u0646\u0647 \u0693\u0646\u06ab \u0634\u0648\u0644."
+            ],
+            "Dry run, nothing changed:": [
+                "\u0627\u0632\u0645\u0627\u06cc\u069a\u062a\u064a \u0686\u0644\u0648\u0648\u0646\u0647\u060c \u0647\u06cc\u0685 \u0634\u06cc \u0646\u0647 \u062f\u06cc \u0628\u062f\u0644 \u0634\u0648\u06cc:"
+            ],
+            "Imported:": [
+                "\u0648\u0627\u0631\u062f \u0634\u0648\u06cc:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d \u0698\u0628\u06d0 \u0627\u0636\u0627\u0641\u0647 \u0634\u0648\u06d0\u060c %2$d \u0698\u0628\u0627\u0693\u06d0 \u0648\u062a\u0693\u0644 \u0634\u0648\u06d0\u060c %3$d \u067e\u0627\u06bc\u06d0 \u062c\u0648\u0693\u06d0 \u0634\u0648\u06d0\u060c %4$d \u0645\u062a\u0646\u0648\u0646\u0647."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "\u0644\u0648\u0645\u0693\u06cc \u0628\u0644 \u067e\u0644\u06ab \u0627\u0646 \u0628\u0646\u062f \u06a9\u0693\u0626 (\u062f \u0647\u063a\u0647 \u0627\u062f\u0631\u0633\u0648\u0646\u0647 \u0627\u0648 \u0633\u0648\u06cc\u0686\u0648\u0646\u0647 \u0628\u0647 \u0644\u0647 Tranzly \u0633\u0631\u0647 \u0634\u062e\u0693\u0647 \u0648\u06a9\u0693\u064a). \u062f \u0647\u063a\u0647 \u0689\u0627\u067c\u0627 \u067e\u0647 \u062e\u067e\u0644 \u0681\u0627\u06cc \u067e\u0627\u062a\u06d0 \u06a9\u06cc\u0696\u064a\u060c \u0646\u0648 \u062a\u0627\u0633\u0648 \u06a9\u0648\u0644\u06cc \u0634\u0626 \u0628\u06cc\u0631\u062a\u0647 \u0648\u06ab\u0631\u0681\u0626\u061b Undo \u062f\u0642\u06cc\u0642\u0627\u064b \u0647\u063a\u0647 \u0685\u0647 \u0644\u0631\u06d0 \u06a9\u0648\u064a \u0686\u06d0 \u0648\u0627\u0631\u062f\u0648\u0644\u0648 \u0627\u0636\u0627\u0641\u0647 \u06a9\u0693\u064a \u0648\u0648."
+            ],
+            "No data from this plugin on this site.": [
+                "\u067e\u0647 \u062f\u06d0 \u0633\u0627\u06cc\u067c \u06a9\u06d0 \u062f \u062f\u06d0 \u067e\u0644\u06af \u0627\u0646 \u0647\u06d0\u0685 \u0689\u0627\u067c\u0627 \u0634\u062a\u0648\u0646 \u0646\u0647 \u0644\u0631\u064a."
+            ],
+            "Languages: %s": [
+                "\u0698\u0628\u06d0: %s"
+            ],
+            "still active: switch it off first.": [
+                "\u0644\u0627 \u0647\u0645 \u0641\u0639\u0627\u0644 \u062f\u06cc: \u0644\u0648\u0645\u0693\u06cc \u06cc\u06d0 \u0628\u0646\u062f \u06a9\u0693\u0626."
+            ],
+            "Dry run": [
+                "\u0622\u0632\u0645\u0627\u06cc\u069a\u062a\u064a \u0686\u0644\u0646\u062f"
+            ],
+            "Import": [
+                "\u0648\u0627\u0631\u062f\u0648\u0644"
+            ],
+            "Undo the import": [
+                "\u062f \u0648\u0627\u0631\u062f\u0627\u062a\u0648 \u0644\u063a\u0648\u0647 \u06a9\u0648\u0644"
+            ],
+            "Comments and product reviews": [
+                "\u062a\u0628\u0635\u0631\u06d0 \u0627\u0648 \u062f \u0645\u062d\u0635\u0648\u0644 \u06a9\u062a\u0646\u06d0"
+            ],
+            "Each language keeps its own": [
+                "\u0647\u0631\u0647 \u0698\u0628\u0647 \u062e\u067e\u0644\u0647 \u0633\u0627\u062a\u064a"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "\u062f \u0647\u0631\u06d0 \u0698\u0628\u06d0 \u062a\u0628\u0635\u0631\u06d0 \u067e\u0647 \u0647\u0631 \u0646\u0633\u062e\u0647 \u06a9\u06d0 \u0648\u069a\u0627\u06cc\u0627\u0633\u062a"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "\u067c\u0648\u0644 \u0648\u069a\u0627\u06cc\u0627\u0633\u062a\u060c \u0686\u06d0 \u062f \u0644\u0648\u0633\u062a\u0648\u0646\u06a9\u064a \u067e\u0647 \u0698\u0628\u0647 \u0648\u0698\u0628\u0627\u0693\u0644 \u0634\u064a"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "\u0698\u0628\u0627\u0693\u0647 \u062f \u0647\u0631 \u062a\u0627\u06cc\u06cc\u062f \u0634\u0648\u064a \u0646\u0638\u0631 \u0644\u067e\u0627\u0631\u0647 \u0633\u062a\u0627\u0633\u0648 \u062f \u0698\u0628\u0627\u0693\u06d0 \u0627\u0646\u062c\u0646 \u06a9\u0627\u0631\u0648\u064a. \u0633\u067e\u06cc\u0645 \u0627\u0648 \u0647\u063a\u0647 \u0646\u0638\u0631\u0648\u0646\u0647 \u0686\u06d0 \u062f \u0627\u0639\u062a\u062f\u0627\u0644 \u067e\u0647 \u062a\u0645\u0647 \u062f\u064a \u0647\u063a\u06d0 \u062a\u0647 \u0646\u0647 \u0627\u0633\u062a\u0648\u0644 \u06a9\u06cc\u0696\u064a."
             ]
         }
     }

@@ -47,6 +47,11 @@ require_once __DIR__ . '/content/class-menus-rest.php';
 require_once __DIR__ . '/content/class-shared-strings.php';
 require_once __DIR__ . '/content/class-visibility.php';
 require_once __DIR__ . '/content/class-content-module.php';
+require_once __DIR__ . '/workflow/class-workflow.php';
+require_once __DIR__ . '/workflow/class-staleness.php';
+require_once __DIR__ . '/workflow/class-backfill.php';
+require_once __DIR__ . '/workflow/class-status.php';
+require_once __DIR__ . '/integrations/load.php';
 require_once __DIR__ . '/class-plugin.php';
 
 \ZinnDigital\Tranzly\Plugin::boot();

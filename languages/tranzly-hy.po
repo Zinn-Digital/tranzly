@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "SEO դաշտեր բոլոր չորս մեծ SEO հավելվածների համար"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Հատուկ դաշտեր"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Թարգմանեք մեկ գրառում մեկ սեղմումով"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Թարգմանել ամբողջ կայքը միանգամից"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Տեսական առջևի վերջնամասի խմբագիր"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Ստուգում և հաստատում"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Արտահանում և ներմուծում մարդ-թարգմանիչների համար"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Անցեք WPML-ից, Polylang-ից կամ TranslatePress-ից"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce բազմարժույթային"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Արհեստական ​​բանականության որակի ստուգում"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Ինչն է թարգմանվում"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Աշխատանքային հոսք"
 
@@ -852,6 +858,7 @@ msgstr "Թեստ"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Հեռացնել"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Օգտագործվում է"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Մոդել"
 
@@ -1303,7 +1311,7 @@ msgstr "Սահմանափակումները և թույլտվություններ
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Այդ լեզուն այս կայքի լեզուներից չէ:"
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Այս տեսակի բովանդակությունը չի թարգմանվում։"
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "%s տեքստն այլևս այս կայքում չէ: Թարմացրեք էջը:"
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Ոչ մի թարգմանական շարժիչ չկարողացավ վերցնել այս տեքստը:"
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Ընտրեք ձեր մյուս լեզուներից մեկը:"
 
@@ -1422,7 +1435,8 @@ msgstr "Թարգմանել այս էջը"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Դուք իրավունք չունեք թարգմանելու այս տարրը:"
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Այս տարրն արդեն ունի տարբերակ այդ լեզվով։"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Այս կայքում թարգմանական շարժիչը հասանելի չէ:"
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s-ի արժեքը թույլատրված տարբերակներից չէ:"
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Ֆոնային հերթը հասանելի չէ այս կայքում:"
 
@@ -1489,6 +1504,7 @@ msgstr "Այդ տարրը թարգմանական առաջադրանքի մաս �
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Ձեզ թույլատրված չէ փոխել այդ թարգմանությունը:"
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Այս տարրն արդեն գրված է այդ լեզվով:"
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Այս թարգմանությունը խմբագրվել է մարդու կողմից (կամ ներմուծվել), ուստի այն պաշտպանված է: Ապակողպեք այն՝ կրկին թարգմանելու համար:"
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Այդ տարրը գոյություն չունի:"
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ոև մի թարգմանական շարժիչ դեռ կարգավորված չէ։ Ավելացրեք դրանցից մեկի բանալին Tranzly → Engines բաժնում։"
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Այդ թարգմանական շարժիչը դեռևս կարգավորված չէ. նախ ավելացրեք դրա բանալին:"
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Նույն տեքստը հենց հիմա թարգմանվում է մեկ այլ առաջադրանքի կողմից. այս տարրը կօգտագործի այդ պատասխանը:"
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Ոչ մի թարգմանական շարժիչ չկարողացավ վերցնել այս տարրը:"
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Շարժիչը չի վերադարձրել թարգմանություն այս տարրի յուրաքանչյուր մասի համար: Ոչինչ չի փոխվել:"
 
@@ -1671,6 +1691,7 @@ msgstr "Ցանկանո՞ւմ եք միավորել %1$s-ը %2$s-ին:"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Գործողություններ"
 
@@ -4711,6 +4732,7 @@ msgstr "Սկսվում է փորձնական ժամանակաշրջանը"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Կարգավիճակ"
@@ -5013,6 +5035,7 @@ msgstr "Ի՞նչ կարծիքի եք %1$s-ի մասին առայժմ։ Փորձ�
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Տեսակ"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s առաջ"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Կրկնվող տարրերով բլոկներ և համաժամեցված նախշեր"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Մեկնաբանություններ և կարծիքներ"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Թարգմանված է %s-ից ավտոմատ կերպով:"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce արժույթներ"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Արժույթ"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Փոխարժեքի աղբյուրը մեջբերում չի տալիս խանութի արժույթի՝ %s-ի համար:"
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "«%s»-ը արժույթ չէ, որը հայտնի է WooCommerce-ին, կամ այն խանութի սեփական արժույթն է:"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Մուտքագրեք զրոյից բարձր դրույքաչափ %s-ի համար, օրինակ՝ 0.92:"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Կլորացման քայլերը և գնի վերջավորությունները գումարներ են, ինչպիսիք են 0.05-ը կամ 0.99-ը:"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Հատուկ դաշտեր (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Ընտրեք թարգմանել, պատճենել կամ թողնել դատարկ յուրաքանչյուր դաշտի համար:"
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Ձևաթղթեր (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Ես ինքս եմ մուտքագրում սակագները"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Եվրոպական կենտրոնական բանկ, թարմացվում է ամեն օր (անվճար, հաշիվ պետք չէ)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Եվրոպական կենտրոնական բանկը պատասխանեց %d: Վերջին տոկոսադրույքները պահպանվում են։"
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Եվրոպական կենտրոնական բանկի հոսքում տոկոսադրույքներ չեն եղել։ Վերջին տոկոսադրույքները պահպանվում են։"
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Փոխարժեքի այդ աղբյուրը հասանելի չէ:"
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEO պլագիններ (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Թեմայի և փլագինի տեքստը"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Այս թեման կամ հավելվածն ակտիվ չէ այս կայքում:"
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Լեզվի առաջարկություն"
@@ -5945,11 +6061,134 @@ msgstr "Տեքստի չափը"
 msgid "Switcher"
 msgstr "Փոխարկիչ"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(Վերնագիր չկա)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Այստեղ ուղղելու որեւէ բան չկա։"
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Այս կայքում որևէ բովանդակության տեսակ չի թարգմանվում։"
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Այդ բովանդակության տեսակը այս կայքում թարգմանված չէ:"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Այս ընտրության մեջ թարգմանելու բան չկա:"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Ընտրեք առնվազն մեկ լեզու՝ թարգմանելու համար:"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Ձեզ թույլատրված չէ արտահանել թարգմանությունները։"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Ընտրեք ներմուծման համար XLIFF կամ CSV ֆայլ:"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Դա Tranzly XLIFF կամ CSV ֆայլ չէ: Նախ արտահանեք որևէ ֆայլ, թարգմանեք այն և ներմուծեք այստեղ:"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Ֆայլը չհաջողվեց պահպանել ներմուծման համար: Ստուգեք, թե արդյոք վերբեռնումների թղթապանակը գրելի է:"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Այդ ներմուծումն այլևս գոյություն չունի: Նորից վերբեռնեք ֆայլը:"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Այդ էջն այլևս այս կայքում չկա։"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Ֆայլը այն լեզվի համար է, որը այս կայքը չունի:"
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Չհաջողվեց հղել %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Գրառում #%1$d՝ %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Այս հավելվածից տվյալներ չեն գտնվել այս կայքում:"
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Սա այս կայքի որևէ բանի թարգմանություն չէ։"
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Ստուգելու տեքստ չկա։"
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Արհեստական ​​ինտելեկտի կարգավորումները այս հավաքածուի մաս չեն:"
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "AI մատակարարը չպատասխանեց։"
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Արհեստական ​​ինտելեկտի մոդելը չի գնահատել այս էջի բոլոր հատվածները: Կրկին փորձեք կամ ընտրեք մեկ այլ մոդել:"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Թարգմանիչ"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Թարգմանության վերանայող"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Գրախոսը փոփոխություններ է պահանջել այս թարգմանության մեջ:"
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Գրախոսը պահանջել է փոփոխություններ կատարել այս թարգմանության մեջ. %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Այս թարգմանությունը սպասում է գրախոսի: Այն հրապարակելը (պես գրախոս) հաստատում է այն:"
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Միայն թարգմանությունը կարող է վերանայվել:"
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Ընտրեք, թե ինչ է տեղի ունենում, երբ բնօրինակը փոխվում է. ոչինչ չանել, նշել դրա թարգմանությունները որպես հնացած, կամ նորից թարգմանել դրանք:"
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Ոակության շեմը 0-ից 100 սանդղակով գնահատական է:"
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Կրկին ցույց տալ թաքնված առաջարկները «Ակնարկ» բաժնում"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Բոլորը"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "Ընտրել"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Էջեր"
 
@@ -6224,28 +6465,28 @@ msgstr "Բաց"
 msgid "Dark"
 msgstr "Մուգ"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Գունային սխեմա"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Օգնություն"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Ուղեցույց այս էկրանի համար"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Անցնել ուղեցույցը"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Ստացեք օգնություն կամ հայտնեք սխալի մասին"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Հավելվածների էկրաններ"
 
@@ -6660,6 +6901,7 @@ msgstr "Տեսե՛ք Pro պլանները և գներy"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Լեզուներ"
@@ -6886,6 +7128,213 @@ msgstr "Կարգավորումներ"
 msgid "Translation engine"
 msgstr "Թարգմանչական շարժիչ"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Ինչ է թարգմանում Tranzly-ն այս կայքում"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "գտնվել է, թարգմանված է ձեր բովանդակությամբ"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "այս կայքում չէ"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Tranzly Pro-ի հետ՝ Elementor, Bricks, Divi, Beaver Builder, Oxygen և WPBakery էջերը, ամեն ինչ WooCommerce-ում՝ այցելուի արժույթով գներով, Yoast SEO-ի, Rank Math-ի, SEOPress-ի և All in One SEO-ի SEO դաշտերը, ACF, Meta Box և Pods դաշտերը, ձևերը և դրանց էլ. նամակները, ձեր թեմայի և հավելվածների սեփական տեքստը, ինչպես նաև մեկնաբանություններն ու կարծիքները:"
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Խանութի տեքստ և էլ. նամակներ"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Էլ. փոստի թեմաներն ու վերնագրերը, վճարման և առաքման եղանակների անվանումները, ինչպես նաև վճարման ծանուցումները: Յուրաքանչյուր պատվերի էլ. նամակներն ուղարկվում են այն լեզվով, որով կատարվել է պատվերը:"
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Ձևաթղթեր և դրանց էլ. նամակներ"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Յուրաքանչյուր ձև պահպանում է գրառումների մեկ ցանկ. դրա պիտակները, կոճակները, հաղորդագրությունները և էլ. նամակները հայտնվում են այցելուի լեզվով:"
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Պահպանված է։"
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Ոչ մի ACF, Meta Box կամ Pods դաշտ դեռևս սահմանված չէ:"
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Դաշտ"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Որտեղ"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Թարգմանության մեջ"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Ի՞նչ է տեղի ունենում %s-ի հետ թարգմանության ժամանակ"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Թարգմանել"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Պատճենեք այն այնպես, ինչպես կա"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Թողեք այն դատարկ"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Խանութի արժույթը"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Տարբերադրամներ"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Ցույց տալ գները այլ արժույթներով (խանութինն է՝ %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Փոխարժեքներ"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Սակագները վերջին անգամ թարմացվել են %s:"
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Սակագները դեռևs ստացված չեն:"
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Թարմացրեք սակագները հիմա"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Նոր արժույթ"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Ընտրել..."
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Դրույքաչափ (յուրաքանչյուր 1 %s-ի համար)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Մուտքագրված դրույքաչափը պահպանվում է. ամենօրյա թարմացումն այն չի փոխի:"
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Կլորացում"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Ոչ մեկը"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Կլորացնել"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Կլորացնել մինչև մոտակա"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Կլորացնել դեպի ներքև"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Կլորացնել մինչև (օրինակ՝ 1, 0.05 կամ 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Գները ավարտվում են (օրինակ՝ 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Ավելացնել արժույթ"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Որ այցելուները տեսնեն որ արժույթը"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Ըստ երկրի՝ երկնիշ երկրի կոդ (օրինակ՝ CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Այցելուներ %s-ից"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Թույլ տվեք այցելուներին ընտրել (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Գները հիմա կախված են թխուկից (cookie) կամ այցելուի երկրից. համոզվեք, որ ձեր էջի քեշը տարբերակվում է «tranzly_currency» թխուկով կամ բացառում է խանութի էջերը:"
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Պահպանել արժույթները"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Այն բառերը, որոնք ձեր թեման և հավելվածները տպում են ինքնուրույն (կոճակներ, պիտակներ): Կարդացեք թեման կամ հավելվածը մեկ անգամ, ապա թարգմանեք դրա տեքստը այստեղ. ձեր թարգմանությունը գերակշռում է հավելվածի սեփականին:"
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d տեքստ"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "դեռ չկարդացված"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Կարդալ նորից"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Կարդալ տեքստը"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Թարգմանել"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6945,6 +7394,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d գրառում, %2$s նիշ. մոտ $%3$s ձեր սեփական հաշվին:"
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Սկսել թարգմանությունը"
 
@@ -6982,6 +7432,11 @@ msgstr "Բովանդակություն"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Լեզու"
 
@@ -7016,11 +7471,13 @@ msgstr "Մենյուները պահպանված են:"
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "Թարգմանված է %d տեքստ։"
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Պահպանված է։ Ձեր ուղղումները պաշտպանված են մեքենայական թարգմանությունից։"
 
@@ -7057,48 +7514,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Ձևանմուշներ, գլխամասեր, ստորոտներ և նախշեր (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Թարգմանել բացակայող տեքստը"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Այստեղ թարգմանելու տեքստ չկա:"
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Ուղղված է մարդու կողմից, պաշտպանված"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Պահպանել ուղղումները"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Լեզուներ և կարգավորումներ"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Շարժիչներ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Թարգմանչական առաջադրանքներ"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Հասցեներ և SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Լեզվափոխիչներ"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO աուդիտ"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Ցանկեր և համօգտագործվող տեքստ"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Թարգմանության կարգավիճակ"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Ինtegrations"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7143,6 +7613,7 @@ msgid "The whole language has been checked."
 msgstr "Ամբողջ լեզուն ստուգվել է:"
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Էջ"
 
@@ -7151,17 +7622,198 @@ msgid "Problem"
 msgstr "Խնդիր"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Խմբագրել"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Job %1$d-ը սկսվել է. %2$d էջ թարգմանվում է հետին պլանում: Հետևեք դրան «Թարգմանության առաջադրանքներ» բաժնում:"
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d թարգմանություն ստուգվում է հետին պլանում: Միավորներն այստեղ են հայտնվում ստացման պահին:"
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Բացակայում է"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Ժամկետանց"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Թարգմանված"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Խմբագրված է անձի կողմից"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Ավտոմատ թարգմանված"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Սպասում է ստուգման"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Պահանջվում է մարդու ուշադրությունը"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Ամեն ինչ"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Թարմացված է"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly-ն դեռ պարզում է, թե որ ավելի հին թարգմանություններն են հնացել։ Քանի դեռ այն աշխատում է, «հնացած» թվերը կմեծանան։"
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Բովանդակության տեսակ"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Բոլոր նյութերը"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Միջին որակ"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d թարգված (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Ցուցադրել"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Թարգմանել բացակայող ամեն ինչ"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Թարմացրեք ժամկետանց ամեն ինչ"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Ստուգեք որակը արհեստական բանականության միջոցով"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Կրկին թարգմանեք ցածր միավորներ հավաքած էջերը"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Այստեղ ոչինչ չկա։"
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Ոակություն"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "անձի կողմից"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "Սպասում է վերանայման"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Կողք կողքի"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Ցույց տալ ավելին"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Ամբողջ կայքի զանգվածային թարգմանություն (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Tranzly Pro-ի միջոցով ընտրեք բովանդակության տեսակներն ու լեզուները, տեսեք նախնական գնահատականը և միանգամից թարգմանեք ամբողջ կայքը:"
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d ֆոնային առաջադրանք է սկսվել, յուրաքանչյուր լեզվի համար մեկը: Հետևեք դրանց «Թարգմանության առաջադրանքներ» բաժնում:"
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Բովանդակության տեսակներ"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Ինչ թարգմանել"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Միայն այն, ինչ բացակայում է"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Միայն այն, ինչ հնացել է"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Ամեն ինչ (անձի կողմից խմբագրված էջերը մնում են այնպես, ինչպես կան)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Գնահատական"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d էջ, %2$s նիշ։ Այս շարժիչը գին չի հրապարակում։"
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d էջ, %2$s նիշ, մոտ $%3$s:"
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Գտնել տեքստ"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "ևս %d-ը. մուտքագրեք «Գտնել տեքստ» ցանկը նեղացնելու համար:"
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Փոքրիկ կոճակ յուրաքանչյուր էջի անկյունում, ցանկացած թեմայի վրա, առանց կարգավորման:"
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Որտեղ"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7361,6 +8013,199 @@ msgstr "Համագործակցում է՝ %s:"
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Յուրաքանչյուր հասցեի բառ բաղկացած է 2-ից 12 փոքրատառերից, թվանշաններից կամ գծիկներից:"
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Թարմացման ժամանակ ավտոմատ թարգմանությունը, վերանայողի դերերը, XLIFF արտահանումը թարգմանիչների համար, WPML-ից, Polylang-ից կամ TranslatePress-ից անցումը և արհեստական ​​բանականության որակի ստուգումը տրամադրվում են Tranzly Pro-ի հետ:"
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Երբ սկզբնականը փոխվում է"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Երբ էջը խմբագրվում է"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Նշել դրա թարգմանությունները որպես հնացած"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Կրկին թարգմանել դրա թարգմանությունները հետին պլանում"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Ոչինչ մի արեք"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Մարդու կողմից խմբագրված թարգմանությունը երբեք չի վերագրառվում. փոխարենը այն նշվում է որպես հնացած։"
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Թարգմանեք նոր էջերը բոլոր լեզուներով, երբ դրանք հրապարակվեն"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Երկրորդ արհեստական ​​բանականության մոդելը կարդում է յուրաքանչյուր թարգմանություն իր բնօրինակի կողքին, գնահատում այն ​​և նշում սխալները: Այն օգտագործում է ձեր սեփական արհեստական ​​բանականության բանալին AI կարգավորումներից: Սկսեք ստուգումը «Թարգմանության կարգավիճակ» բաժնից:"
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "AI մատակարար"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Արհեստական ​​բանականության կարգավորումների ընդհանուր մոդելը"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Առաջարկվող"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Այս միավորից ցածր գնահատական ունեցող էջին անհրաժեշտ է մարդկային հայացք"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Հրապարակեք միայն գրախոսի կողմից հաստատված թարգմանությունները"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Տվեք մարդկանց Թարգմանիչ դերը (խմբագրում է թարգմանությունները, բայց երբեք՝ բնօրինակները, չի կարող հրապարակել) կամ Թարգմանությունների գրախոսի դերը (նաև հաստատում է): Գրախոսները նաև գտնում են «Սպասվող» (Pending) բաժնում՝ «Գրառումներ» և «Էջեր» ցանկերում սպասող բոլոր նյութերը. դրանցից մեկի հրապարակումը հաստատում է այն:"
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Օգտատերերի կառավարում"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Ոչինչ չի սպասում վերանայման։"
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Ծանոթագրություն թարգմանչի համար (կամընտիր)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Կարդալ կողք կողքի"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Հաստատել"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Խնդրել փոփոխություններ"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d թարգմանություն ներմուծվել և պաշտպանվել է մեքենայական թարգմանությունից:"
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Արտահանում և ներմուծում թարգմանիչների համար"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Դեռևս չթարգմանված"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Արդեն թարգմանված է"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Ձևաչափ"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (թարգմանական գործիքներ)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (էլեկտրոնային աղյուսակներ)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Ներբեռնել ֆայլը"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Ներմուծել թարգմանված ֆայլը"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Չեղարկված է. հեռացվել է %1$d հղում, ջնջվել է %2$d ներմուծված էջ:"
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Չոր փորձարկում, ոչինչ չի փոխվել."
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Ներմուծված՝"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "Ավելացվել է %1$d լեզու, կապակցվել է %2$d թարգմանություն, ստեղծվել է %3$d էջ, %4$d տեքստ:"
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Նախ անջատեք մյուս հավելվածը (դրա հասցեները և փոխարկիչները կբախվեն Tranzly-ի հետ): Դրա տվյալները մնում են իրենց տեղում, այնպես որ կարող եք նորից միացնել. «Հետարկել»-ը հեռացնում է հենց այն, ինչ ավելացրել էր ներմուծումը:"
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Այս կայքում այս հավելվածից տվյալներ չկան:"
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Լեզուներ՝ %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "դեռ ակտիվ է. նախ անջատեք այն:"
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Փորձնական գործարկում"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Ներմուծել"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Հետարկել ներմուծումը"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Մեկնաբանություններ և ապրանքների ակնարկներ"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Յուրաքանչյուր լեզու պահպանում է իր սեփականը"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Ցույց տալ յուրաքանչյուր լեզվի մեկնաբանությունները բոլոր տարբերակների համար"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Ցույց տալ դրանք բոլորը՝ թարգմանված ընթերցողի լեզվով"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Թարգմանությունը օգտագործում է ձեր թարգմանական շարժիչը յուրաքանչյուր հաստատված մեկնաբանության համար: Սպամը և մոդերացիայի սպասող մեկնաբանությունները երբեք չեն ուղարկվում:"
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Պահպանված է: Այն հատվածները, որոնք դուք փոխել եք, նշված են որպես մարդու կողմից ստուգված, և այս թարգմանությունը պաշտպանված է մեքենայական թարգմանությունից:"
@@ -7393,11 +8238,6 @@ msgstr "Պահպանել փոփոխությունները"
 msgid "Open in the editor"
 msgstr "Բացել խմբագրիչում"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Ավտոմատ թարգմանված"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Ստուգված է անձի կողմից"
@@ -7405,10 +8245,6 @@ msgstr "Ստուգված է անձի կողմից"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Ներմուծված"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Դեռևս չթարգմանված"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7462,10 +8298,6 @@ msgstr "Դեռևս չթարգմանված (պատճեն)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Նախ պահպանեք այս գրառումը, այնուհետև թարգմանեք այն այստեղ:"
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Կողք կողքի"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

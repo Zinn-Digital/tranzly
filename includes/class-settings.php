@@ -100,6 +100,12 @@ final class Settings {
 		}
 
 		update_option( self::OPTION, $current, true );
+		// The address settings give every language its folder from this list and remember the
+		// answer for the request; a language added now must have its folder now (lane L06: an
+		// import that adds a language and then builds links read "Undefined array key").
+		if ( class_exists( '\ZinnDigital\Tranzly\Seo\Url_Settings', false ) ) {
+			\ZinnDigital\Tranzly\Seo\Url_Settings::reset();
+		}
 
 		return true;
 	}

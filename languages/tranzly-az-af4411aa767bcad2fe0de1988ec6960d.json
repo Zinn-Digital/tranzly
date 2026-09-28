@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Arxa planda t\u0259rc\u00fcm\u0259 et"
             ],
+            "Custom fields": [
+                "X\u00fcsusi sah\u0259l\u0259r"
+            ],
+            "Bulk translate the whole site": [
+                "B\u00fct\u00fcn sayt\u0131 k\u00fctl\u0259vi \u015f\u0259kild\u0259 t\u0259rc\u00fcm\u0259 edin"
+            ],
+            "Review and approval": [
+                "Yoxlama v\u0259 t\u0259sdiq"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "WPML, Polylang v\u0259 ya TranslatePress-d\u0259n ke\u00e7id edin"
+            ],
             "Floating switcher": [
                 "\u00dcz\u0259n ke\u00e7id\u00e7i"
+            ],
+            "AI quality check": [
+                "S\u00fcni intellekt keyfiyy\u0259t yoxlamas\u0131"
+            ],
+            "Workflow": [
+                "\u0130\u015f ax\u0131n\u0131"
             ],
             "Next": [
                 "N\u00f6vb\u0259ti"
@@ -25,11 +43,17 @@
             "Open": [
                 "A\u00e7"
             ],
+            "Model": [
+                "Model"
+            ],
             "About": [
                 "Haqq\u0131nda"
             ],
             "Done": [
                 "Haz\u0131r"
+            ],
+            "Actions": [
+                "\u018fm\u0259liyyatlar"
             ],
             "Cancelled": [
                 "L\u0259\u011fv edilib"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Saytlar"
             ],
+            "State": [
+                "V\u0259ziyy\u0259t"
+            ],
             "Type": [
                 "N\u00f6v"
             ],
             "Upgrade": [
                 "Yenil\u0259yin"
+            ],
+            "Comments and reviews": [
+                "\u015e\u0259rhl\u0259r v\u0259 r\u0259yl\u0259r"
+            ],
+            "Currency": [
+                "Valyuta"
+            ],
+            "Theme and plugin text": [
+                "Tema v\u0259 plaginin m\u0259tni"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "H\u0259r dil \u00fc\u00e7\u00fcn alt-domenl\u04e9\u0440 v\u0259 ayr\u0131 domenl\u0259r Tranzly Pro-nun t\u0259rkib hiss\u0259sidir."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "T\u0259rc\u00fcm\u0259 m\u00fch\u0259rriki"
             ],
+            "What Tranzly translates on this site": [
+                "Tranzly bu saytda n\u0259yi t\u0259rc\u00fcm\u0259 edir"
+            ],
+            "found, translated with your content": [
+                "tap\u0131ld\u0131, m\u0259zmununuzla t\u0259rc\u00fcm\u0259 edildi"
+            ],
+            "not on this site": [
+                "bu saytda deyil"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Tranzly Pro il\u0259: Elementor, Bricks, Divi, Beaver Builder, Oxygen v\u0259 WPBakery s\u0259hif\u0259l\u0259ri; WooCommerce-d\u0259 olan h\u0259r \u015fey, ziyar\u0259t\u00e7inin valyutas\u0131nda qiym\u0259tl\u0259rl\u0259; Yoast SEO, Rank Math, SEOPress v\u0259 All in One SEO-nun SEO sah\u0259l\u0259ri; ACF, Meta Box v\u0259 Pods sah\u0259l\u0259ri; formalar v\u0259 onlar\u0131n e-po\u00e7tlar\u0131; teman\u0131z\u0131n v\u0259 plaginl\u0259rin \u00f6z m\u0259tni; \u015f\u0259rh v\u0259 r\u0259yl\u0259r."
+            ],
+            "Shop text and e-mails": [
+                "Ma\u011faza m\u0259tnl\u0259ri v\u0259 e-po\u00e7tlar"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "E-po\u00e7t m\u00f6vzular\u0131 v\u0259 ba\u015fl\u0131qlar\u0131, \u00f6d\u0259ni\u015f v\u0259 \u00e7atd\u0131r\u0131lma \u00fcsullar\u0131n\u0131n adlar\u0131 v\u0259 sifari\u015fin r\u0259smil\u0259\u015fdirilm\u0259si bildiri\u015fl\u0259ri. H\u0259r bir sifari\u015fin e-po\u00e7tlar\u0131 verildiyi dild\u0259 g\u00f6nd\u0259rilir."
+            ],
+            "Forms and their e-mails": [
+                "Formlar v\u0259 onlar\u0131n e-po\u00e7tlar\u0131"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "H\u0259r bir forma daxiletm\u0259l\u0259rin bir siyah\u0131s\u0131n\u0131 saxlay\u0131r; onun etiketl\u0259ri, d\u00fcym\u0259l\u0259ri, mesajlar\u0131 v\u0259 e-po\u00e7tlar\u0131 ziyar\u0259t\u00e7inin dilind\u0259 g\u00f6r\u00fcn\u00fcr."
+            ],
+            "Saved.": [
+                "Saxlan\u0131ld\u0131."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "H\u0259l\u0259 he\u00e7 bir ACF, Meta Box v\u0259 ya Pods sah\u0259si t\u0259yin edilm\u0259yib."
+            ],
+            "Field": [
+                "Sah\u0259"
+            ],
+            "Where": [
+                "Harada"
+            ],
+            "In a translation": [
+                "T\u0259rc\u00fcm\u0259d\u0259"
+            ],
+            "What happens to %s in a translation": [
+                "T\u0259rc\u00fcm\u0259d\u0259 %s il\u0259 n\u0259 ba\u015f verir"
+            ],
+            "Translate it": [
+                "T\u0259rc\u00fcm\u0259 et"
+            ],
+            "Copy it as it is": [
+                "Oldu\u011fu kimi kopyalay\u0131n"
+            ],
+            "Leave it empty": [
+                "Bo\u015f burax\u0131n"
+            ],
+            "The shop\u2019s currency": [
+                "Ma\u011fazan\u0131n valyutas\u0131"
+            ],
+            "Currencies": [
+                "Valyutalar"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Dig\u0259r valyutalarda qiym\u0259tl\u0259ri g\u00f6st\u0259r (ma\u011fazan\u0131n \u00f6z valyutas\u0131: %s)"
+            ],
+            "Exchange rates": [
+                "Valyuta m\u0259z\u0259nn\u0259l\u0259ri"
+            ],
+            "Rates last updated %s.": [
+                "Qiym\u0259tl\u0259r sonuncu d\u0259f\u0259 %s yenil\u0259ndi."
+            ],
+            "Rates have not been fetched yet.": [
+                "Qiym\u0259tl\u0259r h\u0259l\u0259 \u0259ld\u0259 edilm\u0259yib."
+            ],
+            "Update the rates now": [
+                "Tarifl\u0259ri indi yenil\u0259yin"
+            ],
+            "New currency": [
+                "Yeni valyuta"
+            ],
+            "Choose\u2026": [
+                "Se\u00e7\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Qiym\u0259t (h\u0259r 1 %s \u00fc\u00e7\u00fcn)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Qiym\u0259ti daxil etm\u0259k onu saxlay\u0131r: g\u00fcnd\u0259lik yenil\u0259m\u0259 onu d\u0259yi\u015fdirm\u0259y\u0259c\u0259k."
+            ],
+            "Rounding": [
+                "Yuvarlaqla\u015fd\u0131rma"
+            ],
+            "None": [
+                "He\u00e7 biri"
+            ],
+            "Round up": [
+                "Yuxar\u0131 yuvarlaqla\u015fd\u0131r"
+            ],
+            "Round to the nearest": [
+                "\u018fn yax\u0131na yuvarlaqla\u015fd\u0131r"
+            ],
+            "Round down": [
+                "A\u015fa\u011f\u0131 yuvarla"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Yuvarlaqla\u015fd\u0131r (m\u0259s\u0259l\u0259n, 1, 0.05 v\u0259 ya 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Qiym\u0259tl\u0259r bu r\u0259q\u0259ml\u0259 bitir (m\u0259s\u0259l\u0259n, 0.99)"
+            ],
+            "Add a currency": [
+                "Valyuta \u0259lav\u0259 et"
+            ],
+            "Which visitors see which currency": [
+                "Hans\u0131 ziyar\u0259t\u00e7il\u0259r hans\u0131 valyutan\u0131 g\u00f6r\u00fcr"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "\u00d6lk\u0259 \u00fczr\u0259: iki h\u0259rfli \u00f6lk\u0259 kodu (m\u0259s\u0259l\u0259n, CH)"
+            ],
+            "Visitors from %s": [
+                "%s-d\u0259n g\u0259l\u0259n ziyar\u0259t\u00e7il\u0259r"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Ziyar\u0259t\u00e7il\u0259r se\u00e7sin ([tranzly_currency_switcher] shortcode)"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Qiym\u0259tl\u0259r art\u0131q kukid\u0259n v\u0259 ya ziyar\u0259t\u00e7inin \u00f6lk\u0259sind\u0259n as\u0131l\u0131d\u0131r: s\u0259hif\u0259 ke\u015finizin \"tranzly_currency\" kukisin\u0259 g\u00f6r\u0259 d\u0259yi\u015fdiyin\u0259 v\u0259 ya ma\u011faza s\u0259hif\u0259l\u0259rini istisna etdiyin\u0259 \u0259min olun."
+            ],
+            "Save currencies": [
+                "Valyutalar\u0131 yadda saxla"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Teman\u0131z\u0131n v\u0259 plaginl\u0259rin \u00f6zl\u0259rinin \u00e7ap etdiyi s\u00f6zl\u0259r (d\u00fcym\u0259l\u0259r, etiketl\u0259r). Bir d\u0259f\u0259 teman\u0131 v\u0259 ya plugin-i oxuyun, sonra m\u0259tnini burada t\u0259rc\u00fcm\u0259 edin; sizin t\u0259rc\u00fcm\u0259niz plaqin-in \u00f6z t\u0259rc\u00fcm\u0259sind\u0259n \u00fcst\u00fcn olacaq."
+            ],
+            "%d texts": [
+                "%d m\u0259tn"
+            ],
+            "not read yet": [
+                "h\u0259l\u0259 oxunmay\u0131b"
+            ],
+            "Read again": [
+                "Yenid\u0259n oxu"
+            ],
+            "Read its text": [
+                "M\u0259tnini oxu"
+            ],
+            "Translate": [
+                "T\u0259rc\u00fcm\u0259 et"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "\u0130\u015f icra edilm\u0259li olan %d t\u0259rc\u00fcm\u0259 il\u0259 ba\u015flad\u0131. O, fonda i\u015fl\u0259yir: bu s\u0259hif\u0259ni ba\u011flaya bil\u0259rsiniz."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Menyular v\u0259 payla\u015f\u0131lan m\u0259tn"
             ],
+            "Translation status": [
+                "T\u0259rc\u00fcm\u0259 statusu"
+            ],
+            "Integrations": [
+                "\u0130nteqrasiyalar"
+            ],
             "No meta description": [
                 "Meta t\u0259svir yoxdur"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Redakt\u0259 et"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "%1$d n\u00f6mr\u0259li tap\u015f\u0131r\u0131q ba\u015flad\u0131: %2$d s\u0259hif\u0259 fonda t\u0259rc\u00fcm\u0259 olunur. Onu T\u0259rc\u00fcm\u0259 tap\u015f\u0131r\u0131qlar\u0131 b\u00f6lm\u0259sind\u0259n izl\u0259yin."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d t\u0259rc\u00fcm\u0259 arxa fonda yoxlan\u0131l\u0131r. Xallar g\u0259ldikc\u0259 burada g\u00f6r\u00fcn\u0259c\u0259k."
+            ],
+            "Missing": [
+                "\u00c7at\u0131\u015fm\u0131r"
+            ],
+            "Out of date": [
+                "K\u00f6hn\u0259lmi\u015f"
+            ],
+            "Translated": [
+                "T\u0259rc\u00fcm\u0259 olundu"
+            ],
+            "Edited by a person": [
+                "\u015e\u0259xs t\u0259r\u0259find\u0259n redakt\u0259 edilib"
+            ],
+            "Machine translated": [
+                "Avtomatik t\u0259rc\u00fcm\u0259 edilmi\u015f"
+            ],
+            "Waiting for review": [
+                "Bax\u0131\u015f g\u00f6zl\u0259nilir"
+            ],
+            "Needs a human look": [
+                "\u0130nsan bax\u0131\u015f\u0131 t\u0259l\u0259b olunur"
+            ],
+            "Everything": [
+                "Ham\u0131s\u0131"
+            ],
+            "Up to date": [
+                "\u018fn son versiyadad\u0131r"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly h\u0259l\u0259 d\u0259 hans\u0131 k\u00f6hn\u0259 t\u0259rc\u00fcm\u0259l\u0259rin vaxt\u0131n\u0131n ke\u00e7diyini m\u00fc\u0259yy\u0259nl\u0259\u015fdirir. Bu proses ged\u0259rk\u0259n \"vaxt\u0131 ke\u00e7mi\u015f\" r\u0259q\u0259ml\u0259ri artacaq."
+            ],
+            "Content type": [
+                "M\u0259zmun n\u00f6v\u00fc"
+            ],
+            "All content": [
+                "B\u00fct\u00fcn m\u0259zmun"
+            ],
+            "Average quality": [
+                "Orta keyfiyy\u0259t"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d t\u0259rc\u00fcm\u0259 edildi (%2$d%%)"
+            ],
+            "Show": [
+                "G\u00f6st\u0259r"
+            ],
+            "Translate everything missing": [
+                "H\u0259r \u015feyi t\u0259rc\u00fcm\u0259 etm\u0259k \u00e7at\u0131\u015fm\u0131r"
+            ],
+            "Update everything out of date": [
+                "K\u00f6hn\u0259lmi\u015f h\u0259r \u015feyi yenil\u0259yin"
+            ],
+            "Check the quality with AI": [
+                "S\u00fcni intellekt il\u0259 keyfiyy\u0259ti yoxlay\u0131n"
+            ],
+            "Translate the low-scoring pages again": [
+                "A\u015fa\u011f\u0131 bal toplaya s\u0259hif\u0259l\u0259ri yenid\u0259n t\u0259rc\u00fcm\u0259 edin"
+            ],
+            "Nothing here.": [
+                "Burada he\u00e7 n\u0259 yoxdur."
+            ],
+            "Quality": [
+                "Keyfiyy\u0259t"
+            ],
+            "by a person": [
+                "bir \u015f\u0259xs t\u0259r\u0259find\u0259n"
+            ],
+            "waiting for review": [
+                "bax\u0131\u015f g\u00f6zl\u0259nilir"
+            ],
+            "Side by side": [
+                "Yanbayan"
+            ],
+            "Show more": [
+                "Daha \u00e7ox g\u00f6st\u0259r"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "B\u00fct\u00fcn sayt\u0131 toplu \u015f\u0259kild\u0259 t\u0259rc\u00fcm\u0259 edin (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Tranzly Pro il\u0259 m\u0259zmun n\u00f6vl\u0259rini v\u0259 dill\u0259ri se\u00e7in, t\u0259xmini d\u0259y\u0259ri g\u00f6r\u00fcn v\u0259 b\u00fct\u00fcn sayt\u0131 bir d\u0259f\u0259y\u0259 t\u0259rc\u00fcm\u0259 edin."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d arxa fon tap\u015f\u0131r\u0131\u011f\u0131 ba\u015flad\u0131ld\u0131, h\u0259r dil \u00fc\u00e7\u00fcn bir d\u0259r\u0259c\u0259. Onlar\u0131 T\u0259rc\u00fcm\u0259 tap\u015f\u0131r\u0131qlar\u0131 b\u00f6lm\u0259sind\u0259 izl\u0259yin."
+            ],
+            "Content types": [
+                "M\u0259zmun n\u00f6vl\u0259ri"
+            ],
+            "What to translate": [
+                "N\u0259 t\u0259rc\u00fcm\u0259 edilm\u0259li"
+            ],
+            "Only what is missing": [
+                "Yaln\u0131z \u00e7at\u0131\u015fmayanlar"
+            ],
+            "Only what is out of date": [
+                "Yaln\u0131z k\u00f6hn\u0259lmi\u015f olanlar"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "H\u0259r \u015fey (bir \u015f\u0259xs t\u0259r\u0259find\u0259n redakt\u0259 edilmi\u015f s\u0259hif\u0259l\u0259r oldu\u011fu kimi qal\u0131r)"
+            ],
+            "Estimate": [
+                "Qiym\u0259tl\u0259ndir"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d s\u0259hif\u0259, %2$s simvol. Bu m\u00fch\u0259rrik qiym\u0259t d\u0259rc etmir."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d s\u0259hif\u0259, %2$s simvol, t\u0259xmin\u0259n $%3$s."
+            ],
+            "Find a text": [
+                "M\u0259tn tap"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d \u0259lav\u0259: siyah\u0131n\u0131 daraltmaq \u00fc\u00e7\u00fcn \"M\u0259tn tap\" daxil edin."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "He\u00e7 bir qura\u015fd\u0131rma t\u0259l\u0259b olunmadan, ist\u0259nil\u0259n m\u00f6vzuda, h\u0259r s\u0259hif\u0259nin k\u00fcnc\u00fcnd\u0259 ki\u00e7ik bir d\u00fcym\u0259."
-            ],
-            "Where": [
-                "Harada"
             ],
             "Off": [
                 "S\u00f6nd\u00fcr\u00fcl\u00fcb"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "H\u0259r bir \u00fcnvan s\u00f6z\u00fc 2 il\u0259 12 aras\u0131 ki\u00e7ik h\u0259rf, r\u0259q\u0259m v\u0259 ya defisd\u0259n ibar\u0259tdir."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Yenil\u0259nm\u0259 zaman\u0131 avtomatik t\u0259rc\u00fcm\u0259, r\u0259y\u00e7i rollar\u0131, t\u0259rc\u00fcm\u0259\u00e7il\u0259r \u00fc\u00e7\u00fcn XLIFF ixrac\u0131, WPML, Polylang v\u0259 ya TranslatePress-d\u0259n ke\u00e7id v\u0259 AI keyfiyy\u0259t yoxlamas\u0131 Tranzly Pro il\u0259 birlikd\u0259 g\u0259lir."
+            ],
+            "When an original changes": [
+                "Orijinal d\u0259yi\u015fdikd\u0259"
+            ],
+            "When a page is edited": [
+                "S\u0259hif\u0259 redakt\u0259 edildikd\u0259"
+            ],
+            "Mark its translations out of date": [
+                "Onun t\u0259rc\u00fcm\u0259l\u0259rini k\u00f6hn\u0259lmi\u015f kimi qeyd et"
+            ],
+            "Translate its translations again in the background": [
+                "Onun t\u0259rc\u00fcm\u0259l\u0259rini arxa fonda yenid\u0259n t\u0259rc\u00fcm\u0259 edin"
+            ],
+            "Do nothing": [
+                "He\u00e7 n\u0259 etm\u0259yin"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "\u0130nsan\u0131n redakt\u0259 etdiyi t\u0259rc\u00fcm\u0259 he\u00e7 vaxt \u00fcz\u0259rin\u0259 yaz\u0131lm\u0131r; \u0259v\u0259zind\u0259 k\u00f6hn\u0259lmi\u015f kimi i\u015far\u0259l\u0259nir."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Yeni s\u0259hif\u0259l\u0259r d\u0259rc edildikd\u0259 onlar\u0131 h\u0259r bir dil\u0259 t\u0259rc\u00fcm\u0259 edin"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "\u0130kinci bir s\u00fcni intellekt modeli h\u0259r bir t\u0259rc\u00fcm\u0259ni \u0259sli il\u0259 yana\u015f\u0131 oxuyur, onu qiym\u0259tl\u0259ndirir v\u0259 s\u0259hvl\u0259ri qeyd edir. O, s\u00fcni intellekt parametrl\u0259rind\u0259ki \u00f6z s\u00fcni intellekt a\u00e7ar\u0131n\u0131zdan istifad\u0259 edir. T\u0259rc\u00fcm\u0259 statusundan yoxlama ba\u015flad\u0131n."
+            ],
+            "AI provider": [
+                "AI t\u0259minat\u00e7\u0131s\u0131"
+            ],
+            "The AI settings\u2019 general model": [
+                "AI parametrl\u0259rinin \u00fcmumi modeli"
+            ],
+            "Recommended": [
+                "T\u00f6vsiy\u0259 olunan"
+            ],
+            "A page needs a human look below this score": [
+                "Bu baldan a\u015fa\u011f\u0131da s\u0259hif\u0259nin insan t\u0259r\u0259find\u0259n n\u0259z\u0259rd\u0259n ke\u00e7irilm\u0259sin\u0259 ehtiyac var"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Yaln\u0131z r\u0259y\u00e7inin t\u0259sdiq etdiyi t\u0259rc\u00fcm\u0259l\u0259ri d\u0259rc edin"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "\u0130nsanlara T\u0259rc\u00fcm\u0259\u00e7i rolunu (t\u0259rc\u00fcm\u0259l\u0259ri redakt\u0259 edir, \u0259sill\u0259ri \u0259sla yox, d\u0259rc ed\u0259 bilm\u0259z) v\u0259 ya T\u0259rc\u00fcm\u0259 r\u0259y\u00e7isi rolunu (h\u0259m d\u0259 t\u0259sdiql\u0259yir) verin. R\u0259y\u00e7il\u0259r h\u0259m d\u0259 \"G\u00f6zl\u0259m\u0259d\u0259\" alt\u0131nda Yaz\u0131lar v\u0259 S\u0259hif\u0259l\u0259r siyah\u0131lar\u0131nda g\u00f6zl\u0259y\u0259n h\u0259r \u015feyi tap\u0131rlar; orada birini d\u0259rc etm\u0259k onu t\u0259sdiql\u0259yir."
+            ],
+            "Manage users": [
+                "\u0130stifad\u0259\u00e7il\u0259ri idar\u0259 edin"
+            ],
+            "Nothing is waiting for review.": [
+                "Yoxlama\u011f\u0131 g\u00f6zl\u0259y\u0259n he\u00e7 n\u0259 yoxdur."
+            ],
+            "Note for the translator (optional)": [
+                "T\u0259rc\u00fcm\u0259\u00e7i \u00fc\u00e7\u00fcn qeyd (iste\u011fe ba\u011fl\u0131)"
+            ],
+            "Read side by side": [
+                "Yana\u015f\u0131 oxu"
+            ],
+            "Approve": [
+                "T\u0259sdiq et"
+            ],
+            "Ask for changes": [
+                "D\u0259yi\u015fiklikl\u0259r t\u0259l\u0259b et"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d t\u0259rc\u00fcm\u0259 idxal edildi v\u0259 ma\u015f\u0131n t\u0259rc\u00fcm\u0259sind\u0259n qorundu."
+            ],
+            "Export and import for translators": [
+                "T\u0259rc\u00fcm\u0259\u00e7il\u0259r \u00fc\u00e7\u00fcn ixrac v\u0259 idxal"
+            ],
+            "Not translated yet": [
+                "H\u0259l\u0259 t\u0259rc\u00fcm\u0259 olunmay\u0131b"
+            ],
+            "Already translated": [
+                "Art\u0131q t\u0259rc\u00fcm\u0259 olunub"
+            ],
+            "Format": [
+                "Format"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (t\u0259rc\u00fcm\u0259 al\u0259tl\u0259ri)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (c\u0259dv\u0259ll\u0259r)"
+            ],
+            "Download the file": [
+                "Fayl\u0131 y\u00fckl\u0259yin"
+            ],
+            "Import a translated file": [
+                "T\u0259rc\u00fcm\u0259 edilmi\u015f fayl\u0131 idxal edin"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Geri al\u0131n\u0131b: %1$d ke\u00e7id silindi, %2$d idxal edilmi\u015f s\u0259hif\u0259 silindi."
+            ],
+            "Dry run, nothing changed:": [
+                "Quru s\u0131naq, he\u00e7 n\u0259 d\u0259yi\u015fdirilm\u0259di:"
+            ],
+            "Imported:": [
+                "\u0130dxal edilib:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d dil \u0259lav\u0259 edildi, %2$d t\u0259rc\u00fcm\u0259 \u0259laq\u0259l\u0259ndirildi, %3$d s\u0259hif\u0259 quruldu, %4$d m\u0259tn."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "\u018fvv\u0259lc\u0259 dig\u0259r plaginini s\u00f6nd\u00fcr\u00fcn (onun \u00fcnvanlar\u0131 v\u0259 ke\u00e7id d\u00fcym\u0259l\u0259ri Tranzly il\u0259 ziddiyy\u0259t t\u0259\u015fkil ed\u0259c\u0259k). Onun m\u0259lumatlar\u0131 oldu\u011fu yerd\u0259 qal\u0131r, ona g\u00f6r\u0259 d\u0259 geri ke\u00e7\u0259 bil\u0259rsiniz; Geri al (Undo) yaln\u0131z idxal\u0131n \u0259lav\u0259 etdiyi m\u0259lumatlar\u0131 silir."
+            ],
+            "No data from this plugin on this site.": [
+                "Bu saytda bu plgind\u0259n he\u00e7 bir m\u0259lumat yoxdur."
+            ],
+            "Languages: %s": [
+                "Dill\u0259r: %s"
+            ],
+            "still active: switch it off first.": [
+                "h\u0259l\u0259 aktivdir: \u0259vv\u0259lc\u0259 onu s\u00f6nd\u00fcr\u00fcn."
+            ],
+            "Dry run": [
+                "S\u0131naq y\u00fcr\u00fc\u015f\u00fc"
+            ],
+            "Import": [
+                "\u0130dxal et"
+            ],
+            "Undo the import": [
+                "\u0130dxal\u0131 geri qaytar"
+            ],
+            "Comments and product reviews": [
+                "\u015e\u0259rhl\u0259r v\u0259 m\u0259hsul r\u0259yl\u0259ri"
+            ],
+            "Each language keeps its own": [
+                "H\u0259r bir dil \u00f6z\u00fcn\u00fc qoruyur"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "H\u0259r versiya \u00fczr\u0259 h\u0259r bir dilin \u015f\u0259rhl\u0259rini g\u00f6st\u0259r"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Ham\u0131s\u0131n\u0131 g\u00f6st\u0259r, oxucunun dilin\u0259 t\u0259rc\u00fcm\u0259 olunmu\u015f \u015f\u0259kild\u0259"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "T\u0259rc\u00fcm\u0259 t\u0259sdiql\u0259nmi\u015f h\u0259r bir \u015f\u0259rh \u00fc\u00e7\u00fcn t\u0259rc\u00fcm\u0259 m\u00fch\u0259rrikinizd\u0259n istifad\u0259 edir. Spam v\u0259 moderasiya g\u00f6zl\u0259y\u0259n \u015f\u0259rhl\u0259r he\u00e7 vaxt g\u00f6nd\u0259rilmir."
             ]
         }
     }

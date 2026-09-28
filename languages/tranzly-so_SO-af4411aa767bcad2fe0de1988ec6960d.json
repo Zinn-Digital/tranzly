@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Turjumiad asalka ahayd ee gadaal ka wad"
             ],
+            "Custom fields": [
+                "Goobaha gaarka ah"
+            ],
+            "Bulk translate the whole site": [
+                "Turjun goobta oo dhan mar qura"
+            ],
+            "Review and approval": [
+                "Dib u eegis iyo ansixin"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "U beddelo WPML, Polylang ama TranslatePress"
+            ],
             "Floating switcher": [
                 "Isku-beddelaha sabeynaya"
+            ],
+            "AI quality check": [
+                "Hubinta tayada AI"
+            ],
+            "Workflow": [
+                "H\u0431shaqada"
             ],
             "Next": [
                 "Xiga"
@@ -25,11 +43,17 @@
             "Open": [
                 "Furo"
             ],
+            "Model": [
+                "Qaabka"
+            ],
             "About": [
                 "Ku saabsan"
             ],
             "Done": [
                 "La dhammeeyey"
+            ],
+            "Actions": [
+                "Tallaabooyinka"
             ],
             "Cancelled": [
                 "La joojiyay"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Goobaha"
             ],
+            "State": [
+                "Gobolka"
+            ],
             "Type": [
                 "Nooc"
             ],
             "Upgrade": [
                 "Codsii Kor U Qaadis"
+            ],
+            "Comments and reviews": [
+                "Faallooyinka iyo dib u eegisyada"
+            ],
+            "Currency": [
+                "Lacagta"
+            ],
+            "Theme and plugin text": [
+                "Mawduuca iyo qoraalka qalabka dheeraadka ah"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Subdomains iyo domains gooni ah luqad kasta waa qayb ka mid ah Tranzly Pro."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Mashiinka turjumaada"
             ],
+            "What Tranzly translates on this site": [
+                "Waxa Tranzly ku turjumayo boggan"
+            ],
+            "found, translated with your content": [
+                "la helay, oo lagu turjumay nuxurkaaga"
+            ],
+            "not on this site": [
+                "ma ahan boggan"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Marka la isticmaalo Tranzly Pro: bogagga Elementor, Bricks, Divi, Beaver Builder, Oxygen iyo WPBakery; wax kasta oo ku jira WooCommerce, oo ay ku jiraan qiimayaasha lacagta booqashada; meelaha SEO ee Yoast SEO, Rank Math, SEOPress iyo All in One SEO; goobaha ACF, Meta Box iyo Pods; foomamka iyo iimayladooda; qoraalka mawduucaaga iyo furayaasha (plugins); iyo faallooyinka iyo dib u eegisyada."
+            ],
+            "Shop text and e-mails": [
+                "Qoraalka dukaanka iyo iimaylada"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Mowduucyada iyo madaxyada iimaylka, magacyada habka lacag-bixinta iyo dhoofinta, iyo ogaysiisyada bixinta. Iimayl kasta oo dalbasho ah wuxuu ku baxayaa luqadda lagu dalbaday."
+            ],
+            "Forms and their e-mails": [
+                "Foomamka iyo iimayyadooda"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Foom kasta wuxuu hayaa hal liis oo ah gelitaanno; summadaha, badhamada, fariimaha iyo i-maylovlada waxay ka muuqdaan luqadda booqdaha."
+            ],
+            "Saved.": [
+                "La kaydiyey."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Weli lama qeexin wax ACF, Meta Box ama Pods ah."
+            ],
+            "Field": [
+                "Goob"
+            ],
+            "Where": [
+                "Halkee"
+            ],
+            "In a translation": [
+                "Tarjumaadaha ku jira"
+            ],
+            "What happens to %s in a translation": [
+                "Maxaa ku dhaca %s inta ay socoto turjumaaddu"
+            ],
+            "Translate it": [
+                "Turjum"
+            ],
+            "Copy it as it is": [
+                "Sidii uu yahay ugu koobbi"
+            ],
+            "Leave it empty": [
+                "Iska daa madhan"
+            ],
+            "The shop\u2019s currency": [
+                "Lacagta dukaanka"
+            ],
+            "Currencies": [
+                "Lacagaha"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Muuji qiimaha lacagaha kale (lacagta dukaanka ee rasmiga ah waa %s)"
+            ],
+            "Exchange rates": [
+                "Heerarka sarifka"
+            ],
+            "Rates last updated %s.": [
+                "Qiimaha waxaa la cusboonaysiiyay %skii ugu dambeeyay."
+            ],
+            "Rates have not been fetched yet.": [
+                "Qiimayaasha weli lama soo celin."
+            ],
+            "Update the rates now": [
+                "Hadda cusboonaysii qiimaha"
+            ],
+            "New currency": [
+                "Lacag cusub"
+            ],
+            "Choose\u2026": [
+                "Dooro\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Qiime (kiiskiiba %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Ku qorista qiime waxay xajineysaa: cusboonaysiinta maalinlaha ahi ma beddeli doonto."
+            ],
+            "Rounding": [
+                "Wareegid"
+            ],
+            "None": [
+                "Ma jiro"
+            ],
+            "Round up": [
+                "Wareeji"
+            ],
+            "Round to the nearest": [
+                "Ku wareegi kan ku xiga"
+            ],
+            "Round down": [
+                "Wareegso hoos"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "U soo koobi (tusaale ahaan 1, 0.05 ama 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Qiimaha wuxuu ku dhamaadaa (tusaale ahaan 0.99)"
+            ],
+            "Add a currency": [
+                "Ku dar lacag"
+            ],
+            "Which visitors see which currency": [
+                "Waa kuwee booqdayasha arki doona lacagta"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Sida waddanku yahay: summadda dalka ee labada xaraf ka kooban (tusaale ahaan CH)"
+            ],
+            "Visitors from %s": [
+                "Booqashadayaasha ka imanaya %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "U oggolow booqdayeyaasha inay doortaan (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Qiimaha hadda wuxuu ku xiran yahay buskud (cookie) ama dalka booqdayaha: hubi in kaydkaaga boggu uu ku kala duwanaado buskudka \"tranzly_currency\", ama uu ka reebo bogagga dukaanka."
+            ],
+            "Save currencies": [
+                "Kaydiso lacagaha"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Erayada mawduucingaga iyo fiilooyinkaagu ay daabacaan (badhamada, calaamadaha). Akhri mawduuc ama fiilo hal mar, kadibna halkan ku turjumi qoraalkeeda; turjumaadaadu waxay ka adkaan doontaa tan fiilada lafteeda."
+            ],
+            "%d texts": [
+                "%d qoraallo"
+            ],
+            "not read yet": [
+                "weli lama aqrin"
+            ],
+            "Read again": [
+                "Dib u akhri"
+            ],
+            "Read its text": [
+                "Akhri qoraalkeeda"
+            ],
+            "Translate": [
+                "Turjum"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Shaqadu waxay ku bilaabatay %d turjumaadood oo la qabanayo. Waxay ka socotaa xagga dambe: waad xiri kartaa boggan."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Liisaska iyo qoraalka la wadaago"
             ],
+            "Translation status": [
+                "Xaaladda turjumaadda"
+            ],
+            "Integrations": [
+                "Isku-dhafka"
+            ],
             "No meta description": [
                 "Ma jiro sharaxaad kooban oo ku saabsan bogga (meta description)."
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Wax ka beddel"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Shaqada %1$d waa billowday: %2$d bog ayaa gadaal ka socod ah lagu turjumayaa. Ka soco Shaqooyinka turjumaadda."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d tarjumaadaha ayaa lagu hubinayaa asalka. Dhibcaha ayaa ka muuqda halkaan markay yimaadaan."
+            ],
+            "Missing": [
+                "Maqan"
+            ],
+            "Out of date": [
+                "Waqtigii ka dhacay"
+            ],
+            "Translated": [
+                "La turjumay"
+            ],
+            "Edited by a person": [
+                "Qof ayaa wax ka beddelay"
+            ],
+            "Machine translated": [
+                "Turjumidda mashiinka"
+            ],
+            "Waiting for review": [
+                "Waa la sugayaa in dib-loogesh lagu sameeyo"
+            ],
+            "Needs a human look": [
+                "Waxay u baahan tahay indho bini'aadam"
+            ],
+            "Everything": [
+                "Wax walba"
+            ],
+            "Up to date": [
+                "Cusubna"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly wuxuu weli soo saarayaa turjumaadaha duugga ah ee dhacay. Tirada \"ee dhacday\" way kori doontaa inta uu sidaas sameynayo."
+            ],
+            "Content type": [
+                "Nooca nuxurka"
+            ],
+            "All content": [
+                "Dhammaan waxyaabaha ku jira"
+            ],
+            "Average quality": [
+                "Tayada celcelis ahaan"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d la turjumay (%2$d%%)"
+            ],
+            "Show": [
+                "Muuji"
+            ],
+            "Translate everything missing": [
+                "Turjun wax kasta oo maqan"
+            ],
+            "Update everything out of date": [
+                "Cusbooneysii wax kasta oo dhacay waqtigoodii"
+            ],
+            "Check the quality with AI": [
+                "Tayada ku hubi AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "Dib u turjum bogagga dhibcaha hooseeya leh"
+            ],
+            "Nothing here.": [
+                "Waxba ma yaallo halkan."
+            ],
+            "Quality": [
+                "Tayada"
+            ],
+            "by a person": [
+                "qof uu leeyahay"
+            ],
+            "waiting for review": [
+                "la sugayo dib u eegis"
+            ],
+            "Side by side": [
+                "Isbarbar dhig"
+            ],
+            "Show more": [
+                "Muuji wax badan"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Tarjumo xaddiga weyn ee degelka oo dhan (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Adoo adeegsanaya Tranzly Pro, dooro noocyada iyo luqadaha nuxurka, arag qiyaasta, oo hal mar ku turjun barta oo dhan."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d shaqo oo asalka ah ayaa billowday, midkiiba luqad. Kala soco shaqooyinka Turjumaadda."
+            ],
+            "Content types": [
+                "Noocyada nuxurka"
+            ],
+            "What to translate": [
+                "Waxa la tarjumayaa"
+            ],
+            "Only what is missing": [
+                "Waxa ka dhiman oo keliya"
+            ],
+            "Only what is out of date": [
+                "Kaliya waxa dhacay waqtigoodii"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Wax kasta (bogagga qofku wax ka beddelay sidooda ayay ahaanayaan)"
+            ],
+            "Estimate": [
+                "Qiyaas"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d bogag, %2$s xarfaha. Mashiinkani ma daabaco qiime."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d bogag, %2$s xarfaha, ku dhowaa $%3$s."
+            ],
+            "Find a text": [
+                "Raadi qoraal"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d kale: ku qor \"Raadi qoraal\" si aad u yareyso liiska."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Badhan yar oo ku yaal gees kasta oo ka mid ah bog kasta, oo ku saabsan mawduuc kasta, iyada oo aan lahayn habeyn."
-            ],
-            "Where": [
-                "Halkee"
             ],
             "Off": [
                 "Dam\u05df"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Eray kasta oo cinwaan ah waa 2 ilaa 12 xaraf oo yar, nambaro, ama xariijimo gaaban."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Cusboonaysiin toos ah markaa la cusboonaysiinayo, doorarka dib-u-eegayaasha, dhoofinta XLIFF ee turjubaanada, ka beddelashada WPML, Polylang ama TranslatePress iyo hubinta tayada AI waxay la socdaan Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Markii uu asalku isbeddelo"
+            ],
+            "When a page is edited": [
+                "Marka bogga la tarto"
+            ],
+            "Mark its translations out of date": [
+                "Calaamadi turjumaadaha inaysan cusbooneysnayn"
+            ],
+            "Translate its translations again in the background": [
+                "Turjum tarjumaadaha mar labaad asalka dambe"
+            ],
+            "Do nothing": [
+                "Waxba ha qaban"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Turjumaad ay qof ahi wax ka beddelay marnaba lama dul qoro; halkaas waxaa loo calaamadiyaa mid dhacay."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Turjum bogocyada cusub luqad kasta markii la daabaco"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Qaab kale oo AI ah ayaa akhriya turjumaad kasta oo la socota asalkeeda, wuu qiimeeyaa oo wuxuu magacaabaa khaladaadka. Waxay isticmaashaa furahaaga gaarka ah ee AI ee ka yimid habaynta AI. Ka bilow hubinta xaaladda Turjumaadda."
+            ],
+            "AI provider": [
+                "Bixiyaha AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Qaabka guud ee dejinta AI"
+            ],
+            "Recommended": [
+                "La soo jeediyay"
+            ],
+            "A page needs a human look below this score": [
+                "Boggu wuxuu u baahan yahay eegmo bini'aadam ah dhibcahaas hoostooda"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Daabac kaliya turjumaadaha uu dib-u-eegayaashu ansixiyay"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Sii dadka doorka Turjubaanka (wuxuu wax ka beddelaa turjumaadaha, marnaba asalka ma taabto, ma daabici karo) ama doorka Dib-u-eegaha turjumaada (sidoo kale wuu ansixiyaa). Dib-u-eegayaashu waxay sidoo kale helayaan wax kasta oo sugaya ee ku jira liiska Qoraallada iyo Bogagga ee hoos yimaada \"La sugayo\"; daabacaadda mid ka mid ah halkaas waxay ansixinaysaa."
+            ],
+            "Manage users": [
+                "Maamul isticmaalayaasha"
+            ],
+            "Nothing is waiting for review.": [
+                "Wax a sugaya dib u eegis ma jiraan."
+            ],
+            "Note for the translator (optional)": [
+                "Fiiro gaar ah oo ku socota turjubaanka (ikhtiyaari ah)"
+            ],
+            "Read side by side": [
+                "Akhri iyadoo dhinac la iska saaray"
+            ],
+            "Approve": [
+                "Ansanax Runta \/ Ogolow"
+            ],
+            "Ask for changes": [
+                "Codso isbeddelo"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d turjubaan ayaa la keenay oo laga ilaaliyay turjumaada mashiinka."
+            ],
+            "Export and import for translators": [
+                "Dhoofinta iyo soo dejinta turjubaannada"
+            ],
+            "Not translated yet": [
+                "Weli aan la turjumin"
+            ],
+            "Already translated": [
+                "Horay loo turjumay"
+            ],
+            "Format": [
+                "Qaabayn"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (qalabka turjumaada)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (faaf-faahiyeyaasha)"
+            ],
+            "Download the file": [
+                "So degso faylka"
+            ],
+            "Import a translated file": [
+                "Sooji geli fayl la turjumay"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Lama sameyn: %1$d xiriirin waa la saaray, %2$d bogag la soo dejiyay waa la tirtiray."
+            ],
+            "Dry run, nothing changed:": [
+                "Tijaabo qalad la'aan ah, waxba la bedelin:"
+            ],
+            "Imported:": [
+                "La keenay:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d luqadood oo lagu daray, %2$d turjumaadood oo la xiriiriyay, %3$d bogag ah oo la dhisay, %4$d qoraallo ah."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Markabka kale dami marka hore (ciwaannada iyo beddelayaasheedu waxay iska hor imanayaan Tranzly). Xogtiisu waxay ku jirtaa halkii ay joogtay, markaa waad dib u beddeli kartaa; Undo waxay si sax ah uga saartaa waxa soo dejintu ku dartay."
+            ],
+            "No data from this plugin on this site.": [
+                "Ma jiro wax xog ah oo ka imanaya furahan (plugin) ee ku yaal boggan."
+            ],
+            "Languages: %s": [
+                "Luqadaha: %s"
+            ],
+            "still active: switch it off first.": [
+                "wali waa shaqaynaysaa: marka hore dami."
+            ],
+            "Dry run": [
+                "Tijaabada qallajiska ah"
+            ],
+            "Import": [
+                "Keenso"
+            ],
+            "Undo the import": [
+                "Ka noqo soo dejinta"
+            ],
+            "Comments and product reviews": [
+                "Faallooyinka iyo dib u eegisyada badeecada"
+            ],
+            "Each language keeps its own": [
+                "Luqad kastaa waxay haysataa midkeeda"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Muuji faallooyinka luqad kasta ee nooc kasta"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Muuji dhammaantood, iyadoo loo turjumay luqadda akhristaha"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Turjumiddu waxay isticmaashaa mashiinka turjumaadda ee aad dooratay faallo kasta oo la ansixiyay. Spam-ka iyo faallooyinka sugaya dib-u-eegista marnaba lama diro."
             ]
         }
     }

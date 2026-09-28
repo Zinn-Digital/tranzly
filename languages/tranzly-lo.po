@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "ຊ່ອງຂໍ້ມູນ SEO ສຳລັບປລັກອິນ SEO ຂະໜາດໃຫຍ່ທັງໝົດສີ່ຕົວ"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "ຟີວແມ່ນກຳນົດເອງ"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "ແປບົດຄວາມໜຶ່ງໃນຄລິກດຽວ"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "ແປເວັບໄຊທ໌ທັງໝົດເປັນຈຳນວນຫຼວງຫຼາຍ"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "ເຄື່ອງມືແກ້ໄຂໜ້າເວັບແບບເບິ່ງເຫັນຜົນຕົວຈິງ"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "ການກວດສອບ ແລະ ອະນຸມັດ"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "ການສົ່ງອອກ ແລະ ການນໍາເຂົ້າ ສຳລັບນັກແປພາສາ"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "ປ່ຽນຈາກ WPML, Polylang ຫຼື TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce ຮອງຮັບຫລາຍສະກຸນເງິນ"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "ການກວດສອບຄຸນນະພາບດ້ວຍ AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "ສິ່ງທີ່ຖືກແປ"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "ໜ້າວຽກ"
 
@@ -852,6 +858,7 @@ msgstr "ທົດສອບ"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "ລຶບອອກ"
 
@@ -1232,6 +1239,7 @@ msgid "Used for"
 msgstr "ໃຊ້ສຳລັບ"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "ຮູບແບບ"
 
@@ -1305,7 +1313,7 @@ msgstr "ບັນທຶກຂີດຈຳກັດ ແລະ ສິດທິແ�
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ພາສານັ້ນບໍ່ແມ່ນພາສາໜຶ່ງຂອງເວັບໄຊນີ້."
@@ -1381,16 +1389,21 @@ msgid "This kind of content is not translated."
 msgstr "ເນື້ອຫາປະເພດນີ້ບໍ່ໄດ້ຮັບການແປ."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "ຂໍ້ຄວາມ %s ບໍ່ມີຢູ່ໃນເວັບໄຊນີ້ແລ້ວ. ໂຫຼດໜ້າເວັບຄືນໃໝ່."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "ບໍ່ມີໂປຣແກຣມແປພາສາໃດສາມາດແປຂໍ້ຄວາມນີ້ໄດ້."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "ເລືອກພາສາອື່ນຂອງທ່ານໜຶ່ງພາສາ."
 
@@ -1424,7 +1437,8 @@ msgstr "ແປພາສາໃນໜ້ານີ້"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ແປລາຍການນີ້."
 
@@ -1434,7 +1448,7 @@ msgid "This item already has a version in that language."
 msgstr "ລາຍການນີ້ມີເວີຊັນໃນພາສານັ້ນແລ້ວ."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "ໂປຣແກຣມແປພາສານັ້ນບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
 
@@ -1473,6 +1487,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "ຄ່າສຳລັບ %s ບໍ່ແມ່ນໜຶ່ງໃນບັນດາຕົວເລືອກທີ່ອະນຸຍາດ."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "ຄິວເຮັດວຽກຢູ່ພື້ນຫຼັງບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
 
@@ -1491,6 +1506,7 @@ msgstr "ລາຍການນັ້ນບໍ່ແມ່ນສ່ວນໜຶ່
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "ທ່ານ​ບໍ່​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ​ໃຫ້​ປ່ຽນ​ການ​ແປ​ນັ້ນ."
 
@@ -1535,27 +1551,31 @@ msgid "This item is already written in that language."
 msgstr "ລາຍການນີ້ຖືກຂຽນເປັນພາສານັ້ນຢູ່ແລ້ວ."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ການແປນີ້ຖືກແກ້ໄຂໂດຍບຸກຄົນ (ຫລື ນໍາເຂົ້າ), ດັ່ງນັ້ນມັນຈຶ່ງຖືກປົກປ້ອງ. ປົດລັອກມັນເພື່ອແປມັນອີກຄັ້ງ."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "ລາຍການນັ້ນບໍ່ມີຢູ່."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ຍັງບໍ່ທັນມີການຕັ້ງຄ່າເຄື່ອງຈັກແປພາສາເທື່ອ. ໃຫ້ເພີ່ມຄີສຳລັບເຄື່ອງຈັກໃນ Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ເຄື່ອງມືແປພາສານັ້ນຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າ: ກະລຸນາເພີ່ມຄີຂອງມັນກ່ອນ."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "ຂໍ້ຄວາມດຽວກັນນີ້ກຳລັງຖືກແປໂດຍງານອື່ນຢູ່ໃນຂະນະນີ້; ລາຍການນີ້ຈະໃຊ້ຄຳຕອບນັ້ນ."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "ບໍ່ມີເຄື່ອງມືແປພາສາໃດສາມາດຮັບເອົາລາຍການນີ້ໄດ້."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ເຄື່ອງຈັກບໍ່ໄດ້ສົ່ງຄືນການແປສຳລັບທຸກສ່ວນຂອງລາຍການນີ້. ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
 
@@ -1673,6 +1693,7 @@ msgstr "ທ່ານຕ້ອງການລວມ %1$s ເຂົ້າໃນ %2
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "ການດໍາເນີນການ"
 
@@ -4716,6 +4737,7 @@ msgstr "ກຳລັງເລີ່ມຕົ້ນການທົດລອງໃ
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "ສະຖານະ"
@@ -5019,6 +5041,7 @@ msgstr "ທ່ານມັກ %1$s ປານໃດແລ້ວ? ທົດລອ�
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "ປະເພດ"
 
@@ -5697,6 +5720,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "ຜ່ານມາ %s"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "ບລັອກທີ່ມີລາຍການທີ່ຊ້ຳກັນ, ແລະ ຮູບແບບທີ່ຊິ້ງຂໍ້ມູນແລ້ວ"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "ຄວາມຄິດເຫັນ ແລະ ການຣີວີວ"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "ແປໂດຍອັດຕະໂນມັດຈາກ %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "ສະກຸນເງິນ WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "ສະກຸນເງິນ"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "ແຫຼງອັດຕາແລກປ່ຽນບໍ່ໄດ້ກຳນົດລາຄາຂອງ %s, ເຊິ່ງເປັນສະກຸນເງິນຂອງຮ້ານຄ້າ."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" ບໍ່ແມ່ນສະກຸນເງິນທີ່ WooCommerce ຮູ້ຈັກ, ຫຼືມັນເປັນສະກຸນເງິນຂອງຮ້ານເອງ."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "ໃສ່ອັດຕາທີ່ສູງກວ່າສູນສຳລັບ %s, ເຊັ່ນ 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "ຂັ້ນຕອນການປັດປັດັດ ແລະ ຕົວເລກທ້າຍລາຄາແມ່ນຈຳນວນເງິນ, ເຊັ່ນ 0.05 ຫຼື 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "ຟິວທີ່ກຳນົດເອງ (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "ເລືອກແປ, ຄັດລອກ ຫຼື ປະໄວ້່າງສຳລັບແຕ່ລະຟິວ."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "ແບບຟອມ (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "ຂ້ອຍໃສ່ອັດຕາຄ່າບໍລິການເອງ"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "ທະນາຄານກາງເອີຣົບ, ອັບເດດທຸກວັນ (ຟຣີ, ບໍ່ຈຳເປັນຕ້ອງມີບັນຊີ)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "ທະນາຄານກາງຢູໂຣບ ໄດ້ຕອບຮັບ %d. ອັດຕາຫຼ້າສຸດແມ່ນຖືກຮັກສາໄວ້."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "ທະນາຄານກາງຢູໂຣບບໍ່ໄດ້ປ່ຽນແປງອັດຕາເງິນຝາກ. ອັດຕາຫຼ້າສຸດແມ່ນຖືກຮັກສາໄວ້."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "ແຫຼ່ງຂໍ້ມູນອັດຕາແລກປ່ຽນນັ້ນບໍ່ພ້ອມນຳໃຊ້."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "ປລັກອິນ SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "ຂໍ້ຄວາມຂອງຮູບແບບ ແລະ ປລັກອິນ"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "ຫົວຂໍ້ ຫຼື ປລັກອິນນັ້ນບໍ່ໄດ້ຖືກເປີດໃຊ້ງານຢູ່ໃນເວັບໄຊນີ້."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "ຄຳແນະນຳພາສາ"
@@ -5951,11 +6067,135 @@ msgstr "ຂະໜາດຂໍ້ຄວາມ"
 msgid "Switcher"
 msgstr "ຕົວສະຫຼັບ"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(ບໍ່ມີຫົວຂໍ້)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "ບໍ່ມີຫຍັງຕ້ອງແກ້ໄຂຢູ່ບ່ອນນີ້."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "ບໍ່ມີປະເພດເນື້ອຫາໃດຖືກແປໃນເວັບໄຊນີ້."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "ປະເພດເນື້ອຫານັ້ນບໍ່ໄດ້ຖືກແປຢູ່ເທິງເວັບໄຊນີ້."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "ບໍ່ມີຫຍັງທີ່ຈະແປໃນສ່ວນທີ່ເລືອກນັ້ນ."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "ເລືອກຢ່າງໜ້ອຍໜຶ່ງພາສາເພື່ອແປ."
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ສົ່ງອອກຄຳແປ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "ເລືອກໄຟລ໌ XLIFF ຫຼື CSV ເພື່ອນໍາເຂົ້າ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "ນັ້ນບໍ່ແມ່ນໄຟລ໌ Tranzly XLIFF ຫຼື CSV. ກະລຸນາສົ່ງອອກໄຟລ໌ກ່ອນ, ແປໄຟລ໌ນັ້ນ, ແລ້ວນໍາເຂົ້າມາທີ່ນີ້."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "ບໍ່ສາມາດບັນທຶກໄຟລ໌ສຳລັບການນຳເຂົ້າໄດ້. ກະລຸນາຫຼຽນເບິ່ງວ່າໂຟນເດີ uploads ສາມາດຂຽນໄດ້."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "ການນຳເຂົ້ານັ້ນບໍ່ມີອີກຕໍ່ໄປແລ້ວ. ກະລຸນາອັບໂຫຼດໄຟລ໌ອີກຄັ້ງ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "ໜ້ານັ້ນບໍ່ມີຢູ່ໃນເວັບໄຊນີ້ອີກຕໍ່ໄປແລ້ວ."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "ໄຟລ໌ດັ່ງກ່າວແມ່ນສຳລັບພາສາທີ່ເວັບໄຊນີ້ບໍ່ມີ."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "ບົດຄວາມ #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "ບໍ່ພົບຂໍ້ມູນຈາກປລັກອິນນັ້ນໃນເວັບໄຊນີ້."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "ນີ້ບໍ່ແມ່ນການແປສິ່ງໃດຢູ່ໃນເວັບໄຊນີ້."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "ບໍ່ມີຂໍ້ຄວາມໃຫ້ກວດສອບ."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "ການຕັ້ງຄ່າ AI ບໍ່ແມ່ນສ່ວນໜຶ່ງຂອງການສ້າງນີ້."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "ຜູ້ໃຫ້ບໍລິການ AI ບໍ່ໄດ້ຕອບ."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "ແບບຈຳລອງ AI ບໍ່ໄດ້ໃຫ້ຄະແນນທຸກສ່ວນຂອງໜ້ານີ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ ຫຼື ເລືອກແບບຈຳລອງອື່ນ."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "ຜູ້ແປພາສາ"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "ຜູ້ກວດກາການແປພາສາ"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "ຜູ້ກວດສອບໄດ້ຮ້ອງຂໍໃຫ້ມີການປ່ຽນແປງການແປນີ້."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "ຜູ້ກວດສອບໄດ້ຂໍການປ່ຽນແປງສຳລັບການແປນີ້: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "ການແປນີ້ກຳລັງລໍຖ້າຜູ້ກວດກາ. ການເຜີຍແຜ່ມັນ (ໃນຖານະຜູ້ກວດກາ) ແມ່ນການອະນຸມັດມັນ."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "ມີແຕ່ການແປເທົ່ານັ້ນທີ່ສາມາດກວດສອບໄດ້."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "ເລືອກສິ່ງທີ່ຈະເກີດຂຶ້ນເມື່ອຕົ້ນສະບັບມີການປ່ຽນແປງ: ບໍ່ເຮັດຫຍັງ, ໝາຍວ່າການແປບໍ່ເປັນປັດຈຸບັນ, ຫຼື ແປຄືນໃໝ່."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "ເກນຄຸນນະພາບແມ່ນຄະແນນແຕ່ 0 ເຖິງ 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "ສະແດງຄຳແນະນຳທີ່ເຊື່ອງໄວ້ໃນໜ້າພາບລວມອີກຄັ້ງ"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "ທັງໝົດ"
 
@@ -5979,6 +6219,8 @@ msgid "Select"
 msgstr "ເລືອກ"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "ໜ້າຕ່າງໆ"
 
@@ -6227,28 +6469,28 @@ msgstr "ແສງສະຫວ່າງ"
 msgid "Dark"
 msgstr "ມືດ"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "ຮູບແບບສີ"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "ຊ່ວຍເຫຼືອ"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "ຄູ່ມືສຳລັບໜ້າຈໍນີ້"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "ທັດສະນຶກຕົວຢ່າງ"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "ຮັບຄວາມຊ່ວຍເຫຼືອ ຫຼື ລາຍງານຂໍ້ຜິດພາດ"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "ໜ້າຈໍປລັກອິນ"
 
@@ -6661,6 +6903,7 @@ msgstr "ເບິ່ງແຜນງານ Pro ແລະລາຄາ"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "ພາສາ"
@@ -6887,6 +7130,214 @@ msgstr "ການຕັ້ງຄ່າ"
 msgid "Translation engine"
 msgstr "ເຄື່ອງຈັກແປພາສາ"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "ສິ່ງທີ່ Tranzly ແປໃນເວັບໄຊນີ້"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "ພົບແລ້ວ, ແປດ້ວຍເນື້ອຫາຂອງທ່ານ"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "ບໍ່ໄດ້ຢູ່ໃນເວັບໄຊນີ້"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "ດ້ວຍ Tranzly Pro: ໜ້າຕ່າງໆຂອງ Elementor, Bricks, Divi, Beaver Builder, Oxygen ແລະ WPBakery; ທຸກຢ່າງໃນ WooCommerce, ພ້ອມດ້ວຍລາຄາເປັນສະກຸນເງິນຂອງຜູ້ເຂົ້າຊົມ; ຊ່ອງ SEO ຂອງ Yoast SEO, Rank Math, SEOPress ແລະ All in One SEO; ຊ່ອງ ACF, Meta Box ແລະ Pods; ແບບຟອມ ແລະ ອີເມວຂອງພວກມັນ; ຂໍ້ຄວາມຂອງຮູບແບບ (theme) ແລະ ປລັກອິນ (plugins) ຂອງທ່ານ; ແລະ ຄວາມຄິດເຫັນ ແລະ ບົດວິຈານ."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "ຂໍ້ຄວາມຮ້ານຄ້າ ແລະ ອີເມວ"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "ຫົວຂໍ້ອີເມວ ແລະ ຫົວຂໍ້ຕ່າງໆ, ຊື່ວິທີການຊຳລະເງິນ ແລະ ຈັດສົ່ງ, ແລະ ແຈ້ງເຕືອນການຈ່າຍເງິນ. ອີເມວຂອງແຕ່ລະຄຳສັ່ງຊື້ຈະຖືກສົ່ງອອກເປັນພາສາທີ່ໃຊ້ໃນການສັ່ງຊື້ນັ້ນ."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "ແບບຟອມ ແລະ ບັນດາອີເມວຂອງພວກມັນ"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "ແບບຟອມແຕ່ລະແບບຮັກສາບັນຊີລາຍຊື່ຂອງລາຍການໜຶ່ງ; ປ້າຍຊື່, ປຸ່ມ, ຂໍ້ຄວາມ ແລະ ອີເມວຂອງມັນຈະສະແດງເປັນພາສາຂອງຜູ້ເຂົ້າຊົມ."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "ບັນທຶກແລ້ວ."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "ຍັງບໍ່ມີເຂດຂໍ້ມູນ ACF, Meta Box ຫຼື Pods ໃດຖືກກຳນົດຄ່າເທື່ອ."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "ຊ່ອງຂໍ້ມູນ"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "ບ່ອນໃດ"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "ໃນການແປພາສາ"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "ເກີດຫຍັງຂຶ້ນກັບ %s ໃນການແປພາສາ"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "ແປຂໍ້ຄວາມນີ້"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "ຄັດລອກຕາມທີ່ມັນເປັນຢູ່"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "ປະໄວ້ໃຫ້ຫວ່າງເປົ່າ"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "ສະກຸນເງິນຂອງຮ້ານຄ້າ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "ສະກຸນເງິນ"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "ສະແດງລາຄາໃນສະກຸນເງິນອື່ນ (ສະກຸນເງິນຂອງຮ້ານແມ່ນ %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "ອັດຕາແລກປ່ຽນ"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "ອັດຕາຄ່າບໍລິການໄດ້ຮັບການອັບເດດຫຼ້າສຸດເມື່ອ %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "ຍັງບໍ່ທັນໄດ້ດຶງຂໍ້ມູນອັດຕາເທື່ອ."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "ອັບເດດອັດຕາເຫຼົ່ານີ້ດຽວນີ້"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "ສະກຸນເງິນໃໝ່"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "ເລືອກ…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "ອັດຕາ (ຕໍ່ 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "ການພິມອັດຕາໄວ້ຈະຮັກສາມັນໄວ້ຄືເກົ່າ: ການອັບເດດປະຈຳວັນຈະບໍ່ປ່ຽນແປງມັນ."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "ການປັດຈຸບັນ"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "ປັດຂຶ້ນ"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "ປັດເສດໄປຫາຈຳນວນທີ່ໃກ້ກ່ຽວທີ່ສຸດ"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "ປັດລົງ"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "ປັດເສດເປັນ (ຕົວຢ່າງ 1, 0.05 ຫຼື 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "ລາຄາລົງທ້າຍດ້ວຍ (ຕົວຢ່າງ 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "ເພີ່ມສະກຸນເງິນ"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "ຜູ້ເຂົ້າຊົມຄົນໃດເຫັນສະກຸນເງິນໃດ"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "ຕາມປະເທດ: ລະຫັດປະເທດສອງຕົວອັກສອນ (ຕົວຢ່າງເຊັ່ນ CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "ຜູ້ເຂົ້າຊົມຈາກ %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "ໃຫ້ຜູ້ເຂົ້າຊົມເລືອກ (ຊອດໂຄດ [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "ລາຄາໃນຕອນນີ້ແມ່ນຂຶ້ນຢູ່ກັບຄຸກກີ ຫຼື ປະເທດຂອງຜູ້ເຂົ້າຊົມ: ກະລຸນາຮັບປະກັນວ່າແຄຊ໌ໜ້າເວັບຂອງທ່ານປ່ຽນແປງຕາມຄຸກກີ \"tranzly_currency\" ຫຼື ຍົກເວັ້ນໜ້າຮ້ານຄ້າ."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "ບັນທຶກສະກຸນເງິນ"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "ຄຳສັບຕ່າງໆທີ່ຮູບແບບ ແລະ ປລັກອິນຂອງທ່ານສະແດງຂຶ້ນມາ (ປຸ່ມ, ປ້າຍຊື່). ອ່ານຮູບແບບ ຫຼື ປລັກອິນໜຶ່ງຄັ້ງ, ຈາກນັ້ນແປຂໍ້ຄວາມຂອງມັນຢູ່ທີ່ນີ້; ການແປຂອງທ່ານຈະຖືກໃຊ້ແທນຂໍ້ຄວາມຂອງປລັກອິນນັ້ນ."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d ຂໍ້ຄວາມ"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "ຍັງບໍ່ໄດ້ອ່ານ"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "ອ່ານອີກຄັ້ງ"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "ອ່ານຂໍ້ຄວາມຂອງມັນ"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "ແປພາສາ"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6946,6 +7397,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d ບົດຄວາມ, %2$s ຕົວອັກສອນ: ປະມານ $%3$s ໃນບັນຊີຂອງທ່ານເອງ."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "ເລີ່ມແປ"
 
@@ -6983,6 +7435,11 @@ msgstr "ເນື້ອຫາ"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "ພາສາ"
 
@@ -7017,11 +7474,13 @@ msgstr "ບັນທຶກເມນູແລ້ວ."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "ແປແລ້ວ %d ຂໍ້ຄວາມ."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "ບັນທຶກແລ້ວ. ການແກ້ໄຂຂອງທ່ານຖືກປົກປ້ອງຈາກການແປດ້ວຍເຄື່ອງຈັກ."
 
@@ -7058,48 +7517,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "ແມ່ແບບ, ຫົວຂໍ້, ທ້າຍກະດາດ ແລະ ຮູບແບບ (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "ແປຂໍ້ຄວາມທີ່ຂາດຫາຍໄປ"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "ບໍ່ມີຂໍ້ຄວາມໃຫ້ແປໃນນີ້."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "ແກ້ໄຂໂດຍມະນຸດ, ປົກປ້ອງ"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "ບັນທຶກການແກ້ໄຂ"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "ພາສາ ແລະ ການຕັ້ງຄ່າ"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "ເຄື່ອງຈັກ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "ວຽກແປພາສາ"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "ທີ່ຢູ່ ແລະ SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "ຕົວປ່ຽນພາສາ"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "ການກວດສອບ SEO"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "ເມນູ ແລະ ຂໍ້ຄວາມທີ່ໃຊ້ຮ່ວມກັນ"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "ສະຖານະການແປ"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "ການເຊື່ອມໂຍງ"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7145,6 +7617,7 @@ msgid "The whole language has been checked."
 msgstr "ພາສາທັງໝົດໄດ້ຮັບການກວດສອບແລ້ວ."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "ໜ້າ"
 
@@ -7153,17 +7626,200 @@ msgid "Problem"
 msgstr "ບັນຫາ"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "ແກ້ໄຂ"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "ວຽກ %1$d ເລີ່ມຕົ້ນແລ້ວ: ໜ້າ %2$d ກຳລັງຖືກແປຢູ່ເບື້ອງຫຼັງ. ຕິດຕາມມັນໄດ້ໃນ ວຽກແປພາສາ."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "ກຳລັງກວດສອບ %d ການແປຢູ່ເບື້ອງຫຼັງ. ຄະແນນຈະສະແດງຢູ່ທີ່ນີ້ເມື່ອມາຮອດ."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "ຂາດຫາຍ"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "ໝົດອາຍຸແລ້ວ"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "ແປແລ້ວ"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "ແກ້ໄຂໂດຍບຸກຄົນ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "ແປດ້ວຍເຄື່ອງ"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "ກຳລັງລໍຖ້າການກວດສອບ"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "ຕ້ອງການການກວດສອບຈາກມະນຸດ"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "ທັງໝົດ"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "ອັບເດດແລ້ວ"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly ຍັງກຳລັງກວດສອບວ່າການແປແບບເກົ່າອັນໃດທີ່ໝົດອາຍຸແລ້ວ. ຕົວເລກ \"ໝົດອາຍຸ\" ຈະເພີ່ມຂຶ້ນໃນຂະນະທີ່ມັນກຳລັງດຳເນີນການຢູ່."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "ປະເພດເນື້ອຫາ"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "ເນື້ອຫາທັງໝົດ"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "ຄຸນນະພາບສະເລ່ຍ"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "ແປແລ້ວ %1$d (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "ສະແດງ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "ແປທຸກຢ່າງທີ່ຍັງຂາດຢູ່"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "ອັບເດດທຸກຢ່າງທີ່ໝົດອາຍຸແລ້ວ"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "ກວດສອບຄຸນນະພາບດ້ວຍ AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "ແປໜ້າເວັບທີ່ມີຄະແນນຕ່ຳຄືນໃໝ່"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "ບໍ່ມີຫຍັງຢູ່ບ່ອນນີ້."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "ຄຸນນະພາບ"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "ໂດຍບຸກຄົນ"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "ກຳລັງລໍຖ້າການກວດສອບ"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "ຄຽງຂ້າງກັນ"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "ສະແດງເພີ່ມເຕີມ"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "ແປພາສາທົ່ວທັງເວັບໄຊຈຳນວນຫຼາຍ (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "ດ້ວຍ Tranzly Pro, ເລືອກປະເພດເນື້ອຫາ ແລະ ພາສາ, ເບິ່ງການຄາດຄະເນ, ແລະ ແປທັງເວັບໄຊໄດ້ໃນເທື່ອດຽວ."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "ເລີ່ມຕົ້ນວຽກພື້ນຫຼັງ %d ວຽກ, ວຽກລະໜຶ່ງພາສາ. ຕິດຕາມພວກມັນໄດ້ໃນ ວຽກການແປ."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "ປະເພດເນື້ອຫາ"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "ສິ່ງທີ່ຈະແປ"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "ສະເພາະສ່ວນທີ່ຂາດຫາຍໄປ"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "ສະເພາະສິ່ງທີ່ໝົດອາຍຸແລ້ວ"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "ທຸກຢ່າງ (ໜ້າທີ່ຖືກແກ້ໄຂໂດຍບຸກຄົນຈະຄົງຢູ່ຕາມເດີມ)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "ປະມານການ"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d ໜ້າ, %2$s ຕົວອັກສອນ. ເຄື່ອງມືນີ້ບໍ່ໄດ້ເຜີຍແຜ່ລາຄາ."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d ໜ້າ, %2$s ຕົວອັກສອນ, ປະມານ $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "ຊອກຫາຂໍ້ຄວາມ"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d ເພີ່ມເຕີມ: ພິມໃນ \"ຊອກຫາຂໍ້ຄວາມ\" ເພື່ອຈຳກັດລາຍການໃຫ້ແຄບລົງ."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "ປຸ່ມຂະໜາດນ້ອຍຢູ່ມຸມຂອງທຸກໜ້າ, ໃນທຸກຮູບແບບ, ໂດຍບໍ່ຕ້ອງຕັ້ງຄ່າ."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "ບ່ອນໃດ"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7363,6 +8019,201 @@ msgstr "ເຮັດວຽກຮ່ວມກັບ: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "ແຕ່ລະຄຳສັບໃນທີ່ຢູ່ແມ່ນມີຄວາມຍາວຈາກ 2 ເຖິງ 12 ຕົວອັກສອນພິມນ້ອຍ, ຕົວເລກ ຫຼື ເຄື່ອງໝາຍຂີດກາງ."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "ການແປພາສາອັດຕະໂນມັດເມື່ອອັບເດດ, ບົດບາດຜູ້ກວດສອບ, ການສົ່ງອອກ XLIFF ສຳລັບຜູ້ແປ, ການສະຫຼັບຈາກ WPML, Polylang ຫຼື TranslatePress ແລະ ການກວດສອບຄຸນນະພາບດ້ວຍ AI ມາພ້ອມກັບ Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "ເມື່ອຕົ້ນສະບັບມີການປ່ຽນແປງ"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "ເມື່ອໜ້າຖືກແກ້ໄຂ"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "ໝາຍການແປຂອງມັນວ່າໝົດອາຍຸ"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "ແປຜົນການແປຂອງມັນອີກຄັ້ງໃນພື້ນຫຼັງ"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "ບໍ່ຕ້ອງເຮັດຫຍັງເລີຍ"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "ການແປທີ່ຄົນເຮົາໄດ້ແກ້ໄຂແລ້ວ ຈະບໍ່ຖືກຂຽນທັບ; ແຕ່ມັນຈະຖືກໝາຍວ່າໝົດອາຍຸແທນ."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "ແປໜ້າໃໝ່ເປັນທຸກໆພາສາເມື່ອຖືກເຜີຍແຜ່"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "ຮູບແບບ AI ທີສອງຈະອ່ານແຕ່ລະຄຳແປຄຽງຄູ່ກັບຕົ້ນສະບັບ, ໃຫ້ຄະແນນ ແລະ ລະບຸຂໍ້ຜິດພາດ. ມັນໃຊ້ຄີ AI ຂອງທ່ານເອງຈາກການຕັ້ງຄ່າ AI. ເລີ່ມຕົ້ນການກວດສອບຈາກສະຖານະການແປ."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "ຜູ້ໃຫ້ບໍລິການ AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "ຮູບແບບທົ່ວໄປຂອງການຕັ້ງຄ່າ AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "ແນະນຳ"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "ໜ້າເວັບຕ້ອງການໃຫ້ຄົນກວດເບິ່ງຢູ່ກ້ອງຄະແນນນີ້"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "ເຜີຍແຜ່ສະເພາະການແປທີ່ຜູ້ກວດສອບອະນຸມັດແລ້ວເທົ່ານັ້ນ"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "ມອບສິດບົດບາດເປັນຜູ້ແປ (ແກ້ໄຂຄຳແປ, ບໍ່ເຄີຍແກ້ໄຂຕົ້ນສະບັບ, ບໍ່ສາມາດເຜີຍແຜ່ໄດ້) ຫຼື ບົດບາດຜູ້ກວດກາຄຳແປ (ອະນຸມັດນຳ). ຜູ້ກວດກາຍັງຊອກຫາທຸກຢ່າງທີ່ລໍຖ້າຢູ່ໃນລາຍຊື່ບົດຄວາມ ແລະ ໜ້າເວັບ ພາຍໃຕ້ “ລໍຖ້າການອະນຸມັດ”; ການເຜີຍແຜ່ອັນໜຶ່ງຢູ່ທີ່ນັ້ນແມ່ນເປັນການອະນຸມັດ."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "ຈັດການຜູ້ໃຊ້"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "ບໍ່ມີຫຍັງລໍຖ້າການກວດສອບ."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "ໝາຍເຫດສຳລັບຜູ້ແປ (ທາງເລືອກ)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "ອ່ານຄຽງຄູ່ກັນ"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "ອະນຸມັດ"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "ຮ້ອງຂໍການປ່ຽນແປງ"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "ໄດ້ນຳເຂົ້າ ແລະ ປົກປ້ອງການແປຈຳນວນ %d ລາຍການຈາກການແປດ້ວຍເຄື່ອງຈັກ."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "ການສົ່ງອອກ ແລະ ການນຳເຂົ້າ ສຳລັບຜູ້ແປພາສາ"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "ຍັງບໍ່ທັນໄດ້ແປເທື່ອ"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "ແປແລ້ວ"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "ຮູບແບບ"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (ເຄື່ອງມືແປພາສາ)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (ຕາຕະລາງຄຳນວນ)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "ດາວໂຫຼດໄຟລ໌"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "ນຳເຂົ້າໄຟລ໌ທີ່ແປແລ້ວ"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "ຍົກເລີກແລ້ວ: ລົບ %1$d ລິ້ງອອກແລ້ວ, ລົບ %2$d ໜ້າທີ່ນຳເຂົ້າແລ້ວ."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "ການທົດສອບແບບແຫ້ງ, ບໍ່ມີຫຍັງປ່ຽນແປງ:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "ນຳເຂົ້າແລ້ວ:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "ເພີ່ມ %1$d ພາສາ, ເຊື່ອມຕໍ່ %2$d ການແປ, ສ້າງ %3$d ໜ້າ, %4$d ຂໍ້ຄວາມ."
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "ປິດປລັກອິນອື່ນນັ້ນກ່ອນ (ທີ່ຢູ່ ແລະ ຕົວປ່ຽນພາສາຂອງມັນຈະຂັດກັບ Tranzly). ຂໍ້ມູນຂອງມັນຍັງຢູ່ບ່ອນເດີມ ເພື່ອໃຫ້ທ່ານປ່ຽນກັບຄືນໄດ້; ການຍົກເລີກການນໍາເຂົ້າຈະລຶບສະເພາະສິ່ງທີ່ການນໍາເຂົ້າໄດ້ເພີ່ມເທົ່ານັ້ນ."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "ບໍ່ມີຂໍ້ມູນຈາກປລັກອິນນີ້ຢູ່ໃນເວັບໄຊນີ້."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "ພາສາ: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "ຍັງໃຊ້ງານຢູ່: ໃຫ້ປິດມັນກ່ອນ."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "ການທົດສອບແບບແຫ້ງ"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "ນຳເຂົ້າ"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "ຍົກເລີກການນໍາເຂົ້າ"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "ຄວາມຄິດເຫັນ ແລະ ການຣີວິວຜະລິດຕະພັນ"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "ແຕ່ລະພາສາມີຄວາມເປັນມາຂອງຕົນເອງ"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "ສະແດງຄວາມຄິດເຫັນຂອງທຸກພາສາໃນທຸກເວີຊັນ"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "ສະແດງທັງໝົດ, ແປເປັນພາສາຂອງຜູ່ອ່ານ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "ການແປຈະໃຊ້ເຄື່ອງມືແປຂອງທ່ານສຳລັບທຸກຄຳເຫັນທີ່ໄດ້ຮັບການອະນຸມັດ. ສະແປມ ແລະ ຄຳເຫັນທີ່ລໍຖ້າການກວດສອບຈະບໍ່ຖືກສົ່ງໄປເລີຍ."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "ບັນທຶກແລ້ວ. ພາກສ່ວນທີ່ທ່ານໄດ້ປ່ຽນແປງແມ່ນຖືກໝາຍວ່າກວດສອບໂດຍບຸກຄົນ, ແລະການແປນີ້ແມ່ນຖືກປົກປ້ອງຈາກການແປດ້ວຍເຄື່ອງຈັກ."
@@ -7395,12 +8246,6 @@ msgstr "ບັນທຶກການປ່ຽນແປງ"
 msgid "Open in the editor"
 msgstr "ເປີດໃນຕົວແກ້ໄຂ"
 
-#. zinn-i18n: human translation — the machine translator refused this string
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "ແປດ້ວຍເຄື່ອງ"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "ກວດສອບໂດຍມະນຸດ"
@@ -7408,10 +8253,6 @@ msgstr "ກວດສອບໂດຍມະນຸດ"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "ນຳເຂົ້າແລ້ວ"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "ຍັງບໍ່ທັນໄດ້ແປເທື່ອ"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7465,10 +8306,6 @@ msgstr "ຍັງບໍ່ທັນໄດ້ແປ (ສຳເນົາ)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "ບັນທຶກໂພສນີ້ກ່ອນ, ແລ້ວຈຶ່ງແປຢູ່ທີ່ນີ້."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "ຄຽງຂ້າງກັນ"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

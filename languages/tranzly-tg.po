@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Майдонҳои SEO барои ҳар чаҳор плагини бузурги SEO"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Майдонҳои фармоишӣ"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Як паёмро бо як клик тарҷума кунед"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Тарҷумаи оммавии тамоми сомона"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Муҳаррири визуалӣ дар пешгоҳ"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Баррасӣ ва тасдиқ"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Содирот ва воридот барои тарҷумонҳои инсонӣ"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Гузариш аз WPML, Polylang ё TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "Муткаратаи WooCommerce"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Санҷиши сифати AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Чи тарҷума мешавад"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Раванди корӣ"
 
@@ -852,6 +858,7 @@ msgstr "Санҷиш"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Нustobon kardan"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Истифода мешавад барои"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Модел"
 
@@ -1303,7 +1311,7 @@ msgstr "Маҳдудиятҳо ва иҷозатҳо захира шуданд."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Ин забон яке аз забонҳои ин сайт нест."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Ин гуна мундариҷа тарҷума намешавад."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Matni %s дигар дар ин сайт нест. Саҳифаро аз нав бор кунед."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Ягон муҳаррики тарҷума натавонист ин матнро қабул кунад."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Яке аз дигар забонҳои худро интихоб кунед."
 
@@ -1422,7 +1435,8 @@ msgstr "Таarҷuma дар ин саҳифа"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Шмо ҳуқуқи тарҷума кардани ин банду баст надоред."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Ин банбаст аллакай дар он забон як версия дорад."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Он муҳаррики тарҷума дар ин сомона дастнорас аст."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Қимати %s аз ҷумлаи интихобҳои иҷозадодашуда нест."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Навбати заминавӣ дар ин сайт дастнорас аст."
 
@@ -1489,6 +1504,7 @@ msgstr "Ин ашё қисми кори тарҷума нест."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Шмо ҳуқуқ надоред ин тарҷумаро иваз кунед."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Ин банбаст аллакай ба ҳамин забон навишта шудааст."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ин тарҷума аз ҷониби шахс таҳрир шудааст (ё ворид карда шудааст), аз ин рӯ он муҳофизат карда мешавад. Барои бори дигар тарҷума кардани он, онро қулфкушоӣ кунед."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Он банбаст вуҷуд надорад."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ягон муҳаррики тарҷума ҳанӯз танзим нашудааст. Калидро барои он дар Tranzly → Engines илова кунед."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Он муҳаррики тарҷума ҳанӯз танзим нашудааст: аввал калиди онро илова кунед."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Ҳамин матн дар айни замон аз ҷониби супориши дигар тарҷума шуда истодааст; ин элемент аз ҳамин ҷавоб истифода хоҳад кард."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Ягон муҳаррики тарҷума натавонист ин ҷузъро қабул кунад."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Муҳаррик барои ҳар як қисми ин элемент тарҷумаро барнагардонд. Ҳеҷ чиз тағйир наёфт."
 
@@ -1671,6 +1691,7 @@ msgstr "Оё мехоҳед %1$s-ро ба %2$s муттаҳид кунед?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Амалҳо"
 
@@ -4711,6 +4732,7 @@ msgstr "Оғози озмоиш"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Ҳолат"
@@ -5015,6 +5037,7 @@ msgstr "То ба ин ҷо ба шумо %1$s чӣ гуна маъқул аст
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Намуд"
 
@@ -5693,6 +5716,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s пеш"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Блокҳои дорои элементҳои такроршаванда ва намунаҳои ҳамоҳангшуда"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Шарҳҳо ва баррасиҳо"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Ба таври худкор аз %s тарҷума шудааст."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Асъорҳои WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Асъор"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Манбаи қурб %s, асъори мағозаро пешниҳод намекунад."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" асъе нест, ки WooCommerce онро шиносад, ё ин ки ин асъори худи мағоза аст."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Барои %s суръати бештар аз сифрро ворид кунед, ба монанди 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Қadamҳои мудавӯrкуnӣ ва анҷоми нархҳо маблағҳо мебошанд, ба монанди 0.05 ё 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Maydonҳои фармоишӣ (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Барои ҳар як майдон тарҷума, нусхабардорӣ ё холӣ монданро интихоб кунед."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Формаҳо (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Ман нархҳоро худам ворид мекунам"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Bonki Markзии Аврупо, ҳамарӯза навсозӣ мешавад (ройгон, бидуни эҳтиёҷи ҳисоб)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Бонки марказии Аврупо ба %d ҷавоб дод. Меъёрҳои охирин нигоҳ дошта мешаванд."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Лентаи Бонки марказии Аврупо ягон қурбро надошт. Қурбҳои охирин нигоҳ дошта мешаванд."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Он манбаи қурби асъор дастнорас аст."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Плагинҳои SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Матни мавзӯъ ва плагин"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Он мавзӯъ ё плагин дар ин сайт фаъол нест."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Пешниҳоди забон"
@@ -5948,11 +6064,134 @@ msgstr "Андозаи матн"
 msgid "Switcher"
 msgstr "Ивазкунанда"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(бе унвон)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Ин ҷо ягон чиз барои ислоҳ кардан вуҷуд надорад."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Дар ин сайт ягон намуди мундариҷа тарҷума нашудааст."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Он намуди мундариҷа дар ин сайт тарҷума нашудааст."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Дар ин интихоб чизе барои тарҷума вуҷуд надорад."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Барои тарҷума ҳадди аққал як забонро интихоб кунед."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Шмо ҳуқуқи содир кардани тарҷумаҳоро надоред."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Барои ворид кардан файли XLIFF ё CSV-ро интихоб кунед."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Ин файли Tranzly XLIFF ё CSV нест. Аввал якеро содир кунед, онро тарҷума кунед ва ба ин ҷо ворид кунед."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Файлро барои воридот захира кардан ғайриимкон аст. Муайян кунед, ки ҷузвдони боргузорӣ навишташаванда аст ё не."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Ин воридот дигар вуҷуд надорад. Файдро дубора бор кунед."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Он саҳифа дигар дар ин сайт нест."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Файл барои забоне аст, ки ин сайт надорад."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "%1$s %2$d пайваст карда нашуд: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Нашри №%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Ягон маълумот аз ин плагин дар ин сайт ёфт нашуд."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Ин тарҷумаи ягон чиз дар ин сайт нест."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Ягон матн барои санҷиш вуҷуд надорад."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Танзимоти сунъӣ қисми ин маҷмуъ нестанд."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Таъминкунандаи AI ҷвоб надод."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Модели AI ҳар як қисми ин саҳифаро баҳо надод. Дубора кӯшиш кунед ё модели дигареро интихоб кунед."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Тарҷумон"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Шарҳгари тарҷума"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Шарҳдиҳанда тағйиротро ба ин тарҷума дархост кард."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Ташхискунанда дархости ворид кардани тағйирот ба ин тарҷумаро кард: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Ин тарҷума мунтазири тафтишгар аст. Нашр кардани он (ҳамчун тафтишгар) онро тасдиқ мекунад."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Танҳо тарҷумаро аз назар гузаронидан мумкин аст."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Интихоб кунед, ки ҳангоми тағйир ёфтани аслия чӣ рӯй медиҳад: ҳеҷ чиз, ҳамчун кӯҳнашуда нишон додани тарҷумаҳо, ё бори дигар тарҷума кардани онҳо."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Остонаи сифат хол аз 0 то 100 аст."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Пешниҳодҳои пинҳоншударо дар қисмати Назари умумӣ дубора нишон диҳед"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Ҳама"
 
@@ -5976,6 +6215,8 @@ msgid "Select"
 msgstr "Интихоб кардан"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Саҳифаҳо"
 
@@ -6224,28 +6465,28 @@ msgstr "Рӯшноӣ"
 msgid "Dark"
 msgstr "Торик"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Нақши рангҳо"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Кӯмак"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Дастур оид ба ин экран"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Экскурсияро тамошо кунед"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Кӯмак гиред ё хатогиро гузориш диҳед"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Экрани плагинҳо"
 
@@ -6659,6 +6900,7 @@ msgstr "Нақшаҳои Pro ва нархгузориро бинед"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Забонҳо"
@@ -6885,6 +7127,213 @@ msgstr "Танзимот"
 msgid "Translation engine"
 msgstr "Мотори тарҷума"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Он чизе, ки Tranzly дар ин сайт тарҷума мекунад"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "ёфт шуд, бо мундариҷаи шумо тарҷума шудааст"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "дар ин сомона нест"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Бо Tranzly Pro: саҳифаҳои Elementor, Bricks, Divi, Beaver Builder, Oxygen ва WPBakery; ҳама чиз дар WooCommerce, бо нархҳо бо асъори боздидкунанда; майдонҳои SEO-и Yoast SEO, Rank Math, SEOPress ва All in One SEO; майдонҳои ACF, Meta Box ва Pods; формаҳо ва почтаҳои электронии онҳо; матни худи мавзӯъ ва плагинҳои шумо; ва шарҳу баррасиҳо."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Матни мағоза ва паёмҳои электронӣ"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Mӯҳтаво ва сарлавҳаҳои паёмҳои электронӣ, номҳои усулҳои пардохт ва интиқол ва огоҳиномаҳои фармоиш. Паёмҳои электронии ҳар як фармоиш бо ҳамон забоне фиристода мешаванд, ки фармоиш дар он гузошта шудааст."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Формаҳо ва почтаҳои электронии онҳо"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Ҳар як шакл як феҳристи сабтҳоро нигоҳ медорад; ярлиқҳо, тугмаҳо, паёмҳо ва почтаҳои электронии он бо забони боздидкунанда пайдо мешаванд."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Захира шуд."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Ҳанӯз ягон майдони ACF, Meta Box ё Pods муайян нашудааст."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Майдон"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Дар куҷо"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Дар тарҷума"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Ба %s ҳангоми тарҷума чӣ мегузарад"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Тарҷума кардан"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Онро ҳамон тавр ки ҳаст, нусхабардорӣ кунед"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Холӣ гузоред"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Асъори мағоза"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Асъорҳо"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Нархҳоро бо дигар асъорҳо нишон диҳед (асъори худи мағоза %s аст)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Қурби асъорҳо"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Меъёрҳо охирин маротиба %s навсозӣ шуданд."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Меъёрҳо ҳанӯз дастрас нашудаанд."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Нархҳоро ҳозир навсозӣ кунед"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Асъори нав"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Интихоб…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Меъёр (барои 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Ворид кардани нарх онро нигоҳ медорад: навсозии ҳаррӯза онро тағйир намедиҳад."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Гирдкунӣ"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Ҳеҷ кас"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Гардиш ба боло"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Гирд карда ба наздиктарин"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Гирдкунӣ ба поён"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Мудаввар кардан ба (масалан, 1, 0.05 ё 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Қимматҳо бо (масалан 0.99) анҷом меёбанд"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Илова кардани асъор"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Кадом меҳмонон кадом асъорро мебинанд"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Аз рӯи кишвар: рамзи дуҳарфаи кишвар (масалан, CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Боздидкунандагон аз %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Биёед ба меҳмонон иҷоза диҳед, ки интихоб кунанд (коди кӯтоҳ [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Акнун нархҳо аз куки ё аз кишвари меҳмон вобастаанд: боварӣ ҳосил кунед, ки кэши саҳифаи шумо вобаста ба кукии \"tranzly_currency\" тағйир меёбад ё саҳифаҳои мағозаро истисно мекунад."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Захира кардани асъорҳо"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Калимаҳое, ки мавзӯъ ва плагинҳои шумо чоп мекунанд (тугмаҳо, барчаспҳо). Мавзӯъ ё плагинро як маротиба хонед, сипас матни онро дар ин ҷо тарҷума кунед; тарҷумаи шумо аз тарҷумаи худи плагин бартарӣ дорад."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d мазмунҳо"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "хонда нашудааст"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Дубора хондан"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Matni онро хонед"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Тарҷума кардан"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6944,6 +7393,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d паём, %2$s аломат: тақрибан $%3$s дар ҳисоби худ."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Tarҷumai tarҷuma kuned"
 
@@ -6981,6 +7431,11 @@ msgstr "Мундариҷа"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Забон"
 
@@ -7015,11 +7470,13 @@ msgstr "Менюҳо захира шуданд."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d матн тарҷума шуд."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Захира шуд. Ислоҳоти шумо аз тарҷумаи машина муҳофизат карда мешаванд."
 
@@ -7056,48 +7513,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Қолабҳо, сарлавҳаҳо, поквируслар ва намунаҳо (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Matni nafsokirdaро тарҷума кунед"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Дар ин ҷо матне барои тарҷума вуҷуд надорад."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Аз ҷониби шахс ислоҳ шудааст, ҳифзшуда"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Ислоҳотро захира кунед"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Забонҳо ва танзимотҳо"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Муҳаррикҳо"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Вазифаҳои тарҷума"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Суроғаҳо ва SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Ивазкунандагони забон"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "Аудити SEO"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Феҳристҳо ва матни муштарак"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Ҳолати тарҷума"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Интеграцияҳо"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7142,6 +7612,7 @@ msgid "The whole language has been checked."
 msgstr "Тамоми забон санҷида шуд."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Саҳифа"
 
@@ -7150,17 +7621,198 @@ msgid "Problem"
 msgstr "Мушкилот"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Таҳрир кардан"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Вазифаи %1$d оғоз шуд: %2$d саҳифа дар замина тарҷума шуда истодааст. Онро дар Вазифаҳои тарҷума пайгирӣ кунед."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d тарҷума дар замина санҷида шуда истодаанд. Ҳангоми расидан баҳоҳо дар ин ҷо пайдо мешаванд."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Намерасад"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Куҳна шудааст"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Тарҷума шудааст"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Аз ҷониби шахс таҳрир шудааст"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Бо мошини тарҷума шудааст"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Дар интизори баррасӣ"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Ба назардоҳии мутахассис ниёз дорад"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Ҳамагӣ"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Навсозӣ шудааст"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly ҳанӯз муайян карда истодааст, ки кадом тарҷумаҳои кӯҳна фарсуда шудаанд. Ҳангоми иҷрои ин кор, рақамҳои \"фарсуда\" зиёд мешаванд."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Намуди мундариҷа"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Ҳамаи мундариҷа"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Сифати миёна"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d тарҷума шуд (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Намоиш додан"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Ҳамаи чизи норасидаро тарҷума кунед"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Ҳамаи маводҳои муҳлатомадаро навсозӣ кунед"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Сифатро бо зеҳни сунъӣ санҷед"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Саҳифаҳои холгириашон пастро дубора тарҷума кунед"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Дар ин ҷо чизе нест."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Сифат"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "аз ҷониби як шахс"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "интизори баррасӣ"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Паҳлӯ ба паҳлӯ"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Бештар нишон додан"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Tarjimai ommaviy тамоми сайт (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Бо Tranzly Pro намудҳои мундариҷа ва забонҳоро интихоб кунед, тахминро бинед ва тамоми сайтро якбора тарҷума кунед."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d вазифаи заминавӣ оғоз шуд, ба ҳар як забон яке. Онҳоро дар Вазифаҳои тарҷума пайгирӣ кунед."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Намудҳои мундариҷа"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Чӣ тавр тарҷума кардан мумкин аст"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Танҳо он чизе, ки намерасад"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Танҳо он чизе, ки куҳна шудааст"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Ҳама чиз (саҳифаҳое, ки шахс таҳрир кардааст, ҳамон тавре ки ҳастанд мемонанд)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Ҳисоб кардан"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d саҳифа, %2$s аломат. Ин муҳаррик нарх нашр намекунад."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d саҳифа, %2$s аломат, тақрибан $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Ҷустуҷӯи матн"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "Боз %d адад: барои маҳдуд кардани рӯйхат \"Find a text\" -ро нависед."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Тугмаи хурд дар як гӯшаи ҳар як саҳифа, дар ҳар мавзӯъ, бидуни танзим."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Дар куҷо"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7360,6 +8012,199 @@ msgstr "Якҷо кор мекунад бо: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Ҳар як калимаи суроға аз 2 то 12 ҳарфи хурд, рақам ё тире иборат аст."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Тарҷумаи худкор ҳангоми навсозӣ, нақшҳои тақризгар, содироти XLIFF барои тарҷумонҳо, гузариш аз WPML, Polylang ё TranslatePress ва санҷиши сифати AI бо Tranzly Pro пешниҳод мешаванд."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Вақте ки асли он тағйир меёбад"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Ҳангоми таҳрири саҳифа"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Tarjumaҳои онро кӯҳна эълон кунед"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Тарҷумаҳои онро дар замина бори дигар тарҷума кунед"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Ҳеҷ коре накунед"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Tarҷumai аз ҷониби инсон таҳриршуда ҳеҷ гоҳ аз нав навишта намешавад; ба ҷои ин, он ҳамчун кӯҳнашуда қайд карда мешавад."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Саҳифаҳои навро ҳангоми нашр шудан ба ҳар як забон тарҷума кунед"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Модели дуюми сунъӣ ҳар як тарҷумаро дар паҳлӯи нусхаи аслӣ мехонад, онро баҳо медиҳад ва хатоҳоро номбар мекунад. Он калиди сунъии шахсии шуморо аз танзимоти зеҳни сунъӣ истифода мебарад. Санҷишро аз ҳолати тарҷума оғоз кунед."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Провайдери AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Модели умумии танзимоти сунъӣ"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Тавсияшуда"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Барои ин хол луғатӣ нигоҳи инсонӣ дар поёни ин хол лозим аст"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Фақат тарҷумаҳои тасдиқнамудаи мураттибро нашр кунед"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Ба одамон нақши Тарҷумонро диҳед (тарҷумаҳоро таҳрир мекунад, ҳеҷ гоҳ аслҳоро не, наметавонад нашр кунад) ё нақши Тақризгари тарҷумаро (ҳамчунин тасдиқ мекунад). Тақризгарон инчунин ҳама чизеро, ки дар рӯйхати Навиштаҳо ва Саҳифаҳо зери «Интизорӣ» қарор доранд, пайдо мекунанд; нашри яке аз онҳо дар он ҷо онро тасдиқ мекунад."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Идоракунии корбарон"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Ҳеҷ чиз барои баррасӣ интизор нест."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Эзоҳ барои тарҷумон (ихтиёрӣ)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Мутолиаи паҳлӯ ба паҳлӯ"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Тасдиқ кардан"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Дархости тағйирот"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d тарҷумоти воридшуда ва аз тарҷумаи маснуъӣ муҳофизатшуда."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Содирот ва воридот барои тарҷумонҳо"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Ҳанӯз тарҷума нашудааст"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Аллакай тарҷума шудааст"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Формат"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (abrozzҳои тарҷума)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (ҷадвалҳо)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Бор кардани файл"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Ворид кардани файли тарҷумашуда"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Бекор карда шуд: %1$d истинод хориҷ карда шуд, %2$d саҳифаи воридшуда нест карда шуд."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Санҷиши хушк, чизе тағйир наёфт:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Воридшуда:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d забон илова шуд, %2$d тарҷума пайваст карда шуд, %3$d саҳифа сохта шуд, %4$d матн."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Аvvал плагини дигарро хомӯш кунед (суроғаҳо ва тугмаҳои ивазкунандаи он бо Tranzly муноқиша мекунанд). Маълумоти он дар ҷои худ боқӣ мемонад, то шумо тавонед онро баргардонед; Undo дақиқан ҳамон чизеро, ки воридот илова карда буд, тоза мекунад."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Дар ин сомона ягон маълумот аз ин плагин вуҷуд надорад."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Забонҳо: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "ҳанӯз фаъол аст: аввал онро хомӯш кунед."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Санҷиши пешакӣ"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Ворид кардан"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Бекор кардани воридот"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Шарҳҳо ва баррасии маҳсулот"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Ҳар як забон забони худро нигоҳ медорад"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Шарҳҳои ҳар як забонро дар бораи ҳар як версия нишон диҳед"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Ҳамаи онҳоро ба забони хонанда тарҷума карда нишон диҳед"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Тарҷума барои ҳар як шарҳи тасдиқшуда муҳаррики тарҷумаи шуморо истифода мебарад. Спам ва шарҳҳое, ки мунтазири модерация мебошанд, ҳеҷ гоҳ фиристода намешаванд."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Захира шуд. Қисмҳои тағйирдодаи шумо ҳамчун аз ҷониби шахс санҷидашуда қайд карда шудаанд ва ин тарҷума аз тарҷумаи мошинӣ муҳофизат карда мешавад."
@@ -7392,11 +8237,6 @@ msgstr "Захира кардани тағйирот"
 msgid "Open in the editor"
 msgstr "Дар муҳаррир кушодан"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Бо мошини тарҷума шудааст"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Аз ҷониби шахс санҷида шудааст"
@@ -7404,10 +8244,6 @@ msgstr "Аз ҷониби шахс санҷида шудааст"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Ворид карда шуд"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Ҳанӯз тарҷума нашудааст"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7461,10 +8297,6 @@ msgstr "Ҳанӯз тарҷума нашудааст (нусха)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Аввал ин паёмро захира кунед, сипас онро дар ин ҷо тарҷума кунед."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Паҳлӯ ба паҳлӯ"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

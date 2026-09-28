@@ -60,7 +60,13 @@ final class Shared_Strings {
 			),
 			'scope' => array(
 				'type'    => 'string',
-				'enum'    => array( 'menus', 'templates' ),
+				/**
+				 * Filters the shared-text scopes (lane L06, T6: integrations add `woocommerce`,
+				 * `forms` and `theme`; their texts come in on `tranzly_shared_strings`).
+				 *
+				 * @param array<int, string> $scopes `menus`, `templates`.
+				 */
+				'enum'    => array_values( array_unique( (array) apply_filters( 'tranzly_shared_string_scopes', array( 'menus', 'templates' ) ) ) ),
 				'default' => 'menus',
 			),
 		);

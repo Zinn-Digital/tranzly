@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "అన్ని ప్రధాన నాలుగు SEO ప్లగిన్‌ల కోసం SEO ఫీల్డ్‌లు"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "కస్టమ్ ఫీల్డ్‌లు"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "ఒక క్లిక్‌తో ఒక పోస్ట్‌ను అనువదించండి"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "మొత్తం సైట్‌ను బల్క్ అనువదించండి"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "విజువల్ ఫ్రంట్-ఎండ్ ఎడిటర్"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "సమీక్ష మరియు ఆమోదం"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "మానవ అనువాదకుల కోసం ఎగుమతి మరియు దిగుమతి"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "WPML, Polylang లేదా TranslatePress నుండి మారండి"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce బహుళ-కరెన్సీ"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "AI నాణ్యత తనిఖీ"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "అనువదించబడేది"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "వర్క్‌ఫ్లో"
 
@@ -852,6 +858,7 @@ msgstr "పరీక్షించండి"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "తీసివేయి"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "దీని కోసం ఉపయోగించబడుతుంది"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "మోడల్"
 
@@ -1303,7 +1311,7 @@ msgstr "పరిమితులు మరియు అనుమతులు స
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ఆ భాష ఈ సైట్ యొక్క భాషలలో ఒకటి కాదు."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "ఈ రకమైన కంటెంట్ అనువదించబడదు."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "టెక్స్ట్ %s ఈ సైట్‌లో ఇకపై లేదు. పేజీని మళ్లీ లోడ్ చేయండి."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "ఏ అనువాద ఇంజిన్ కూడా ఈ వచనాన్ని తీసుకోలేకపోయింది."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "మీ ఇతర భాషలలో ఒకదాన్ని ఎంచుకోండి."
 
@@ -1422,7 +1435,8 @@ msgstr "ఈ పేజీలో అనువదించండి"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "ఈ ఐటమ్‌ను అనువదించడానికి మీకు అనుమతి లేదు."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "ఈ అంశం ఇప్పటికే ఆ భాషలో ఒక వెర్షన్‌ను కలిగి ఉంది."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "ఆ అనువాద ఇంజిన్ ఈ సైట్‌లో అందుబాటులో లేదు."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s కోసం ఇచ్చిన విలువ అనుమతించబడిన ఎంపికలలో ఒకటి కాదు."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "ఈ సైట్‌లో బ్యాక్‌గ్రౌండ్ క్యూ అందుబాటులో లేదు."
 
@@ -1489,6 +1504,7 @@ msgstr "ఆ అంశం అనువాద ఉద్యోగంలో భా�
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "ఆ అనువాదాన్ని మార్చడానికి మీకు అనుమతి లేదు."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "ఈ అంశం ఇప్పటికే ఆ భాషలో వ్రాయబడింది."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ఈ అనువాదం ఒక వ్యక్తి చేత సవరించబడింది (లేదా దిగుమతి చేయబడింది), కాబట్టి ఇది సురక్షితం చేయబడింది. దీన్ని మళ్లీ అనువదించడానికి అన్‌లాక్ చేయండి."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "ఆ అంశం లేదు."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ఇంకా ఏ అనువాద ఇంజిన్ సెటప్ చేయబడలేదు. Tranzly → Enginesలో ఒక దాని కోసం కీని జోడించండి."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ఆ అనువాద ఇంజిన్ ఇంకా సెటప్ చేయబడలేదు: ముందుగా దాని కీని జోడించండి."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "అదే టెక్స్ట్ ప్రస్తుతం మరొక జాబ్ ద్వారా అనువదించబడుతోంది; ఈ అంశం ఆ సమాధానాన్ని ఉపయోగిస్తుంది."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "ఈ అంశాన్ని ఏ అనువాద ఇంజిన్ తీసుకోలేకపోయింది."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ఈ అంశం యొక్క ప్రతి భాగానికి ఇంజిన్ అనువాదాన్ని అందించలేదు. ఏదీ మార్చబడలేదు."
 
@@ -1671,6 +1691,7 @@ msgstr "%1$sని %2$sలో విలీనం చేయాలనుకుం�
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "చర్యలు"
 
@@ -4711,6 +4732,7 @@ msgstr "ట్రయల్ ప్రారంభమవుతోంది"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "స్థితి"
@@ -5013,6 +5035,7 @@ msgstr "ఇంతవరకు %1$s మీకు ఎలా నచ్చింద�
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "రకం"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s క్రితం"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "పునరావృత అంశాలు మరియు సింక్ చేయబడిన నమూనాలు కలిగిన బ్లాక్‌లు"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "కామెంట్‌లు మరియు సమీక్షలు"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "%s నుండి స్వయంచాలకంగా అనువదించబడింది."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce కరెన్సీలు"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "కరెన్సీ"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "రేట్ మూలం షాప్ కరెన్సీ అయిన %sను కోట్ చేయదు."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" అనేది WooCommerceకి తెలియని కరెన్సీ, లేదా ఇది షాప్ యొక్క స్వంత కరెన్సీ."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "%s కోసం సున్నా కంటే ఎక్కువ రేటును నమోదు చేయండి, ఉదాహరణకు 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "రౌండింగ్ దశలు మరియు ధర ముగింపులు 0.05 లేదా 0.99 వంటి మొత్తాలు."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "అనుకూల ఫీల్డ్‌లు (ACF, మెటా బాక్స్, పాడ్స్)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "ప్రతి ఫీల్డ్ కోసం అనువదించు, కాపీ చేయు లేదా ఖాళీగా ఉంచు ఎంచుకోండి."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "ఫారాలు (కాంటాక్ట్ ఫారం 7, డబ్ల్యూపీఫారాలు, గ్రావిటీ ఫారాలు, ఫ్లూయెంట్ ఫారాలు)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "నేనే రేట్లను నమోదు చేస్తాను"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "యూరోపియన్ సెంట్రల్ బ్యాంక్, రోజువారీగా అప్‌డేట్ చేయబడుతుంది (ఉచితం, ఖాతా అవసరం లేదు)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "యూరోపియన్ సెంట్రల్ బ్యాంక్ %d సమాధానం ఇచ్చింది. తాజా వడ్డీ రేట్లను అలాగే ఉంచారు."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "యూరోపియన్ సెంట్రల్ బ్యాంక్ ఫీడ్‌లో రేట్లు ఏవీ లేవు. చివరి రేట్లు అలాగే ఉంచబడ్డాయి."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "ఆ మారకం రేటు మూలం అందుబాటులో లేదు."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEO ప్లగిన్‌లు (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "థీమ్ మరియు ప్లాగిన్ టెక్స్ట్"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "ఆ థీమ్ లేదా ప్లగిన్ ఈ సైట్‌లో యాక్టివ్‌లో లేదు."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "భాష సూచన"
@@ -5945,11 +6061,134 @@ msgstr "టెక్స్ట్ పరిమాణం"
 msgid "Switcher"
 msgstr "స్విచ్చర్"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(శీర్షిక లేదు)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "ఇక్కడ ఎలాంటి లోపాలు లేవు."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "ఈ సైట్‌లో ఏ కంటెంట్ రకం అనువదించబడలేదు."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "ఈ సైట్‌లో ఆ కంటెంట్ రకం అనువదించబడలేదు."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "ఆ ఎంపికలో అనువదించడానికి ఏమీ లేదు."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "అనువదించడానికి కనీసం ఒక భాషను ఎంచుకోండి."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "అనువాదాలను ఎగుమతి చేయడానికి మీకు అనుమతి లేదు."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "import చేయడానికి XLIFF లేదా CSV ఫైల్‌ను ఎంచుకోండి."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "అది Tranzly XLIFF లేదా CSV ఫైల్ కాదు. ముందుగా ఒకదానిని ఎక్స్‌పోర్ట్ చేయండి, అనువదించండి మరియు ఇక్కడ ఇంపోర్ట్ చేయండి."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "ఫైల్‌ను దిగుమతి చేయడం కోసం నిల్వ చేయలేకపోయింది. అప్‌లోడ్స్ ఫోల్డర్ రైటబుల్ (వ్రాయదగినది)గా ఉందని తనిఖీ చేయండి."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "ఆ దిగుమతి ఇప్పుడు అక్కడ లేదు. ఫైల్‌ను మళ్లీ అప్‌లోడ్ చేయండి."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "ఆ పేజీ ఇక ఈ సైట్‌లో లేదు."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "ఈ ఫైల్ ఈ సైట్ కలిగి లేని భాషకు చెందినది."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "%1$s %2$d లింక్ చేయడం సాధ్యపడలేదు: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "పోస్ట్ #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "ఈ సైట్‌లో ఆ ప్లగిన్ నుండి ఎలాంటి డేటా కనుగొనబడలేదు."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "ఇది ఈ సైట్‌లోని దేనికీ అనువాదం కాదు."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "తనిఖీ చేయడానికి ఎలాంటి పాఠ్యం లేదు."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "AI సెట్టింగ్‌లు ఈ బిల్డ్‌లో భాగం కావు."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "AI ప్రొవైడర్ స్పందించలేదు."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "ఈ పేజీలోని ప్రతి భాగాన్ని AI మోడల్ స్కోర్ చేయలేదు. మళ్లీ ప్రయత్నించండి లేదా వేరే మోడల్‌ను ఎంచుకోండి."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "అనువాదకుడు"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "అనువాద సమీక్షకుడు"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "ఈ అనువాదంలో మార్పులు చేయాలని ఒక సమీక్షకుడు కోరారు."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "ఈ అనువాదంలో మార్పులు చేయమని ఒక రివ్యూయర్ కోరారు: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "ఈ అనువాదం సమీక్షకుడి కోసం వేచి ఉంది. దీన్ని (సమీక్షకుడిగా) ప్రచురించడం ద్వారా ఇది ఆమోదించబడుతుంది."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "అనువాదం మాత్రమే సమీక్షించబడుతుంది."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "అసలుది మారినప్పుడు ఏమి జరగాలో ఎంచుకోండి: ఏమీ లేదు, దాని అనువాదాలను కాలం చెల్లినవిగా గుర్తించండి లేదా వాటిని మళ్లీ అనువదించండి."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "నాణ్యత పరిమితి అనేది 0 నుండి 100 వరకు ఉండే స్కోరు."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "అవలోకనంలో దాచబడిన సూచనలను మళ్లీ చూపించు"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "అన్నీ"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "ఎంచుకోండి"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "పేజీలు"
 
@@ -6224,28 +6465,28 @@ msgstr "లైట్"
 msgid "Dark"
 msgstr "చీకటి"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "వర్ణ పథకం"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "సహాయం"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "ఈ స్క్రీన్‌కు గైడ్"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "టూర్ చూడండి"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "సహాయం పొందండి లేదా బగ్‌ను నివేదించండి"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "ప్లగిన్ స్క్రీన్‌లు"
 
@@ -6661,6 +6902,7 @@ msgstr "ప్రో ప్లాన్‌లు మరియు ధరలను
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "భాషలు"
@@ -6887,6 +7129,213 @@ msgstr "సెట్టింగ్‌లు"
 msgid "Translation engine"
 msgstr "అనువాద ఇంజిన్"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "ఈ సైట్‌లో Tranzly దేనిని అనువదిస్తుంది"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "కనుగొనబడింది, మీ కంటెంట్‌తో అనువదించబడింది"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "ఈ సైట్‌లో లేదు"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Tranzly Pro తో: ఎలిమెంట్లు, Bricks, Divi, Beaver Builder, Oxygen మరియు WPBakery పేజీలు; WooCommerce లోని ప్రతిదీ, సందర్శకుని కరెన్సీలో ధరలతో; Yoast SEO, Rank Math, SEOPress మరియు All in One SEO యొక్క SEO ఫీల్డ్‌లు; ACF, Meta Box మరియు Pods ఫీల్డ్‌లు; ఫారమ్‌లు మరియు వాటి ఇ-మెయిళ్లు; మీ థీమ్ మరియు ప్లగిన్‌ల స్వంత టెక్స్ట్; మరియు వ్యాఖ్యలు మరియు సమీక్షలు."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "షాప్ టెక్స్ట్ మరియు ఇమెయిల్‌లు"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "ఈ-మెయిల్ విషయాలు మరియు హెడ్డింగ్‌లు, చెల్లింపు మరియు షిప్పింగ్ పద్ధతి పేర్లు, మరియు చెక్‌అవుట్ నోటీసులు. ప్రతి ఆర్డర్ యొక్క ఈ-మెయిల్‌లు అది ఏ భాషలో ఉంచబడ్డాయో అదే భాషలో పంపబడతాయి."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "ఫారమ్‌లు మరియు వాటి ఇమెయిల్‌లు"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "ప్రతి ఫారమ్ ఎంట్రీల యొక్క ఒక జాబితాను ఉంచుతుంది; దాని లేబుల్‌లు, బటన్‌లు, సందేశాలు మరియు ఇమెయిల్‌లు సందర్శకుని భాషలో కనిపిస్తాయి."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "సేవ్ చేయబడింది."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "ఇంకా ఎలాంటి ACF, మెటా బాక్స్ లేదా పాడ్స్ ఫీల్డ్‌లు నిర్వచించబడలేదు."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "ఫీల్డ్"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "ఎక్కడ"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "అనువాదంలో"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "అనువాదంలో %sకి ఏమి జరుగుతుంది"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "అనువదించండి"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "అది ఉన్నట్లుగానే కాపీ చేయండి"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "ఖాళీగా ఉంచండి"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "షాప్ కరెన్సీ"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "కరెన్సీలు"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "ఇతర కరెన్సీలలో ధరలను చూపించు (షాప్ స్వంత కరెన్సీ %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "మార్పిడి రేట్లు"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "రేట్లు చివరిగా %s న అప్‌డేట్ చేయబడ్డాయి."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "రేట్లు ఇంకా పొందబడలేదు."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "రేట్లను ఇప్పుడే నవీకరించండి"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "కొత్త కరెన్సీ"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "ఎంచుకోండి…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "రేటు (ప్రతి 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "రేటును టైప్ చేయడం ద్వారా అది అలాగే ఉంటుంది: రోజువారీ అప్‌డేట్ దాన్ని మార్చదు."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "రౌండింగ్"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "ఏదీ లేదు"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "రౌండ్ అప్"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "దగ్గరి గుండ్రంగా మార్చు (లేదా) సమీపంలోకి గుండ్రంగా మార్చు"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "కిందికి రౌండ్ చేయండి"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "దీనికి రౌండ్ చేయండి (ఉదాహరణకు 1, 0.05 లేదా 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "ధరలు దీనితో ముగుస్తాయి (ఉదాహరణకు 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "currency ని జోడించండి"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "ఏ సందర్శకులు ఏ కరెన్సీని చూస్తారు"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "దేశం వారీగా: రెండు అక్షరాల దేశ కోడ్ (ఉదాహరణకు CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "%s నుండి సందర్శకులు"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "సందర్శకులను ఎంచుకోనివ్వండి (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "ధరలు ఇప్పుడు కుకీ లేదా సందర్శకుడి దేశంపై ఆధారపడి ఉంటాయి: మీ పేజ్ క్యాష్ \"tranzly_currency\" కుకీ ద్వారా మారుతుందని లేదా షాప్ పేజీలను మినహాయించిందని నిర్ధారించుకోండి."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "కరెన్సీలను సేవ్ చేయి"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "మీ థీమ్ మరియు ప్లగిన్‌లు ముద్రించే పదాలు (బటన్లు, లేబుల్‌లు). థీమ్ లేదా ప్లగిన్‌ను ఒకసారి చదవండి, ఆపై దాని టెక్స్ట్‌ను ఇక్కడ అనువదించండి; మీ అనువాదం ప్లగిన్ సొంత దాని కంటే ప్రాధాన్యత సంతరించుకుంటుంది."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d పాఠ్యాలు"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "ఇంకా చదవలేదు"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "మళ్లీ చదవండి"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "దాని వచనాన్ని చదవండి"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "అనువదించు"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6946,6 +7395,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d పోస్ట్‌లు, %2$s అక్షరాలు: మీ సొంత ఖాతాలో దాదాపు $%3$s."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "అనువాదాన్ని ప్రారంభించండి"
 
@@ -6983,6 +7433,11 @@ msgstr "కంటెంట్"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "భాష"
 
@@ -7017,11 +7472,13 @@ msgstr "మెనూలు సేవ్ చేయబడ్డాయి."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d పాఠాలు అనువదించబడ్డాయి."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "సేవ్ చేయబడింది. మీ సవరణలు మెషిన్ అనువాదం నుండి రక్షించబడ్డాయి."
 
@@ -7058,48 +7515,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "టెంప్లేట్లు, హెడర్‌లు, ఫూటర్‌లు మరియు నమూనాలు (ప్రో)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "అనువాదం లేని పాఠాన్ని అనువదించండి"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "ఇక్కడ అనువదించడానికి ఎలాంటి టెక్స్ట్ లేదు."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "వ్యక్తి ద్వారా సరిదిద్దబడింది, రక్షించబడింది"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "సవరణలను సేవ్ చేయి"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "భాషలు మరియు సెట్టింగ్‌లు"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "ఇంజిన్‌లు"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "అనువాద ఉద్యోగాలు"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "చిరునామాలు మరియు SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "భాషా మారకాలు"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO ఆడిట్"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "మెనూలు మరియు షేర్ చేసిన టెక్స్ట్"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "అనువాద స్థితి"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "ఇంటిగ్రేషన్స్"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7144,6 +7614,7 @@ msgid "The whole language has been checked."
 msgstr "మొత్తం భాష తనిఖీ చేయబడింది."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "పేజీ"
 
@@ -7152,17 +7623,198 @@ msgid "Problem"
 msgstr "సమస్య"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "సవరించు"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "ఉద్యోగం %1$d ప్రారంభించబడింది: %2$d పేజీలు నేపథ్యంలో అనువదించబడుతున్నాయి. అనువాద ఉద్యోగాలలో దీన్ని అనుసరించండి."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d అనువాదాలు నేపథ్యంలో తనిఖీ చేయబడుతున్నాయి. స్కోర్‌లు వచ్చినప్పుడు ఇక్కడ కనిపిస్తాయి."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "తప్పిపోయినది"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "కాలంచెల్లినది"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "అనువదించబడింది"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "ఒక వ్యక్తి ద్వారా సవరించబడింది"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "మెషిన్ ద్వారా అనువదించబడింది"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "సమీక్ష కోసం వేచి ఉంది"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "మానవ పరిశీలన అవసరం"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "అన్నీ"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "తాజాకరించబడింది"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "పాత అనువాదాలలో ఏవి కాలం చెల్లినవో Tranzly ఇంకా కనుగొంటోంది. అది అలా చేస్తున్నప్పుడు \"కాలం చెల్లిన\" సంఖ్యలు పెరుగుతాయి."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "కంటెంట్ రకం"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "అన్ని విషయాలు"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "సగటు నాణ్యత"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d అనువదించబడింది (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "చూపించు"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "అన్నింటినీ అనువదించండి"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "కాలం చెల్లిన ప్రతిదాన్ని నవీకరించండి"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "AIతో నాణ్యతను తనిఖీ చేయండి"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "తక్కువ స్కోర్ ఉన్న పేజీలను మళ్లీ అనువదించండి"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "ఇక్కడ ఏమీ లేదు."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "నాణ్యత"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "వ్యక్తి ద్వారా"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "సమీక్ష కోసం వేచి ఉంది"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "పక్కపక్కనే"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "మరిన్ని చూపించు"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "మొత్తం సైట్‌ను బల్క్ అనువదించండి (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Tranzly Proతో, కంటెంట్ రకాలను మరియు భాషలను ఎంచుకోండి, అంచనాను చూడండి మరియు మొత్తం సైట్‌ను ఒకేసారి అనువదించండి."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d నేపథ్య ఉద్యమాలు ప్రారంభించబడ్డాయి, ఒక్కో భాషకు ఒకటి. అనువాద ఉద్యమాలు (Translation jobs) లో వాటిని అనుసరించండి."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "కంటెంట్ రకాలు"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "ఏమి అనువదించాలి"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "ఏదైతే లేదో అది మాత్రమే"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "గడువు తీరినవి మాత్రమే"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "అన్నీ (వ్యక్తి సవరించిన పేజీలు అలాగే ఉంటాయి)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "అంచనా వేయి"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d పేజీలు, %2$s అక్షరాలు. ఈ ఇంజిన్ ధరను ప్రచురించదు."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d పేజీలు, %2$s అక్షరాలు, సుమారు $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "పాఠాన్ని కనుగొనండి"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "మొత్తం %d: జాబితాను తగ్గించడానికి \"టెక్స్ట్ కనుగొను\" అని టైప్ చేయండి."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "ఏదైనా థీమ్‌లో, ఎలాంటి సెటప్ లేకుండా, ప్రతి పేజీ మూలన ఒక చిన్న బటన్."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "ఎక్కడ"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7362,6 +8014,199 @@ msgstr "%s తో కలిసి పనిచేస్తోంది."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "ప్రతి చిరునామా పదం 2 నుండి 12 చిన్న అక్షరాలు, అంకెలు లేదా హైఫన్‌లను కలిగి ఉంటుంది."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "అప్‌డేట్‌పై ఆటో-ట్రాన్స్‌లేట్, రివ్యూయర్ పాత్రలు, అనువాదకుల కోసం XLIFF ఎగుమతి, WPML, Polylang లేదా TranslatePress నుండి మారడం మరియు AI క్వాలిటీ చెక్ అనేవి Tranzly Proతో వస్తాయి."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "అసలుది మారినప్పుడు"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "పేజీని సవరించినప్పుడు"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "దీని అనువాదాలను కాలం చెల్లినవిగా గుర్తించండి"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "దీని అనువాదాలను బ్యాక్‌గ్రౌండ్‌లో మళ్లీ అనువదించండి"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "ఏమీ చేయవద్దు"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "వ్యక్తి సవరించిన అనువాదం ఎప్పటికీ భర్తీ చేయబడదు; దానికి బదులుగా అది గడువు ముగిసినదిగా గుర్తించబడుతుంది."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "కొత్త పేజీలు ప్రచురించబడినప్పుడు వాటిని ప్రతి భాషలోకి అనువదించండి"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "రెండవ AI మోడల్ ప్రతి అనువాదాన్ని దాని అసలు దాని పక్కన చదువుతుంది, దానికి స్కోర్ ఇస్తుంది మరియు తప్పులను సూచిస్తుంది. ఇది AI సెట్టింగ్‌ల నుండి మీ స్వంత AI కీని ఉపయోగిస్తుంది. అనువాద స్థితి నుండి తనిఖీని ప్రారంభించండి."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "AI ప్రొవైడర్"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "AI సెట్టింగ్‌ల జనరల్ మోడల్"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "సిఫార్సు చేయబడింది"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "ఈ స్కోర్ కంటే తక్కువగా ఉన్నప్పుడు ఒక పేజీకి మానవ పరిశీలన అవసరం"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "సమీక్షకుడు ఆమోదించిన అనువాదాలను మాత్రమే ప్రచురించండి"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "ప్రజలకు అనువాదకుడి పాత్రను (అనువాదాలను సవరిస్తుంది, అసలు వాటిని కాదు, ప్రచురించలేదు) లేదా అనువాద సమీక్షకుడి పాత్రను (అనుప్రమోదం కూడా ఇస్తుంది) ఇవ్వండి. సమీక్షకులు \"పెండింగ్\" కింద పోస్ట్‌లు మరియు పేజీల జాబితాలలో వేచి ఉన్న ప్రతిదాన్ని కూడా కనుగొంటారు; అక్కడ ఒకదాన్ని ప్రచురించడం ద్వారా దాన్ని ఆమోదించవచ్చు."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "ఉపయోగదారులను నిర్వహించండి"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "సమీక్ష కోసం ఏదీ వేచి లేదు."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "అనువాదకుని కోసం గమనిక (ఐచ్ఛికం)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "పక్కపక్కనే చదవండి"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "ఆమోదించు"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "మార్పుల కోసం అభ్యర్థించండి"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d అనువాదాలు దిగుమతి చేయబడ్డాయి మరియు మెషిన్ అనువాదం నుండి రక్షించబడ్డాయి."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "అనువాదకుల కోసం ఎగుమతి మరియు దిగుమతి"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "ఇంకా అనువదించబడలేదు"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "ఇదివరకే అనువదించబడింది"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "ఫార్మాట్"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (అనువాద పరికరాలు)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (స్ప్రెడ్‌షీట్‌లు)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "ఫైల్‌ను డౌన్‌లోడ్ చేయండి"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "అనువదించిన ఫైల్‌ను దిగుమతి చేయండి"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "రద్దు చేయబడింది: %1$d లింక్‌లు తొలగించబడ్డాయి, దిగుమతి చేసిన %2$d పేజీలు తొలగించబడ్డాయి."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "డ్రై రన్, ఏదీ మార్చబడలేదు:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "దిగుమతి చేయబడింది:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d భాషలు జోడించబడ్డాయి, %2$d అనువాదాలు లింక్ చేయబడ్డాయి, %3$d పేజీలు నిర్మించబడ్డాయి, %4$d టెక్స్ట్‌లు."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "ముందుగా ఇతర ప్లగిన్‌ను ఆపివేయండి (దాని అడ్రస్‌లు మరియు స్విచ్చర్‌లు Tranzlyతో ఘర్షణ పడతాయి). దాని డేటా ఉన్న చోటే ఉంటుంది, కాబట్టి మీరు మళ్ళీ ఆన్ చేసుకోవచ్చు; దిగుమతి చేసిన దాన్ని మాత్రమే అన్‌డు (Undo) తొలగిస్తుంది."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "ఈ సైట్‌లో ఈ ప్లగిన్ నుండి డేటా ఏదీ లేదు."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "భాషలు: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "ఇంకా యాక్టివ్‌లో ఉంది: ముందుగా దీన్ని ఆఫ్ చేయండి."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "డ్రై రన్"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "దిగుమతి చేసుకోండి"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "దిగుమతిని రద్దు చేయి"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "కామెంట్‌లు మరియు ఉత్పత్తి సమీక్షలు"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "ప్రతి భాష దాని స్వంతంగా ఉంచుకుంటుంది"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "ప్రతి వెర్షన్‌పై ప్రతి భాష యొక్క వ్యాఖ్యలను చూపించు"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "చదువరి భాషలోకి అనువదించబడిన వాటిని అన్నింటినీ చూపించు"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "అనుమతించబడిన ప్రతి వ్యాఖ్యకు మీ అనువాద ఇంజిన్ ఉపయోగించబడుతుంది. స్పామ్ మరియు పరిశీలన కోసం వేచి ఉన్న వ్యాఖ్యలు ఎప్పటికీ పంపబడవు."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "సేవ్ చేయబడింది. మీరు మార్చిన భాగాలు వ్యక్తి ద్వారా పరిశీలించబడినట్లు గుర్తించబడ్డాయి మరియు ఈ అనువాదం మెషిన్ అనువాదం నుండి రక్షించబడింది."
@@ -7394,11 +8239,6 @@ msgstr "మార్పులను సేవ్ చేయి"
 msgid "Open in the editor"
 msgstr "ఎడిటర్‌లో తెరువుము"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "మెషిన్ ద్వారా అనువదించబడింది"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "వ్యక్తి ద్వారా తనిఖీ చేయబడింది"
@@ -7406,10 +8246,6 @@ msgstr "వ్యక్తి ద్వారా తనిఖీ చేయబడ
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "దిగుమతి చేయబడింది"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "ఇంకా అనువదించబడలేదు"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7463,10 +8299,6 @@ msgstr "ఇంకా అనువదించబడలేదు (ఒక కా�
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "ముందుగా ఈ పోస్ట్ ను సేవ్ చేయండి, ఆ తర్వాత ఇక్కడ అనువదించండి."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "పక్కపక్కనే"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

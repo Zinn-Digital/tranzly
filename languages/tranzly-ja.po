@@ -181,6 +181,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "4大SEOプラグインすべてのSEOフィールド"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "カスタムフィールド"
 
@@ -205,6 +206,7 @@ msgid "Translate one post in one click"
 msgstr "ワンクリックで1件の投稿を翻訳"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "サイト全体を一括翻訳"
 
@@ -221,6 +223,7 @@ msgid "Visual front-end editor"
 msgstr "ビジュアルフロントエンドエディター"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "確認と承認"
 
@@ -229,6 +232,7 @@ msgid "Export and import for human translators"
 msgstr "人間翻訳者のためのエクスポートとインポート"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "WPML、Polylang、または TranslatePress から乗り換える"
 
@@ -410,6 +414,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce マルチ通貨"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "AI品質チェック"
 
@@ -494,6 +499,7 @@ msgid "What gets translated"
 msgstr "翻訳される対象"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "ワークフロー"
 
@@ -853,6 +859,7 @@ msgstr "テスト"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "削除"
 
@@ -1231,6 +1238,7 @@ msgid "Used for"
 msgstr "用途"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "モデル"
 
@@ -1304,7 +1312,7 @@ msgstr "制限と権限が保存されました。"
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "その言語はこのサイトの言語ではありません。"
@@ -1380,16 +1388,21 @@ msgid "This kind of content is not translated."
 msgstr "この種の内容は翻訳されません。"
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "テキスト %s はこのサイトに存在しなくなりました。ページを再読み込みしてください。"
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "どの翻訳エンジンもこのテキストを処理できませんでした。"
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "他の言語の1つを選択してください。"
 
@@ -1423,7 +1436,8 @@ msgstr "このページを翻訳する"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "このアイテムの翻訳は許可されていません。"
 
@@ -1433,7 +1447,7 @@ msgid "This item already has a version in that language."
 msgstr "このアイテムには既にその言語のバージョンが存在します。"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "その翻訳エンジンはこのサイトではご利用いただけません。"
 
@@ -1472,6 +1486,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s の値は許可されている選択肢のいずれでもありません。"
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "このサイトではバックグラウンドキューを利用できません。"
 
@@ -1490,6 +1505,7 @@ msgstr "その項目は翻訳ジョブに含まれていません。"
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "その翻訳を変更する権限はありません。"
 
@@ -1534,27 +1550,31 @@ msgid "This item is already written in that language."
 msgstr "この項目はその言語で既に記述されています。"
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "この翻訳は人手による編集（またはインポート）が行われているため保護されています。再翻訳するにはロックを解除してください。"
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "該当するアイテムは存在しません。"
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "翻訳エンジンがまだ設定されていません。Tranzly → エンジンでキーを追加してください。"
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "その翻訳エンジンはまだ設定されていません。最初にキーを追加してください。"
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "現在別のジョブで同じテキストが翻訳されています。このアイテムにはその翻訳が適用されます。"
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "このアイテムを処理できる翻訳エンジンはありませんでした。"
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "エンジンはこのアイテムの一部の翻訳を返しませんでした。何も変更されませんでした。"
 
@@ -1672,6 +1692,7 @@ msgstr "%1$s を %2$s に統合しますか？"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "操作"
 
@@ -4712,6 +4733,7 @@ msgstr "トライアルを開始中"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "状態"
@@ -5014,6 +5036,7 @@ msgstr "%1$sの使い心地はいかがですか？%3$d日間の無料トライ�
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "タイプ"
 
@@ -5692,6 +5715,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s前"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "繰り返し項目を持つブロックと同期されたパターン"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "コメントとレビュー"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "%s から自動翻訳されました。"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce 通貨"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "通貨"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "レートソースがショップの通貨である %s を引用していません。"
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "「%s」はWooCommerceが認識していない通貨であるか、ショップ自国の通貨です。"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "%sには、0.92のように0より大きいレートを入力してください。"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "端数処理の単位や価格の末尾は、0.05や0.99のような金額です。"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "カスタムフィールド (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "各フィールドについて、翻訳、コピー、または空欄のいずれかを選択してください。"
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "フォーム (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "自分で料金を入力します"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "欧州中央銀行、毎日更新（無料、アカウント不要）"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "欧州中央銀行は %d と回答しました。最新の金利は据え置かれます。"
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "欧州中央銀行のフィードには金利が含まれていませんでした。最後の金利が保持されます。"
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "その為替レートの取得元は利用できません。"
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEOプラグイン（Yoast SEO、Rank Math、SEOPress、All in One SEO）"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "テーマおよびプラグインのテキスト"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "そのテーマまたはプラグインはこのサイトで有効化されていません。"
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "言語の提案"
@@ -5946,11 +6062,134 @@ msgstr "テキストサイズ"
 msgid "Switcher"
 msgstr "スイッチャー"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "（タイトルなし）"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "修正する箇所はありません。"
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "このサイトでは、どのコンテンツタイプも翻訳されていません。"
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "このサイトでは、そのコンテンツタイプは翻訳されていません。"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "その選択範囲には翻訳するものがありません。"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "翻訳する言語を少なくとも1つ選択してください。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "翻訳のエクスポートは許可されていません。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "インポートする XLIFF または CSV ファイルを選択してください。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "それはTranzlyのXLIFFまたはCSVファイルではありません。まずエクスポートし、翻訳してから、ここにインポートしてください。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "インポート用のファイルを保存できませんでした。アップロードフォルダに書き込み権限があることを確認してください。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "そのインポートはもう存在しません。ファイルを再度アップロードしてください。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "そのページはこのサイトにはもうありません。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "このファイルはこのサイトに対応していない言語のものです。"
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "%1$s %2$d をリンクできませんでした: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "投稿 #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "このサイトにはそのプラグインのデータが見つかりませんでした。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "これはこのサイト上のいかなる内容の翻訳でもありません。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "チェックするテキストはありません。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "AI設定はこのビルドに含まれていません。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "AIプロバイダーから応答がありませんでした。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "AIモデルはこのページのすべての部分を評価できませんでした。もう一度試すか、別のモデルを選択してください。"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "翻訳者"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "翻訳レビュアー"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "査読者がこの翻訳の修正を求めています。"
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "レビュアーがこの翻訳の修正を求めています: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "この翻訳はレビュー待ちです。（レビュアーとして）公開すると承認されます。"
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "翻訳のみがレビューの対象となります。"
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "オリジナルが変更された場合の処理を選択します：何もしない、翻訳を期限切れとしてマークする、または再度翻訳する。"
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "品質閾値は0から100までのスコアです。"
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "概要で非表示にしたサジェストを再度表示する"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "すべて"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "選択"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "ページ"
 
@@ -6222,28 +6463,28 @@ msgstr "ライト"
 msgid "Dark"
 msgstr "ダーク"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "配色"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "ヘルプ"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "この画面のガイド"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "ツアーを見る"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "ヘルプを取得するかバグを報告する"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "プラグイン画面"
 
@@ -6656,6 +6897,7 @@ msgstr "Proプランと料金を見る"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "言語"
@@ -6882,6 +7124,213 @@ msgstr "設定"
 msgid "Translation engine"
 msgstr "翻訳エンジン"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Tranzlyがこのサイトで翻訳するもの"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "見つかりました。お客様のコンテンツで翻訳されました"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "このサイト上にはありません"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Tranzly Pro なら、Elementor、Bricks、Divi、Beaver Builder、Oxygen、WPBakery の各ページ、WooCommerce のすべての商品（訪問者の通貨での価格表示付き）、Yoast SEO、Rank Math、SEOPress、All in One SEO の SEO フィールド、ACF、Meta Box、Pods のフィールド、フォームとそのメール、テーマやプラグイン固有のテキスト、コメントやレビューに対応します。"
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "ショップのテキストとメール"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "メールの件名や見出し、決済および配送方法の名前、チェックアウト時の通知。各注文の確認メールなどは、その注文が行われた言語で送信されます。"
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "フォームとメール"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "すべてのフォームに1つのエントリーリストが保持され、そのラベル、ボタン、メッセージ、メールは訪問者の言語で表示されます。"
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "保存しました。"
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "ACF、Meta Box、Pods のいずれのフィールドもまだ定義されていません。"
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "フィールド"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "どこで"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "翻訳中"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "翻訳における %s の処理について"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "翻訳する"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "そのままコピーしてください"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "空白のままにする"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "ショップの通貨"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "通貨"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "他の通貨で価格を表示する（ショップの通貨は %s です）"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "為替レート"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "料金の最終更新日：%s"
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "料金はまだ取得されていません。"
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "料金を今すぐ更新する"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "新しい通貨"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "選択…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "料金（1 %s あたり）"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "レートを手入力すると、日次更新でその値が変更されることはなくなります。"
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "端数処理"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "なし"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "切り上げ"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "最も近い値に丸める"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "切り捨て"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "丸める単位（例: 1, 0.05, 10）"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "価格の末尾（例: 0.99）"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "通貨を追加"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "どの訪問者にどの通貨を表示するか"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "国別：2文字の国コード（例：CH）"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "%sからの訪問者"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "訪問者に選択してもらう (ショートコード [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "価格がクッキーまたは訪問者の国に基づいて決まるようになりました。ページキャッシュが \"tranzly_currency\" クッキーによって変動するか、ショップページを除外するように設定してください。"
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "通貨を保存"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "テーマやプラグインが自ら出力するテキスト（ボタンやラベルなど）。テーマやプラグインを一度読み込ませてから、ここでテキストを翻訳してください。あなたの翻訳がプラグイン独自のテキストよりも優先されます。"
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d件のテキスト"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "未読"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "もう一度読む"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "テキストを読み上げる"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "翻訳する"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6941,6 +7390,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d件の投稿、%2$s文字：お客様ご自身のアカウントで約$%3$sです。"
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "翻訳を開始"
 
@@ -6978,6 +7428,11 @@ msgstr "コンテンツ"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "言語"
 
@@ -7012,11 +7467,13 @@ msgstr "メニューを保存しました。"
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d件のテキストを翻訳しました。"
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "保存しました。修正内容は機械翻訳から保護されます。"
 
@@ -7053,48 +7510,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "テンプレート、ヘッダー、フッター、パターン (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "未翻訳のテキストを翻訳する"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "ここには翻訳するテキストはありません。"
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "人間による修正済み、保護済み"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "修正を保存"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "言語と設定"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "エンジン"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "翻訳ジョブ"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "アドレスとSEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "言語スイッチャー"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO監査"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "メニューと共有テキスト"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "翻訳ステータス"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "統合"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7139,6 +7609,7 @@ msgid "The whole language has been checked."
 msgstr "言語全体のチェックが完了しました。"
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "ページ"
 
@@ -7147,17 +7618,198 @@ msgid "Problem"
 msgstr "問題"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "編集"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "ジョブ %1$d が開始されました：%2$d ページの翻訳がバックグラウンドで実行されています。「翻訳ジョブ」で進捗を確認できます。"
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "バックグラウンドで %d 件の翻訳を確認しています。スコアは到着次第ここに表示されます。"
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "未設定"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "期限切れ"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "翻訳済み"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "担当者による編集"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "自動翻訳済み"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "レビュー待ち"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "要目視確認"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "すべて"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "最新の状態です"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly は、どの古い翻訳が期限切れであるかをまだ計算しています。その処理が行われている間、「期限切れ」の数値は増加します。"
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "コンテンツタイプ"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "すべてのコンテンツ"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "平均品質"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d件翻訳済み（%2$d%%）"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "表示"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "未翻訳の部分をすべて翻訳する"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "すべての期限切れの項目をアップデート"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "AIで品質を確認する"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "スコアの低いページを再翻訳する"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "何もありません。"
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "品質"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "ユーザーによる"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "審査待ち"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "並べて比較"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "もっと見る"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "サイト全体を一括翻訳（Pro）"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Tranzly Proでは、コンテンツの種類と言語を選択し、見積もりを確認して、サイト全体を一度に翻訳できます。"
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d件のバックグラウンドジョブが言語ごとに1件ずつ開始されました。「翻訳ジョブ」で進捗を確認できます。"
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "コンテンツタイプ"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "翻訳する内容"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "不足しているもののみ"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "古いもののみ"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "すべて（人間によって編集されたページはそのまま残ります）"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "見積もり"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$dページ、%2$s文字。このエンジンは価格を公開していません。"
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$dページ、%2$s文字、約$%3$s。"
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "テキストを検索"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "あと %d 件：「テキストを検索」と入力してリストを絞り込んでください。"
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "設定不要、どのテーマでも、すべてのページの隅に配置される小さなボタン。"
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "どこで"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7357,6 +8009,199 @@ msgstr "協業パートナー: %s"
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "各アドレスワードは、2〜12文字の半角小文字の英字、数字、またはハイフンです。"
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "更新時の自動翻訳、レビュアーの役割、翻訳者向けのXLIFFエクスポート、WPML、Polylang、または TranslatePress からの切り替え、そしてAI品質チェックは、Tranzly Proに含まれています。"
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "元のファイルが変更されたとき"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "ページが編集されたとき"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "その翻訳を期限切れとしてマークする"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "バックグラウンドでその翻訳を再度翻訳する"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "何もしない"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "人が編集した翻訳が上書きされることはなく、代わりに期限切れとしてマークされます。"
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "新しいページが公開されたら、すべての言語に翻訳します"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "2つ目のAIモデルが、各翻訳を原文の横で読み込んでスコアを付け、ミスを指摘します。AI設定で登録したご自身のAIキーを使用します。「翻訳ステータス」からチェックを開始してください。"
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "AIプロバイダー"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "AI設定の一般モデル"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "おすすめ"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "このスコアを下回るページには、人間の目による確認が必要です"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "レビュアーが承認した翻訳のみを公開する"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "ユーザーに翻訳者ロール（原文を変更せず翻訳の編集のみを行い、公開はできません）または翻訳レビュアーロール（承認も行います）を付与します。レビュアーは、「保留中」の下にある「投稿」および「固定ページ」のリストで、審査待ちのすべてのアイテムを確認することもできます。そこで公開を行うと承認されたことになります。"
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "ユーザーの管理"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "レビュー待ちの項目はありません。"
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "翻訳者向けの注意事項（オプション）"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "並べて比較する"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "承認する"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "変更を依頼する"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d件の翻訳がインポートされ、機械翻訳から保護されました。"
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "翻訳者向けの書き出しと取り込み"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "未翻訳"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "翻訳済み"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "フォーマット"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2（翻訳ツール）"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV（スプレッドシート）"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "ファイルをダウンロード"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "翻訳済みファイルをインポート"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "取り消し済み：%1$d個のリンクを削除し、%2$d件のインポート済みページを削除しました。"
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "ドライラン、変更なし："
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "インポート済み:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d件の言語が追加され、%2$d件の翻訳がリンクされ、%3$d件のページが構築され、%4$d件のテキストがあります。"
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "まず他のプラグインをオフにしてください（そのアドレスと切り替え機能が Tranzly と競合するためです）。データはそのまま残るため、後で戻すことも可能です。Undo は、インポートが追加した内容を正確に削除します。"
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "このサイトには、このプラグインからのデータがありません。"
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "言語: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "まだ有効です：最初にオフにしてください。"
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "ドライラン"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "インポート"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "インポートを元に戻す"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "コメントと製品レビュー"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "各言語には独自の言語設定が保持されます"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "すべてのバージョンのすべての言語のコメントを表示する"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "すべて表示する（読者の言語に翻訳されます）"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "翻訳では、承認済みのコメントごとに翻訳エンジンが使用されます。スパムやモデレーション待ちのコメントは送信されません。"
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "保存しました。変更された部分は人手による確認済みとしてマークされ、この翻訳は機械翻訳から保護されます。"
@@ -7389,11 +8234,6 @@ msgstr "変更を保存"
 msgid "Open in the editor"
 msgstr "エディターで開く"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "自動翻訳済み"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "人による確認済み"
@@ -7401,10 +8241,6 @@ msgstr "人による確認済み"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "インポート済み"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "未翻訳"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7458,10 +8294,6 @@ msgstr "未翻訳（コピー）"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "まずこの投稿を保存してから、ここで翻訳してください。"
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "並べて比較"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

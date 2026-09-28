@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Mga field ng SEO para sa lahat ng apat na malalaking SEO plugin"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Mga custom na field"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Isalin ang isang post sa isang click"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Isalin nang maramihan ang buong site"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Visual na front-end editor"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Suriin at aprubahan"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Pag-export at pag-import para sa mga tagasalin ng tao"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Lumipat mula sa WPML, Polylang o TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce multi-currency"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Pagsusuri sa kalidad ng AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Ang isinasalin"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Daloy ng Trabaho"
 
@@ -852,6 +858,7 @@ msgstr "Subukin"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Alisin"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Ginagamit para sa"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Modelo"
 
@@ -1303,7 +1311,7 @@ msgstr "Nai-save na ang mga limitasyon at pahintulot."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Ang wikang iyon ay hindi isa sa mga wika ng site na ito."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Hindi isinasalin ang ganitong uri ng nilalaman."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Ang tekstong %s ay wala na sa site na ito. I-reload ang page."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Walang makinarya sa pagsasalin ang makakakuha sa tekstong ito."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Pumili ng isa sa iyong iba pang mga wika."
 
@@ -1422,7 +1435,8 @@ msgstr "Isalin sa pahinang ito"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Hindi ka pinapayagang isalin ang item na ito."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Mayroon nang bersyon ang item na ito sa wikang iyon."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Hindi available sa site na ito ang translation engine na iyon."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Ang halaga para sa %s ay hindi isa sa mga pinapayagang pagpipilian."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Hindi available sa site na ito ang background queue."
 
@@ -1489,6 +1504,7 @@ msgstr "Ang item na iyon ay hindi bahagi ng trabaho sa pagsasalin."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Hindi ka pinapayagang baguhin ang pagsasalin na iyon."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Nakatala na ang aytem na ito sa wikang iyon."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ang pagsasalin na ito ay inedit ng isang tao (o na-import), kaya ito ay protektado. I-unlock ito upang isalin itong muli."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Wala ang item na iyon."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Wala pang naka-setup na translation engine. Magdagdag ng key para dito sa Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Hindi pa naka-set up ang translation engine na iyon: idagdag muna ang key nito."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Isinasalin na rin ang parehong teksto ng isa pang trabaho ngayon; gagamitin ng aytem na ito ang sagot na iyon."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Walang makina ng pagsasalin ang nakakuha sa aytem na ito."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Hindi nagbalik ang makina ng pagsasalin para sa bawat bahagi ng aytem na ito. Walang binago."
 
@@ -1671,6 +1691,7 @@ msgstr "Gusto mo bang pagsamahin ang %1$s at %2$s?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Mga Aksyon"
 
@@ -4711,6 +4732,7 @@ msgstr "Sinisimulan ang pagsubok"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Estado"
@@ -5013,6 +5035,7 @@ msgstr "Paano mo nagugustuhan ang %1$s sa ngayon? Subukan ang lahat ng aming mga
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Uri"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s na ang nakalipas"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Mga bloke na may mga paulit-ulit na aytem, at mga naka-sync na pattern"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Mga komento at rebyu"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Isinalin nang awtomatiko mula sa %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Mga pera ng WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Pera"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Hindi sinipi ng pinagmulan ng singil ang %s, ang pera ng tindahan."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "Ang \"%s\" ay hindi isang pera na kilala ng WooCommerce, o ito ang sariling pera ng tindahan."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Maglagay ng rate na mas mataas sa zero para sa %s, tulad ng 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Ang mga hakbang sa pag-round off at mga dulo ng presyo ay mga halaga, tulad ng 0.05 o 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Mga custom field (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Pumili ng isalin, kopyahin o iwanang bakante para sa bawat field."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Mga Form (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Ako na ang maglalagay ng mga rate"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "European Central Bank, ina-update araw-araw (libre, hindi kailangan ng account)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Sinagot ng European Central Bank ang %d. Ang mga huling rate ay pinanatili."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Walang ibinigay na mga rate ang feed ng European Central Bank. Nananatili ang mga huling rate."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Hindi available ang pinagmulan ng exchange-rate na iyon."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Mga plugin sa SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Tema at teksto ng plugin"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Ang tema o plugin na iyon ay hindi aktibo sa site na ito."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Mungkahi sa wika"
@@ -5945,11 +6061,134 @@ msgstr "Laki ng teksto"
 msgid "Switcher"
 msgstr "Tagapag-lipat"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(walang pamagat)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Walang dapat ayusin dito."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Walang uri ng nilalaman ang isinalin sa site na ito."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Ang uri ng nilalamang iyon ay hindi nakasalin sa site na ito."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Walang anmang isasalin sa piniling iyon."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Pumili ng kahit isang wika naisasalin."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Hindi ka pinahihintulutang mag-export ng mga pagsasalin."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Pumili ng file na XLIFF o CSV na ia-import."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Iyon ay hindi isang Tranzly XLIFF o CSV na file. Mag-export muna ng isa, isalin ito, at i-import ito rito."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Hindi naimbak ang file para sa pag-import. Suriin na ang uploads folder ay nasusulatan."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Wala na ang pag-aangkat na iyon. I-upload muli ang file."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Wala na sa site na ito ang pahinang iyon."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Ang file ay para sa isang wikang wala ang site na ito."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Hindi mai-link ang %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Post #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Walang nakitang data mula sa plugin na iyon sa site na ito."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Hindi ito pagsasalin ng anuman sa site na ito."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Walang tekstong susuriin."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Hindi kasama ang mga setting ng AI sa build na ito."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Hindi sumagot ang tagapagbigay ng AI."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Hindi nai-score ng AI model ang bawat bahagi ng pahinang ito. Subukang muli, o pumili ng isa pang modelo."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Tagasalin"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Tagasuri ng pagsasalin"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Humingi ang isang tagasuri ng mga pagbabago sa pagsasaling ito."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Humiling ang isang tagasuri ng mga pagbabago sa pagsasaling ito: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Naghihintay ang pagsasaling ito ng tagasuri. Ang pag-publish nito (bilang tagasuri) ay nangangahulugang inaprubahan mo ito."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Ang isang pagsasalin lamang ang maaaring suriin."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Piliin kung ano ang mangyayari kapag nagbago ang isang orihinal: walang gagawin, markahan ang mga salin nito bilang luma na, o isalin itong muli."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Ang hangganan ng kalidad ay isang marka mula 0 hanggang 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Ipakita muli ang mga nakatagong mungkahi sa Pangkalahatang-ideya"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Lahat"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "Piliin"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Mga Pahina"
 
@@ -6224,28 +6465,28 @@ msgstr "Magaan"
 msgid "Dark"
 msgstr "Madilim"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Scheme ng kulay"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Tulong"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Gabay sa screen na ito"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Magsimula sa tour"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Kumuha ng tulong o mag-ulat ng bug"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Mga screen ng plugin"
 
@@ -6659,6 +6900,7 @@ msgstr "Tingnan ang mga Pro plan at pagpepresyo"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Mga Wika"
@@ -6885,6 +7127,213 @@ msgstr "Mga Setting"
 msgid "Translation engine"
 msgstr "Makina ng Pagsasalin"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Ang Isinasalin ng Tranzly sa site na ito"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "natagpuan, isinalin gamit ang iyong nilalaman"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "hindi sa site na ito"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Gamit ang Tranzly Pro: mga pahina ng Elementor, Bricks, Divi, Beaver Builder, Oxygen at WPBakery; lahat sa WooCommerce, kasama ang mga presyo sa pera ng bisita; ang mga larangan ng SEO ng Yoast SEO, Rank Math, SEOPress at All in One SEO; mga larangan ng ACF, Meta Box at Pods; mga form at ang kanilang mga e-mail; sariling teksto ng iyong tema at mga plugin; at mga komento at pagsusuri."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Teksto at mga email sa shop"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Mga paksa at heading ng E-mail, mga pangalan ng paraan ng pagbabayad at pagpapadala, at ang mga abiso sa pag-checkout. Ang mga e-mail ng bawat order ay ipinapadala sa wika kung saan ito ginawa."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Mga Form at ang kanilang mga e-mail"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Ang bawat form ay nagpapanatili ng isang listahan ng mga entry; ang mga label, button, mensahe, at email nito ay lumalabas sa wika ng bisita."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Nai-save na."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Wala pang natutukoy na mga field ng ACF, Meta Box o Pods."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Larangan"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Saan"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Sa pagsasalin"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Ano ang nangyayari sa %s sa pagsasalin"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Isalin ito"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Kopyahin ito nang gayon din"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Hayaang blangko"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Pera ng tindahan"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Mga Pera"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Ipakita ang mga presyo sa ibang mga pera (ang sarili ng tindahan ay %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Mga halaga ng palitan"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Huling na-update ang mga rate noong %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Hindi pa nakukuha ang mga rate."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "I-update ang mga rate ngayon"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Bagong pera"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Pumili…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Rate (bawat 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Ang pag-type ng rate ay nagpapanatili nito: ang araw-araw na pag-update ay hindi ito babaguhin."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Pag-ikot"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Wala"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "I-round up"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Ikotan sa pinakamalapit"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "I-round down"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "I-round sa (halimbawa 1, 0.05 o 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Nagtatapos ang mga presyo sa (halimbawa 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Magdagdag ng currency"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Aling mga bisita ang makakakita sa aling pera"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Sa pamamagitan ng bansa: dalawang titik na code ng bansa (halimbawa CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Mga bisita mula sa %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Pumili ang mga bisita (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Ang mga presyo ngayon ay nakasalalay sa isang cookie o sa bansa ng bisita: tiyaking nag-iiba ang cache ng iyong pahina ayon sa \"tranzly_currency\" cookie, o ibukod ang mga pahina ng tindahan."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "I-save ang mga pera"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Ang mga salitang ipinapakita ng iyong tema at mga plugin (mga pindutan, mga label). Basahin ang isang tema o plugin nang isang beses, pagkatapos ay isalin ang teksto nito dito; ang iyong salin ang mangingibabaw sa sarili nitong plugin."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d na text"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "hindi pa nababasa"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Basahing muli"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Basahin ang teksto nito"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Isalin"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6944,6 +7393,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d na post, %2$s na character: humigit-kumulang $%3$s sa iyong sariling account."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Simulan ang pagsasalin"
 
@@ -6981,6 +7431,11 @@ msgstr "Nilalaman"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Wika"
 
@@ -7015,11 +7470,13 @@ msgstr "Na-save na ang mga menu."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "Na-translate na ang %d na teksto."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Nai-save na. Protektado ang iyong mga pagwawasto mula sa awtomatikong pagsasalin."
 
@@ -7056,48 +7513,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Mga Template, header, footer at pattern (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Isalin ang nawawalang teksto"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Walang tekstong isasalin dito."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Itinuwid ng isang tao, protektado"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "I-save ang mga pagwawasto"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Mga Wika at mga setting"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Mga Engine"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Mga trabaho sa pagsasalin"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Mga Address at SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Mga pampalit ng wika"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO audit"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Mga Menu at nakabahaging teksto"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Katayuan ng pagsasalin"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Mga Integrasyon"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7142,6 +7612,7 @@ msgid "The whole language has been checked."
 msgstr "Nasuri na ang buong wika."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Pahina"
 
@@ -7150,17 +7621,198 @@ msgid "Problem"
 msgstr "Problema"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "I-edit"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Nagsimula na ang Job %1$d: %2$d na pahina ang isinasalin sa background. Sundan ito sa Mga trabaho sa pagsasalin."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "Sinusuri ang %d na mga pagsasalin sa background. Lalabas dito ang mga marka habang dumarating ang mga ito."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Nawawala"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Luma na"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Isinalin"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Inedit ng isang tao"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Isinalin ng makina"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Naghihintay ng pagsusuri"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Kailangan ng pansin ng tao"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Lahat"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Napapanahon"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Kasalukuyang tinutukoy ng Tranzly kung aling mga lumang pagsasalin ang lipas na. Lalaki ang mga bilang ng \"lipas na\" habang ginagawa ito."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Uri ng nilalaman"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Lahat ng nilalaman"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Karaniwang kalidad"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d ang isinalin (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Ipakita"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Isalin ang lahat ng kulang"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "I-update ang lahat ng luma na"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Suriin ang kalidad gamit ang AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Isalin muli ang mga pahinang mababa ang marka"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Walang anuman dito."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Kalidad"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "ng isang tao"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "naghihintay ng pagsusuri"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Magkatabi"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Ipakita ang iba pa"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Isalin nang maramihan ang buong site (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Sa pamamagitan ng Tranzly Pro, pumili ng mga uri ng nilalaman at wika, tingnan ang pagtatantiya, at isalin ang buong site nang sabay-sabay."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d na background job ang nagsimula, isa bawat wika. Sundan ang mga ito sa mga Trabaho sa pagsasalin."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Mga uri ng nilalaman"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Ano ang Isasalin"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Kung ano lamang ang kulang"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Ang lipas na lamang sa panahon"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Lahat (ang mga pahinang na-edit ng tao ay mananatili kung ano sila)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Tantiyahin"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d pahina, %2$s na karakter. Ang makina na ito ay walang inilalathalang presyo."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d na mga pahina, %2$s na mga karakter, mga $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Maghanap ng teksto"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d pa: i-type ang \"Maghanap ng teksto\" para paliitin ang listahan."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Isang maliit na button sa isang sulok ng bawat pahina, sa anumang tema, na walang kinakailangang set-up."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Saan"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7360,6 +8012,199 @@ msgstr "Nakikipagtulungan sa: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Ang bawat salita sa address ay 2 hanggang 12 na maliliit na titik, digit, o gitling."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Kasama sa Tranzly Pro ang awtomatikong pagsasalin sa pag-update, mga tungkulin ng tagasuri, pag-export ng XLIFF para sa mga tagasalin, paglipat mula sa WPML, Polylang o TranslatePress, at ang pagsusuri sa kalidad ng AI."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Kapag nagbago ang orihinal"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Kapag na-edit ang isang pahina"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Markaran ang mga salin nito bilang luma na"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Isalin muli ang mga pagsasalin nito sa background"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Huwag gumawa ng anuman"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Ang pagsasalin na na-edit ng isang tao ay hindi kailanman nase-overwrite; sa halip ay minamarkahan itong luma na."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Isalin ang mga bagong pahina sa bawat wika kapag na-publish na ang mga ito"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Binabasa ng pangalawang AI na modelo ang bawat salin sa tabi ng orihinal nito, pinupuntos ito at tinutukoy ang mga mali. Ginagamit nito ang iyong sariling AI key mula sa mga setting ng AI. Magsimula ng pagsusuri mula sa Katayuan ng pagsasalin."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Tagapagbigay ng AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Ang pangkalahatang modelo ng mga setting ng AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Inirerekomenda"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Kailangan ng pahina ang pagsusuri ng tao sa ibaba ng markang ito"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Mag-publish lamang ng mga pagsasaling inaprubahan ng isang tagasuri"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Bigyan ang mga tao ng tungkulin na Tagasalin (nag-e-edit ng mga pagsasalin, hinding-hindi sa mga orihinal, hindi makakapag-publish) o tungkulin na Tagasuri ng pagsasalin (nag-aapruba rin). Nakakahanap din ang mga tagasuri ng anuman na naghihintay sa mga listahan ng Mga Post at Mga Page sa ilalim ng “Pending”; ang pag-publish sa isa roon ay nag-aapruba rito."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Pamahalaan ang mga user"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Walang naghihintay para sa pagsusuri."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Paalala para sa tagasalin (opsyonal)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Basahin nang magkatabi"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Aprubahan"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Humiling ng mga pagbabago"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "Na-import ang %d (na) mga pagsasalin at naprotektahan laban sa awtomatikong pagsasalin."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "I-export at i-import para sa mga tagasalin"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Hindi pa naisasalin"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Naisalin na"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Format"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (mga tool sa pagsasalin)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (mga spreadsheet)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "I-download ang file"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Mag-import ng isinaling file"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Hindi natuloy: %1$d na link ang tinanggal, %2$d na imported na pahina ang tinanggal."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Pagsubok lamang, walang binago:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Na-import:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d wika ang idinagdag, %2$d salin ang iniugnay, %3$d pahina ang ginawa, %4$d teksto."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Patayin muna ang kabilang plugin (magsasagupaan ang mga address at switcher nito sa Tranzly). Nananatili sa dati nitong lugar ang data nito, kaya maaari kang bumalik; inaalis nang eksakto ng Undo ang idinagdag ng pag-import."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Walang data mula sa plugin na ito sa site na ito."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Mga Wika: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "aktibo pa rin: i-off muna ito."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Dry run"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Mag-import"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "I-undo ang pag-import"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Mga komento at pagsusuri sa produkto"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Pinapanatili ng bawat wika ang sarili nito"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Ipakita ang mga komento ng bawat wika sa bawat bersyon"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Ipakita silang lahat, na nakasalin sa wika ng mambabasa"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Ginagamit ng pagsasalin ang iyong makina ng pagsasalin para sa bawat naaprubahang komento. Ang spam at mga komentong naghihintay ng moderasyon ay hindi kailanman ipinapadala."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Nai-save na. Ang mga bahagi na iyong binago ay mamarkahan bilang nasuri ng isang tao, at ang pagsasaling ito ay protektado mula sa awtomatikong pagsasalin."
@@ -7392,11 +8237,6 @@ msgstr "I-save ang mga pagbabago"
 msgid "Open in the editor"
 msgstr "Buksan sa editor"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Isinalin ng makina"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Suriin ng isang tao"
@@ -7404,10 +8244,6 @@ msgstr "Suriin ng isang tao"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Nai-import na"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Hindi pa naisasalin"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7461,10 +8297,6 @@ msgstr "Hindi pa naisasalin (isang kopya)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "I-save muna ang post na ito, pagkatapos ay isalin ito rito."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Magkatabi"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

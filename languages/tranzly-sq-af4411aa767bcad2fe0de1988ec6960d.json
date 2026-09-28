@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "P\u00ebrkthe n\u00eb sfond"
             ],
+            "Custom fields": [
+                "Fusha t\u00eb personalizuara"
+            ],
+            "Bulk translate the whole site": [
+                "P\u00ebrktheni n\u00eb mas\u00eb t\u00eb gjith\u00eb faqen"
+            ],
+            "Review and approval": [
+                "Shqyrtim dhe miratim"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Kaloni nga WPML, Polylang ose TranslatePress"
+            ],
             "Floating switcher": [
                 "Nd\u00ebrrues lundrues"
+            ],
+            "AI quality check": [
+                "Kontrolli i cil\u00ebsis\u00eb nga AI"
+            ],
+            "Workflow": [
+                "Rrjedha e pun\u00ebs"
             ],
             "Next": [
                 "Para"
@@ -25,11 +43,17 @@
             "Open": [
                 "Hap"
             ],
+            "Model": [
+                "Modeli"
+            ],
             "About": [
                 "Rreth"
             ],
             "Done": [
                 "Kryer"
+            ],
+            "Actions": [
+                "Veprimet"
             ],
             "Cancelled": [
                 "Anuluar"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Faqet"
             ],
+            "State": [
+                "Shteti"
+            ],
             "Type": [
                 "Lloji"
             ],
             "Upgrade": [
                 "P\u00ebrmir\u00ebso"
+            ],
+            "Comments and reviews": [
+                "Komentet dhe vler\u00ebsimet"
+            ],
+            "Currency": [
+                "Monedha"
+            ],
+            "Theme and plugin text": [
+                "Teksti i tem\u00ebs dhe shtojc\u00ebs"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "N\u00ebnfaqet dhe domenet e ve\u00e7anta p\u00ebr \u00e7do gjuh\u00eb jan\u00eb pjes\u00eb e Tranzly Pro."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Motori i p\u00ebrkthimit"
             ],
+            "What Tranzly translates on this site": [
+                "\u00c7far\u00eb p\u00ebrkthen Tranzly n\u00eb k\u00ebt\u00eb faqe interneti"
+            ],
+            "found, translated with your content": [
+                "gjetur, p\u00ebrkthyer me p\u00ebrmbajtjen tuaj"
+            ],
+            "not on this site": [
+                "nuk \u00ebsht\u00eb n\u00eb k\u00ebt\u00eb faqe"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Me Tranzly Pro: faqet e Elementor, Bricks, Divi, Beaver Builder, Oxygen dhe WPBakery; \u00e7do gj\u00eb n\u00eb WooCommerce, me \u00e7mime n\u00eb monedh\u00ebn e vizitorit; fushat SEO t\u00eb Yoast SEO, Rank Math, SEOPress dhe All in One SEO; fushat e ACF, Meta Box dhe Pods; formular\u00ebt dhe e-mail-et e tyre; tekstin e vet\u00eb tem\u00ebs dhe shtojcave tuaja; si dhe komentet dhe vler\u00ebsimet."
+            ],
+            "Shop text and e-mails": [
+                "Teksti dhe e-mailet e dyqanit"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Subjektet e e-mail-eve dhe titujt, emrat e metodave t\u00eb pages\u00ebs dhe d\u00ebrges\u00ebs, si dhe njoftimet e ark\u00ebs. E-mail-et e \u00e7do porosie d\u00ebrgohen n\u00eb gjuh\u00ebn n\u00eb t\u00eb cil\u00ebn \u00ebsht\u00eb b\u00ebr\u00eb porosia."
+            ],
+            "Forms and their e-mails": [
+                "Formular\u00ebt dhe e-mail-et e tyre"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "\u00c7do formular ruan nj\u00eb list\u00eb hyrjesh; etiketat, butonat, mesazhet dhe e-mailet e tij shfaqen n\u00eb gjuh\u00ebn e vizitorit."
+            ],
+            "Saved.": [
+                "Ruajtur."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Nuk \u00ebsht\u00eb p\u00ebrcaktuar ende asnj\u00eb fush\u00eb p\u00ebr ACF, Meta Box ose Pods."
+            ],
+            "Field": [
+                "Fusha"
+            ],
+            "Where": [
+                "Ku"
+            ],
+            "In a translation": [
+                "N\u00eb nj\u00eb p\u00ebrkthim"
+            ],
+            "What happens to %s in a translation": [
+                "\u00c7far\u00eb i ndodh %s n\u00eb nj\u00eb p\u00ebrkthim"
+            ],
+            "Translate it": [
+                "P\u00ebrktheje"
+            ],
+            "Copy it as it is": [
+                "Kopjoje ashtu si\u00e7 \u00ebsht\u00eb"
+            ],
+            "Leave it empty": [
+                "L\u00ebreni bosh"
+            ],
+            "The shop\u2019s currency": [
+                "Valuta e dyqanit"
+            ],
+            "Currencies": [
+                "Monedhat"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Shfaq \u00e7mimet n\u00eb monedha t\u00eb tjera (monedha e dyqanit \u00ebsht\u00eb %s)"
+            ],
+            "Exchange rates": [
+                "Kurset e k\u00ebmbimit"
+            ],
+            "Rates last updated %s.": [
+                "Tarifat u p\u00ebrdit\u00ebsuan p\u00ebr her\u00eb t\u00eb fundit m\u00eb %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Tarifat nuk jan\u00eb marr\u00eb ende."
+            ],
+            "Update the rates now": [
+                "P\u00ebrdit\u00ebso tarifat tani"
+            ],
+            "New currency": [
+                "Monedh\u00eb e re"
+            ],
+            "Choose\u2026": [
+                "Zgjidhni\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Tarifa (p\u00ebr 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Futja e nj\u00eb tarife e ruan at\u00eb: p\u00ebrdit\u00ebsimi ditor nuk do ta ndryshoj\u00eb at\u00eb."
+            ],
+            "Rounding": [
+                "Kerekullosja"
+            ],
+            "None": [
+                "Asnj\u00eb"
+            ],
+            "Round up": [
+                "Kerekogrupim"
+            ],
+            "Round to the nearest": [
+                "Kerekondundo n\u00eb t\u00eb af\u00ebrtin"
+            ],
+            "Round down": [
+                "Rrumbullakos posht\u00eb"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Krijo rrumbullak\u00ebsimin n\u00eb (p\u00ebr shembull 1, 0.05 ose 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "\u00c7mimet p\u00ebrfundojn\u00eb n\u00eb (p\u00ebr shembull 0.99)"
+            ],
+            "Add a currency": [
+                "Shto nj\u00eb monedh\u00eb"
+            ],
+            "Which visitors see which currency": [
+                "Cil\u00ebt vizitor\u00eb shohin cil\u00ebn monedh\u00eb"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Sipas shtetit: kodi i shtetit me dy shkronja (p\u00ebr shembull CH)"
+            ],
+            "Visitors from %s": [
+                "Vizitor\u00ebt nga %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Lejojini vizitor\u00ebt t\u00eb zgjedhin (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "\u00c7mimet tani varen nga nj\u00eb skedar cookie ose nga vendi i vizitorit: sigurohuni q\u00eb cache-i i faqes suaj t\u00eb ndryshoj\u00eb sipas skedarit cookie \"tranzly_currency\", ose t\u00eb p\u00ebrjashtoj\u00eb faqet e dyqanit."
+            ],
+            "Save currencies": [
+                "Ruaj monedhat"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Fjal\u00ebt q\u00eb tema dhe shtojcat tuaja shfaqin vet\u00eb (butonat, etiketat). Lexoni nj\u00eb tem\u00eb ose shtojc\u00eb nj\u00eb her\u00eb, pastaj p\u00ebrktheni tekstin e saj k\u00ebtu; p\u00ebrkthimi juaj ka p\u00ebrpar\u00ebsi ndaj atij t\u00eb vet\u00eb shtojc\u00ebs."
+            ],
+            "%d texts": [
+                "%d tekste"
+            ],
+            "not read yet": [
+                "ende lexuar ende"
+            ],
+            "Read again": [
+                "Lexoni p\u00ebrs\u00ebri"
+            ],
+            "Read its text": [
+                "Lexo tekstin e tij"
+            ],
+            "Translate": [
+                "P\u00ebrkthe"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Puna filloi me %d p\u00ebrkthime p\u00ebr t'u b\u00ebr\u00eb. Ajo ekzekutohet n\u00eb sfond: mund ta mbyllni k\u00ebt\u00eb faqe."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Menuja dhe teksti i p\u00ebrbashk\u00ebt"
             ],
+            "Translation status": [
+                "Statusi i p\u00ebrkthimit"
+            ],
+            "Integrations": [
+                "Integrimet"
+            ],
             "No meta description": [
                 "Asnj\u00eb meta p\u00ebrshkrim"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Ndrysho"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Detyra %1$d filloi: %2$d faqe po p\u00ebrkthehen n\u00eb sfond. Ndiqni at\u00eb te Detyrat e p\u00ebrkthimit."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d p\u00ebrkthime po kontrollohen n\u00eb sfond. Rezultatet shfaqen k\u00ebtu sapo mb\u00ebrrijn\u00eb."
+            ],
+            "Missing": [
+                "Mungon"
+            ],
+            "Out of date": [
+                "I jasht\u00ebzakonsh\u00ebm"
+            ],
+            "Translated": [
+                "P\u00ebrkthyer"
+            ],
+            "Edited by a person": [
+                "P\u00ebrpunuar nga nj\u00eb person"
+            ],
+            "Machine translated": [
+                "P\u00ebrkthyer me makin\u00eb"
+            ],
+            "Waiting for review": [
+                "N\u00eb pritje t\u00eb shqyrtimit"
+            ],
+            "Needs a human look": [
+                "K\u00ebrkon v\u00ebmendje njer\u00ebzore"
+            ],
+            "Everything": [
+                "Gjith\u00e7ha"
+            ],
+            "Up to date": [
+                "I p\u00ebrdit\u00ebsuar"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly \u00ebsht\u00eb ende duke p\u00ebrcaktuar se cilat p\u00ebrkthime m\u00eb t\u00eb vjetra kan\u00eb skaduar. Numrat \"t\u00eb skaduar\" do t\u00eb rriten gjat\u00eb k\u00ebsaj kohe."
+            ],
+            "Content type": [
+                "Lloji i p\u00ebrmbajtjes"
+            ],
+            "All content": [
+                "T\u00eb gjitha p\u00ebrmbajtjet"
+            ],
+            "Average quality": [
+                "Cil\u00ebsi mesatare"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d e p\u00ebrkthyer (%2$d%%)"
+            ],
+            "Show": [
+                "Shfaq"
+            ],
+            "Translate everything missing": [
+                "P\u00ebrkthe gjith\u00e7ka q\u00eb mungon"
+            ],
+            "Update everything out of date": [
+                "P\u00ebrdit\u00ebso \u00e7do gj\u00eb q\u00eb ka skaduar"
+            ],
+            "Check the quality with AI": [
+                "Kontrolloni cil\u00ebsin\u00eb me AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "P\u00ebrkthe s\u00ebrish faqet me pik\u00ebzim t\u00eb ul\u00ebt"
+            ],
+            "Nothing here.": [
+                "Asgj\u00eb k\u00ebtu."
+            ],
+            "Quality": [
+                "Cil\u00ebsia"
+            ],
+            "by a person": [
+                "nga nj\u00eb person"
+            ],
+            "waiting for review": [
+                "n\u00eb pritje t\u00eb shqyrtimit"
+            ],
+            "Side by side": [
+                "Krah p\u00ebr krah"
+            ],
+            "Show more": [
+                "Shfaq m\u00eb shum\u00eb"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "P\u00ebrkthejeni t\u00eb gjith\u00eb faqen n\u00eb mas\u00eb (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Me Tranzly Pro, zgjidhni llojet e p\u00ebrmbajtjes dhe gjuh\u00ebt, shikoni vler\u00ebsimin dhe p\u00ebrktheni t\u00eb gjith\u00eb faqen me nj\u00eb l\u00ebvizje t\u00eb vetme."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d detyra n\u00eb sfond u nis\u00ebn, nga nj\u00eb p\u00ebr \u00e7do gjuh\u00eb. Ndiqni ato te Detyrat e p\u00ebrkthimit."
+            ],
+            "Content types": [
+                "Llojet e p\u00ebrmbajtjes"
+            ],
+            "What to translate": [
+                "\u00c7far\u00eb t\u00eb p\u00ebrkthehet"
+            ],
+            "Only what is missing": [
+                "Vet\u00ebm ajo q\u00eb mungon"
+            ],
+            "Only what is out of date": [
+                "Vet\u00ebm ajo q\u00eb ka skaduar"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Gjith\u00e7ka (faqet e redaktuara nga nj\u00eb person mbeten si\u00e7 jan\u00eb)"
+            ],
+            "Estimate": [
+                "Llogarit"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d faqe, %2$s karaktere. Ky motor nuk publikon ndonj\u00eb \u00e7mim."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d faqe, %2$s karaktere, rreth $%3$s."
+            ],
+            "Find a text": [
+                "Gjej nj\u00eb tekst"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d m\u00eb shum\u00eb: shkruani \"Gjej nj\u00eb tekst\" p\u00ebr t\u00eb ngushtuar list\u00ebn."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Nj\u00eb buton i vog\u00ebl n\u00eb nj\u00eb nga skajet e \u00e7do faqeje, n\u00eb \u00e7do tem\u00eb, pa pasur nevoj\u00eb p\u00ebr konfigurim."
-            ],
-            "Where": [
-                "Ku"
             ],
             "Off": [
                 "Jo aktiv"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "\u00c7do fjal\u00eb adrese p\u00ebrb\u00ebhet nga 2 deri n\u00eb 12 shkronja t\u00eb vogla, shifra ose vija ndar\u00ebse."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "P\u00ebrkthimi automatik gjat\u00eb p\u00ebrdit\u00ebsimit, rolet e recensuesve, eksporti XLIFF p\u00ebr p\u00ebrkthyesit, kalimi nga WPML, Polylang ose TranslatePress dhe kontrolli i cil\u00ebsis\u00eb me AI vijn\u00eb me Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Kur ndryshon nj\u00eb origjinal"
+            ],
+            "When a page is edited": [
+                "Kur nj\u00eb faqe editohet"
+            ],
+            "Mark its translations out of date": [
+                "Sh\u00ebno p\u00ebrkthimet e tij si t\u00eb vjetruara"
+            ],
+            "Translate its translations again in the background": [
+                "P\u00ebrkthe s\u00ebrish p\u00ebrkthimet e tij n\u00eb sfond"
+            ],
+            "Do nothing": [
+                "Mos b\u00ebj asgj\u00eb"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Nj\u00eb p\u00ebrkthim i redaktuar nga nj\u00eb njeri nuk mbivendoset kurr\u00eb; n\u00eb vend t\u00eb k\u00ebsaj, ai sh\u00ebnohet si i vjetruar."
+            ],
+            "Translate new pages into every language when they are published": [
+                "P\u00ebrkthe faqet e jahta n\u00eb \u00e7do gjuh\u00eb kur ato publikohen"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Nj\u00eb model i dyt\u00eb i inteligjenc\u00ebs artificiale lexon \u00e7do p\u00ebrkthim krahas origjinalit t\u00eb tij, e vler\u00ebson at\u00eb dhe em\u00ebrton gabimet. Ai p\u00ebrdor \u00e7el\u00ebsin tuaj t\u00eb inteligjenc\u00ebs artificiale nga cil\u00ebsimet e inteligjenc\u00ebs artificiale. Nisni nj\u00eb kontroll nga Statusi i p\u00ebrkthimit."
+            ],
+            "AI provider": [
+                "Ofruesi i AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Modeli i p\u00ebrgjithsh\u00ebm i cil\u00ebsimeve t\u00eb AI"
+            ],
+            "Recommended": [
+                "Rekomenduar"
+            ],
+            "A page needs a human look below this score": [
+                "Nj\u00eb faqe ka nevoj\u00eb p\u00ebr nj\u00eb v\u00ebshtrim njer\u00ebzor n\u00ebn k\u00ebt\u00eb pik\u00ebzim"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Publiko vet\u00ebm p\u00ebrkthimet q\u00eb ka miratuar nj\u00eb recensues"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Jepni njer\u00ebzve rolin e P\u00ebrkthyesit (redakton p\u00ebrkthimet, kurr\u00eb origjinalet, nuk mund t\u00eb publikoj\u00eb) ose rolin e Rishikuesit t\u00eb p\u00ebrkthimeve (gjithashtu aprovon). Rishikuesit gjithashtu gjejn\u00eb gjith\u00e7ka q\u00eb pret n\u00eb listat e Postimeve dhe Faqeve n\u00ebn \"N\u00eb pritje\"; publikimi i nj\u00ebrit atje e aprovon at\u00eb."
+            ],
+            "Manage users": [
+                "Menaxho p\u00ebrdoruesit"
+            ],
+            "Nothing is waiting for review.": [
+                "Asgj\u00eb nuk \u00ebsht\u00eb n\u00eb pritje t\u00eb shqyrtimit."
+            ],
+            "Note for the translator (optional)": [
+                "Sh\u00ebnim p\u00ebr p\u00ebrkthyesin (opsionale)"
+            ],
+            "Read side by side": [
+                "Lexo krah p\u00ebr krah"
+            ],
+            "Approve": [
+                "Aprovo"
+            ],
+            "Ask for changes": [
+                "K\u00ebrko ndryshime"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d p\u00ebrkthime u importuan dhe u mbrojt\u00ebn nga p\u00ebrkthimi automatik."
+            ],
+            "Export and import for translators": [
+                "Eksporto dhe importo p\u00ebr p\u00ebrkthyesit"
+            ],
+            "Not translated yet": [
+                "Enduk\u00eb e p\u00ebrkthyer"
+            ],
+            "Already translated": [
+                "T\u00eb p\u00ebrkthyera tashm\u00eb"
+            ],
+            "Format": [
+                "Formati"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (mjetet e p\u00ebrkthimit)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (flet\u00ebllogarit\u00ebse)"
+            ],
+            "Download the file": [
+                "Shkarko skedarin"
+            ],
+            "Import a translated file": [
+                "Importo nj\u00eb skedar t\u00eb p\u00ebrkthyer"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "E anuluar: %1$d lidhje u hoq\u00ebn, %2$d faqe t\u00eb importuara u fshin\u00eb."
+            ],
+            "Dry run, nothing changed:": [
+                "Simulim, asgj\u00eb nuk u ndryshua:"
+            ],
+            "Imported:": [
+                "Importuar:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d gjuh\u00eb u shtuan, %2$d p\u00ebrkthime u lidh\u00ebn, %3$d faqe u nd\u00ebrtuan, %4$d tekste."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Fikni fillimisht spin-in tjet\u00ebr (adresat dhe \u00e7el\u00ebsat e tij do t\u00eb b\u00ebnin konflikt me Tranzly). T\u00eb dh\u00ebnat e tij menden aty ku jan\u00eb, k\u00ebshtu q\u00eb mund t\u00eb ktheheni s\u00ebrish; Opsioni \"Undo\" heq sakt\u00ebsisht at\u00eb q\u00eb shtoi importi."
+            ],
+            "No data from this plugin on this site.": [
+                "Nuk ka t\u00eb dh\u00ebna nga ky shtojc\u00eb n\u00eb k\u00ebt\u00eb faqe."
+            ],
+            "Languages: %s": [
+                "Gjuh\u00ebt: %s"
+            ],
+            "still active: switch it off first.": [
+                "ende aktive: fikeni m\u00eb par\u00eb."
+            ],
+            "Dry run": [
+                "Prov\u00eb paraprake"
+            ],
+            "Import": [
+                "Importo"
+            ],
+            "Undo the import": [
+                "Anulo importin"
+            ],
+            "Comments and product reviews": [
+                "Komentet dhe vler\u00ebsimet e produkteve"
+            ],
+            "Each language keeps its own": [
+                "\u00c7do gjuh\u00eb ruan t\u00eb vet\u00ebn"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Shfaq komentet e \u00e7do gjuhe p\u00ebr \u00e7do version"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Shfaqini t\u00eb gjitha, t\u00eb p\u00ebrkthyera n\u00eb gjuh\u00ebn e lexuesit"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "P\u00ebrkthimi p\u00ebrdor motorin tuaj t\u00eb p\u00ebrkthimit p\u00ebr \u00e7do koment t\u00eb miratuar. Spam-et dhe komentet q\u00eb presin moderim nuk d\u00ebrgohen kurr\u00eb."
             ]
         }
     }

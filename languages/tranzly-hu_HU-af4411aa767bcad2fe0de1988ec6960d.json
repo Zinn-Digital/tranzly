@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Ford\u00edt\u00e1s a h\u00e1tt\u00e9rben"
             ],
+            "Custom fields": [
+                "Egy\u00e9ni mez\u0151k"
+            ],
+            "Bulk translate the whole site": [
+                "A teljes webhely t\u00f6meges ford\u00edt\u00e1sa"
+            ],
+            "Review and approval": [
+                "\u00c1ttekint\u00e9s \u00e9s j\u00f3v\u00e1hagy\u00e1s"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "V\u00e1ltson \u00e1t WPML, Polylang vagy TranslatePress rendszerr\u0151l"
+            ],
             "Floating switcher": [
                 "Lebeg\u0151 v\u00e1lt\u00f3"
+            ],
+            "AI quality check": [
+                "MI min\u0151s\u00e9gellen\u0151rz\u00e9s"
+            ],
+            "Workflow": [
+                "Munkafolyamat"
             ],
             "Next": [
                 "K\u00f6vetkez\u0151"
@@ -25,11 +43,17 @@
             "Open": [
                 "Megnyit\u00e1s"
             ],
+            "Model": [
+                "Modell"
+            ],
             "About": [
                 "R\u00f3lunk"
             ],
             "Done": [
                 "K\u00e9sz"
+            ],
+            "Actions": [
+                "M\u0171veletek"
             ],
             "Cancelled": [
                 "T\u00f6r\u00f6lve"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Webhelyek"
             ],
+            "State": [
+                "\u00c1llapot"
+            ],
             "Type": [
                 "T\u00edpus"
             ],
             "Upgrade": [
                 "Friss\u00edt\u00e9s"
+            ],
+            "Comments and reviews": [
+                "Megjegyz\u00e9sek \u00e9s \u00e9rt\u00e9kel\u00e9sek"
+            ],
+            "Currency": [
+                "P\u00e9nznem"
+            ],
+            "Theme and plugin text": [
+                "T\u00e9ma- \u00e9s b\u0151v\u00edtm\u00e9nysz\u00f6veg"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Az aldomainek \u00e9s a nyelvenk\u00e9nti k\u00fcl\u00f6n domainek a Tranzly Pro r\u00e9sz\u00e9t k\u00e9pezik."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Ford\u00edt\u00f3motor"
             ],
+            "What Tranzly translates on this site": [
+                "Amit a Tranzly leford\u00edt ezen az oldalon"
+            ],
+            "found, translated with your content": [
+                "tal\u00e1lva, a tartalm\u00e1val leford\u00edtva"
+            ],
+            "not on this site": [
+                "nem ezen a oldalon"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "A Tranzly Pro-val: az Elementor, Bricks, Divi, Beaver Builder, Oxygen \u00e9s WPBakery oldalak; minden a WooCommerce rendszerben, a l\u00e1togat\u00f3 saj\u00e1t p\u00e9nznem\u00e9ben felt\u00fcntetett \u00e1rakkal; a Yoast SEO, Rank Math, SEOPress \u00e9s All in One SEO SEO mez\u0151i; az ACF, Meta Box \u00e9s Pods mez\u0151k; az \u0171rlapok \u00e9s azok e-mailjei; a t\u00e9ma \u00e9s a b\u0151v\u00edtm\u00e9nyek saj\u00e1t sz\u00f6vege; valamint a hozz\u00e1sz\u00f3l\u00e1sok \u00e9s \u00e9rt\u00e9kel\u00e9sek."
+            ],
+            "Shop text and e-mails": [
+                "Web\u00e1ruh\u00e1zi sz\u00f6vegek \u00e9s e-mailek"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "E-mail t\u00e1rgyak \u00e9s c\u00edmek, fizet\u00e9si \u00e9s sz\u00e1ll\u00edt\u00e1si m\u00f3dok nevei, valamint a p\u00e9nzt\u00e1ri \u00e9rtes\u00edt\u00e9sek. Minden egyes rendel\u00e9s e-mailjei abban a nyelven mennek ki, amelyen azt leadt\u00e1k."
+            ],
+            "Forms and their e-mails": [
+                "\u0170rlapok \u00e9s e-mailjeik"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Minden \u0171rlap egyetlen bejegyz\u00e9slist\u00e1t tart fenn; a c\u00edmk\u00e9i, gombjai, \u00fczenetei \u00e9s e-mailjei a l\u00e1togat\u00f3 nyelv\u00e9n jelennek meg."
+            ],
+            "Saved.": [
+                "Mentve."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "M\u00e9g nincsenek ACF, Meta Box vagy Pods mez\u0151k defini\u00e1lva."
+            ],
+            "Field": [
+                "Mez\u0151"
+            ],
+            "Where": [
+                "Hol"
+            ],
+            "In a translation": [
+                "Egy ford\u00edt\u00e1sban"
+            ],
+            "What happens to %s in a translation": [
+                "Mi t\u00f6rt\u00e9nik a k\u00f6vetkez\u00f6nnel: %s a ford\u00edt\u00e1sban"
+            ],
+            "Translate it": [
+                "Ford\u00edt\u00e1s"
+            ],
+            "Copy it as it is": [
+                "M\u00e1solja le \u00fagy, ahogy van"
+            ],
+            "Leave it empty": [
+                "Hagyja \u00fcresen"
+            ],
+            "The shop\u2019s currency": [
+                "Az \u00fczlet p\u00e9nzneme"
+            ],
+            "Currencies": [
+                "P\u00e9nznemek"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Mutassa az \u00e1rakat m\u00e1s p\u00e9nznemekben (az \u00fczlet saj\u00e1tja: %s)"
+            ],
+            "Exchange rates": [
+                "\u00c1rfolyamok"
+            ],
+            "Rates last updated %s.": [
+                "D\u00edjak legut\u00f3bb friss\u00edtve: %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Az \u00e1rfolyamok lek\u00e9r\u00e9se m\u00e9g nem t\u00f6rt\u00e9nt meg."
+            ],
+            "Update the rates now": [
+                "Friss\u00edtse az \u00e1rakat most"
+            ],
+            "New currency": [
+                "\u00daj p\u00e9nznem"
+            ],
+            "Choose\u2026": [
+                "V\u00e1lasszon\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "D\u00edj (\/%s-k\u00e9nt)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Ha be\u00edr egy d\u00edjat, azzal r\u00f6gz\u00edti azt: a napi friss\u00edt\u00e9s nem fogja m\u00f3dos\u00edtani."
+            ],
+            "Rounding": [
+                "Kerek\u00edt\u00e9s"
+            ],
+            "None": [
+                "Nincs"
+            ],
+            "Round up": [
+                "Kerek\u00edt\u00e9s felfel\u00e9"
+            ],
+            "Round to the nearest": [
+                "Kerek\u00edt\u00e9s a legk\u00f6zelebbihez"
+            ],
+            "Round down": [
+                "Kerek\u00edt\u00e9s lefel\u00e9"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Kerek\u00edt\u00e9s erre (p\u00e9ld\u00e1ul 1, 0,05 vagy 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Az \u00e1rak v\u00e9gz\u0151d\u00e9se (p\u00e9ld\u00e1ul 0,99)"
+            ],
+            "Add a currency": [
+                "Valuta hozz\u00e1ad\u00e1sa"
+            ],
+            "Which visitors see which currency": [
+                "Melyik l\u00e1togat\u00f3 melyik p\u00e9nznemet l\u00e1tja"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Orsz\u00e1g szerint: k\u00e9tbet\u0171s orsz\u00e1gk\u00f3d (p\u00e9ld\u00e1ul CH)"
+            ],
+            "Visitors from %s": [
+                "L\u00e1togat\u00f3k innen: %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Engedje meg a l\u00e1togat\u00f3knak a v\u00e1laszt\u00e1st (r\u00f6vid k\u00f3d [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Az \u00e1rak mostant\u00f3l egy s\u00fctit\u0151l vagy a l\u00e1togat\u00f3 orsz\u00e1g\u00e1t\u00f3l f\u00fcggnek: gy\u0151z\u0151dj\u00f6n meg arr\u00f3l, hogy az oldal gyors\u00edt\u00f3t\u00e1ra a \u201etranzly_currency\u201d s\u00fcti alapj\u00e1n v\u00e1ltozik, vagy kiz\u00e1rja a bolti oldalakat."
+            ],
+            "Save currencies": [
+                "Valut\u00e1k ment\u00e9se"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Azok a szavak, amelyeket a sablonod \u00e9s a b\u0151v\u00edtm\u00e9nyeid jelen\u00edtenek meg (gombok, c\u00edmk\u00e9k). Olvass be egy sablont vagy b\u0151v\u00edtm\u00e9nyt egyszer, majd ford\u00edtsd le a sz\u00f6veg\u00e9t itt; a te ford\u00edt\u00e1sod fel\u00fcl\u00edrja a b\u0151v\u00edtm\u00e9ny saj\u00e1tj\u00e1t."
+            ],
+            "%d texts": [
+                "%d sz\u00f6veg"
+            ],
+            "not read yet": [
+                "m\u00e9g nem olvasott"
+            ],
+            "Read again": [
+                "\u00dajraolvas\u00e1s"
+            ],
+            "Read its text": [
+                "Olvassa el a sz\u00f6veg\u00e9t"
+            ],
+            "Translate": [
+                "Ford\u00edt\u00e1s"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "A feladat elindult %d elv\u00e9gzend\u0151 ford\u00edt\u00e1ssal. A h\u00e1tt\u00e9rben fut: ezt az oldalt bebezheti."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Men\u00fck \u00e9s megosztott sz\u00f6veg"
             ],
+            "Translation status": [
+                "Ford\u00edt\u00e1s \u00e1llapota"
+            ],
+            "Integrations": [
+                "Integr\u00e1ci\u00f3k"
+            ],
             "No meta description": [
                 "Nincs meta le\u00edr\u00e1s"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Szerkeszt\u00e9s"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "A(z) %1$d. feladat elindult: %2$d oldal ford\u00edt\u00e1sa zajlik a h\u00e1tt\u00e9rben. K\u00f6vesse nyomon a Ford\u00edt\u00e1si feladatok men\u00fcpontban."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d ford\u00edt\u00e1s ellen\u0151rz\u00e9se zajlik a h\u00e1tt\u00e9rben. Az \u00e9rt\u00e9kel\u00e9sek a meg\u00e9rkez\u00e9s\u00fck sorrendj\u00e9ben jelennek meg itt."
+            ],
+            "Missing": [
+                "Hi\u00e1nyz\u00f3"
+            ],
+            "Out of date": [
+                "Elavult"
+            ],
+            "Translated": [
+                "Leford\u00edtva"
+            ],
+            "Edited by a person": [
+                "Szem\u00e9ly \u00e1ltal szerkesztve"
+            ],
+            "Machine translated": [
+                "G\u00e9pi ford\u00edt\u00e1s\u00fa"
+            ],
+            "Waiting for review": [
+                "Fel\u00fclvizsg\u00e1latra v\u00e1r"
+            ],
+            "Needs a human look": [
+                "Emberi ellen\u0151rz\u00e9st ig\u00e9nyel"
+            ],
+            "Everything": [
+                "Minden"
+            ],
+            "Up to date": [
+                "Naprak\u00e9sz"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "A Tranzly m\u00e9g dolgozik azon, hogy kider\u00edtse, mely r\u00e9gebbi ford\u00edt\u00e1sok \u00e9v\u00fcltek el. Ennek folyamata alatt az \u201eelavult\u201d jel\u00f6l\u00e9s\u0171 darabok sz\u00e1ma n\u00f6vekedni fog."
+            ],
+            "Content type": [
+                "Tartalomt\u00edpus"
+            ],
+            "All content": [
+                "Minden tartalom"
+            ],
+            "Average quality": [
+                "\u00c1tlagos min\u0151s\u00e9g"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d leford\u00edtva (%2$d%%)"
+            ],
+            "Show": [
+                "Mutat\u00e1s"
+            ],
+            "Translate everything missing": [
+                "Minden hi\u00e1nyz\u00f3 leford\u00edt\u00e1sa"
+            ],
+            "Update everything out of date": [
+                "Friss\u00edtsen mindent, ami elavult"
+            ],
+            "Check the quality with AI": [
+                "Min\u0151s\u00e9g ellen\u0151rz\u00e9se mesters\u00e9ges intelligenci\u00e1val"
+            ],
+            "Translate the low-scoring pages again": [
+                "Ford\u00edtsa \u00fajra az alacsony pontsz\u00e1m\u00fa oldalakat"
+            ],
+            "Nothing here.": [
+                "Nincs itt semmi."
+            ],
+            "Quality": [
+                "Min\u0151s\u00e9g"
+            ],
+            "by a person": [
+                "szem\u00e9ly \u00e1ltal"
+            ],
+            "waiting for review": [
+                "ellen\u0151rz\u00e9sre v\u00e1r"
+            ],
+            "Side by side": [
+                "Egym\u00e1s mellett"
+            ],
+            "Show more": [
+                "Tov\u00e1bbiak megjelen\u00edt\u00e9se"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "A teljes webhely t\u00f6meges ford\u00edt\u00e1sa (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "A Tranzly Pro csomaggal kiv\u00e1laszthatja a tartalomt\u00edpusokat \u00e9s a nyelveket, megtekintheti a becsl\u00e9st, \u00e9s egy f\u00fcst alatt leford\u00edthatja az eg\u00e9sz webhelyet."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d h\u00e1tt\u00e9rfeladat elind\u00edtva, nyelvenk\u00e9nt egy. K\u00f6vesse \u0151ket a Ford\u00edt\u00e1si feladatok men\u00fcpontban."
+            ],
+            "Content types": [
+                "Tartalomt\u00edpusok"
+            ],
+            "What to translate": [
+                "Mit kell leford\u00edtani"
+            ],
+            "Only what is missing": [
+                "Csak ami hi\u00e1nyzik"
+            ],
+            "Only what is out of date": [
+                "Csak ami elavult"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Minden (a szem\u00e9ly \u00e1ltal szerkesztett oldalak v\u00e1ltozatlanul maradnak)"
+            ],
+            "Estimate": [
+                "Becsl\u00e9s"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d oldal, %2$s karakter. Ez a motor nem tesz k\u00f6zz\u00e9 \u00e1rat."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d oldal, %2$s karakter, kb. $%3$s."
+            ],
+            "Find a text": [
+                "Sz\u00f6veg keres\u00e9se"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "M\u00e9g %d: \u00edrja be a \"Sz\u00f6veg keres\u00e9se\" kifejez\u00e9st a lista sz\u0171k\u00edt\u00e9s\u00e9hez."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Egy kis gomb minden oldal sark\u00e1ban, b\u00e1rmilyen t\u00e9m\u00e1n, be\u00e1ll\u00edt\u00e1s n\u00e9lk\u00fcl."
-            ],
-            "Where": [
-                "Hol"
             ],
             "Off": [
                 "Ki"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Minden c\u00edmbeli sz\u00f3 2 \u00e9s 12 k\u00f6z\u00f6tti kisbet\u0171, sz\u00e1mjegy vagy k\u00f6t\u0151jel."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Az automatikus ford\u00edt\u00e1s friss\u00edt\u00e9skor, a lektor szerepk\u00f6r\u00f6k, az XLIFF export ford\u00edt\u00f3k sz\u00e1m\u00e1ra, a v\u00e1lt\u00e1s a WPML, Polylang vagy TranslatePress rendszerekr\u0151l, valamint a mesters\u00e9ges intelligencia alap\u00fa min\u0151s\u00e9gellen\u0151rz\u00e9s a Tranzly Pro r\u00e9sze."
+            ],
+            "When an original changes": [
+                "Ha egy eredeti megv\u00e1ltozik"
+            ],
+            "When a page is edited": [
+                "Amikor egy oldalt szerkesztenek"
+            ],
+            "Mark its translations out of date": [
+                "Jel\u00f6lje a ford\u00edt\u00e1sait elavultk\u00e9nt"
+            ],
+            "Translate its translations again in the background": [
+                "Ford\u00edtsa le \u00fajra a ford\u00edt\u00e1sait a h\u00e1tt\u00e9rben"
+            ],
+            "Do nothing": [
+                "Ne tegyen semmit"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Az ember \u00e1ltal szerkesztett ford\u00edt\u00e1st soha nem \u00edrjuk fel\u00fcl; helyette elavultnak jel\u00f6lj\u00fck."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Ford\u00edtsa le az \u00faj oldalakat minden nyelvre, amikor azok megjelennek"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Egy m\u00e1sodik MI-modell olvassa az egyes ford\u00edt\u00e1sokat az eredeti mellett, pontozza azokat, \u00e9s megnevezi a hib\u00e1kat. Ez a be\u00e1ll\u00edt\u00e1sokban megadott saj\u00e1t MI-kulcsot haszn\u00e1lja. Ind\u00edtson ellen\u0151rz\u00e9st a Ford\u00edt\u00e1s \u00e1llapota men\u00fcpontb\u00f3l."
+            ],
+            "AI provider": [
+                "MI-szolg\u00e1ltat\u00f3"
+            ],
+            "The AI settings\u2019 general model": [
+                "A mesters\u00e9ges intelligencia be\u00e1ll\u00edt\u00e1sainak \u00e1ltal\u00e1nos modellje"
+            ],
+            "Recommended": [
+                "Aj\u00e1nlott"
+            ],
+            "A page needs a human look below this score": [
+                "Enn\u00e9l a pontsz\u00e1m\u05d6\u05d9 alatti oldalak emberi ellen\u0151rz\u00e9st ig\u00e9nyelnek"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Csak a lektor \u00e1ltal j\u00f3v\u00e1hagyott ford\u00edt\u00e1sokat tegye k\u00f6zz\u00e9"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Adja meg azembereknek a Ford\u00edt\u00f3 szerepk\u00f6rt (szerkeszti a ford\u00edt\u00e1sokat, az eredetieket soha, nem tud k\u00f6zz\u00e9tenni) vagy a Ford\u00edt\u00e1sellen\u0151r szerepk\u00f6rt (j\u00f3v\u00e1hagy\u00e1sra is jogosult). Az ellen\u0151r\u00f6k a Bejegyz\u00e9sek \u00e9s Oldalak list\u00e1iban a \u201eF\u00fcgg\u0151ben\u201d sz\u00f3cikk alatt tal\u00e1lj\u00e1k meg a v\u00e1rakoz\u00f3 elemeket is; egy ottani k\u00f6zz\u00e9t\u00e9tele egyben a j\u00f3v\u00e1hagy\u00e1s\u00e1t is jelenti."
+            ],
+            "Manage users": [
+                "Felhaszn\u00e1l\u00f3k kezel\u00e9se"
+            ],
+            "Nothing is waiting for review.": [
+                "Nincs ellen\u0151rz\u00e9sre v\u00e1r\u00f3 elem."
+            ],
+            "Note for the translator (optional)": [
+                "Megjegyz\u00e9s a ford\u00edt\u00f3 sz\u00e1m\u00e1ra (opcion\u00e1lis)"
+            ],
+            "Read side by side": [
+                "Egym\u00e1s melletti olvas\u00e1s"
+            ],
+            "Approve": [
+                "J\u00f3v\u00e1hagy\u00e1s"
+            ],
+            "Ask for changes": [
+                "M\u00f3dos\u00edt\u00e1sok k\u00e9r\u00e9se"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d ford\u00edt\u00e1s import\u00e1lva \u00e9s v\u00e9dve a g\u00e9pi ford\u00edt\u00e1st\u00f3l."
+            ],
+            "Export and import for translators": [
+                "Export\u00e1l\u00e1s \u00e9s import\u00e1l\u00e1s ford\u00edt\u00f3k sz\u00e1m\u00e1ra"
+            ],
+            "Not translated yet": [
+                "M\u00e9g nincs leford\u00edtva"
+            ],
+            "Already translated": [
+                "M\u00e1r leford\u00edtva"
+            ],
+            "Format": [
+                "Form\u00e1tum"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (ford\u00edt\u00f3eszk\u00f6z\u00f6k)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (t\u00e1bl\u00e1zatok)"
+            ],
+            "Download the file": [
+                "F\u00e1jl let\u00f6lt\u00e9se"
+            ],
+            "Import a translated file": [
+                "Leford\u00edtott f\u00e1jl import\u00e1l\u00e1sa"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Visszavonva: %1$d hivatkoz\u00e1s elt\u00e1vol\u00edtva, %2$d import\u00e1lt oldal t\u00f6r\u00f6lve."
+            ],
+            "Dry run, nothing changed:": [
+                "Pr\u00f3ba\u00fczem, semmi sem v\u00e1ltozott:"
+            ],
+            "Imported:": [
+                "Import\u00e1lva:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d nyelv hozz\u00e1adva, %2$d ford\u00edt\u00e1s \u00f6sszekapcsolva, %3$d oldal l\u00e9trehozva, %4$d sz\u00f6veg."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Kapcsold ki el\u0151sz\u00f6r a m\u00e1sik b\u0151v\u00edtm\u00e9nyt (a c\u00edmk\u00e9i \u00e9s v\u00e1lt\u00f3i konfliktusba ker\u00fcln\u00e9nek a Tranzly szolg\u00e1ltat\u00e1ssal). Az adatai ott maradnak, ahol vannak, \u00edgy vissza tudsz v\u00e1ltani; a Visszavon\u00e1s pontosan azt t\u00e1vol\u00edtja el, amit az import\u00e1l\u00e1s hozz\u00e1adott."
+            ],
+            "No data from this plugin on this site.": [
+                "Nincsenek adatok ett\u0151l a b\u0151v\u00edtm\u00e9nyt\u0151l ezen a webhelyen."
+            ],
+            "Languages: %s": [
+                "Nyelvek: %s"
+            ],
+            "still active: switch it off first.": [
+                "m\u00e9g akt\u00edv: kapcsolja ki el\u0151sz\u00f6r."
+            ],
+            "Dry run": [
+                "Sz\u00e1raz futtat\u00e1s"
+            ],
+            "Import": [
+                "Import\u00e1l\u00e1s"
+            ],
+            "Undo the import": [
+                "Import\u00e1l\u00e1s visszavon\u00e1sa"
+            ],
+            "Comments and product reviews": [
+                "Megjegyz\u00e9sek \u00e9s term\u00e9k\u00e9rt\u00e9kel\u00e9sek"
+            ],
+            "Each language keeps its own": [
+                "Minden nyelv meg\u0151rzi a saj\u00e1tj\u00e1t"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Minden verzi\u00f3 \u00f6sszes nyelvi megjegyz\u00e9s\u00e9nek megjelen\u00edt\u00e9se"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Mutassa meg mindet az olvas\u00f3 nyelv\u00e9re leford\u00edtva"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "A ford\u00edt\u00e1s minden j\u00f3v\u00e1hagyott hozz\u00e1sz\u00f3l\u00e1s eset\u00e9n az \u00d6n ford\u00edt\u00f3motorj\u00e1t haszn\u00e1lja. A spamet \u00e9s a moder\u00e1l\u00e1sra v\u00e1r\u00f3 hozz\u00e1sz\u00f3l\u00e1sokat soha nem k\u00fcldj\u00fck el."
             ]
         }
     }

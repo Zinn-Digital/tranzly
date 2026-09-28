@@ -28,13 +28,48 @@
 		--zak-text: #f0f0f1;
 		--zak-muted: #c3c4c7;
 		--zak-border: #3c434a;
+		--zak-link-dark: #9ec2ff;
 
 		.components-card,
 		.components-card__header,
-		.components-card__body {
+		.components-card__body,
+		// A host's own settings are PANELS, not cards: left white, the shell's light text sat on
+		// them unreadable (axe color-contrast in dark mode, 2026-09-28).
+		.components-panel,
+		.components-panel__header,
+		.components-panel__body {
 			background: var(--zak-surface);
 			color: var(--zak-text);
 			border-color: var(--zak-border);
+		}
+
+		.components-panel__body-toggle.components-button,
+		.components-panel__body-title,
+		.components-tab-panel__tabs-item {
+			color: var(--zak-text);
+		}
+
+		.components-panel__arrow {
+			fill: var(--zak-text);
+		}
+
+		.components-base-control__help,
+		.components-form-token-field__help {
+			color: var(--zak-muted);
+		}
+
+		// The admin accent (#3858e9 by default) is 3.2:1 on the dark surface; links and
+		// tertiary/link buttons take a lighter tint of it so they stay above 4.5:1.
+		a,
+		.components-button.is-tertiary,
+		.components-button.is-link,
+		.components-external-link {
+			color: var(--zak-link-dark);
+		}
+
+		.components-button.is-tertiary.is-pressed,
+		.components-button.is-tertiary[aria-current="page"] {
+			color: #fff;
 		}
 
 		.components-base-control__label,

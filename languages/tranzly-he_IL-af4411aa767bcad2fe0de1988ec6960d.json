@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "\u05ea\u05e8\u05d2\u05dd \u05d1\u05e8\u05e7\u05e2"
             ],
+            "Custom fields": [
+                "\u05e9\u05d3\u05d5\u05ea \u05de\u05d5\u05ea\u05d0\u05de\u05d9\u05dd \u05d0\u05d9\u05e9\u05d9\u05ea"
+            ],
+            "Bulk translate the whole site": [
+                "\u05ea\u05e8\u05d2\u05dd \u05d0\u05ea \u05db\u05dc \u05d4\u05d0\u05ea\u05e8 \u05d1\u05db\u05de\u05d5\u05ea \u05d2\u05d3\u05d5\u05dc\u05d4"
+            ],
+            "Review and approval": [
+                "\u05d1\u05d3\u05d9\u05e7\u05d4 \u05d5\u05d0\u05d9\u05e9\u05d5\u05e8"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "\u05de\u05e2\u05d1\u05e8 \u05de-WPML, \u05de-Polylang \u05d0\u05d5 \u05de-TranslatePress"
+            ],
             "Floating switcher": [
                 "\u05d1\u05d5\u05e8\u05e8 \u05e6\u05e3"
+            ],
+            "AI quality check": [
+                "\u05d1\u05d3\u05d9\u05e7\u05ea \u05d0\u05d9\u05db\u05d5\u05ea \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea"
+            ],
+            "Workflow": [
+                "\u05ea\u05d4\u05dc\u05d9\u05da \u05e2\u05d1\u05d5\u05d3\u05d4"
             ],
             "Next": [
                 "\u05d4\u05d1\u05d0"
@@ -25,11 +43,17 @@
             "Open": [
                 "\u05e4\u05ea\u05d7"
             ],
+            "Model": [
+                "\u05d3\u05d2\u05dd"
+            ],
             "About": [
                 "\u05d0\u05d5\u05d3\u05d5\u05ea"
             ],
             "Done": [
                 "\u05d1\u05d5\u05e6\u05e2"
+            ],
+            "Actions": [
+                "\u05e4\u05e2\u05d5\u05dc\u05d5\u05ea"
             ],
             "Cancelled": [
                 "\u05de\u05d1\u05d5\u05d8\u05dc"
@@ -58,11 +82,23 @@
             "Sites": [
                 "\u05d0\u05ea\u05e8\u05d9\u05dd"
             ],
+            "State": [
+                "\u05de\u05e6\u05d1"
+            ],
             "Type": [
                 "\u05e1\u05d5\u05d2"
             ],
             "Upgrade": [
                 "\u05e9\u05d3\u05e8\u05d2"
+            ],
+            "Comments and reviews": [
+                "\u05ea\u05d2\u05d5\u05d1\u05d5\u05ea \u05d5\u05d1\u05d9\u05e7\u05d5\u05e8\u05d5\u05ea"
+            ],
+            "Currency": [
+                "\u05de\u05d8\u05d1\u05e2"
+            ],
+            "Theme and plugin text": [
+                "\u05d8\u05e7\u05e1\u05d8 \u05e9\u05dc \u05e2\u05e8\u05db\u05d5\u05ea \u05e0\u05d5\u05e9\u05d0 \u05d5\u05ea\u05d5\u05e1\u05e4\u05d9\u05dd"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "\u05e1\u05d5\u05d1-\u05d3\u05d5\u05de\u05d9\u05d9\u05e0\u05d9\u05dd \u05d5\u05d3\u05d5\u05de\u05d9\u05d9\u05e0\u05d9\u05dd \u05e0\u05e4\u05e8\u05d3\u05d9\u05dd \u05dc\u05db\u05dc \u05e9\u05e4\u05d4 \u05d4\u05dd \u05d7\u05dc\u05e7 \u05de-Tranzly Pro."
@@ -747,6 +783,150 @@
             "Translation engine": [
                 "\u05de\u05e0\u05d5\u05e2 \u05ea\u05e8\u05d2\u05d5\u05dd"
             ],
+            "What Tranzly translates on this site": [
+                "\u05de\u05d4 \u05e9-Tranzly \u05de\u05ea\u05e8\u05d2\u05dd \u05d1\u05d0\u05ea\u05e8 \u05d6\u05d4"
+            ],
+            "found, translated with your content": [
+                "\u05e0\u05de\u05e6\u05d0\u05d5, \u05ea\u05d5\u05e8\u05d2\u05de\u05d5 \u05e2\u05dd \u05d4\u05ea\u05d5\u05db\u05df \u05e9\u05dc\u05da"
+            ],
+            "not on this site": [
+                "\u05dc\u05d0 \u05d1\u05d0\u05ea\u05e8 \u05d6\u05d4"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "\u05e2\u05dd Tranzly Pro: \u05d3\u05e4\u05d9 Elementor, Bricks, Divi, Beaver Builder, Oxygen \u05d5-WPBakery; \u05d4\u05db\u05dc \u05d1-WooCommerce, \u05db\u05d5\u05dc\u05dc \u05de\u05d7\u05d9\u05e8\u05d9\u05dd \u05d1\u05de\u05d8\u05d1\u05e2 \u05e9\u05dc \u05d4\u05de\u05d1\u05e7\u05e8; \u05e9\u05d3\u05d5\u05ea \u05d4-SEO \u05e9\u05dc Yoast SEO, Rank Math, SEOPress \u05d5-All in One SEO; \u05e9\u05d3\u05d5\u05ea ACF, Meta Box \u05d5-Pods; \u05d8\u05e4\u05e1\u05d9\u05dd \u05d5\u05d4\u05d0\u05d9\u05de\u05d9\u05d9\u05dc\u05d9\u05dd \u05e9\u05dc\u05d4\u05dd; \u05d4\u05d8\u05e7\u05e1\u05d8\u05d9\u05dd \u05e9\u05dc \u05e2\u05e8\u05db\u05ea \u05d4\u05e0\u05d5\u05e9\u05d0 \u05d5\u05d4\u05ea\u05d5\u05e1\u05e4\u05d9\u05dd \u05e9\u05dc\u05da; \u05d5\u05ea\u05d2\u05d5\u05d1\u05d5\u05ea \u05d5\u05d1\u05d9\u05e7\u05d5\u05e8\u05d5\u05ea."
+            ],
+            "Shop text and e-mails": [
+                "\u05d8\u05e7\u05e1\u05d8\u05d9\u05dd \u05d5\u05d0\u05d9\u05de\u05d9\u05d9\u05dc\u05d9\u05dd \u05dc\u05d7\u05e0\u05d5\u05ea"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "\u05e0\u05d5\u05e9\u05d0\u05d9 \u05d4\u05d5\u05d3\u05e2\u05d5\u05ea \u05d3\u05d5\u05d0\"\u05dc \u05d5\u05db\u05d5\u05ea\u05e8\u05d5\u05ea, \u05e9\u05de\u05d5\u05ea \u05e9\u05d9\u05d8\u05d5\u05ea \u05ea\u05e9\u05dc\u05d5\u05dd \u05d5\u05de\u05e9\u05dc\u05d5\u05d7, \u05d5\u05d4\u05d5\u05d3\u05e2\u05d5\u05ea \u05d4\u05ea\u05e9\u05dc\u05d5\u05dd. \u05d4\u05d5\u05d3\u05e2\u05d5\u05ea \u05d4\u05d3\u05d5\u05d0\"\u05dc \u05e9\u05dc \u05db\u05dc \u05d4\u05d6\u05de\u05e0\u05d4 \u05e0\u05e9\u05dc\u05d7\u05d5\u05ea \u05d1\u05e9\u05e4\u05d4 \u05e9\u05d1\u05d4 \u05d4\u05d9\u05d0 \u05d1\u05d5\u05e6\u05e2\u05d4."
+            ],
+            "Forms and their e-mails": [
+                "\u05d8\u05e4\u05e1\u05d9\u05dd \u05d5\u05d4\u05d5\u05d3\u05e2\u05d5\u05ea \u05d4\u05d3\u05d5\u05d0\"\u05dc \u05e9\u05dc\u05d4\u05dd"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "\u05dc\u05db\u05dc \u05d8\u05d5\u05e4\u05e1 \u05d9\u05e9 \u05e8\u05e9\u05d9\u05de\u05ea \u05e8\u05e9\u05d5\u05de\u05d5\u05ea \u05d0\u05d7\u05ea; \u05d4\u05ea\u05d5\u05d5\u05d9\u05d5\u05ea, \u05d4\u05db\u05e4\u05ea\u05d5\u05e8\u05d9\u05dd, \u05d4\u05d4\u05d5\u05d3\u05e2\u05d5\u05ea \u05d5\u05d4\u05d0\u05d9\u05de\u05d9\u05d9\u05dc\u05d9\u05dd \u05e9\u05dc\u05d5 \u05de\u05d5\u05e6\u05d2\u05d9\u05dd \u05d1\u05e9\u05e4\u05ea \u05d4\u05de\u05d1\u05e7\u05e8."
+            ],
+            "Saved.": [
+                "\u05e0\u05e9\u05de\u05e8."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "\u05d8\u05e8\u05dd \u05d4\u05d5\u05d2\u05d3\u05e8\u05d5 \u05e9\u05d3\u05d5\u05ea ACF, Meta Box \u05d0\u05d5 Pods."
+            ],
+            "Field": [
+                "\u05e9\u05d3\u05d4"
+            ],
+            "Where": [
+                "\u05d4\u05d9\u05db\u05df"
+            ],
+            "In a translation": [
+                "\u05d1\u05ea\u05d5\u05da \u05ea\u05e8\u05d2\u05d5\u05dd"
+            ],
+            "What happens to %s in a translation": [
+                "\u05de\u05d4 \u05e7\u05d5\u05e8\u05d4 \u05dc-%s \u05d1\u05ea\u05e8\u05d2\u05d5\u05dd"
+            ],
+            "Translate it": [
+                "\u05ea\u05e8\u05d2\u05dd \u05d0\u05d5\u05ea\u05d5"
+            ],
+            "Copy it as it is": [
+                "\u05d4\u05e2\u05ea\u05e7 \u05d0\u05ea \u05d6\u05d4 \u05db\u05e4\u05d9 \u05e9\u05d4\u05d5\u05d0"
+            ],
+            "Leave it empty": [
+                "\u05d4\u05e9\u05d0\u05e8 \u05d0\u05ea \u05d6\u05d4 \u05e8\u05d9\u05e7"
+            ],
+            "The shop\u2019s currency": [
+                "\u05d4\u05de\u05d8\u05d1\u05e2 \u05e9\u05dc \u05d4\u05d7\u05e0\u05d5\u05ea"
+            ],
+            "Currencies": [
+                "\u05de\u05d8\u05d1\u05e2\u05d5\u05ea"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "\u05d4\u05e6\u05d2 \u05de\u05d7\u05d9\u05e8\u05d9\u05dd \u05d1\u05de\u05d8\u05d1\u05e2\u05d5\u05ea \u05d0\u05d7\u05e8\u05d9\u05dd (\u05d4\u05de\u05d8\u05d1\u05e2 \u05e9\u05dc \u05d4\u05d7\u05e0\u05d5\u05ea \u05d4\u05d5\u05d0 %s)"
+            ],
+            "Exchange rates": [
+                "\u05e9\u05e2\u05e8\u05d9 \u05d7\u05dc\u05d9\u05e4\u05d9\u05df"
+            ],
+            "Rates last updated %s.": [
+                "\u05d4\u05ea\u05e2\u05e8\u05d9\u05e4\u05d9\u05dd \u05e2\u05d5\u05d3\u05db\u05e0\u05d5 \u05dc\u05d0\u05d7\u05e8\u05d5\u05e0\u05d4 \u05d1-%s."
+            ],
+            "Rates have not been fetched yet.": [
+                "\u05d4\u05ea\u05e2\u05e8\u05d9\u05e4\u05d9\u05dd \u05d8\u05e8\u05dd \u05e0\u05e9\u05dc\u05e4\u05d5."
+            ],
+            "Update the rates now": [
+                "\u05e2\u05d3\u05db\u05df \u05d0\u05ea \u05d4\u05ea\u05e2\u05e8\u05d9\u05e4\u05d9\u05dd \u05db\u05e2\u05ea"
+            ],
+            "New currency": [
+                "\u05de\u05d8\u05d1\u05e2 \u05d7\u05d3\u05e9"
+            ],
+            "Choose\u2026": [
+                "\u05d1\u05d7\u05e8\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "\u05ea\u05e2\u05e8\u05d9\u05e3 (\u05dc\u05db\u05dc 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "\u05d4\u05e7\u05dc\u05d3\u05ea \u05ea\u05e2\u05e8\u05d9\u05e3 \u05e9\u05d5\u05de\u05e8\u05ea \u05e2\u05dc\u05d9\u05d5: \u05d4\u05e2\u05d3\u05db\u05d5\u05df \u05d4\u05d9\u05d5\u05de\u05d9 \u05dc\u05d0 \u05d9\u05e9\u05e0\u05d4 \u05d0\u05d5\u05ea\u05d5."
+            ],
+            "Rounding": [
+                "\u05e2\u05d9\u05d2\u05d5\u05dc"
+            ],
+            "None": [
+                "\u05dc\u05dc\u05d0"
+            ],
+            "Round up": [
+                "\u05e2\u05d9\u05d2\u05d5\u05dc \u05e1\u05db\u05d5\u05dd"
+            ],
+            "Round to the nearest": [
+                "\u05e2\u05d2\u05dc \u05dc\u05de\u05e1\u05e4\u05e8 \u05d4\u05e7\u05e8\u05d5\u05d1"
+            ],
+            "Round down": [
+                "\u05e2\u05d9\u05d2\u05d5\u05dc \u05db\u05dc\u05e4\u05d9 \u05de\u05d8\u05d4"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "\u05e2\u05d9\u05d2\u05d5\u05dc \u05dc-(\u05dc\u05d3\u05d5\u05d2\u05de\u05d4 1, 0.05 \u05d0\u05d5 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "\u05d4\u05de\u05d7\u05d9\u05e8\u05d9\u05dd \u05de\u05e1\u05ea\u05d9\u05d9\u05de\u05d9\u05dd \u05d1- (\u05dc\u05d3\u05d5\u05d2\u05de\u05d4 0.99)"
+            ],
+            "Add a currency": [
+                "\u05d4\u05d5\u05e1\u05e3 \u05de\u05d8\u05d1\u05e2"
+            ],
+            "Which visitors see which currency": [
+                "\u05d0\u05d9\u05dc\u05d5 \u05de\u05d1\u05e7\u05e8\u05d9\u05dd \u05e8\u05d5\u05d0\u05d9\u05dd \u05d0\u05d9\u05d6\u05d4 \u05de\u05d8\u05d1\u05e2"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "\u05dc\u05e4\u05d9 \u05de\u05d3\u05d9\u05e0\u05d4: \u05e7\u05d5\u05d3 \u05de\u05d3\u05d9\u05e0\u05d4 \u05d1\u05df \u05e9\u05ea\u05d9 \u05d0\u05d5\u05ea\u05d9\u05d5\u05ea (\u05dc\u05d3\u05d5\u05d2\u05de\u05d4 CH)"
+            ],
+            "Visitors from %s": [
+                "\u05de\u05d1\u05e7\u05e8\u05d9\u05dd \u05de-%s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "\u05ea\u05df \u05dc\u05de\u05d1\u05e7\u05e8\u05d9\u05dd \u05dc\u05d1\u05d7\u05d5\u05e8 (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "\u05d4\u05de\u05d7\u05d9\u05e8\u05d9\u05dd \u05ea\u05dc\u05d5\u05d9\u05d9\u05dd \u05db\u05e2\u05ea \u05d1\u05e2\u05d5\u05d2\u05d9\u05d4 \u05d0\u05d5 \u05d1\u05d0\u05e8\u05e5 \u05d4\u05de\u05d5\u05e6\u05d0 \u05e9\u05dc \u05d4\u05de\u05d1\u05e7\u05e8: \u05d9\u05e9 \u05dc\u05d5\u05d5\u05d3\u05d0 \u05e9\u05de\u05d8\u05de\u05d5\u05df \u05d4\u05e2\u05de\u05d5\u05d3\u05d9\u05dd \u05e9\u05dc\u05da \u05de\u05e9\u05ea\u05e0\u05d4 \u05d1\u05d4\u05ea\u05d0\u05dd \u05dc\u05e2\u05d5\u05d2\u05d9\u05d4 \"tranzly_currency\", \u05d0\u05d5 \u05e9\u05d3\u05e4\u05d9 \u05d4\u05d7\u05e0\u05d5\u05ea \u05de\u05d5\u05d7\u05e8\u05d2\u05d9\u05dd \u05de\u05de\u05e0\u05d5."
+            ],
+            "Save currencies": [
+                "\u05e9\u05de\u05d5\u05e8 \u05de\u05d8\u05d1\u05e2\u05d5\u05ea"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "\u05d4\u05de\u05d9\u05dc\u05d9\u05dd \u05e9\u05d4\u05e2\u05e8\u05db\u05d4 \u05d5\u05d4\u05ea\u05d5\u05e1\u05e4\u05d9\u05dd \u05e9\u05dc\u05da \u05de\u05d3\u05e4\u05d9\u05e1\u05d9\u05dd \u05d1\u05e2\u05e6\u05de\u05dd (\u05db\u05e4\u05ea\u05d5\u05e8\u05d9\u05dd, \u05ea\u05d5\u05d5\u05d9\u05d5\u05ea). \u05e7\u05e8\u05d0 \u05e2\u05e8\u05db\u05d4 \u05d0\u05d5 \u05ea\u05d5\u05e1\u05e3 \u05e4\u05e2\u05dd \u05d0\u05d7\u05ea, \u05d5\u05d0\u05d6 \u05ea\u05e8\u05d2\u05dd \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05e9\u05dc\u05d5 \u05db\u05d0\u05df; \u05d4\u05ea\u05e8\u05d2\u05d5\u05dd \u05e9\u05dc\u05da \u05d2\u05d5\u05d1\u05e8 \u05e2\u05dc \u05d6\u05d4 \u05e9\u05dc \u05d4\u05ea\u05d5\u05e1\u05e3 \u05e2\u05e6\u05de\u05d5."
+            ],
+            "%d texts": [
+                "\u05d8\u05e7\u05e1\u05d8\u05d9\u05dd %d"
+            ],
+            "not read yet": [
+                "\u05d8\u05e8\u05dd \u05e0\u05e7\u05e8\u05d0"
+            ],
+            "Read again": [
+                "\u05e7\u05e8\u05d0 \u05e9\u05d5\u05d1"
+            ],
+            "Read its text": [
+                "\u05e7\u05e8\u05d0 \u05d0\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8 \u05e9\u05dc\u05d5"
+            ],
+            "Translate": [
+                "\u05ea\u05e8\u05d2\u05dd"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "\u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05d4\u05d7\u05dc\u05d4 \u05e2\u05dd %d \u05ea\u05d5\u05e8\u05d9\u05dd \u05dc\u05d1\u05d9\u05e6\u05d5\u05e2. \u05d4\u05d9\u05d0 \u05e4\u05d5\u05e2\u05dc\u05ea \u05d1\u05e8\u05e7\u05e2: \u05d1\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea\u05da \u05dc\u05e1\u05d2\u05d5\u05e8 \u05d3\u05e3 \u05d6\u05d4."
             ],
@@ -897,6 +1077,12 @@
             "Menus and shared text": [
                 "\u05ea\u05e4\u05e8\u05d9\u05d8\u05d9\u05dd \u05d5\u05d8\u05e7\u05e1\u05d8 \u05de\u05e9\u05d5\u05ea\u05e3"
             ],
+            "Translation status": [
+                "\u05e1\u05d8\u05d8\u05d5\u05e1 \u05ea\u05e8\u05d2\u05d5\u05dd"
+            ],
+            "Integrations": [
+                "\u05d0\u05d9\u05e0\u05d8\u05d2\u05e8\u05e6\u05d9\u05d5\u05ea"
+            ],
             "No meta description": [
                 "\u05d0\u05d9\u05df \u05ea\u05d9\u05d0\u05d5\u05e8 \u05de\u05d8\u05d0"
             ],
@@ -936,11 +1122,128 @@
             "Edit": [
                 "\u05e2\u05e8\u05d9\u05db\u05d4"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "\u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 %1$d \u05d4\u05ea\u05d7\u05d9\u05dc\u05d4: %2$d \u05e2\u05de\u05d5\u05d3\u05d9\u05dd \u05de\u05ea\u05d5\u05e8\u05d2\u05de\u05d9\u05dd \u05d1\u05e8\u05e7\u05e2. \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e7\u05d5\u05d1 \u05d0\u05d7\u05e8\u05d9 \u05d4\u05d4\u05ea\u05e7\u05d3\u05de\u05d5\u05ea \u05d1\u05de\u05e9\u05d9\u05de\u05d5\u05ea \u05ea\u05e8\u05d2\u05d5\u05dd."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d \u05ea\u05e8\u05d2\u05d5\u05dd\/\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e0\u05d1\u05d3\u05e7\u05d9\u05dd \u05d1\u05e8\u05e7\u05e2. \u05e6\u05d9\u05d5\u05e0\u05d9\u05dd \u05d9\u05d5\u05e4\u05d9\u05e2\u05d5 \u05db\u05d0\u05df \u05db\u05db\u05dc \u05e9\u05d9\u05d2\u05d9\u05e2\u05d5."
+            ],
+            "Missing": [
+                "\u05d7\u05e1\u05e8"
+            ],
+            "Out of date": [
+                "\u05dc\u05d0 \u05de\u05e2\u05d5\u05d3\u05db\u05df"
+            ],
+            "Translated": [
+                "\u05de\u05ea\u05d5\u05e8\u05d2\u05dd"
+            ],
+            "Edited by a person": [
+                "\u05e0\u05e2\u05e8\u05da \u05e2\u05dc \u05d9\u05d3\u05d9 \u05de\u05e9\u05ea\u05de\u05e9"
+            ],
+            "Machine translated": [
+                "\u05de\u05ea\u05d5\u05e8\u05d2\u05dd \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9\u05ea"
+            ],
+            "Waiting for review": [
+                "\u05de\u05de\u05ea\u05d9\u05df \u05dc\u05d1\u05d3\u05d9\u05e7\u05d4"
+            ],
+            "Needs a human look": [
+                "\u05d3\u05d5\u05e8\u05e9 \u05d1\u05d3\u05d9\u05e7\u05d4 \u05d0\u05e0\u05d5\u05e9\u05d9\u05ea"
+            ],
+            "Everything": [
+                "\u05d4\u05db\u05d5\u05dc"
+            ],
+            "Up to date": [
+                "\u05de\u05e2\u05d5\u05d3\u05db\u05df"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly \u05e2\u05d3\u05d9\u05d9\u05df \u05de\u05d1\u05e8\u05e8\u05ea \u05d0\u05d9\u05dc\u05d5 \u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05d9\u05e9\u05e0\u05d9\u05dd \u05d0\u05d9\u05e0\u05dd \u05de\u05e2\u05d5\u05d3\u05db\u05e0\u05d9\u05dd. \u05d4\u05de\u05e1\u05e4\u05e8\u05d9\u05dd \u05e9\u05dc \u05d4\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e9\"\u05d0\u05d9\u05e0\u05dd \u05de\u05e2\u05d5\u05d3\u05db\u05e0\u05d9\u05dd\" \u05d9\u05d2\u05d3\u05dc\u05d5 \u05d1\u05d6\u05de\u05df \u05e9\u05d4\u05d9\u05d0 \u05e4\u05d5\u05e2\u05dc\u05ea."
+            ],
+            "Content type": [
+                "\u05e1\u05d5\u05d2 \u05ea\u05d5\u05db\u05df"
+            ],
+            "All content": [
+                "\u05db\u05dc \u05d4\u05ea\u05d5\u05db\u05df"
+            ],
+            "Average quality": [
+                "\u05d0\u05d9\u05db\u05d5\u05ea \u05de\u05de\u05d5\u05e6\u05e2\u05ea"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d \u05ea\u05d5\u05e8\u05d2\u05de\u05d5 (%2$d%%)"
+            ],
+            "Show": [
+                "\u05d4\u05e6\u05d2"
+            ],
+            "Translate everything missing": [
+                "\u05ea\u05e8\u05d2\u05dd \u05d0\u05ea \u05db\u05dc \u05de\u05d4 \u05e9\u05d7\u05e1\u05e8"
+            ],
+            "Update everything out of date": [
+                "\u05e2\u05d3\u05db\u05df \u05d0\u05ea \u05db\u05dc \u05de\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05de\u05e2\u05d5\u05d3\u05db\u05df"
+            ],
+            "Check the quality with AI": [
+                "\u05d1\u05d3\u05d5\u05e7 \u05d0\u05ea \u05d4\u05d0\u05d9\u05db\u05d5\u05ea \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea"
+            ],
+            "Translate the low-scoring pages again": [
+                "\u05ea\u05e8\u05d2\u05dd \u05de\u05d7\u05d3\u05e9 \u05d0\u05ea \u05d4\u05d3\u05e4\u05d9\u05dd \u05d1\u05e2\u05dc\u05d9 \u05d4\u05e6\u05d9\u05d5\u05df \u05d4\u05e0\u05de\u05d5\u05da"
+            ],
+            "Nothing here.": [
+                "\u05d0\u05d9\u05df \u05db\u05d0\u05df \u05d3\u05d1\u05e8."
+            ],
+            "Quality": [
+                "\u05d0\u05d9\u05db\u05d5\u05ea"
+            ],
+            "by a person": [
+                "\u05e2\u05dc \u05d9\u05d3\u05d9 \u05d0\u05d3\u05dd"
+            ],
+            "waiting for review": [
+                "\u05de\u05de\u05ea\u05d9\u05df \u05dc\u05d1\u05d3\u05d9\u05e7\u05d4"
+            ],
+            "Side by side": [
+                "\u05d6\u05d4 \u05dc\u05e6\u05d3 \u05d6\u05d4"
+            ],
+            "Show more": [
+                "\u05d4\u05e6\u05d2 \u05e2\u05d5\u05d3"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "\u05ea\u05e8\u05d2\u05d5\u05dd \u05d4\u05de\u05d5\u05e0\u05d9 \u05e9\u05dc \u05d4\u05d0\u05ea\u05e8 \u05db\u05d5\u05dc\u05d5 (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "\u05d1\u05e2\u05d6\u05e8\u05ea Tranzly Pro, \u05d1\u05d7\u05e8\u05d5 \u05e1\u05d5\u05d2\u05d9 \u05ea\u05d5\u05db\u05df \u05d5\u05e9\u05e4\u05d5\u05ea, \u05e6\u05e4\u05d5 \u05d1\u05d4\u05e2\u05e8\u05db\u05ea \u05d4\u05e2\u05dc\u05d5\u05d9\u05d5\u05ea, \u05d5\u05ea\u05e8\u05d2\u05de\u05d5 \u05d0\u05ea \u05d4\u05d0\u05ea\u05e8 \u05db\u05d5\u05dc\u05d5 \u05d1\u05e4\u05e2\u05dd \u05d0\u05d7\u05ea."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d \u05de\u05e9\u05d9\u05de\u05d5\u05ea \u05d1\u05e8\u05e7\u05e2 \u05d4\u05d5\u05e4\u05e2\u05dc\u05d5, \u05d0\u05d7\u05ea \u05dc\u05db\u05dc \u05e9\u05e4\u05d4. \u05e0\u05d9\u05ea\u05df \u05dc\u05e2\u05e7\u05d5\u05d1 \u05d0\u05d7\u05e8\u05d9\u05d4\u05df \u05d1\u05de\u05e9\u05d9\u05de\u05d5\u05ea \u05ea\u05e8\u05d2\u05d5\u05dd."
+            ],
+            "Content types": [
+                "\u05e1\u05d5\u05d2\u05d9 \u05ea\u05d5\u05db\u05df"
+            ],
+            "What to translate": [
+                "\u05de\u05d4 \u05dc\u05ea\u05e8\u05d2\u05dd"
+            ],
+            "Only what is missing": [
+                "\u05e8\u05e7 \u05de\u05d4 \u05e9\u05d7\u05e1\u05e8"
+            ],
+            "Only what is out of date": [
+                "\u05e8\u05e7 \u05de\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05de\u05e2\u05d5\u05d3\u05db\u05df"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "\u05d4\u05db\u05d5\u05dc (\u05d3\u05e4\u05d9\u05dd \u05e9\u05e0\u05e2\u05e8\u05db\u05d5 \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d0\u05d3\u05dd \u05e0\u05e9\u05d0\u05e8\u05d9\u05dd \u05db\u05e4\u05d9 \u05e9\u05d4\u05dd)"
+            ],
+            "Estimate": [
+                "\u05d0\u05de\u05d3\u05df"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d \u05e2\u05de\u05d5\u05d3\u05d9\u05dd, %2$s \u05ea\u05d5\u05d5\u05d9\u05dd. \u05de\u05e0\u05d5\u05e2 \u05d6\u05d4 \u05d0\u05d9\u05e0\u05d5 \u05de\u05e4\u05e8\u05e1\u05dd \u05de\u05d7\u05d9\u05e8."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d \u05e2\u05de\u05d5\u05d3\u05d9\u05dd, %2$s \u05ea\u05d5\u05d5\u05d9\u05dd, \u05d1\u05e2\u05e8\u05da $%3$s."
+            ],
+            "Find a text": [
+                "\u05de\u05e6\u05d0 \u05d8\u05e7\u05e1\u05d8"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd: \u05d4\u05e7\u05dc\u05d3\/\u05d9 \"\u05de\u05e6\u05d0 \u05d8\u05e7\u05e1\u05d8\" \u05db\u05d3\u05d9 \u05dc\u05e6\u05de\u05e6\u05dd \u05d0\u05ea \u05d4\u05e8\u05e9\u05d9\u05de\u05d4."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "\u05db\u05e4\u05ea\u05d5\u05e8 \u05e7\u05d8\u05df \u05d1\u05e4\u05d9\u05e0\u05d4 \u05e9\u05dc \u05db\u05dc \u05e2\u05de\u05d5\u05d3, \u05d1\u05db\u05dc \u05e2\u05e8\u05db\u05ea \u05e2\u05d9\u05e6\u05d5\u05d1, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05d4\u05d2\u05d3\u05e8\u05d4."
-            ],
-            "Where": [
-                "\u05d4\u05d9\u05db\u05df"
             ],
             "Off": [
                 "\u05db\u05d1\u05d5\u05d9"
@@ -1082,6 +1385,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "\u05db\u05dc \u05de\u05d9\u05dc\u05d4 \u05d1\u05db\u05ea\u05d5\u05d1\u05ea \u05de\u05d5\u05e8\u05db\u05d1\u05ea \u05de-2 \u05e2\u05d3 12 \u05d0\u05d5\u05ea\u05d9\u05d5\u05ea \u05e7\u05d8\u05e0\u05d5\u05ea, \u05e1\u05e4\u05e8\u05d5\u05ea \u05d0\u05d5 \u05de\u05e7\u05e4\u05d9\u05dd."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "\u05ea\u05e8\u05d2\u05d5\u05dd \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9 \u05d1\u05e2\u05d3\u05db\u05d5\u05df, \u05ea\u05e4\u05e7\u05d9\u05d3\u05d9 \u05e1\u05d5\u05e7\u05e8\u05d9\u05dd, \u05d9\u05d9\u05e6\u05d5\u05d0 XLIFF \u05e2\u05d1\u05d5\u05e8 \u05de\u05ea\u05e8\u05d2\u05de\u05d9\u05dd, \u05de\u05e2\u05d1\u05e8 \u05de-WPML, \u05de-Polylang \u05d0\u05d5 \u05de-TranslatePress \u05d5\u05d1\u05d3\u05d9\u05e7\u05ea \u05d0\u05d9\u05db\u05d5\u05ea \u05de\u05d1\u05d5\u05e1\u05e1\u05ea \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea \u05db\u05dc\u05d5\u05dc\u05d9\u05dd \u05d1-Tranzly Pro."
+            ],
+            "When an original changes": [
+                "\u05db\u05d0\u05e9\u05e8 \u05de\u05e7\u05d5\u05e8 \u05de\u05e9\u05ea\u05e0\u05d4"
+            ],
+            "When a page is edited": [
+                "\u05db\u05d0\u05e9\u05e8 \u05e2\u05de\u05d5\u05d3 \u05e0\u05e2\u05e8\u05da"
+            ],
+            "Mark its translations out of date": [
+                "\u05e1\u05de\u05df \u05d0\u05ea \u05d4\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e9\u05dc\u05d5 \u05db\u05dc\u05d0 \u05de\u05e2\u05d5\u05d3\u05db\u05e0\u05d9\u05dd"
+            ],
+            "Translate its translations again in the background": [
+                "\u05ea\u05e8\u05d2\u05dd \u05d0\u05ea \u05d4\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e9\u05dc\u05d5 \u05e9\u05d5\u05d1 \u05d1\u05e8\u05e7\u05e2"
+            ],
+            "Do nothing": [
+                "\u05d0\u05dc \u05ea\u05e2\u05e9\u05d4 \u05d3\u05d1\u05e8"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "\u05ea\u05e8\u05d2\u05d5\u05dd \u05e9\u05e0\u05e2\u05e8\u05da \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d0\u05d3\u05dd \u05dc\u05e2\u05d5\u05dc\u05dd \u05d0\u05d9\u05e0\u05d5 \u05de\u05d5\u05d7\u05dc\u05e3; \u05d1\u05de\u05e7\u05d5\u05dd \u05d6\u05d0\u05ea, \u05d4\u05d5\u05d0 \u05de\u05e1\u05d5\u05de\u05df \u05db\u05dc\u05d0 \u05de\u05e2\u05d5\u05d3\u05db\u05df."
+            ],
+            "Translate new pages into every language when they are published": [
+                "\u05ea\u05e8\u05d2\u05dd \u05d3\u05e4\u05d9\u05dd \u05d7\u05d3\u05e9\u05d9\u05dd \u05dc\u05db\u05dc \u05e9\u05e4\u05d4 \u05d1\u05e2\u05ea \u05e4\u05e8\u05e1\u05d5\u05de\u05dd"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "\u05de\u05d5\u05d3\u05dc \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea \u05e9\u05e0\u05d9 \u05e7\u05d5\u05e8\u05d0 \u05db\u05dc \u05ea\u05e8\u05d2\u05d5\u05dd \u05dc\u05e6\u05d3 \u05d4\u05de\u05e7\u05d5\u05e8 \u05e9\u05dc\u05d5, \u05de\u05e2\u05e8\u05d9\u05da \u05d0\u05d5\u05ea\u05d5 \u05d5\u05de\u05e6\u05d9\u05d9\u05df \u05d0\u05ea \u05d4\u05e9\u05d2\u05d9\u05d0\u05d5\u05ea. \u05d4\u05d5\u05d0 \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05de\u05e4\u05ea\u05d7 \u05d4\u05d1\u05d9\u05e0\u05d4 \u05d4\u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea \u05d4\u05d0\u05d9\u05e9\u05d9 \u05e9\u05dc\u05da \u05de\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4\u05d1\u05d9\u05e0\u05d4 \u05d4\u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea. \u05d4\u05ea\u05d7\u05dc \u05d1\u05d3\u05d9\u05e7\u05d4 \u05de\u05e1\u05d8\u05d8\u05d5\u05e1 \u05d4\u05ea\u05e8\u05d2\u05d5\u05dd."
+            ],
+            "AI provider": [
+                "\u05e1\u05e4\u05e7 \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea"
+            ],
+            "The AI settings\u2019 general model": [
+                "\u05d4\u05de\u05d5\u05d3\u05dc \u05d4\u05db\u05dc\u05dc\u05d9 \u05e9\u05dc \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4-AI"
+            ],
+            "Recommended": [
+                "\u05de\u05d5\u05de\u05dc\u05e6\u05d9\u05dd"
+            ],
+            "A page needs a human look below this score": [
+                "\u05e2\u05de\u05d5\u05d3 \u05d6\u05e7\u05d5\u05e7 \u05dc\u05de\u05d1\u05d8 \u05d0\u05e0\u05d5\u05e9\u05d9 \u05de\u05ea\u05d7\u05ea \u05dc\u05e6\u05d9\u05d5\u05df \u05d6\u05d4"
+            ],
+            "Publish only translations a reviewer approved": [
+                "\u05e4\u05e8\u05e1\u05dd \u05e8\u05e7 \u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e9\u05d0\u05d5\u05e9\u05e8\u05d5 \u05e2\u05dc \u05d9\u05d3\u05d9 \u05de\u05d1\u05e7\u05e8"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "\u05d4\u05e2\u05e0\u05e7 \u05dc\u05d0\u05e0\u05e9\u05d9\u05dd \u05d0\u05ea \u05ea\u05e4\u05e7\u05d9\u05d3 \u05d4\u05de\u05ea\u05d5\u05e8\u05d2\u05de\u05df (\u05e2\u05d5\u05e8\u05da \u05ea\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd, \u05dc\u05e2\u05d5\u05dc\u05dd \u05dc\u05d0 \u05d0\u05ea \u05d4\u05de\u05e7\u05d5\u05e8, \u05d0\u05d9\u05e0\u05d5 \u05d9\u05db\u05d5\u05dc \u05dc\u05e4\u05e8\u05e1\u05dd) \u05d0\u05d5 \u05d0\u05ea \u05ea\u05e4\u05e7\u05d9\u05d3 \u05de\u05d1\u05e7\u05e8 \u05d4\u05ea\u05e8\u05d2\u05d5\u05dd (\u05d2\u05dd \u05de\u05d0\u05e9\u05e8). \u05de\u05d1\u05e7\u05e8\u05d9\u05dd \u05d2\u05dd \u05de\u05d5\u05e6\u05d0\u05d9\u05dd \u05d0\u05ea \u05db\u05dc \u05de\u05d4 \u05e9\u05de\u05de\u05ea\u05d9\u05df \u05d1\u05e8\u05e9\u05d9\u05de\u05d5\u05ea \"\u05e4\u05d5\u05e1\u05d8\u05d9\u05dd\" \u05d5\"\u05e2\u05de\u05d5\u05d3\u05d9\u05dd\" \u05ea\u05d7\u05ea \"\u05de\u05de\u05ea\u05d9\u05df\"; \u05e4\u05e8\u05e1\u05d5\u05dd \u05e4\u05e8\u05d9\u05d8 \u05e9\u05dd \u05de\u05d0\u05e9\u05e8 \u05d0\u05d5\u05ea\u05d5."
+            ],
+            "Manage users": [
+                "\u05e0\u05d9\u05d4\u05d5\u05dc \u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd"
+            ],
+            "Nothing is waiting for review.": [
+                "\u05d0\u05d9\u05df \u05e4\u05e8\u05d9\u05d8\u05d9\u05dd \u05d4\u05de\u05de\u05ea\u05d9\u05e0\u05d9\u05dd \u05dc\u05d1\u05d3\u05d9\u05e7\u05d4."
+            ],
+            "Note for the translator (optional)": [
+                "\u05d4\u05e2\u05e8\u05d4 \u05dc\u05de\u05ea\u05e8\u05d2\u05dd (\u05d0\u05d5\u05e4\u05e6\u05d9\u05d5\u05e0\u05dc\u05d9)"
+            ],
+            "Read side by side": [
+                "\u05e7\u05e8\u05d0 \u05d6\u05d4 \u05dc\u05e6\u05d3 \u05d6\u05d4"
+            ],
+            "Approve": [
+                "\u05d0\u05e9\u05e8"
+            ],
+            "Ask for changes": [
+                "\u05d1\u05e7\u05e9 \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d \u05ea\u05e8\u05d2\u05d5\u05dd \u05d9\u05d5\u05d1\u05d0\u05d5 \u05d5\u05d4\u05d5\u05d2\u05e0\u05d5 \u05de\u05e4\u05e0\u05d9 \u05ea\u05e8\u05d2\u05d5\u05dd \u05de\u05db\u05d5\u05e0\u05d4."
+            ],
+            "Export and import for translators": [
+                "\u05d9\u05d9\u05e6\u05d5\u05d0 \u05d5\u05d9\u05d9\u05d1\u05d5\u05d0 \u05e2\u05d1\u05d5\u05e8 \u05de\u05ea\u05e8\u05d2\u05de\u05d9\u05dd"
+            ],
+            "Not translated yet": [
+                "\u05d8\u05e8\u05dd \u05ea\u05d5\u05e8\u05d2\u05dd"
+            ],
+            "Already translated": [
+                "\u05db\u05d1\u05e8 \u05ea\u05d5\u05e8\u05d2\u05dd"
+            ],
+            "Format": [
+                "\u05e4\u05d5\u05e8\u05de\u05d8"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (\u05db\u05dc\u05d9 \u05ea\u05e8\u05d2\u05d5\u05dd)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (\u05d2\u05d9\u05dc\u05d9\u05d5\u05e0\u05d5\u05ea \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05d9\u05dd)"
+            ],
+            "Download the file": [
+                "\u05d4\u05d5\u05e8\u05d3 \u05d0\u05ea \u05d4\u05e7\u05d5\u05d1\u05e5"
+            ],
+            "Import a translated file": [
+                "\u05d9\u05d9\u05d1\u05d5\u05d0 \u05e7\u05d5\u05d1\u05e5 \u05de\u05ea\u05d5\u05e8\u05d2\u05dd"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "\u05d1\u05d5\u05e6\u05e2\u05d5: %1$d \u05e7\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d4\u05d5\u05e1\u05e8\u05d5, %2$d \u05d3\u05e4\u05d9\u05dd \u05de\u05d9\u05d5\u05d1\u05d0\u05d9\u05dd \u05e0\u05de\u05d7\u05e7\u05d5."
+            ],
+            "Dry run, nothing changed:": [
+                "\u05d4\u05e4\u05e2\u05dc\u05d4 \u05dc\u05d3\u05d5\u05d2\u05de\u05d4, \u05d3\u05d1\u05e8 \u05dc\u05d0 \u05e9\u05d5\u05e0\u05d4:"
+            ],
+            "Imported:": [
+                "\u05d9\u05d5\u05d1\u05d0:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d \u05e9\u05e4\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5, %2$d \u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05e7\u05d5\u05e9\u05e8\u05d5, %3$d \u05e2\u05de\u05d5\u05d3\u05d9\u05dd \u05e0\u05d1\u05e0\u05d5, %4$d \u05d8\u05e7\u05e1\u05d8\u05d9\u05dd."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "\u05d9\u05e9 \u05dc\u05db\u05d1\u05d5\u05ea \u05d0\u05ea \u05d4\u05ea\u05d5\u05e1\u05e3 \u05d4\u05e9\u05e0\u05d9 \u05ea\u05d7\u05d9\u05dc\u05d4 (\u05d4\u05db\u05ea\u05d5\u05d1\u05d5\u05ea \u05d5\u05de\u05d7\u05d5\u05dc\u05dc\u05d9 \u05d4\u05de\u05e2\u05d1\u05e8 \u05e9\u05dc\u05d5 \u05d9\u05ea\u05e0\u05d2\u05e9\u05d5 \u05e2\u05dd Tranzly). \u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05e9\u05dc\u05d5 \u05e0\u05e9\u05d0\u05e8\u05d9\u05dd \u05d1\u05de\u05e7\u05d5\u05de\u05dd, \u05db\u05da \u05e9\u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05d7\u05d6\u05d5\u05e8; \u05d4\u05e4\u05e2\u05d5\u05dc\u05d4 '\u05d1\u05d9\u05d8\u05d5\u05dc' \u05de\u05e1\u05d9\u05e8\u05d4 \u05d1\u05d3\u05d9\u05d5\u05e7 \u05d0\u05ea \u05de\u05d4 \u05e9\u05d4\u05d9\u05d9\u05d1\u05d5\u05d0 \u05d4\u05d5\u05e1\u05d9\u05e3."
+            ],
+            "No data from this plugin on this site.": [
+                "\u05d0\u05d9\u05df \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05de\u05ea\u05d5\u05e1\u05e3 \u05d6\u05d4 \u05d1\u05d0\u05ea\u05e8 \u05d6\u05d4."
+            ],
+            "Languages: %s": [
+                "\u05e9\u05e4\u05d5\u05ea: %s"
+            ],
+            "still active: switch it off first.": [
+                "\u05e2\u05d3\u05d9\u05d9\u05df \u05e4\u05e2\u05d9\u05dc: \u05d9\u05e9 \u05dc\u05db\u05d1\u05d5\u05ea \u05d6\u05d0\u05ea \u05ea\u05d7\u05d9\u05dc\u05d4."
+            ],
+            "Dry run": [
+                "\u05d4\u05e8\u05e6\u05ea \u05e0\u05e1\u05d9\u05d5\u05df"
+            ],
+            "Import": [
+                "\u05d9\u05d9\u05d1\u05d5\u05d0"
+            ],
+            "Undo the import": [
+                "\u05d1\u05d8\u05dc \u05d0\u05ea \u05d4\u05d9\u05d1\u05d5\u05d0"
+            ],
+            "Comments and product reviews": [
+                "\u05ea\u05d2\u05d5\u05d1\u05d5\u05ea \u05d5\u05d1\u05d9\u05e7\u05d5\u05e8\u05d5\u05ea \u05de\u05d5\u05e6\u05e8\u05d9\u05dd"
+            ],
+            "Each language keeps its own": [
+                "\u05db\u05dc \u05e9\u05e4\u05d4 \u05e9\u05d5\u05de\u05e8\u05ea \u05e2\u05dc \u05de\u05e9\u05dc\u05d4"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "\u05d4\u05e6\u05d2 \u05d0\u05ea \u05d4\u05d4\u05e2\u05e8\u05d5\u05ea \u05e9\u05dc \u05db\u05dc \u05e9\u05e4\u05d4 \u05e2\u05dc \u05db\u05dc \u05d2\u05e8\u05e1\u05d4"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "\u05d4\u05e6\u05d2 \u05d0\u05ea \u05db\u05d5\u05dc\u05dd, \u05de\u05ea\u05d5\u05e8\u05d2\u05de\u05d9\u05dd \u05dc\u05e9\u05e4\u05ea \u05d4\u05e7\u05d5\u05e8\u05d0"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "\u05ea\u05e8\u05d2\u05d5\u05dd \u05de\u05e9\u05ea\u05de\u05e9 \u05d1\u05de\u05e0\u05d5\u05e2 \u05d4\u05ea\u05e8\u05d2\u05d5\u05dd \u05e9\u05dc\u05da \u05e2\u05d1\u05d5\u05e8 \u05db\u05dc \u05ea\u05d2\u05d5\u05d1\u05d4 \u05de\u05d0\u05d5\u05e9\u05e8\u05ea. \u05e1\u05e4\u05d0\u05dd \u05d5\u05ea\u05d2\u05d5\u05d1\u05d5\u05ea \u05d4\u05de\u05de\u05ea\u05d9\u05e0\u05d5\u05ea \u05dc\u05d0\u05d9\u05e9\u05d5\u05e8 \u05d0\u05d9\u05e0\u05dd \u05e0\u05e9\u05dc\u05d7\u05d9\u05dd \u05dc\u05e2\u05d5\u05dc\u05dd."
             ]
         }
     }

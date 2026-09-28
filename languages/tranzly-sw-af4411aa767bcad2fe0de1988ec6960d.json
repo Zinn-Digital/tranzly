@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Tafsiri kwa nyuma"
             ],
+            "Custom fields": [
+                "Sehemu maalum"
+            ],
+            "Bulk translate the whole site": [
+                "Tafsiri tovuti nzima kwa mara moja"
+            ],
+            "Review and approval": [
+                "Ukaguzi na uidhinishaji"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Badili kutoka WPML, Polylang au TranslatePress"
+            ],
             "Floating switcher": [
                 "Kigeuzi kinachoelea"
+            ],
+            "AI quality check": [
+                "Ukaguzi wa ubora wa AI"
+            ],
+            "Workflow": [
+                "Mkondo wa Kazi"
             ],
             "Next": [
                 "Ijayo"
@@ -25,11 +43,17 @@
             "Open": [
                 "Fungua"
             ],
+            "Model": [
+                "Mfano"
+            ],
             "About": [
                 "Kuhusu"
             ],
             "Done": [
                 "Imekamilika"
+            ],
+            "Actions": [
+                "Vitendo"
             ],
             "Cancelled": [
                 "Imetengwa"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Tovuti"
             ],
+            "State": [
+                "Hali"
+            ],
             "Type": [
                 "Aina"
             ],
             "Upgrade": [
                 "Boresha"
+            ],
+            "Comments and reviews": [
+                "Maoni na hakiki"
+            ],
+            "Currency": [
+                "Sarafu"
+            ],
+            "Theme and plugin text": [
+                "Mandhari na maandishi ya programu-jalizi"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Matumize ndogo na vikoa tofauti kwa kila lugha ni sehemu ya Tranzly Pro."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Injini ya kutafsiri"
             ],
+            "What Tranzly translates on this site": [
+                "Kinachotafsiriwa na Tranzly kwenye tovuti hii"
+            ],
+            "found, translated with your content": [
+                "zimepatikana, zimetafsiriwa na maudhui yako"
+            ],
+            "not on this site": [
+                "siyo kwenye tovuti hii"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Ukitumia Tranzly Pro: Kurasa za Elementor, Bricks, Divi, Beaver Builder, Oxygen na WPBakery; kila kitu kwenye WooCommerce, kukiwa na bei katika sarafu ya mgeni; sehemu za SEO za Yoast SEO, Rank Math, SEOPress na All in One SEO; sehemu za ACF, Meta Box na Pods; fomu na barua pepe zao; maandishi ya mandhari (theme) na programu-jalizi (plugins) zako; na maoni na uhakiki."
+            ],
+            "Shop text and e-mails": [
+                "Maandishi na barua pepe za duka"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Mada na vichwa vya barua pepe, majina ya mbinu za malipo na usafirishaji, na ilani za malipo. Barua pepe za kila agizo hutumwa kwa lugha ambayo agizo liliwekwa."
+            ],
+            "Forms and their e-mails": [
+                "Fomu na barua pepe zao"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Kila fomu huweka orodha moja ya maingizo; lebo, vitufe, jumbe na barua pepe zake huonekana katika lugha ya mgeni."
+            ],
+            "Saved.": [
+                "Imehifadhiwa."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Hakuna sehemu za ACF, Meta Box au Pods zilizofafanuliwa bado."
+            ],
+            "Field": [
+                "Sehemu"
+            ],
+            "Where": [
+                "Ambapo"
+            ],
+            "In a translation": [
+                "Katika tafsiri"
+            ],
+            "What happens to %s in a translation": [
+                "Kinachotokea kwa %s katika tafsiri"
+            ],
+            "Translate it": [
+                "Tafsiri"
+            ],
+            "Copy it as it is": [
+                "Nakili jinsi ilivyo"
+            ],
+            "Leave it empty": [
+                "Iache tupu"
+            ],
+            "The shop\u2019s currency": [
+                "Sarafu ya duka"
+            ],
+            "Currencies": [
+                "Sarafu"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Onyesha bei kwa sarafu zingine (%s ya duka lenyewe)"
+            ],
+            "Exchange rates": [
+                "Viwango vya ubadilishaji"
+            ],
+            "Rates last updated %s.": [
+                "Viwango vimesasishwa mwisho %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Viwango havijachukuliwa bado."
+            ],
+            "Update the rates now": [
+                "Sasisha viwango sasa"
+            ],
+            "New currency": [
+                "Sarafu mpya"
+            ],
+            "Choose\u2026": [
+                "Chagua\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Kiwango (kwa kila 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Kuandika kiwango kutakihifadhi: sasisho la kila siku halitakibadilisha."
+            ],
+            "Rounding": [
+                "Kuzungusha"
+            ],
+            "None": [
+                "Hakuna"
+            ],
+            "Round up": [
+                "Ongeza idadi hadi namba kamili"
+            ],
+            "Round to the nearest": [
+                "Kadirisha kwa karibu zaidi"
+            ],
+            "Round down": [
+                "Punguza hadi namba kamili ya chini"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Zungusha hadi (kwa mfano 1, 0.05 au 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Bei zinaishia na (kwa mfano 0.99)"
+            ],
+            "Add a currency": [
+                "Ongeza sarafu"
+            ],
+            "Which visitors see which currency": [
+                "Ni wageni gani wanaoona sarafu gani"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Kwa nchi: msimbo wa nchi wa herufi mbili (kwa mfano CH)"
+            ],
+            "Visitors from %s": [
+                "Wagenzi kutoka %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Wacha wageni wachague (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Bei sasa zinategemea kuki au nchi ya mgeni: hakikisha akiba ya muda ya ukurasa wako inatofautiana kulingana na kuki ya \"tranzly_currency\", au haijumuishi kurasa za duka."
+            ],
+            "Save currencies": [
+                "Hifadhi sarafu"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Maneno ambayo mandhari na programu-jalizi zako huchapisha zenyewe (vifungo, lebo). Soma mandhari au programu-jalizi mara moja, kisha utafsiri maandishi yake hapa; tafsiri yako inashinda ya programu-jalizi yenyewe."
+            ],
+            "%d texts": [
+                "%d maandishi"
+            ],
+            "not read yet": [
+                "bado haijasomwa"
+            ],
+            "Read again": [
+                "Soma tena"
+            ],
+            "Read its text": [
+                "Soma maandishi yake"
+            ],
+            "Translate": [
+                "Tafsiri"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Kazi imeanza ikiwa na tafsiri %d za kufanya. Inafanya kazi kwa nyuma: unaweza kufunga ukurasa huu."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Menyu na maandishi yaliyoshirikiwa"
             ],
+            "Translation status": [
+                "Hali ya tafsiri"
+            ],
+            "Integrations": [
+                "Ushirikiano"
+            ],
             "No meta description": [
                 "Hakuna maelezo ya meta"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Hariri"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Kazi ya %1$d imeanza: kurasa %2$d zinatafsiriwa nyuma ya pazia. Ifuate katika Kazi za utafsiri."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "Tafsiri %d zinakaguliwa kwa nyuma. Alama zinaonekana hapa kadri zinavyowasili."
+            ],
+            "Missing": [
+                "Haijakamilika"
+            ],
+            "Out of date": [
+                "Haijasasishwa"
+            ],
+            "Translated": [
+                "Imetafsiriwa"
+            ],
+            "Edited by a person": [
+                "Imehaririwa na mtu"
+            ],
+            "Machine translated": [
+                "Imetafsiriwa na mtambo"
+            ],
+            "Waiting for review": [
+                "Inasubiri ukaguzi"
+            ],
+            "Needs a human look": [
+                "Inahitaji ukaguzi wa binadamu"
+            ],
+            "Everything": [
+                "Kila kitu"
+            ],
+            "Up to date": [
+                "Imesasishwa"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly bado inabaini ni tafsiri zipi za zamani ambazo zimepitwa na wakati. Hesabu za \"zilizopapitwa na wakati\" zitaongezeka wakati inafanya hivyo."
+            ],
+            "Content type": [
+                "Aina ya maudhui"
+            ],
+            "All content": [
+                "Maudhui yote"
+            ],
+            "Average quality": [
+                "Wastani wa ubora"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d zimetafsiriwa (%2$d%%)"
+            ],
+            "Show": [
+                "Onyesha"
+            ],
+            "Translate everything missing": [
+                "Tafsiri yote inayokosekana"
+            ],
+            "Update everything out of date": [
+                "Sasisha kila kitu ambacho kimepitwa na wakati"
+            ],
+            "Check the quality with AI": [
+                "Angalia ubora ukitumia AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "Tafsiri kurasa zenye alama za chini tena"
+            ],
+            "Nothing here.": [
+                "Hakuna kitu hapa."
+            ],
+            "Quality": [
+                "Ubora"
+            ],
+            "by a person": [
+                "na mtu"
+            ],
+            "waiting for review": [
+                "inasubiri ukaguzi"
+            ],
+            "Side by side": [
+                "Kando na kando"
+            ],
+            "Show more": [
+                "Onyesha zaidi"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Tafsiri tovuti nzima kwa mara moja (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Ukiwa na Tranzly Pro, chagua aina za maudhui na lugha, ona makadirio, na utafsiri tovuti nzima kwa mpigo mmoja."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "Kazi za nyuma %d zimeanza, moja kwa kila lugha. Zifuate katika Kazi za tafsiri."
+            ],
+            "Content types": [
+                "Aina za maudhui"
+            ],
+            "What to translate": [
+                "Cha kutafsiri"
+            ],
+            "Only what is missing": [
+                "Kilichobaki pekee"
+            ],
+            "Only what is out of date": [
+                "Ni yale tu yaliyopitwa na wakati"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Kila kitu (kurasa zilizohaririwa na mtu zinabaki jinsi zilivyo)"
+            ],
+            "Estimate": [
+                "Kadiria"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "Kurasa %1$d, herufi %2$s. Injini hii haichapishi bei."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "Kurasa %1$d, herufi %2$s, takriban $%3$s."
+            ],
+            "Find a text": [
+                "Tafuta maandishi"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d zaidi: andika katika \"Tafuta maandishi\" ili kupunguza orodha."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Kitufe kidogo kwenye kona ya kila ukurasa, kwenye mada yoyote, bila kusanidi."
-            ],
-            "Where": [
-                "Ambapo"
             ],
             "Off": [
                 "Imezimwa"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Kila neno la anwani lina herufi ndogo 2 hadi 12, nambari au vistari."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Tafsiri ya kiotomatiki wakati wa kusasisha, nafasi za wakaguzi, usafirishaji wa XLIFF kwa ajili ya watafsiri, kuhamia kutoka WPML, Polylang au TranslatePress na ukaguzi wa ubora wa AI zinapatikana na Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Wakati ya asili inapobadilika"
+            ],
+            "When a page is edited": [
+                "Wakati ukurasa umehaririwa"
+            ],
+            "Mark its translations out of date": [
+                "Weka alama kwenye tafsiri zake kuwa zimepitwa na wakati"
+            ],
+            "Translate its translations again in the background": [
+                "Tafsiri tafsiri zake tena nyuma ya pazia"
+            ],
+            "Do nothing": [
+                "Usifanye chochote"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Tafsiri iliyohaririwa na mtu haifutwi kamwe; badala yake inawekewa alama kuwa imepitwa na wakati."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Tafsiri kurasa mpya katika kila lugha zitakapochapishwa"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Modeli ya pili ya AI inasoma kila tafsiri kando ya asili yake, inaikadiria na kutaja makosa. Inatumia ufunguo wako wa AI kutoka kwa mipangilio ya AI. Anzisha ukaguzi kutoka kwa Hali ya tafsiri."
+            ],
+            "AI provider": [
+                "Mtoa huduma wa AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Mfano wa jumla wa mipangilio ya AI"
+            ],
+            "Recommended": [
+                "Inayopendekezwa"
+            ],
+            "A page needs a human look below this score": [
+                "Ukurasa unahitaji mtazamo wa kibinadamu chini ya alama hii"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Chapisha tafsiri zilizoidhinishwa na mkaguzi pekee"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Wape watu jukumu la Mtafsiri (huhariri tafsiri, si asili kamwe, hawezi kuchapisha) au jukumu la Mhakiki wa tafsiri (pia huidhinisha). Wahakiki pia hupata kila kitu kinachosubiri katika orodha za Machapisho na Kurasa chini ya \"Inasubiri\"; kuchapisha moja huko kunaidhinisha."
+            ],
+            "Manage users": [
+                "Dhibiti watumiaji"
+            ],
+            "Nothing is waiting for review.": [
+                "Hakuna kinachosubiri ukaguzi."
+            ],
+            "Note for the translator (optional)": [
+                "Ujumbe kwa mtafsiri (si lazima)"
+            ],
+            "Read side by side": [
+                "Soma kando kwa kando"
+            ],
+            "Approve": [
+                "Idhinisha"
+            ],
+            "Ask for changes": [
+                "Omba mabadiliko"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d tafsiri zimeingizwa na kulindwa dhidi ya utafsiri wa mtambo."
+            ],
+            "Export and import for translators": [
+                "Hamisha na ulete kwa ajili ya watafsiri"
+            ],
+            "Not translated yet": [
+                "Haijatafsiriwa bado"
+            ],
+            "Already translated": [
+                "Imetafsiriwa tayari"
+            ],
+            "Format": [
+                "Muundo"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (zana za tafsiri)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (lahajedwali)"
+            ],
+            "Download the file": [
+                "Pakua faili"
+            ],
+            "Import a translated file": [
+                "Agiza faili lililotafsiriwa"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Imetenduliwa: viungo %1$d vimeondolewa, kurasa %2$d zilizoingizwa zimefutwa."
+            ],
+            "Dry run, nothing changed:": [
+                "Jaribio la kukimbia, hakuna kilichobadilika:"
+            ],
+            "Imported:": [
+                "Imeingizwa:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "Lugha %1$d zimeongezwa, tafsiri %2$d zimeunganishwa, kurasa %3$d zimejengwa, maandishi %4$d."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Zima programu nyingine ya ziada kwanza (anuani na vizibadilishi vyake vitakinzana na Tranzly). Data yake inabakia ilipo, kwa hivyo unaweza kurudi; Tendua huondoa hasa kile kilichoongezwa na uingizaji data."
+            ],
+            "No data from this plugin on this site.": [
+                "Hakuna data kutoka kwa programu-jalizi hii kwenye tovuti hii."
+            ],
+            "Languages: %s": [
+                "Lugha: %s"
+            ],
+            "still active: switch it off first.": [
+                "bado inatumika: izime kwanza."
+            ],
+            "Dry run": [
+                "Jaribio la kavu"
+            ],
+            "Import": [
+                "Leta"
+            ],
+            "Undo the import": [
+                "Tendua uingizaji"
+            ],
+            "Comments and product reviews": [
+                "Maoni na hakiki za bidhaa"
+            ],
+            "Each language keeps its own": [
+                "Kila lugha hutunza yake"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Onyesha maoni ya kila lugha kwa kila toleo"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Onyesha zote, zimetafsiriwa kwa lugha ya msomaji"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Tafsiri inatumia injini yako ya tafsiri kwa kila maoni yaliyoidhinishwa. Taka (spam) na maoni yanayosubiri udhibiti hayatumwi kamwe."
             ]
         }
     }

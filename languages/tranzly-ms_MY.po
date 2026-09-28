@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Medan SEO untuk kesemua empat palam SEO besar"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Medan tersuai"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Terjemah satu hantaran dalam satu klik"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Terjemah pukal seluruh tapak"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Penyunting muka depan visual"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Semakan dan kelulusan"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Eksport dan import untuk penterjemah manusia"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Beralih daripada WPML, Polylang atau TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "Pelbagai mata wang WooCommerce"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Pemeriksaan kualiti AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Apa yang diterjemahkan"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Aliran kerja"
 
@@ -852,6 +858,7 @@ msgstr "Uji"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Buang"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Digunakan untuk"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Model"
 
@@ -1303,7 +1311,7 @@ msgstr "Had dan kebenaran disimpan."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Bahasa tersebut bukan salah satu bahasa tapak web ini."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Jenis kandungan sedemikian tidak diterjemahkan."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Teks %s tiada lagi pada tapak ini. Muat semula halaman."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Tiada enjin terjemahan yang dapat menterjemahkan teks ini."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Pilih salah satu bahasa anda yang lain."
 
@@ -1422,7 +1435,8 @@ msgstr "Terjemah pada halaman ini"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Anda tidak dibenarkan menterjemah item ini."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Item ini sudah mempunyai versi dalam bahasa tersebut."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Enjin terjemahan tersebut tidak tersedia di tapak ini."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Nilai untuk %s bukan salah satu pilihan yang dibenarkan."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Baris giliran latar belakang tidak tersedia pada tapak ini."
 
@@ -1489,6 +1504,7 @@ msgstr "Item tersebut bukan sebahagian daripada tugasan terjemahan."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Anda tidak dibenarkan menukar terjemahan itu."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Item ini sudah pun ditulis dalam bahasa tersebut."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Terjemahan ini telah diedit oleh seseorang (atau diimport), jadi ia dilindungi. Nyahkuncinya untuk menterjemahkannya semula."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Item tersebut tidak wujud."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Tiada enjin terjemahan yang disediakan lagi. Tambah kekunci untuk satu dalam Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Enjin terjemahan itu belum disediakan lagi: tambahkan kekuncinya dahulu."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Teks yang sama sedang diterjemahkan oleh tugasan lain sekarang; item ini akan menggunakan jawapan tersebut."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Tiada enjin terjemahan yang boleh mengambil item ini."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Enjin tidak mengembalikan terjemahan untuk setiap bahagian item ini. Tiada apa-apa yang diubah."
 
@@ -1671,6 +1691,7 @@ msgstr "Adakah anda ingin menggabungkan %1$s ke dalam %2$s?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Tindakan"
 
@@ -4712,6 +4733,7 @@ msgstr "Memulakan percubaan"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Negeri"
@@ -5014,6 +5036,7 @@ msgstr "Bagaimana pendapat anda tentang %1$s setakat ini? Uji semua ciri premium
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Jenis"
 
@@ -5692,6 +5715,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s yang lalu"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Blok dengan item berulang, dan corak yang disegerakkan"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Komen dan ulasan"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Diterjemahkan secara automatik daripada %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Mata wang WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Mata wang"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Sumber kadar tidak memetik %s, mata wang kedai."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" bukan mata wang yang diketahui oleh WooCommerce, atau ia adalah mata wang kedai itu sendiri."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Masukkan kadar melebihi sifar untuk %s, seperti 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Langkah pembundaran dan pengakhiran harga ialah amaun, seperti 0.05 atau 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Medan tersuai (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Pilih terjemah, salin atau biarkan kosong untuk setiap medan."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Borang (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Saya memasukkan kadar tersebut sendiri"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Bank Pusat Eropah, dikemas kini setiap hari (percuma, tiada akaun diperlukan)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Bank Pusat Eropah menjawab %d. Kadar terkini dikekalkan."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Suapan Bank Pusat Eropah tidak memegang sebarang kadar. Kadar terakhir dikekalkan."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Sumber kadar pertukaran tersebut tidak tersedia."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Palam pencarian SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Teks tema dan palam masuk"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Tema atau pelalam itu tidak aktif pada tapak web ini."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Cadangan bahasa"
@@ -5946,11 +6062,134 @@ msgstr "Saiz teks"
 msgid "Switcher"
 msgstr "Penukar"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(tiada tajuk)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Tiada apa yang perlu dibetulkan di sini."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Tiada jenis kandungan diterjemahkan pada tapak ini."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Jenis kandungan tersebut tidak diterjemahkan di tapak web ini."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Tiada apa untuk diterjemahkan dalam pilihan tersebut."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Pilih sekurang-kurangnya satu bahasa untuk diterjemahkan."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Anda tidak dibenarkan mengeksport terjemahan."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Pilih fail XLIFF atau CSV untuk diimport."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Itu bukan fail Tranzly XLIFF atau CSV. Eksport satu dahulu, terjemahkannya, dan import di sini."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Fail menyimpan fail untuk diimport. Pastikan folder muat naik boleh ditulis."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Import tersebut sudah tiada lagi. Sila muat naik fail itu sekali lagi."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Halaman itu tiada lagi di tapak web ini."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Fail ini adalah untuk bahasa yang tidak dimiliki oleh laman ini."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Tidak dapat memautkan %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Siaran #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Tiada data daripada palam sedaya ditemui pada tapak ini."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Ini bukan terjemahan bagi sebarang kandungan di tapak web ini."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Tiada teks untuk disemak."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Tetapan AI bukan sebahagian daripada binaan ini."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Pembekal AI tidak menjawab."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Model AI tidak menilai setiap bahagian halaman ini. Cuba semula, atau pilih model lain."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Penterjemah"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Penyemak terjemahan"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Seorang penilai meminta perubahan pada terjemahan ini."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Seorang pengulas meminta perubahan pada terjemahan ini: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Terjemahan ini sedang menunggu penyemak. Menerbitkannya (sebagai penyemak) bermaksud meluluskannya."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Hanya terjemahan yang boleh disemak."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Pilih apa yang berlaku apabila asal berubah: tiada apa-apa, tandakan terjemahannya sebagai sudah lapuk, atau terjemah semula."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Ambang kualiti ialah skor dari 0 hingga 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Tunjukkan semula cadangan tersembunyi pada Gambaran Keseluruhan"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Semua"
 
@@ -5974,6 +6213,8 @@ msgid "Select"
 msgstr "Pilih"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Halaman"
 
@@ -6222,28 +6463,28 @@ msgstr "Cerah"
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Skema warna"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Bantuan"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Panduan ke skrin ini"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Ikuti jelajah"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Dapatkan bantuan atau laporkan pepijat"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Skrin palam"
 
@@ -6656,6 +6897,7 @@ msgstr "Lihat pelan dan harga Pro"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Bahasa"
@@ -6882,6 +7124,213 @@ msgstr "Tetapan"
 msgid "Translation engine"
 msgstr "Enjin terjemahan"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Perkara yang diterjemahkan oleh Tranzly pada tapak web ini"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "ditemui, diterjemahkan dengan kandungan anda"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "bukan di tapak ini"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Dengan Tranzly Pro: halaman Elementor, Bricks, Divi, Beaver Builder, Oxygen dan WPBakery; segala-galanya dalam WooCommerce, dengan harga dalam mata wang pelawat; medan SEO Yoast SEO, Rank Math, SEOPress dan All in One SEO; medan ACF, Meta Box dan Pods; borang dan e-melnya; teks tema dan palam anda sendiri; serta ulasan dan penilaian."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Teks dan e-mel kedai"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Subjek dan tajuk e-mel, nama kaedah pembayaran dan penghantaran, serta notis pembayaran keluar. E-mel setiap pesanan dihantar dalam bahasa tempat ia dibuat."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Borang dan e-melnya"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Setiap borang menyimpan satu senarai entri; label, butang, mesej, dan e-melnya dipaparkan dalam bahasa pelawat."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Disimpan."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Tiada medan ACF, Meta Box atau Pods yang ditakrifkan lagi."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Medan"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Di mana"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Dalam terjemahan"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Apakah yang berlaku kepada %s dalam terjemahan"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Terjemahkannya"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Salin seperti sedemikian"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Biarkan kosong"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Mata wang kedai"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Mata wang"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Tunjukkan harga dalam mata wang lain (mata wang asal kedai ialah %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Kadar pertukaran"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Kadar dikemas kini terakhir pada %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Kadar belum diambil lagi."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Kemas kini kadar sekarang"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Mata wang baharu"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Pilih…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Kadar (setiap 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Menaip kadar mengekalkannya: kemas kini harian tidak akan mengubahnya."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Pembundaran"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Tiada"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Bundarkan"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Bundarkan kepada yang terdekat"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Bundar ke bawah"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Bundar kepada (contohnya 1, 0.05 atau 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Harga berakhir dengan (contohnya 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Tambah mata wang"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Pelawat yang manakah melihat mata wang yang mana"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Mengikut negara: kod negara dua huruf (contohnya CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Pelawat dari %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Biar pelawat memilih (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Harga kini bergantung pada kuki atau negara pelawat: pastikan cache halaman anda berbeza mengikut kuki \"tranzly_currency\", atau mengecualikan halaman kedai."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Simpan mata wang"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Perkataan yang dicetak oleh tema dan plugin anda sendiri (butang, label). Baca tema atau plugin sekali, kemudian terjemahkan teksnya di sini; terjemahan anda mengatasi terjemahan plugin itu sendiri."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d teks"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "belum dibaca"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Baca semula"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Baca teksnya"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Terjemah"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6941,6 +7390,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d hantaran, %2$s aksara: kira-kira $%3$s pada akaun anda sendiri."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Mula menterjemah"
 
@@ -6978,6 +7428,11 @@ msgstr "Kandungan"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Bahasa"
 
@@ -7012,11 +7467,13 @@ msgstr "Menu disimpan."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d teks diterjemahkan."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Disimpan. Pembetulan anda dilindungi daripada terjemahan mesin."
 
@@ -7053,48 +7510,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Templat, pengepala, pengaki dan corak (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Terjemah teks yang hilang"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Tiada teks untuk diterjemahkan di sini."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Dibetulkan oleh individu, dilindungi"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Simpan pembetulan"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Bahasa dan tetapan"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Enjin"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Terjemahan kerja"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Alamat dan SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Pemilih bahasa"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "Audit SEO"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Menu dan teks dikongsi"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Status terjemahan"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Integrasi"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7139,6 +7609,7 @@ msgid "The whole language has been checked."
 msgstr "Seluruh bahasa telah disemak."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Halaman"
 
@@ -7147,17 +7618,198 @@ msgid "Problem"
 msgstr "Masalah"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Sunting"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Tugasan %1$d dimulakan: %2$d halaman sedang diterjemahkan di latar belakang. Ikuti perkembangannya dalam Tugasan terjemahan."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d terjemahan sedang disemak di latar belakang. Skor akan dipaparkan di sini apabila ia diterima."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Hilang"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Tamat tempoh"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Diterjemah"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Diedit oleh seseorang"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Diterjemahkan oleh mesin"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Menunggu ulasan"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Memerlukan semakan manusia"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Semua"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Terkini"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly masih mengkaji terjemahan lama yang mana sudah lapuk. Nombor \"lapuk\" akan meningkat semasa ia berbuat demikian."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Jenis kandungan"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Semua kandungan"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Kualiti purata"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d diterjemahkan (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Papar"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Terjemah semua yang hilang"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Kemas kini semua yang sudah lapuk"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Semak kualiti dengan AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Terjemahkan semula halaman yang mendapat markah rendah"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Tiada apa-apa di sini."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Kualiti"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "oleh seseorang"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "menunggu semakan"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Sebelah menyebelah"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Tunjuk lagi"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Terjemah keseluruhan tapak secara pukal (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Dengan Tranzly Pro, pilih jenis kandungan dan bahasa, lihat anggaran, dan terjemahkan keseluruhan tapak web serentak."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d tugasan latar belakang dimulakan, satu untuk setiap bahasa. Ikuti perkembangannya dalam Tugasan terjemahan."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Jenis kandungan"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Apa untuk diterjemahkan"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Hanya yang tiada"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Hanya yang sudah luput masa"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Segala-galanya (halaman yang disunting oleh seseorang kekal seperti sediakala)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Anggaran"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d halaman, %2$s aksara. Enjin ini tidak menerbitkan harga."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d halaman, %2$s aksara, kira-kira $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Cari teks"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d lagi: taip dalam \"Cari teks\" untuk mengecilkan senarai."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Butang kecil di penjuru setiap halaman, pada sebarang tema, tanpa persediaan."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Di mana"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7357,6 +8009,199 @@ msgstr "Bekerjasama dengan: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Setiap perkataan alamat mengandungi 2 hingga 12 huruf kecil, digit, atau tanda sempang."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Terjemahan auto apabila dikemas kini, peranan penyemak, eksport XLIFF untuk penterjemah, beralih daripada WPML, Polylang atau TranslatePress dan semakan kualiti AI disertakan dengan Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Apabila yang asal berubah"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Apabila halaman diedit"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Tandakan terjemahannya sebagai sudah lapuk"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Terjemah semula terjemahannya di latar belakang"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Jangan lakukan apa-apa"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Terjemahan yang telah disunting oleh seseorang tidak akan sekali-kali ditimpa; ia ditandakan sebagai sudah lapuk."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Terjemahkan halaman baharu ke dalam setiap bahasa apabila ia diterbitkan"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Model AI kedua membaca setiap terjemahan di sebelah yang asal, memberikan markah dan menyenaraikan kesilapan. Ia menggunakan kunci AI anda sendiri daripada tetapan AI. Mulakan semakan dari Status terjemahan."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Penyedia AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Model umum tetapan AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Disyorkan"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Halaman memerlukan sentuhan manusia di bawah skor ini"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Terbitkan hanya terjemahan yang diluluskan oleh pengulas"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Berikan orang peranan Penterjemah (mengedit terjemahan, bukan yang asal, tidak boleh menerbitkan) atau peranan Penyemak terjemahan (juga meluluskan). Penyemak juga mendapati semua yang menunggu dalam senarai Hantaran dan Halaman di bawah \"Pending\"; menerbitkan satu di sana akan meluluskannya."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Urus pengguna"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Tiada apa yang menunggu untuk semakan."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Nota untuk penterjemah (pilihan)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Baca sebelah menyebelah"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Luluskan"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Minta perubahan"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d terjemahan diimport dan dilindungi daripada terjemahan mesin."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Eksport dan import untuk penterjemah"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Belum diterjemahkan lagi"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Sudah diterjemah"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Format"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (alat terjemahan)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (helaian hampar)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Muat turun fail"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Import fail yang diterjemahkan"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Belum dilakukan: %1$d pautan dibuang, %2$d halaman diimport dipadam."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Percubaan kering, tiada yang berubah:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Diimport:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d bahasa ditambah, %2$d terjemahan dipautkan, %3$d halaman dibina, %4$d teks."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Matikan palam masuk yang satu lagi terlebih dahulu (alamat dan penukar alamatnya akan bercanggah dengan Tranzly). Datanya kekal di tempat asalnya, jadi anda boleh menukarnya semula; Buat Asal mengalih keluar tepat apa yang ditambah oleh import."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Tiada data daripada palam ini pada tapak ini."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Bahasa: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "masih aktif: matikannya dahulu."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Percubaan kering"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Import"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Buat asal import"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Komen dan ulasan produk"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Setiap bahasa mengekalkan bahasanya sendiri"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Tunjukkan komen setiap bahasa pada setiap versi"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Tunjukkan kesemuanya, diterjemahkan ke dalam bahasa pembaca"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Penterjemahan menggunakan enjin terjemahan anda untuk setiap komen yang diluluskan. Spam dan komen yang menunggu pengesahan tidak akan dihantar sama sekali."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Disimpan. Bahagian yang anda ubah ditandakan sebagai disemak oleh seseorang, dan terjemahan ini dilindungi daripada terjemahan mesin."
@@ -7389,11 +8234,6 @@ msgstr "Simpan perubahan"
 msgid "Open in the editor"
 msgstr "Buka dalam editor"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Diterjemahkan oleh mesin"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Disemak oleh individu"
@@ -7401,10 +8241,6 @@ msgstr "Disemak oleh individu"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Diimport"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Belum diterjemahkan lagi"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7458,10 +8294,6 @@ msgstr "Belum diterjemahkan lagi (satu salinan)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Simpan siaran ini dahulu, kemudian terjemahkannya di sini."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Sebelah menyebelah"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

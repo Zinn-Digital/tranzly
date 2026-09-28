@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:53+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Prevedi u pozadini"
             ],
+            "Custom fields": [
+                "Prilago\u0111ena polja"
+            ],
+            "Bulk translate the whole site": [
+                "Grupno prevedite ceo sajt"
+            ],
+            "Review and approval": [
+                "Pregled i odobrenje"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Pre\u0111ite sa WPML, Polylang ili TranslatePress"
+            ],
             "Floating switcher": [
                 "Plutaju\u0107i prekida\u010d"
+            ],
+            "AI quality check": [
+                "Proverka kvaliteta ve\u0161ta\u010dke inteligencije"
+            ],
+            "Workflow": [
+                "Radni proces"
             ],
             "Next": [
                 "Slede\u0107e"
@@ -25,11 +43,17 @@
             "Open": [
                 "\u041e\u0442\u0432\u043e\u0440\u0438"
             ],
+            "Model": [
+                "\u041c\u043e\u0434\u0435\u043b"
+            ],
             "About": [
                 "O nama"
             ],
             "Done": [
                 "Zavr\u0161eno"
+            ],
+            "Actions": [
+                "Akcije"
             ],
             "Cancelled": [
                 "Otkazano"
@@ -58,11 +82,23 @@
             "Sites": [
                 "\u0421\u0430\u0458\u0442\u043e\u0432\u0438"
             ],
+            "State": [
+                "Stanje"
+            ],
             "Type": [
                 "Tip"
             ],
             "Upgrade": [
                 "Nadogradnja"
+            ],
+            "Comments and reviews": [
+                "Komentari i recenzije"
+            ],
+            "Currency": [
+                "\u0412\u0430\u043b\u0443\u0442\u0430"
+            ],
+            "Theme and plugin text": [
+                "Tekst teme i dodataka"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Poddomeni i zasebni domeni po jeziku deo su paketa Tranzly Pro."
@@ -747,6 +783,150 @@
             "Translation engine": [
                 "Ma\u0161ina za prevo\u0111enje"
             ],
+            "What Tranzly translates on this site": [
+                "\u0160ta Tranzly prevodi na ovom sajtu"
+            ],
+            "found, translated with your content": [
+                "prona\u0111eno, prevedeno sa va\u0161im sadr\u017eajem"
+            ],
+            "not on this site": [
+                "nije na ovom sajtu"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Uz Tranzly Pro: stranice za Elementor, Bricks, Divi, Beaver Builder, Oxygen i WPBakery; sve u WooCommerce, sa cenama u valuti posetioca; SEO polja za Yoast SEO, Rank Math, SEOPress i All in One SEO; ACF, Meta Box i Pods polja; obrasce i njihove imejlove; sopstveni tekst va\u0161e teme i dodataka; kao i komentare i recenzije."
+            ],
+            "Shop text and e-mails": [
+                "Tekst i e-poruke prodavnice"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Predmeti i zaglavlja imejlova, nazivi na\u010dini pla\u0107anja i dostave, kao i obave\u0161tenja na kasi. Imejlovi za svaku porud\u017ebinu se \u0161alju na jeziku na kojem je porud\u017ebina napravljena."
+            ],
+            "Forms and their e-mails": [
+                "Formular i njihove poruke e-po\u0161te"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Svaki obrazac sadr\u017ei jednu listu unosa; njegove oznake, dugmad, poruke i imejlovi se prikazuju na jeziku posetioca."
+            ],
+            "Saved.": [
+                "Sa\u010duvano."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Jo\u0161 uvek nisu definisana ACF, Meta Box ni Pods polja."
+            ],
+            "Field": [
+                "Polje"
+            ],
+            "Where": [
+                "Gde"
+            ],
+            "In a translation": [
+                "U prevodu"
+            ],
+            "What happens to %s in a translation": [
+                "\u0160ta se de\u0161ava sa %s u prevodu"
+            ],
+            "Translate it": [
+                "Prevedi"
+            ],
+            "Copy it as it is": [
+                "Kopirajte ga takvog kakav jeste"
+            ],
+            "Leave it empty": [
+                "Ostavite prazno"
+            ],
+            "The shop\u2019s currency": [
+                "Valuta prodavnice"
+            ],
+            "Currencies": [
+                "\u0412\u0430\u043b\u0443\u0442\u0435"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Prika\u017ei cene u drugim valutama (sopstvena valuta prodavnice je %s)"
+            ],
+            "Exchange rates": [
+                "Kursne liste"
+            ],
+            "Rates last updated %s.": [
+                "Cene poslednji put a\u017eurirane %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Cene jo\u0161 uvek nisu preuzete."
+            ],
+            "Update the rates now": [
+                "A\u017eurirajte cene odmah"
+            ],
+            "New currency": [
+                "Nova valuta"
+            ],
+            "Choose\u2026": [
+                "Izaberi\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Stopa (po 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Unosom tarife je \u010duvate: dnevno a\u017euriranje je ne\u0107e promeniti."
+            ],
+            "Rounding": [
+                "\u0417\u0430okrugljivanje"
+            ],
+            "None": [
+                "Ni\u0161ta"
+            ],
+            "Round up": [
+                "Zaokru\u017ei na vi\u0161i iznos"
+            ],
+            "Round to the nearest": [
+                "Zaokru\u017ei na najbli\u017ee"
+            ],
+            "Round down": [
+                "Zaokru\u017ei nani\u017ee"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Zaokru\u017ei na (na primer 1, 0,05 ili 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Cene se zavr\u0161avaju na (na primer 0.99)"
+            ],
+            "Add a currency": [
+                "\u0414\u043e\u0434\u0430\u0458 \u0432\u0430\u043b\u0443\u0442\u0443"
+            ],
+            "Which visitors see which currency": [
+                "Koji posetioci vide koju valutu"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Po dr\u017eavama: dvoslovni kod dr\u017eave (na primer CH)"
+            ],
+            "Visitors from %s": [
+                "Posetioci iz %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Omogu\u0107ite posetiocima da biraju (kratki kod [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Cene sada zavise od kola\u010di\u0107a ili od zemlje posetioca: uverite se da se ke\u0161 stranice razlikuje u zavisnosti od kola\u010di\u0107a \u201etranzly_currency\u201c ili isklju\u010dite stranice prodavnice."
+            ],
+            "Save currencies": [
+                "Sa\u010duvaj valute"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Re\u010di koje va\u0161a tema i dodaci sami ispisuju (dugmad, oznake). Pro\u010ditajte temu ili dodatak jednom, pa ovde prevedite njihov tekst; va\u0161 prevod ima prednost nad sopstvenim prevodom dodatka."
+            ],
+            "%d texts": [
+                "%d \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u0430"
+            ],
+            "not read yet": [
+                "jo\u0161 uvek nije pro\u010ditano"
+            ],
+            "Read again": [
+                "Pro\u010ditaj ponovo"
+            ],
+            "Read its text": [
+                "Pro\u010ditajte njegov tekst"
+            ],
+            "Translate": [
+                "Prevedi"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Posao je pokrenut sa %d prevoda za obavljanje. Izvr\u0161ava se u pozadini: mo\u017eete zatvoriti ovu stranicu."
             ],
@@ -897,6 +1077,12 @@
             "Menus and shared text": [
                 "Meniji i deljeni tekst"
             ],
+            "Translation status": [
+                "\u0421\u0442\u0430\u0442\u0443\u0441 \u043f\u0440\u0435\u0432\u043e\u0434\u0430"
+            ],
+            "Integrations": [
+                "Integracije"
+            ],
             "No meta description": [
                 "Nema meta opisa"
             ],
@@ -936,11 +1122,128 @@
             "Edit": [
                 "Uredi"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Posao %1$d je zapo\u010det: %2$d stranica se prevodi u pozadini. Pratite ga u Poslovima prevo\u0111enja."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d prevoda se proverava u pozadini. Rezultati se prikazuju ovde kako pristi\u017eu."
+            ],
+            "Missing": [
+                "Nedostaje"
+            ],
+            "Out of date": [
+                "Zastarelo"
+            ],
+            "Translated": [
+                "\u041f\u0440\u0435\u0432\u0435\u0434\u0435\u043d\u043e"
+            ],
+            "Edited by a person": [
+                "Uredila osoba"
+            ],
+            "Machine translated": [
+                "Ma\u0161inski prevedeno"
+            ],
+            "Waiting for review": [
+                "\u010ceka se pregled"
+            ],
+            "Needs a human look": [
+                "Potrebna je ljudska provera"
+            ],
+            "Everything": [
+                "Sve"
+            ],
+            "Up to date": [
+                "A\u017eurirano"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly jo\u0161 uvek utvr\u0111uje koje su starije prevodi zastareli. Broj \"zastarelih\" prevoda \u0107e rasti dok se to radi."
+            ],
+            "Content type": [
+                "Tip sadr\u017eaja"
+            ],
+            "All content": [
+                "Sav sadr\u017eaj"
+            ],
+            "Average quality": [
+                "Prose\u010dan kvalitet"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d prevedeno (%2$d%%)"
+            ],
+            "Show": [
+                "\u041f\u0440\u0438\u043a\u0430\u0436\u0438"
+            ],
+            "Translate everything missing": [
+                "Prevedi sve \u0161to nedostaje"
+            ],
+            "Update everything out of date": [
+                "A\u017eurirajte sve \u0161to je zastarelo"
+            ],
+            "Check the quality with AI": [
+                "Proverite kvalitet pomo\u0107u ve\u0161ta\u010dke inteligencije"
+            ],
+            "Translate the low-scoring pages again": [
+                "Ponovo prevedite stranice sa niskim brojem bodova"
+            ],
+            "Nothing here.": [
+                "Ni\u0161ta ovde."
+            ],
+            "Quality": [
+                "Kvalitet"
+            ],
+            "by a person": [
+                "od strane osobe"
+            ],
+            "waiting for review": [
+                "\u010deka se pregled"
+            ],
+            "Side by side": [
+                "Uporedo"
+            ],
+            "Show more": [
+                "\u041f\u0440\u0438\u043a\u0430\u0436\u0438 \u0458\u043e\u0448 \u0458\u0435\u0434\u043d\u043e\u043c"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Masovno prevedite ceo sajt (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Uz Tranzly Pro, izaberite vrste sadr\u017eaja i jezike, pregledajte procenu i prevedite ceo sajt odjednom."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d pozadinskih poslova je pokrenuto, po jedan za svaki jezik. Pratite ih u odeljku Poslovi prevo\u0111enja."
+            ],
+            "Content types": [
+                "Vrste sadr\u017eaja"
+            ],
+            "What to translate": [
+                "\u0428\u0442\u0430 \u043f\u0440\u0435\u0432\u0435\u0441\u0442\u0438"
+            ],
+            "Only what is missing": [
+                "Samo ono \u0161to nedostaje"
+            ],
+            "Only what is out of date": [
+                "Samo ono \u0161to je zastarelo"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Sve (stranice koje je uredila osoba ostaju kakve jesu)"
+            ],
+            "Estimate": [
+                "Procenite"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d stranica, %2$s karaktera. Ovaj mehanizam ne objavljuje cenu."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d stranica, %2$s znakova, oko $%3$s."
+            ],
+            "Find a text": [
+                "Prona\u0111i tekst"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "jo\u0161 %d: unesite \u201eProna\u0111i tekst\u201d da suzite listu."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Malo dugme u uglu svake stranice, na bilo kojoj temi, bez pode\u0161avanja."
-            ],
-            "Where": [
-                "Gde"
             ],
             "Off": [
                 "Isklju\u010deno"
@@ -1082,6 +1385,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Svaka re\u010d adrese ima od 2 do 12 malih slova, cifara ili crtica."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Automatsko prevo\u0111enje pri a\u017euriranju, uloge recenzenata, XLIFF izvoz za prevodioce, prelazak sa WPML, Polylang ili TranslatePress i AI provera kvaliteta dolaze uz Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Kada se original promeni"
+            ],
+            "When a page is edited": [
+                "Kada se stranica ure\u0111uje"
+            ],
+            "Mark its translations out of date": [
+                "Ozna\u010di njegove prevode zastarelim"
+            ],
+            "Translate its translations again in the background": [
+                "Ponovo prevedite njegove prevode u pozadini"
+            ],
+            "Do nothing": [
+                "Ne radi ni\u0161ta"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Prevod koji je \u010dovek uredio nikada se ne prepisuje; umesto toga, ozna\u010dava se kao zastareo."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Prevedite nove stranice na svaki jezik kada se objave"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Drugi AI model \u010dita svaki prevod pored njegovog originala, ocenjuje ga i imenuje gre\u0161ke. On koristi va\u0161 sopstveni AI klju\u010d iz AI pode\u0161avanja. Pokrenite proveru iz Statusa prevoda."
+            ],
+            "AI provider": [
+                "AI \u043f\u0440\u043e\u0432\u0430\u0458\u0434\u0435\u0440"
+            ],
+            "The AI settings\u2019 general model": [
+                "Op\u0161ti model za pode\u0161avanja ve\u0161ta\u010dke inteligencije"
+            ],
+            "Recommended": [
+                "Preporu\u010deno"
+            ],
+            "A page needs a human look below this score": [
+                "Stranica zahteva ljudsku proveri ispod ovog rezultata"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Objavite samo prevode koje je recenzent odobrio"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Dodelite ljudima ulogu prevodioca (ure\u0111uje prevode, nikada originale, ne mo\u017ee da objavljuje) ili ulogu recenzenta prevoda (tako\u0111e odobrava). Recenzenti tako\u0111e pronalaze sve \u0161to \u010deka na listama \u201eObjave\u201c i \u201eStrane\u201c pod \u201eNa \u010dekanju\u201c; objavljivanjem jednog tamo ono biva odobreno."
+            ],
+            "Manage users": [
+                "Upravljanje korisnicima"
+            ],
+            "Nothing is waiting for review.": [
+                "Ni\u0161ta ne \u010deka na pregled."
+            ],
+            "Note for the translator (optional)": [
+                "Napomena za prevodioca (opciono)"
+            ],
+            "Read side by side": [
+                "Uporedno \u010ditanje"
+            ],
+            "Approve": [
+                "Odobri"
+            ],
+            "Ask for changes": [
+                "Zatra\u017eite izmene"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d prevoda je uvezeno i za\u0161ti\u0107eno od ma\u0161inskog prevo\u0111enja."
+            ],
+            "Export and import for translators": [
+                "Izvoz i uvoz za prevodioce"
+            ],
+            "Not translated yet": [
+                "Jo\u0161 uvek nije prevedeno"
+            ],
+            "Already translated": [
+                "Ve\u0107 prevedeno"
+            ],
+            "Format": [
+                "Formatiranje"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (\u0430\u043b\u0430ati za prevod)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (tabelarni prikazi)"
+            ],
+            "Download the file": [
+                "Preuzmi datoteku"
+            ],
+            "Import a translated file": [
+                "Uvezi prevedenu datoteku"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Opozvano: uklonjeno je %1$d veze, obrisane su %2$d uvezene stranice."
+            ],
+            "Dry run, nothing changed:": [
+                "Probni rad, ni\u0161ta nije izmenjeno:"
+            ],
+            "Imported:": [
+                "Uvezeno:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d jezika dodato, %2$d prevoda povezano, %3$d stranica napravljeno, %4$d tekstova."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Prvo isklju\u010dite drugi dodatak (njegove adrese i prekida\u010di bi bili u sukobu sa Tranzly). Njegovi podaci ostaju tu gde jesu, tako da se mo\u017eete vratiti; \u201ePoni\u0161ti\u201c uklanja ta\u010dno ono \u0161to je uvoz dodao."
+            ],
+            "No data from this plugin on this site.": [
+                "Nema podataka sa ovog dodataka na ovom sajtu."
+            ],
+            "Languages: %s": [
+                "Jezici: %s"
+            ],
+            "still active: switch it off first.": [
+                "jo\u0161 uvek aktivan: prvo ga isklju\u010dite."
+            ],
+            "Dry run": [
+                "Proba na suvo"
+            ],
+            "Import": [
+                "\u0423\u0432\u0435\u0437\u0438"
+            ],
+            "Undo the import": [
+                "\u041ep\u043ezovi uvoz"
+            ],
+            "Comments and product reviews": [
+                "Komentari i recenzije proizvoda"
+            ],
+            "Each language keeps its own": [
+                "Svaki jezik zadr\u017eava svoj"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Prika\u017ei komentare svakog jezika za svaku verziju"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Prika\u017ei sve, prevedeno na jezik \u010ditaoca"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Prevo\u0111enje koristi va\u0161 prevodila\u010dki mehanizam za svaki odobreni komentar. Spam i komentari koji \u010dekaju na moderaciju se nikada ne \u0161alju."
             ]
         }
     }

@@ -156,7 +156,10 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 			data-zak-mode={ mode }
 			dir={ kit.rtl ? 'rtl' : 'ltr' }
 		>
-			<header className="zak-header">
+			{ /* ⛔ Plain divs, not <header>/<main>: the shell renders INSIDE WordPress admin's own
+				main landmark, so a second banner and main here are nested and duplicated landmarks
+				(axe, L06 2026-09-28; the kit e2e now scans the whole page). */ }
+			<div className="zak-header">
 				<div className="zak-header__title">
 					<h1>{ kit.name }</h1>
 					<span className="zak-badge" data-zak-tour="status">
@@ -240,7 +243,7 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 						</DropdownMenu>
 					</span>
 				</div>
-			</header>
+			</div>
 			<nav
 				className="zak-nav"
 				aria-label={ __( 'Plugin screens', 'tranzly' ) }
@@ -263,9 +266,9 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 					{ notice }
 				</Notice>
 			) }
-			<main className="zak-main" data-zak-route={ route.id }>
+			<div className="zak-main" data-zak-route={ route.id }>
 				{ body() }
-			</main>
+			</div>
 			{ touring && steps && (
 				<Tour
 					steps={ steps }

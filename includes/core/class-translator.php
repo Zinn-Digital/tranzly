@@ -109,6 +109,47 @@ final class Translator {
 		$result = $ran['texts'];
 		$engine = $ran['engine'];
 
+		return self::write_post(
+			$source_id,
+			$code,
+			$result,
+			array(
+				'status'   => $status,
+				'mark'     => 'machine',
+				'engine'   => $engine->id(),
+				'segments' => $segments,
+			)
+		);
+	}
+
+	/**
+	 * Write translated segments into a post's translation, creating it when it does not exist. The
+	 * ONE write path: the engine (above), a translator's XLIFF/CSV file and a competitor import (T7)
+	 * all come through here, so integrations see every translation on `tranzly_translated_post_fields`.
+	 *
+	 * Callers check protection themselves (a person's file writes on purpose); this checks permission.
+	 *
+	 * @param int                   $source_id The original post.
+	 * @param string                $code      A listed language code.
+	 * @param array<string, string> $texts     Segment key => translated text.
+	 * @param array<string, mixed>  $args      `status` (post status or empty), `mark` (`machine`,
+	 *                                         `human`, `legacy`), `engine` (id or empty), `segments`
+	 *                                         (the source segments the texts were made from).
+	 * @return int|\WP_Error The translation's ID.
+	 */
+	public static function write_post( int $source_id, string $code, array $texts, array $args = array() ) {
+		if ( ! Content::can_translate_post( $source_id ) ) {
+			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to translate this item.', 'tranzly' ), array( 'status' => 403 ) );
+		}
+		$post = get_post( $source_id );
+		if ( ! $post instanceof \WP_Post ) {
+			return new \WP_Error( 'tranzly_not_found', __( 'That item does not exist.', 'tranzly' ), array( 'status' => 404 ) );
+		}
+		$status = (string) ( $args['status'] ?? '' );
+		$target = Relations::translations( 'post', $source_id )[ $code ] ?? null;
+		if ( null !== $target && ! current_user_can( 'edit_post', $target ) ) {
+			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to change that translation.', 'tranzly' ), array( 'status' => 403 ) );
+		}
 		if ( null === $target ) {
 			$made = Content::create_post_translation( $source_id, $code );
 			if ( is_wp_error( $made ) ) {
@@ -126,8 +167,8 @@ final class Translator {
 			'excerpt' => 'post_excerpt',
 			'content' => 'post_content',
 		) as $key => $field ) {
-			if ( isset( $result[ $key ] ) ) {
-				$update[ $field ] = $result[ $key ];
+			if ( isset( $texts[ $key ] ) ) {
+				$update[ $field ] = $texts[ $key ];
 			}
 		}
 
@@ -140,24 +181,26 @@ final class Translator {
 		 * @param \WP_Post              $post       The original.
 		 * @param string                $code       The target language.
 		 */
-		$update = (array) apply_filters( 'tranzly_translated_post_fields', $update, $result, $post, $code );
+		$update = (array) apply_filters( 'tranzly_translated_post_fields', $update, $texts, $post, $code );
 		$saved  = wp_update_post( wp_slash( $update ), true );
 		if ( is_wp_error( $saved ) ) {
 			return $saved;
 		}
-		update_post_meta( $target, self::STATUS_META, 'machine' );
-		update_post_meta( $target, self::ENGINE_META, $engine->id() );
+		$engine_id = (string) ( $args['engine'] ?? '' );
+		$segments  = isset( $args['segments'] ) && is_array( $args['segments'] ) ? $args['segments'] : self::post_segments( $post );
+		update_post_meta( $target, self::STATUS_META, (string) ( $args['mark'] ?? 'machine' ) );
+		update_post_meta( $target, self::ENGINE_META, $engine_id );
 		update_post_meta( $target, self::SOURCE_HASH_META, self::hash( $segments ) );
 
 		/**
-		 * Fires after an engine translated a post.
+		 * Fires after an engine translated a post (or a person's file or an import wrote one).
 		 *
 		 * @param int    $target    The translation.
 		 * @param int    $source_id The original.
 		 * @param string $code      The language.
-		 * @param string $engine    The engine id.
+		 * @param string $engine    The engine id; empty when a file or an import wrote it.
 		 */
-		do_action( 'tranzly_post_translated', (int) $target, $source_id, $code, $engine->id() );
+		do_action( 'tranzly_post_translated', (int) $target, $source_id, $code, $engine_id );
 
 		return (int) $target;
 	}
@@ -197,7 +240,16 @@ final class Translator {
 				'format' => 'html',
 			);
 		}
-		$ran = self::run( $chain, $segments, $source_lang, $code );
+
+		/**
+		 * Filters the segments of a term sent to the engine (`name`, `description`, plus whatever
+		 * integrations add: SEO titles, custom fields). Write added ones on `tranzly_term_translated`.
+		 *
+		 * @param array<string, array{text: string, format: string}> $segments The segments.
+		 * @param \WP_Term                                          $term     The original.
+		 */
+		$segments = (array) apply_filters( 'tranzly_term_segments', $segments, $term );
+		$ran      = self::run( $chain, $segments, $source_lang, $code );
 		if ( is_wp_error( $ran ) ) {
 			return $ran;
 		}
@@ -234,6 +286,17 @@ final class Translator {
 		}
 		update_term_meta( $target, self::STATUS_META, 'machine' );
 		update_term_meta( $target, self::ENGINE_META, $engine->id() );
+
+		/**
+		 * Fires after an engine translated a term, with every translated segment (integrations write
+		 * the segments they added on `tranzly_term_segments`).
+		 *
+		 * @param int                   $target     The translation.
+		 * @param int                   $term_id    The original.
+		 * @param string                $code       The language.
+		 * @param array<string, string> $translated Segment key => translation.
+		 */
+		do_action( 'tranzly_term_translated', (int) $target, $term_id, $code, $result );
 
 		return (int) $target;
 	}
@@ -497,7 +560,7 @@ final class Translator {
 	 * @param array<string, array{text: string, format: string}> $segments The segments.
 	 * @return string
 	 */
-	private static function hash( array $segments ): string {
+	public static function hash( array $segments ): string {
 		ksort( $segments );
 
 		return sha1( (string) wp_json_encode( $segments ) );

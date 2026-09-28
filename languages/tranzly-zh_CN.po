@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "所有四大SEO插件的SEO字段"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "自定义字段"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "一键翻译一则帖子"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "批量翻译整个网站"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "可视化前端编辑器"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "审查与批准"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "面向人工译员的导出和导入"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "从 WPML、Polylang 或 TranslatePress 切换"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce 多货币"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "AI 质量检查"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "会被翻译的内容"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "工作流"
 
@@ -852,6 +858,7 @@ msgstr "测试"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "移除"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "用于"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "模型"
 
@@ -1303,7 +1311,7 @@ msgstr "限制和权限已保存。"
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "该语言不是本网站的语言之一。"
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "此类内容不进行翻译。"
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "文本 %s 已不在本网站上。请重新加载页面。"
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "没有任何翻译引擎能够处理这段文本。"
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "选择您的其他语言之一。"
 
@@ -1422,7 +1435,8 @@ msgstr "在此页面上翻译"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "您无权翻译此项目。"
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "该语言中已经存在此项目的一个版本。"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "此网站上无法使用该翻译引擎。"
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "%s 的值不在允许的选择范围内。"
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "此网站当前无法使用后台队列。"
 
@@ -1489,6 +1504,7 @@ msgstr "该项目不属于任何翻译任务。"
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "您无权更改该翻译。"
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "该项目已经使用该语言编写。"
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "此翻译由人工编辑（或导入），因此已被保护。解锁后方可重新翻译。"
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "该项目不存在。"
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "尚未设置翻译引擎。请在 Tranzly → 引擎中添加一个密钥。"
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "该翻译引擎尚未配置：请先添加其密钥。"
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "另一个翻译任务目前正在翻译相同的文本；此项目将使用该翻译结果。"
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "没有任何翻译引擎可以处理此项。"
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "引擎未返回此项目各个部分的翻译。未作任何更改。"
 
@@ -1671,6 +1691,7 @@ msgstr "您想将 %1$s 合并到 %2$s 中吗？"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "操作"
 
@@ -4711,6 +4732,7 @@ msgstr "正在试用"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "状态"
@@ -5013,6 +5035,7 @@ msgstr "您对目前使用的 %1$s 感觉如何？通过 %3$d 天免费试用体
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "类型"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s前"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "包含重复项的区块以及同步图案"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "评论与评价"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "从 %s 自动翻译。"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "WooCommerce 货币"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "货币"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "汇率来源没有提供商店的货币 %s。"
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" 不是 WooCommerce 识别的货币，或者是商店本身的货币。"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "请输入 %s 的一个大于零的费率，例如 0.92。"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "四舍五入步长和价格尾数是指诸如 0.05 或 0.99 之类的金额。"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "自定义字段 (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "为每个字段选择翻译、复制或留空。"
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "表单（Contact Form 7、WPForms、Gravity Forms、Fluent Forms）"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "我自行输入费率"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "欧洲中央银行，每日更新（免费，无需账户）"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "欧洲中央银行回答了 %d。维持目前的利率不变。"
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "欧洲中央银行的动态没有包含利率。保留最近的利率。"
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "该汇率来源不可用。"
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEO 插件（Yoast SEO、Rank Math、SEOPress、All in One SEO）"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "主题和插件文本"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "该主题或插件未在此站点上激活。"
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "语言建议"
@@ -5945,11 +6061,134 @@ msgstr "文字大小"
 msgid "Switcher"
 msgstr "切换器"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(无标题)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "这里没有什么需要修复的。"
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "此网站上没有任何内容类型被翻译。"
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "此网站上没有翻译该内容类型。"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "所选内容中没有需要翻译的内容。"
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "请至少选择一种要翻译的语言。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "您无权导出翻译。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "选择要导入的 XLIFF 或 CSV 文件。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "这不是 Tranzly XLIFF 或 CSV 文件。请先导出一个，对其进行翻译，然后在此处导入。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "无法存储要导入的文件。请检查上传文件夹是否具有写入权限。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "该导入已不存在。请重新上传该文件。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "该页面已不在本网站上。"
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "该文件对应的语言不适用于本网站。"
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "无法链接 %1$s %2$d：%3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "文章 #%1$d：%2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "未在本地找到来自该插件的数据。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "这不是本网站任何内容的翻译。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "没有可检查的文本。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "AI 设置不属于此构建版本。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "AI 服务提供商未作回应。"
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "AI 模型未对该页面的所有部分进行评分。请重试，或选择其他模型。"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "翻译器"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "翻译审核人员"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "审阅者要求对该翻译进行修改。"
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "审阅者要求对此翻译进行更改：%s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "此翻译正等待审核。将其发布（作为审核人员）即表示批准。"
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "只有翻译才能被审核。"
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "选择当原文发生更改时采取的操作：不作处理、将其次要译文标记为过期，或重新翻译。"
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "质量阈值是一个从 0 到 100 的评分。"
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "再次在“概览”中显示隐藏的建议"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "全部"
 
@@ -5973,6 +6212,8 @@ msgid "Select"
 msgstr "选择"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "页面"
 
@@ -6221,28 +6462,28 @@ msgstr "浅色"
 msgid "Dark"
 msgstr "深色"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "配色方案"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "帮助"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "此屏幕指南"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "查看导览"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "获取帮助或报告错误"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "插件屏幕"
 
@@ -6655,6 +6896,7 @@ msgstr "查看 Pro 方案和价格"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "语言"
@@ -6881,6 +7123,213 @@ msgstr "设置"
 msgid "Translation engine"
 msgstr "翻译引擎"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Tranzly 在本网站上翻译的内容"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "已找到，并根据您的内容进行了翻译"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "不在本网站上"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "使用 Tranzly Pro：Elementor、Bricks、Divi、Beaver Builder、Oxygen 和 WPBakery 页面；WooCommerce 中的所有内容，并以访问者的货币显示价格；Yoast SEO、Rank Math、SEOPress 和 All in One SEO 的 SEO 字段；ACF、Meta Box 和 Pods 字段；表单及其电子邮件；您的主题和插件自身的文本；以及评论和评价。"
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "商店文本与电子邮件"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "电子邮件主题和标题、支付与配送方式名称以及结账通知。每个订单的电子邮件都会使用下单时的语言发送。"
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "表单及其电子邮件"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "每个表单都保留一份条目列表；其标签、按钮、消息和电子邮件将显示在访客的语言中。"
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "已保存。"
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "尚未定义任何 ACF、Meta Box 或 Pods 字段。"
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "字段"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "位置"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "在翻译中"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "%s 在翻译中会发生什么"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "翻译"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "原样复制"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "保持空白"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "商店货币"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "货币"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "显示其他货币的价格（商店使用的是 %s）"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "汇率"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "汇率最后更新于 %s。"
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "尚未获取汇率。"
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "立即更新费率"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "新货币"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "请选择…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "费率（每 %s）"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "手动输入的费率将会保留：每日更新不会更改它。"
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "舍入"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "无"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "凑整"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "四舍五入到最近的"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "向下取整"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "舍入到（例如 1、0.05 或 10）"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "价格以（例如 0.99）结尾"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "添加货币"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "哪些访客看到哪种货币"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "按国家/地区：两位数国家代码（例如 CH）"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "来自 %s 的访客"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "让访问者进行选择 (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "现在的价格取决于 Cookie 或访问者的国家/地区：请确保您的页面缓存根据 \"tranzly_currency\" Cookie 进行变体缓存，或者排除商店页面。"
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "保存货币"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "主题和插件自身显示的文字（按钮、标签）。读取一次主题或插件，然后在此处翻译其文字；您的翻译将覆盖插件自身的文字。"
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d 个文本"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "未读"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "重新阅读"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "读取其文本"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "翻译"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6940,6 +7389,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d 篇文章，%2$s 个字符：您的账户大约需要 $%3$s。"
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "开始翻译"
 
@@ -6977,6 +7427,11 @@ msgstr "内容"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "语言"
 
@@ -7011,11 +7466,13 @@ msgstr "已保存菜单。"
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "已翻译 %d 个文本。"
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "已保存。您的更正已受到保护，免受机器翻译影响。"
 
@@ -7052,48 +7509,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "模板、页眉、页脚和模式 (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "翻译缺失的文本"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "此处没有要翻译的文本。"
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "人工校对，已保护"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "保存修改"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "语言与设置"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "引擎"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "翻译任务"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "地址与SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "语言切换器"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO 审计"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "菜单与共享文本"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "翻译状态"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "集成"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7138,6 +7608,7 @@ msgid "The whole language has been checked."
 msgstr "整个语言已通过检查。"
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "页面"
 
@@ -7146,17 +7617,198 @@ msgid "Problem"
 msgstr "问题"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "编辑"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "任务 %1$d 已开始：正在后台翻译 %2$d 个页面。请在“翻译任务”中查看进度。"
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "正正在后台检查 %d 个翻译。分数随之显示在这里。"
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "缺失"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "过期"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "已翻译"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "由人工编辑"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "机器翻译"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "等待审核"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "需要人工审核"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "全部"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "已是最新版本"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly 仍在计算哪些旧翻译已过时。在此期间，“已过时”的数量将会增加。"
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "内容类型"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "所有内容"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "平均质量"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "已翻译 %1$d 个（%2$d%%）"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "显示"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "翻译所有未完成的内容"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "更新所有过时的项目"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "使用 AI 检查质量"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "重新翻译低分页面"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "这里什么都没有。"
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "质量"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "由个人"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "等待审核"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "并排"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "显示更多"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "批量翻译整个网站 (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "使用 Tranzly Pro，选择内容类型和语言，查看预估费用，即可一键翻译整个网站。"
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "已启动 %d 个后台任务（每种语言一个）。请在“翻译任务”中查看其进度。"
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "内容类型"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "要翻译的内容"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "仅缺少的项目"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "仅限过期的内容"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "所有内容（由人工编辑的页面将保持不变）"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "预估"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d 页，%2$s 个字符。此引擎未发布价格。"
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d 页，%2$s 个字符，约 $%3$s。"
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "查找文本"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "还有 %d 个：请输入“查找文本”以缩减列表。"
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "每个页面角落的小巧按钮，适配任意主题，无需进行任何设置。"
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "位置"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7356,6 +8008,199 @@ msgstr "与 %s 合作。"
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "每个地址字词应包含 2 到 12 个小写字母、数字或连字符。"
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Tranzly Pro 包含更新时自动翻译、审阅者角色、面向翻译人员的 XLIFF 导出、从 WPML、Polylang 或 TranslatePress 切换以及 AI 质量检查。"
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "当原件更改时"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "当页面被编辑时"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "将翻译标记为过期"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "在后台重新翻译其翻译内容"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "什么也不做"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "人工编辑过的翻译绝不会被覆盖；相反，它会被标记为过期。"
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "在发布新页面时将其翻译成所有语言"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "第二个 AI 模型会在原文旁边逐一阅读每个译文，为其评分并指出错误。它会使用你在 AI 设置中配置的 AI 密钥。从“翻译状态”开始检查。"
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "AI 提供商"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "AI 设置的通用模型"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "推荐"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "低于此分数的内容需要人工审核"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "仅发布经审核人员批准的翻译"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "授予用户“翻译”角色（可编辑译文，但无法编辑原文，也无法发布）或“翻译审核”角色（同时可进行批准）。审核者还可以在“文章”和“页面”列表的“待审核”栏目下找到所有等待处理的内容；在其中发布内容即表示对其进行批准。"
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "管理用户"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "当前没有等待审核的内容。"
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "译者备注（可选）"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "并排阅读"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "批准"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "申请更改"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "已导入 %d 个翻译并防止机器翻译。"
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "译者导出与导入"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "尚未翻译"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "已翻译"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "格式"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2（翻译工具）"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV（电子表格）"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "下载文件"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "导入已翻译的文件"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "已撤销：移除了 %1$d 个链接，删除了 %2$d 个导入的页面。"
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "模拟运行，未作更改："
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "已导入："
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "已添加 %1$d 种语言，已链接 %2$d 个翻译，已生成 %3$d 个页面，%4$d 条文本。"
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "请先关闭其他插件（它们的地址和切换器会与 Tranzly 冲突）。其数据将保留在原地，因此您可以随时切换回来；“撤销”操作会精准移除导入的内容。"
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "此网站上没有来自该插件的数据。"
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "语言：%s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "仍然处于活动状态：请先将其关闭。"
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "模拟运行"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "导入"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "撤销导入"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "评论与产品评价"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "每种语言都保留其自身的"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "显示所有版本中每种语言的评论"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "显示全部内容，并将其翻译成读者的语言"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "翻译功能会为每个已批准的评论调用您的翻译引擎。垃圾评论和等待审核的评论绝不会被发送。"
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "已保存。您修改的部分已被标记为经人工核对，此翻译已受到保护，免受机器翻译影响。"
@@ -7388,11 +8233,6 @@ msgstr "保存更改"
 msgid "Open in the editor"
 msgstr "在编辑器中打开"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "机器翻译"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "人工检查"
@@ -7400,10 +8240,6 @@ msgstr "人工检查"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "已导入"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "尚未翻译"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7457,10 +8293,6 @@ msgstr "尚未翻译（副本）"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "请先保存此文章，然后再在此处进行翻译。"
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "并排"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

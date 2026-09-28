@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:47+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Fassara a baya"
             ],
+            "Custom fields": [
+                "Rubutattun fage na musamman"
+            ],
+            "Bulk translate the whole site": [
+                "Fassara dukan shafin gaba \u0257aya lokaci \u0257aya"
+            ],
+            "Review and approval": [
+                "Bita da amincewa"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Sauya daga WPML, Polylang ko TranslatePress"
+            ],
             "Floating switcher": [
                 "Masauji mai shawagi"
+            ],
+            "AI quality check": [
+                "Duban ingancin AI"
+            ],
+            "Workflow": [
+                "Tsarin Aiki"
             ],
             "Next": [
                 "Na gaba"
@@ -25,11 +43,17 @@
             "Open": [
                 "Bu\u0257e"
             ],
+            "Model": [
+                "Samfurin"
+            ],
             "About": [
                 "Game da"
             ],
             "Done": [
                 "An gama"
+            ],
+            "Actions": [
+                "Ayyuka"
             ],
             "Cancelled": [
                 "An soke"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Shafuka"
             ],
+            "State": [
+                "Jiha"
+            ],
             "Type": [
                 "Nau'i"
             ],
             "Upgrade": [
                 "Ha\u0253aka"
+            ],
+            "Comments and reviews": [
+                "Sharhi da bita"
+            ],
+            "Currency": [
+                "Kudin waje"
+            ],
+            "Theme and plugin text": [
+                "Rubutun jigo da kari"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Subdomains da kuma separate domains ga kowane harshe wani \u0253angare ne na Tranzly Pro."
@@ -743,6 +779,150 @@
             "Translation engine": [
                 "Injin fassara"
             ],
+            "What Tranzly translates on this site": [
+                "Abubuwan da Tranzly ke fassarawa a wannan shafin"
+            ],
+            "found, translated with your content": [
+                "an samo, an fassara da abubuwan da ke cikin ku"
+            ],
+            "not on this site": [
+                "ba a kan wannan shafin ba"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Tare da Tranzly Pro: shafukan Elementor, Bricks, Divi, Beaver Builder, Oxygen da WPBakery; komai a cikin WooCommerce, tare da farashi a cikin kudin mai ziyara; filayen SEO na Yoast SEO, Rank Math, SEOPress da All in One SEO; filayen ACF, Meta Box da Pods; fom da imel \u0257insu; rubutun jigon ku da plugins \u0257inku; da sharhi da sake dubawa."
+            ],
+            "Shop text and e-mails": [
+                "Rubutun shago da imel"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Jigon imel da kan batutuwa, sunan hanyoyin biyan ku\u0257i da jigilar kaya, da sanarwar biyan ku\u0257i. Imel din kowane oda yana fita ne da harshen da aka yi odar a ciki."
+            ],
+            "Forms and their e-mails": [
+                "Formuna da imel \u0257insu"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Kowace fom tana kiyaye jerin shigarwa \u0257aya; alamunta, ma\u0253allanta, sa\u0199onninta da imel \u0257inta suna bayyana a cikin harshen ba\u0199o."
+            ],
+            "Saved.": [
+                "An adana."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Ba a bayyana filayen ACF, Meta Box ko Pods ba tukuna."
+            ],
+            "Field": [
+                "Filo"
+            ],
+            "Where": [
+                "Ina"
+            ],
+            "In a translation": [
+                "A cikin fassara"
+            ],
+            "What happens to %s in a translation": [
+                "Me ke faruwa ga %s a cikin fassara"
+            ],
+            "Translate it": [
+                "Fassara shi"
+            ],
+            "Copy it as it is": [
+                "Kwafi kamar yadda yake"
+            ],
+            "Leave it empty": [
+                "Bar shi a bace"
+            ],
+            "The shop\u2019s currency": [
+                "Kudin shago"
+            ],
+            "Currencies": [
+                "Ku\u0257a\u0257e"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Nuna farashi a wasu kudin (na shagon su ne %s)"
+            ],
+            "Exchange rates": [
+                "Farashin musayar kudi"
+            ],
+            "Rates last updated %s.": [
+                "An sabunta \u0199imar \u0199arshe a %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Ba a samo \u0199ididdiga ba tukuna."
+            ],
+            "Update the rates now": [
+                "Sabunta \u0199imar yanzu"
+            ],
+            "New currency": [
+                "Sabon kudin kasa"
+            ],
+            "Choose\u2026": [
+                "Zabi..."
+            ],
+            "Rate (per 1 %s)": [
+                "Farashi (kowane 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Rubuta \u0199imar tana kiyaye ta: sabuntawar yau da kullun ba za ta canza ta ba."
+            ],
+            "Rounding": [
+                "Zagewa"
+            ],
+            "None": [
+                "Babbu"
+            ],
+            "Round up": [
+                "Zagewa"
+            ],
+            "Round to the nearest": [
+                "Kewaya zuwa mafi kusa"
+            ],
+            "Round down": [
+                "Zagewa zuwa kasa"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Zagewa zuwa (misali 1, 0.05 ko 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Farashin yana \u0199arewa a (misali 0.99)"
+            ],
+            "Add a currency": [
+                "\u0198ara ku\u0257i"
+            ],
+            "Which visitors see which currency": [
+                "Wadanne ba\u0199i ke ganin wacce tsabar ku\u0257i"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Ta \u0199asa: lambar \u0199asa mai haruffa biyu (misali CH)"
+            ],
+            "Visitors from %s": [
+                "Masu ziyara daga %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Bar wa ba\u0199i damar za\u0253ar (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Farashin yanzu ya dogara ne a kan cookie ko kuma \u0199asar mai ziyara: tabbatar cewa cache \u0257in shafinka ya bambanta ta wurin cookie \u0257in \"tranzly_currency\", ko kuma ya cire shafukan shago."
+            ],
+            "Save currencies": [
+                "Ajiye kudin waje"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Kalmomin da jigo da plugins \u0257inka ke bugawa da kansu (ma\u0253alli, lakabi). Karanta jigo ko plugin sau \u0257aya, sannan ka fassara rubutunsa a nan; fassararka ta fi ta plugin \u0257in kansa."
+            ],
+            "%d texts": [
+                "%d rubutun"
+            ],
+            "not read yet": [
+                "ba a karanta ba tukuna"
+            ],
+            "Read again": [
+                "Karanta kuma"
+            ],
+            "Read its text": [
+                "Karanta rubutunsa"
+            ],
+            "Translate": [
+                "Fassara"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "An fara aikin tare da fassara %d da za a yi. Yana gudana a bangon baya: zaka iya rufe wannan shafin."
             ],
@@ -893,6 +1073,12 @@
             "Menus and shared text": [
                 "Jerushe da rubutun da aka raba"
             ],
+            "Translation status": [
+                "Matsayin fassara"
+            ],
+            "Integrations": [
+                "Ha\u0257e-ha\u0257e"
+            ],
             "No meta description": [
                 "Babu bayanin meta"
             ],
@@ -932,11 +1118,128 @@
             "Edit": [
                 "Gyara"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "An fara aiki %1$d: Ana fassara shafuka %2$d a bango. Bi shi a cikin Ayyukan fassara."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "Ana binciken fassarori %d a bayan fage. Ana nuna maki anan yayin da suka zo."
+            ],
+            "Missing": [
+                "Bace"
+            ],
+            "Out of date": [
+                "Ba a sabunta ba"
+            ],
+            "Translated": [
+                "An fassara"
+            ],
+            "Edited by a person": [
+                "Wani mutum ya gyara"
+            ],
+            "Machine translated": [
+                "An fassara da inji"
+            ],
+            "Waiting for review": [
+                "Ana jiran dubawa"
+            ],
+            "Needs a human look": [
+                "Yana bu\u0199atar duban \u0257an adam"
+            ],
+            "Everything": [
+                "Komai"
+            ],
+            "Up to date": [
+                "Ya zamani"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly na ci gaba da gano wace tsohuwar fassara ce ta wuce lokaci. Lambobin \"wuce lokaci\" za su karu yayin da yake yi."
+            ],
+            "Content type": [
+                "Nau'in abun ciki"
+            ],
+            "All content": [
+                "Duk abubuwan da ke ciki"
+            ],
+            "Average quality": [
+                "Matsakaicin inganci"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d an fassara (%2$d%%)"
+            ],
+            "Show": [
+                "Nuna"
+            ],
+            "Translate everything missing": [
+                "Fassara duk abin da ya \u0253ace"
+            ],
+            "Update everything out of date": [
+                "Sabunta duk abin da ya wuce lokaci"
+            ],
+            "Check the quality with AI": [
+                "Bincika inganci tare da AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "Sake fassara shafukan da ke da maki \u0199an\u0199anta"
+            ],
+            "Nothing here.": [
+                "Babu komai anan."
+            ],
+            "Quality": [
+                "Inganci"
+            ],
+            "by a person": [
+                "na mutum"
+            ],
+            "waiting for review": [
+                "yana jiran dubawa"
+            ],
+            "Side by side": [
+                "Gefe da gefe"
+            ],
+            "Show more": [
+                "Nuna \u0199ari"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Fassara gaba \u0257aya shafin a jere (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Tare da Tranzly Pro, za\u0253i nau'ikan abun ciki da harsuna, ga kiyasin, kuma ka fassara duka shafin a lokaci guda."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "An fara ayyukan bango %d, \u0257aya ga kowane harshe. Bi su a cikin ayyukan Fassara."
+            ],
+            "Content types": [
+                "Nau'ikan abun ciki"
+            ],
+            "What to translate": [
+                "Abin da za a fassara"
+            ],
+            "Only what is missing": [
+                "Abin da kawai ya rage"
+            ],
+            "Only what is out of date": [
+                "Abin da kawai ya tsohe"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Komai (shafukan da mutum ya gyara za su kasance yadda suke)"
+            ],
+            "Estimate": [
+                "Kiyasta"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "Shafuka %1$d, haruffa %2$s. Wannan injiniya ba ta wallafa farashi ba."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "Shafuka %1$d, haruffa %2$s, kimanin $%3$s."
+            ],
+            "Find a text": [
+                "Nemo rubutu"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "Sauran %d: rubuta \"Nemi rubutu\" domin rage tsawon lissafin."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Karamin maballi a kusurwar kowace shafi, a kowanne jigo, ba tare da saiti ba."
-            ],
-            "Where": [
-                "Ina"
             ],
             "Off": [
                 "A kashe"
@@ -1078,6 +1381,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Kowace kalmar adireshisi ta \u0199unshi haruffa \u0199anana 2 zuwa 12, lambobi, ko alamomin ragewa."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Fassarar ta atomatik lokacin sabuntawa, matsayin masu bitar, fitar da XLIFF ga masu fassara, sauyawa daga WPML, Polylang ko TranslatePress da kuma binciken ingancin AI suna zuwa tare da Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Lokacin da asali ya canza"
+            ],
+            "When a page is edited": [
+                "Lokacin da aka gyara shafi"
+            ],
+            "Mark its translations out of date": [
+                "Yiwa fassarar ta tsofe"
+            ],
+            "Translate its translations again in the background": [
+                "Fassar fassarorin a baya a bango"
+            ],
+            "Do nothing": [
+                "Karka yi komai"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Ba a taba share fassarar da mutum ya gyara ba; a maimakon haka, ana nuna cewa ta tsofe."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Fassara sabbin shafuka zuwa kowace harshe yayin da aka buga su"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Wani samfurin AI na biyu yana karanta kowace fassara tare da asalinta, yana ba ta maki kuma yana nuna kuskuren da ke ciki. Yana amfani da naka mabu\u0257in AI daga saitunan AI. Fara bincike daga Matsayin fassara."
+            ],
+            "AI provider": [
+                "Mai samar da AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Tsarin samfurin gaba \u0257aya na AI"
+            ],
+            "Recommended": [
+                "Shawartawa"
+            ],
+            "A page needs a human look below this score": [
+                "Wani shafi yana bu\u0199atar kallon \u0257an adam a \u0199asan wannan maki"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Bugaci kawai fassarorin da mai nazari ya amince da su"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Ba wa mutane matsayin Mai fassara (yana gyara fassarori, ba ainihin rubutun ba, ba zai iya bugawa ba) ko matsayin Mai bitar fassara (yana kuma amincewa). Masu bita suna kuma nemo komai da ke jiran aiki a cikin jerin Rubuce-rubuce da Shafuka a \u0199asan \"Mai jiran aiki\"; buga \u0257aya a can yana nuna amincewa da shi."
+            ],
+            "Manage users": [
+                "Sarrafa masu amfani"
+            ],
+            "Nothing is waiting for review.": [
+                "Babu wani abu da yake jiran bita."
+            ],
+            "Note for the translator (optional)": [
+                "Bayanan kula ga mai fassara (na za\u0253i)"
+            ],
+            "Read side by side": [
+                "Karanta gefe da gefe"
+            ],
+            "Approve": [
+                "Amince"
+            ],
+            "Ask for changes": [
+                "Nemi sauye-sauye"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "An shigo da fassarori %d kuma an kare su daga fassarar na'ura."
+            ],
+            "Export and import for translators": [
+                "Fitarwa da shigarwa ga masu fassara"
+            ],
+            "Not translated yet": [
+                "Ba a fassara ba tukuna"
+            ],
+            "Already translated": [
+                "An riga an fassara"
+            ],
+            "Format": [
+                "Tsari"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (kayan fassara)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (takardun lissafi)"
+            ],
+            "Download the file": [
+                "Sauke fayilun"
+            ],
+            "Import a translated file": [
+                "Shigo da fayil da aka fassara"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "An cire: An cire maha\u0257a %1$d, an goge shafuka %2$d da aka shigo da su."
+            ],
+            "Dry run, nothing changed:": [
+                "Gwajin gaggawa, babu abin da ya canza:"
+            ],
+            "Imported:": [
+                "An shigo da su:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "An \u0199ara harsuna %1$d, an ha\u0257a fassara %2$d, an gina shafuka %3$d, rubutattun kalmomi %4$d."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Kashe \u0257ayan binciken tukuna (adiresoshinsa da masu sauya su za su yi karo da Tranzly). Bayanan sa suna nan inda suke, don haka zaka iya komawa baya; Undo yana cire ainihin abin da shigo da kayayyaki ya \u0199ara."
+            ],
+            "No data from this plugin on this site.": [
+                "Babu bayanan daga wannan plugin din a kan wannan shafin."
+            ],
+            "Languages: %s": [
+                "Harsuna: %s"
+            ],
+            "still active: switch it off first.": [
+                "har yanzu yana aiki: kashe shi tukuna."
+            ],
+            "Dry run": [
+                "Gwajin gwaji"
+            ],
+            "Import": [
+                "Shigo da shi"
+            ],
+            "Undo the import": [
+                "Cire abin da aka shigo da shi"
+            ],
+            "Comments and product reviews": [
+                "Ra'ayoyi da bitar samfur"
+            ],
+            "Each language keeps its own": [
+                "Kowane harshe yana ri\u0199e da nasa"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Nuna ra'ayoyin kowace harshe a kan kowane sigar"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Nuna su duka, an fassara su zuwa harshen mai karatu"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Fassarar tana amfani da injin fassararka ga kowane sharhin da aka amince da shi. Ba a ta\u0253a aika sa\u0199onnin banza (spam) da sharhohin da ke jiran a duba su ba."
             ]
         }
     }

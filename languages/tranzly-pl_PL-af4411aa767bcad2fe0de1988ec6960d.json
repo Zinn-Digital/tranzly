@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "T\u0142umacz w tle"
             ],
+            "Custom fields": [
+                "Pola niestandardowe"
+            ],
+            "Bulk translate the whole site": [
+                "Przet\u0142umacz masowo ca\u0142\u0105 witryn\u0119"
+            ],
+            "Review and approval": [
+                "Przegl\u0105d i zatwierdzenie"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Przejd\u017a z WPML, Polylang lub TranslatePress"
+            ],
             "Floating switcher": [
                 "P\u0142ywaj\u0105cy prze\u0142\u0105cznik"
+            ],
+            "AI quality check": [
+                "Kontrola jako\u015bci AI"
+            ],
+            "Workflow": [
+                "Przep\u0142yw pracy"
             ],
             "Next": [
                 "Dalej"
@@ -25,11 +43,17 @@
             "Open": [
                 "Otw\u00f3rz"
             ],
+            "Model": [
+                "Model"
+            ],
             "About": [
                 "Informacje"
             ],
             "Done": [
                 "Gotowe"
+            ],
+            "Actions": [
+                "Dzia\u0142ania"
             ],
             "Cancelled": [
                 "Anulowano"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Witryny"
             ],
+            "State": [
+                "Stan"
+            ],
             "Type": [
                 "Typ"
             ],
             "Upgrade": [
                 "Uaktualnij"
+            ],
+            "Comments and reviews": [
+                "Komentarze i opinie"
+            ],
+            "Currency": [
+                "Waluta"
+            ],
+            "Theme and plugin text": [
+                "Tekst motyw\u00f3w i wtyczek"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Subdomeny i oddzielne domeny dla ka\u017cdego j\u0119zyka s\u0105 cz\u0119\u015bci\u0105 Tranzly Pro."
@@ -747,6 +783,150 @@
             "Translation engine": [
                 "Silnik t\u0142umacze\u0144"
             ],
+            "What Tranzly translates on this site": [
+                "Co Tranzly t\u0142umaczy na tej stronie"
+            ],
+            "found, translated with your content": [
+                "znaleziono, przet\u0142umaczono z Twoj\u0105 tre\u015bci\u0105"
+            ],
+            "not on this site": [
+                "nie w tej witrynie"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Z Tranzly Pro: strony zbudowane za pomoc\u0105 Elementor, Bricks, Divi, Beaver Builder, Oxygen i WPBakery; wszystko w WooCommerce, z cenami w walucie odwiedzaj\u0105cego; pola SEO w Yoast SEO, Rank Math, SEOPress i All in One SEO; pola ACF, Meta Box i Pods; formularze i wysy\u0142ane przez nie wiadomo\u015bci e-mail; w\u0142asne teksty motywu i wtyczek; a tak\u017ce komentarze i opinie."
+            ],
+            "Shop text and e-mails": [
+                "Teksty w sklepie i wiadomo\u015bci e-mail"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Tematy wiadomo\u015bci e-mail i nag\u0142\u00f3wki, nazwy metod p\u0142atno\u015bci i dostawy oraz powiadomienia przy kasie. Wiadomo\u015bci e-mail dotycz\u0105ce ka\u017cdego zam\u00f3wienia s\u0105 wysy\u0142ane w j\u0119zyku, w kt\u00f3rym zosta\u0142o ono z\u0142o\u017cone."
+            ],
+            "Forms and their e-mails": [
+                "Formularze i ich wiadomo\u015bci e-mail"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Ka\u017cdy formularz zawiera jedn\u0105 list\u0119 wpis\u00f3w; jego etykiety, przyciski, komunikaty i wiadomo\u015bci e-mail pojawiaj\u0105 si\u0119 w j\u0119zyku osoby odwiedzaj\u0105cej."
+            ],
+            "Saved.": [
+                "Zapisano."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Nie zdefiniowano jeszcze \u017cadnych p\u00f3l ACF, Meta Box ani Pods."
+            ],
+            "Field": [
+                "Pole"
+            ],
+            "Where": [
+                "Gdzie"
+            ],
+            "In a translation": [
+                "W t\u0142umaczeniu"
+            ],
+            "What happens to %s in a translation": [
+                "Co dzie si\u0119 z %s w t\u0142umaczeniu"
+            ],
+            "Translate it": [
+                "Przet\u0142umacz to"
+            ],
+            "Copy it as it is": [
+                "Skopiuj to bez zmian"
+            ],
+            "Leave it empty": [
+                "Pozostaw puste"
+            ],
+            "The shop\u2019s currency": [
+                "Waluta sklepu"
+            ],
+            "Currencies": [
+                "Waluty"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Poka\u017c ceny w innych walutach (waluta sklepu to %s)"
+            ],
+            "Exchange rates": [
+                "Kursy walut"
+            ],
+            "Rates last updated %s.": [
+                "Stawki zaktualizowane po raz ostatni %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Stawki nie zosta\u0142y jeszcze pobrane."
+            ],
+            "Update the rates now": [
+                "Zaktualizuj stawki teraz"
+            ],
+            "New currency": [
+                "Nowa waluta"
+            ],
+            "Choose\u2026": [
+                "Wybierz..."
+            ],
+            "Rate (per 1 %s)": [
+                "Stawka (za 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Wpisanie stawki powoduje jej zachowanie: codzienna aktualizacja jej nie zmieni."
+            ],
+            "Rounding": [
+                "Zaokr\u0105glanie"
+            ],
+            "None": [
+                "Brak"
+            ],
+            "Round up": [
+                "Zaokr\u0105glij w g\u00f3r\u0119"
+            ],
+            "Round to the nearest": [
+                "Zaokr\u0105glij do najbli\u017cszego"
+            ],
+            "Round down": [
+                "Zaokr\u0105gli\u0107 w d\u00f3\u0142"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Zaokr\u0105glij do (na przyk\u0142ad 1, 0,05 lub 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Ceny ko\u0144cz\u0105 si\u0119 na (na przyk\u0142ad 0,99)"
+            ],
+            "Add a currency": [
+                "Dodaj walut\u0119"
+            ],
+            "Which visitors see which currency": [
+                "Kt\u00f3rzy odwiedzaj\u0105cy widz\u0105 jak\u0105 walut\u0119"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Wed\u0142ug kraju: dwuliterowy kod kraju (na przyk\u0142ad CH)"
+            ],
+            "Visitors from %s": [
+                "Odwiedzaj\u0105cy z %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Pozw\u00f3l odwiedzaj\u0105cym wybra\u0107 (skr\u00f3t [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Ceny zale\u017c\u0105 teraz od pliku cookie lub kraju odwiedzaj\u0105cego: upewnij si\u0119, \u017ce pami\u0119\u0107 podr\u0119czna strony uwzgl\u0119dnia plik cookie \u201etranzly_currency\u201d lub wyklucza strony sklepu."
+            ],
+            "Save currencies": [
+                "Zapisz waluty"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "S\u0142owa, kt\u00f3re motyw i wtyczki wy\u015bwietlaj\u0105 samodzielnie (przyciski, etykiety). Odczytaj motyw lub wtyczk\u0119 raz, a nast\u0119pnie przet\u0142umacz tutaj ich tekst; Twoje t\u0142umaczenie ma pierwsze\u0144stwo przed w\u0142asnym t\u0142umaczeniem wtyczki."
+            ],
+            "%d texts": [
+                "%d tekst\u00f3w"
+            ],
+            "not read yet": [
+                "jeszcze nieprzeczytane"
+            ],
+            "Read again": [
+                "Przeczytaj ponownie"
+            ],
+            "Read its text": [
+                "Przeczytaj jego tekst"
+            ],
+            "Translate": [
+                "Przet\u0142umacz"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Zadanie zosta\u0142o rozpocz\u0119te z %d t\u0142umaczeniami do wykonania. Dzia\u0142a ono w tle: mo\u017cesz zamkn\u0105\u0107 t\u0119 stron\u0119."
             ],
@@ -897,6 +1077,12 @@
             "Menus and shared text": [
                 "Menu i udost\u0119pniony tekst"
             ],
+            "Translation status": [
+                "Status t\u0142umaczenia"
+            ],
+            "Integrations": [
+                "Integracje"
+            ],
             "No meta description": [
                 "Brak opisu meta"
             ],
@@ -936,11 +1122,128 @@
             "Edit": [
                 "Edytuj"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Zadanie %1$d zosta\u0142o rozpocz\u0119te: %2$d stron jest t\u0142umaczonych w tle. Mo\u017cesz je \u015bledzi\u0107 w sekcji Zadania t\u0142umaczenia."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "Trwa sprawdzanie %d t\u0142umacze\u0144 w tle. Wyniki pojawi\u0105 si\u0119 tutaj w miar\u0119 ich nap\u0142ywania."
+            ],
+            "Missing": [
+                "Brakuj\u0105ce"
+            ],
+            "Out of date": [
+                "Nieaktualne"
+            ],
+            "Translated": [
+                "Przet\u0142umaczono"
+            ],
+            "Edited by a person": [
+                "Edytowano przez u\u017cytkownika"
+            ],
+            "Machine translated": [
+                "Przet\u0142umaczone maszynowo"
+            ],
+            "Waiting for review": [
+                "Oczekiwanie na przegl\u0105d"
+            ],
+            "Needs a human look": [
+                "Wymaga weryfikacji przez cz\u0142owieka"
+            ],
+            "Everything": [
+                "Wszystko"
+            ],
+            "Up to date": [
+                "Aktualna"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly nadal sprawdza, kt\u00f3re starsze t\u0142umaczenia s\u0105 nieaktualne. Liczba element\u00f3w \u201enieaktualnych\u201d b\u0119dzie rosn\u0105\u0107 w trakcie tego procesu."
+            ],
+            "Content type": [
+                "Typ zawarto\u015bci"
+            ],
+            "All content": [
+                "Ca\u0142a zawarto\u015b\u0107"
+            ],
+            "Average quality": [
+                "\u015arednia jako\u015b\u0107"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d przet\u0142umaczono (%2$d%%)"
+            ],
+            "Show": [
+                "Poka\u017c"
+            ],
+            "Translate everything missing": [
+                "Przet\u0142umacz wszystko, czego brakuje"
+            ],
+            "Update everything out of date": [
+                "Zaktualizuj wszystko, co jest nieaktualne"
+            ],
+            "Check the quality with AI": [
+                "Sprawd\u017a jako\u015b\u0107 za pomoc\u0105 AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "Przet\u0142umacz ponownie strony z niskim wynikiem"
+            ],
+            "Nothing here.": [
+                "Brak element\u00f3w."
+            ],
+            "Quality": [
+                "Jako\u015b\u0107"
+            ],
+            "by a person": [
+                "przez osob\u0119"
+            ],
+            "waiting for review": [
+                "oczekuje na zatwierdzenie"
+            ],
+            "Side by side": [
+                "Widok obok siebie"
+            ],
+            "Show more": [
+                "Poka\u017c wi\u0119cej"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Masowe t\u0142umaczenie ca\u0142ej witryny (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Dzi\u0119ki Tranzly Pro wybierz typy tre\u015bci i j\u0119zyki, sprawd\u017a szacowany koszt i przet\u0142umacz ca\u0142\u0105 witryn\u0119 za jednym razem."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "Uruchomiono %d zada\u0144 w tle, po jednym dla ka\u017cdego j\u0119zyka. Mo\u017cesz je \u015bledzi\u0107 w sekcji Zadania t\u0142umaczeniowe."
+            ],
+            "Content types": [
+                "Typy tre\u015bci"
+            ],
+            "What to translate": [
+                "Co przet\u0142umaczy\u0107"
+            ],
+            "Only what is missing": [
+                "Tylko to, czego brakuje"
+            ],
+            "Only what is out of date": [
+                "Tylko to, co jest nieaktualne"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Wszystko (strony edytowane przez osob\u0119 pozostaj\u0105 bez zmian)"
+            ],
+            "Estimate": [
+                "Szacuj"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d stron, %2$s znak\u00f3w. Ten silnik nie publikuje ceny."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d stron, %2$s znak\u00f3w, oko\u0142o $%3$s."
+            ],
+            "Find a text": [
+                "Znajd\u017a tekst"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "Wi\u0119cej (%d): wpisz \"Znajd\u017a tekst\", aby zaw\u0119zi\u0107 list\u0119."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Ma\u0142y przycisk w rogu ka\u017cdej strony, w ka\u017cdym motywie, bez konieczno\u015bci konfiguracji."
-            ],
-            "Where": [
-                "Gdzie"
             ],
             "Off": [
                 "Wy\u0142."
@@ -1082,6 +1385,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Ka\u017cdy wyraz adresu sk\u0142ada si\u0119 z 2 do 12 ma\u0142ych liter, cyfr lub my\u015blnik\u00f3w."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Automatyczne t\u0142umaczenie przy aktualizacji, role recenzent\u00f3w, eksport XLIFF dla t\u0142umaczy, przechodzenie z WPML, Polylang lub TranslatePress oraz kontrola jako\u015bci AI s\u0105 dost\u0119pne w Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Gdy orygina\u0142 ulega zmianie"
+            ],
+            "When a page is edited": [
+                "Po edycji strony"
+            ],
+            "Mark its translations out of date": [
+                "Oznacz jego t\u0142umaczenia jako nieaktualne"
+            ],
+            "Translate its translations again in the background": [
+                "Ponownie przet\u0142umacz jego t\u0142umaczenia w tle"
+            ],
+            "Do nothing": [
+                "Nic nie r\u00f3b"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Przet\u0142umaczone przez cz\u0142owieka t\u0142umaczenie nigdy nie jest nadpisywane; zamiast tego jest oznaczane jako nieaktualne."
+            ],
+            "Translate new pages into every language when they are published": [
+                "T\u0142umacz nowe strony na ka\u017cdy j\u0119zyk w momencie ich publikacji"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Drugi model sztucznej inteligencji odczytuje ka\u017cde t\u0142umaczenie obok orygina\u0142u, ocenia je i wskazuje b\u0142\u0119dy. U\u017cywa Twojego w\u0142asnego klucza AI z ustawie\u0144 sztucznej inteligencji. Rozpocznij sprawdzanie ze statusu t\u0142umaczenia."
+            ],
+            "AI provider": [
+                "Dostawca AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Og\u00f3lny model ustawie\u0144 sztucznej inteligencji"
+            ],
+            "Recommended": [
+                "Polecane"
+            ],
+            "A page needs a human look below this score": [
+                "Strona wymaga ludzkiego spojrzenia poni\u017cej tego wyniku"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Publikuj tylko t\u0142umaczenia zatwierdzone przez recenzenta"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Nadaj u\u017cytkownikom rol\u0119 T\u0142umacza (edytuje t\u0142umaczenia, nigdy orygina\u0142y, nie mo\u017ce publikowa\u0107) lub rol\u0119 Recenzenta t\u0142umacze\u0144 (dodatkowo zatwierdza). Recenzenci znajduj\u0105 r\u00f3wnie\u017c wszystko oczekuj\u0105ce na li\u015bcie Wpis\u00f3w i Stron w sekcji \u201eOczekuj\u0105ce\u201d; opublikowanie tam jednego elementu oznacza jego zatwierdzenie."
+            ],
+            "Manage users": [
+                "Zarz\u0105dzaj u\u017cytkownikami"
+            ],
+            "Nothing is waiting for review.": [
+                "Nic nie oczekuje na sprawdzenie."
+            ],
+            "Note for the translator (optional)": [
+                "Uwaga dla t\u0142umacza (opcjonalnie)"
+            ],
+            "Read side by side": [
+                "Czytaj obok siebie"
+            ],
+            "Approve": [
+                "Zatwierd\u017a"
+            ],
+            "Ask for changes": [
+                "Popro\u015b o zmiany"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d t\u0142umacze\u0144 zosta\u0142o zaimportowanych i zabezpieczonych przed t\u0142umaczeniem maszynowym."
+            ],
+            "Export and import for translators": [
+                "Eksport i import dla t\u0142umaczy"
+            ],
+            "Not translated yet": [
+                "Nieprzet\u0142umaczone jeszcze"
+            ],
+            "Already translated": [
+                "Ju\u017c przet\u0142umaczono"
+            ],
+            "Format": [
+                "Formatowanie"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (narz\u0119dzia t\u0142umaczeniowe)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (arkusze kalkulacyjne)"
+            ],
+            "Download the file": [
+                "Pobierz plik"
+            ],
+            "Import a translated file": [
+                "Zaimportuj przet\u0142umaczony plik"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Cofni\u0119to: usuni\u0119to %1$d link\u00f3w, usuni\u0119to %2$d zaimportowanych stron."
+            ],
+            "Dry run, nothing changed:": [
+                "Pr\u00f3ba bez wprowadzania zmian:"
+            ],
+            "Imported:": [
+                "Zaimportowano:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "Dodano %1$d j\u0119zyk\u00f3w, powi\u0105zano %2$d t\u0142umacze\u0144, zbudowano %3$d stron, %4$d tekst\u00f3w."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Najpierw wy\u0142\u0105cz drug\u0105 wtyczk\u0119 (jej adresy i prze\u0142\u0105czniki wchodzi\u0142yby w konflikt z Tranzly). Jej dane pozostaj\u0105 na swoim miejscu, wi\u0119c mo\u017cesz j\u0105 w\u0142\u0105czy\u0107 ponownie; funkcja Cofnij usuwa dok\u0142adnie to, co doda\u0142 import."
+            ],
+            "No data from this plugin on this site.": [
+                "Brak danych z tej wtyczki dla tej witryny."
+            ],
+            "Languages: %s": [
+                "J\u0119zyki: %s"
+            ],
+            "still active: switch it off first.": [
+                "nadal aktywny: najpierw go wy\u0142\u0105cz."
+            ],
+            "Dry run": [
+                "Pr\u00f3ba na sucho"
+            ],
+            "Import": [
+                "Importuj"
+            ],
+            "Undo the import": [
+                "Cofnij import"
+            ],
+            "Comments and product reviews": [
+                "Komentarze i recenzje produkt\u00f3w"
+            ],
+            "Each language keeps its own": [
+                "Ka\u017cdy j\u0119zyk zachowuje sw\u00f3j w\u0142asny"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Poka\u017c komentarze w ka\u017cdym j\u0119zyku do ka\u017cdej wersji"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Poka\u017c wszystkie, przet\u0142umaczone na j\u0119zyk czytelnika"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "T\u0142umaczenie wykorzystuje silnik t\u0142umacze\u0144 dla ka\u017cdego zatwierdzonego komentarza. Spam oraz komentarze oczekuj\u0105ce na moderacj\u0119 nigdy nie s\u0105 wysy\u0142ane."
             ]
         }
     }

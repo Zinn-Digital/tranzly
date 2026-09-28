@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.3.0\n"
+"Project-Id-Version: Tranzly 3.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-28T13:03:13+00:00\n"
+"POT-Creation-Date: 2026-09-28T14:58:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -185,6 +185,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr ""
 
@@ -209,6 +210,7 @@ msgid "Translate one post in one click"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr ""
 
@@ -225,6 +227,7 @@ msgid "Visual front-end editor"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr ""
 
@@ -233,6 +236,7 @@ msgid "Export and import for human translators"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr ""
 
@@ -414,6 +418,7 @@ msgid "WooCommerce multi-currency"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr ""
 
@@ -498,6 +503,7 @@ msgid "What gets translated"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr ""
 
@@ -857,6 +863,7 @@ msgstr ""
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr ""
 
@@ -1235,6 +1242,7 @@ msgid "Used for"
 msgstr ""
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr ""
 
@@ -1308,7 +1316,7 @@ msgstr ""
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr ""
@@ -1384,16 +1392,21 @@ msgid "This kind of content is not translated."
 msgstr ""
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr ""
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr ""
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr ""
 
@@ -1427,7 +1440,8 @@ msgstr ""
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr ""
 
@@ -1437,7 +1451,7 @@ msgid "This item already has a version in that language."
 msgstr ""
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr ""
 
@@ -1476,6 +1490,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr ""
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr ""
 
@@ -1494,6 +1509,7 @@ msgstr ""
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr ""
 
@@ -1538,27 +1554,31 @@ msgid "This item is already written in that language."
 msgstr ""
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr ""
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr ""
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr ""
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr ""
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr ""
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr ""
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr ""
 
@@ -1676,6 +1696,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr ""
 
@@ -4716,6 +4737,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr ""
@@ -5018,6 +5040,7 @@ msgstr ""
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr ""
 
@@ -5696,6 +5719,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr ""
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr ""
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr ""
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr ""
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr ""
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr ""
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr ""
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr ""
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr ""
@@ -5950,11 +6066,134 @@ msgstr ""
 msgid "Switcher"
 msgstr ""
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr ""
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr ""
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr ""
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr ""
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr ""
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr ""
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr ""
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr ""
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr ""
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr ""
 
@@ -5979,6 +6218,8 @@ msgid "Select"
 msgstr ""
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr ""
 
@@ -6229,28 +6470,28 @@ msgstr ""
 msgid "Dark"
 msgstr ""
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr ""
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr ""
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr ""
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr ""
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr ""
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr ""
 
@@ -6664,6 +6905,7 @@ msgstr ""
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr ""
@@ -6890,6 +7132,213 @@ msgstr ""
 msgid "Translation engine"
 msgstr ""
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr ""
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr ""
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr ""
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr ""
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr ""
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr ""
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr ""
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr ""
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6949,6 +7398,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr ""
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr ""
 
@@ -6986,6 +7436,11 @@ msgstr ""
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr ""
 
@@ -7020,11 +7475,13 @@ msgstr ""
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr ""
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr ""
 
@@ -7061,47 +7518,60 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr ""
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr ""
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr ""
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr ""
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr ""
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr ""
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr ""
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr ""
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr ""
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr ""
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr ""
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
+msgstr ""
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr ""
+
+#: src/admin/Root.js:51
+msgid "Integrations"
 msgstr ""
 
 #: src/admin/SeoAudit.js:19
@@ -7147,6 +7617,7 @@ msgid "The whole language has been checked."
 msgstr ""
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr ""
 
@@ -7155,16 +7626,197 @@ msgid "Problem"
 msgstr ""
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr ""
 
-#: src/admin/Switchers.js:88
-msgid "A small button in a corner of every page, on any theme, with no set-up."
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
 msgstr ""
 
-#: src/admin/Switchers.js:96
-msgid "Where"
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr ""
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr ""
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr ""
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr ""
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr ""
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr ""
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr ""
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr ""
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr ""
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr ""
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr ""
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr ""
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr ""
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr ""
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr ""
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr ""
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr ""
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr ""
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr ""
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr ""
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr ""
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr ""
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr ""
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr ""
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr ""
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr ""
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr ""
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr ""
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr ""
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr ""
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr ""
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr ""
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr ""
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr ""
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr ""
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr ""
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr ""
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr ""
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr ""
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr ""
 
 #: src/admin/Switchers.js:99
@@ -7365,6 +8017,199 @@ msgstr ""
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr ""
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr ""
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr ""
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr ""
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr ""
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr ""
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr ""
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr ""
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr ""
@@ -7397,21 +8242,12 @@ msgstr ""
 msgid "Open in the editor"
 msgstr ""
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr ""
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr ""
 
 #: src/compare/model.js:39
 msgid "Imported"
-msgstr ""
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
 msgstr ""
 
 #: src/compare/model.js:41
@@ -7465,10 +8301,6 @@ msgstr ""
 
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
-msgstr ""
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
 msgstr ""
 
 #: src/editor/translations-panel.js:154

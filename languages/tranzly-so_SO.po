@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Aagagga SEO ee dhammaan afarta qalab ee SEO ee waaweyn"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Goobaha gaarka ah"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Turjun hal qoraal hal gujiye"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Turjun goobta oo dhan mar qura"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Tifaftiraha muuqaalka hore"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Dib u eegis iyo ansixin"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Dhoofinta iyo soo dejinta turjubaannada aadanaha ah"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "U beddelo WPML, Polylang ama TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce lacagaha badan"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Hubinta tayada AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Waxa la turjumayo"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Hбshaqada"
 
@@ -852,6 +858,7 @@ msgstr "Tijaabi"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Ka saar"
 
@@ -1231,6 +1238,7 @@ msgid "Used for"
 msgstr "Loogu talagalay"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Qaabka"
 
@@ -1304,7 +1312,7 @@ msgstr "Xadka iyo fasaxyada waa la keydiyay."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Luqaddaasi ma aha mid ka mid ah luqadaha boggan."
@@ -1380,16 +1388,21 @@ msgid "This kind of content is not translated."
 msgstr "Noocan oo kale ah ee ku jira lama turjumin."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Qoraalka %s mar dambe kuma yaallo boggan. Dib u rar bogga."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Ma jiro mishiinka turjumaadaha ee qaadan kara qoraalkan."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Xulo mid ka mid ah luqadahaaga kale."
 
@@ -1423,7 +1436,8 @@ msgstr "Turjubaan boggan"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Ma ogolidid inaad tarjunto shaygan."
 
@@ -1433,7 +1447,7 @@ msgid "This item already has a version in that language."
 msgstr "Badeecaddan ayaa horey u lahayd nooc ku qoran luqaddaas."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Mashiinka turjumaadahaas lagama heli karo boggan."
 
@@ -1472,6 +1486,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Qiimaha %s maaha mid ka mid ah fursadaha la oggol yahay."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Safafka asbeegga looma heli karo boggan."
 
@@ -1490,6 +1505,7 @@ msgstr "Shyraadku ma aha qayb ka mid ah shaqo turjumaad ah."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Adigu uma oggolidhidh inaad beddesho turjumaaddaas."
 
@@ -1534,27 +1550,31 @@ msgid "This item is already written in that language."
 msgstr "Bixitaankani waa mid horay loogu qoray luqaddaas."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Turjumaaddan waxaa tafatiray qof (ama waa la soo dejiyay), markaa waa la ilaaliyay. Fur si aad mar labaad u turjunto."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Buytaasu ma jiro."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Midnaaba turjumaad ah lama dejinin weli. Ku dar furaha mid ka mid ah Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Mashiinka tarjumaaddu wali lama habeyn: marka hore ku dar furaha uu leeyahay."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Qoraalkan oo kale ayaa hadda turjumaya shaqo kale; shaygani wuxuu isticmaali doonaa jawaabtaas."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Ma jiro mishiinka turjumaadaha ee qaadan kara shaygan."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Mashiinku ma uusan soo celin turjumaad qayb kasta oo ka mid ah shaygan. Wax isbeddel ah lama samayn."
 
@@ -1673,6 +1693,7 @@ msgstr "Ma rabtaa inaad ku darto %1$s gudaha %2$s?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Tallaabooyinka"
 
@@ -4721,6 +4742,7 @@ msgstr "Imtixaanka ayuu bilaabayaa"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Gobolka"
@@ -5023,6 +5045,7 @@ msgstr "Sidee baad u jeceshahay %1$s ilaa iyo hadda? Tijaabi dhammaan sifooyinka
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Nooc"
 
@@ -5703,6 +5726,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s ka hor"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Xannibaadyada leh walxaha soo noqnoqda, iyo qaababka la waafajiyay"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Faallooyinka iyo dib u eegisyada"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Waxaa si otomaatig ah looga turjumay %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Lacagaha WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Lacagta"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Ilaha qiimuhu ma soo xigashaynayso %s, lacagta dukaanka."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" ma aha lacag ay ogtahay WooCommerce, ama waa lacagta dukaanka laftiisa."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Geli qiime ka sarreeya eber oo ah %s, sida 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Tallaabooyinka wareejinta iyo dhammaadka qiimuhu waa lacag, sida 0.05 ama 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Goobaha caadiga ah (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Beegso turjun, koobiyee ama uga tag faaruq goob kasta."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Foomamka (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Qiimaha anna iskaya qora"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Bankiga Dhexe ee Yurub, oo la cusboonaysiiyo maalin kasta (bilaash, akoon looma baahna)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Bankiga Dhexe ee Yurub wuxuu jawaabay %d. Sicirada ugu dambeeya waa la hayaa."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Bangiga Dhexe ee Yurub feed-kiisu ma hayo wax dulsaar ah. Dulsaarkii ugu dambeeyay waa la hayaa."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Ilaha sarrifka lacagtaas lama heli karo."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Qalabka SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Mawduuca iyo qoraalka qalabka dheeraadka ah"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Noocyadaas ama furahaas kuma shaqeeyaan boggan."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Tusaalaha luqadda"
@@ -5957,11 +6073,134 @@ msgstr "Cabirka qoraalka"
 msgid "Switcher"
 msgstr "Beddelaha"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(cinwaan ma jiro)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Halkan wax lagu hagaajiyo ma jiraan."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Ma jiro nooc ka mid ah nuxurka oo laga turjumay boggan."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Nooca waxa ku jira lama turjumin boggan."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Doorashadaas wax tarjumaad ah ma leh."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Dooro ugu yaraan hal luqad oo lagu turjumo."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Laguma oggola inaad dhoofiso turjumaadaha."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Dooro xayaysiiska XLIFF ama CSV si aad u soo dejiso."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Kaasi ma aha fayl Tranzly XLIFF ama CSV ah. Mid dhoofi marka hore, turjun, kadibna halkan ku soo rarrab."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Faylka lama keydin karin si loo soo dejiyo. Hubi in galka soo-gelinta la qori karo."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "So dejintaas mar dambe ma jirto. Fadlan faylka soo geli mar kale."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Boggaas hadda kuma jiro boggan."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Faylku waa luqad uusan boggani lahayn."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Lama xiriirin karo %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Qoraalka #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Lama helin wax xog ah oo ka yimid barnaamijkan dheeraadka ah (plugin-ka) boggan."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Kani ma aha turjumaadda wax kasta oo ku yaalkan boggan."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Ma jiro qoraal la hubiyo."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Dejinta AI ma qayb ka aha dhismahan."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Bixiyaha AI-ga wax jawaab ah ma bixin."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Model-ka AI-ga ma uusan qiimayn qayb kasta oo ka mid ah boggan. Mar kale isku day, ama dooro model kale."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Turjumaan"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Turjumidda dib-u-eegaha"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Falanqeeye ayaa codsaday in wax ka beddel lagu sameeyo turjumaaddan."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Dib-u-eegene waxay codsaday in wax ka beddel lagu sameeyo turjumaaddan: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Tarjaddan waxay sugeysaa dib-u-eegis. Daabacaaddeeda (sida dib-u-eegis) waxay ansixinaysaa."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Kaliya turjumaad ayaa dib-u-eegis lagu sameyn karaa."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Dooro waxa dhacaya marka asalka la beddelo: waxba, calaamadee turjumaadaheeda inay dhaceen, ama turjun mar kale."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Iridka tayadu waa dhibco ka bilaabma 0 ilaa 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Mar kale tus talooyinka la qariyay ee ku jira Guudmarka"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Dhammaan"
 
@@ -5986,6 +6225,8 @@ msgid "Select"
 msgstr "Dooro"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Bogagga"
 
@@ -6236,28 +6477,28 @@ msgstr "Iftiin"
 msgid "Dark"
 msgstr "Madow"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Qaabka midabka"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Caawinaad"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Hageynta shaashaddan"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Soo qaado dalxiiska"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Helbi caawimaad ama sheeg cillad"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Shaashadaha plugin-ka"
 
@@ -6673,6 +6914,7 @@ msgstr "Fiiri qorshayaasha Pro iyo qiimaha"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Luqadaha"
@@ -6899,6 +7141,213 @@ msgstr "Dejinta"
 msgid "Translation engine"
 msgstr "Mashiinka turjumaada"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Waxa Tranzly ku turjumayo boggan"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "la helay, oo lagu turjumay nuxurkaaga"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "ma ahan boggan"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Marka la isticmaalo Tranzly Pro: bogagga Elementor, Bricks, Divi, Beaver Builder, Oxygen iyo WPBakery; wax kasta oo ku jira WooCommerce, oo ay ku jiraan qiimayaasha lacagta booqashada; meelaha SEO ee Yoast SEO, Rank Math, SEOPress iyo All in One SEO; goobaha ACF, Meta Box iyo Pods; foomamka iyo iimayladooda; qoraalka mawduucaaga iyo furayaasha (plugins); iyo faallooyinka iyo dib u eegisyada."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Qoraalka dukaanka iyo iimaylada"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Mowduucyada iyo madaxyada iimaylka, magacyada habka lacag-bixinta iyo dhoofinta, iyo ogaysiisyada bixinta. Iimayl kasta oo dalbasho ah wuxuu ku baxayaa luqadda lagu dalbaday."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Foomamka iyo iimayyadooda"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Foom kasta wuxuu hayaa hal liis oo ah gelitaanno; summadaha, badhamada, fariimaha iyo i-maylovlada waxay ka muuqdaan luqadda booqdaha."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "La kaydiyey."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Weli lama qeexin wax ACF, Meta Box ama Pods ah."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Goob"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Halkee"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Tarjumaadaha ku jira"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Maxaa ku dhaca %s inta ay socoto turjumaaddu"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Turjum"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Sidii uu yahay ugu koobbi"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Iska daa madhan"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Lacagta dukaanka"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Lacagaha"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Muuji qiimaha lacagaha kale (lacagta dukaanka ee rasmiga ah waa %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Heerarka sarifka"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Qiimaha waxaa la cusboonaysiiyay %skii ugu dambeeyay."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Qiimayaasha weli lama soo celin."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Hadda cusboonaysii qiimaha"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Lacag cusub"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Dooro…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Qiime (kiiskiiba %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Ku qorista qiime waxay xajineysaa: cusboonaysiinta maalinlaha ahi ma beddeli doonto."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Wareegid"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Ma jiro"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Wareeji"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Ku wareegi kan ku xiga"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Wareegso hoos"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "U soo koobi (tusaale ahaan 1, 0.05 ama 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Qiimaha wuxuu ku dhamaadaa (tusaale ahaan 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Ku dar lacag"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Waa kuwee booqdayasha arki doona lacagta"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Sida waddanku yahay: summadda dalka ee labada xaraf ka kooban (tusaale ahaan CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Booqashadayaasha ka imanaya %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "U oggolow booqdayeyaasha inay doortaan (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Qiimaha hadda wuxuu ku xiran yahay buskud (cookie) ama dalka booqdayaha: hubi in kaydkaaga boggu uu ku kala duwanaado buskudka \"tranzly_currency\", ama uu ka reebo bogagga dukaanka."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Kaydiso lacagaha"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Erayada mawduucingaga iyo fiilooyinkaagu ay daabacaan (badhamada, calaamadaha). Akhri mawduuc ama fiilo hal mar, kadibna halkan ku turjumi qoraalkeeda; turjumaadaadu waxay ka adkaan doontaa tan fiilada lafteeda."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d qoraallo"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "weli lama aqrin"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Dib u akhri"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Akhri qoraalkeeda"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Turjum"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6958,6 +7407,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d qoraallo, %2$s xarfaha: ku dhawaad $%3$s koontadaada gaarka ah."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Bilow tarjumaadda"
 
@@ -6995,6 +7445,11 @@ msgstr "Tixraac"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Luqadda"
 
@@ -7029,11 +7484,13 @@ msgstr "Liisaska la keydiyay."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "%d qoraallo ah ayaa la turjumay."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "La kaydiyay. Sixitaankaaga waa laga ilaaliyaa turjumaada mashiinka."
 
@@ -7070,48 +7527,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Foomamka, madaxyada, gunta iyo qaababka (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Turjumiqadka maqan"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Halkan ma jiro qoraal la turjumo."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Qof ayaa saxay, waa la ilaaliyay"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Keydso sixitaanka"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Luqadaha iyo dejinta"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Mashiinnada"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Shaqooyinka turjumaada"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Ciwaannada iyo SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Beddelaha luqadda"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO xisaabtan"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Liisaska iyo qoraalka la wadaago"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Xaaladda turjumaadda"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Isku-dhafka"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7156,6 +7626,7 @@ msgid "The whole language has been checked."
 msgstr "Luqadda oo dhan waa la hubiyay."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Bogga"
 
@@ -7164,17 +7635,199 @@ msgid "Problem"
 msgstr "Dhibaato"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Wax ka beddel"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Shaqada %1$d waa billowday: %2$d bog ayaa gadaal ka socod ah lagu turjumayaa. Ka soco Shaqooyinka turjumaadda."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d tarjumaadaha ayaa lagu hubinayaa asalka. Dhibcaha ayaa ka muuqda halkaan markay yimaadaan."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Maqan"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Waqtigii ka dhacay"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "La turjumay"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Qof ayaa wax ka beddelay"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Turjumidda mashiinka"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Waa la sugayaa in dib-loogesh lagu sameeyo"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Waxay u baahan tahay indho bini'aadam"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Wax walba"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Cusubna"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly wuxuu weli soo saarayaa turjumaadaha duugga ah ee dhacay. Tirada \"ee dhacday\" way kori doontaa inta uu sidaas sameynayo."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Nooca nuxurka"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Dhammaan waxyaabaha ku jira"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Tayada celcelis ahaan"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d la turjumay (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Muuji"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Turjun wax kasta oo maqan"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Cusbooneysii wax kasta oo dhacay waqtigoodii"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Tayada ku hubi AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Dib u turjum bogagga dhibcaha hooseeya leh"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Waxba ma yaallo halkan."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Tayada"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "qof uu leeyahay"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "la sugayo dib u eegis"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Isbarbar dhig"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Muuji wax badan"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Tarjumo xaddiga weyn ee degelka oo dhan (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Adoo adeegsanaya Tranzly Pro, dooro noocyada iyo luqadaha nuxurka, arag qiyaasta, oo hal mar ku turjun barta oo dhan."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "%d shaqo oo asalka ah ayaa billowday, midkiiba luqad. Kala soco shaqooyinka Turjumaadda."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Noocyada nuxurka"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Waxa la tarjumayaa"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Waxa ka dhiman oo keliya"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Kaliya waxa dhacay waqtigoodii"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Wax kasta (bogagga qofku wax ka beddelay sidooda ayay ahaanayaan)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Qiyaas"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d bogag, %2$s xarfaha. Mashiinkani ma daabaco qiime."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d bogag, %2$s xarfaha, ku dhowaa $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Raadi qoraal"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d kale: ku qor \"Raadi qoraal\" si aad u yareyso liiska."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Badhan yar oo ku yaal gees kasta oo ka mid ah bog kasta, oo ku saabsan mawduuc kasta, iyada oo aan lahayn habeyn."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Halkee"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7374,6 +8027,200 @@ msgstr "La shaqaynaya: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Eray kasta oo cinwaan ah waa 2 ilaa 12 xaraf oo yar, nambaro, ama xariijimo gaaban."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Cusboonaysiin toos ah markaa la cusboonaysiinayo, doorarka dib-u-eegayaasha, dhoofinta XLIFF ee turjubaanada, ka beddelashada WPML, Polylang ama TranslatePress iyo hubinta tayada AI waxay la socdaan Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Markii uu asalku isbeddelo"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Marka bogga la tarto"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Calaamadi turjumaadaha inaysan cusbooneysnayn"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Turjum tarjumaadaha mar labaad asalka dambe"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Waxba ha qaban"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Turjumaad ay qof ahi wax ka beddelay marnaba lama dul qoro; halkaas waxaa loo calaamadiyaa mid dhacay."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Turjum bogocyada cusub luqad kasta markii la daabaco"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Qaab kale oo AI ah ayaa akhriya turjumaad kasta oo la socota asalkeeda, wuu qiimeeyaa oo wuxuu magacaabaa khaladaadka. Waxay isticmaashaa furahaaga gaarka ah ee AI ee ka yimid habaynta AI. Ka bilow hubinta xaaladda Turjumaadda."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Bixiyaha AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Qaabka guud ee dejinta AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "La soo jeediyay"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Boggu wuxuu u baahan yahay eegmo bini'aadam ah dhibcahaas hoostooda"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Daabac kaliya turjumaadaha uu dib-u-eegayaashu ansixiyay"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Sii dadka doorka Turjubaanka (wuxuu wax ka beddelaa turjumaadaha, marnaba asalka ma taabto, ma daabici karo) ama doorka Dib-u-eegaha turjumaada (sidoo kale wuu ansixiyaa). Dib-u-eegayaashu waxay sidoo kale helayaan wax kasta oo sugaya ee ku jira liiska Qoraallada iyo Bogagga ee hoos yimaada \"La sugayo\"; daabacaadda mid ka mid ah halkaas waxay ansixinaysaa."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Maamul isticmaalayaasha"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Wax a sugaya dib u eegis ma jiraan."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Fiiro gaar ah oo ku socota turjubaanka (ikhtiyaari ah)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Akhri iyadoo dhinac la iska saaray"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Ansanax Runta / Ogolow"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Codso isbeddelo"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d turjubaan ayaa la keenay oo laga ilaaliyay turjumaada mashiinka."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Dhoofinta iyo soo dejinta turjubaannada"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Weli aan la turjumin"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Horay loo turjumay"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Qaabayn"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (qalabka turjumaada)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (faaf-faahiyeyaasha)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "So degso faylka"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Sooji geli fayl la turjumay"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Lama sameyn: %1$d xiriirin waa la saaray, %2$d bogag la soo dejiyay waa la tirtiray."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Tijaabo qalad la'aan ah, waxba la bedelin:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "La keenay:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d luqadood oo lagu daray, %2$d turjumaadood oo la xiriiriyay, %3$d bogag ah oo la dhisay, %4$d qoraallo ah."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Markabka kale dami marka hore (ciwaannada iyo beddelayaasheedu waxay iska hor imanayaan Tranzly). Xogtiisu waxay ku jirtaa halkii ay joogtay, markaa waad dib u beddeli kartaa; Undo waxay si sax ah uga saartaa waxa soo dejintu ku dartay."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Ma jiro wax xog ah oo ka imanaya furahan (plugin) ee ku yaal boggan."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Luqadaha: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "wali waa shaqaynaysaa: marka hore dami."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Tijaabada qallajiska ah"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Keenso"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Ka noqo soo dejinta"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Faallooyinka iyo dib u eegisyada badeecada"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Luqad kastaa waxay haysataa midkeeda"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Muuji faallooyinka luqad kasta ee nooc kasta"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Muuji dhammaantood, iyadoo loo turjumay luqadda akhristaha"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Turjumiddu waxay isticmaashaa mashiinka turjumaadda ee aad dooratay faallo kasta oo la ansixiyay. Spam-ka iyo faallooyinka sugaya dib-u-eegista marnaba lama diro."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "La kaydiyay. Qaybaha aad bedeshay waxaa loo calaamadiyay inay yihiin kuwo uu qof hubiyay, tarjumaddanina waa laga ilaaliyaa turjumaadda mashiinka."
@@ -7406,11 +8253,6 @@ msgstr "Keymo isbeddellada"
 msgid "Open in the editor"
 msgstr "Ka fur tifaftiraha"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Turjumidda mashiinka"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Qof baa hubiyay"
@@ -7418,10 +8260,6 @@ msgstr "Qof baa hubiyay"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "La soo dhoofiyay"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Weli aan la turjumin"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7475,10 +8313,6 @@ msgstr "Weli lama turjumin (koobiy)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Markabkan horta kaydi, kadibna halkan ku turjun."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Isbarbar dhig"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

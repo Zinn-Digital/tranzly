@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Traduire en arri\u00e8re-plan"
             ],
+            "Custom fields": [
+                "Champs personnalis\u00e9s"
+            ],
+            "Bulk translate the whole site": [
+                "Traduire l'ensemble du site en masse"
+            ],
+            "Review and approval": [
+                "Examen et approbation"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Passez de WPML, Polylang ou TranslatePress"
+            ],
             "Floating switcher": [
                 "S\u00e9lecteur flottant"
+            ],
+            "AI quality check": [
+                "Contr\u00f4le qualit\u00e9 par IA"
+            ],
+            "Workflow": [
+                "Flux de travail"
             ],
             "Next": [
                 "Suivant"
@@ -25,11 +43,17 @@
             "Open": [
                 "Ouvrir"
             ],
+            "Model": [
+                "Mod\u00e8le"
+            ],
             "About": [
                 "\u00c0 propos"
             ],
             "Done": [
                 "Termin\u00e9"
+            ],
+            "Actions": [
+                "Actions"
             ],
             "Cancelled": [
                 "Annul\u00e9"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Sites"
             ],
+            "State": [
+                "\u00c9tat"
+            ],
             "Type": [
                 "Type"
             ],
             "Upgrade": [
                 "Mettre \u00e0 niveau"
+            ],
+            "Comments and reviews": [
+                "Commentaires et avis"
+            ],
+            "Currency": [
+                "Devise"
+            ],
+            "Theme and plugin text": [
+                "Texte des th\u00e8mes et des extensions"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Les sous-domaines et les domaines s\u00e9par\u00e9s par langue font partie de Tranzly Pro."
@@ -747,6 +783,150 @@
             "Translation engine": [
                 "Moteur de traduction"
             ],
+            "What Tranzly translates on this site": [
+                "Ce que Tranzly traduit sur ce site"
+            ],
+            "found, translated with your content": [
+                "trouv\u00e9, traduit avec votre contenu"
+            ],
+            "not on this site": [
+                "absent de ce site"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Avec Tranzly Pro : les pages Elementor, Bricks, Divi, Beaver Builder, Oxygen et WPBakery ; tout ce qui concerne WooCommerce, avec les prix dans la devise du visiteur ; les champs SEO de Yoast SEO, Rank Math, SEOPress et All in One SEO ; les champs ACF, Meta Box et Pods ; les formulaires et leurs e-mails ; les textes de votre th\u00e8me et de vos extensions ; ainsi que les commentaires et les avis."
+            ],
+            "Shop text and e-mails": [
+                "Textes de la boutique et e-mails"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Objets et en-t\u00eates d'e-mails, noms des modes de paiement et de livraison, ainsi que les notifications de la caisse. Les e-mails de chaque commande sont envoy\u00e9s dans la langue dans laquelle elle a \u00e9t\u00e9 pass\u00e9e."
+            ],
+            "Forms and their e-mails": [
+                "Formulaires et leurs e-mails"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Chaque formulaire conserve une seule liste de soumissions ; ses \u00e9tiquettes, boutons, messages et e-mails s'affichent dans la langue du visiteur."
+            ],
+            "Saved.": [
+                "Enregistr\u00e9."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Aucun champ ACF, Meta Box ou Pods n'est encore d\u00e9fini."
+            ],
+            "Field": [
+                "Champ"
+            ],
+            "Where": [
+                "O\u00f9"
+            ],
+            "In a translation": [
+                "Dans une traduction"
+            ],
+            "What happens to %s in a translation": [
+                "Que se passe-t-il avec %s lors d'une traduction"
+            ],
+            "Translate it": [
+                "Traduire"
+            ],
+            "Copy it as it is": [
+                "Copiez-le tel quel"
+            ],
+            "Leave it empty": [
+                "Laisser vide"
+            ],
+            "The shop\u2019s currency": [
+                "La devise de la boutique"
+            ],
+            "Currencies": [
+                "Devises"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Afficher les prix dans d'autres devises (celle de la boutique est %s)"
+            ],
+            "Exchange rates": [
+                "Taux de change"
+            ],
+            "Rates last updated %s.": [
+                "Derniers tarifs mis \u00e0 jour le %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Les tarifs n'ont pas encore \u00e9t\u00e9 r\u00e9cup\u00e9r\u00e9s."
+            ],
+            "Update the rates now": [
+                "Mettre \u00e0 jour les tarifs maintenant"
+            ],
+            "New currency": [
+                "Nouvelle devise"
+            ],
+            "Choose\u2026": [
+                "Choisir\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Tarif (pour 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Saisir un tarif le verrouille : la mise \u00e0 jour quotidienne ne le modifiera pas."
+            ],
+            "Rounding": [
+                "Arrondissement"
+            ],
+            "None": [
+                "Aucun"
+            ],
+            "Round up": [
+                "Arrondir"
+            ],
+            "Round to the nearest": [
+                "Arrondir au plus pr\u00e8s"
+            ],
+            "Round down": [
+                "Arrondir \u00e0 l'inf\u00e9rieur"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Arrondir \u00e0 (par exemple 1, 0,05 ou 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Les prix se terminent par (par exemple 0,99)"
+            ],
+            "Add a currency": [
+                "Ajouter une devise"
+            ],
+            "Which visitors see which currency": [
+                "Quels visiteurs voient quelle devise"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Par pays : code pays \u00e0 deux lettres (par exemple CH)"
+            ],
+            "Visitors from %s": [
+                "Visiteurs de %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Permettez aux visiteurs de choisir (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Les prix d\u00e9pendent d\u00e9sormais d'un cookie ou du pays du visiteur : veillez \u00e0 ce que votre cache de page varie en fonction du cookie \"tranzly_currency\", ou \u00e0 exclure les pages de la boutique."
+            ],
+            "Save currencies": [
+                "Enregistrer les devises"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Les mots que votre th\u00e8me et vos extensions affichent d'eux-m\u00eames (boutons, libell\u00e9s). Lisez un th\u00e8me ou une extension une seule fois, puis traduisez son texte ici ; votre traduction l'emporte sur celle de l'extension."
+            ],
+            "%d texts": [
+                "%d textes"
+            ],
+            "not read yet": [
+                "non lu"
+            ],
+            "Read again": [
+                "Relire"
+            ],
+            "Read its text": [
+                "Lire son texte"
+            ],
+            "Translate": [
+                "Traduire"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Travail d\u00e9marr\u00e9 avec %d traductions \u00e0 effectuer. Il s'ex\u00e9cute en arri\u00e8re-plan : vous pouvez fermer cette page."
             ],
@@ -897,6 +1077,12 @@
             "Menus and shared text": [
                 "Menus et texte partag\u00e9"
             ],
+            "Translation status": [
+                "\u00c9tat de la traduction"
+            ],
+            "Integrations": [
+                "Int\u00e9grations"
+            ],
             "No meta description": [
                 "Aucune m\u00e9ta-description"
             ],
@@ -936,11 +1122,128 @@
             "Edit": [
                 "Modifier"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "La t\u00e2che %1$d a commenc\u00e9 : %2$d pages sont en cours de traduction en arri\u00e8re-plan. Suivez-la dans les t\u00e2ches de traduction."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d traductions sont v\u00e9rifi\u00e9es en arri\u00e8re-plan. Les scores s'affichent ici au fur et \u00e0 mesure."
+            ],
+            "Missing": [
+                "Manquant"
+            ],
+            "Out of date": [
+                "Obsol\u00e8te"
+            ],
+            "Translated": [
+                "Traduit"
+            ],
+            "Edited by a person": [
+                "Modifi\u00e9 par une personne"
+            ],
+            "Machine translated": [
+                "Traduit par machine"
+            ],
+            "Waiting for review": [
+                "En attente de r\u00e9vision"
+            ],
+            "Needs a human look": [
+                "V\u00e9rification humaine requise"
+            ],
+            "Everything": [
+                "Tout"
+            ],
+            "Up to date": [
+                "\u00c0 jour"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly est toujours en train de d\u00e9terminer quelles traductions plus anciennes sont obsol\u00e8tes. Les chiffres \u00ab obsol\u00e8tes \u00bb augmenteront pendant cette op\u00e9ration."
+            ],
+            "Content type": [
+                "Type de contenu"
+            ],
+            "All content": [
+                "Tout le contenu"
+            ],
+            "Average quality": [
+                "Qualit\u00e9 moyenne"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d traduit (%2$d%%)"
+            ],
+            "Show": [
+                "Afficher"
+            ],
+            "Translate everything missing": [
+                "Traduire tout ce qui manque"
+            ],
+            "Update everything out of date": [
+                "Mettre \u00e0 jour tous les \u00e9l\u00e9ments obsol\u00e8tes"
+            ],
+            "Check the quality with AI": [
+                "V\u00e9rifier la qualit\u00e9 avec l'IA"
+            ],
+            "Translate the low-scoring pages again": [
+                "Traduire \u00e0 nouveau les pages obtenant de faibles scores"
+            ],
+            "Nothing here.": [
+                "Rien ici."
+            ],
+            "Quality": [
+                "Qualit\u00e9"
+            ],
+            "by a person": [
+                "par une personne"
+            ],
+            "waiting for review": [
+                "en attente de r\u00e9vision"
+            ],
+            "Side by side": [
+                "C\u00f4te \u00e0 c\u00f4te"
+            ],
+            "Show more": [
+                "Afficher plus"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Traduction en masse de tout le site (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Avec Tranzly Pro, choisissez les types de contenu et les langues, consultez l'estimation et traduisez l'int\u00e9gralit\u00e9 du site en une seule fois."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d t\u00e2ches d'arri\u00e8re-plan d\u00e9marr\u00e9es, une par langue. Suivez-les dans T\u00e2ches de traduction."
+            ],
+            "Content types": [
+                "Types de contenu"
+            ],
+            "What to translate": [
+                "\u00c9l\u00e9ments \u00e0 traduire"
+            ],
+            "Only what is missing": [
+                "Seulement ce qui manque"
+            ],
+            "Only what is out of date": [
+                "Seulement ce qui est obsol\u00e8te"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Tout (les pages \u00e9dit\u00e9es par une personne restent telles quelles)"
+            ],
+            "Estimate": [
+                "Estimer"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d pages, %2$s caract\u00e8res. Ce moteur ne publie aucun prix."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d pages, %2$s caract\u00e8res, environ %3$s."
+            ],
+            "Find a text": [
+                "Rechercher un texte"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "%d de plus : saisissez \u00ab Rechercher un texte \u00bb pour affiner la liste."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Un petit bouton dans un coin de chaque page, sur n'importe quel th\u00e8me, sans configuration."
-            ],
-            "Where": [
-                "O\u00f9"
             ],
             "Off": [
                 "D\u00e9sactiv\u00e9"
@@ -1082,6 +1385,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Chaque mot d'adresse comporte de 2 \u00e0 12 lettres minuscules, chiffres ou traits d'union."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "La traduction automatique lors de la mise \u00e0 jour, les r\u00f4les de r\u00e9viseur, l'export XLIFF pour les traducteurs, la transition depuis WPML, Polylang ou TranslatePress et le contr\u00f4le qualit\u00e9 par IA sont inclus avec Tranzly Pro."
+            ],
+            "When an original changes": [
+                "Lorsqu'un original est modifi\u00e9"
+            ],
+            "When a page is edited": [
+                "Lorsqu'une page est modifi\u00e9e"
+            ],
+            "Mark its translations out of date": [
+                "Marquer ses traductions comme obsol\u00e8tes"
+            ],
+            "Translate its translations again in the background": [
+                "Traduire \u00e0 nouveau ses traductions en arri\u00e8re-plan"
+            ],
+            "Do nothing": [
+                "Ne rien faire"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "Une traduction modifi\u00e9e par une personne n'est jamais \u00e9cras\u00e9e ; elle est marqu\u00e9e comme obsol\u00e8te \u00e0 la place."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Traduisez les nouvelles pages dans toutes les langues d\u00e8s leur publication"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Un second mod\u00e8le d'IA lit chaque traduction \u00e0 c\u00f4t\u00e9 de son original, l'\u00e9ote et rel\u00e8ve les erreurs. Il utilise votre propre cl\u00e9 d'IA provenant des param\u00e8tres d'IA. Lancez une v\u00e9rification depuis l'\u00e9tat de la traduction."
+            ],
+            "AI provider": [
+                "Fournisseur d'IA"
+            ],
+            "The AI settings\u2019 general model": [
+                "Le mod\u00e8le g\u00e9n\u00e9ral des param\u00e8tres d'IA"
+            ],
+            "Recommended": [
+                "Recommand\u00e9"
+            ],
+            "A page needs a human look below this score": [
+                "En dessous de ce score, une page n\u00e9cessite une v\u00e9rification humaine"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Publier uniquement les traductions approuv\u00e9es par un r\u00e9viseur"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Attribuez le r\u00f4le de Traducteur (modifie les traductions, jamais les originaux, ne peut pas publier) ou le r\u00f4le de R\u00e9viseur de traductions (approuve \u00e9galement). Les r\u00e9viseurs trouvent aussi tout ce qui attend dans les listes de Publications et de Pages sous \u00ab En attente \u00bb ; en publier une \u00e0 cet endroit l'approuve."
+            ],
+            "Manage users": [
+                "G\u00e9rer les utilisateurs"
+            ],
+            "Nothing is waiting for review.": [
+                "Rien n'est en attente de r\u00e9vision."
+            ],
+            "Note for the translator (optional)": [
+                "Note pour le traducteur (facultatif)"
+            ],
+            "Read side by side": [
+                "Lecture c\u00f4te \u00e0 c\u00f4te"
+            ],
+            "Approve": [
+                "Approuver"
+            ],
+            "Ask for changes": [
+                "Demander des modifications"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d traductions import\u00e9es et prot\u00e9g\u00e9es de la traduction automatique."
+            ],
+            "Export and import for translators": [
+                "Exportation et importation pour traducteurs"
+            ],
+            "Not translated yet": [
+                "Non traduit"
+            ],
+            "Already translated": [
+                "D\u00e9j\u00e0 traduit"
+            ],
+            "Format": [
+                "Format"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (outils de traduction)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (tableurs)"
+            ],
+            "Download the file": [
+                "T\u00e9l\u00e9charger le fichier"
+            ],
+            "Import a translated file": [
+                "Importer un fichier traduit"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Annul\u00e9 : %1$d liens supprim\u00e9s, %2$d pages import\u00e9es supprim\u00e9es."
+            ],
+            "Dry run, nothing changed:": [
+                "Simulation, aucune modification effectu\u00e9e :"
+            ],
+            "Imported:": [
+                "Import\u00e9 :"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d langues ajout\u00e9es, %2$d traductions li\u00e9es, %3$d pages g\u00e9n\u00e9r\u00e9es, %4$d textes."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "D\u00e9sactivez d'abord l'autre plugin (ses adresses et s\u00e9lecteurs entreront en conflit avec Tranzly). Ses donn\u00e9es restent en place afin que vous puissiez le r\u00e9activer ; l'action Annuler supprime exactement ce que l'importation a ajout\u00e9."
+            ],
+            "No data from this plugin on this site.": [
+                "Aucune donn\u00e9e de cette extension sur ce site."
+            ],
+            "Languages: %s": [
+                "Langues : %s"
+            ],
+            "still active: switch it off first.": [
+                "toujours actif : veuillez d'abord le d\u00e9sactiver."
+            ],
+            "Dry run": [
+                "Simulation"
+            ],
+            "Import": [
+                "Importer"
+            ],
+            "Undo the import": [
+                "Annuler l'importation"
+            ],
+            "Comments and product reviews": [
+                "Commentaires et avis sur les produits"
+            ],
+            "Each language keeps its own": [
+                "Chaque langue conserve ses propres"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Afficher les commentaires de chaque langue sur chaque version"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Tout afficher, traduits dans la langue du lecteur"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "La traduction utilise votre moteur de traduction pour chaque commentaire approuv\u00e9. Les spams et les commentaires en attente de mod\u00e9ration ne sont jamais envoy\u00e9s."
             ]
         }
     }

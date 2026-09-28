@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "SEO pole pro všechny čtyři velké SEO pluginy"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Vlastní pole"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Přeložte jeden příspěvek jedním kliknutím"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Hromadný překlad celého webu"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Vizuální front-end editor"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Kontrola a schválení"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Export a import pro lidské překladatele"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Přejděte z WPML, Polylang nebo TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "Více měn pro WooCommerce"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Kontrola kvality AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Co se překládá"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Pracovní postup"
 
@@ -852,6 +858,7 @@ msgstr "Test"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Odebrat"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Použito pro"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Model"
 
@@ -1303,7 +1311,7 @@ msgstr "Limity a oprávnění byly uloženy."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Tento jazyk není jedním z jazyků tohoto webu."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Tento druh obsahu se nepřekládá."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Text %s již na tomto webu není. Obnovte stránku."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Žádný překladatelský stroj nedokázal tento text zpracovat."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Zvolte jeden ze svých dalších jazyků."
 
@@ -1422,7 +1435,8 @@ msgstr "Přeložit tuto stránku"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "Tuto položku není dovoleno překládat."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Tato položka již má verzi v tomto jazyce."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Tento překladový motor není na tomto webu k dispozici."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Hodnota pro %s nepatří mezi povolené možnosti."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Na tomto webu není fronta na pozadí k dispozici."
 
@@ -1489,6 +1504,7 @@ msgstr "Tato položka není součástí překladové úlohy."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "Nemáte povolené tuto překladovou verzi měnit."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Tato položka je již v tomto jazyce napsána."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Tento překlad byl upraven člověkem (nebo importován), takže je chráněný. Odemkněte jej, abyste jej mohli přeložit znovu."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Tato položka neexistuje."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Zatím není nastaven žádný překladový stroj. Přidejte pro něj klíč v rozhraní Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Tento překladový motor ještě není nastaven: nejprve přidejte jeho klíč."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Tento text právě překládá jiná úloha; tato položka použije daný výsledek."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Žádný překladatelský stroj tuto položku nedokázal zpracovat."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Modul nevrátil překlad pro každou část této položky. Nic nebylo změněno."
 
@@ -1671,6 +1691,7 @@ msgstr "Chcete sloučit %1$s do %2$s?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Akce"
 
@@ -4711,6 +4732,7 @@ msgstr "Spouštění zkušební verze"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Stav"
@@ -5013,6 +5035,7 @@ msgstr "Jak se vám dosud líbí %1$s? Vyzkoušejte všechny prémiové funkce %
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Typ"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "před %s"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Bloky s opakujícími se položkami a synchronizované vzory"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Komentáře a recenze"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "Přeloženo automaticky z jazyka %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Měny WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Měna"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Zdroj kurzů neuvádí %s, měnu obchodu."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" není měna, kterou WooCommerce zná, nebo se jedná o vlastní měnu obchodu."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Zadejte sazbu větší než nula pro %s, například 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Kroky zaokrouhlování a konce cen jsou částky, jako například 0.05 nebo 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Vlastní pole (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Pro každé pole zvolte možnost přeložit, zkopírovat nebo nechat prázdné."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Formuláře (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Sazby zadávám sám"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "Evropská centrální banka, aktualizováno denně (zdarma, bez nutnosti účtu)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Evropská centrální banka odpověděla %d. Poslední sazby jsou zachovány."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Kanál Evropské centrální banky neobsahoval žádné sazby. Poslední sazby zůstávají zachovány."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Zdroj směnného kurzu není k dispozici."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "SEO pluginy (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Text šablon a pluginů"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Tento motiv nebo plugin není na tomto webu aktivní."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Jazykové doporučení"
@@ -5945,11 +6061,134 @@ msgstr "Velikost textu"
 msgid "Switcher"
 msgstr "Přepínač"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(bez názvu)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Tady není co opravovat."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Na tomto webu není přeložen žádný typ obsahu."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Tento typ obsahu není na tomto webu přeložen."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "V tomto výběru není nic k překladu."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Zvolte alespoň jeden jazyk pro překlad."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "Nemáte povolení exportovat překlady."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Vyberte soubor XLIFF nebo CSV k importu."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Toto není soubor Tranzly XLIFF ani CSV. Nejprve jej exportujte, přeložte a importujte sem."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "Soubor se nepodařilo uložit pro import. Zkontrolujte, zda je složka pro nahrávání souborů zapisovatelná."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Tento import již neexistuje. Nahrajte soubor znovu."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Tato stránka již na tomto webu není."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Soubor je v jazyce, který tento web nemá."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Nepodařilo se propojit %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Příspěvek č. %1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "Na tomto webu nebyla nalezena žádná data z tohoto pluginu."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Toto není překlad ničeho na tomto webu."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Není zde žádný text ke kontrole."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Nastavení umělé inteligence nejsou součástí tohoto sestavení."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Poskytovatel AI neodpověděl."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Model AI neocenil každou část této stránki. Zkuste to znovu nebo vyberte jiný model."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Překladatel"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Kontrolor překladů"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Recenzent požádal o úpravy tohoto překladu."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Recenzent požádal o úpravy tohoto překladu: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Tento překlad čeká na recenzenta. Jeho zveřejněním (jako recenzent) jej schválíte."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Kontrolovat lze pouze překlad."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Zvolte, co se stane, když se změní originál: nic, označit překlady jako zastaralé nebo je přeložit znovu."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Prahová hodnota kvality je skóre od 0 do 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Zobrazit skryté návrhy na Přehledu znovu"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Vše"
 
@@ -5976,6 +6215,8 @@ msgid "Select"
 msgstr "Vybrat"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Stránky"
 
@@ -6230,28 +6471,28 @@ msgstr "Světlý"
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Barevné schéma"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Nápověda"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Průvodce touto obrazovkou"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Absolvovat prohlídku"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Získat pomoc nebo nahlásit chybu"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Obrazovky pluginů"
 
@@ -6667,6 +6908,7 @@ msgstr "Zobrazit plány a ceny Pro"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Jazyky"
@@ -6893,6 +7135,213 @@ msgstr "Nastavení"
 msgid "Translation engine"
 msgstr "Překladový stroj"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Co Tranzly překládá na tomto webu"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "nalezeno, přeloženo s vaším obsahem"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "není na tomto webu"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "S Tranzly Pro: stránky v editorech Elementor, Bricks, Divi, Beaver Builder, Oxygen a WPBakery; vše v WooCommerce s cenami v měně návštěvníka; SEO pole v Yoast SEO, Rank Math, SEOPress a All in One SEO; pole ACF, Meta Box a Pods; formuláře a jejich e-maily; vlastní texty vašeho šablony a pluginů; a komentáře a recenze."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Text a e-maily obchodu"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Předměty a nadpisy e-mailů, názvy platebních a doručovacích metod a upozornění u pokladny. E-maily ke každé objednávce se odesílají v jazyuce, ve kterém byla zadána."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Formuláře a jejich e-maily"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Každý formulář uchovává jeden seznam záznamů; jeho štítky, tlačítka, zprávy a e-maily se zobrazují v jazyce návštěvníka."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "Uloženo."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "Zatím nejsou definována žádná pole ACF, Meta Box ani Pods."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Pole"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Kde"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "V překladu"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Co se stane s %s v překladu"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Přeložit"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Zkopírujte to tak, jak to je"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Ponechte prázdné"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Měna obchodu"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Měny"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Zobrazit ceny v jiných měnách (vlastní měna obchodu je %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Směnné kurzy"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Kurzy naposledy aktualizovány %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Sazby ještě nebyly načteny."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Aktualizovat sazby ihned"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Nová měna"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Zvolit…"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Sazba (za 1 %s)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Zadáním sazby ji zachováte: denní aktualizace ji nezmění."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Zaokrouhlování"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Žádné"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Zaokrouhlit nahoru"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Zaokrouhlit na nejbližší"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Zaokrouhlit dolů"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Zaokrouhlit na (například 1, 0,05 nebo 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Ceny končí (například 0,99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Přidat měnu"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Kteří návštěvníci vidí jakou měnu"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Podle země: dvoupísmenný kód země (například CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Návštěvníci z lokality %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Nechte návštěvníky vybrat (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Ceny nyní závisí na souboru cookie nebo na zemi návštěvníka: ujistěte se, že vaše mezipaměť stránky se mění podle souboru cookie „tranzly_currency“ nebo že obchody nezahrnuje."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Uložit měny"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Slova, která vaše šablona a pluginy sama vypisují (tlačítka, štítky). Přečtěte si šablonu nebo plugin jednou a poté zde přeložte jejich text; váš překlad má přednost před vlastním textem pluginu."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "%d textů"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "dosud nepřečteno"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Přečíst znovu"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Přečíst jeho text"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Přeložit"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6952,6 +7401,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "%1$d příspěvků, %2$s znaků: přibližně $%3$s na vašem vlastním účtu."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Začít překládat"
 
@@ -6989,6 +7439,11 @@ msgstr "Obsah"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Jazyk"
 
@@ -7023,11 +7478,13 @@ msgstr "Nabídky uloženy."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "Přeloženo %d textů."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "Uloženo. Vaše opravy jsou chráněny před strojovým překladem."
 
@@ -7064,48 +7521,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Šablony, záhlaví, zápatí a vzory (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Přeložit chybějící text"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Zde není žádný text k překladu."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Opraveno člověkem, chráněno"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Uložit opravy"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Jazyky a nastavení"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Enginy"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Překladové úlohy"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Adresy a SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Přepínače jazyků"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "SEO audit"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Navigační menu a sdílený text"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Stav překladu"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Integrace"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7150,6 +7620,7 @@ msgid "The whole language has been checked."
 msgstr "Celý jazyk byl zkontrolován."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Stránka"
 
@@ -7158,17 +7629,198 @@ msgid "Problem"
 msgstr "Problém"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Upravit"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Úloha %1$d byla spuštěna: na pozadí se překládá %2$d stránek. Můžete ji sledovat v části Úlohy překladu."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "%d překladů se kontroluje na pozadí. Skóre se zde objeví, jakmile dorazí."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Chybějící"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Zastaralé"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Přeloženo"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Upraveno člověkem"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Strojově přeloženo"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Čeká na schválení"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "Vyžaduje lidský zásah"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Všechno"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Aktuální"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly stále zjišťuje, které starší překlady jsou zastaralé. Během toho budou čísla \"zastaralých\" překladů narůstat."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Typ obsahu"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Všechny položky"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Průměrná kvalita"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d přeloženo (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Zobrazit"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Přeložit vše chybějící"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Aktualizujte vše, co není aktuální"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Zkontrolujte kvalitu pomocí AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Přeložit stránky s nízkým skóre znovu"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Zde není nic."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Kvalita"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "od osoby"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "čeká na schválení"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Vedle sebe"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Zobrazit více"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Hromadný překlad celého webu (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "S Tranzly Pro si vyberte typy obsahu a jazyky, podívejte se na odhad a přeložte celý web naráz."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "Spustilo se %d úloh na pozadí, jedna pro každý jazyk. Sledujte jejich průběh v části Úlohy překladu."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Typy obsahu"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Co přeložit"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Pouze to, co chybí"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Pouze to, co je zastaralé"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Všechno (stránky upravené osobou zůstanou tak, jak jsou)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Odhadnout"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "%1$d stránek, %2$s znaků. Tento nástroj nezveřejňuje cenu."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "%1$d stran, %2$s znaků, přibližně $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Najít text"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d dalších: zadejte „Najít text“ pro zúžení seznamu."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Malé tlačítko v rohu každé stránky, na jakémkoli šabloně, bez nutnosti nastavení."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Kde"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7368,6 +8020,199 @@ msgstr "Spolupracujeme s: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Každé slovo adresy má 2 až 12 malých písmen, číslic nebo pomlček."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Automatický překlad při aktualizaci, role revizorů, export XLIFF pro překladatele, přechod z WPML, Polylang nebo TranslatePress a kontrola kvality AI jsou součástí verze Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Když se originál změní"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Při úpravě stránky"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Označit jeho překlady za zastaralé"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Přeložit jeho překlady znovu na pozadí"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Nedělat nic"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "Překlad upravený člověkem není nikdy přepsán; místo toho je označen jako zastaralý."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Přeložit nové stránky do všech jazyků při jejich publikování"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Druhý model AI čte každý překlad vedle originálu, hodnotí jej a označuje chyby. Využívá váš vlastní klíč AI z nastavení AI. Spusťte kontrolu ze Stavu překladu."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Poskytovatel AI"
+
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Hlavní model nastavení AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "Doporučeno"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Pod tímto skóre potřebuje stránka lidský pohled"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Publikujte pouze překlady schválené recenzentem"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Přiřaďte lidem roli Překladatel (upravuje překlady, nikdy originály, nemůže publikovat) nebo roli Recenzent překladů (také schvaluje). Recenzenti také najdou vše čekající v seznamech Příspěvky a Stránky pod položkou „Ke schválení“; publikováním položky v tomto seznamu ji schválíte."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Správa uživatelů"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Nic nečeká na schválení."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Poznámka pro překladatele (volitelné)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Zobrazit vedle sebe"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Schválit"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Požádat o změny"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d překladů bylo importováno a chráněno před strojovým překladem."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Export a import pro překladatele"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Zatím nepřeloženo"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Již přeloženo"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Formát"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (překladové nástroje)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (tabulkové procesory)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Stáhnout soubor"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Importovat přeložený soubor"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Vráceno: %1$d odkazů odstraněno, %2$d importovaných stránek smazáno."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Zkušební běh, nic nebylo změněno:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Importováno:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "%1$d jazyků přidáno, %2$d překladů propojeno, %3$d stránek sestaveno, %4$d textů."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Nejprve vypněte druhý plugin (jeho adresy a přepínače by se tloukly s Tranzly). Jeho data zůstanou tam, kde jsou, takže se můžete vrátit zpět; funkce Zpět odstraní přesně to, co import přidal."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Z tohoto pluginu nejsou na tomto webu žádná data."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Jazyky: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "stále aktivní: nejdříve ji vypněte."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Zkušební spuštění"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Importovat"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Vrátit import zpět"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Komentáře a recenze produktů"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Každý jazyk si zachovává svůj vlastní"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Zobrazit komentáře ke každému jazyku u každé verze"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Zobrazit všechny přeložené do jazyka čtenáře"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Překládání využívá váš překladatelský nástroj pro každý schválený komentář. Spam a komentáře čekající na moderování se nikdy neodesílají."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "Uloženo. Části, které jste změnili, jsou označeny jako zkontrolované osobou a tento překlad je chráněn před strojovým překladem."
@@ -7400,11 +8245,6 @@ msgstr "Uložit změny"
 msgid "Open in the editor"
 msgstr "Otevřít v editoru"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Strojově přeloženo"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Zkontrolováno osobou"
@@ -7412,10 +8252,6 @@ msgstr "Zkontrolováno osobou"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Importováno"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Zatím nepřeloženo"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7469,10 +8305,6 @@ msgstr "Zatím nepřeloženo (kopie)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Nejprve tento příspěvek uložte a poté jej přeložte zde."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Vedle sebe"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

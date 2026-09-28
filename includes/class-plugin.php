@@ -35,6 +35,8 @@ final class Plugin {
 		Seo\Seo::register();
 		Switcher\Places::register();
 		Content\Content_Module::register();
+		Workflow\Workflow::register();
+		Integrations\Integrations::register();
 
 		register_activation_hook( TRANZLY_FILE, array( self::class, 'activate' ) );
 	}
@@ -49,6 +51,7 @@ final class Plugin {
 		Seo\Url_Settings::ensure();
 		Seo\Router::rebuild_front_pages();
 		Switcher\Places::ensure_options();
+		Integrations\Integrations::ensure_options();
 		Assets::publish();
 	}
 }

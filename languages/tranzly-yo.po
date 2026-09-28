@@ -180,6 +180,7 @@ msgid "SEO fields for all four big SEO plugins"
 msgstr "Awọn aaye SEO fun gbogbo awọn afikun SEO nla mẹrin"
 
 #: includes/admin-kit/class-matrix.php:298
+#: src/admin/IntegrationsTab.js:179
 msgid "Custom fields"
 msgstr "Àwọn àfikún ààyè tí a ṣe àṣìṣe rẹ̀"
 
@@ -204,6 +205,7 @@ msgid "Translate one post in one click"
 msgstr "Tumọ àفẹ́rọ̀ kan pẹ̀lú tẹ̀mì kan-ṣoṣo"
 
 #: includes/admin-kit/class-matrix.php:304
+#: src/admin/StatusTab.js:535
 msgid "Bulk translate the whole site"
 msgstr "Tú ọ̀pọ̀lọpọ̀ ojú-wẹ̀bù náà ní ẹ̀ka kan náà"
 
@@ -220,6 +222,7 @@ msgid "Visual front-end editor"
 msgstr "Olùṣàtúnṣọ̀ ojú-iṣẹ́ wífífín"
 
 #: includes/admin-kit/class-matrix.php:308
+#: src/admin/WorkflowTab.js:278
 msgid "Review and approval"
 msgstr "Àyẹ̀wọ̀ àti ìtẹwọ̀gbà"
 
@@ -228,6 +231,7 @@ msgid "Export and import for human translators"
 msgstr "Gbigbe jade ati gbigbe wọle fun awọn olùtumọ̀ ènìyàn"
 
 #: includes/admin-kit/class-matrix.php:310
+#: src/admin/WorkflowTab.js:602
 msgid "Switch from WPML, Polylang or TranslatePress"
 msgstr "Yipada lati WPML, Polylang tabi TranslatePress"
 
@@ -409,6 +413,7 @@ msgid "WooCommerce multi-currency"
 msgstr "WooCommerce multi-currency"
 
 #: includes/admin-kit/class-matrix.php:355
+#: src/admin/WorkflowTab.js:167
 msgid "AI quality check"
 msgstr "Ayẹwo didara AI"
 
@@ -493,6 +498,7 @@ msgid "What gets translated"
 msgstr "Ohun tí a ń túmọ̀ sí"
 
 #: includes/admin-kit/class-matrix.php:386
+#: src/admin/Root.js:48
 msgid "Workflow"
 msgstr "Ìṣàn iṣẹ́"
 
@@ -852,6 +858,7 @@ msgstr "Àdánwò"
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
 #: src/admin/App.js:147
+#: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr "Yọ kuro"
 
@@ -1230,6 +1237,7 @@ msgid "Used for"
 msgstr "Lo fun"
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:253
+#: src/admin/WorkflowTab.js:202
 msgid "Model"
 msgstr "Àpẹẹrẹ"
 
@@ -1303,7 +1311,7 @@ msgstr "Awon opin ati awon ase ti wa ni fipamọ."
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:177
+#: includes/core/class-translator.php:220
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Asẹ yẹn kii ṣe ọkan ninu awọn ede aaye yii."
@@ -1379,16 +1387,21 @@ msgid "This kind of content is not translated."
 msgstr "Iru akoonwe yii ko ni itumọ."
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:280
+#: includes/content/class-shared-strings.php:286
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr "Ọrọ %s kii ṣe lori aaye yii mọ. Ṣe atunkọ oju-iwe naa."
 
-#: includes/content/class-shared-strings.php:337
+#: includes/content/class-shared-strings.php:343
 msgid "No translation engine could take this text."
 msgstr "Ko si ẹ̀rọ ìtumọ̀ kan ti o le gba ọ̀rọ̀ yii."
 
-#: includes/content/class-shared-strings.php:381
+#: includes/content/class-shared-strings.php:387
+#: includes/workflow/class-status.php:250
+#: includes/workflow/class-status.php:304
+#: includes/workflow/pro__premium_only/class-bulk.php:134
+#: includes/workflow/pro__premium_only/class-exchange.php:122
+#: includes/workflow/pro__premium_only/class-quality.php:127
 msgid "Choose one of your other languages."
 msgstr "Yan ọkan ninu awọn ede miiran rẹ."
 
@@ -1422,7 +1435,8 @@ msgstr "Ṣe agbeyẹwo lori oju-iwe yii"
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:184
+#: includes/core/class-translator.php:142
+#: includes/core/class-translator.php:227
 msgid "You are not allowed to translate this item."
 msgstr "A kò gba ọ laaye lati tumọ ohun yii."
 
@@ -1432,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Ohun kan náà ti wà nígbà kan náà nínú èdè yẹn."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:386
 msgid "That translation engine is not available on this site."
 msgstr "Ẹrọ ìtumọ̀ yẹn kò sí lórí ojú òpó wẹ́bù yìí."
 
@@ -1471,6 +1485,7 @@ msgid "The value for %s is not one of the allowed choices."
 msgstr "Iye fún %s kò sí nínú àwọn àṣàyàn tí a gbà láèyè."
 
 #: includes/core/class-queue.php:142
+#: includes/workflow/pro__premium_only/class-quality.php:123
 msgid "The background queue is not available on this site."
 msgstr "Kò sí ìlànà ìpìlẹ̀ (background queue) lórí ojú òpó wẹ́bù yìí."
 
@@ -1489,6 +1504,7 @@ msgstr "Ohun yẹn kii ṣe apakan iṣẹ iṣtumọ kan."
 
 #: includes/core/class-queue.php:422
 #: includes/core/class-translator.php:86
+#: includes/core/class-translator.php:151
 msgid "You are not allowed to change that translation."
 msgstr "A kỢ fẹ́ kí o yí ìtumọ̀ yẹn padà."
 
@@ -1533,27 +1549,31 @@ msgid "This item is already written in that language."
 msgstr "Nǹkan yìí ti wà ní kíkọ ní èdè yẹn tẹ́lẹ̀."
 
 #: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:190
+#: includes/core/class-translator.php:233
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "A è yí ìtumọ̀ yìí padà (tàbí a kó o wọlé), nítorí náà ó ní ààbò. Ṣí i láti tún tumọ̀ rẹ̀ lẹ́ẹ̀kan sí i."
 
-#: includes/core/class-translator.php:323
+#: includes/core/class-translator.php:146
+msgid "That item does not exist."
+msgstr "Ohun kan ko si yẹn."
+
+#: includes/core/class-translator.php:386
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Kò tíì sí ẹ̀rọ ìtumọ̀ kankan tí a ti ṣètò. Fi bọ́tìnnì kan kún fún ọ̀kan nínú Tranzly → Engines."
 
-#: includes/core/class-translator.php:326
+#: includes/core/class-translator.php:389
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ẹrọ ìtumọ̀ yẹn kò tíì ṣètò: fi kún bọ́tìnnì rẹ̀ kọ́kọ́."
 
-#: includes/core/class-translator.php:415
+#: includes/core/class-translator.php:478
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Awon nkan kann na ni iṣẹ miiran n tumọ lọwọlọwọ; ohun yii yoo lo idahun yẹn."
 
-#: includes/core/class-translator.php:463
+#: includes/core/class-translator.php:526
 msgid "No translation engine could take this item."
 msgstr "Kò sí ẹ̀rọ ìtumọ̀ kan tí ó lè mú ohun èlò yìí."
 
-#: includes/core/class-translator.php:484
+#: includes/core/class-translator.php:547
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Ẹrọ náà kò dá ìtumọ̀ padà fún apá kan nínú ohun èlò yìí. Kò sí ohun tí a yí padà."
 
@@ -1671,6 +1691,7 @@ msgstr "Ṣe o fẹ lati dapọ %1$s sinu %2$s?"
 
 #: includes/freemius-strings.php:50
 #: includes/freemius-strings.php:3087
+#: src/admin/StatusTab.js:357
 msgid "Actions"
 msgstr "Àwọn Ìgbésẹ̀"
 
@@ -4711,6 +4732,7 @@ msgstr "Bẹ̀rẹ̀ ìdánwò"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/admin/StatusTab.js:349
 #: src/compare/index.js:118
 msgid "State"
 msgstr "Ipinlẹ"
@@ -5013,6 +5035,7 @@ msgstr "Bawo ni o ṣe n fẹran %1$s titi di isisiyi? Dan gbogbo awọn ẹya a
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
 #: src/admin-kit/Support.js:551
+#: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr "Orísí"
 
@@ -5691,6 +5714,99 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s sẹ́yìn"
 
+#: includes/integrations/class-nested-blocks.php:47
+msgid "Blocks with repeated items, and synced patterns"
+msgstr "Àwọn bọ́ọ̀lù pẹ̀lú àwọn ohun tí a tún ṣe, àti àwọn àpẹẹrẹ tí a mú ṣọ̀kan"
+
+#: includes/integrations/pro__premium_only/class-comments.php:65
+#: src/admin/WorkflowTab.js:695
+msgid "Comments and reviews"
+msgstr "Àwọn àlàyé àti àwọn àtúnyẹ̀wò"
+
+#. translators: %s: the language a comment was written in.
+#: includes/integrations/pro__premium_only/class-comments.php:294
+#, php-format
+msgid "Translated automatically from %s."
+msgstr "A fi aifọwọyi tumọ lati %s."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:72
+msgid "WooCommerce currencies"
+msgstr "Àwọn owó WooCommerce"
+
+#: includes/integrations/pro__premium_only/class-currencies.php:335
+#: src/admin/IntegrationsTab.js:378
+msgid "Currency"
+msgstr "Owó Ẹ́rọ"
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:372
+#, php-format
+msgid "The rate source does not quote %s, the shop's currency."
+msgstr "Orísí ìwọ̀n kò sọ iye %s, owó ilé ìtajà náà."
+
+#. translators: %s: what was entered.
+#: includes/integrations/pro__premium_only/class-currencies.php:448
+#, php-format
+msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
+msgstr "\"%s\" kò sí lára àwọn owó tí WooCommerce mọ̀, tàbí ó jẹ́ owó ilé ìtajà náà fúnra rẹ̀."
+
+#. translators: %s: a currency code.
+#: includes/integrations/pro__premium_only/class-currencies.php:453
+#, php-format
+msgid "Enter a rate above zero for %s, like 0.92."
+msgstr "Tẹ oṣuwọn kan ti o wa loke odo fun %s, bii 0.92."
+
+#: includes/integrations/pro__premium_only/class-currencies.php:458
+msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
+msgstr "Àwọn ìgbésẹ̀ ìborí àti ìparí owó jẹ́ ìwọ̀n, bí 0.05 tàbí 0.99."
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:64
+msgid "Custom fields (ACF, Meta Box, Pods)"
+msgstr "Àwọn àfikún ààyè (ACF, Meta Box, Pods)"
+
+#: includes/integrations/pro__premium_only/class-custom-fields.php:384
+msgid "Choose translate, copy or leave empty for each field."
+msgstr "Yan ìtumọ, daakọ tabi fi sílẹ̀ ní ṣofo fún olúkúlùkù ààyè."
+
+#: includes/integrations/pro__premium_only/class-forms.php:58
+msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+msgstr "Àwọn fọ́ọ̀mù (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
+
+#: includes/integrations/pro__premium_only/class-rates.php:43
+msgid "I enter the rates myself"
+msgstr "Mo tẹ awọn oṣuwọn naa nipa ara mi"
+
+#: includes/integrations/pro__premium_only/class-rates.php:44
+msgid "European Central Bank, updated daily (free, no account needed)"
+msgstr "European Central Bank, ti a n ṣe imudojuiwọn ni ojoojumọ (ọfẹ, ko nilo akọọlẹ kan)"
+
+#. translators: %d: an HTTP status code.
+#: includes/integrations/pro__premium_only/class-rates.php:63
+#, php-format
+msgid "The European Central Bank answered %d. The last rates are kept."
+msgstr "Ilé Ìfowópamọ́ Àárín Gbùngbùn Yúróòpù dáhùn %d. A tọ́jù àwọn owó ẹ̀dùn tó gbẹ̀yìn náà sílẹ̀."
+
+#: includes/integrations/pro__premium_only/class-rates.php:66
+msgid "The European Central Bank's feed held no rates. The last rates are kept."
+msgstr "Àkọsílẹ̀ ilé-iṣẹ́ ìnáwó European Central Bank kò ní ìwọ̀n kankan. A tọ́jú ìwọ̀n tó kẹ́yìn sílẹ̀."
+
+#: includes/integrations/pro__premium_only/class-rates.php:79
+msgid "That exchange-rate source is not available."
+msgstr "Orisun oṣuwọn paṣipaarọ yẹn ko si."
+
+#: includes/integrations/pro__premium_only/class-seo-fields.php:106
+msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+msgstr "Àwọn ìlànà SEO (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:59
+#: src/admin/IntegrationsTab.js:619
+msgid "Theme and plugin text"
+msgstr "Àkọsílẹ àti pílọ́gìn (plugin)"
+
+#: includes/integrations/pro__premium_only/class-theme-strings.php:315
+msgid "That theme or plugin is not active on this site."
+msgstr "Ko si akori tabi plugin yẹn ti o nṣiṣẹ lori aaye yii."
+
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr "Ìbéèrè èdè"
@@ -5945,11 +6061,134 @@ msgstr "Iwọn ọrọ"
 msgid "Switcher"
 msgstr "Aṣọ̀yípadà"
 
+#: includes/workflow/class-status.php:265
+msgid "(no title)"
+msgstr "(kò sí àkọlé)"
+
+#: includes/workflow/class-status.php:308
+msgid "There is nothing to fix here."
+msgstr "Kò sí ohun kan tí ó yẹ kí a ṣe àtúnṣe sí níbí."
+
+#: includes/workflow/class-status.php:388
+msgid "No content type is translated on this site."
+msgstr "Ko si irisi akoonu kankan ti a tumọ sori aaye yii."
+
+#: includes/workflow/class-status.php:391
+msgid "That content type is not translated on this site."
+msgstr "Àì ṣe agbèdè sí èdè miiran ni iṣẹ́ akoonu yìí lori ojú-opoìn yìí."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:107
+msgid "There is nothing to translate in that selection."
+msgstr "Ko si ohun kan lati tumọ ninu yiyan yẹn."
+
+#: includes/workflow/pro__premium_only/class-bulk.php:139
+msgid "Choose at least one language to translate into."
+msgstr "Yan o kere ju ede kan lati tumo si."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:112
+msgid "You are not allowed to export translations."
+msgstr "A kò gba ọ laaye lati gbe awọn itumọjade jade."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:234
+msgid "Choose an XLIFF or CSV file to import."
+msgstr "Yan faili XLIFF tabi CSV lati gbe wọle."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:239
+msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
+msgstr "Iyẹn kii ṣe faili Tranzly XLIFF tabi CSV kan. Gbe ọkan jade ni akọkọ, tumọ rẹ, ki o si gbe e wọle si ibi."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:244
+msgid "The file could not be stored for importing. Check that the uploads folder is writable."
+msgstr "A kò lè fi fáìlì náà pamọ́ fún ìgbéwọlé. Rí daju pé a lè kọ sí inú fọ́lífà àwọn tí a gbé sọ́tọ̀."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:266
+msgid "That import is not there any more. Upload the file again."
+msgstr "Ìgbéwọlé yẹn kò sí níbẹ̀ mọ́. Tun gbe fáìlì náà soke."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:309
+msgid "That page is not on this site any more."
+msgstr "Ojú-ewé yẹn kò sí lórí ojú-opó yìí mọ́."
+
+#: includes/workflow/pro__premium_only/class-exchange.php:312
+msgid "The file is for a language this site does not have."
+msgstr "Fáìlì náà jẹ́ ti èdè kan tí ojú òpó wẹ́ẹ̀bù yìí kò ní."
+
+#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
+#: includes/workflow/pro__premium_only/class-import-source.php:214
+#, php-format
+msgid "Could not link %1$s %2$d: %3$s"
+msgstr "Ko le sopọ %1$s %2$d: %3$s"
+
+#. translators: 1: post ID, 2: why it failed.
+#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
+#, php-format
+msgid "Post #%1$d: %2$s"
+msgstr "Fiṣé #%1$d: %2$s"
+
+#: includes/workflow/pro__premium_only/class-importers.php:134
+msgid "No data from that plugin was found on this site."
+msgstr "A ko ri data kankan lati inu plọọgi-in yen lori aaye yii."
+
+#: includes/workflow/pro__premium_only/class-quality.php:199
+msgid "This is not a translation of anything on this site."
+msgstr "Èyí kò ṣeé túmọ̀ sí ohunkóohun lórí ojú òpó wẹ́bù yìí."
+
+#: includes/workflow/pro__premium_only/class-quality.php:203
+msgid "There is no text to check."
+msgstr "Ko si ọrọ kankan lati ṣayẹwo."
+
+#: includes/workflow/pro__premium_only/class-quality.php:208
+msgid "The AI settings are not part of this build."
+msgstr "Àwọn ètò AI kò jẹ́ apá kan ìkọ́ yìí."
+
+#: includes/workflow/pro__premium_only/class-quality.php:234
+msgid "The AI provider did not answer."
+msgstr "Olupese AI ko dahun."
+
+#: includes/workflow/pro__premium_only/class-quality.php:247
+msgid "The AI model did not score every part of this page. Try again, or choose another model."
+msgstr "Àwòṣe AI náà kò ṣe àmì sí apá kankan ojú ewé yìí. Gbìyànjú lẹ́ẹ̀kan sí i, tàbí yan àwòṣe mìíràn."
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:56
+msgid "Translator"
+msgstr "Olùtumọ̀"
+
+#: includes/workflow/pro__premium_only/class-review-roles.php:57
+msgid "Translation reviewer"
+msgstr "Olùyẹ̀wọ̀ ìtumọ̀"
+
+#: includes/workflow/pro__premium_only/class-review.php:155
+msgid "A reviewer asked for changes to this translation."
+msgstr "Olùṣàyẹ̀wọ̀ kan béèrè fún àwọn àtúnṣe sí ìtumọ̀ yìí."
+
+#. translators: %s: the reviewer's note.
+#: includes/workflow/pro__premium_only/class-review.php:155
+#, php-format
+msgid "A reviewer asked for changes to this translation: %s"
+msgstr "Olùyẹ̀wò kan béèrè àwọn àtúnṣe sí ìtumọ̀ yìí: %s"
+
+#: includes/workflow/pro__premium_only/class-review.php:158
+msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
+msgstr "Túmọ̀ yìí ń dúró de olúyẹ̀wò. Títẹ̀ ẹ́ jalo (gẹ́gẹ́ bí olúyẹ̀wò) ń fọwọ́ sí i."
+
+#: includes/workflow/pro__premium_only/class-review.php:225
+msgid "Only a translation can be reviewed."
+msgstr "Ìtumọ̀ nìkan ni a lè ṣe àtúnyẹ̀wẹ̀ sí."
+
+#: includes/workflow/pro__premium_only/class-settings.php:33
+msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
+msgstr "Yan ohun ti yoo ṣẹlẹ nigbati atilẹba ba yipada: ko si nkan, samisi awọn itumọ rẹ gẹgẹbi eyiti akoko rẹ ti kọja, tabi tumọ wọn lẹẹkansi."
+
+#: includes/workflow/pro__premium_only/class-settings.php:45
+msgid "The quality threshold is a score from 0 to 100."
+msgstr "Ẹnu-ọ̀nà dídára jẹ́ àmì kan láti 0 dé 100."
+
 #: src/admin-kit/Addons.js:35
 msgid "Show hidden suggestions on the Overview again"
 msgstr "Fi àwọn àbẹ̀wò tí ó fipamọ́ han lórí Ìkọ̀lù lẹ́ẹ̀kan si"
 
 #: src/admin-kit/DataList.js:142
+#: src/admin/WorkflowTab.js:457
 msgid "All"
 msgstr "Gbogbo"
 
@@ -5973,6 +6212,8 @@ msgid "Select"
 msgstr "Yan"
 
 #: src/admin-kit/DataList.js:266
+#: src/admin/StatusTab.js:275
+#: src/admin/WorkflowTab.js:445
 msgid "Pages"
 msgstr "Àwọn ojúewé"
 
@@ -6221,28 +6462,28 @@ msgstr "Fẹlẹlẹ"
 msgid "Dark"
 msgstr "Òkùnkùn"
 
-#: src/admin-kit/Shell.js:171
+#: src/admin-kit/Shell.js:174
 msgid "Colour scheme"
 msgstr "Ìpìlẹ̀ àwọ̀"
 
-#: src/admin-kit/Shell.js:200
+#: src/admin-kit/Shell.js:203
 msgid "Help"
 msgstr "Ìrànlọ́wọ́"
 
-#: src/admin-kit/Shell.js:209
+#: src/admin-kit/Shell.js:212
 msgid "Guide to this screen"
 msgstr "Itọsọna si oju-iwo yii"
 
-#: src/admin-kit/Shell.js:221
+#: src/admin-kit/Shell.js:224
 msgid "Take the tour"
 msgstr "Ṣe ìṣẹ̀wò náà"
 
-#: src/admin-kit/Shell.js:233
+#: src/admin-kit/Shell.js:236
 #: src/admin-kit/Support.js:433
 msgid "Get help or report a bug"
 msgstr "Gbà ìrànwọ́ tàbí ròyìn àṣìṣe kan"
 
-#: src/admin-kit/Shell.js:246
+#: src/admin-kit/Shell.js:249
 msgid "Plugin screens"
 msgstr "Awọn oju-iwe afikun"
 
@@ -6655,6 +6896,7 @@ msgstr "Wo àwọn ètò Pro ati iye owó wọn"
 
 #: src/admin/App.js:113
 #: src/admin/index.js:29
+#: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr "Àwọn Èdè"
@@ -6881,6 +7123,213 @@ msgstr "Àwọn Ìtòlẹ́sẹẹsẹ"
 msgid "Translation engine"
 msgstr "Ẹrọ ìtumọ̀"
 
+#: src/admin/IntegrationsTab.js:71
+msgid "What Tranzly translates on this site"
+msgstr "Ohun ti Tranzly n tumọ lori aaye yii"
+
+#: src/admin/IntegrationsTab.js:82
+msgid "found, translated with your content"
+msgstr "a ti ri, a ti tumọ pẹlu akoonu rẹ"
+
+#: src/admin/IntegrationsTab.js:86
+msgid "not on this site"
+msgstr "kò sí lórí ojú opó yìí"
+
+#: src/admin/IntegrationsTab.js:92
+msgid "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor’s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme’s and plugins’ own text; and comments and reviews."
+msgstr "Pẹ̀lú Tranzly Pro: àwọn ojú ewé Elementor, Bricks, Divi, Beaver Builder, Oxygen àti WPBakery; ohun gbogbo nínú WooCommerce, pẹ̀lú àwọn iye owó ní owó àlejò náà; àwọn ààyè SEO ti Yoast SEO, Rank Math, SEOPress àti All in One SEO; àwọn ààyè ACF, Meta Box àti Pods; àwọn fọ́ọ̀mù àti àwọn imeeli wọn; ọ̀rọ̀ ti ẹ̀yọ àkòrí rẹ̀ àti àwọn afikun; àti àwọn asọye àti àyẹ̀wò."
+
+#: src/admin/IntegrationsTab.js:111
+msgid "Shop text and e-mails"
+msgstr "Ọrọ ilé ìtajà àti àwọn imeeli"
+
+#: src/admin/IntegrationsTab.js:115
+msgid "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order’s e-mails go out in the language it was placed in."
+msgstr "Àwọn àkọlé àti àkọlé kékeré fún ìwé ìròyìn Í-mèlì, àwọn orúkọ ọ̀nà ìsanwó àti ìgbéjàde, àti àwọn àkíyèsí ìṣẹ̀dá ìsanwó. Ìwé ìròyìn Í-mèlì ti aṣẹ kọ̀ọ̀kan máa ń jáde ní èdè tí a ti pa á lẹ́ṣẹ̀."
+
+#: src/admin/IntegrationsTab.js:128
+msgid "Forms and their e-mails"
+msgstr "Àwọn fọ́ọ̀mù àti àwọn í-mẹ́lì wọn"
+
+#: src/admin/IntegrationsTab.js:132
+msgid "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor’s language."
+msgstr "Gbogbo fọọmu ma n tọju atọnisọna awọn wọle kan sọkan; awọn akọle rẹ, awọn bọtini, awọn ifiranṣẹ ati awọn imeeli n han ni ede alejo naa."
+
+#: src/admin/IntegrationsTab.js:172
+#: src/admin/IntegrationsTab.js:304
+#: src/admin/WorkflowTab.js:87
+msgid "Saved."
+msgstr "A fipamọ."
+
+#: src/admin/IntegrationsTab.js:185
+msgid "No ACF, Meta Box or Pods fields are defined yet."
+msgstr "A ti defin anfani kankan fun ACF, Meta Box tabi Pods sibẹsibẹ."
+
+#: src/admin/IntegrationsTab.js:195
+msgid "Field"
+msgstr "Pupa"
+
+#: src/admin/IntegrationsTab.js:196
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Nibo"
+
+#: src/admin/IntegrationsTab.js:199
+msgid "In a translation"
+msgstr "Ninu ìtumọ̀"
+
+#. translators: %s: a field's name.
+#: src/admin/IntegrationsTab.js:216
+#, js-format
+msgid "What happens to %s in a translation"
+msgstr "Kini yoo ṣẹlẹ si %s ninu itumọ kan"
+
+#: src/admin/IntegrationsTab.js:226
+msgid "Translate it"
+msgstr "Tumọ̀ rẹ̀"
+
+#: src/admin/IntegrationsTab.js:233
+msgid "Copy it as it is"
+msgstr "Ẹ daakọ rẹ̀ gẹ́gẹ́ bí ó ṣe wà"
+
+#: src/admin/IntegrationsTab.js:240
+msgid "Leave it empty"
+msgstr "Fi sé oṣoofo"
+
+#: src/admin/IntegrationsTab.js:316
+msgid "The shop’s currency"
+msgstr "Owó ilé ìtajà náà"
+
+#: src/admin/IntegrationsTab.js:322
+msgid "Currencies"
+msgstr "Àwọn owó"
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:329
+#, js-format
+msgid "Show prices in other currencies (the shop’s own is %s)"
+msgstr "Fi awọn owo han ni awọn owo nina miiran (ti ile-itaja naa ni ni %s)"
+
+#: src/admin/IntegrationsTab.js:341
+msgid "Exchange rates"
+msgstr "Iye ti Awọn Paṣipaarọ"
+
+#. translators: %s: a date and time.
+#: src/admin/IntegrationsTab.js:353
+#, js-format
+msgid "Rates last updated %s."
+msgstr "Awọn oṣuwọn ti ni imudojuiwọn kẹhin ni %s."
+
+#: src/admin/IntegrationsTab.js:356
+msgid "Rates have not been fetched yet."
+msgstr "Àwọn iye kò ti i di gbigba."
+
+#: src/admin/IntegrationsTab.js:361
+msgid "Update the rates now"
+msgstr "Se àwọn ìwọ̀n náà báyìí ni"
+
+#: src/admin/IntegrationsTab.js:373
+msgid "New currency"
+msgstr "Owó ẹ̀rọ titun"
+
+#: src/admin/IntegrationsTab.js:381
+msgid "Choose…"
+msgstr "Yan..."
+
+#. translators: %s: the shop's currency code.
+#: src/admin/IntegrationsTab.js:396
+#, js-format
+msgid "Rate (per 1 %s)"
+msgstr "Ìwọ̀n (fún 1 %s kọ̀ọ̀kan)"
+
+#: src/admin/IntegrationsTab.js:405
+msgid "Typing a rate keeps it: the daily update will not change it."
+msgstr "Titẹ iye kan mọọ: imudojuiwọn ojoojumọ kii yoo yipada."
+
+#: src/admin/IntegrationsTab.js:415
+msgid "Rounding"
+msgstr "Wiwa si ǹkankan pataki"
+
+#: src/admin/IntegrationsTab.js:418
+msgid "None"
+msgstr "Ko si"
+
+#: src/admin/IntegrationsTab.js:419
+msgid "Round up"
+msgstr "Fi kun pẹlu"
+
+#: src/admin/IntegrationsTab.js:422
+msgid "Round to the nearest"
+msgstr "Yiyi si nọmba to sunmọ julọ"
+
+#: src/admin/IntegrationsTab.js:426
+msgid "Round down"
+msgstr "Yí padà sí ìsàlẹ̀"
+
+#: src/admin/IntegrationsTab.js:434
+msgid "Round to (for example 1, 0.05 or 10)"
+msgstr "Yi borowọ si (fún àpẹrẹ 1, 0.05 tàbí 10)"
+
+#: src/admin/IntegrationsTab.js:446
+msgid "Prices end in (for example 0.99)"
+msgstr "Awọn owo pari pẹlu (fun apẹẹrẹ 0.99)"
+
+#: src/admin/IntegrationsTab.js:487
+msgid "Add a currency"
+msgstr "Fi owo kun"
+
+#: src/admin/IntegrationsTab.js:490
+msgid "Which visitors see which currency"
+msgstr "Àwọn àlejò wo ló máa ń rí owó wo"
+
+#: src/admin/IntegrationsTab.js:513
+msgid "By country: two-letter country code (for example CH)"
+msgstr "Nípa orílẹ̀-èdè: kóòdù orílẹ̀-èdè lẹ́tà méjì (fún àpẹẹrẹ CH)"
+
+#. translators: %s: a country code.
+#: src/admin/IntegrationsTab.js:528
+#, js-format
+msgid "Visitors from %s"
+msgstr "Àwọn àbẹ̀wò láti %s"
+
+#: src/admin/IntegrationsTab.js:550
+msgid "Let visitors choose (shortcode [tranzly_currency_switcher])"
+msgstr "Jẹ́ kí àwọn alábẹ̀wò yan (shortcode [tranzly_currency_switcher])"
+
+#: src/admin/IntegrationsTab.js:560
+msgid "Prices now depend on a cookie or on the visitor’s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages."
+msgstr "Awọn idiyele ni bayi sinmi lori kuki kan tabi lori orilẹ-ede alejo naa: ri an daju pe iṣura oju-iwe rẹ yipada nipasẹ kuki \"tranzly_currency\", tabi yọ awọn oju-iwe ile-itaja kuro."
+
+#: src/admin/IntegrationsTab.js:568
+msgid "Save currencies"
+msgstr "Fipamọ awọn owo nina"
+
+#: src/admin/IntegrationsTab.js:623
+msgid "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin’s own."
+msgstr "Awọn ọrọ ti akori rẹ ati awọn afikun rẹ tẹjade funrararẹ (awọn bọtini, awọn aami). Ka akori tabi afikun kan ni ẹẹkan, lẹhinna tumọ ọrọ rẹ nibi; ifọwọsowọpọ rẹ bori ti afikun naa."
+
+#. translators: %d: how many texts.
+#: src/admin/IntegrationsTab.js:637
+#, js-format
+msgid "%d texts"
+msgstr "Awọn itọnisọna %d"
+
+#: src/admin/IntegrationsTab.js:640
+msgid "not read yet"
+msgstr "a kà á sí i tẹ́lẹ̀"
+
+#: src/admin/IntegrationsTab.js:648
+msgid "Read again"
+msgstr "Ka lẹ́ẹ̀kan sí i"
+
+#: src/admin/IntegrationsTab.js:649
+msgid "Read its text"
+msgstr "Ka ọrọ rẹ"
+
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr "Tumọ"
+
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -6940,6 +7389,7 @@ msgid "%1$d posts, %2$s characters: about $%3$s on your own account."
 msgstr "Àwọn ìfiránṣẹ́ %1$d, àwọn àlífábẹ̀tì %2$s: ó fẹ́rẹ̀ẹ́ jẹ́ $%3$s lórí àkántì ara rẹ."
 
 #: src/admin/Jobs.js:333
+#: src/admin/StatusTab.js:604
 msgid "Start translating"
 msgstr "Bẹrẹ titumọ"
 
@@ -6977,6 +7427,11 @@ msgstr "Akoonu"
 
 #: src/admin/Jobs.js:398
 #: src/admin/MenusTab.js:217
+#: src/admin/StatusTab.js:214
+#: src/admin/StatusTab.js:280
+#: src/admin/StringsEditor.js:127
+#: src/admin/WorkflowTab.js:300
+#: src/admin/WorkflowTab.js:434
 msgid "Language"
 msgstr "Èdè"
 
@@ -7011,11 +7466,13 @@ msgstr "A ti fi àwọn àkójọ aṣayan pamọ́."
 
 #. translators: %d: how many texts were translated.
 #: src/admin/MenusTab.js:119
+#: src/admin/StringsEditor.js:73
 #, js-format
 msgid "%d texts translated."
 msgstr "Awọn ọrọ %d ti ni itumọ."
 
 #: src/admin/MenusTab.js:140
+#: src/admin/StringsEditor.js:94
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr "A ti fi pamọ́. A daabobo awọn atunṣe rẹ lọwọ itumọ ẹ̀rọ."
 
@@ -7052,48 +7509,61 @@ msgid "Templates, headers, footers and patterns (Pro)"
 msgstr "Àwọn àdàkọ, àwọn àkọlé, àwọn ìsàlẹ̀ ojúewé àti àwọn àpẹẹrẹ (Pro)"
 
 #: src/admin/MenusTab.js:258
+#: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr "Tumọ ọrọ ti o ku"
 
 #: src/admin/MenusTab.js:264
+#: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr "Kò sí ọrọ̀ kankan láti túmọ̀ sí ibi."
 
 #: src/admin/MenusTab.js:279
+#: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr "Ẹni tí a fọwọ́ sí, tí a dáàbò bo"
 
 #: src/admin/MenusTab.js:302
+#: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr "Fipamọ awọn atunṣe"
 
-#: src/admin/Root.js:27
+#: src/admin/Root.js:30
 msgid "Languages and settings"
 msgstr "Àwọn èdè àti ètò"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:32
 msgid "Engines"
 msgstr "Àwọn Ẹrọ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:33
 msgid "Translation jobs"
 msgstr "Àwọn iṣẹ́ ìtumọ̀"
 
-#: src/admin/Root.js:31
+#: src/admin/Root.js:34
 msgid "Addresses and SEO"
 msgstr "Awọn adirẹsi ati SEO"
 
-#: src/admin/Root.js:34
+#: src/admin/Root.js:37
 msgid "Language switchers"
 msgstr "Àwọn olùyípadà èdè"
 
-#: src/admin/Root.js:36
+#: src/admin/Root.js:39
 msgid "SEO audit"
 msgstr "Àyẹ̀wò SEO"
 
-#: src/admin/Root.js:39
+#: src/admin/Root.js:42
 msgid "Menus and shared text"
 msgstr "Àwọn àkójọ aṣàyàn àti ọ̀rọ̀ tí a pínlò"
+
+#: src/admin/Root.js:46
+#: src/admin/StatusTab.js:192
+msgid "Translation status"
+msgstr "Ipò Ìtumọ̀"
+
+#: src/admin/Root.js:51
+msgid "Integrations"
+msgstr "Àwọn ìsopọ̀"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -7138,6 +7608,7 @@ msgid "The whole language has been checked."
 msgstr "A ti ṣàyẹ̀wò gbogbo èdè náà."
 
 #: src/admin/SeoAudit.js:146
+#: src/admin/StatusTab.js:346
 msgid "Page"
 msgstr "Ojúewé"
 
@@ -7146,17 +7617,198 @@ msgid "Problem"
 msgstr "Àìṣédéédé"
 
 #: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
 #: src/editor/translations-panel.js:144
 msgid "Edit"
 msgstr "Ṣatunkọ"
 
+#. translators: 1: a job number, 2: how many pages it translates.
+#: src/admin/StatusTab.js:103
+#, js-format
+msgid "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs."
+msgstr "Iṣẹ́ %1$d bẹ̀rẹ̀: a ń túmọ̀ ojú-ewé %2$d lẹ́yìn-ọ̀-fẹ́fẹ́. Tẹ̀le e ninu Awọn iṣẹ itumọ."
+
+#. translators: %d: how many translations will be checked.
+#: src/admin/StatusTab.js:133
+#, js-format
+msgid "%d translations are being checked in the background. Scores appear here as they arrive."
+msgstr "A n ṣàyẹ̀wò àwọn ìtumọ̀ %d lẹ́yìn-ọ̀-fẹ́fẹ́. Àwọn àmì yóò hàn níhìn-ín bí wọ́n ṣe ń dé."
+
+#: src/admin/StatusTab.js:148
+#: src/admin/StatusTab.js:168
+#: src/admin/StatusTab.js:220
+msgid "Missing"
+msgstr "Kò sí"
+
+#: src/admin/StatusTab.js:149
+#: src/admin/StatusTab.js:169
+#: src/admin/StatusTab.js:223
+#: src/admin/WorkflowTab.js:452
+msgid "Out of date"
+msgstr "Ti kọja akoko"
+
+#: src/admin/StatusTab.js:150
+#: src/admin/StatusTab.js:217
+msgid "Translated"
+msgstr "Túmọ̀ rẹ̀"
+
+#: src/admin/StatusTab.js:151
+#: src/admin/StatusTab.js:226
+msgid "Edited by a person"
+msgstr "Eniyan lo satunkọ rẹ"
+
+#: src/admin/StatusTab.js:152
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Àwọn èdè tí ẹ̀rọ túmọ̀ sí"
+
+#: src/admin/StatusTab.js:157
+msgid "Waiting for review"
+msgstr "Nduro ayẹwo"
+
+#: src/admin/StatusTab.js:161
+msgid "Needs a human look"
+msgstr "O nilo akiyesi eniyan"
+
+#: src/admin/StatusTab.js:165
+msgid "Everything"
+msgstr "Gbogbo rẹ̀"
+
+#: src/admin/StatusTab.js:170
+msgid "Up to date"
+msgstr "Wọ́n ti mú un ṣe tuntun"
+
+#: src/admin/StatusTab.js:185
+msgid "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does."
+msgstr "Tranzly nṣiṣẹ lori lati mọ iru awọn ìtumọ àtijọ wo lo ti kọja àkókò. Awọn nọmba \"ti kọja àkókò\" yoo pọ si nigba ti o nṣe bẹ."
+
+#: src/admin/StatusTab.js:196
+msgid "Content type"
+msgstr "Irú akópa"
+
+#: src/admin/StatusTab.js:201
+msgid "All content"
+msgstr "Gbogbo akoonu"
+
+#: src/admin/StatusTab.js:230
+msgid "Average quality"
+msgstr "Apapọ didara"
+
+#. translators: 1: pages translated, 2: percent of the site.
+#: src/admin/StatusTab.js:252
+#, js-format
+msgid "%1$d translated (%2$d%%)"
+msgstr "%1$d ti a tumọ (%2$d%%)"
+
+#: src/admin/StatusTab.js:291
+msgid "Show"
+msgstr "Fi hàn"
+
+#: src/admin/StatusTab.js:303
+msgid "Translate everything missing"
+msgstr "Tumọ ohun gbogbo ti o ku"
+
+#: src/admin/StatusTab.js:310
+msgid "Update everything out of date"
+msgstr "Ṣe imudojuiwọn ohun gbogbo ti o ti pẹ"
+
+#: src/admin/StatusTab.js:319
+msgid "Check the quality with AI"
+msgstr "Ṣàyẹ̀wọ̀ dídára pẹ̀lú AI"
+
+#: src/admin/StatusTab.js:329
+msgid "Translate the low-scoring pages again"
+msgstr "Tún túnsọ àwọn ojú-ewé tí wọ́n ní àmì kékeré"
+
+#: src/admin/StatusTab.js:339
+msgid "Nothing here."
+msgstr "Kò sí nǹkankan níbí."
+
+#: src/admin/StatusTab.js:353
+msgid "Quality"
+msgstr "Didaraja"
+
+#: src/admin/StatusTab.js:378
+msgid "by a person"
+msgstr "nípa ènìyàn"
+
+#: src/admin/StatusTab.js:385
+msgid "waiting for review"
+msgstr "n duro de ayewo"
+
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:149
+msgid "Side by side"
+msgstr "Ẹgbẹ́ mẹ́jẹ"
+
+#: src/admin/StatusTab.js:436
+msgid "Show more"
+msgstr "Fi kun ẹ̀"
+
+#: src/admin/StatusTab.js:471
+msgid "Bulk translate the whole site (Pro)"
+msgstr "Tumọ gbogbo aaye rẹ ni olopobo (Pro)"
+
+#: src/admin/StatusTab.js:475
+msgid "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go."
+msgstr "Pẹ̀lú Tranzly Pro, yan àwọn irú àkóópọ̀ àti àwọn èdè, wo ìṣirò náà, kí o sì túmọ̀ gbogbo ojú-wọ́wọ́ náà lẹ́ẹ̀kan náà."
+
+#. translators: %d: how many background jobs started.
+#: src/admin/StatusTab.js:522
+#, js-format
+msgid "%d background jobs started, one per language. Follow them in Translation jobs."
+msgstr "Awọn iṣẹ abẹlẹ %d ti bẹrẹ, ọkan fun ede kọọkan. Tẹle wọn ninu Awọn iṣẹ itumọ."
+
+#: src/admin/StatusTab.js:537
+msgid "Content types"
+msgstr "Awọn oriṣi akoonu"
+
+#: src/admin/StatusTab.js:569
+msgid "What to translate"
+msgstr "Ohun tí a máa tumọ̀ sí"
+
+#: src/admin/StatusTab.js:574
+msgid "Only what is missing"
+msgstr "Ohun ti o ku nikan"
+
+#: src/admin/StatusTab.js:578
+msgid "Only what is out of date"
+msgstr "Kiki ohun ti o ti pẹ"
+
+#: src/admin/StatusTab.js:582
+msgid "Everything (pages edited by a person stay as they are)"
+msgstr "Gbogbo rẹ (awọn oju-iwe ti eniyan ṣatunṣe yoo wa bi wọn ṣe wa)"
+
+#: src/admin/StatusTab.js:597
+msgid "Estimate"
+msgstr "Àìní"
+
+#. translators: 1: pages, 2: characters.
+#: src/admin/StatusTab.js:612
+#, js-format
+msgid "%1$d pages, %2$s characters. This engine does not publish a price."
+msgstr "Àwọn ojú ewé %1$d, àwọn ìlànà lẹ́tà %2$s. Ẹrọ yìí kò gbé iye owó jáde."
+
+#. translators: 1: pages, 2: characters, 3: cost in US dollars.
+#: src/admin/StatusTab.js:621
+#, js-format
+msgid "%1$d pages, %2$s characters, about $%3$s."
+msgstr "Ojú ewé %1$d, àwọn lẹ́tà %2$s, nípa $%3$s."
+
+#: src/admin/StringsEditor.js:155
+msgid "Find a text"
+msgstr "Wa ọrọ kan"
+
+#. translators: %d: how many more texts match.
+#: src/admin/StringsEditor.js:184
+#, js-format
+msgid "%d more: type in \"Find a text\" to narrow the list."
+msgstr "%d diẹ sii: tẹ \"Wa ọrọ kan\" lati dín atọka naa kù."
+
 #: src/admin/Switchers.js:88
 msgid "A small button in a corner of every page, on any theme, with no set-up."
 msgstr "Bọtínì kékeré kan ní apaǹtì gbogbo ojú ewé, lórí èyíkéyìí tiimu, láìsí ìṣètò kankan."
-
-#: src/admin/Switchers.js:96
-msgid "Where"
-msgstr "Nibo"
 
 #: src/admin/Switchers.js:99
 msgid "Off"
@@ -7356,6 +8008,200 @@ msgstr "Ṣiṣẹ pọ pẹlu: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Ọ̀rọ̀ àdírẹ̀sì kọ̀ọ̀dù jẹ́ lẹ́tà kékeré 2 sí 12, àwọn nọ́mbà tàbí àwọn àmì ìdájọ́ (hyphens)."
 
+#: src/admin/WorkflowTab.js:31
+msgid "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro."
+msgstr "Ìtumọ̀ fúnra rẹ̀ nígbà tí wọ́n bá ṣe àtúnṣe, ipa àwọn olùkẹ́kọ̀ọ́, ìj'ajade XLIFF fún àwọn olùtumọ̀, yíyípadà láti WPML, Polylang tàbí TranslatePress àti àyẹ̀wò àìlẹ́gbẹ́ AI wá pẹ̀lú Tranzly Pro."
+
+#: src/admin/WorkflowTab.js:109
+msgid "When an original changes"
+msgstr "Nígbà tí ohun àkọ́kọ́ bá yí padà"
+
+#: src/admin/WorkflowTab.js:114
+msgid "When a page is edited"
+msgstr "Nígbà tí wọ́n bá ṣàtúnṣe ojúewé kan"
+
+#: src/admin/WorkflowTab.js:119
+msgid "Mark its translations out of date"
+msgstr "Fi àwọn ìtumọ̀ rẹ̀ sípò pé wọn kò tíì di ìsinsìnyí"
+
+#: src/admin/WorkflowTab.js:126
+msgid "Translate its translations again in the background"
+msgstr "Tún túmọ̀ àwọn ìtúmọ̀ rẹ̀ lẹ́ẹ̀kan sí i ní abẹ́lẹ̀"
+
+#: src/admin/WorkflowTab.js:133
+msgid "Do nothing"
+msgstr "Má ṣe ohunkohun kankan"
+
+#: src/admin/WorkflowTab.js:137
+msgid "A translation a person edited is never overwritten; it is marked out of date instead."
+msgstr "À túmọ̀ tí ènìyàn sẹ́ túnkò níí gbé orí rẹ̀ tí ì túmọ̀ mìíràn; dípòbéèni, wón máa ǹ sam̀ì sí pé ó ti péjọ."
+
+#: src/admin/WorkflowTab.js:144
+msgid "Translate new pages into every language when they are published"
+msgstr "Tumọ awọn oju-iwe tuntun si gbogbo ede nigbati a ba tẹ wọn jade"
+
+#: src/admin/WorkflowTab.js:171
+msgid "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status."
+msgstr "Àwoṣe AI keji n ka ìtumọ kọọkan lẹ́gbẹ̀ẹ́ atilẹba rẹ̀, ó ṣe àgbéyẹ̀wò rẹ̀ ó sì sọ àwọn àṣìṣe náà. Ó nlo bọ́tìnnì AI tirẹ̀ láti inú àwọn ètò AI. Bẹ̀rẹ̀ àyẹ̀wò kan láti ipò ìtumọ̀."
+
+#: src/admin/WorkflowTab.js:179
+msgid "AI provider"
+msgstr "Olupese AI"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/admin/WorkflowTab.js:184
+msgid "The AI settings’ general model"
+msgstr "Àwòṣe ìlò gbogbo ti àwọn ètò AI"
+
+#: src/admin/WorkflowTab.js:207
+msgid "Recommended"
+msgstr "A ṁ fẹran"
+
+#: src/admin/WorkflowTab.js:220
+msgid "A page needs a human look below this score"
+msgstr "Oju-iwe kan nilo iwo aniyan eniyan ni isalẹ ami yii"
+
+#: src/admin/WorkflowTab.js:283
+msgid "Publish only translations a reviewer approved"
+msgstr "Tẹ awọn ìtumọ̀ nìkan jáde tí alátẹ̀wò fọwọ́ sí"
+
+#: src/admin/WorkflowTab.js:291
+msgid "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under “Pending”; publishing one there approves it."
+msgstr "Fún àwọn ènìyàn ní ipò Translator (ó ń ṣe àtúnṣe àwọn ìtumọ̀, kì í ṣe àwọn ìpilẹ̀ṣẹ̀, kò lè tẹ̀ jáde) tàbí ipò Translation reviewer (ó tún ń fọwọ́ sí i). Àwọn olùyẹ̀wò tún ń wá ohun gbogbo tí ó ń dúró de nínú àwọn àkójọ Posts àti Pages lábé “Pending”; títẹ̀ sí èkejì nínú wọn jáde fọwọ́ sí i."
+
+#: src/admin/WorkflowTab.js:295
+msgid "Manage users"
+msgstr "Ṣakoso awọn olumulo"
+
+#: src/admin/WorkflowTab.js:310
+msgid "Nothing is waiting for review."
+msgstr "Ko si ohun ti o n duro de ayewo."
+
+#: src/admin/WorkflowTab.js:316
+msgid "Note for the translator (optional)"
+msgstr "Àkíyèsí fún olùtúmọ̀ (aṣàyàn)"
+
+#: src/admin/WorkflowTab.js:329
+msgid "Read side by side"
+msgstr "Ka ni ẹ̀gbẹ́-kẹgbẹ́"
+
+#: src/admin/WorkflowTab.js:338
+msgid "Approve"
+msgstr "Fọwọsi"
+
+#: src/admin/WorkflowTab.js:346
+msgid "Ask for changes"
+msgstr "Bẹ́ẹ̀ sí àwọn àtúnṣe"
+
+#. translators: %d: how many pages were written.
+#: src/admin/WorkflowTab.js:404
+#, js-format
+msgid "%d translations imported and protected from machine translation."
+msgstr "%d awọn atumọ ti wọ inu ati aabo lati inu itumọ ẹrọ."
+
+#: src/admin/WorkflowTab.js:428
+msgid "Export and import for translators"
+msgstr "Àwọn olùtumọ̀ wọlé kí wọ̀ sì jáde"
+
+#: src/admin/WorkflowTab.js:450
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Ko tii tumọ si"
+
+#: src/admin/WorkflowTab.js:455
+msgid "Already translated"
+msgstr "Ti tumọ tẹlẹ"
+
+#: src/admin/WorkflowTab.js:464
+msgid "Format"
+msgstr "Ọna kika"
+
+#: src/admin/WorkflowTab.js:469
+msgid "XLIFF 1.2 (translation tools)"
+msgstr "XLIFF 1.2 (awọn irinṣẹ itumọ)"
+
+#: src/admin/WorkflowTab.js:473
+msgid "CSV (spreadsheets)"
+msgstr "CSV (àwọn ìwé ìtànkálẹ̀)"
+
+#: src/admin/WorkflowTab.js:480
+msgid "Download the file"
+msgstr "Ṣe igbasilẹ fáìlì náà"
+
+#: src/admin/WorkflowTab.js:485
+msgid "Import a translated file"
+msgstr "Ko wọ inu fáìlì tí a ti túmọ̀ sí èdè mi"
+
+#. translators: 1: links removed, 2: pages deleted.
+#: src/admin/WorkflowTab.js:541
+#, js-format
+msgid "Undone: %1$d links removed, %2$d imported pages deleted."
+msgstr "Ko ṣe: Awọn ọna asopọ %1$d ti yọ kuro, awọn oju-iwe wọle %2$d ti a parẹ."
+
+#: src/admin/WorkflowTab.js:575
+msgid "Dry run, nothing changed:"
+msgstr "Idanwo gbigbẹ, kò sí ohun tí a yipada:"
+
+#: src/admin/WorkflowTab.js:576
+msgid "Imported:"
+msgstr "Wọ́n ti kó wọlé:"
+
+#. translators: 1: languages, 2: links, 3: pages built, 4: texts.
+#: src/admin/WorkflowTab.js:580
+#, js-format
+msgid "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts."
+msgstr "Awon ede %1$d ti a fi kun, awon itumo %2$d ti a sopo, awon oju opo webu %3$d ti a ko, awon oro %4$d."
+
+#: src/admin/WorkflowTab.js:609
+msgid "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added."
+msgstr "Pa plọọgi miiran naa kọkọ (awọn adirẹsi rẹ ati awọn oluyipada yoo ba Tranzly ja). Awọn data rẹ duro ni ibi ti o wa, nitorina o le yipada sẹhin; Ìmúpadà yọ kuro deede ohun ti agbewọle naa ṣafikun."
+
+#: src/admin/WorkflowTab.js:621
+msgid "No data from this plugin on this site."
+msgstr "Ko si data lati inu agbekale yii lori aaye yii."
+
+#. translators: %s: language codes.
+#: src/admin/WorkflowTab.js:632
+#, js-format
+msgid "Languages: %s"
+msgstr "Àwọn èdè: %s"
+
+#: src/admin/WorkflowTab.js:637
+msgid "still active: switch it off first."
+msgstr "sì wà lọ́wọ́: pa á rẹ́ kọ́kọ́."
+
+#: src/admin/WorkflowTab.js:649
+msgid "Dry run"
+msgstr "Ayẹwo akọkọ"
+
+#: src/admin/WorkflowTab.js:657
+msgid "Import"
+msgstr "Gbe wọle"
+
+#: src/admin/WorkflowTab.js:665
+msgid "Undo the import"
+msgstr "Fagile wọ inu ọkọ yẹn ka"
+
+#: src/admin/WorkflowTab.js:701
+msgid "Comments and product reviews"
+msgstr "Àwọn àlàyé àti àwọn àyẹ̀wò ọjà"
+
+#: src/admin/WorkflowTab.js:706
+msgid "Each language keeps its own"
+msgstr "Gbogbo èdè ní ėti àṣà rẹ̀"
+
+#: src/admin/WorkflowTab.js:710
+msgid "Show every language’s comments on every version"
+msgstr "Fi àwọn àlàyé èdè kọọkan hàn lórí ẹ̀yà kọọkan"
+
+#: src/admin/WorkflowTab.js:717
+msgid "Show them all, translated into the reader’s language"
+msgstr "Fi gbogbo wọn han, ti a tú si èdè olùkàwé"
+
+#: src/admin/WorkflowTab.js:732
+msgid "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent."
+msgstr "Ṣíṣe ìtumọ̀ ń lo ẹ̀rọ ìtumọ̀ rẹ fún gbogbo àwọn àlàyé tí a fọwọ́ sí. A kì í rán àwọn ìtànǹrì àti àwọn àlàyé tí ń dúró de ìfọwọ́sí láé."
+
 #: src/compare/index.js:66
 msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
 msgstr "A ti fi pamọ́. Àwọn ẹ̀yà tí o yí padà ni a fi àmì sí pé ènìyàn ló ṣàyẹ̀wò wọn, wọ́n sì dáàbò bo ìtumọ̀ yìí lọ́wọ́ ìtumọ̀ ẹ̀rọ."
@@ -7388,11 +8234,6 @@ msgstr "Fipamọ awọn ayipada"
 msgid "Open in the editor"
 msgstr "Ṣí nínú olóòtú"
 
-#: src/compare/model.js:37
-#: src/editor/translations-model.js:38
-msgid "Machine translated"
-msgstr "Àwọn èdè tí ẹ̀rọ túmọ̀ sí"
-
 #: src/compare/model.js:38
 msgid "Checked by a person"
 msgstr "Ẹni tó ṣe ayẹ̀wọ̀ rẹ̀"
@@ -7400,10 +8241,6 @@ msgstr "Ẹni tó ṣe ayẹ̀wọ̀ rẹ̀"
 #: src/compare/model.js:39
 msgid "Imported"
 msgstr "Ti a ko wọle"
-
-#: src/compare/model.js:40
-msgid "Not translated yet"
-msgstr "Ko tii tumọ si"
 
 #: src/compare/model.js:41
 msgid "Not in the translation"
@@ -7457,10 +8294,6 @@ msgstr "Kò tíì túmọ̀ (ẹ̀kọ́ kan)"
 #: src/editor/translations-panel.js:60
 msgid "Save this post first, then translate it here."
 msgstr "Fipamọ post yii kọkọ, lẹhinna tumọ rẹ si ibi."
-
-#: src/editor/translations-panel.js:149
-msgid "Side by side"
-msgstr "Ẹgbẹ́ mẹ́jẹ"
 
 #: src/editor/translations-panel.js:154
 msgid "View"

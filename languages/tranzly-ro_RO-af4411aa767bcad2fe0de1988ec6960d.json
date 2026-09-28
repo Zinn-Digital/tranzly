@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-09-28T13:06:52+00:00",
+    "translation-revision-date": "2026-09-28T15:00:48+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -13,8 +13,26 @@
             "Translate in the background": [
                 "Traduce\u021bi \u00een fundal"
             ],
+            "Custom fields": [
+                "C\u00e2mpuri personalizate"
+            ],
+            "Bulk translate the whole site": [
+                "Traduce\u021bi \u00een mas\u0103 \u00eentregul site"
+            ],
+            "Review and approval": [
+                "Verificare \u0219i aprobare"
+            ],
+            "Switch from WPML, Polylang or TranslatePress": [
+                "Trece\u021bi la WPML, Polylang sau TranslatePress"
+            ],
             "Floating switcher": [
                 "Comutator flotant"
+            ],
+            "AI quality check": [
+                "Verificare calitate AI"
+            ],
+            "Workflow": [
+                "Flux de lucru"
             ],
             "Next": [
                 "\u00cenainte"
@@ -25,11 +43,17 @@
             "Open": [
                 "Deschide"
             ],
+            "Model": [
+                "Model"
+            ],
             "About": [
                 "Despre"
             ],
             "Done": [
                 "Efectuat"
+            ],
+            "Actions": [
+                "Ac\u021biuni"
             ],
             "Cancelled": [
                 "Anulat"
@@ -58,11 +82,23 @@
             "Sites": [
                 "Site-uri"
             ],
+            "State": [
+                "Stare"
+            ],
             "Type": [
                 "Tip"
             ],
             "Upgrade": [
                 "Actualizare"
+            ],
+            "Comments and reviews": [
+                "Comentarii \u0219i recenzii"
+            ],
+            "Currency": [
+                "Moned\u0103"
+            ],
+            "Theme and plugin text": [
+                "Text tem\u0103 \u0219i plugin"
             ],
             "Subdomains and separate domains per language are part of Tranzly Pro.": [
                 "Subdomeniile \u0219i domeniile separate pentru fiecare limb\u0103 fac parte din Tranzly Pro."
@@ -747,6 +783,150 @@
             "Translation engine": [
                 "Motor de traducere"
             ],
+            "What Tranzly translates on this site": [
+                "Ce traduce Tranzly pe acest site"
+            ],
+            "found, translated with your content": [
+                "g\u0103sit, tradus cu con\u021binutul dvs."
+            ],
+            "not on this site": [
+                "nu pe acest site"
+            ],
+            "With Tranzly Pro: Elementor, Bricks, Divi, Beaver Builder, Oxygen and WPBakery pages; everything in WooCommerce, with prices in the visitor\u2019s currency; the SEO fields of Yoast SEO, Rank Math, SEOPress and All in One SEO; ACF, Meta Box and Pods fields; forms and their e-mails; your theme\u2019s and plugins\u2019 own text; and comments and reviews.": [
+                "Cu Tranzly Pro: pagini Elementor, Bricks, Divi, Beaver Builder, Oxygen \u0219i WPBakery; totul \u00een WooCommerce, cu pre\u021buri \u00een moneda vizitatorului; c\u00e2mpurile SEO din Yoast SEO, Rank Math, SEOPress \u0219i All in One SEO; c\u00e2mpuri ACF, Meta Box \u0219i Pods; formulare \u0219i e-mailurile lor; propriul text al temei \u0219i al pluginurilor; precum \u0219i comentarii \u0219i recenzii."
+            ],
+            "Shop text and e-mails": [
+                "Text \u0219i e-mailuri pentru magazin"
+            ],
+            "E-mail subjects and headings, payment and shipping method names, and the checkout notices. Each order\u2019s e-mails go out in the language it was placed in.": [
+                "Subiecte \u0219i titluri de e-mail, denumiri ale metodelor de plat\u0103 \u0219i livrare, precum \u0219i notific\u0103rile de finalizare a comenzii. E-mailurile pentru fiecare comand\u0103 sunt trimise \u00een limba \u00een care a fost plasat\u0103 aceasta."
+            ],
+            "Forms and their e-mails": [
+                "Formularele \u0219i e-mailurile acestora"
+            ],
+            "Every form keeps one list of entries; its labels, buttons, messages and e-mails appear in the visitor\u2019s language.": [
+                "Fiecare formular men\u021bine o singur\u0103 list\u0103 de \u00eenregistr\u0103ri; etichetele, butoanele, mesajele \u0219i e-mailurile acestuia apar \u00een limba vizitatorului."
+            ],
+            "Saved.": [
+                "Salvat."
+            ],
+            "No ACF, Meta Box or Pods fields are defined yet.": [
+                "Nu sunt definite \u00eenc\u0103 c\u00e2mpuri ACF, Meta Box sau Pods."
+            ],
+            "Field": [
+                "C\u00e2mp"
+            ],
+            "Where": [
+                "Unde"
+            ],
+            "In a translation": [
+                "\u00centr-o traducere"
+            ],
+            "What happens to %s in a translation": [
+                "Ce se \u00eent\u00e2mpl\u0103 cu %s \u00eentr-o traducere"
+            ],
+            "Translate it": [
+                "Traduce\u021bi"
+            ],
+            "Copy it as it is": [
+                "Copia\u021bi-l a\u0219a cum este"
+            ],
+            "Leave it empty": [
+                "L\u0103sa\u021bi necompletat"
+            ],
+            "The shop\u2019s currency": [
+                "Moneda magazinului"
+            ],
+            "Currencies": [
+                "Valute"
+            ],
+            "Show prices in other currencies (the shop\u2019s own is %s)": [
+                "Afi\u0219eaz\u0103 pre\u021burile \u00een alte monede (cea a magazinului este %s)"
+            ],
+            "Exchange rates": [
+                "Rate de schimb"
+            ],
+            "Rates last updated %s.": [
+                "Tarifele au fost actualizate ultima dat\u0103 la %s."
+            ],
+            "Rates have not been fetched yet.": [
+                "Tarifele nu au fost \u00eenc\u0103 preluate."
+            ],
+            "Update the rates now": [
+                "Actualiza\u021bi tarifele acum"
+            ],
+            "New currency": [
+                "Moned\u0103 nou\u0103"
+            ],
+            "Choose\u2026": [
+                "Alege\u021bi\u2026"
+            ],
+            "Rate (per 1 %s)": [
+                "Tarif (per 1 %s)"
+            ],
+            "Typing a rate keeps it: the daily update will not change it.": [
+                "Dac\u0103 tasta\u021bi o rat\u0103, aceasta se va p\u0103stra: actualizarea zilnic\u0103 nu o va modifica."
+            ],
+            "Rounding": [
+                "Rotunjire"
+            ],
+            "None": [
+                "Niciunul"
+            ],
+            "Round up": [
+                "Rotunjire \u00een sus"
+            ],
+            "Round to the nearest": [
+                "Rotunje\u0219te la cel mai apropiat"
+            ],
+            "Round down": [
+                "Rotunjire \u00een jos"
+            ],
+            "Round to (for example 1, 0.05 or 10)": [
+                "Rotunjire la (de exemplu 1, 0,05 sau 10)"
+            ],
+            "Prices end in (for example 0.99)": [
+                "Pre\u021burile se termin\u0103 \u00een (de exemplu 0.99)"
+            ],
+            "Add a currency": [
+                "Ad\u0103uga\u021bi o moned\u0103"
+            ],
+            "Which visitors see which currency": [
+                "Ce vizitatori v\u0103d ce moned\u0103"
+            ],
+            "By country: two-letter country code (for example CH)": [
+                "Dup\u0103 \u021bar\u0103: cod de \u021bar\u0103 din dou\u0103 litere (de exemplu, CH)"
+            ],
+            "Visitors from %s": [
+                "Vizitatori din %s"
+            ],
+            "Let visitors choose (shortcode [tranzly_currency_switcher])": [
+                "Permite\u021bi vizitatorilor s\u0103 aleag\u0103 (shortcode [tranzly_currency_switcher])"
+            ],
+            "Prices now depend on a cookie or on the visitor\u2019s country: make sure your page cache varies by the \"tranzly_currency\" cookie, or excludes shop pages.": [
+                "Pre\u021burile depind acum de un modul cookie sau de \u021bara vizitatorului: asigura\u021bi-v\u0103 c\u0103 memoria cache a paginii dvs. variaz\u0103 \u00een func\u021bie de modulul cookie \u201etranzly_currency\u201d sau exclude paginile magazinului."
+            ],
+            "Save currencies": [
+                "Salvare valute"
+            ],
+            "The words your theme and plugins print themselves (buttons, labels). Read a theme or plugin once, then translate its text here; your translation wins over the plugin\u2019s own.": [
+                "Cuvintele pe care tema \u0219i modulele le afi\u0219eaz\u0103 (butoane, etichete). Cite\u0219te o tem\u0103 sau un modul o singur\u0103 dat\u0103, apoi tradu textul aici; traducerea ta va avea prioritate fa\u021b\u0103 de cea proprie a modulului."
+            ],
+            "%d texts": [
+                "%d texte"
+            ],
+            "not read yet": [
+                "necitit"
+            ],
+            "Read again": [
+                "Cite\u0219te din nou"
+            ],
+            "Read its text": [
+                "Cite\u0219te textul acestuia"
+            ],
+            "Translate": [
+                "Traduce\u021bi"
+            ],
             "Job started with %d translations to do. It runs in the background: you can close this page.": [
                 "Lucrarea a \u00eenceput cu %d traduceri de efectuat. Ruleaz\u0103 \u00een fundal: pute\u021bi \u00eenchide aceast\u0103 pagin\u0103."
             ],
@@ -897,6 +1077,12 @@
             "Menus and shared text": [
                 "Meniuri \u0219i text partajat"
             ],
+            "Translation status": [
+                "Stare traducere"
+            ],
+            "Integrations": [
+                "Integr\u0103ri"
+            ],
             "No meta description": [
                 "F\u0103r\u0103 meta descriere"
             ],
@@ -936,11 +1122,128 @@
             "Edit": [
                 "Edita\u021bi"
             ],
+            "Job %1$d started: %2$d pages are being translated in the background. Follow it in Translation jobs.": [
+                "Jobul %1$d a \u00eenceput: %2$d pagini sunt traduse \u00een fundal. Urm\u0103ri\u021bi-l \u00een Lucr\u0103ri de traducere."
+            ],
+            "%d translations are being checked in the background. Scores appear here as they arrive.": [
+                "%d traduceri sunt verificate \u00een fundal. Scorurile apar aici pe m\u0103sur\u0103 ce sosesc."
+            ],
+            "Missing": [
+                "Lips\u0103"
+            ],
+            "Out of date": [
+                "\u00cenvechit"
+            ],
+            "Translated": [
+                "Tradus"
+            ],
+            "Edited by a person": [
+                "Editat de o persoan\u0103"
+            ],
+            "Machine translated": [
+                "Tradus automat"
+            ],
+            "Waiting for review": [
+                "\u00cen a\u0219teptarea revizuirii"
+            ],
+            "Needs a human look": [
+                "Necesit\u0103 verificare uman\u0103"
+            ],
+            "Everything": [
+                "Totul"
+            ],
+            "Up to date": [
+                "La zi"
+            ],
+            "Tranzly is still working out which older translations are out of date. The \"out of date\" numbers will grow while it does.": [
+                "Tranzly \u00eenc\u0103 stabile\u0219te care traduceri mai vechi sunt dep\u0103\u0219ite. Numerele \u201edep\u0103\u0219ite\u201d vor cre\u0219te \u00een timp ce face acest lucru."
+            ],
+            "Content type": [
+                "Tip de con\u021binut"
+            ],
+            "All content": [
+                "Toate con\u021binuturile"
+            ],
+            "Average quality": [
+                "Calitate medie"
+            ],
+            "%1$d translated (%2$d%%)": [
+                "%1$d traduse (%2$d%%)"
+            ],
+            "Show": [
+                "Afi\u0219are"
+            ],
+            "Translate everything missing": [
+                "Traduce\u021bi tot ce lipse\u0219te"
+            ],
+            "Update everything out of date": [
+                "Actualizeaz\u0103 tot ce este \u00eenvechit"
+            ],
+            "Check the quality with AI": [
+                "Verifica\u021bi calitatea cu AI"
+            ],
+            "Translate the low-scoring pages again": [
+                "Traduce\u021bi din nou paginile cu scor sc\u0103zut"
+            ],
+            "Nothing here.": [
+                "Nu este nimic aici."
+            ],
+            "Quality": [
+                "Calitate"
+            ],
+            "by a person": [
+                "de o persoan\u0103"
+            ],
+            "waiting for review": [
+                "\u00een a\u0219teptarea revizuirii"
+            ],
+            "Side by side": [
+                "L\u00e2ng\u0103 l\u00e2ng\u0103"
+            ],
+            "Show more": [
+                "Afi\u0219eaz\u0103 mai multe"
+            ],
+            "Bulk translate the whole site (Pro)": [
+                "Traduce\u021bi \u00een mas\u0103 \u00eentregul site (Pro)"
+            ],
+            "With Tranzly Pro, choose content types and languages, see the estimate, and translate the whole site in one go.": [
+                "Cu Tranzly Pro, alege\u021bi tipurile de con\u021binut \u0219i limbile, vizualiza\u021bi estimarea \u0219i traduce\u021bi \u00eentregul site dintr-o singur\u0103 mi\u0219care."
+            ],
+            "%d background jobs started, one per language. Follow them in Translation jobs.": [
+                "%d sarcini \u00een fundal au pornit, c\u00e2te una pentru fiecare limb\u0103. Le pute\u021bi urm\u0103ri \u00een Lucr\u0103ri de traducere."
+            ],
+            "Content types": [
+                "Tipuri de con\u021binut"
+            ],
+            "What to translate": [
+                "Ce se traduce"
+            ],
+            "Only what is missing": [
+                "Doar ceea ce lipse\u0219te"
+            ],
+            "Only what is out of date": [
+                "Doar ce este dep\u0103\u0219it"
+            ],
+            "Everything (pages edited by a person stay as they are)": [
+                "Totul (paginile editate de o persoan\u0103 r\u0103m\u00e2n a\u0219a cum sunt)"
+            ],
+            "Estimate": [
+                "Estimare"
+            ],
+            "%1$d pages, %2$s characters. This engine does not publish a price.": [
+                "%1$d pagini, %2$s caractere. Acest motor nu public\u0103 un pre\u021b."
+            ],
+            "%1$d pages, %2$s characters, about $%3$s.": [
+                "%1$d pagini, %2$s caractere, aproximativ $%3$s."
+            ],
+            "Find a text": [
+                "C\u0103uta\u021bi un text"
+            ],
+            "%d more: type in \"Find a text\" to narrow the list.": [
+                "\u00eenc\u0103 %d: tasta\u021bi \u00een \u201eG\u0103si\u021bi un text\u201d pentru a restr\u00e2nge lista."
+            ],
             "A small button in a corner of every page, on any theme, with no set-up.": [
                 "Un buton mic \u00eentr-un col\u021b al fiec\u0103rei pagini, pe orice tem\u0103, f\u0103r\u0103 configurare."
-            ],
-            "Where": [
-                "Unde"
             ],
             "Off": [
                 "Oprit"
@@ -1082,6 +1385,144 @@
             ],
             "Each address word is 2 to 12 lowercase letters, digits or hyphens.": [
                 "Fiecare cuv\u00e2nt de adres\u0103 are \u00eentre 2 \u0219i 12 litere mici, cifre sau cratime."
+            ],
+            "Auto-translate on update, reviewer roles, XLIFF export for translators, switching from WPML, Polylang or TranslatePress and the AI quality check come with Tranzly Pro.": [
+                "Traducerea automat\u0103 la actualizare, rolurile de recenzent, exportul XLIFF pentru traduc\u0103tori, trecerea de la WPML, Polylang sau TranslatePress \u0219i verificarea calit\u0103\u021bii AI sunt incluse \u00een Tranzly Pro."
+            ],
+            "When an original changes": [
+                "C\u00e2nd un original se modific\u0103"
+            ],
+            "When a page is edited": [
+                "C\u00e2nd o pagin\u0103 este editat\u0103"
+            ],
+            "Mark its translations out of date": [
+                "Marcheaz\u0103 traducerile acestuia ca fiind \u00eenvechite"
+            ],
+            "Translate its translations again in the background": [
+                "Traduce\u021bi din nou traducerile sale \u00een fundal"
+            ],
+            "Do nothing": [
+                "Nu face nimic"
+            ],
+            "A translation a person edited is never overwritten; it is marked out of date instead.": [
+                "O traducere editat\u0103 de o persoan\u0103 nu este niciodat\u0103 suprascris\u0103; \u00een schimb, este marcat\u0103 ca fiind dep\u0103\u0219it\u0103."
+            ],
+            "Translate new pages into every language when they are published": [
+                "Traduce\u021bi paginile noi \u00een fiecare limb\u0103 atunci c\u00e2nd sunt publicate"
+            ],
+            "A second AI model reads each translation beside its original, scores it and names the mistakes. It uses your own AI key from the AI settings. Start a check from Translation status.": [
+                "Un al doilea model de inteligen\u021b\u0103 artificial\u0103 cite\u0219te fiecare traducere al\u0103turi de originalul s\u0103u, o noteaz\u0103 \u0219i identific\u0103 gre\u0219elile. Acesta folose\u0219te propria cheie AI din set\u0103rile AI. \u00cencepe\u021bi o verificare din starea traducerii."
+            ],
+            "AI provider": [
+                "Furnizor AI"
+            ],
+            "The AI settings\u2019 general model": [
+                "Modelul general al set\u0103rilor AI"
+            ],
+            "Recommended": [
+                "Recomandate"
+            ],
+            "A page needs a human look below this score": [
+                "O pagin\u0103 are nevoie de o revizuire uman\u0103 sub acest scor"
+            ],
+            "Publish only translations a reviewer approved": [
+                "Publica\u021bi doar traducerile aprobate de un revizor"
+            ],
+            "Give people the Translator role (edits translations, never the originals, cannot publish) or the Translation reviewer role (also approves). Reviewers also find everything waiting in the Posts and Pages lists under \u201cPending\u201d; publishing one there approves it.": [
+                "Acorda\u021bi persoanelor rolul de Traduc\u0103tor (editeaz\u0103 traducerile, niciodat\u0103 pe cele originale, nu poate publica) sau rolul de Revizuitor de traduceri (\u0219i aprob\u0103). De asemenea, revizuitorii g\u0103sesc tot ce a\u0219teapt\u0103 \u00een listele Post\u0103ri \u0219i Pagini la \u201e\u00cen a\u0219teptare\u201d; publicarea uneia acolo o aprob\u0103."
+            ],
+            "Manage users": [
+                "Administrare utilizatori"
+            ],
+            "Nothing is waiting for review.": [
+                "Nimic nu a\u0219teapt\u0103 revizuire."
+            ],
+            "Note for the translator (optional)": [
+                "Not\u0103 pentru traduc\u0103tor (op\u021bional)"
+            ],
+            "Read side by side": [
+                "Citi\u021bi al\u0103turi"
+            ],
+            "Approve": [
+                "Aproba\u021bi"
+            ],
+            "Ask for changes": [
+                "Solicit\u0103 modific\u0103ri"
+            ],
+            "%d translations imported and protected from machine translation.": [
+                "%d traduceri importate \u0219i protejate \u00eempotriva traducerii automate."
+            ],
+            "Export and import for translators": [
+                "Export \u0219i import pentru traduc\u0103tori"
+            ],
+            "Not translated yet": [
+                "\u00cenc\u0103 netradus"
+            ],
+            "Already translated": [
+                "Deja tradus"
+            ],
+            "Format": [
+                "Formatare"
+            ],
+            "XLIFF 1.2 (translation tools)": [
+                "XLIFF 1.2 (instrumente de traducere)"
+            ],
+            "CSV (spreadsheets)": [
+                "CSV (foi de calcul)"
+            ],
+            "Download the file": [
+                "Desc\u0103rca\u021bi fi\u0219ierul"
+            ],
+            "Import a translated file": [
+                "Importeaz\u0103 un fi\u0219ier tradus"
+            ],
+            "Undone: %1$d links removed, %2$d imported pages deleted.": [
+                "Anulat: %1$d linkuri eliminate, %2$d pagini importate \u0219terse."
+            ],
+            "Dry run, nothing changed:": [
+                "Simulare, nicio modificare:"
+            ],
+            "Imported:": [
+                "Importat:"
+            ],
+            "%1$d languages added, %2$d translations linked, %3$d pages built, %4$d texts.": [
+                "%1$d limbi ad\u0103ugate, %2$d traduceri conectate, %3$d pagini generate, %4$d texte."
+            ],
+            "Switch the other plugin off first (its addresses and switchers would fight Tranzly). Its data stays where it is, so you can switch back; Undo removes exactly what the import added.": [
+                "Mai \u00eent\u00e2i dezactiva\u021bi cel\u0103lalt plugin (adresele \u0219i comutatoarele sale vor intra \u00een conflict cu Tranzly). Datele sale r\u0103m\u00e2n la locul lor, astfel \u00eenc\u00e2t s\u0103 pute\u021bi reveni; Func\u021bia Anulare elimin\u0103 exact ceea ce a ad\u0103ugat importul."
+            ],
+            "No data from this plugin on this site.": [
+                "Nu exist\u0103 date de la acest modul pe acest site."
+            ],
+            "Languages: %s": [
+                "Limbi: %s"
+            ],
+            "still active: switch it off first.": [
+                "\u00eenc\u0103 activ: opri\u021bi-l mai \u00eent\u00e2i."
+            ],
+            "Dry run": [
+                "Simulare"
+            ],
+            "Import": [
+                "Importare"
+            ],
+            "Undo the import": [
+                "Anuleaz\u0103 importul"
+            ],
+            "Comments and product reviews": [
+                "Comentarii \u0219i recenzii de produse"
+            ],
+            "Each language keeps its own": [
+                "Fiecare limb\u0103 \u00ee\u0219i p\u0103streaz\u0103 propria form\u0103"
+            ],
+            "Show every language\u2019s comments on every version": [
+                "Afi\u0219a\u021bi comentariile fiec\u0103rei limbi pentru fiecare versiune"
+            ],
+            "Show them all, translated into the reader\u2019s language": [
+                "Afi\u0219a\u021bi-le pe toate, traduse \u00een limba cititorului"
+            ],
+            "Translating uses your translation engine for every approved comment. Spam and comments waiting for moderation are never sent.": [
+                "Traducerea folose\u0219te motorul t\u0103u de traducere pentru fiecare comentariu aprobat. Spamul \u0219i comentariile care a\u0219teapt\u0103 moderarea nu sunt trimise niciodat\u0103."
             ]
         }
     }

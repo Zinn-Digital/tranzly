@@ -1,6 +1,8 @@
 // Logical properties only (CLAUDE.md §2.7): the RTL build is generated from this file.
 .tranzly-admin {
-	max-inline-size: 48rem;
+	// No width cap: the screen is always hosted by the admin kit's shell, which sets the width
+	// (owner review 2026-09-28, "a container that is too narrow"; the 48rem cap left half the
+	// window empty beside the cards).
 	margin-block-start: 1rem;
 
 	.components-notice {
