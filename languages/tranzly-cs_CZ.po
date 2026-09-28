@@ -1310,8 +1310,8 @@ msgstr "Limity a oprávnění byly uloženy."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Tento jazyk není jedním z jazyků tohoto webu."
@@ -1434,9 +1434,9 @@ msgstr "Přeložit tuto stránku"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "Tuto položku není dovoleno překládat."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Tato položka již má verzi v tomto jazyce."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "Tento překladový motor není na tomto webu k dispozici."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "Tato položka není součástí překladové úlohy."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "Nemáte povolené tuto překladovou verzi měnit."
 
@@ -1536,44 +1536,44 @@ msgstr "Tento text zde nelze přeložit."
 msgid "That media text cannot be translated here."
 msgstr "Tento mediální text zde nelze přeložit."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "Překlad lze publikovat nebo uložit jako koncept."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "Nemáte oprávnění publikovat tento typ obsahu."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "Tato položka je již v tomto jazyce napsána."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Tento překlad byl upraven člověkem (nebo importován), takže je chráněný. Odemkněte jej, abyste jej mohli přeložit znovu."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "Tato položka neexistuje."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Zatím není nastaven žádný překladový stroj. Přidejte pro něj klíč v rozhraní Tranzly → Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Tento překladový motor ještě není nastaven: nejprve přidejte jeho klíč."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Tento text právě překládá jiná úloha; tato položka použije daný výsledek."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "Žádný překladatelský stroj tuto položku nedokázal zpracovat."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Modul nevrátil překlad pro každou část této položky. Nic nebylo změněno."
 

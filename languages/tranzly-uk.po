@@ -1313,8 +1313,8 @@ msgstr "Ліміти та дозволи збережено."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Цієї мови немає серед мов цього сайту."
@@ -1437,9 +1437,9 @@ msgstr "Перекласти цю сторінку"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "Ви не маєте права перекладати цей елемент."
 
@@ -1449,7 +1449,7 @@ msgid "This item already has a version in that language."
 msgstr "Цей елемент уже має версію цією мовою."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "Цей механізм перекладу недоступний на цьому сайті."
 
@@ -1506,8 +1506,8 @@ msgid "That item is not part of a translation job."
 msgstr "Цей елемент не є частиною завдання з перекладу."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "Вам заборонено змінювати цей переклад."
 
@@ -1539,44 +1539,44 @@ msgstr "Цей текст не може бути перекладений тут
 msgid "That media text cannot be translated here."
 msgstr "Цей медіатекст неможливо перекласти тут."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "Переклад може бути опублікований або збережений як чорновик."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "Вам заборонено публікувати такий контент."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "Цей елемент уже написаний цією мовою."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Цей переклад був відредагований людиною (або імпортований), тому він захищений. Розблокуйте його, щоб перекласти знову."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "Цей елемент не існує."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Ще не налаштовано жодного рушія перекладу. Додайте ключ для нього в Tranzly → Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Цей механізм перекладу ще не налаштовано: спочатку додайте його ключ."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Цей же текст зараз перекладається іншим завданням; для цього елемента буде використано той результат."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "Жодна система перекладу не змогла опрацювати цей елемент."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Рушій не повернув переклад для кожної частини цього елемента. Нічого не було змінено."
 

@@ -1310,8 +1310,8 @@ msgstr "Limites e permissões salvos."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Esse idioma não é um dos idiomas deste site."
@@ -1434,9 +1434,9 @@ msgstr "Traduzir nesta página"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "Você não tem permissão para traduzir este item."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Este item já possui uma versão nesse idioma."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "Esse mecanismo de tradução não está disponível neste site."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "Esse item não faz parte de um trabalho de tradução."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "Você não tem permissão para alterar essa tradução."
 
@@ -1536,44 +1536,44 @@ msgstr "Esse texto não pode ser traduzido aqui."
 msgid "That media text cannot be translated here."
 msgstr "Esse texto de mídia não pode ser traduzido aqui."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "Uma tradução pode ser publicada ou mantida como rascunho."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "Não é permitido publicar este tipo de conteúdo."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "Este item já está escrito nesse idioma."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Esta tradução foi editada por uma pessoa (ou importada), portanto está protegida. Desbloqueie-a para traduzi-la novamente."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "Esse item não existe."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Nenhum mecanismo de tradução foi configurado ainda. Adicione uma chave para um em Tranzly → Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Esse mecanismo de tradução ainda não está configurado: adicione a chave dele primeiro."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "O mesmo texto está sendo traduzido por outro trabalho neste momento; este item usará essa resposta."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "Nenhum mecanismo de tradução conseguiu processar este item."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "O mecanismo não retornou uma tradução para todas as partes deste item. Nada foi alterado."
 

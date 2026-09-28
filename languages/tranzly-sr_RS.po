@@ -1310,8 +1310,8 @@ msgstr "Ograničenja i dozvole su sačuvani."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Taj jezik nije podržan na ovom sajtu."
@@ -1434,9 +1434,9 @@ msgstr "Prevedi na ovoj stranici"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "Nemate dozvolu da prevedete ovu stavku."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Ova stavka već ima verziju na tom jeziku."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "Taj sistem za prevođenje nije dostupan na ovom sajtu."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "Ta stavka nije deo prevodilačkog zadatka."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "Nije vam dozvoljeno da menjate taj prevod."
 
@@ -1536,44 +1536,44 @@ msgstr "Taj tekst se ovde ne može prevesti."
 msgid "That media text cannot be translated here."
 msgstr "Taj tekst medija se ovde ne može prevesti."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "Prevod može biti objavljen ili sačuvan kao nacrt."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "Nije vam dozvoljeno da objavljujete ovu vrstu sadržaja."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "Ova stavka je već napisana na tom jeziku."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ovaj prevod je uredila osoba (ili je uvezen), tako da je zaštićen. Otključajte ga da biste ga ponovo preveli."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "Ta stavka ne postoji."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Još uvek nije podešen nijedan mašinski prevodilac. Dodajte ključ za jedan u Tranzly → Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ta mašina za prevođenje još uvek nije podešena: prvo dodajte njen ključ."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Isti tekst se već prevodi u okviru drugog zadatka; ova stavka će iskoristiti taj odgovor."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "Nijedan prevodilački mehanizam nije mogao da preuzme ovu stavku."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Motor nije vratio prevod za svaki deo ove stavke. Ništa nije promenjeno."
 

@@ -1312,8 +1312,8 @@ msgstr "ບັນທຶກຂີດຈຳກັດ ແລະ ສິດທິແ�
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ພາສານັ້ນບໍ່ແມ່ນພາສາໜຶ່ງຂອງເວັບໄຊນີ້."
@@ -1436,9 +1436,9 @@ msgstr "ແປພາສາໃນໜ້ານີ້"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ແປລາຍການນີ້."
 
@@ -1448,7 +1448,7 @@ msgid "This item already has a version in that language."
 msgstr "ລາຍການນີ້ມີເວີຊັນໃນພາສານັ້ນແລ້ວ."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "ໂປຣແກຣມແປພາສານັ້ນບໍ່ສາມາດໃຊ້ງານໄດ້ໃນເວັບໄຊນີ້."
 
@@ -1505,8 +1505,8 @@ msgid "That item is not part of a translation job."
 msgstr "ລາຍການນັ້ນບໍ່ແມ່ນສ່ວນໜຶ່ງຂອງວຽກການແປ."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "ທ່ານ​ບໍ່​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ​ໃຫ້​ປ່ຽນ​ການ​ແປ​ນັ້ນ."
 
@@ -1538,44 +1538,44 @@ msgstr "ຂໍ້ຄວາມນັ້ນບໍ່ສາມາດແປຢູ່
 msgid "That media text cannot be translated here."
 msgstr "ຂໍ້ຄວາມສື່ນັ້ນບໍ່ສາມາດແປໄດ້ທີ່ນີ້."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "ການແປສາມາດເຜີຍແຜ່ ຫຼື ເກັບໄວ້ເປັນຮ່າງໄດ້."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເຜີຍແຜ່ເນື້ອຫາປະເພດນີ້."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "ລາຍການນີ້ຖືກຂຽນເປັນພາສານັ້ນຢູ່ແລ້ວ."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ການແປນີ້ຖືກແກ້ໄຂໂດຍບຸກຄົນ (ຫລື ນໍາເຂົ້າ), ດັ່ງນັ້ນມັນຈຶ່ງຖືກປົກປ້ອງ. ປົດລັອກມັນເພື່ອແປມັນອີກຄັ້ງ."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "ລາຍການນັ້ນບໍ່ມີຢູ່."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ຍັງບໍ່ທັນມີການຕັ້ງຄ່າເຄື່ອງຈັກແປພາສາເທື່ອ. ໃຫ້ເພີ່ມຄີສຳລັບເຄື່ອງຈັກໃນ Tranzly → Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ເຄື່ອງມືແປພາສານັ້ນຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າ: ກະລຸນາເພີ່ມຄີຂອງມັນກ່ອນ."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "ຂໍ້ຄວາມດຽວກັນນີ້ກຳລັງຖືກແປໂດຍງານອື່ນຢູ່ໃນຂະນະນີ້; ລາຍການນີ້ຈະໃຊ້ຄຳຕອບນັ້ນ."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "ບໍ່ມີເຄື່ອງມືແປພາສາໃດສາມາດຮັບເອົາລາຍການນີ້ໄດ້."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ເຄື່ອງຈັກບໍ່ໄດ້ສົ່ງຄືນການແປສຳລັບທຸກສ່ວນຂອງລາຍການນີ້. ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
 

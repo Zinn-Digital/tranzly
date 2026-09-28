@@ -1310,8 +1310,8 @@ msgstr "បានរក្សាទុកដែនកំណត់ និងស�
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ភាសា​នោះ​មិនមែន​ជា​ភាសា​របស់​គេហទំព័រ​នេះ​ទេ។"
@@ -1434,9 +1434,9 @@ msgstr "បកប្រែទំព័រនេះ"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យបកប្រែធាតុនេះទេ។"
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "ធាតុនេះមានកំណែរួចហើយជាភាសានោះ។"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "ម៉ាស៊ីនបកប្រែនោះមិនមាននៅលើគេហទំព័រនេះទេ។"
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "មុខទំនិញនោះមិនមែនជាផ្នែកនៃកិច្ចការបកប្រែឡើយ។"
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យផ្លាស់ប្តូរការបកប្រែនោះទេ។"
 
@@ -1536,44 +1536,44 @@ msgstr "អត្ថបទនោះមិនអាចបកប្រែនៅទ
 msgid "That media text cannot be translated here."
 msgstr "អត្ថបទមេឌៀនោះមិនអាចបកប្រែនៅទីនេះបានទេ។"
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "ការបកប្រែអាចត្រូវបានផ្សាយ ឬរក្សាទុកជារៀងរាងព្រាង។"
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យផ្សព្វផ្សាយខ្លឹមសារប្រភេទនេះទេ។"
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "មុខទំនិញនេះត្រូវបានសរសេររួចជាស្រេចក្នុងភាសានោះ។"
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ការបកប្រែនេះត្រូវបានកែសម្រួលដោយមនុស្ស (ឬនាំចូល) ដូច្នេះវាត្រូវបានការពារ។ ដោះសោវាដើម្បីបកប្រែវាម្ដងទៀត។"
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "មុខទំនិញនោះមិនមានទេ។"
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "មិនទាន់មានប្រព័ន្ធបកប្រែណាមួយត្រូវបានរៀបចំនៅឡើយទេ។ សូមបន្ថែមគ្រាប់ចុចមួយសម្រាប់ប្រព័ន្ធមួយនៅក្នុង Tranzly → Engines។"
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ម៉ាស៊ីនបកប្រែនោះមិនទាន់បានរៀបចំនៅឡើយទេ៖ សូមបន្ថែមសោរបស់វាជាមុនសិន។"
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "អត្ថបទដូចគ្នា​កំពុង​ត្រូវបាន​បកប្រែ​ដោយ​ការងារ​ផ្សេង​ទៀត​នៅ​ពេល​នេះ។ ធាតុ​នេះ​នឹង​ប្រើ​ចម្លើយ​នោះ។"
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "គ្មានម៉ាស៊ីនបកប្រែណាមួយអាចទទួលយកធាតុនេះបានទេ។"
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ម៉ាស៊ីនមិនបានបញ្ជូនការបកប្រែមកវិញសម្រាប់គ្រប់ផ្នែកនៃធាតុនេះទេ។ គ្មានអ្វីត្រូវបានផ្លាស់ប្ដូរទេ។"
 

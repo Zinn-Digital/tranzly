@@ -1310,8 +1310,8 @@ msgstr "പരിധികളും അനുമതികളും സേവ് 
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ആ ഭാഷ ഈ സൈറ്റിന്റെ ഭാഷകളിൽ ഒന്നല്ല."
@@ -1434,9 +1434,9 @@ msgstr "ഈ പേജിൽ വിവർത്തനം ചെയ്യുക"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "ഈ ഇനം വിവർത്തനം ചെയ്യാൻ നിങ്ങൾക്ക് അനുവാദമില്ല."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "ഈ ഇനത്തിന് ഇതിനകം ആ ഭാഷയിലുള്ള ഒരു പതിപ്പ് ഉണ്ട്."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "ആ വിവർത്തന എൻജിൻ ഈ സൈറ്റിൽ ലഭ്യമല്ല."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "ആ ഇനം ഒരു വിവർത്തന ജോലിയുടെ ഭാഗമല്ല."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "ആ വിവർത്തനം മാറ്റാൻ നിങ്ങൾക്ക് അനുവാദമില്ല."
 
@@ -1536,44 +1536,44 @@ msgstr "ആ വാചകം ഇവിടെ വിവർത്തനം ചെ�
 msgid "That media text cannot be translated here."
 msgstr "ആ മീഡിയ ടെക്സ്റ്റ് ഇവിടെ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "ഒരു വിവർത്തനം പ്രസിദ്ധീകരിക്കുകയോ ഡ്രാഫ്റ്റായി സൂക്ഷിക്കുകയോ ചെയ്യാം."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "ഈ തരത്തിലുള്ള ഉള്ളടക്കം പ്രസിദ്ധീകരിക്കാൻ നിങ്ങൾക്ക് അനുവാദമില്ല."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "ഈ ഇനം ഇതിനകം ആ ഭാഷയിൽ എഴുതപ്പെട്ടതാണ്."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ഈ വിവർത്തനം ഒരാൾ എഡിറ്റ് ചെയ്തതാണ് (അല്ലെങ്കിൽ ഇമ്പോർട്ട് ചെയ്തതാണ്), അതിനാൽ ഇത് പരിരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു. ഇത് വീണ്ടും വിവർത്തനം ചെയ്യാൻ അൺലോക്ക് ചെയ്യുക."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "ആ ഇനം നിലവിലില്ല."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ഒരു തർജ്ജമാ എഞ്ചിനും ഇതുവരെ സജ്ജീകരിച്ചിട്ടില്ല. Tranzly → Engines എന്നതിൽ ഇതിനായി ഒരു കീ ചേർക്കുക."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ആ വിവർത്തന എഞ്ചിൻ ഇതുവരെ സജ്ജീകരിച്ചിട്ടില്ല: ആദ്യം അതിൻ്റെ കീ ചേർക്കുക."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "അതേ വാചകം മറ്റൊരു ജോലിയിലൂടെ ഇപ്പോൾ വിവർത്തനം ചെയ്യപ്പെടുന്നുണ്ട്; ഈ ഇനം ആ ഉത്തരം ഉപയോഗിക്കും."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "ഈ ഇനം ഒ വിവർത്തന എഞ്ചിനും സ്വീകരിച്ചില്ല."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ഈ ഇനത്തിന്റെ എല്ലാ ഭാഗങ്ങൾക്കും എഞ്ചിൻ വിവർത്തനം നൽകിയിട്ടില്ല. മാറ്റങ്ങളൊന്നും വരുത്തിയിട്ടില്ല."
 

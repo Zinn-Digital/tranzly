@@ -1311,8 +1311,8 @@ msgstr "제한 및 권한이 저장되었습니다."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "해당 언어는 이 사이트에서 지원하는 언어가 아닙니다."
@@ -1435,9 +1435,9 @@ msgstr "이 페이지 번역하기"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "이 항목은 번역할 수 없습니다."
 
@@ -1447,7 +1447,7 @@ msgid "This item already has a version in that language."
 msgstr "해당 언어로 된 이 항목의 버전이 이미 존재합니다."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "해당 번역 엔진을 이 사이트에서 사용할 수 없습니다."
 
@@ -1504,8 +1504,8 @@ msgid "That item is not part of a translation job."
 msgstr "해당 항목은 번역 작업에 포함되지 않습니다."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "해당 번역은 변경하실 수 없습니다."
 
@@ -1537,44 +1537,44 @@ msgstr "해당 텍스트는 여기에서 번역할 수 없습니다."
 msgid "That media text cannot be translated here."
 msgstr "해당 미디어 텍스트는 여기에서 번역할 수 없습니다."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "번역은 게시하거나 초안으로 저장할 수 있습니다."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "이 유형의 콘텐츠는 게시할 수 없습니다."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "이 항목은 이미 해당 언어로 작성되어 있습니다."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "이 번역은 사람이 직접 편집(또는 가져오기)했으므로 보호됩니다. 다시 번역하려면 잠금을 해제하세요."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "해당 항목이 존재하지 않습니다."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "아직 설정된 번역 엔진이 없습니다. Tranzly → 엔진에서 엔진의 키를 추가하세요."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "해당 번역 엔진이 아직 설정되지 않았습니다: 먼저 키를 추가하세요."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "동일한 텍스트가 현재 다른 작업에서 번역되고 있으며, 이 항목에는 해당 번역 결과가 사용됩니다."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "어떠한 번역 엔진도 이 항목을 처리할 수 없습니다."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "엔진이 이 항목의 모든 부분에 대한 번역을 반환하지 않았습니다. 변경된 내용이 없습니다."
 

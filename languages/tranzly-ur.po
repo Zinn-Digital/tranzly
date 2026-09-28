@@ -1310,8 +1310,8 @@ msgstr "حدود اور اجازتیں محفوظ کر لی گئیں۔"
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "وہ زبان اس سائیت کی زبانوں میں سے ایک نہیں ہے۔"
@@ -1434,9 +1434,9 @@ msgstr "اس صفحہ کا ترجمہ کریں"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "آپ کو اس آئٹم کا ترجمہ کرنے کی اجازت نہیں ہے۔"
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "اس آئٹم کا اس زبان میں پہلے سے ایک ورژن موجود ہے۔"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "وہ ترجمہ انجن اس سائٹ پر دستیاب نہیں ہے۔"
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "وہ آئٹم کسی ٹرانسلیشن جاب کا حصہ نہیں ہے۔"
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "آپ کو اس ترجمے کو تبدیل کرنے کی اجازت نہیں ہے۔"
 
@@ -1536,44 +1536,44 @@ msgstr "وہ متن یہاں ترجمہ نہیں کیا جا سکتا۔"
 msgid "That media text cannot be translated here."
 msgstr "اس میڈیا ٹیکسٹ کا یہاں ترجمہ نہیں کیا جا سکتا۔"
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "ترجمے کو شائع کیا جا سکتا ہے یا بطور مسودہ رکھا جا سکتا ہے۔"
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "آپ کو اس طرح کا مواد شائع کرنے کی اجازت نہیں ہے۔"
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "یہ آئٹم پہلے ہی اس زبان میں لکھا جا چکا ہے۔"
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "یہ ترجمہ کسی شخص کی طرف سے ایڈٹ کیا گیا تھا (یا درآمد کیا گیا تھا)، اس لیے یہ محفوظ ہے۔ اسے دوبارہ ترجمہ کرنے کے لیے غیر مقفل کریں۔"
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "وہ آئٹم موجود نہیں ہے۔"
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ابھی تک کوئی ترجمہ انجن سیٹ اپ نہیں کیا گیا ہے۔ Tranzly → Engines میں اس کے لیے ایک کی (key) شامل کریں۔"
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "وہ ترجمہ کرنے والا انجن ابھی تک سیٹ اپ نہیں ہوا ہے: پہلے اس کی کلید شامل کریں۔"
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "یہی متن فی الحال کسی دوسرے کام کے ذریعے ترجمہ کیا جا رہا ہے؛ یہ آئٹم اسی جواب کو استعمال کرے گا۔"
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "کوئی بھی ترجمہ کا انجن اس آئٹم کو پروسیس نہیں کر سکا۔"
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "انجن نے اس آئٹم کے ہر حصے کا ترجمہ واپس نہیں کیا۔ کچھ بھی تبدیل نہیں کیا گیا۔"
 

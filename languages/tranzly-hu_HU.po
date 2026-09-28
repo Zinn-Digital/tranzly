@@ -1310,8 +1310,8 @@ msgstr "Korlátok és engedélyek elmentve."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Az a nyelv nem tartozik az oldal által támogatott nyelvek közé."
@@ -1434,9 +1434,9 @@ msgstr "Fordítás ezen az oldalon"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "Ezt az elemet nem fordíthatja le."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "Ennek az elemnek már létezik változata az adott nyelven."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "Ez a fordítómotor nem érhető el ezen a webhelyen."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "Az elem nem része a fordítási feladatnak."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "Nem engedélyezett a fordítás módosítása."
 
@@ -1536,44 +1536,44 @@ msgstr "Ez a szöveg itt nem fordítható le."
 msgid "That media text cannot be translated here."
 msgstr "Az a médiaszöveg itt nem fordítható le."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "A fordítás közzétehető vagy piszkozatként is menthető."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "Nem engedélyezett ilyen típusú tartalom közzététele."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "Ez az elem már le van fordítva annyira."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "Ezt a fordítást egy személy szerkesztette (vagy importálta), így védett. Oldja fel a zárolását az újbóli lefordításához."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "Az az elem nem létezik."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "Még nincs beállítva fordítómotor. Adjon hozzá egy kulcsot a Tranzly → Motorok menüpontban."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Az a fordítómotor még nincs beállítva: először adja hozzá a kulcsát."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Ugyanezt a szöveget éppen egy másik feladat fordítja; ez az elem azt a választ fogja használni."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "Egyik fordítómotor sem tudta átvenni ezt az elemet."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "A motor nem adott vissza fordítást a tétel minden részéhez. Semmi sem változott."
 

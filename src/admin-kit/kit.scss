@@ -67,6 +67,25 @@
 			color: var(--zak-link-dark);
 		}
 
+		// The header's icon buttons (colour scheme, help, …) are plain `components-button`s whose
+		// icon inherits WordPress's dark default, so on the dark shell they were invisible until
+		// hovered (owner review, 2026-09-28). Every state takes a dark token: 13:1 at rest,
+		// 9:1 on hover/focus against the shell, above the 3:1 a non-text control needs.
+		.zak-header__tools .components-button {
+			color: var(--zak-text);
+
+			svg {
+				fill: currentColor;
+			}
+
+			&:hover,
+			&:focus,
+			&:focus-visible,
+			&[aria-expanded="true"] {
+				color: var(--zak-link-dark);
+			}
+		}
+
 		.components-button.is-tertiary.is-pressed,
 		.components-button.is-tertiary[aria-current="page"] {
 			color: #fff;

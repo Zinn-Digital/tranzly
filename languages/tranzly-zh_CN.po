@@ -1310,8 +1310,8 @@ msgstr "限制和权限已保存。"
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "该语言不是本网站的语言之一。"
@@ -1434,9 +1434,9 @@ msgstr "在此页面上翻译"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "您无权翻译此项目。"
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "该语言中已经存在此项目的一个版本。"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "此网站上无法使用该翻译引擎。"
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "该项目不属于任何翻译任务。"
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "您无权更改该翻译。"
 
@@ -1536,44 +1536,44 @@ msgstr "无法在此处翻译该文本。"
 msgid "That media text cannot be translated here."
 msgstr "该媒体文本无法在此处翻译。"
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "翻译可以发布或保留为草稿。"
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "您无权发布此类内容。"
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "该项目已经使用该语言编写。"
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "此翻译由人工编辑（或导入），因此已被保护。解锁后方可重新翻译。"
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "该项目不存在。"
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "尚未设置翻译引擎。请在 Tranzly → 引擎中添加一个密钥。"
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "该翻译引擎尚未配置：请先添加其密钥。"
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "另一个翻译任务目前正在翻译相同的文本；此项目将使用该翻译结果。"
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "没有任何翻译引擎可以处理此项。"
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "引擎未返回此项目各个部分的翻译。未作任何更改。"
 

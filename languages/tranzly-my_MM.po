@@ -1310,8 +1310,8 @@ msgstr "ကန့်သတ်ချက်များနှင့် ခွင�
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ထိုဘာသာစကားသည် ဤဆိုက်၏ ဘာသာစကားများထဲတွင် မပါဝင်ပါ။"
@@ -1434,9 +1434,9 @@ msgstr "ဤစာမျက်နှာကို ဘာသာပြန်ပါ"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "ဤပစ္စည်းကို ဘာသာပြန်ဆိုခွင့် မရှိပါ။"
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "ဤပစ္စည်းတွင် ထိုဘာသာစကားဖြင့် ဗားရှင်းတစ်ခုပြီးသား ရှိနှင့်ပြီးဖြစ်သည်။"
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "ဤဆိုဒ်တွင် ယင်းဘာသာပြန်အင်ဂျင်ကို မရနိုင်ပါ။"
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "ထိုပစ္စည်းသည် ဘာသာပြန်ဆိုရေး အလုပ်တစ်ခု၏ အစိတ်အပိုင်း မဟုတ်ပါ။"
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "ထိုဘာသာပြန်ချက်ကို ပြောင်းလဲခွင့်မရှိပါ။"
 
@@ -1536,44 +1536,44 @@ msgstr "ထိုစာသားကို ဤနေရာတွင် ဘာသ�
 msgid "That media text cannot be translated here."
 msgstr "ထိုမီဒီယာစာသားကို ဤနေရာတွင် ဘာသာပြန်၍မရပါ။"
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "ဘာသာပြန်ချက်တစ်ခုကို ထုတ်ဝေနိုင်သည် သို့မဟုတ် မူကြမ်းအဖြစ် သိမ်းဆည်းထားနိုင်သည်။"
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "ဤကဲ့သို့သော အကြောင်းအရာမျိုးကို သင် ထုတ်ဝေခွင့်မရှိပါ။"
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "ဤပစ္စည်းကို ထိုဘာသာစကားဖြင့် ပြီးသား ရေးသားထားပြီးဖြစ်သည်။"
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "ဤဘာသာပြန်ချက်ကို လူကိုယ်တိုင် ပြင်ဆင်ထားပြီးဖြစ်သဖြင့် (သို့မဟုတ် တင်သွင်းထားသဖြင့်) ၎င်းကို ကာကွယ်ထားသည်။ ၎င်းကို ထပ်မံဘာသာပြန်ရန်အတွက် သော့ဖွင့်ပါ။"
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "ယင်းပစ္စည်း မရှိပါ။"
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "ဘာသာပြန်ဆိုရေး အင်ဂျင်ကို ယခုထိ မသတ်မှတ်ရသေးပါ။ Tranzly → Engines တွင် တစ်ခုအတွက် သော့ချက်တစ်ခုကို ထည့်ပါ။"
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ထိုဘာသာပြန်စက်ကို မသတ်မှတ်ရသေးပါ- ၎င်း၏သော့ကို ဦးစွာထည့်ပါ။"
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "ယခုအချိန်တွင် တူညီသောစာသားကို အခြားအလုပ်တစ်ခုဖြင့် ဘာသာစကားပြန်ဆိုနေပြီး၊ ဤအရာအတွက် ယင်းအဖြေကို အသုံးပြုမည်ဖြစ်ပါသည်။"
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "ဘာသာပြန်ဆိုသည့်အင်ဂျင် မည်သည်မျှ ဤပစ္စည်းကို မယူဆောင်နိုင်ပါ။"
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "အင်ဂျင်သည် ဤအရာ၏ အစိတ်အပိုင်းတိုင်းအတွက် ဘာသာပြန်ဆိုမှုကို မပြန်ပေးခဲ့ပါ။ ဘာသာပြန်ဆိုမှု တစ်စုံတစ်ရာ ပြောင်းလဲခဲ့ခြင်း မရှိပါ။"
 

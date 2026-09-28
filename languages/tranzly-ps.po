@@ -1310,8 +1310,8 @@ msgstr "حدود او اجازه لیکونه خوندي شول."
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
-#: includes/core/class-translator.php:61
-#: includes/core/class-translator.php:220
+#: includes/core/class-translator.php:75
+#: includes/core/class-translator.php:239
 #: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "دا ژبه د دې سایټ له ژبو څخه نه ده."
@@ -1434,9 +1434,9 @@ msgstr "په دې پاڼه کې وژباړه"
 
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
-#: includes/core/class-translator.php:68
-#: includes/core/class-translator.php:142
-#: includes/core/class-translator.php:227
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
 msgstr "تاسو ته د دې توکي د ژباړلو اجازه نشته."
 
@@ -1446,7 +1446,7 @@ msgid "This item already has a version in that language."
 msgstr "دا توکی په هغه ژبه کې لا دمخه یوه نسخه لري."
 
 #: includes/core/class-engine-settings.php:65
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "That translation engine is not available on this site."
 msgstr "دا ژباړې ماشین په دې سایټ کې شتون نلري."
 
@@ -1503,8 +1503,8 @@ msgid "That item is not part of a translation job."
 msgstr "دا توکی د ژباړې د کار برخه نه دی."
 
 #: includes/core/class-queue.php:422
-#: includes/core/class-translator.php:86
-#: includes/core/class-translator.php:151
+#: includes/core/class-translator.php:100
+#: includes/core/class-translator.php:165
 msgid "You are not allowed to change that translation."
 msgstr "تاسې ته اجازه نه شته چې دا ژباړه بدله کړئ."
 
@@ -1536,44 +1536,44 @@ msgstr "دا متن دلته نه شي ژباړل کېدای."
 msgid "That media text cannot be translated here."
 msgstr "د رسنیو هغه متن دلته نه شي ژباړل کېدای."
 
-#: includes/core/class-translator.php:72
+#: includes/core/class-translator.php:86
 msgid "A translation can be published or kept as a draft."
 msgstr "يو ژباړه کېدای شي خپره شي او یا هم د مسودې په توګه وساتل شي."
 
-#: includes/core/class-translator.php:76
+#: includes/core/class-translator.php:90
 msgid "You are not allowed to publish this kind of content."
 msgstr "تاسو ته د دې ډول منځپانګې د خپرولو اجازه نشته."
 
-#: includes/core/class-translator.php:80
+#: includes/core/class-translator.php:94
 msgid "This item is already written in that language."
 msgstr "دا توکی لا دمخه په هغه ژبه لیکل شوی دی."
 
-#: includes/core/class-translator.php:94
-#: includes/core/class-translator.php:233
+#: includes/core/class-translator.php:108
+#: includes/core/class-translator.php:252
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr "دا ژباړه د یوه شخص لخوا ایډیټ شوې (أو وارد شوې) ده، نو ځکه خوندي ده. د بیا ژباړلو لپاره یې پرانیزئ."
 
-#: includes/core/class-translator.php:146
+#: includes/core/class-translator.php:160
 msgid "That item does not exist."
 msgstr "دا توکی شتون نه لري."
 
-#: includes/core/class-translator.php:386
+#: includes/core/class-translator.php:405
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr "تر اوسه پورې کوم د ژباړې ماشین نه دی تنظیم شوی. په Tranzly کې د ماشین لپاره یو کیلي اضافه کړئ ← Engines."
 
-#: includes/core/class-translator.php:389
+#: includes/core/class-translator.php:408
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "دا ژباړې ماشین لا نه دی تنظیم شوی: لومړی یې کیلي اضافه کړئ."
 
-#: includes/core/class-translator.php:478
+#: includes/core/class-translator.php:497
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "همدا متن په اوسني وخت کې د بلې دندې لخوا ژباړل کیږي؛ دا توکی به له همدې ځواب څخه کار واخلي."
 
-#: includes/core/class-translator.php:526
+#: includes/core/class-translator.php:545
 msgid "No translation engine could take this item."
 msgstr "هیڅ ژباړن ماشین ونه شو کولی دا توکی واخلي."
 
-#: includes/core/class-translator.php:547
+#: includes/core/class-translator.php:566
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "انجن د دې توکي د هرې برخې لپاره ژباړه ونه راستوله. هیڅ شی ونه بدل شو."
 
