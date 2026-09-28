@@ -350,17 +350,20 @@ final class Query_Filter {
 			return $slug;
 		}
 		global $wpdb;
-		$lang       = Router::post_language( (int) $post_id );
-		$check      = Languages::default_code() === $lang ? '(r.lang IS NULL OR r.lang = %s)' : 'r.lang = %s';
-		$parent_sql = is_post_type_hierarchical( (string) $post_type ) ? $wpdb->prepare( ' AND p.post_parent = %d', (int) $post_parent ) : '';
-		$taken      = (int) $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- runs on save only.
-			$wpdb->prepare( // phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- one placeholder in $check.
-				"SELECT COUNT(*) FROM {$wpdb->posts} p LEFT JOIN %i r ON r.object_type = 'post' AND r.object_id = p.ID WHERE p.post_name = %s AND p.post_type = %s AND p.ID != %d AND p.post_status NOT IN ('trash','auto-draft','inherit') AND {$check}{$parent_sql}", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- $check is a constant pair of placeholders, $parent_sql is prepared.
+		$lang = Router::post_language( (int) $post_id );
+		// One static statement: whether an untagged post counts as the default language, and whether
+		// the parent matters, are values too (Plugin Check: no variable SQL reaches $wpdb).
+		$taken = (int) $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- runs on save only.
+			$wpdb->prepare(
+				"SELECT COUNT(*) FROM {$wpdb->posts} p LEFT JOIN %i r ON r.object_type = 'post' AND r.object_id = p.ID WHERE p.post_name = %s AND p.post_type = %s AND p.ID != %d AND p.post_status NOT IN ('trash','auto-draft','inherit') AND ( r.lang = %s OR ( %d = 1 AND r.lang IS NULL ) ) AND ( %d = 0 OR p.post_parent = %d )",
 				Schema::tables()['relations'],
 				(string) $original_slug,
 				(string) $post_type,
 				(int) $post_id,
-				$lang
+				$lang,
+				Languages::default_code() === $lang ? 1 : 0,
+				is_post_type_hierarchical( (string) $post_type ) ? 1 : 0,
+				(int) $post_parent
 			)
 		);
 

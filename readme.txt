@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.9
+Stable tag: 3.0.10
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,9 @@ From the address. With language folders (the default) /de/… is German and an a
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves titles, descriptions and schema to your SEO plugin. It is tested with WordPress's own sitemap, Yoast SEO, Rank Math, SEOPress and All in One SEO.
 
 == Changelog ==
+
+= 3.0.10 =
+* Plugin Check: every database query the plugin runs is now a single prepared statement (no change in behaviour or speed).
 
 = 3.0.9 =
 * Languages in the address: /de/, /fr/ folders with translated slugs and translated category, tag and product words; old addresses redirect permanently. Pro: a subdomain or a separate domain per language.

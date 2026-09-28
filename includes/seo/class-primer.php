@@ -69,43 +69,27 @@ final class Primer {
 				$listed[] = $post->ID;
 			}
 		}
-		$sql = self::sql( $post_ids, $term_ids, $listed );
-		if ( '' === $sql ) {
+		if ( array() === $post_ids && array() === $term_ids && array() === $listed ) {
 			return;
 		}
 		global $wpdb;
-		$rows = $wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- built from prepared parts in sql(); it IS the cache.
+		$rel = Schema::tables()['relations'];
+		// An empty list asks for ID 0, which no row has: the query's SHAPE never changes, so every
+		// value in it is a placeholder (Plugin Check: no variable SQL reaches $wpdb).
+		$p    = array() === $post_ids ? array( 0 ) : array_values( array_unique( array_map( 'intval', $post_ids ) ) );
+		$t    = array() === $term_ids ? array( 0 ) : array_values( array_unique( array_map( 'intval', $term_ids ) ) );
+		$l    = array() === $listed ? array( 0 ) : array_values( array_unique( array_map( 'intval', $listed ) ) );
+		$rows = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- it IS the cache (seed() fills the object cache).
+			$wpdb->prepare(
+				"(SELECT 'post' AS kind, r1.object_id AS asked, r2.lang AS lang, r2.object_id AS member, p.ID, p.post_author, p.post_date, p.post_date_gmt, p.post_content, p.post_title, p.post_excerpt, p.post_status, p.comment_status, p.ping_status, p.post_password, p.post_name, p.to_ping, p.pinged, p.post_modified, p.post_modified_gmt, p.post_content_filtered, p.post_parent, p.guid, p.menu_order, p.post_type, p.post_mime_type, p.comment_count FROM %i r1 INNER JOIN %i r2 ON r2.group_id = r1.group_id AND r2.object_type = r1.object_type LEFT JOIN {$wpdb->posts} p ON p.ID = r2.object_id WHERE r1.object_type = 'post' AND r1.object_id IN (" . implode( ',', array_fill( 0, count( $p ), '%d' ) ) . '))'
+				. " UNION ALL (SELECT 'term' AS kind, r1.object_id AS asked, r2.lang AS lang, r2.object_id AS member, NULL AS ID, NULL AS post_author, NULL AS post_date, NULL AS post_date_gmt, NULL AS post_content, NULL AS post_title, NULL AS post_excerpt, NULL AS post_status, NULL AS comment_status, NULL AS ping_status, NULL AS post_password, NULL AS post_name, NULL AS to_ping, NULL AS pinged, NULL AS post_modified, NULL AS post_modified_gmt, NULL AS post_content_filtered, NULL AS post_parent, NULL AS guid, NULL AS menu_order, NULL AS post_type, NULL AS post_mime_type, NULL AS comment_count FROM %i r1"
+				. '  INNER JOIN %i r2 ON r2.group_id = r1.group_id AND r2.object_type = r1.object_type WHERE r1.object_type = \'term\' AND r1.object_id IN (' . implode( ',', array_fill( 0, count( $t ), '%d' ) ) . '))'
+				. " UNION ALL (SELECT 'tlang' AS kind, tt.term_id AS asked, r1.lang AS lang, 0 AS member, NULL AS ID, NULL AS post_author, NULL AS post_date, NULL AS post_date_gmt, NULL AS post_content, NULL AS post_title, NULL AS post_excerpt, NULL AS post_status, NULL AS comment_status, NULL AS ping_status, NULL AS post_password, NULL AS post_name, NULL AS to_ping, NULL AS pinged, NULL AS post_modified, NULL AS post_modified_gmt, NULL AS post_content_filtered, NULL AS post_parent, NULL AS guid, NULL AS menu_order, NULL AS post_type, NULL AS post_mime_type, NULL AS comment_count FROM {$wpdb->term_relationships} tr INNER JOIN {$wpdb->term_taxonomy} tt ON tt.term_taxonomy_id = tr.term_taxonomy_id LEFT JOIN %i r1 ON r1.object_type = 'term' AND r1.object_id = tt.term_id WHERE tr.object_id IN (" . implode( ',', array_fill( 0, count( $l ), '%d' ) ) . '))',
+				array_merge( array( $rel, $rel ), $p, array( $rel, $rel ), $t, array( $rel ), $l )
+			),
+			ARRAY_A
+		);
 		self::seed( (array) $rows, $post_ids, $term_ids );
-	}
-
-	/**
-	 * The UNION query (the pure half, apart from $wpdb->prepare()).
-	 *
-	 * @param array<int, int> $post_ids Posts whose group (with post rows) is needed.
-	 * @param array<int, int> $term_ids Terms whose group is needed.
-	 * @param array<int, int> $listed   Posts whose terms' languages are needed.
-	 * @return string '' when there is nothing to ask.
-	 */
-	public static function sql( array $post_ids, array $term_ids, array $listed ): string {
-		global $wpdb;
-		$rel   = Schema::tables()['relations'];
-		$cols  = implode( ', ', array_map( static fn( string $c ): string => 'p.' . $c, self::POST_COLUMNS ) );
-		$nulls = implode( ', ', array_map( static fn( string $c ): string => 'NULL AS ' . $c, self::POST_COLUMNS ) );
-		$parts = array();
-		$ints  = static fn( array $ids ): string => implode( ',', array_map( 'intval', array_unique( $ids ) ) );
-
-		if ( array() !== $post_ids ) {
-			$parts[] = "(SELECT 'post' AS kind, r1.object_id AS asked, r2.lang AS lang, r2.object_id AS member, {$cols} FROM {$rel} r1 INNER JOIN {$rel} r2 ON r2.group_id = r1.group_id AND r2.object_type = r1.object_type LEFT JOIN {$wpdb->posts} p ON p.ID = r2.object_id WHERE r1.object_type = 'post' AND r1.object_id IN (" . $ints( $post_ids ) . '))';
-		}
-		if ( array() !== $term_ids ) {
-			$parts[] = "(SELECT 'term' AS kind, r1.object_id AS asked, r2.lang AS lang, r2.object_id AS member, {$nulls} FROM {$rel} r1 INNER JOIN {$rel} r2 ON r2.group_id = r1.group_id AND r2.object_type = r1.object_type WHERE r1.object_type = 'term' AND r1.object_id IN (" . $ints( $term_ids ) . '))';
-		}
-		if ( array() !== $listed ) {
-			// Every term on the listed posts, with its own language row when it has one.
-			$parts[] = "(SELECT 'tlang' AS kind, tt.term_id AS asked, r1.lang AS lang, 0 AS member, {$nulls} FROM {$wpdb->term_relationships} tr INNER JOIN {$wpdb->term_taxonomy} tt ON tt.term_taxonomy_id = tr.term_taxonomy_id LEFT JOIN {$rel} r1 ON r1.object_type = 'term' AND r1.object_id = tt.term_id WHERE tr.object_id IN (" . $ints( $listed ) . '))';
-		}
-
-		return implode( ' UNION ALL ', $parts );
 	}
 
 	/**
