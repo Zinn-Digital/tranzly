@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves titles, descriptions and schema to your SEO plugin. It is tested with WordPress's own sitemap, Yoast SEO, Rank Math, SEOPress and All in One SEO.
 
 == Changelog ==
+
+= 3.1.1 =
+* Maintenance: the admin, editor and comparison scripts are formatted to the WordPress coding standard (no change in behaviour).
 
 = 3.1.0 =
 * AI: the shared AI core can now read images and make images with OpenAI or Google Gemini (used by Page Builder Sandwich). Choose the image model under Settings → AI providers.

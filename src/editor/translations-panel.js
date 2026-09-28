@@ -123,8 +123,9 @@ function TranslationsPanel() {
 												on
 													? [ ...picked, row.code ]
 													: picked.filter(
-															( c ) => c !== row.code
-													  )
+															( c ) =>
+																c !== row.code
+														)
 											)
 										}
 									/>
@@ -156,7 +157,9 @@ function TranslationsPanel() {
 								{ row.protected && ! row.is_source && (
 									<Button
 										variant="link"
-										onClick={ () => protect( row.id, false ) }
+										onClick={ () =>
+											protect( row.id, false )
+										}
 									>
 										{ __(
 											'Unlock so it can be translated again',
@@ -213,7 +216,7 @@ function TranslationsPanel() {
 										/* translators: %s: a language code. */
 										__( '%s: translated.', 'tranzly' ),
 										r.code
-								  )
+									)
 								: `${ r.code }: ${ r.message }` }
 						</Notice>
 					) ) }

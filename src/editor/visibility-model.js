@@ -6,11 +6,11 @@
 /**
  * The next rule after a change in the Languages panel.
  *
- * @param {Object}  rule          Current rule.
+ * @param {Object}  rule            Current rule.
  * @param {Object}  change
- * @param {string}  change.mode   'all', 'only' or 'except'.
+ * @param {string}  change.mode     'all', 'only' or 'except'.
  * @param {string}  [change.toggle] A language code to tick or untick.
- * @param {boolean} [change.on]   Whether it is ticked.
+ * @param {boolean} [change.on]     Whether it is ticked.
  * @return {Object} The new rule ({} = every language).
  */
 export function withRule( rule, { mode, toggle, on } ) {

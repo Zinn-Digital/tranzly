@@ -93,7 +93,9 @@ function Compare( { postId } ) {
 						'The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor.',
 						'tranzly'
 					) }{ ' ' }
-					<a href={ data.edit }>{ __( 'Open the editor', 'tranzly' ) }</a>
+					<a href={ data.edit }>
+						{ __( 'Open the editor', 'tranzly' ) }
+					</a>
 				</Notice>
 			) }
 			<table className="widefat tranzly-compare__table">
@@ -134,7 +136,10 @@ function Compare( { postId } ) {
 									disabled={ null === segment.target }
 									value={ draft[ segment.key ] ?? '' }
 									onChange={ ( value ) =>
-										setDraft( { ...draft, [ segment.key ]: value } )
+										setDraft( {
+											...draft,
+											[ segment.key ]: value,
+										} )
 									}
 								/>
 							</td>
@@ -161,7 +166,9 @@ function Compare( { postId } ) {
 				>
 					{ __( 'Save changes', 'tranzly' ) }
 				</Button>{ ' ' }
-				<a href={ data.edit }>{ __( 'Open in the editor', 'tranzly' ) }</a>
+				<a href={ data.edit }>
+					{ __( 'Open in the editor', 'tranzly' ) }
+				</a>
 			</p>
 		</div>
 	);

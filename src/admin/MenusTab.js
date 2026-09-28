@@ -150,7 +150,10 @@ export default function MenusTab( { pro } ) {
 
 	const menuOptions = [
 		{ value: '0', label: __( 'The same menu, translated', 'tranzly' ) },
-		...menus.menus.map( ( m ) => ( { value: String( m.id ), label: m.name } ) ),
+		...menus.menus.map( ( m ) => ( {
+			value: String( m.id ),
+			label: m.name,
+		} ) ),
 	];
 
 	return (
@@ -166,7 +169,10 @@ export default function MenusTab( { pro } ) {
 			<Panel>
 				{ menus.locations.length > 0 && (
 					<PanelBody
-						title={ __( 'A separate menu per language', 'tranzly' ) }
+						title={ __(
+							'A separate menu per language',
+							'tranzly'
+						) }
 					>
 						<p>
 							{ __(
@@ -232,11 +238,11 @@ export default function MenusTab( { pro } ) {
 									? __(
 											'Templates, headers, footers and patterns',
 											'tranzly'
-									  )
+										)
 									: __(
 											'Templates, headers, footers and patterns (Pro)',
 											'tranzly'
-									  ),
+										),
 								disabled: ! pro,
 							},
 						] }
@@ -254,7 +260,12 @@ export default function MenusTab( { pro } ) {
 					</p>
 					{ ! strings && <Spinner /> }
 					{ strings && ! strings.length && (
-						<p>{ __( 'There is no text to translate here.', 'tranzly' ) }</p>
+						<p>
+							{ __(
+								'There is no text to translate here.',
+								'tranzly'
+							) }
+						</p>
 					) }
 					{ strings &&
 						strings.map( ( row ) => (
@@ -268,7 +279,7 @@ export default function MenusTab( { pro } ) {
 										? __(
 												'Corrected by a person, protected',
 												'tranzly'
-										  )
+											)
 										: undefined
 								}
 								value={ draft[ row.key ] || '' }
@@ -282,8 +293,9 @@ export default function MenusTab( { pro } ) {
 							variant="secondary"
 							disabled={
 								busy ||
-								! Object.keys( changedStrings( strings, draft ) )
-									.length
+								! Object.keys(
+									changedStrings( strings, draft )
+								).length
 							}
 							onClick={ saveStrings }
 						>
