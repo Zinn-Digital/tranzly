@@ -442,7 +442,7 @@ msgstr "AI is nog niet ingesteld. Voeg een sleutel toe voor een AI-provider in d
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Er is geen model geselecteerd voor deze taak. Kies er een in de AI-instellingen."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Die AI-provider wordt niet ondersteund door deze versie van de plug-in."
 
@@ -633,24 +633,25 @@ msgstr "Limieten en rechten opslaan"
 msgid "Limits and permissions saved."
 msgstr "Limieten en machtigingen opgeslagen."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Die taal is geen van de talen van deze site."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Een vertaling moet hetzelfde soort inhoud zijn als het origineel."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Kies een van de andere talen van de website."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Voor dit scherm is JavaScript vereist."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Kies een taal"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "De toon wordt per sitetaal ingesteld: de standaardformaliteit, min of meer, plus optionele instructies."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "De waarde voor %s behoort niet tot de toegestane keuzes."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "U bent niet gemachtigd om die vertaling te wijzigen."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "De groep van dit item heeft al een %1$s-versie (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Een item kan niet zijn eigen vertaling zijn."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Dat item is al een vertaling van iets anders. Ontkoppel het eerst."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "De vertalingslink kon niet worden opgeslagen."
 
@@ -2926,6 +2931,7 @@ msgstr "Voor deze plug-in is een nieuwere versie van PHP vereist."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Nee"
 
@@ -4187,6 +4193,7 @@ msgstr "Tijdstempel"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Titel"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s geleden"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Taalsuggestie"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Deze pagina is ook beschikbaar in %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Lees het in %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Nee, bedankt"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Kies hoe talen in uw URL's worden weergegeven: als een map, een subdomein, een apart domein of een queryparameter."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Subdomeinen en afzonderlijke domeinen per taal maken deel uit van Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "De taalmappen moeten een lijst zijn."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" kan geen taalmap zijn. Gebruik 2 tot 12 kleine letters, cijfers of koppeltekens, uniek voor elke taal, en geen woord dat WordPress al gebruikt."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "De domeinen moeten een lijst zijn."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" is geen domeinnaam, zoals example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Elke taal heeft zijn eigen domein nodig."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "De vertaalde adreswoorden moeten een lijst zijn."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "De vertaalde adreswoorden moeten per taal worden vermeld."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" kan niet worden gebruikt in een adres. Gebruik kleine letters, cijfers en koppeltekens."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Deze instelling is aan of uit."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Het verbergen van niet-vertaalde pagina's voor zoekmachines maakt deel uit van Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Taalwisselaar"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Talen"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Talen (naast elkaar)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Toevoegen aan menu"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Op uw site toont dit item de talen van de site, die elk linken naar de huidige pagina in die taal."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Links naar deze pagina in elk van uw talen."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Taalnaam"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Taalcode"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Naam en code"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Ontwerp"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Elke taal weergeven als"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Toon vlaggen (een vlag is een land, geen taal)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Lijst"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Labels"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Knoppen"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Vervolgkeuzemenu"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Taalcodes"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Vlaggen"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Huidige taal opnemen"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Verberg talen waarin deze pagina niet is vertaald"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Verticaal stapelen"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Toegankelijkheidslabel"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Tekst"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Achtergrond"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Huidige taaltekst"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Huidige taalachtergrond"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Rand"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Hoekradius"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Ruimte tussen talen"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Tekengrootte"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Wisselaar"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Ontworpen door Neil Lock, CEO van Zinn Digital® Ltd"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital®-website"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Instellingen opgeslagen."
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "Wat is er misgegaan"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Los het op"
 
@@ -5308,31 +5578,312 @@ msgstr "Opnieuw proberen"
 msgid "Translate by hand"
 msgstr "Handmatig vertalen"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Talen en instellingen"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Engines"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Vertalingenbeheertaken"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Adressen en SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Taalschakelaars"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO-audit"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Geen metabeschrijving"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Een taalversie die bezoekers niet kunnen openen (concept, privé of met een wachtwoord)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Het adres gebruikt nog steeds de oorspronkelijke woorden"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Behoudt nog steeds de oorspronkelijke tekst"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "De meertalige SEO-audit maakt deel uit van Tranzly Pro. Hiermee worden ontbrekende metabeschrijvingen, kapotte hreflang, niet-vertaalde adressen en dubbele inhoud per taal opgespoord."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Te controleren taal"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Voer de controle uit"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Controleer de volgende pagina's"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d pagina's gecontroleerd, %2$d problemen gevonden."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "De hele taal is gecontroleerd."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Pagina"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Probleem"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Bewerken"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Zwevende wisselaar"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Een kleine knop in een hoek van elke pagina, op elk thema, zonder instellingen."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Waar"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Uit"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Onderste hoek, uiteinde"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Onderste hoek, startzijde"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Bovenste hoek, uiteinde"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Bovenste hoek, startzijde"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Inhoudswisselaar"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Voeg een wisselfunctie toe aan elk bericht en elke pagina"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Vóór de inhoud"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Na de inhoud"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Andere manieren om een schakelaar toe te voegen"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Blokbewerker en site-editor: het blok 'Taalwisselaar', met vijf ontwerpen."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: het element \"Taalschakelaar\"."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Menu's: Weergave → Menu's → Vak \"Taalschakelaar\"."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Zijbalken: de widget \"Taalwisselaar\"."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Overal ergens anders de shortcode:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor en Bricks: de widget 'Taalwisselaar' in elke builder."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor- en Bricks-widgets maken deel uit van Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Opslaan"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Een map per taal: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Een subdomein per taal: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Een apart domein per taal: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Een queryparameter: example.com/?lang=de (oudere sites)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Categorie"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Label"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Product"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Productcategorie"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Product-tag"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Opgeslagen. Uw taaladressen zijn gewijzigd zoals hieronder weergegeven."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Taal in het adres"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Hoe bezoekers en zoekmachines elke taal bereiken"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Adreswoord voor %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "De standaardtaal heeft geen woord in haar adressen."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Domein voor %s (optioneel)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Wijs het domein eerst naar deze site. Een taal zonder domein gebruikt een map op uw hoofddomein."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Waar elke taal zich nu bevindt"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Vertaalde adreswoorden"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Pagina- en berichtadressen worden afgeleid van hun vertaalde titels. Hier vertaalt u de vaste woorden, dus /de/kategorie/ vervangt /de/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (nu „%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Zoekmachines en bezoekers"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Bied bezoekers hun eigen taal aan met een kleine banner (nooit een doorverwijzing)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Niet-vertaalde pagina's verbergen voor zoekmachines (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Een vertaling die nog de originele tekst bevat, wordt uit de zoekresultaten gehouden totdat deze is vertaald."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Onderdeel van Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly voegt hreflang-links (met x-default), de paginataal en -richting toe, en elke taal aan uw sitemap:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Samenwerken met: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Elk adreswoord bestaat uit 2 tot 12 kleine letters, cijfers of koppeltekens."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Voeg een tweede taal toe onder Tranzly in het beheermenu en de schakelaar verschijnt hier."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Wisselaar"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Standaard uitgeschakeld: een vlag is een land, geen taal."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Toegankelijkheidslabel"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Wat schermlezers voorlezen, bijvoorbeeld 'Kies een taal'."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Kleuren"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Taalwisselaar"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Links naar deze pagina in elke taal van de website. Dit geeft niets weer totdat er twee of meer talen worden vermeld."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Taal"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "omschakelaar"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "vertaling"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Laat bezoekers deze pagina in een andere taal van u lezen: een lijst, pillen, knoppen, een dropdown of taalcode, met optionele vlaggen."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "meertalig"

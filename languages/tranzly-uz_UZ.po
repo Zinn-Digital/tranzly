@@ -442,7 +442,7 @@ msgstr "SUN'iy intellekt hali sozlangan emas. AI sozlamalarida sun'iy intellekt 
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Bu vazifa uchun model tanlanmagan. AI sozlamalaridan birini tanlang."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Bu sun'iy intellekt provayderi plaginning ushbu versiyasi tomonidan qo'llab-quvvatlanmaydi."
 
@@ -633,24 +633,25 @@ msgstr "Cheklovlar va ruxsatlarni saqlash"
 msgid "Limits and permissions saved."
 msgstr "Chegaralar va ruxsatlar saqlandi."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Bu til ushbu sayt tillaridan biri emas."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Tarjima asl nusxa bilan bir xil turdagi kontent bo'lishi kerak."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Saytning boshqa tillaridan birini tanlang."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Ushbu ekran uchun JavaScript talab qilinadi."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Tilni tanlang"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Ohang har bir sayt tili uchun o‘rnatiladi: odatiy rasmiylik darajasi, ko‘proq yoki kamroq, shuningdek qo‘shimcha ko‘rsatmalar."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s uchun qiymat ruxsat etilgan variantlardan biri emas."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Bu tarjimani o'zgartirishga ruxsat berilmagan."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Bu element guruhining allaqachon %1$s versiyasi mavjud (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Element o'zining tarjimasi bo'la olmaydi."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Bu element allaqachon boshqa narsaning tarjimasi hisoblanadi. Avval uni bog'lanishdan chiqaring."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Tarjima havolasini saqlab bo'lmadi."
 
@@ -2926,6 +2931,7 @@ msgstr "Bu plagin PHP'ning yangiroq versiyasini talab qiladi."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Yoʻq"
 
@@ -4187,6 +4193,7 @@ msgstr "Vaqt belgisi"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Sarlavha"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s oldin"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Til taklifi"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Bu sahifa shuningdek %s tilida ham mavjud."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "%s da oʻqish"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Yo‘q, rahmat"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Tillarning manzillaringizda qanday ko‘rinishini tanlang: papka, subdomen, alohida domen yoki so‘rov parametri."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Har bir til uchun subdomain va alohida domenlar Tranzly Pro tarkibiga kiradi."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Til papkalari ro'yxat bo'lishi kerak."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" til papkasi bo‘lishi mumkin emas. Har bir til uchun har xil bo‘lgan hamda WordPress allaqachon ishlatmaydigan 2 dan 12 gacha kichik harflar, raqamlar yoki defislardan foydalaning."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Domenlar roʻyxat boʻlishi kerak."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" domen nomi emas, masalan, example.de kabi."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Har bir til o'z domeniga ega bo'lishi kerak."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Tarjima qilingan manzil so'zlari ro'yxat bo'lishi kerak."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Tarjima qilingan manzil so'zlari har bir til bo'yicha ko'rsatilishi kerak."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" manzil uchun ishlatilishi mumkin emas. Kichik harflar, raqamlar va defislardan foydalaning."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Bu sozlama yoqilgan yoki oʻchirilgan."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Qidiruv tizimlaridan tarjima qilinmagan sahifalarni yashirish Tranzly Pro tarkibiga kiradi."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Tilni o'zgartirgich"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Tillar"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Tillar (yonma-yon)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Menuga qoʻshish"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Saytingizda bu element sayt tillarini ko‘rsatadi, ularning har biri joriy sahifaga shu tilda havola beradi."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Har bir tilingizdagi ushbu sahifaga havolalar."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Til nomi"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Til kodi"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Nomi va kodi"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Dizayn"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Har bir tilni quyidagicha ko'rsatish:"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Bayroqlarni ko'rsatish (bayroq tilni emas, mamlakatni bildiradi)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Ro'yxat"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Tugmalar"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Tugmalar"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Ochiladigan menyu"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Til kodlari"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Bayroqchalar"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Joriy tilni kiritish"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Ushbu sahifa tarjima qilinmagan tillarni yashirish"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Vertikal ravishda joylashtirish"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Ochiq yorliq"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Matn"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Fon"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Joriy til matni"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Joriy til muhiti"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Chegara"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Burchak radiusi"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Tillклар orasidagi bo'shliq"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Matn o'lchami"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Almashtirgich"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd kompaniyasi bosh direktori Neil Lock tomonidan yaratilgan"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® veb-sayti"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Sozlamalar saqlandi."
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "Nima xato ketdi"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Tuzatish"
 
@@ -5308,31 +5578,312 @@ msgstr "Qaytadan urinish"
 msgid "Translate by hand"
 msgstr "Qo'lda tarjima qilish"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Tillar va sozlamalar"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Dvigatellar"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Tarjima vazifalari"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Manzil va SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Tilni o'zgartirgichlar"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO audit"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Meta-tavsif yo‘q"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Tashrif buyuruvchilar ochib bo'lmaydigan til versiyasi (qoralama, shaxsiy yoki parol bilan himoyalangan)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Manzil hali ham asl so‘zlardan foydalanmoqda"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Asl matnni saqlab qoladi"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Ko‘p tilli SEO audit Tranzly Pro tarkibiga kiradi. U har bir til bo‘yicha yetishmayotgan meta tavsiflarini, buzilgan hreflang’larni, tarjima qilinmagan manzillarni va takroriy kontentni aniqlaydi."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Tekshiriladigan til"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Auditni bajarish"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Keyingi sahifalarni tekshiring"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d ta sahifa tekshirildi, %2$d ta muammo topildi."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "Butun til tekshirib chiqildi."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Sahifa"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Muammo"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Suhbatni boshqaruvchi o‘tish tugmasi"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Har qanday mavzuda, sozlashlarsiz, har bir sahinaning burchagida kichik tugma."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Qayerda"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "O‘chiq"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Pastki burchak, oxirgi tomon"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Pastqi burchak, boshlanish tomoni"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Yuqori burchak, oxirgi tomon"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Yuqori burchak, boshlanish tomoni"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Kontent atrofidagi o'tkazgich"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Har bir post va sahifaga almashtirgich qo'shish"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Kontentdan oldin"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Kontentdan keyin"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Boshqa almashtirgich qo'shish usullari"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Blok muharriri va sayt muharriri: beshta dizaynga ega \"Tilni almashtirgich\" bloki."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: “Language switcher” elementi."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Menyular: Tashqi ko‘rinish → Menyular → “Tilni o‘zgartirgich” katakchasi."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Yon panellar: “Tilni almashtirgich” vidjeti."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Boshqa istalgan joyda, qisqa kod:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor va Bricks: har bir konstruktordagi “Tilni almashtirgich” vidjeti."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor va Bricks vidjetlari Tranzly Pro tarkibiga kiradi."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Saqlash"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Har bir til uchun bitta papka: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Har bir til uchun bitta kichik domen: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Har bir til uchun alohida domen: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "So'rov parametri: example.com/?lang=de (eski saytlar)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Kategoriya"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Teg"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Mahsulot"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Mahsulot toifasi"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Mahsulot tegi"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Saqlandi. Til manzillaringiz quyida ko'rsatilganidek o'zgartirildi."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Manzildagi til"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Tashrif buyuruvchilar va qidiruv tizimlari har bir tilga qanday erishishi"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s uchun manzil so'zi"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "Standart tilda manzillarida hech qanday so‘z yo‘q."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s uchun domen (ixtiyoriy)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Avval domenni ushbu saytga yo'naltiring. Domensiz til asosiy domeningizdagi papkadan foydalanadi."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Har bir til hozir qayerda yashaydi"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Tarjima qilingan manzil so'zlari"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Sahifa va post manzillari ularning tarjima qilingan savarlaridan kelib chiqadi. Bu yerda siz o'zgarmas so'zlarni tarjima qilasiz, shuning uchun /de/category/ o'rniga /de/kategorie/ ishlatiladi."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (hozirda “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Qidiruv tizimlari va tashrif buyuruvchilar"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Tashrif buyuruvchilarga kichik banner yordamida oʻz tillarini taklif qiling (hech qachon yoʻnaltirish emas)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Qidiruv tizimlaridan tarjima qilinmagan sahifalarni yashirish (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Asl matnni o'z ichida saqlab turgan tarjima tarjima qilinmaguncha qidiruv natijalaridan chiqarib tashlanadi."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly Pro'ning bir qismi."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly hreflang havolalarini (x-default bilan), sahifa tili va yo‘nalishini hamda har bir tilni sayt xaritangizga qo‘shadi:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Birgalikda ishlayotgan hamkor: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Har bir manzil soʻzi 2 tadan 12 tagacha kichik harflar, raqamlar yoki defislardan iborat boʻlishi kerak."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Boshqaruv menyusida Tranzly ostida ikkinchi tilni qo'shing va o'tkazgich shu yerda paydo bo'ladi."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Almashtirgich"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Standart bo'yicha o'chirilgan: bayroq bu til emas, balki mamlakat."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Ochiq yorliq"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Ekran o'quvchilari nima e'lon qilishi, masalan, \"Tilni tanlang\"."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Rangлар"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Tilni o'zgartirgich"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Saytning har bir tilidagi ushbu sahifaga havolalar. Ikki yoki undan ortiq tillar ko'rsatilmaguncha u hech narsa ko'rsatmaydi."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Til"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "almashtirgich"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "tarjima"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Tashrif buyuruvchilarga bu sahifani boshqa tilingizda o‘qish imkonini beradi: ro‘yxat, tugmalar, ochiladigan menyu yoki til kodlari, ixtiyoriy ravishda bayroqlar bilan."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "ko'p tilli"

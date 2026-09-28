@@ -128,6 +128,13 @@ final class Languages {
 			}
 		}
 
+		// ⭐ With language folders, subdomains or domains (T4) the ADDRESS decides: no folder is the
+		// default language, whatever a cookie or a stray ?lang= says, or one URL would show two
+		// languages to a search engine.
+		if ( 'query' !== Seo\Router::mode() ) {
+			return Seo\Router::url_language() ?? self::default_code();
+		}
+
 		$var = self::query_var();
 
 		$from_query = (string) get_query_var( $var, '' );
@@ -166,6 +173,9 @@ final class Languages {
 	 * @return string
 	 */
 	public static function url( string $code, ?string $url = null ): string {
+		if ( 'query' !== Seo\Router::mode() ) {
+			return null === $url ? Seo\Router::switch_url( $code ) : Seo\Router::language_url( $url, $code );
+		}
 		$resolved = self::resolve( $code );
 		$var      = self::query_var();
 		$url      = null === $url ? add_query_arg( array() ) : $url;

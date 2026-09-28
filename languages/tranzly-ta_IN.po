@@ -442,7 +442,7 @@ msgstr "செயற்கை நுண்ணறிவு இன்னும் 
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "இந்தப் பணிக்கு எந்த மாதிரியும் தேர்ந்தெடுக்கப்படவில்லை. AI அமைப்புகளில் ஒன்றை எடுங்கள்."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "இந்த செருகுநிரலின் பதிப்பால் அந்த AI வழங்குநர் ஆதரிக்கப்படவில்லை."
 
@@ -633,24 +633,25 @@ msgstr "வரம்புகள் மற்றும் அனுமதிக�
 msgid "Limits and permissions saved."
 msgstr "வரம்புகளும் அனுமதிகளும் சேமிக்கப்பட்டன."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "அந்த மொழி இந்தத் தளத்தின் மொழிகளில் ஒன்றாக இல்லை."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "ஒரு மொழிபெயர்ப்பு என்பது மூலத்தைப் போன்றே அதே வகையான உள்ளடக்கமாக இருக்க வேண்டும்."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "தளத்தின் பிற மொழிகளில் ஒன்றைத் தேர்ந்தெடுக்கவும்."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "இந்தத் திரைக்கு ஜாவாஸ்கிரிப்ட் (JavaScript) தேவைப்படுகிறது."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "ஒரு மொழியைத் தேர்ந்தெடுக்கவும்"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "ஒவ்வொரு தளத்தின் மொழிக்கும் ஏற்ப தொனி அமைக்கப்படுகிறது: இயல்புநிலை முறைமை, கூடுதலாகவோ அல்லது குறைவாகவோ, மேலும் விருப்பமான வழிமுறைகளும்."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s க்கான மதிப்பு அனுமதிக்கப்பட்ட விருப்பங்களில் ஒன்றாக இல்லை."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "அந்த மொழிபெயர்ப்பை மாற்ற உங்களுக்கு அனுமதி இல்லை."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "இந்த உருப்படியின் குழுவில் ஏற்கனவே ஒரு %1$s பதிப்பு (#%2$d) உள்ளது."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "ஒரு பொருள் அதன் சொந்த மொழிபெயர்ப்பாக இருக்க முடியாது."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "அந்தப் பொருள் ஏற்கனவே வேறு ஒன்றின் மொழிபெயர்ப்பாக உள்ளது. முதலில் அதை இணைப்பிலிருந்து விலக்கவும்."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "மொழிபெயர்ப்பு இணைப்பை சேமிக்க முடியவில்லை."
 
@@ -2926,6 +2931,7 @@ msgstr "இந்த செருகுப்புசுக்கு PHP-யி
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "இல்லை"
 
@@ -4187,6 +4193,7 @@ msgstr "நேர முத்திரை"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "தலைப்பு"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s முன்"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "மொழி பரிந்துரை"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "இந்தப் பக்கம் %s மொழியிலும் கிடைக்கிறது."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "%s இல் படிக்கவும்"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "நன்றி, வேண்டாம்"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "உங்கள் முகவரிகளில் மொழிகள் எவ்வாறு தோன்ற வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்: ஒரு கோப்புறை, ஒரு துணை டொமைன், ஒரு தனி டொமைன் அல்லது வினவல் அளவுரு."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "மொழிக்கு ஒரு துணை டொமைன் மற்றும் தனிப்பட்ட டொமைன்கள் Tranzly Pro-வின் பகுதியாகும்."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "மொழி கோப்புறைகள் ஒரு பட்டியலாக இருக்க வேண்டும்."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" ஒரு மொழி கோப்புறையாக இருக்க முடியாது. ஒவ்வொரு மொழிக்கும் தனித்துவமானதாகவும், WordPress ஏற்கனவே பயன்படுத்தாத வார்த்தையாகவும் இருக்கும் வகையில், 2 முதல் 12 சிறிய எழுத்துகள், இலக்கங்கள் அல்லது ஹைபன்களைப் பயன்படுத்தவும்."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "டொமைன்கள் ஒரு பட்டியலாக இருக்க வேண்டும்."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" என்பது example.de போன்ற டொமைன் பெயர் அல்ல."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "ஒவ்வொரு மொழிக்கும் தனி டொமைன் தேவை."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "மொழிபெயர்க்கப்பட்ட முகவரி சொற்கள் ஒரு பட்டியலாக இருக்க வேண்டும்."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "மொழிபெயர்க்கப்பட்ட முகவரி சொற்கள் ஒவ்வொரு மொழிக்கும் தனித்தனியாகப் பட்டியலிடப்பட வேண்டும்."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "முகவரியில் \"%s\" பயன்படுத்த முடியாது. சிறிய எழுத்துகள், எண்கள் மற்றும் ஹைபன்களைப் பயன்படுத்தவும்."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "இந்த அமைப்பு ஆன் அல்லது ஆஃப் நிலையில் உள்ளது."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "தேடுபொறிகளிலிருந்து மொழிபெயர்க்கப்படாத பக்கங்களை மறைப்பது Tranzly Pro-வின் ஒரு பகுதியாகும்."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "மொழி மாற்றி"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "மொழிகள்"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "மொழிகள் (பக்கத்து பக்கத்தில்)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "மெனுவில் சேர்"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "உங்கள் தளத்தில், இந்த உருப்படி தளத்தின் மொழிகளைக் காட்டுகிறது, ஒவ்வொன்றும் அந்த மொழியில் தற்போதைய பக்கத்திற்கு இணைக்கிறது."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "உங்கள் ஒவ்வொரு மொழியிலும் இந்தப் பக்கத்திற்கான இணைப்புகள்."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "மொழிப்பெயர்"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "மொழி குறியீடு"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "பெயர் மற்றும் குறியீடு"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "வடிவமைப்பு"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "ஒவ்வொரு மொழியையும் காட்டு:"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "கொடிகளைக் காட்டுங்கள் (கொடி என்பது ஒரு நாடு, மொழி அல்ல)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "பட்டியலிடு"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "பில்ஸ்கள்"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "பொத்தான்கள்"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "கீழிறங்கும் பட்டியல்"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "மொழி குறியீடுகள்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "கொடிகள்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "தற்போதைய மொழியையும் சேர்க்கவும்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "இந்தப் பக்கம் மொழிபெயர்க்கப்படாத மொழிகளை மறைக்கவும்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "செங்குத்தாக அடுக்கவும்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "அணுகக்கூடிய லேபிள்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "உரை"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "பின்னணி"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "தற்போதைய மொழி உரை"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "தற்போதைய மொழி பின்னணி"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "எல்லை"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "மூலை ஆரம்"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "மொழிகளுக்கு இடையேயான இடைவெளி"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "உரையின் அளவு"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "சுவிட்சர்"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4958,6 +5226,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® வலைத்தளம்"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "அமைப்புகள் சேமிக்கப்பட்டன."
 
@@ -5290,6 +5559,7 @@ msgid "What went wrong"
 msgstr "என்ன தவறு நடந்தது"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "சரிசெய்"
 
@@ -5309,31 +5579,312 @@ msgstr "மீண்டும் முயற்சிக்கவும்"
 msgid "Translate by hand"
 msgstr "கையால் மொழிபெயர்"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "மொழிகள் மற்றும் அமைப்புகள்"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "இயந்திரங்கள்"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "மொழிபெயர்ப்புப் பணிகள்"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "முகவரிகள் மற்றும் எஸ்சிஓ (SEO)"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "மொழி மாற்றிகள்"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO தணிக்கை"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "எந்த மெட்டா விளக்கமும் இல்லை"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "பார்வையாளர்கள் திறக்க முடியாத மொழிப் பதிப்பு (வரைவு, தனிப்பட்டது அல்லது கடவுச்சொல்)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "முகவரி இன்னும் அசல் வார்த்தைகளைப் பயன்படுத்துகிறது"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "அசல் உரை இன்னும் உள்ளது"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "பன்மொழி எஸ்சிஓ தணிக்கையானது Tranzly Pro-இன் ஒரு பகுதியாகும். இது ஒவ்வொரு மொழிக்கும் விடுபட்ட மெட்டா விளக்கங்கள், உடைந்த hreflang, மொழிபெயர்க்கப்படாத முகவரிகள் மற்றும் நகல் உள்ளடக்கங்களைக் கண்டறிகிறது."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "தணிக்கை செய்ய வேண்டிய மொழி"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "தணிக்கையை இயக்கவும்"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "அடுத்த பக்கங்களைச் சரிபார்க்கவும்"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d பக்கங்கள் சரிபார்க்கப்பட்டன, %2$d சிக்கல்கள் கண்டறியப்பட்டன."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "மொழிய முழுமையாகச் சரிபார்க்கப்பட்டுள்ளது."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "பக்கம்"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "சிக்கல்"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "திருத்து"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "மிதக்கும் மாற்றி"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "எந்தவொரு தீமிலும், எந்தவொரு அமைப்பும் இல்லாமல், ஒவ்வொரு பக்கத்தின் மூலையிலும் ஒரு சிறிய பொத்தான்."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "எங்கு"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "செயலிழக்கப்பட்டது"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "கீழ் மூலை, இறுதிப் பக்கம்"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "கீழ் மூலை, தொடக்கப் பக்கம்"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "மேல் மூலை, இறுதிப் பகுதி"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "மேல் மூலை, தொடக்கப் பக்கம்"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "உள்ளடக்கத்தைச் சுற்றியுள்ள ஸ்விட்சர்"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "ஒவ்வொரு பதிவிற்கும் பக்கத்திற்கும் ஸ்விட்சரைச் சேர்க்கவும்"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "உள்ளடக்கத்திற்கு முன்"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "உள்ளடக்கத்திற்குப் பிறகு"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "சுவிட்சரைச் சேர்ப்பதற்கான பிற வழிகள்"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "பிளாக் எடிட்டர் மற்றும் தளம் எடிட்டர்: ஐந்து வடிவமைப்புகளுடன் கூடிய “மொழி மாற்றி” பிளாக்."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: “மொழி மாற்றி” (Language switcher) அம்சம்."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "மெனுக்கள்: தோற்றம் → மெனுக்கள் → “Language switcher” பெட்டி."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "பக்கப்பட்டைகள் (Sidebars): “மொழி மாற்றி” (Language switcher) விட்ஜெட்."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "வேறு எங்காவது, குறுக்குக் குறியீடு:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "எலிமெண்டோர் மற்றும் பிரிக்ஸ்: ஒவ்வொரு பில்டரிலும் உள்ள “Language switcher” விட்ஜெட்."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor மற்றும் Bricks விட்செட்டுகள் Tranzly Pro இன் பகுதியாகும்."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "சேமி"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(ப்ரோ)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "ஒவ்வொரு மொழிக்கும் ஒரு கோப்புறை: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "ஒவ்வொரு மொழிக்கும் ஒரு உபடொமைன்: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "ஒவ்வொரு மொழிக்கும் தனித்த டொமைன்: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "வினவல் அளவுறு (query parameter): example.com/?lang=de (பழைய தளங்கள்)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "வகை"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "டேக்"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "தயாரிப்பு"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "தயாரிப்பு வகை"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "தயாரிப்பு குறிச்சொல்"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "சேமிக்கப்பட்டது. கீழே காட்டப்பட்டுள்ளவாறு உங்கள் மொழி முகவரிகள் மாற்றப்பட்டுள்ளன."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "முகவரியில் மொழி"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "பார்வையாளர்களும் தேடுபொறிகளும் ஒவ்வொரு மொழியையும் எவ்வாறு அடைகின்றன"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s க்கான முகவரி சொல்"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "இயல்புநிலை மொழியில் அதன் முகவரிகளில் எந்தச் சொல்லும் இல்லை."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s க்கான டொமைன் (விருப்பத்தேர்வு)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "முதலில் டொமைனை இந்தத் தளத்திற்குச் சுட்டிக்காட்டவும். டொமைன் இல்லாத மொழி உங்கள் முதன்மை டொமைனில் உள்ள ஒரு கோப்புறையைப் பயன்படுத்துகிறது."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "ஒவ்வொரு மொழியும் இப்போது எங்கு வாழ்கிறது"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "மொழிபெயர்க்கப்பட்ட முகவரி சொற்கள்"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "பக்க மற்றும் இடுகை முகவரிகள் அவற்றின் மொழிபெயர்க்கப்பட்ட தலைப்புகளிலிருந்து பெறப்படுகின்றன. இங்கே நீங்கள் நிலையான சொற்களை மொழிபெயர்க்கிறீர்கள், எனவே /de/category/-க்கு பதிலாக /de/kategorie/ வரும்."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (இப்போது “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "தேடுபொறிகள் மற்றும் பார்வையாளர்கள்"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "வருகையாளர்களுக்கு ஒரு சிறிய பதாகை மூலம் அவர்களின் சொந்த மொழியை வழங்குங்கள் (ஒருபோதும் வழிமாற்றம் செய்ய வேண்டாம்)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "மொழிபெயர்க்கப்படாத பக்கங்களை தேடுபொறிகளிலிருந்து மறைக்கவும் (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "அசல் உரையைக் கொண்டுள்ள மொழிபெயர்ப்பு, மொழிபெயர்க்கப்படும் வரை தேடல் முடிவுகளில் இருந்து விலக்கி வைக்கப்படும்."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly Pro இன் பகுதி."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly உங்கள் தளவரைபட்டுக்கு hreflang இணைப்புகளை (x-default உடன்), பக்க மொழி மற்றும் திசையை, மற்றும் ஒவ்வொரு மொழியையும் சேர்க்கிறது:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "இதனுடன் இணைந்து செயல்படுகிறது: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "ஒவ்வொரு முகவரிச் சொல்லும் 2 முதல் 12 சிறிய எழுத்துகள், இலக்கங்கள் அல்லது ஹைபன்களைக் கொண்டிருக்க வேண்டும்."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "நிர்வாக மெனுவில் Tranzly இன் கீழ் இரண்டாவது மொழியைச் சேர்க்கவும், மொழிமாற்றி இங்கு தோன்றும்."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "சுவிட்சர்"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "இயல்புநிலையாக முடக்கப்பட்டுள்ளது: கொடி என்பது ஒரு நாடு, மொழி அல்ல."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "அணுகக்கூடிய லேபிள்"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "திரை ரீடர்கள் என்ன அறிவிக்கின்றன, உதாரணமாக “ஒரு மொழியைத் தேர்ந்தெடுக்கவும்”."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "நிறங்கள்"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "மொழி மாற்றி"
@@ -5344,16 +5895,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "தளத்தின் ஒவ்வொரு மொழியிலும் இந்தப் பக்கத்திற்கான இணைப்புகள். இரண்டு அல்லது அதற்கு மேற்பட்ட மொழிகள் பட்டியலிடப்படும் வரை இது எதையும் வழங்காது."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "மொழி"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "மாற்றி"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "மொழிபெயர்ப்பு"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "இந்தப் பக்கத்தை உங்கள் மற்ற மொழிகளில் ஒன்றில் பார்வையாளர்கள் படிக்க அனுமதிக்கவும்: விருப்பமான கொடிகளுடன் கூடிய ஒரு பட்டியல், பில்கள், பொத்தான்கள், கீழிறங்கும் மெனு அல்லது மொழி குறியீடுகள்."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "பன்மொழி"

@@ -27,6 +27,17 @@ require_once __DIR__ . '/class-licensing.php';
 require_once __DIR__ . '/class-freemius-i18n.php';
 require_once __DIR__ . '/class-rest.php';
 require_once __DIR__ . '/class-admin.php';
+require_once __DIR__ . '/seo/class-url-settings.php';
+require_once __DIR__ . '/seo/class-bases.php';
+require_once __DIR__ . '/seo/class-router.php';
+require_once __DIR__ . '/seo/class-query-filter.php';
+require_once __DIR__ . '/seo/class-head.php';
+require_once __DIR__ . '/seo/class-sitemaps.php';
+require_once __DIR__ . '/seo/class-suggest.php';
+require_once __DIR__ . '/seo/class-primer.php';
+require_once __DIR__ . '/seo/class-seo.php';
+require_once __DIR__ . '/switcher/class-switcher.php';
+require_once __DIR__ . '/switcher/class-places.php';
 require_once __DIR__ . '/class-plugin.php';
 
 \ZinnDigital\Tranzly\Plugin::boot();

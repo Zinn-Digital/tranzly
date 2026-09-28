@@ -442,7 +442,7 @@ msgstr "AI सेट अप नहीं है। AI सेटिंग्स �
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "इस कार्य के लिए कोई मॉडल नहीं चुना गया है। AI सेटिंग में एक मॉडल चुनें।"
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "प्लगइन का यह संस्करण उस एआई प्रदाता का समर्थन नहीं करता है।"
 
@@ -633,24 +633,25 @@ msgstr "सीमाएँ और अनुमतियाँ सहेजें
 msgid "Limits and permissions saved."
 msgstr "सीमाएँ और अनुमतियाँ सहेजी गईं।"
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "वह भाषा इस साइट की भाषाओं में से एक नहीं है।"
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "एक अनुवाद मूल सामग्री के ही प्रकार का होना चाहिए।"
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "साइट की अन्य भाषाओं में से एक चुनें।"
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "इस स्क्रीन के लिए जावास्क्रिप्ट की आवश्यकता है।"
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "भाषा चुनें"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "प्रत्येक साइट की भाषा के लिए टोन सेट किया जाता है: औपचारिकता डिफ़ॉल्ट, कम या ज्यादा, साथ ही वैकल्पिक निर्देश।"
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s के लिए मान स्वीकृत विकल्पों में से एक नहीं है।"
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "आपको वह अनुवाद बदलने की अनुमति नहीं है।"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "इस आइटम के समूह में पहले से ही %1$s संस्करण (#%2$d) मौजूद है।"
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "एक वस्तु स्वयं अपनी अनुवाद नहीं हो सकती।"
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "वह आइटम पहले से ही किसी अन्य चीज़ का अनुवाद है। पहले उसे अनलिंक करें।"
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "अनुवाद लिंक सहेजा नहीं जा सका।"
 
@@ -2926,6 +2931,7 @@ msgstr "इस प्लगइन को PHP के एक नए संस्�
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "नहीं"
 
@@ -4187,6 +4193,7 @@ msgstr "समय-चिह्न"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "शीर्षक"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s पहले"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "भाषा सुझाव"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "यह पृष्ठ %s में भी उपलब्ध है।"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "इसे %s में पढ़ें"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "नहीं, धन्यवाद"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "चुनें कि आपके पतों में भाषाएँ कैसे दिखाई देती हैं: एक फ़ोल्डर, एक सबडोमेन, एक अलग डोमेन या एक क्वेरी पैरामीटर।"
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "प्रत्येक भाषा के लिए सबडोमेन और अलग डोमेन Tranzly Pro का हिस्सा हैं।"
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "भाषा फ़ोल्डर एक सूची होने चाहिए।"
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" भाषा फ़ोल्डर नहीं हो सकता। 2 से 12 छोटे अक्षर, अंक या हाइफ़न का उपयोग करें, जो प्रत्येक भाषा के लिए अलग हों, और कोई ऐसा शब्द न हो जिसका उपयोग WordPress पहले से करता हो।"
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "डोमेन एक सूची होनी चाहिए।"
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" एक डोमेन नाम नहीं है, जैसे कि example.de।"
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "प्रत्येक भाषा के लिए अपना स्वयं का डोमेन होना आवश्यक है।"
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "अनुवादित पते के शब्द एक सूची होने चाहिए।"
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "अनुदित पते के शब्दों को प्रत्येक भाषा के अनुसार सूचीबद्ध किया जाना चाहिए।"
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" का उपयोग पते में नहीं किया जा सकता है। छोटे अक्षरों, अंकों और हाइफ़न का उपयोग करें।"
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "यह सेटिंग चालू या बंद है।"
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "खोज इंजन से अनूदित पृष्ठों को छिपाना Tranzly Pro का हिस्सा है।"
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "भाषा स्विचर"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "भाषाएँ"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "भाषाएँ (आमने-सामने)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "मेन्यू में जोड़ें"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "आपकी साइट पर, यह आइटम साइट की भाषाएँ दिखाता है, जिनमें से प्रत्येक उस भाषा में वर्तमान पृष्ठ से लिंक करती है।"
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "आपकी प्रत्येक भाषा में इस पृष्ठ के लिंक।"
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "भाषा का नाम"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "भाषा कोड"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "नाम और कोड"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "डिजाइन"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "प्रत्येक भाषा को इस प्रकार दिखाएं:"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "झंडे दिखाएं (झंडा एक देश है, भाषा नहीं)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "सूची"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "पिल्स"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "बटन"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "ड्रॉपडाउन"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "भाषा कोड"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "फ़्लैग"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "वर्तमान भाषा शामिल करें"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "उन भाषाओं को छिपाएँ जिन में यह पृष्ठ अनूदित नहीं है"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "लंबवत व्यवस्थित करें"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "पहुँचनीय लेबल"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "पाठ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "वर्तमान भाषा पाठ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "वर्तमान भाषा पृष्ठभूमि"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "बॉर्डर"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "कोने की त्रिज्या"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "भाषाओं के बीच स्थान"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "पाठ का आकार"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "स्विचर"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4958,6 +5226,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® वेबसाइट"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "सेटिंग्स सहेजी गईं।"
 
@@ -5290,6 +5559,7 @@ msgid "What went wrong"
 msgstr "क्या गलत हुआ"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "इसे ठीक करें"
 
@@ -5309,31 +5579,312 @@ msgstr "पुनः प्रयास करें"
 msgid "Translate by hand"
 msgstr "हाथ से अनुवाद करें"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "भाषाएँ और सेटिंग्स"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "इंजन"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "अनुवाद कार्य"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "पते और एसईओ"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "भाषा स्विचर्स"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "एसईओ ऑडिट"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "कोई मेटा विवरण नहीं"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "एक भाषा संस्करण जिसे आगंतुक नहीं खोल सकते (ड्राफ्ट, निजी या पासवर्ड)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "पता अभी भी मूल शब्दों का उपयोग करता है"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "मूल पाठ अभी भी मौजूद है"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "बहुभाषी एसईओ ऑडिट Tranzly Pro का हिस्सा है। यह प्रत्येक भाषा के लिए गायब मेटा विवरण, टूटे हुए hreflang, अनुदित पते और डुप्लिकेट सामग्री को ढूंढता है।"
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "ऑडिट के लिए भाषा"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "ऑडिट चलाएँ"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "अगले पृष्ठ देखें"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d पृष्ठ जाँच किए गए, %2$d समस्याएँ मिलीं।"
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "पूरे भाषा की जाँच कर ली गई है।"
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "पेज"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "समस्या"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "फ्लोटिंग स्विचर"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "बिना किसी सेटअप के, किसी भी थीम पर, हर पेज के कोने में एक छोटा बटन।"
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "कहाँ"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "बंद"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "निचला कोना, अंत की ओर"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "निचला कोना, शुरुआत का सिरा"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "शीर्ष कोना, अंतिम सिरा"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "ऊपरी कोना, आरंभिक सिरा"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "सामग्री के चारों ओर का स्विचर"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "प्रत्येक पोस्ट और पेज पर एक स्विचर जोड़ें"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "सामग्री से पहले"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "सामग्री के बाद"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "स्विच करने का एक और तरीका जोड़ें"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "ब्लॉक एडिटर और साइट एडिटर: पांच डिज़ाइन वाला “लैंग्वेज स्विचर” ब्लॉक।"
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: “Language switcher” घटक।"
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "मेनू: दिखावट → मेनू → “भाषा स्विचर” बॉक्स।"
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "साइडबार: \"भाषा स्विचर\" विजेट।"
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "कहीं और भी, शॉर्टकोड:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "एलिमेंटॉर और ब्रिक्स: प्रत्येक बिल्डर में \"भाषा स्विचर\" विजेट।"
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor और Bricks विजेट Tranzly Pro का हिस्सा हैं।"
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "सहेजें"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(प्रो)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "प्रत्येक भाषा के लिए एक फ़ोल्डर: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "प्रत्येक भाषा के लिए एक सबडोमेन: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "प्रत्येक भाषा के लिए एक अलग डोमेन: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "एक क्वेरी पैरामीटर: example.com/?lang=de (पुरानी साइटें)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "श्रेणी"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "टैग"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "उत्पाद"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "उत्पाद श्रेणी"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "उत्पाद टैग"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "सहेजा गया। आपके भाषा पते नीचे दिखाए अनुसार बदल गए हैं।"
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "पते में भाषा"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "आगंतुक और खोज इंजन प्रत्येक भाषा तक कैसे पहुँचते हैं"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s के लिए पता शब्द"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "डिफ़ॉल्ट भाषा के पतों में कोई शब्द नहीं होता है।"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s के लिए डोमेन (वैकल्पिक)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "पहले इस साइट पर डोमेन पॉइंट करें। बिना डोमेन वाली भाषा आपके मुख्य डोमेन पर एक फ़ोल्डर का उपयोग करती है।"
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "अब प्रत्येक भाषा कहाँ रहती है"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "अनुवादित पते के शब्द"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "पेज और पोस्ट के पते उनके अनूदित शीर्षकों से आते हैं। यहाँ आप निश्चित शब्दों का अनुवाद करते हैं, इसलिए /de/kategorie/, /de/category/ की जगह लेता है।"
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (अब \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "खोज इंजन और आगंतुक"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "आगंतुकों को एक छोटे बैनर के साथ उनकी अपनी भाषा प्रदान करें (कभी भी रीडायरेक्ट नहीं)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "सर्च इंजन से अनूदित न किए गए पृष्ठ छिपाएँ (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "मूल पाठ वाले अनुवाद को तब तक खोज परिणामों से बाहर रखा जाता है जब तक कि उसका अनुवाद नहीं कर दिया जाता।"
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly प्रो का हिस्सा।"
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly आपके साइटमैप में hreflang लिंक (x-default के साथ), पृष्ठ की भाषा और दिशा, और प्रत्येक भाषा को जोड़ता है:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "%s के साथ मिलकर काम कर रहे हैं।"
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "प्रत्येक पता शब्द 2 से 12 छोटे अक्षरों, अंकों या हाइफ़न का होता है।"
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "एडमिन मेनू में Tranzly के अंतर्गत दूसरी भाषा जोड़ें, और स्विचर यहाँ दिखाई देगा।"
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "स्विचर"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "डिफ़ॉल्ट रूप से बंद: फ़्लैग एक देश है, भाषा नहीं।"
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "पहुँचनीय लेबल"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "स्क्रीन रीडर क्या बोलते हैं, उदाहरण के लिए \"भाषा चुनें\"।"
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "रंग"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "भाषा स्विचर"
@@ -5344,16 +5895,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "साइट की प्रत्येक भाषा में इस पृष्ठ के लिंक। जब तक दो या दो से अधिक भाषाएँ सूचीबद्ध नहीं होतीं, यह कुछ भी प्रदर्शित नहीं करता है।"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "भाषा"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "स्विचकर्ता"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "अनुवाद"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "आगंतुक को आपकी इस पृष्ठ को आपकी किसी अन्य भाषा में पढ़ने की अनुमति देता है: एक सूची, पिल्स, बटन, ड्रॉपडाउन या भाषा कोड, वैकल्पिक झंडों के साथ।"
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "बहुभाषी"

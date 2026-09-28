@@ -442,7 +442,7 @@ msgstr "AI ҳанӯз насб нашудааст. Калиди провайде
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Барои ин вазифа ягон модел интихоб нашудааст. Якеро дар танзимоти AI интихоб кунед."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Ин провайдери сунъӣ аз ҷониби ин версияи плагин дастгирӣ намешавад."
 
@@ -633,24 +633,25 @@ msgstr "Захира кардани маҳдудиятҳо ва иҷозатҳо
 msgid "Limits and permissions saved."
 msgstr "Маҳдудиятҳо ва иҷозатҳо захира шуданд."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Ин забон яке аз забонҳои ин сайт нест."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Tarjima бояд ҳамон навъи мундариҷаи аслӣ бошад."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Яке аз забонҳои дигари сайтҳоро интихоб кунед."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Барои ин экрани мазкур JavaScript лозим аст."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Интихоби забон"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Оҳанг барои ҳар як забони сомона муқаррар карда мешавад: расмияти пешфарз, бештар ё камтар, баробари дастурҳои иловагӣ."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Қимати %s аз ҷумлаи интихобҳои иҷозадодашуда нест."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Шмо ҳуқуқ надоред ин тарҷумаро иваз кунед."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Gурӯҳи ин банбаст аллакай дорои версияи %1$s (#%2$d) мебошад."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Як ашё наметавонад тарҷумаи худаш бошад."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Ин банбаст аллакай тарҷумаи чизи дигаре аст. Аввал онро аз пайванд хориҷ кунед."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Истиноди тарҷума захира карда нашуд."
 
@@ -2926,6 +2931,7 @@ msgstr "Ин плагин ба версияи нави PHP ниёз дорад."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Не"
 
@@ -4189,6 +4195,7 @@ msgstr "Вақтмуҳр"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Сарлавҳа"
 
@@ -4940,6 +4947,268 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s пеш"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Пешниҳоди забон"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Ин саҳифа инчунин бо забони %s дастрас аст."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Онро бо %s хонед"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Не, ташаккур"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Интихоб кунед, ки забонҳо дар суроғаҳои шумо чӣ гуна пайдо мешаванд: папка, зердомен, домени алоҳида ё параметри дархост."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Зердоменҳо ва доменҳои алоҳида барои ҳар як забон қисми Tranzly Pro мебошанд."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Ҷузвдонҳои забон бояд рӯйхат бошанд."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" натавонад ҷузвдони забон бошад. Аз 2 то 12 ҳарфи хурд, рақам ё дефисҳоро истифода баред, ки барои ҳар як забон фарқ мекунанд ва калимае нестанд, ки WordPress аллакай истифода барад."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Доменҳо бояд рӯйхат бошанд."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" номи домен нест, ба монанди example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Har як забон домеи худро талаб мекунад."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Калимаҳои суроғаи тарҷумашуда бояд феҳрист бошанд."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Калимаҳои суроғаи тарҷумашуда бояд барои ҳар як забон номбар карда шаванд."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" дар суроға истифода шуда наметавонад. Ҳарфҳои хурд, рақамҳо ва дефисҳоро истифода баред."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Ин танзимот фаъол ё ғайрифаъол аст."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Пинҳон кардани саҳифаҳои тарҷуманашуда аз системаҳои ҷустуҷӯӣ як қисми Tranzly Pro мебошад."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Иваргар ҳамовозӣ"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Забонҳо"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Забоonҳо (паҳлӯ ба паҳлӯ)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Илова ба меню"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Дар сомонаи шумо ин элемент забонҳои сомонаро нишон медиҳад, ки ҳар кадоме ба саҳираи ҷорӣ бо ҳамон забон пайванд медиҳад."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (№%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Истинодҳо ба ин саҳифа бо ҳар яке аз забонҳои шумо."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Номи забон"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Рамзи забон"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Ном ва рамз"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Тарроҳӣ"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Ҳар як забонро чунин нишон диҳед"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Намоиш додани парчамҳо (парчам кишвар аст, на забон)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Феҳрист"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Ҳабҳо"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Тугмаҳо"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Феҳристи афшондашуда"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Кодҳои забонҳо"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Нишонҳо"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Забони ҷорӣро дохил кунед"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Пӯшонидани забонҳое, ки ин саҳифа ба онҳо тарҷума нашудааст"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Амудӣ ҷойгир кардан"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Барчасби дастрас"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Матн"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Замина"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Забони ҷорӣ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Заминаи забони ҷорӣ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Сарҳад"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Радиуси кунҷҳо"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Фазои байни забонҳо"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Андозаи матн"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Ивазкунанда"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4960,6 +5229,7 @@ msgid "Zinn Digital® website"
 msgstr "Веб-сайти Zinn Digital®"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Танзимот захира шуд."
 
@@ -5292,6 +5562,7 @@ msgid "What went wrong"
 msgstr "Чӣ хато кард"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Ислоҳ кардан"
 
@@ -5311,31 +5582,312 @@ msgstr "Аз нав кӯшиш кардан"
 msgid "Translate by hand"
 msgstr "Тарҷума бо даст"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Забонҳо ва танзимотҳо"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Муҳаррикҳо"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Вазифаҳои тарҷума"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Суроғаҳо ва SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Ивазкунандагони забон"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "Аудити SEO"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Тавсифи мено вуҷуд надорад"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Версияи забоне, ки меҳмонон кушода наметавонанд (пешнавис, хусусӣ ё бо парол)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Суроға ҳанӯз ҳам калимоти аслӣ ро истифода мебарад"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Matni аслӣ ҳанӯз нигоҳ дошта шудааст"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Auditi SEO-ik bishonzubone qismi Tranzly Pro ast. On tavsifҳои metagii gumshuda, hreflang-i shikasta, surunghoi tarjumanshuda va mundarijai takroriyro bo targib meyobd."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Забон барои тафтиш"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Иҷрои аудит"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Саҳифаҳои дигарро санҷед"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d саҳифа тафтиш шуд, %2$d мушкилот ёфт шуд."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "Тамоми забон санҷида шуд."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Саҳифа"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Мушкилот"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Таҳрир кардан"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Табдилдиҳандаи шиновар"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Тугмаи хурд дар як гӯшаи ҳар як саҳифа, дар ҳар мавзӯъ, бидуни танзим."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Дар куҷо"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Хомӯш"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Кунҷи поён, тарафи охир"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Кунҷи поён, тарафи ибтидоӣ"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Кунҷеи боло, тарафи охир"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Кунҷеи болоӣ, тарафи ибтидоӣ"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Ивазкунанда дар атрофи мундариҷа"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Ба ҳар як нашрия ва саҳифа тугмаи ивазкунанда илова кунед"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Пеш аз мундариҷа"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Пас аз мундариҷа"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Роҳҳои дигари илова кардани ивазкунанда"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Муҳаррири блок ва муҳаррири сомона: блоки \"Ивазкунандаи забон\", бо панҷ тарҳ."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: унсури «Ивазкунандаи забон»."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Менюҳо: Намуди зоҳирӣ → Менюҳо → қуттии “Ивазкунандаи забон”."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Панелҳои канорӣ: виҷети «Ивазкунандаи забон»."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Дар ҳар ҷои дигар, кутоҳак:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor ва Bricks: виджети «Ивазкунандаи забон» дар ҳар як созанда."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Виҷетҳои Elementor ва Bricks қисми Tranzly Pro мебошанд."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Захира кардан"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Про)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Як ҷузвдон барои ҳар як забон: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Як зердомен барои ҳар як забон: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Як домени ҷудогона барои ҳар як забон: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Параметри пурсиш: example.com/?lang=de (сайтҳои куҳна)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Гурӯҳбандии категорияҳо"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Тег"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Маҳсулот"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Категорияи маҳсулот"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Теги маҳсулот"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Захира шуд. Суроғаҳои забони шумо тавре ки дар зер нишон дода шудааст, тағйир ёфтанд."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Забон дар суроға"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Боздидкунандагон ва системаҳои ҷустуҷӯӣ ба ҳар як забон чӣ гуна дастрасӣ пайдо мекунанд"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Суроғаи калима барои %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "Забоoni пешфарз дар суроғаҳояш ягон калима надорад."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Домен барои %s (ихтиёрӣ)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Аввал доменро ба ин сайт нигаронед. Забоне, ки домен надорад, ҷузвдонро дар домени асосии шумо истифода мебарад."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Ҳар як забон ҳоло дар куҷо ҷойгир аст"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Kalitwazahatи тарҷумашуда"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Суроғаҳои саҳифаҳо ва паёмҳо аз унвонҳои тарҷумашудаи онҳо гирифта мешаванд. Дар ин ҷо шумо калимаҳои собитшударо тарҷума мекунед, бинобар ин /de/kategorie/ ҷойи /de/category/-ро мегирад."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (ҳоло “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Моторҳои ҷустуҷӯӣ ва боздидкунандагон"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Ба меҳмонон забони худашонро бо як баннери хурд пешниҳод кунед (ҳеҷ гоҳ интиқолдиҳӣ / redirect нест)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Пинҳон кардани саҳифаҳои таржиманошуда аз муҳаррикони ҷустуҷӯ (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Tarҷumae, ki ҳӯud matni aslro nigoh medorad, to zamoni tarҷuma shudan az natiҷai ҷustuҷӯ dur nigoh doshta meshavad."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Қисми Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly истинодҳои hreflang (бо x-default), забон ва самти саҳифа ва ҳар як забонро ба харитаи сомонаи шумо (sitemap) илова мекунад:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Якҷо кор мекунад бо: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Ҳар як калимаи суроға аз 2 то 12 ҳарфи хурд, рақам ё тире иборат аст."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Як забони дуюмро дар зери Tranzly дар менюи администратор илова кунед ва ивазкунанда дар ин ҷо пайдо мешавад."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Ивазкунанда"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Хомӯш аз рӯи пешфарз: парчам ин кишвар аст, на забон."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Барчасби дастрас"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Он чизе, ки экранхонҳо эълон мекунанд, масалан \"Забонеро интихоб кунед\"."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Рангҳо"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Ивазкунандаи забон"
@@ -5346,16 +5898,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Истинодҳо ба ин саҳифа бо ҳар як забони сайт. То замоне ки ду ё зиёда забон номбар нашаванд, он чизеро намоиш намедиҳад."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Забон"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "Ивазкунанда"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "тарҷума"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Ба меҳмонон имкон медиҳад, ки ин саҳифаро бо дигар забонҳои шумо хонанд: рӯйхат, нишонаҳо (pills), тугмаҳо, рӯйхати афшон ё рамзҳои забонҳо бо парчамҳои ихтиёрӣ."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "серҷаҳонӣ"

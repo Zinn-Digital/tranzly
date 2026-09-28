@@ -37,7 +37,10 @@ final class Assets {
 
 	/** Front-end sources, keyed by the name callers use. */
 	private const SOURCES = array(
-		'front.css' => 'assets/front.css',
+		'front.css'    => 'assets/front.css',
+		'switcher.css' => 'assets/switcher.css',
+		'switcher.js'  => 'assets/switcher.js',
+		'suggest.js'   => 'assets/suggest.js',
 	);
 
 	/** The token a source uses where the class prefix belongs. */
@@ -138,6 +141,40 @@ final class Assets {
 		wp_register_style( $handle, false, array(), $hash );
 		wp_enqueue_style( $handle );
 		wp_add_inline_style( $handle, $body );
+	}
+
+	/**
+	 * Enqueue a front-end script under a neutral handle, from the published copy or inline, in the
+	 * footer and deferred. Scripts carry no plugin name for the same reason styles do (ADR 0033).
+	 *
+	 * @param string $key A key of self::SOURCES.
+	 * @return string|null The handle, or null when the source is unknown.
+	 */
+	public static function enqueue_script( string $key ): ?string {
+		$prefix = Settings::prefix();
+		$body   = self::source( $key, $prefix );
+		if ( null === $body ) {
+			return null;
+		}
+		$hash   = substr( sha1( $body ), 0, 8 );
+		$handle = $prefix . '-' . $hash;
+		if ( wp_script_is( $handle, 'enqueued' ) ) {
+			return $handle;
+		}
+		$args = array(
+			'in_footer' => true,
+			'strategy'  => 'defer',
+		);
+		$url  = self::published_url( $key );
+		if ( null !== $url ) {
+			wp_enqueue_script( $handle, $url, array(), $hash, $args );
+			return $handle;
+		}
+		wp_register_script( $handle, false, array(), $hash, array( 'in_footer' => true ) );
+		wp_enqueue_script( $handle );
+		wp_add_inline_script( $handle, $body );
+
+		return $handle;
 	}
 
 	/**

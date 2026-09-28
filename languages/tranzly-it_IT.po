@@ -442,7 +442,7 @@ msgstr "L'IA non è ancora configurata. Aggiungi una chiave per un provider di I
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Nessun modello è selezionato per questa attività. Scegline uno nelle impostazioni dell'intelligenza artificiale."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Quel provider di IA non è supportato da questa versione del plugin."
 
@@ -633,24 +633,25 @@ msgstr "Salva limiti e permessi"
 msgid "Limits and permissions saved."
 msgstr "Limiti e permessi salvati."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Questa lingua non è tra quelle supportate da questo sito."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Una traduzione deve essere dello stesso tipo di contenuto dell'originale."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Scegli una delle altre lingue del sito."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Questo schermo richiede JavaScript."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Scegli una lingua"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Il tono è impostato per lingua del sito: formalità predefinita, più o meno, più istruzioni opzionali."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Il valore per %s non è una delle scelte consentite."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Non è consentito modificare tale traduzione."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Il gruppo di questo elemento ha già una versione %1$s (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Un elemento non può essere la traduzione di se stesso."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Quel elemento è già la traduzione di un altro. Scollegalo prima."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Non è stato possibile salvare il link di traduzione."
 
@@ -2926,6 +2931,7 @@ msgstr "Questo plug-in richiede una versione più recente di PHP."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "No"
 
@@ -4187,6 +4193,7 @@ msgstr "Timestamp"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Titolo"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s fa"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Lingua consigliata"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Questa pagina è disponibile anche in %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Leggilo in %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "No, grazie"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Scegli come far apparire le lingue nei Suoi indirizzi: una cartella, un Sottodominio, un dominio separato o un parametro di query."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "I sottodomini e i domini separati per lingua fanno parte di Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Le cartelle delle lingue devono essere un elenco."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" non può essere una cartella della lingua. Utilizza da 2 a 12 lettere minuscole, cifre o trattini, diversi per ogni lingua e che non siano una parola già utilizzata da WordPress."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "I domini devono essere un elenco."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" non è un nome di dominio, come ad esempio example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Ogni lingua necessita di un proprio dominio."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Le parole dell'indirizzo tradotte devono essere un elenco."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Le parole dell'indirizzo tradotte devono essere elencate per lingua."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "Non è possibile utilizzare \"%s\" in un indirizzo. Utilizzare lettere minuscole, cifre e trattini."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Questa impostazione è attiva o disattivata."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Nascondere le pagine non tradotte dai motori di ricerca fa parte di Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Selettore lingua"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Lingue"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Lingue (affiancate)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Aggiungi al menu"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Sul Suo sito, questo elemento mostra le lingue del sito, ciascuna con un collegamento alla pagina corrente in quella lingua."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Collegamenti a questa pagina in ciascuna delle Sue lingue."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Nome lingua"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Codice lingua"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Nome e codice"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Design"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Mostra ogni lingua come"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Mostra le bandiere (una bandiera rappresenta un paese, non una lingua)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Elenco"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Pillole"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Pulsanti"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Menu a discesa"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Codici lingua"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Flag"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Includi la lingua corrente"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Nascondi le lingue in cui questa pagina non è tradotta"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Disponi in verticale"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Etichetta accessibile"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Testo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Sfondo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Lingua corrente"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Lingua di sfondo corrente"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Bordo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Raggio dell'angolo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Spazio tra le lingue"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Dimensione del testo"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Selettore"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Creato da Neil Lock, CEO di Zinn Digital® Ltd"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "sito web di Zinn Digital®"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Impostazioni salvate."
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "Cosa è andato storto"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Risolvi"
 
@@ -5308,31 +5578,312 @@ msgstr "Riprova"
 msgid "Translate by hand"
 msgstr "Traduci manualmente"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Lingue e impostazioni"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Motori"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Lavori di traduzione"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Indirizzi e SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Selettori di lingua"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "Audit SEO"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Nessuna meta description"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Una versione linguistica che i visitatori non possono aprire (bozza, privata o protetta da password)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "L'indirizzo usa ancora le parole originali"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Conserva ancora il testo originale"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "L'audit SEO multilingue fa parte di Tranzly Pro. Individua descrizioni meta mancanti, hreflang interrotti, indirizzi non tradotti e contenuti duplicati, per ciascuna lingua."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Lingua da controllare"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Esegui il controllo"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Controlla le pagine successive"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d pagine controllate, %2$d problemi trovati."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "L'intera lingua è stata controllata."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Pagina"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Problema"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Modifica"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Selettore mobile"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Un piccolo pulsante in un angolo di ogni pagina, su qualsiasi tema, senza alcuna configurazione."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Dove"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Disattivo"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Angolo inferiore, lato finale"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Angolo inferiore, lato iniziale"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Angolo superiore, lato finale"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Angolo superiore, lato iniziale"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Selettore attorno al contenuto"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Aggiungi un selettore a ogni articolo e pagina"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Prima del contenuto"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Dopo il contenuto"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Altri modi per aggiungere uno switcher"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Block editor e site editor: il blocco \"Selettore lingua\", con cinque design."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: l’elemento “Selettore lingua”."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Menu: Aspetto → Menu → Riquadro \"Selettore lingua\"."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Barre laterali: il widget \"Selettore di lingua\"."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Ovunque altrove, lo shortcode:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor e Bricks: il widget “Language switcher” in ciascun builder."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "I widget di Elementor e Bricks fanno parte di Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Salva"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Una cartella per lingua: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Un sottodominio per lingua: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Un dominio separato per lingua: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Un parametro di query: example.com/?lang=de (siti meno recenti)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Categoria"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Etichetta"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Prodotto"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Categoria di prodotto"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Etichetta prodotto"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Salvato. Gli indirizzi della lingua sono stati modificati come mostrato di seguito."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Lingua nell'indirizzo"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "In che modo i visitatori e i motori di ricerca raggiungono ciascuna lingua"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Parola di indirizzo per %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "La lingua predefinita non ha alcuna parola nei suoi indirizzi."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Dominio per %s (facoltativo)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Punti prima il dominio su questo sito. Una lingua senza un dominio utilizza una cartella sul dominio principale."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Dove si trovano ora le singole lingue"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Parole dell'indirizzo tradotte"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Gli indirizzi di pagine e articoli derivano dai loro titoli tradotti. Qui traduci le parole fisse, quindi /it/categoria/ sostituisce /it/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (ora “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Motori di ricerca e visitatori"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Offri ai visitatori la loro lingua con un piccolo banner (mai un reindirizzamento)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Nascondi le pagine non tradotte dai motori di ricerca (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Una traduzione che contiene ancora il testo originale viene esclusa dai risultati di ricerca finché non viene tradotta."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Parte di Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly aggiunge i link hreflang (con x-default), la lingua e la direzione della pagina e ogni lingua alla Sua sitemap:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "In collaborazione con: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Ogni parola dell'indirizzo è composta da 2 a 12 lettere minuscole, cifre o trattini."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Aggiungi una seconda lingua in Tranzly dal menu di amministrazione e il selettore comparirà qui."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Selettore"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Disattivato per impostazione predefinita: una bandiera è un paese, non una lingua."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Etichetta accessibile"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Ciò che leggono gli screen reader, ad esempio \"Scegli una lingua\"."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Colori"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Selettore lingua"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Link a questa pagina in ciascuna lingua del sito. Non visualizza nulla finché non vengono elencate due o più lingue."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "lingua"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "selettore"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "traduzione"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Consente ai Suoi visitatori di leggere questa pagina in un'altra delle Sue lingue: un elenco, pillole, pulsanti, un menu a tendina o codici lingua, con bandiere opzionali."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "multilingue"

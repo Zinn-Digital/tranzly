@@ -442,7 +442,7 @@ msgstr "AI 尚未设置。请在 AI 设置中添加 AI 提供商的密钥。"
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "未为此任务选择模型。请在 AI 设置中选择一个。"
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "此版本的插件不支持该 AI 提供商。"
 
@@ -633,24 +633,25 @@ msgstr "保存限制和权限"
 msgid "Limits and permissions saved."
 msgstr "限制和权限已保存。"
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "该语言不是本网站的语言之一。"
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "翻译必须与原文的内容类型保持一致。"
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "选择该网站的其他语言之一。"
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "此屏幕需要 JavaScript。"
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "选择语言"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "语气按网站语言设置：默认正式程度（程度略有不同），外加可选指令。"
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s 的值不在允许的选择范围内。"
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "您无权更改该翻译。"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "此项目的分组已存在一个 %1$s 版本 (#%2$d)。"
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "一项不能是其自身的翻译。"
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "该项目已经是其他内容的翻译。请先取消链接。"
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "无法保存翻译链接。"
 
@@ -2926,6 +2931,7 @@ msgstr "该插件需要较新版本的 PHP。"
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "否"
 
@@ -4187,6 +4193,7 @@ msgstr "时间戳"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "标题"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s前"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "语言建议"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "此页面也提供 %s 版本。"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "在 %s 中阅读"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "不用了，谢谢"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "选择语言在您的网址中显示的方式：子目录、子域名、独立域名或查询参数。"
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Tranzly Pro 提供每个语言的子域和独立域名。"
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "语言文件夹必须是一个列表。"
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" 不能是语言文件夹。请使用 2 到 12 个小写字母、数字或连字符，每种语言必须不同，且不能是 WordPress 已使用的词。"
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "域名必须是一个列表。"
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" 不是域名，例如 example.de。"
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "每个语言都需要自己的域名。"
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "翻译后的地址词必须是一个列表。"
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "翻译后的地址词必须按语言列出。"
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" 不能用于地址。请使用小写字母、数字和连字符。"
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "此设置处于开启或关闭状态。"
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "将未翻译的页面对搜索引擎隐藏是 Tranzly Pro 的一部分。"
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "语言切换器"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "语言"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "语言（并排）"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "添加到菜单"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "在您的网站上，此项目会显示网站的语言，每种语言都链接到该语言的当前页面。"
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "链接到您各个语言版本的此页面。"
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "语言名称"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "语言代码"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "名称和代码"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "设计"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "显示每种语言为"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "显示国旗（国旗代表国家，而非语言）"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "列表"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "标签"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "按钮"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "下拉菜单"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "语言代码"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "标记"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "包含当前语言"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "隐藏此页面未翻译的语言"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "垂直堆叠"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "辅助功能标签"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "文本"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "背景"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "当前语言文本"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "当前语言背景"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "边框"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "圆角半径"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "语言间距"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "文字大小"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "切换器"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "由 Zinn Digital® Ltd 首席执行官 Neil Lock 构建"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® 网站"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "设置已保存。"
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "哪里出错了"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "修复"
 
@@ -5308,31 +5578,312 @@ msgstr "重试"
 msgid "Translate by hand"
 msgstr "手动翻译"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "语言与设置"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "引擎"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "翻译任务"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "地址与SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "语言切换器"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO 审计"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "无元描述"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "访客无法打开的语言版本（草稿、私密或受密码保护）"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "该地址仍在使用原来的字词"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "仍然保留原文本"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "多语言 SEO 审计是 Tranzly Pro 的一部分。它能按语言查找缺失的元描述、损坏的 hreflang、未翻译的地址和重复内容。"
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "待审核语言"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "运行审计"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "查看下一页"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "已检查 %1$d 个页面，发现 %2$d 个问题。"
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "整个语言已通过检查。"
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "页面"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "问题"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "编辑"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "悬浮切换器"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "每个页面角落的小巧按钮，适配任意主题，无需进行任何设置。"
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "位置"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "关闭"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "底角、末端侧"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "起始侧底角"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "顶部角，末端侧"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "顶部角，起始侧"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "内容切换器"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "为每篇博文和页面添加切换器"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "内容之前"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "内容发布后"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "其他添加切换器的方法"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "区块编辑器和站点编辑器：“语言切换器”区块，提供五种设计。"
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich：“语言切换器”元素。"
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "菜单：外观 → 菜单 → “语言切换器”方框。"
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "边栏：“语言切换器”小部件。"
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "在其他地方，简码："
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor 和 Bricks：每个构建器中的“语言切换器”小部件。"
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor 和 Bricks 小部件是 Tranzly Pro 的一部分。"
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "保存"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(专业版)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "每种语言一个文件夹：example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "每种语言一个子域：de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "每个语言使用独立域名：example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "查询参数：example.com/?lang=de（旧版网站）"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "类别"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "标签"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "产品"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "产品类别"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "产品标签"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "已保存。您的语言地址已更改，如下所示。"
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "地址栏中的语言"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "访客和搜索引擎如何访问每种语言"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s 的寻址字"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "默认语言的地址中没有字词。"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s 的域名（可选）"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "请先将域名指向此网站。没有域名的语言将使用主域名上的文件夹。"
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "各个语言目前的位置"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "已翻译的地址字词"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "页面和文章地址来自于其翻译后的标题。在此处您可翻译固定词汇，例如用 /de/kategorie/ 替换 /de/category/。"
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s（现为“%2$s”）"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "搜索引擎和访客"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "通过醒目的横幅（绝不使用重定向）为访客提供他们自己的语言"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "将未翻译的页面从搜索引擎中隐藏 (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "包含原文的译文在翻译完成之前将不会显示在搜索结果中。"
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly Pro 的一部分。"
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly 会为您的网站地图添加 hreflang 链接（包含 x-default）、页面语言和方向，以及所有语言："
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "与 %s 合作。"
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "每个地址字词应包含 2 到 12 个小写字母、数字或连字符。"
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "在管理菜单的 Tranzly 下添加第二种语言，切换器就会显示在这里。"
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "切换器"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "默认关闭：国旗代表国家，而非语言。"
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "辅助功能标签"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "屏幕阅读器的朗读内容，例如“选择语言”。"
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "颜色"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "语言切换器"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "指向该网站各个语言版本的此页链接。在列出两个或更多语言之前，它不呈现任何内容。"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "语言"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "切换器"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "翻译"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "让访客以您的另一种语言阅读此页面：列表、胶囊按钮、按钮、下拉菜单或语言代码，并可选配旗帜图标。"
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "多语言"

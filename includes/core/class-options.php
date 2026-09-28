@@ -32,10 +32,16 @@ final class Options {
 	/** How the automatic switcher shows each language. */
 	public const STYLES = array( 'names', 'flags' );
 
+	/** Where the floating switcher sits ('' = off), in logical corners (T5, tz-l5). */
+	public const FLOATING = array( '', 'bottom-end', 'bottom-start', 'top-end', 'top-start' );
+
+	/** How the floating switcher names each language. */
+	public const DISPLAYS = array( 'name', 'code', 'name_code' );
+
 	/**
 	 * The stored options over the defaults.
 	 *
-	 * @return array{switcher: array{position: string, style: string, new_tab: bool}, credit: bool}
+	 * @return array{switcher: array{position: string, style: string, new_tab: bool, floating: string, display: string}, credit: bool}
 	 */
 	public static function get(): array {
 		$stored   = get_option( self::OPTION, array() );
@@ -47,6 +53,8 @@ final class Options {
 				'position' => in_array( $switcher['position'] ?? '', self::POSITIONS, true ) ? (string) $switcher['position'] : 'none',
 				'style'    => in_array( $switcher['style'] ?? '', self::STYLES, true ) ? (string) $switcher['style'] : 'names',
 				'new_tab'  => true === ( $switcher['new_tab'] ?? false ),
+				'floating' => in_array( $switcher['floating'] ?? null, self::FLOATING, true ) ? (string) $switcher['floating'] : '',
+				'display'  => in_array( $switcher['display'] ?? '', self::DISPLAYS, true ) ? (string) $switcher['display'] : 'name',
 			),
 			'credit'   => true === ( $stored['credit'] ?? false ),
 		);
@@ -72,6 +80,10 @@ final class Options {
 					$current['switcher']['style'] = $value;
 				} elseif ( 'new_tab' === $key && is_bool( $value ) ) {
 					$current['switcher']['new_tab'] = $value;
+				} elseif ( 'floating' === $key && in_array( $value, self::FLOATING, true ) ) {
+					$current['switcher']['floating'] = $value;
+				} elseif ( 'display' === $key && in_array( $value, self::DISPLAYS, true ) ) {
+					$current['switcher']['display'] = $value;
 				} else {
 					return self::refuse( 'switcher.' . $key );
 				}

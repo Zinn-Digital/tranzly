@@ -32,6 +32,8 @@ final class Plugin {
 		Admin::register();
 		Freemius_I18n::register();
 		Core\Boot::register();
+		Seo\Seo::register();
+		Switcher\Places::register();
 
 		register_activation_hook( TRANZLY_FILE, array( self::class, 'activate' ) );
 	}
@@ -43,6 +45,9 @@ final class Plugin {
 	 */
 	public static function activate(): void {
 		Core\Boot::activate();
+		Seo\Url_Settings::ensure();
+		Seo\Router::rebuild_front_pages();
+		Switcher\Places::ensure_options();
 		Assets::publish();
 	}
 }

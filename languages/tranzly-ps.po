@@ -442,7 +442,7 @@ msgstr "AI لا ترتیب شوی نه دی. د AI په ترتیبونو کې د
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "د دې کار لپاره کوم ماډل نه دی ټاکل شوی. د AI په تنظیماتو کې یو وټاکئ."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "د مصنوعي ځيرکتیا (AI) هغه چمتوکوونکی د پلگ‌این په دې نسخه کې نه ملاتړ کېږي."
 
@@ -633,24 +633,25 @@ msgstr "حدونه او اجازې خوندي کړئ"
 msgid "Limits and permissions saved."
 msgstr "حدود او اجازه لیکونه خوندي شول."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "دا ژبه د دې سایټ له ژبو څخه نه ده."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "ژباړه باید د اصلي منځپانګې په څیر ورته بڼه ولري."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "د سایټ نورو ژبو څخه یوه وټاکئ."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "دې پردې ته جاواسکریپټ اړین دی."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "ژبه وټاکئ"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "د سایټ د ژبې له مخې لهن تنظیم شوی دی: د رسمیت ډیفالټ، لږ یا ډیر، د اختیاري لارښوونو سره."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "د %s لپاره ارزښت له اجازه ورکړل شویو ټاکنو څخه نه دی."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "تاسې ته اجازه نه شته چې دا ژباړه بدله کړئ."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "د دې توکي په ډله کې مخکې تر مخه یوه %1$s نسخه (#%2$d) شتون لري."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "يو توکي نشي کولی چې د خپل ځان ژباړه وي."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "دا توکي لا دمخه د بل شي ژباړه ده. لومړی یې اړیکه پرې کړئ."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "د ژباړې لینک نش شو خوندي کولای۔"
 
@@ -2926,6 +2931,7 @@ msgstr "دا پليګين د PHP يوې نوي نسخې ته اړتیا لري."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "نه"
 
@@ -4187,6 +4193,7 @@ msgstr "د وخت نښه"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "سرلیک"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s مخکې"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "د ژبې وړاندیز"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "دا پاڼه په %s کې هم شتون لري."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "په %s کې يې ولولئ"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "مننه، نه"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "وټاکئ چې ژبې څنګه ستاسو په پته کې ښکاري: یو فولډر، یو فرعي ډومین، یو جلا ډومین یا د پوښتنې پارامتر."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "د هرې ژبې لپاره ذیلي ډومینونه او جلا ډومینونه د Tranzly Pro برخه دي."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "د ژبې پوښۍ باید یو لړ وي."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" نشي کولی چې د ژبې پوښۍ وي. د هرې ژبې لپاره د 2 څخه تر 12 پورې کوچني حروف، شمېرې یا هایفین وکاروئ، او دا باید هغه توری نه وي چې WordPress یې دمخه کاروي."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "ډومینونه باید یو لړ وي."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" د ډومین نوم نه دی، لکه example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "هره ژبه خپل ډومین ته اړتیا لري."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "د ژباړل شوي پته کلمې باید یو لړ وي."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "د ژباړل شوي پته کلمې باید د هرې ژبې له مخې لیست شي."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" په پته کې نشي کارېدل کیدی. کوچني توري، شمېرې او د نښلولو کرښې (hyphens) وکاروئ."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "دا ترتیب فعال یا غیر فعال دی."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "د لټون ماشینونو څخه د ژباړل شویو پاڼو پټول د Tranzly Pro یوه برخه ده."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "د ژبې بدلوونکی"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "ژبې"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "ژبې (تر څنګ په تر څنګ)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "فهرست ته اضافه کول"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "په ستاسو سایټ کې، دا توکی د سایټ ژبې ښيي، چې هره یوه په هغه ژبه کې اوسني مخ ته لینک کوي."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "په خپله هره ژبه کې دې پاڼې ته لینکونه."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "د ژبې نوم"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "د ژبې کوډ"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "نوم او کوډ"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "ډیزاین"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "هره ژبه ښودل لکه څنګه چې"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "بیرغونه وښایاست (بیرغ یو هېواد دی، نه یوه ژبه)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "لړۍ"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "ګولۍ"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "بټنونه"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "پرته پاڼه"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "د ژبې کودونه"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "بیرغونه"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "د اوسنۍ ژبې په ګډون"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "هغه ژبې پټې کړئ چې دا پاڼه ورته نه ده ژباړل شوې"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "عمودی ډول برابرول"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "د لاسرسي وړ نښه"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "متن"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "شاليد"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "اوسنۍ ژبه متن"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "د اوسني ژبي شالید"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "چوکاټ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "د کونج وړانګه"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "د ژبو ترمنځ فضا"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "د متن اندازه"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "بدلوونکی"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4958,6 +5226,7 @@ msgid "Zinn Digital® website"
 msgstr "د Zinn Digital® وېبپاڼه"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "تنظیمات خوندي شوې."
 
@@ -5290,6 +5559,7 @@ msgid "What went wrong"
 msgstr "څه شی تیر وتل"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "سمول"
 
@@ -5309,31 +5579,312 @@ msgstr "بیا هڅه وکړئ"
 msgid "Translate by hand"
 msgstr "په لاس ژباړه"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "ژبې او ترتیبات"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "انجنونه"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "د ژباړې دندې"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "آدرسونه او SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "د ژبې بدلونکي"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO پلټنه"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "هیڅ میټا توضیحات شتون نلري"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "د ژبې هغه نسخه چې لیدونکي یې نشي پرانیستلی (مسوده، پټه یا د پټنوم لرونکې)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "پته لا هم اصلي کلمې کاروي"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "اصلي متن لا هم ساتي"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "د څو ژبو SEO پلټنه د Tranzly Pro یوه برخه ده. دا د هرې ژبې لپاره ورک شوي میټا توضیحات، مات شوي hreflang، ژباړل شوي پته او دوه ګوني منځپانګې مومي."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "د تفتیش لپاره ژبه"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "اډېټ چلول"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "بلې پاڼې وګورئ"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d مخونه وکتل شول، %2$d ستونزې وموندل شوې."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "ټوله ژبه چک شوې ده."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "پاڼه"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "ستونزه"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "سمول"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "تلوونکی سویچر"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "په هره موضوع او په هره پاڼه کې د کونج یو کوچنی تڼۍ، پرته له کوم تنظیم څخه."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "چیرته"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "بند دی"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "لاندنی کونج، پای لوری"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "پورتنی کونج، د پيل لوری"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "پورتنی کونج، پای لوری"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "پورتنی کونج، پیل لوری"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "د مینځپانګې شاوخوا سویچر"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "په هره پوسټ او پاڼه کې یو بدلونکی اضافه کړئ"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "د مینځپانګې څخه مخکې"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "د منځپانګې وروسته"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "د سویچ د اضافه کولو نورې لارې"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "د بلاک اېډېټر او سایټ اېډېټر: د \"ژبې بدلولو\" (Language switcher) بلاک، د پنځو ډیزاینونو سره."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: د \"Language switcher\" عنصر."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "مینوګانې: بڼه → مینوګانې → د \"ژبې بدلونکي\" بکس."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "د غاړې پټې (سایډبارونه): د \"ژبې بدلونکي\" ویجټ."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "دلته هر چې وي، شارټ کوډ:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "ایلیمنټور او برکس: په هر بلډر کې د \"ژبې بدلونکي\" ویجټ."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "د Elementor او Bricks ویجټونه د Tranzly Pro برخه دي."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "خوندي کړئ"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(پرو)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "د هرې ژبې لپاره یوه پوښۍ: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "د هرې ژبې لپاره یو سب ډومین: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "د هرې ژبې لپاره یو جلا ډومین: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "د پوښتنې پارامتر: example.com/?lang=de (پخواني سایټونه)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "کټه ګوري"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "ټاګ"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "محصول"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "د محصول کټګوري"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "د محصول ټاګ"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "خوندي شو. ستاسو د ژبې پته لکه څنګه چې لاندې ښودل شوې، بدله شوې ده."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "په پته کې ژبه"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "لیدونکي او د لټون ماشینونه څنګه هرې ژبې ته رسېږي"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "د %s لپاره د پته کلمه"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "پش پېر ژبه په خپلو پتو کې هېڅ لغت نه لري."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "د %s لپاره ډومین (اختياري)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "لومړی ډومین دې سایټ ته وښودئ. هغه ژبه چې ډومین نه لري، ستاسو په اصلي ډومین کې یوه پوښۍ (فولډر) کاروي."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "اوس هرې ژبې ته چېرته ځای ورکړل شوی دی"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "ژباړل شوي د پته کلمات"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "د پاڼو او پوستونو پزلونه د هغوی له ژباړل شویو سرلیکونو څخه راځي. دلته تاسو ثابتې کلمې ژباړئ، نو /de/kategorie/ د /de/category/ ځای نیسي."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (اوس \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "د لټون انجنونه او لیدونکي"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "لیدونکو ته د یو کوچني بانر په مرسته د دوی خپله ژبه وړاندې کړئ (هیڅکله بیاځلي لارښود مه کوئ)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "غیر ژباړل شوي مخونه د لټون ماشینه پټ کړئ (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "یوژباړه چې لا هم اصلي متن لري، تر هغې پورې له لټون پایلو څخه لیرې ساتل کیږي څو چې وژباړل شي."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "د Tranzly Pro برخه."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly د hreflang لینکونه (د x-default سره)، د پاڼې ژبە او لاره، او هره ژبە ستاسو په سایټ مېپ (sitemap) کې زیاتوي:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "له دې سره کار کوي: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "د پته هره کلمه له ۲ تر ۱۲ پورې د کوچنیو تورو، عددونو یاهایفنونو څخه جوړه ده."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "د مدیر په مینو کې د Tranzly لاندې دویمه ژبە اضافه کړئ، او بدلونکی به دلته څرګند شي۔"
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "بدلوونکی"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "په ډیفالټ بند دی: بیرغ یو هېواد دی، ژبه نه ده."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "د لاسرسي وړ نښه"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "څه شی چې سکرین لوستونکي اعلانوي، د بیلګې په توګه \"یوه ژبه وټاکئ\"."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "رنګونه"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "د ژبې بدلونکی"
@@ -5344,16 +5895,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "د دې پاڼې لپاره لینکونه د سایټ په هره ژبه کې. دا تر هغه وخته پورې هیڅ نه ښيي تر څو چې دوه یا ډیرې ژبې لیست شوې نه وي."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "ژبه"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "بدلوونکی"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "ژباړه"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "لیدونکو ته اجازه ورکړئ چې دا پاڼه ستاسو په بلې ژبه وویني: یو لړ، ګولۍ، تڼۍ، ډراپ ډاون یا د ژبې کوډونه، د اختیاري بیرغونو سره."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "څلور ژبي"

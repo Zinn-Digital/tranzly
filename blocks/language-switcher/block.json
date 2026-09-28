@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "tranzly/language-switcher",
+	"title": "Language switcher",
+	"category": "widgets",
+	"icon": "translation",
+	"description": "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags.",
+	"keywords": [ "language", "switcher", "translation", "multilingual" ],
+	"textdomain": "tranzly",
+	"attributes": {
+		"style": {
+			"type": "string",
+			"enum": [ "list", "pills", "buttons", "dropdown", "codes" ],
+			"default": "list"
+		},
+		"display": {
+			"type": "string",
+			"enum": [ "name", "code", "name_code" ],
+			"default": "name"
+		},
+		"flags": {
+			"type": "boolean",
+			"default": false
+		},
+		"showCurrent": {
+			"type": "boolean",
+			"default": true
+		},
+		"hideMissing": {
+			"type": "boolean",
+			"default": false
+		},
+		"vertical": {
+			"type": "boolean",
+			"default": false
+		},
+		"label": {
+			"type": "string",
+			"default": "",
+			"role": "content"
+		},
+		"vars": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"html": false,
+		"reusable": true
+	},
+	"example": {
+		"attributes": {
+			"style": "pills"
+		}
+	},
+	"editorScript": "tranzly-editor"
+}

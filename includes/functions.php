@@ -70,6 +70,21 @@ function tranzly_get_translation( int $post_id, string $lang ): ?int {
 }
 
 /**
+ * A language switcher's HTML, for any theme, builder or plugin (T5). Page Builder Sandwich's
+ * element calls it; so can yours. Empty when fewer than two languages exist.
+ *
+ * @param array<string, mixed> $args `style` (list|pills|buttons|dropdown|codes), `display`
+ *                                   (name|code|name_code), `flags`, `showCurrent`, `hideMissing`,
+ *                                   `vertical`, `label` (the accessible name), and `vars` (colours
+ *                                   and spacing: color, background, activeColor, activeBg,
+ *                                   borderColor, radius, gap, fontSize).
+ * @return string
+ */
+function tranzly_language_switcher( array $args = array() ): string {
+	return \ZinnDigital\Tranzly\Switcher\Switcher::render( $args );
+}
+
+/**
  * The attribute names Tranzly translates for a block type: `role: content` in its block.json,
  * adjusted by the `tranzly_translatable_attributes` filter.
  *

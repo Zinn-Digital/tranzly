@@ -442,7 +442,7 @@ msgstr "AI ఇంకా సెటప్ కాలేదు. AI సెట్ట�
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "ఈ టాస్క్ కోసం ఏ మోడల్ ఎంచుకోబడలేదు. AI సెట్టింగ్‌లలో ఒకదాన్ని ఎంచుకోండి."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "ఈ ప్లగ్ఇన్ యొక్క ఈ వెర్షన్ ద్వారా ఆ AI ప్రొవైడర్ మద్దతు లేదు."
 
@@ -633,24 +633,25 @@ msgstr "పరిమితులు మరియు అనుమతులను 
 msgid "Limits and permissions saved."
 msgstr "పరిమితులు మరియు అనుమతులు సేవ్ చేయబడ్డాయి."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ఆ భాష ఈ సైట్ యొక్క భాషలలో ఒకటి కాదు."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "అనువాదం అసలు కంటెంట్ మాదిరిగానే ఉండాలి."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "సైట్ యొక్క ఇతర భాషలలో ఒకదానిని ఎంచుకోండి."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "ఈ స్క్రీన్‌కి జావాస్క్రిప్ట్ అవసరం."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "భాషను ఎంచుకోండి"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "ప్రతి సైట్ భాషకు టోన్ సెట్ చేయబడుతుంది: ఫార్మాలిటీ డిఫాల్ట్, హెచ్చుతగ్గులతో, మరియు ఐచ్ఛిక సూచనలతో."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s కోసం ఇచ్చిన విలువ అనుమతించబడిన ఎంపికలలో ఒకటి కాదు."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "ఆ అనువాదాన్ని మార్చడానికి మీకు అనుమతి లేదు."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "ఈ ఐటమ్ గ్రూప్‌లో ఇప్పటికే %1$s వెర్షన్ (#%2$d) ఉంది."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "ఒక అంశం దాని స్వంత అనువాదంగా ఉండదు."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "ఆ అంశం ఇప్పటికే వేరొక దాని అనువాదంగా ఉంది. ముందుగా దాని లింక్‌ను తీసివేయండి."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "అనువాద లింక్‌ను సేవ్ చేయడం సాధ్యపడలేదు."
 
@@ -2926,6 +2931,7 @@ msgstr "ఈ ప్లగిన్‌కు PHP యొక్క కొత్త �
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "కాదు"
 
@@ -4187,6 +4193,7 @@ msgstr "సమయ ముద్రిక"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "శీర్షిక"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s క్రితం"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "భాష సూచన"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "ఈ పేజీ %s లో కూడా అందుబాటులో ఉంది."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "%s లో చదవండి"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "వద్దు, ధన్యవాదాలు"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "మీ చిరునామాలలో భాషలు ఎలా కనిపించాలో ఎంచుకోండి: ఫోల్డర్, సబ్‌డొమైన్, ప్రత్యేక డొమైన్ లేదా క్వెరీ పరామితి."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "భాష వారీగా సబ్‌డొమైన్‌లు మరియు వేర్వేరు డొమైన్‌లు Tranzly Proలో భాగం."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "భాషా ఫోల్డర్‌లు తప్పనిసరిగా జాబితా అయి ఉండాలి."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" భాషా ఫోల్డర్ కాకూడదు. ప్రతి భాషకు వేర్వేరుగా ఉండే 2 నుండి 12 వరకు చిన్న అక్షరాలు, అంకెలు లేదా హైఫన్‌లను ఉపయోగించండి మరియు WordPress ఇప్పటికే ఉపయోగించే పదం కాకూడదు."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "డొమైన్‌లు తప్పనిసరిగా జాబితా అయి ఉండాలి."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" అనేది example.de వంటి డొమైన్ పేరు కాదు."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "ప్రతి భాషకు దాని స్వంత డొమైన్ అవసరం."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "అనువదించిన చిరునామా పదాలు జాబితా అయి ఉండాలి."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "అనువదించిన చిరునామా పదాలను ప్రతి భాష వారీగా జాబితా చేయాలి."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "విలాసంలో \"%s\"ని ఉపయోగించలేరు. చిన్న అక్షరాలు (lowercase letters), అంకెలు మరియు హైఫన్‌లను ఉపయోగించండి."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "ఈ సెట్టింగ్ ఆన్ లేదా ఆఫ్‌లో ఉంది."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "అనువదించని పేజీలను సెర్చ్ ఇంజిన్‌ల నుండి దాచడం Tranzly Pro లో భాగం."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "భాషా స్విచ్చర్"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "భాషలు"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "భాషలు (పక్కపక్కనే)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "మెనుకి జోడించు"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "మీ సైట్‌లో, ఈ అంశం సైట్ యొక్క భాషలను చూపుతుంది, ప్రతి ఒక్కటి ఆ భాషలోని ప్రస్తుత పేజీకి లింక్ చేయబడుతుంది."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "మీ ప్రతి భాషలో ఈ పేజీకి లింక్‌లు."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "భాష పేరు"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "భాషా కోడ్"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "పేరు మరియు కోడ్"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "రూపకల్పన"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "ప్రతిభాషను ఇలా చూపించు"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "జండాలను చూపు (జండా అనేది దేశం, భాష కాదు)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "జాబితా"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "పిల్స్"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "బటన్‌లు"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "డ్రాప్‌డౌన్"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "భాషా కోడ్‌లు"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "ఫ్లాగ్‌లు"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "ప్రస్తుత భాషను చేర్చండి"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "ఈ పేజీ అనువదించబడిన భాషలను దాచు"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "నిలువుగా అమర్చండి"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "అందుబాటులో ఉండే లేబుల్"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "పాఠం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "నేపథ్యం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "ప్రస్తుత భాషా పాఠ్యం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "ప్రస్తుత భాషా నేపథ్యం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "అంచు"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "మూల విక్షేపం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "భాషల మధ్య ఖాళీ స్థలం"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "టెక్స్ట్ పరిమాణం"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "స్విచ్చర్"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4959,6 +5227,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® వెబ్‌సైట్"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "అమరికలు సేవ్ చేయబడ్డాయి."
 
@@ -5291,6 +5560,7 @@ msgid "What went wrong"
 msgstr "ఏది తప్పు జరిగింది"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "సరిచేయి"
 
@@ -5310,31 +5580,312 @@ msgstr "మళ్లీ ప్రయత్నించు"
 msgid "Translate by hand"
 msgstr "చేతితో అనువదించండి"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "భాషలు మరియు సెట్టింగ్‌లు"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "ఇంజిన్‌లు"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "అనువాద ఉద్యోగాలు"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "చిరునామాలు మరియు SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "భాషా మారకాలు"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO ఆడిట్"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "మెటా వివరణ లేదు"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "సందర్శకులు తెరవలేని భాషా వెర్షన్ (డ్రాఫ్ట్, ప్రైవేట్ లేదా పాస్‌వర్డ్)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "చిరునామా ఇప్పటికీ అసలు పదాలను ఉపయోగిస్తుంది"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "అసలు పాఠం ఇప్పటికీ అలాగే ఉంది"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "బహుభాషా ఎస్‌ఈఓ ఆడిట్ అనేది Tranzly Pro లో భాగం. ఇది భాష వారీగా మిస్సైన మెటా వివరణలు, విరిగిన hreflang, అనువదించని చిరునామాలు మరియు నకిలీ కంటెంట్‌ను కనుగొంటుంది."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "ఆడిట్ చేయడానికి భాష"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "ఆడిట్ చేయండి"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "తర్వాత పేజీలను తనిఖీ చేయండి"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d పేజీలు తనిఖీ చేయబడ్డాయి, %2$d సమస్యలు కనుగొనబడ్డాయి."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "మొత్తం భాష తనిఖీ చేయబడింది."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "పేజీ"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "సమస్య"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "సవరించు"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "ఫ్లోటింగ్ స్విచ్ఛర్"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "ఏదైనా థీమ్‌లో, ఎలాంటి సెటప్ లేకుండా, ప్రతి పేజీ మూలన ఒక చిన్న బటన్."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "ఎక్కడ"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "ఆఫ్"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "దిగువ మూల, ముగింపు వైపు"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "దిగువ మూల, ప్రారంభ వైపు"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "పై మూల, చివరి వైపు"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "పై మూల మూెల, ప్రారంభ వైపు"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "కంటెంట్ చుట్టూ ఉన్న స్విచ్చర్"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "ప్రతి పోస్ట్ మరియు పేజీకి స్విచ్ఛర్‌ను జోడించండి"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "కంటెంట్‌కి ముందు"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "కంటెంట్ తర్వాత"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "స్విచర్‌ను జోడించడానికి ఇతర మార్గాలు"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "బ్లాక్ ఎడిటర్ మరియు సైట్ ఎడిటర్: ఐదు డిజైన్‌లతో కూడిన “భాషల మార్పిడి (Language switcher)” బ్లాక్."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: “Language switcher” ఎలిమెంట్."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "మెనువులు: రూపము → మెనువులు → “భాషా మారకం” బాక్స్."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "సైడ్‌బార్‌లు: “భాష మారకం” విడ్జెట్."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "మరెక్కడైనా, షార్ట్‌కోడ్:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "ఎలిమెంటర్ మరియు బ్రిక్స్: ప్రతి బిల్డర్‌లో “భాషా మారకం” విడ్జెట్."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "ఎలిమెంట్ మరియు బ్రిక్స్ విడ్జెట్‌లు Tranzly Proలో భాగం."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "సేవ్ చేయి"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(ప్రో)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "ప్రతి భాషకు ఒక ఫోల్డర్: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "ప్రతి భాషకు ఒక సబ్‌డొమైన్: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "ప్రతి భాషకు ఒక ప్రత్యేక డొమైన్: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "ఒక క్వెరీ పరామితి: example.com/?lang=de (పాత సైట్‌లు)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "వర్గం"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "ట్యాగ్"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "ఉత్పత్తి"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "ఉత్పత్తి వర్గం"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "ఉత్పత్తి ట్యాగ్"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "సేవ్ చేయబడింది. కింద చూపిన విధంగా మీ భాషా చిరునామాలు మార్చబడ్డాయి."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "చిరునామాలో భాష"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "సందర్శకులు మరియు సెర్చ్ ఇంజన్‌లు ప్రతిభాషను ఎలా చేరుకుంటాయి"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s కోసం చిరునామా పదం"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "డిఫాల్ట్ భాష చిరునామాలలో ఏ పదాన్ని కలిగి లేదు."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s కోసం డొమైన్ (ఐచ్ఛికం)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "ముందుగా డొమైన్‌ను ఈ సైట్‌కు సూచించండి. డొమైన్ లేని భాష మీ ప్రధాన డొమైన్‌లోని ఫోల్డర్‌ను ఉపయోగిస్తుంది."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "ప్రతి భాష ఇప్పుడు ఎక్కడ ఉంది"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "అనువదించబడిన చిరునామా పదాలు"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "పేజీ మరియు పోస్ట్ చిరునామాలు వాటి అనువదించబడిన శీర్షికల నుండి వస్తాయి. ఇక్కడ మీరు స్థిరమైన పదాలను అనువదిస్తారు, కాబట్టి /de/category/ బదులుగా /de/kategorie/ వస్తుంది."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (ఇప్పుడు \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "సెర్చ్ ఇంజిన్‌లు మరియు సందర్శకులు"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "చిన్న బ్యానర్‌తో సందర్శకులకు వారి స్వంత భాషను అందించండి (ఎప్పటికీ రీడైరెక్ట్ చేయవద్దు)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "శోధన యంత్రాల నుండి అనువదించని పేజీలను దాచండి (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "అసలైన టెక్స్ట్ ఇంకా ఉన్న అనువాదం, అది అనువదించబడే వరకు శోధన ఫలితాల నుండి ఉంచబడుతుంది."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "ట్రాంజ్లీ ప్రో (Tranzly Pro) లో భాగం."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly మీ సైట్‌మ్యాప్‌కు hreflang లింక్‌లను (x-defaultతో), పేజీ భాషను మరియు దిశను, మరియు ప్రతి భాషను జోడిస్తుంది:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "%s తో కలిసి పనిచేస్తోంది."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "ప్రతి చిరునామా పదం 2 నుండి 12 చిన్న అక్షరాలు, అంకెలు లేదా హైఫన్‌లను కలిగి ఉంటుంది."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "అడ్మిన్ మెనులోని Tranzly కింద రెండవ భాషను జోడించండి, మరియు స్విచ్చర్ ఇక్కడ కనిపిస్తుంది."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "స్విచ్చర్"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "డిఫాల్ట్‌గా ఆఫ్‌లో ఉంది: జెండా అనేది దేశం, భాష కాదు."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "అందుబాటులో ఉండే లేబుల్"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "స్క్రీన్ రీడర్‌లు ఏవి ప్రకటిస్తాయో, ఉదాహరణకు \"భాషను ఎంచుకోండి\"."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "వర్ణాలు"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "భాషా మారకం"
@@ -5345,16 +5896,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "సైట్ యొక్క ప్రతి భాషలో ఈ పేజీకి సంబంధించిన లింక్‌లు. రెండు లేదా అంతకంటే ఎక్కువ భాషలను జాబితా చేసే వరకు ఇది ఏదీ రెండర్ చేయదు."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "భాష"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "స్విచ్చర్"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "అనువాదం"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "సందర్శకులు ఈ పేజీని మీ ఇతర భాషలలో చదవడానికి అనుమతిస్తుంది: జాబితా, పిల్స్, బటన్‌లు, డ్రాప్‌డౌన్ లేదా భాషా కోడ్‌లు, ఐచ్ఛిక జెండాలతో."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "బహుభాషా"

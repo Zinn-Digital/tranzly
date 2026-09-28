@@ -176,6 +176,14 @@ final class Rest_Content {
 									'enum' => Options::STYLES,
 								),
 								'new_tab'  => array( 'type' => 'boolean' ),
+								'floating' => array(
+									'type' => 'string',
+									'enum' => Options::FLOATING,
+								),
+								'display'  => array(
+									'type' => 'string',
+									'enum' => Options::DISPLAYS,
+								),
 							),
 							'additionalProperties' => false,
 						),

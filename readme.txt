@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.8
+Stable tag: 3.0.9
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,12 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Fast:** a translated page adds at most two database queries and sets no cookie, so page caches keep working. This is measured automatically on every change.
 * **Security by design.** Every change needs the right permission and a valid request token; API keys are stored encrypted; the old version's "AI translated by Tranzly" link is off.
 * **A list of your site's languages.** Add languages by their WordPress locale code (for example `fr_FR`). The first one is the language your content is written in.
-* **A language switcher block** that links to the current page in each listed language, using a `lang` query parameter. It appears once two or more languages are listed.
+* **The language in the address: /de/, /fr/.** Each language gets its own folder, and translated pages keep their own translated address (/about/ becomes /de/ueber-uns/), including the category, tag and product base words. Two languages may even share a slug (/contact/ and /de/contact/). Old addresses without a folder and 3.0's `?lang=` links redirect permanently to the right page, so no search ranking is lost. With Pro, a subdomain (de.example.com) or a separate domain (example.de) per language.
+* **Multilingual SEO done right.** Correct hreflang links on every page, x-default included, reciprocal between every version; the page's html `lang` and right-to-left `dir`; `og:locale`; canonical addresses per language; and every language in your sitemap, whether WordPress draws it or Yoast SEO, Rank Math, SEOPress or All in One SEO. With Pro, untranslated copies can be kept out of search results, and a per-language SEO audit finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content.
+* **Suggest the visitor's language.** A small, dismissible banner offers a reader the page in their own language, written in that language. It never redirects anybody, so search engines see every page at its own address.
+* **Search in the visitor's language.** Site search, archives, the blog and category lists show the language being read.
+* **Language switchers everywhere.** A block for the block and site editors in five designs (list, pills, buttons, dropdown, language codes) with your own colours; a native Page Builder Sandwich element; a menu item and a widget for classic themes; a shortcode for anywhere else; and a floating button that works on any theme with no set-up. Each switcher links to this page's own translation in every language. With Pro, native widgets for Elementor and Bricks. (Bricks is a paid theme we could not install for testing: its element is built on Bricks' documented element interface and tested against a stand-in of it, while the Elementor widget is tested in Elementor itself.)
+* **Accessible switchers.** Keyboard and screen-reader friendly: each switcher is a named navigation landmark, every language is read in its own language, the current one is marked, and the dropdown works with Enter, Space, Tab and Escape. Flags are optional and off by default, because a flag is a country, not a language.
 * **A language API for other plugins**: `tranzly_languages()`, `tranzly_current_language()`, `tranzly_language_url()`, `tranzly_get_translation()` and `tranzly_translatable_attributes()`, with a read-only REST mirror under `tranzly/v1`. Blocks mark which attributes are translatable with `"role": "content"` in their block.json.
 * **Footprint-free front end.** The switcher's markup uses neutral class names that start with a short prefix (`zd` unless you change it), with no HTML comments or generator tags, and its styles are served from `wp-content/uploads/<prefix>-assets/` rather than the plugin's folder (inline if that folder cannot be written).
 * **Settings and About screen** under the Tranzly menu, including the beta-update status for licensed installations.
@@ -98,9 +103,20 @@ They are imported in the background the first time the new version runs. The old
 
 = How is the current language chosen? =
 
-From the `lang` query parameter when it names a listed language, then from the language of the post being viewed, then from a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
+From the address. With language folders (the default) /de/… is German and an address with no folder is your default language; with Pro, the subdomain or domain decides. A visitor's browser language never changes the page they get: it only lets Tranzly offer them their language in a small banner, which you can switch off under Tranzly → Addresses and SEO. Sites that prefer the older `?lang=de` style can choose it there; the language then comes from that parameter, then the post being viewed, then a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
+
+= Does it work with my SEO plugin? =
+
+Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves titles, descriptions and schema to your SEO plugin. It is tested with WordPress's own sitemap, Yoast SEO, Rank Math, SEOPress and All in One SEO.
 
 == Changelog ==
+
+= 3.0.9 =
+* Languages in the address: /de/, /fr/ folders with translated slugs and translated category, tag and product words; old addresses redirect permanently. Pro: a subdomain or a separate domain per language.
+* Multilingual SEO: reciprocal hreflang with x-default, html lang and right-to-left direction, og:locale, and every language in the sitemap of WordPress, Yoast SEO, Rank Math, SEOPress and All in One SEO. Pro: hide untranslated pages from search engines, and a per-language SEO audit.
+* A polite banner offers visitors their own language (never a redirect); site search, archives and menus show the visitor's language.
+* Language switchers: a block in five designs, a Page Builder Sandwich element, a menu item, a widget, a shortcode and a floating button; keyboard and screen-reader friendly, flags optional. Pro: Elementor and Bricks widgets.
+* Still at most two database queries per translated page, with WooCommerce too.
 
 = 3.0.8 =
 * AI core 1.0.2: an optional per-plugin hook on outgoing requests. Tranzly does not use it, so its requests are unchanged.

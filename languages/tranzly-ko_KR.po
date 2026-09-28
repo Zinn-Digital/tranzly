@@ -443,7 +443,7 @@ msgstr "AI가 아직 설정되지 않았습니다. AI 설정에서 AI 제공업�
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "이 작업에 선택된 모델이 없습니다. AI 설정에서 모델을 선택하세요."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "해당 AI 공급자는 이 플러그인 버전에서 지원되지 않습니다."
 
@@ -634,24 +634,25 @@ msgstr "한도 및 권한 저장"
 msgid "Limits and permissions saved."
 msgstr "제한 및 권한이 저장되었습니다."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "해당 언어는 이 사이트에서 지원하는 언어가 아닙니다."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "번역은 원본과 동일한 종류의 콘텐츠여야 합니다."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "사이트의 다른 언어 중 하나를 선택하세요."
 
@@ -664,6 +665,10 @@ msgid "This screen needs JavaScript."
 msgstr "이 화면을 보려면 JavaScript가 필요합니다."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "언어 선택"
 
@@ -727,7 +732,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "어조는 각 사이트 언어별로 설정됩니다. 기본 격식 수준에 더해 선택적 지침이 적용됩니다."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s의 값이 허용된 선택 항목 중 하나가 아닙니다."
@@ -755,21 +760,21 @@ msgid "You are not allowed to change that translation."
 msgstr "해당 번역은 변경하실 수 없습니다."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "이 항목의 그룹에 이미 %1$s 버전(#%2$d)이 있습니다."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "항목은 자기 자신의 번역일 수 없습니다."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "해당 항목은 이미 다른 항목의 번역본입니다. 먼저 연결을 해제하세요."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "번역 링크를 저장할 수 없습니다."
 
@@ -2927,6 +2932,7 @@ msgstr "이 플러그인에는 더 최신 버전의 PHP가 필요합니다."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "아니오"
 
@@ -4188,6 +4194,7 @@ msgstr "타임스탬프"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "제목"
 
@@ -4939,6 +4946,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s전"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "언어 제안"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "이 페이지는 %s(으)로도 제공됩니다."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "%s에서 읽기"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "괜찮습니다"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "주소에 언어가 표시되는 방식을 폴더, 서브도메인, 별도 도메인 또는 쿼리 매개변수 중에서 선택하세요."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "언어별 서브도메인과 개별 도메인은 Tranzly Pro에 포함되어 있습니다."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "언어 폴더는 목록 형태여야 합니다."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\"은(는) 언어 폴더가 될 수 없습니다. 모든 언어에 대해 고유한 2~12자의 소문자, 숫자 또는 하이픈을 사용하세요. WordPress에서 이미 사용하는 단어여서는 안 됩니다."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "도메인은 목록 형태여야 합니다."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\"은(는) example.de와 같은 도메인 이름이 아닙니다."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "각 언어마다 고유한 도메인이 필요합니다."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "번역된 주소 단어는 목록이어야 합니다."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "번역된 주소 단어는 언어별로 나열되어야 합니다."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\"은(는) 주소에 사용할 수 없습니다. 소문자, 숫자, 하이픈만 사용할 수 있습니다."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "이 설정은 켜져 있거나 꺼져 있습니다."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "검색엔진에서 번역되지 않은 페이지를 숨기는 기능은 Tranzly Pro에 포함되어 있습니다."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "언어 전환기"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "언어 (하위 메뉴)"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "언어 (나란히 보기)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "메뉴에 추가"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "귀하의 사이트에서 이 항목은 사이트의 언어들을 표시하며, 각 언어는 해당 언어로 된 현재 페이지로 연결됩니다."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "각 언어별 이 페이지로 향하는 링크입니다."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "언어 이름"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "언어 코드"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "이름 및 코드"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "디자인"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "각 언어 표시:"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "국기 표시 (국기는 언어가 아닌 국가를 의미함)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "목록"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "알약"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "버튼"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "드롭다운"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "언어 코드"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "플래그"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "현재 언어 포함"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "이 페이지가 번역되지 않은 언어 숨기기"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "세로로 정렬"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "접근성 레이블"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "텍스트"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "배경"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "현재 언어 텍스트"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "현재 언어 배경"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "테두리"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "모서리 반경"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "언어 간 간격"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "텍스트 크기"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "스위처"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd의 CEO인 Neil Lock이 제작함"
@@ -4959,6 +5227,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® 웹사이트"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "설정이 저장되었습니다."
 
@@ -5291,6 +5560,7 @@ msgid "What went wrong"
 msgstr "문제가 발생한 원인"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "문제 해결"
 
@@ -5310,31 +5580,312 @@ msgstr "다시 시도"
 msgid "Translate by hand"
 msgstr "수동 번역"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "언어 및 설정"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "엔진"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "번역 작업"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "주소 및 SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "언어 전환기"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO 감사"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "메타 설명 없음"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "방문자가 열 수 없는 언어 버전(초안, 비공개 또는 비밀번호 설정)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "해당 주소는 여전히 원래 단어를 사용합니다"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "여전히 원본 텍스트를 유지하고 있습니다"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "다국어 SEO 감사는 Tranzly Pro의 일부입니다. 누락된 메타 설명, 깨진 hreflang, 번역되지 않은 주소 및 언어별 중복 콘텐츠를 찾아냅니다."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "감사 언어"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "감사 실행"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "다음 페이지 확인"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d개의 페이지를 확인했으며, %2$d개의 문제가 발견되었습니다."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "전체 언어가 검토되었습니다."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "페이지"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "문제"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "편집"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "플로팅 스위처"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "모든 테마에서, 설정 없이, 모든 페이지 구석에 들어가는 작은 버튼입니다."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "위치"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "꺼짐"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "하단 모서리, 끝면"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "하단 모서리, 시작 쪽"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "상단 모서리, 끝 면"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "시작 측면 상단 모서리"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "콘텐츠 전환기"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "모든 게시물과 페이지에 전환기 추가"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "콘텐츠 이전"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "콘텐츠 이후"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "전환기를 추가하는 다른 방법"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "블록 편집기 및 사이트 편집기: 5가지 디자인의 “언어 전환기” 블록입니다."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: “언어 전환기” 요소."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "메뉴: 외모 → 메뉴 → \"언어 전환기\" 상자."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "사이드바: '언어 전환기' 위젯."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "그 외 다른 위치의 숏코드:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor와 Bricks: 각 빌더의 “언어 전환기(Language switcher)” 위젯."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor 및 Bricks 위젯은 Tranzly Pro에 포함되어 있습니다."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "저장"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "언어별 폴더: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "언어별 서브도메인: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "언어별 개별 도메인: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "쿼리 매개변수: example.com/?lang=de (구형 사이트)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "카테고리"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "태그"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "제품"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "제품 카테고리"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "제품 태그"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "저장되었습니다. 언어 주소가 아래와 같이 변경되었습니다."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "주소의 언어"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "방문자와 검색엔진이 각 언어에 도달하는 방법"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s의 주소 단어"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "기본 언어의 주소에는 단어가 없습니다."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s의 도메인 (선택 사항)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "먼저 이 사이트에 도메인을 연결하세요. 도메인이 없는 언어는 메인 도메인의 폴더를 사용합니다."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "각 언어가 현재 위치한 곳"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "번역된 주소 단어"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "페이지 및 게시물 주소는 번역된 제목에서 생성됩니다. 여기서는 고정된 단어를 번역하므로 /de/category/가 /de/kategorie/로 대체됩니다."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (현재 \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "검색 엔진 및 방문자"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "방문자에게 작은 배너(리다이렉트 아님)로 본인의 언어를 제공하세요"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "검색엔진에서 번역되지 않은 페이지 숨기기 (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "원문이 유지된 번역은 번역될 때까지 검색 결과에서 제외됩니다."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly Pro의 기능."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly는 hreflang 링크(x-default 포함), 페이지 언어 및 방향, 그리고 모든 언어를 사이트맵에 추가합니다."
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "공동 작업 대상: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "각 주소 단어는 2~12자의 소문자, 숫자 또는 하이픈으로 구성됩니다."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "관리 메뉴의 Tranzly 아래에 두 번째 언어를 추가하면 여기에 언어 전환기가 나타납니다."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "스위처"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "기본값으로 꺼짐: 국기는 국가를 나타내며 언어를 나타내지 않습니다."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "접근성 레이블"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "스크린 리더가 읽어주는 내용(예: \"언어 선택\")."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "색상"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "언어 전환기"
@@ -5345,16 +5896,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "사이트의 각 언어별 이 페이지로 향하는 링크입니다. 두 개 이상의 언어가 나열될 때까지 아무것도 표시되지 않습니다."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "언어"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "스위처"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "번역"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "방문자가 다른 언어로 이 페이지를 읽을 수 있도록 지원합니다. 목록, 필브, 버튼, 드롭다운 또는 언어 코드 중에서 선택할 수 있으며, 국기 표시는 선택 사항입니다."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "다국어"

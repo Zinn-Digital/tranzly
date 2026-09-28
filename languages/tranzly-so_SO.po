@@ -442,7 +442,7 @@ msgstr "AI-gu wali lama habayn. Ku dar furaha bixiyaha AI dejinta AI."
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Hawushan ma jiro nooc la doortay. Ka dooro mid ka mid ah dejinta AI."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Bixiyaha AI-gaas laguma taageero noocaan ah ee qalab-kordhiinta."
 
@@ -634,24 +634,25 @@ msgstr "Kaydi xadka iyo ogolaanshaha"
 msgid "Limits and permissions saved."
 msgstr "Xadka iyo fasaxyada waa la keydiyay."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Luqaddaasi ma aha mid ka mid ah luqadaha boggan."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Turjumaaddu waa inay noqotaa nooca la mid ah nuxurka asalka ah."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Dooro mid ka mid ah luqadaha kale ee mareegta."
 
@@ -664,6 +665,10 @@ msgid "This screen needs JavaScript."
 msgstr "Shaarkani wuxuu u baahan yahay JavaScript."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Dooro luuqad"
 
@@ -727,7 +732,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Qaabka waxa loo dejiyaa iyadoo la raacayo luqadda bogga: heerka caadiga ah ee rasmi ahaanshaha, in ka badan ama ka yar, oo lagu daray tilmaamo ikhtiyaari ah."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Qiimaha %s maaha mid ka mid ah fursadaha la oggol yahay."
@@ -755,21 +760,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Adigu uma oggolidhidh inaad beddesho turjumaaddaas."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Kooxda shaygan waxay horey u leedahay nooca %1$s (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Hanti la mid ah ma noqon karto turjumaaddeeda."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Sheygaas waa horay turjumaad shay kale. Marka hore iska fur isku xidhkiisa."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Xiriirinta turjumaadda lama keydinin."
 
@@ -2930,6 +2935,7 @@ msgstr "Plugin-kani wuxuu u baahan yahay nuquc cusub oo PHP ah."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Maya"
 
@@ -4197,6 +4203,7 @@ msgstr "Waqtiga la duubay"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Ciwaan"
 
@@ -4950,6 +4957,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s ka hor"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Tusaalaha luqadda"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Boggan sido kale waxaa lagu heli karaa %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Ku aqri %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Maya mahad sanid"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Dooro sida luuqaduhu uga muuqdaan cinwaanadaada: galka, subdomain-ka, domain gooni ah ama query parameter."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Subdomains iyo domains gooni ah luqad kasta waa qayb ka mid ah Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Grovaha luqaddu waa inay noqdaan liis."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" ma noqon karo galka luqadda. Isticmaal 2 ilaa 12 xaraf oo yar, nambaro ama xariijimo, mid kasta oo luqad ahna waa inuu ka duwanaado, mana aha erey uu WordPress hore u isticmaalay."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Waxa uu domain-ku noqon doonaa liis."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" ma aha magac domain ah, sida example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Luqad kastaa waxay u baahan tahay domainkeeda gaarka ah."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Ciwaanka la turjumay waa inay noqdaan liis."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Erayada ciwaanka la turjumay waa in lagu qoraa luqad kasta."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" lama isticmaali karo ciwaanka. Isticmaal xarfaha yar yar, nambarada iyo xariiqda hoose."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Dejintaan waa mid shaqaynaysa ama dansan."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Bogagga aan la turjumin ee laga qariyo mashiinnada raadinta waa qayb ka mid ah Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Beddelaha luqadda"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Luqadaha"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Luqadaha (isku dhinac yaalla)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Ku dar Liiska"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Goobtaada, shaygan wuxuu muujinayaa luqadaha goobta, mid walba oo ka mid ah wuxuu ku xirayaa bogga hadda ku jira luqaddaas."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Xiriiriyeyaasha boggan ee luqad kasta oo ka mid ah luqadahaaga."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Magaca luqadda"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Aamadda luqadda"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Magaca iyo koodka"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Naqshadeyn"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Mid kasta oo ka mid ah luqadaha u muuji sida"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Muuji calammada (calanku waa waddan, ee ma aha luqad)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Liiska"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Kiniiniyada"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Badhamada"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Liiska hoos-u-dhaca"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Codes of the language"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Calanmadaha"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Ku dar luuqadda hadda jirta"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Qari luuqadaha aan boggan lagu tarjumin"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Ku dheji taagan"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Calaamadda la heli karo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Qoraal"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Asalka"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Luqadda hadda taagan"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Asalka luqadda ee hadda jira"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Xudduud"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Geeska wareegga"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Isku xirka luqadaha"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Cabirka qoraalka"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Beddelaha"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Waxaa dhisay Neil Lock, oo ah madaxa fulinta ee Zinn Digital® Ltd"
@@ -4969,6 +5237,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® website"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Dejinta waa la keydiyay."
 
@@ -5301,6 +5570,7 @@ msgid "What went wrong"
 msgstr "Wixii khaldamay"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Hagaaji"
 
@@ -5320,31 +5590,312 @@ msgstr "Isku day mar kale"
 msgid "Translate by hand"
 msgstr "Ku turjun gacanta"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Luqadaha iyo dejinta"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Mashiinnada"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Shaqooyinka turjumaada"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Ciwaannada iyo SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Beddelaha luqadda"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO xisaabtan"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Ma jiro sharaxaad kooban oo ku saabsan bogga (meta description)."
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Noocyada luqadda ee ay booqdayashu aysan furan karin (qabyo, gaar ah ama erayga sirta ah)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Cinwaanku wuxuu weli isticmaalayaa erayadii asalka ahaa"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Weli waxa ay haysaa qoraalkii asalka ahaa"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Hantishowrka SEO ee luuqadaha badan waa qayb ka mid ah Tranzly Pro. Wuxuu helayaa sharraxaadyada meta ee maqan, hreflang ee jabtay, cinwaannada aan la turjumin iyo nuxurka labanlaabantay, luuqad kasta."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Luqadda la hubinayo"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Samee hanti-dhawrka"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Hubi bogagga xiga"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d bogoc ayaa la hubiyay, %2$d dhibaatooyin ayaa la helay."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "Luqadda oo dhan waa la hubiyay."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Bogga"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Dhibaato"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Wax ka beddel"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Isku-beddelaha sabeynaya"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Badhan yar oo ku yaal gees kasta oo ka mid ah bog kasta, oo ku saabsan mawduuc kasta, iyada oo aan lahayn habeyn."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Halkee"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Damן"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Geeska hoose, dhinaca dhammaadka"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Geeska hoose, dhinaca billowga"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Geeska sare, dhinaca dhammaadka"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Geeska sare, dhinaca billowga"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Beddelaha ku xeeran waxyaabaha ku jira"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Ku dar badalaha qoraal iyo bog kasta"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Kahintii wax ku jira"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Intoo ka dambeeya waxa ku jira"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Hababka kale ee lagu daro beddelaha"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Tifaftiraha xannibaadda iyo tifaftiraha bogga: xannibaadda \"Beddelaha luqadda\" (Language switcher), oo wata shan naqshadood."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: shayga \"Language switcher\"."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Liiska: Muuqaalka → Liiska → Sanduuqa “Badalaha luqadda”."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Qaybaha dhinaca: agabka \"Luuqad beddelaha\"."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Meelkasta oo kale, calaamadda gaaban:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor iyo Bricks: widgets-ka \"Language switcher\" ee dhisme kasta."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Widgets-ka Elementor iyo Bricks waxay qayb ka yihiin Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Kaydi"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Hal galka luqad kasta: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Luqad kasta waxaa u gaar ah hal subdomain: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Domain gooni ah luuqad kasta: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Halbeeg su'aal: example.com/?lang=de (bogagga duugga ah)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Qeybta"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Calaamadii"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Badeecad"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Nooca badeecada"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Astaanta badeecada"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "La kaydiyay. Ciwaanada luqaddaada waa la bedelay sida hoos ka muuqata."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Luqadda cinwaanka"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Sida dadka soo booqday iyo mashiinnada raadinta ay ku gaaraan luqad kasta"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Erayga ciwaanka ee %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "Luuqadda caadiga ah ma laha eray ku jira ciwaannadeeda."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Domain-ka loogu talagalay %s (ikhtiyaari)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Markanka hore barta domain-ka ku hagaaji boggan. Luqad aan lahayn domain waxay isticmaashaa galka ku yaal domain-kaaga ugu weyn."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Halkay luqad kastaa hadda ku nooshahay"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Erayada cinwaanka la turjumay"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Ciwaanada bogagga iyo qoraallada waxay ka yimaadaan cinwaannadooda la turjumay. Halkaan waxaad ku turjumaysaa ereyada go'an, markaa /de/kategorie/ wuxuu beddelayaa /de/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (hadda “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Mashiinnada raadinta iyo booqdayaasha"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "U soo bandhig booqashooyinka luuqadooda oo wata calaamad yar (waligoodna ha u leexin dhinaca kale)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Ka qari bogagga aan la turjumin mashiinnada raadinta (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Turjumaad ay ku jirto qoraalkii asalka ahaa waxaa laga reebaa natiijooyinka raadinta ilaa inta la turjumayo."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Qayb ka mid ah Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly waxay ku darsataa xiriirinta hreflang (oo leh x-default), luqadda bogga iyo jihada, iyo luqad kasta sitemap-kaaga:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "La shaqaynaya: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Eray kasta oo cinwaan ah waa 2 ilaa 12 xaraf oo yar, nambaro, ama xariijimo gaaban."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Ku dar luqad labaad hoos yimaada Tranzly oo ku taal menu-ga maamulka, beddelaha ayaana halkan ka muuqan doona."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Beddelaha"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Way ku xiran yahay asal ahaan: calanka waa waddan, ee ma aha luqad."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Calaamadda la heli karo"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Waxa ay akhristayaasha shaashaduhu ku dhawaaqaan, tusaale ahaan “Dooro luqad”."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Midabada"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Beddelaha luqadda"
@@ -5355,16 +5906,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Xiriirinta boggan ee luqad kasta oo ka mid ah luqadaha mareegta. Ma soo bandhigto wax ilaa inta laba luqadood ama ka badan la liis gareeyo."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Luqadda"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "beddelaha"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "turjumid"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "U oggolaado dadka soo booqday inay boggan ku akhriyaan luqadahaaga kale: liis, kaniiniyada, badhamada, liiska la soo dejiyo ama koodhadhka luqadda, oo ay la socdaan calamo ikhtiyaari ah."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "luqadaha badan"

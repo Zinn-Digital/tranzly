@@ -40,7 +40,10 @@ final class Blocks {
 	 */
 	public static function register_blocks(): void {
 		$asset_file = TRANZLY_DIR . 'build/editor.asset.php';
-		if ( is_readable( $asset_file ) ) {
+		// The editor script exists for the editor (wp-admin, and REST for its previews); a
+		// visitor's page never loads it, and registering it there starts WordPress's script
+		// machinery early for nothing (measured: one extra query per page, the speed promise).
+		if ( ! Seo\Router::is_front() && is_readable( $asset_file ) ) {
 			$asset = require $asset_file;
 			wp_register_script(
 				self::EDITOR_HANDLE,

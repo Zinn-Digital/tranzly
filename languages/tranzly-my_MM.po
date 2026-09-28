@@ -442,7 +442,7 @@ msgstr "AI ကို မသတ်မှတ်ရသေးပါ။ AI ဆက်�
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "ဤလုပ်ဆောင်ချက်အတွက် မော်ဒယ်ကို မရွေးချယ်ရသေးပါ။ AI ဆက်တင်များတွင် တစ်ခုကို ရွေးပါ။"
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "ထို AI ပံ့ပိုးပေးသူကို ဤပလပ်အင် ဗားရှင်းဖြင့် မပံ့ပိုးပါ။"
 
@@ -633,24 +633,25 @@ msgstr "ကန့်သတ်ချက်များနှင့် ခွင�
 msgid "Limits and permissions saved."
 msgstr "ကန့်သတ်ချက်များနှင့် ခွင့်ပြုချက်များကို သိမ်းဆည်းပြီးပါပြီ။"
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ထိုဘာသာစကားသည် ဤဆိုက်၏ ဘာသာစကားများထဲတွင် မပါဝင်ပါ။"
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "ဘာသာပြန်ဆိုချက်တစ်ခုသည် မူရင်းအကြောင်းအရာနှင့် အမျိုးအစား တူညီရမည်။"
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "ဆိုက်၏ အခြားဘာသာစကားများထဲမှ တစ်ခုကို ရွေးချယ်ပါ။"
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "ဤမျက်နှာပြင်သည် JavaScript ကို လိုအပ်ပါသည်။"
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "ဘာသာစကားကို ရွေးချယ်ပါ"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "သံကို ဆိုက်ဘာသာစကားအလိုက် သတ်မှတ်သည်- ပုံစံတကျဖြစ်မှု ပုံသေ၊ အများအပြား သို့မဟုတ် အနည်းငယ်၊ ထို့ပြင် ရွေးချယ်နိုင်သော ညွှန်ကြားချက်များ။"
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "%s အတွက် တန်ဖိုးသည် ခွင့်ပြုထားသော ရွေးချယ်မှုများထဲတွင် မပါဝင်ပါ။"
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "ထိုဘာသာပြန်ချက်ကို ပြောင်းလဲခွင့်မရှိပါ။"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "ဤပစ္စည်း၏ အုပ်စုတွင် %1$s ဗားရှင်း (#%2$d) ရှိနှင့်ပြီးသား ဖြစ်ပါသည်။"
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "ပစ္စည်းတစ်ခုသည် မိမိကိုယ်တိုင်၏ ဘာသာပြန်ချက် မဖြစ်နိုင်ပါ။"
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "ထိုပစ္စည်းသည် အခြားအရာတစ်ခု၏ ဘာသာပြန်ဆိုမှုဖြစ်ပြီးသားဖြစ်သည်။ ဦးစွာ ၎င်းကို ချိတ်ဆက်မှုဖြုတ်ပါ။"
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "ဘာသာပြန်လင့်ခ်ကို သိမ်းဆည်း၍မရပါ။"
 
@@ -2926,6 +2931,7 @@ msgstr "ဤပလပ်အင်အတွက် PHP ဗားရှင်းအ�
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "မဟုတ်ပါ"
 
@@ -4187,6 +4193,7 @@ msgstr "အချိန်တံဆိပ်"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "ခေါင်းစဉ်"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s ကတည်းက"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "ဘာသာစကား အကြံပြုချက်"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "ဤစာမျက်နှာကို %s ဖြင့်လည်း ရရှိနိုင်ပါသည်။"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "%s တွင် ဖတ်ပါ"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "ကျေးဇူးတင်ပါတယ်၊ မလိုပါဘူး။"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "သင့်လိပ်စာများတွင် ဘာသာစကားများ မည်သို့ပေါ်လာမည်ကို ရွေးချယ်ပါ- ဖိုဒါတစ်ခု၊ စာဗ်ဒိုမိန်းတစ်ခု၊ သီးခြားဒိုမိန်းတစ်ခု သို့မဟုတ် ကွာရီပါရာမီတာတစ်ခု။"
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "ဘာသာစကားအလိုက် ဒိုမိန်းခွဲများနှင့် သီးခြားဒိုမိန်းများသည် Tranzly Pro ၏ အစိတ်အပိုင်းတစ်ခု ဖြစ်ပါသည်။"
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "ဘာသာစကား ဖိုင်တွဲများသည် စာရင်းတစ်ခု ဖြစ်ရပါမည်။"
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" သည် ဘာသာစကား ဖိုင်တွဲ မဖြစ်နိုင်ပါ။ ဘာသာစကားတိုင်းအတွက် မတူညီသော၊ WordPress အသုံးပြုပြီးသား စကားလုံးမဟုတ်သော စာလုံးအသေး ၂ လုံးမှ ၁၂ လုံး၊ ဂဏန်းများ သို့မဟုတ် စာတိုမျဉ်းများကို အသုံးပြုပါ။"
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "ဒိုမိန်းများသည် စာရင်းတစ်ခု ဖြစ်ရပါမည်။"
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" သည် example.de ကဲ့သို့သော ဒိုမိန်းအမည် မဟုတ်ပါ။"
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "ဘာသာစကားတိုင်းတွင် ၎င်း၏ကိုယ်ပိုင် ဒိုမိန်းတစ်ခု လိုအပ်ပါသည်။"
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "ဘာသာပြန်ထားသော လိပ်စာစကားလုံးများသည် စာရင်းတစ်ခု ဖြစ်ရမည်။"
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "ဘာသာပြန်ထားသော လိပ်စာစကားလုံးများကို ဘာသာစကားတစ်ခုချင်းစီအလိုက် စာရင်းပြုစုရပါမည်။"
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" ကို လd်းလိပ်စာတွင် အသုံးမပြုနိုင်ပါ။ စာလုံးသေးများ၊ ဂဏန်းများနှင့် စာတိုမျဉ်းများကို အသုံးပြုပါ။"
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "ဤဆက်တင်ကို ဖွင့်ထားသည် သို့မဟုတ် ပိတ်ထားသည်။"
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "ရှာဖွေရေးအင်ဂျင်များမှ ဘာသာမပြန်ရသေးသော စာမျက်နှာများကို ဖုံးကွယ်ထားခြင်းသည် Tranzly Pro ၏ တစ်စိတ်တစ်ပိုင်း ဖြစ်ပါသည်။"
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "ဘာသာစကားပြောင်းစက်"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "ဘာသာစကားများ (ခွဲမီနူးအဖြစ်)"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "ဘာသာစကားများ (ဘေးချင်းယှဉ်လျက်)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "မီနူးသို့ ထည့်ရန်"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "သင့်ဆိုဒ်တွင်၊ ဤအရာသည် ဆိုဒ်၏ဘာသာစကားများကို ပြသပေးပြီး၊ တစ်ခုချင်းစီက လက်ရှိစာမျက်နှာကို သက်ဆိုင်ရာဘာသာစကားဖြင့် ချိတ်ဆက်ပေးထားပါသည်။"
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "သင့်ဘာသာစကားတစ်ခုချင်းစီရှိ ဤစာမျက်နှာသို့ ချိတ်ဆက်မှုများ။"
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "ဘာသာစကားအမည်"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "ဘာသာစကား ကုဒ်"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "အမည်နှင့် ကုဒ်"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "ဒီဇိုင်း"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "ဘာသာစကားတစ်ခုချင်းစီကို ပြသရန်"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "အလံများကို ပြပါ (အလံဆိုသည်မှာ ဘာသာစကားမဟုတ်ဘဲ နိုင်ငံကို ဆိုလိုသည်)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "စာရင်း"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "ဆေးလုံးများ"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "ခလုတ်များ"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "ဆိုင်းဘုတ်ပိတ်စာအုပ်စု"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "ဘာသာစကား ကုဒ်များ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "အလံများ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "လက်ရှိဘာသာစကားကို ထည့်သွင်းပါ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "ဤစာမျက်နှာကို ဘာသာမပြန်ဆိုထားသော ဘာသာစကားများကို ဖျောက်ထားပါ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "ဒေါင်လိုက် စီစဉ်ရန်"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "သုံးစွဲနိုင်သော အညွှန်း"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "စာသား"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "နောက်ခံ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "လက်ရှိဘာသာစကား စာသား"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "လက်ရှိ ဘာသာစကား နောက်ခံ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "ဘောင်"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "ထောင့် အချင်းဝက်"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "ဘာသာစကားများကြားရှိ နေရာလပ်"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "စာသား အတိုင်းအတာ"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "ပြောင်းလဲစက်"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Zinn Digital® Ltd ၏ CEO ဖြစ်သူ Neil Lock မှ တည်ဆောက်သည်"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "Zinn Digital® ဝက်ဘ်ဆိုက်"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "ဆက်တင်များကို သိမ်းဆည်းပြီးပါပြီ။"
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "ဘာမှားသွားသလဲ"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "ပြင်ဆင်ပါ"
 
@@ -5308,31 +5578,312 @@ msgstr "ထပ်ကြိုးစားရန်"
 msgid "Translate by hand"
 msgstr "လက်ဖြင့် ဘာသာပြန်ရန်"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "ဘာသာစကားများနှင့် ဆက်တင်များ"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "အင်ဂျင်များ"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "ဘာသာပြန်လုပ်ငန်းများ"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "လိပ်စာများနှင့် SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "ဘာသာစကားပြောင်းစက်များ"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO စာရင်းစစ်ဆေးခြင်း"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "မီတာဖော်ပြချက် မရှိပါ"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "ဧည့်သည်များ ဖွင့်၍မရနိုင်သော ဘာသာစကား ဗားရှင်း (မူကြမ်း၊ သီးသန့် သို့မဟုတ် စကားဝှက်)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "လိပ်စာတွင် မူရင်းစကားလုံးများကို အသုံးပြုထားဆဲဖြစ်ပါသည်"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "မူရင်းစာသားအတိုင်း ဆဲလ်ဆက်လက်တည်ရှိနေဆဲဖြစ်သည်"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "ဘာသာစကားမျိုးစုံ SEO စစ်ဆေးမှုသည် Tranzly Pro ၏ အစိတ်အပိုင်းတစ်ခု ဖြစ်သည်။ ၎င်းသည် ဘာသာစကားအလိုက် ပျောက်ဆုံးနေသော meta description များ၊ ပျက်စီးနေသော hreflang၊ ဘာသာမပြန်ရသေးသော လိပ်စာများနှင့် ထပ်နေသော အကြောင်းအရာများကို ရှာဖွေပေးသည်။"
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "စာရင်းစစ်ရန် ဘာသာစကား"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "စစ်ဆေးမှုလုပ်ဆောင်ရန်"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "နောက်စာမျက်နှာများကို စစ်ဆေးပါ"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "စာမျက်နှာ %1$d ခု စစ်ဆေးပြီး၊ ပြဿနာ %2$d ခု တွေ့ရှိခဲ့သည်။"
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "ဘာသာစကားတစ်ခုလုံးကို စစ်ဆေးပြီးပါပြီ။"
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "စာမျက်နှာ"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "ပြဿနာ"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "ပြင်ဆင်ရန်"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "မျောပါနေသော ပြောင်းစက်"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "ပြင်ဆင်မှု မလိုအပ်ဘဲ မည်သည့် အပြင်အဆင်တွင်မဆို၊ စာမျက်နှာတိုင်း၏ ထောင့်တစ်နေရာတွင် ရှိသော ခလုတ်ငယ်လေးတစ်ခု။"
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "ဘယ်နေရာမှာ"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "ပိတ်ထားသည်"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "အောက်ခြေထောင့်၊ အဆုံးဘက်"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "အောက်ခြေထောင့်၊ စတင်သည့်ဘက်"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "အပေါ်ဘက်ထောင့်၊ နောက်ဆုံးဘက်ခြမ်း"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "ထိပ်စွန်း၊ အစပြုဘက်"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "အကြောင်းအရာပတ်လည်ရှိ ခလုတ်"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "ပို့စ်နှင့် စာမျက်နှာတိုင်းတွင် ပြောင်းလဲပေးသည့်ခလုတ်တစ်ခု ထည့်ပါ"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "အကြောင်းအရာမတိုင်မီ"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "အကြောင်းအရာပြီးနောက်တွင်"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "switcher တစ်ခု ထည့်ရန် အခြားနည်းလမ်းများ"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Block အယ်ဒီတာနှင့် Site အယ်ဒီတာ - ဒီဇိုင်းငါးမျိုးပါဝင်သော “Language switcher” block။"
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich- “ဘာသာစကား ပြောင်းလဲကိရိယာ” အစိတ်အပိုင်း။"
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "မီနူးများ- ပုံစံသွင်ပြင် → မီနူးများ → “ဘာသာစကားပြောင်းစက်” အကွက်။"
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "ဘေးဘောင်များ- “ဘာသာစကားပြောင်းစက်” ဝစ်ဂျက်။"
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "အခြားနေရာများတွင်၊ shortcode:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor နှင့် Bricks- တည်ဆောက်သူတစ်ခုစီရှိ “Language switcher” ဝစ်ဂျက်။"
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Elementor နှင့် Bricks ဝစ်ဂျက်များသည် Tranzly Pro ၏ အစိတ်အပိုင်းများ ဖြစ်ပါသည်။"
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "သိမ်းဆည်းရန်"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(ပရို)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "ဘာသာစကားတစ်ခုလျှင် ဖိုင်တွဲတစ်ခု- example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "ဘာသာစကားတစ်ခုလျှင် ဒိုမိန်းခွဲတစ်ခုစီ- de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "ဘာသာစကားတစ်ခုလျှင် သီးသန့်ဒိုမိန်းတစ်ခုစီ- example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "မေးမြန်းမှု ကန့်သတ်ချက် (query parameter): example.com/?lang=de (ဝဘ်ဆိုက်ဟောင်းများ)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "အမျိုးအစား"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "တဂ်"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "ထုတ်ကုန်"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "ထုတ်ကုန်အမျိုးအစား"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "ထုတ်ကုန်တံဆိပ်"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "သိမ်းဆည်းပြီးပါပြီ။ သင်၏ ဘာသာစကား လိပ်စာများသည် အောက်ပါအတိုင်း ပြောင်းလဲသွားပါပြီ။"
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "လိပ်စာအတွင်းရှိ ဘာသာစကား"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "ဧည့်သည်များနှင့် ရှာဖွေရေးအင်ဂျင်များ ဘာသာစကားတစ်ခုစီသို့ ရောက်ရှိပုံ"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "%s အတွက် လိပ်စာစကားလုံး"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "မူလဘာသာစကားတွင် ၎င်း၏ လိပ်စာများ၌ စကားလုံး မရှိပါ။"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "%s အတွက် ဒိုမိန်း (စိတ်ကြိုက်)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "ဤဆိုက်သို့ ဒိုမိန်းကို ဦးစွာ ညွှန်ပြပါ။ ဒိုမိန်းမရှိသော ဘာသာစကားတစ်ခုသည် သင့်ပင်မဒိုမိန်းပေါ်ရှိ ဖိုဒါတစ်ခုကို အသုံးပြုပါသည်။"
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "ဘာသာစကားတစ်ခုစီ ယခုရှိနေသည့်နေရာ"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "ဘာသာပြန်ထားသော လိပ်စာစကားလုံးများ"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "စာမျက်နှာနှင့် ပို့စ်လိပ်စာများသည် ၎င်းတို့၏ ဘာသာပြန်ထားသော ခေါင်းစဉ်များမှ လာပါသည်။ ဤနေရာတွင် သင်သည် ပုံသေစကားလုံးများကို ဘာသာပြန်ပေးရမည်ဖြစ်ပြီး၊ ထို့ကြောင့် /de/category/ နေရာတွင် /de/kategorie/ က အစားထိုးဝင်ရောက်မည်ဖြစ်သည်။"
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (ယခုအခါ \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "ရှာဖွေရေးအင်ဂျင်များနှင့် ဧည့်သည်များ"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "လာရောက်လည်ပတ်သူများအား သေးငယ်သောဘန်နာတစ်ခုဖြင့် (ပြန်ညွှန်းခြင်းမဟုတ်ဘဲ) ၎င်းတို့၏ကိုယ်ပိုင်ဘာသာစကားကို ပေးဆောင်ပါ"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "ရှာဖွေရေးအင်ဂျင်များမှ ဘာသာမပြန်ရသေးသော စာမျက်နှာများကို ဖုံးကွယ်ပါ (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "မူရင်းစာသား ပါရှိနေဆဲဖြစ်သော ဘာသာပြန်ဆိုချက်တစ်ခုကို ဘာသာပြန်ဆိုပြီးသည်အထိ ရှာဖွေမှုရလဒ်များတွင် မပေါ်စေဘဲ ဖယ်ထားမည်။"
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Tranzly Pro ၏ အစိတ်အပိုင်း။"
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly က hreflang လင့်ခ်များ (x-default ပါဝင်သည်)၊ စာမျက်နှာ ဘာသာစကားနှင့် ဦးတည်ချက်၊ ထို့ပြင် ဘာသာစကား တိုင်းကို သင်၏ sitemap ထဲသို့ ပေါင်းထည့်ပေးပါသည်-"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "%s နှင့် ပူးပေါင်းဆောင်ရွက်လျက်ရှိသည်။"
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "လိပ်စာစကားလုံး တစ်လုံးချင်းစီတွင် စာလုံးအသေး၊ ဂဏန်း သို့မဟုတ် ဟိုက်ဖန်း ၂ လုံးမှ ၁၂ လုံး ပါဝင်ရမည်။"
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "စီမံခန့်ခွဲသူ မီနူးရှိ Tranzly အောက်တွင် ဒုတိယဘာသာစကားတစ်ခုကို ထည့်ပါ၊ သို့မှသာ ပြောင်းစက်သည် ဤနေရာတွင် ပေါ်လာမည်ဖြစ်သည်။"
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "ပြောင်းလဲစက်"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "မူလအားဖြင့် ပိတ်ထားသည်- အလံသည် ဘာသာစကားမဟုတ်ဘဲ နိုင်ငံတစ်ခု ဖြစ်သည်။"
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "သုံးစွဲနိုင်သော အညွှန်း"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "မျက်နှာပြင်ဖတ်စက်များက ကြေညာသည့်အရာ၊ ဥပမာအားဖြင့် \"ဘာသာစကားတစ်ခုကို ရွေးပါ\"။"
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "အရောင်များ"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "ဘာသာစကားပြောင်းစက်"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "ဆိုဒ်၏ ဘာသာစကားတစ်ခုချင်းစီရှိ ဤစာမျက်နှာသို့ လင့်ခ်များ။ ဘာသာစကား နှစ်ခု သို့မဟုတ် ထို့ထက်ပို၍ စာရင်းမပြုစုမချင်း ၎င်းသည် ဘာမျှမပြပါ။"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "ဘာသာစကား"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "ပြောင်းလဲစက်"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "ဘာသာပြန်ဆိုချက်"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "ဝင်ရောက်ကြည့်ရှုသူများကို ဤစာမျက်နှာအား သင့်ဘာသာစကားများအနက် အခြားဘာသာစကားတစ်ခုဖြင့် ဖတ်ရှုနိုင်စေပါသည်- စာရင်း၊ အစက်အပြောက်များ၊ ခလုတ်များ၊ ဒရော့ပ်ဒေါင်း သို့မဟုတ် အလံပြသင်္ကေတများ (ရွေးချယ်နိုင်သည်) ပါရှိသော ဘာသာစကားသင်္ကေတများ။"
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "ဘာသာစကားမျိုးစုံသုံး"

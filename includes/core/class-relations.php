@@ -110,6 +110,40 @@ final class Relations {
 	}
 
 	/**
+	 * Store a group map another query already read (lane L05's page primer, which reads every group
+	 * a page needs in ONE query — the speed promise). Same effect as translations() having run.
+	 *
+	 * @param string             $type `post` or `term`.
+	 * @param array<string, int> $map  Language => object ID (empty: the object is in no group).
+	 * @param int                $id   The object the map was read for.
+	 * @return void
+	 */
+	public static function seed( string $type, array $map, int $id ): void {
+		if ( array() === $map ) {
+			self::$memo[ $type . ':' . $id ] = array();
+			return;
+		}
+		self::remember( $type, $map, array( $id ) );
+	}
+
+	/**
+	 * Record, for this request only, that these objects have NO relations row — a query that
+	 * joined the relations table already saw so (lane L05, the speed promise) — so asking for their
+	 * group costs nothing. Objects already known are left alone.
+	 *
+	 * @param string          $type `post` or `term`.
+	 * @param array<int, int> $ids  Object IDs.
+	 * @return void
+	 */
+	public static function note_ungrouped( string $type, array $ids ): void {
+		foreach ( $ids as $id ) {
+			if ( ! isset( self::$memo[ $type . ':' . (int) $id ] ) ) {
+				self::$memo[ $type . ':' . (int) $id ] = array();
+			}
+		}
+	}
+
+	/**
 	 * Load the groups of many objects in ONE query (an archive, a menu, a sitemap page).
 	 *
 	 * @param string          $type `post` or `term`.
@@ -401,5 +435,16 @@ final class Relations {
 			unset( self::$memo[ $type . ':' . $id ] );
 			wp_cache_delete( $type . ':' . $id, self::CACHE_GROUP );
 		}
+
+		/**
+		 * Fires after the translation links of objects changed: linked, unlinked, moved to another
+		 * language or removed. Fires once per group touched, so a single link may fire it twice.
+		 *
+		 * @since 3.0.9
+		 *
+		 * @param string     $type `post` or `term`.
+		 * @param array<int> $ids  The objects whose links changed.
+		 */
+		do_action( 'tranzly_relations_changed', $type, array_map( 'intval', array_values( $members ) ) );
 	}
 }

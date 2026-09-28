@@ -442,7 +442,7 @@ msgstr "AI ገና አልተዋቀረም። በAI ቅንብሮች ውስጥ ለAI
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "ለዚህ ተግባር ምንም ሞዴል አልተመረጠም። በ AI ቅንብሮች ውስጥ አንዱን ይምረጡ።"
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "የዚያ AI አቅራቢ በዚህ ተሰኪ (plugin) ስሪት አይደገፍም።"
 
@@ -633,24 +633,25 @@ msgstr "ገደቦችን እና ፈቃዶችን አስቀምጥ"
 msgid "Limits and permissions saved."
 msgstr "ገደቦች እና ፈቃዶች ተቀምጠዋል።"
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "ይህ ቋንቋ የዚህ ድር ጣቢያ ቋንቋዎች አንዱ አይደለም።"
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "ትርጉም እንደ መጀመሪያው ይዘት ዓይነት መሆን አለበት።"
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "የጣቢያውን ሌሎች ቋንቋዎች አንዱን ይምረጡ።"
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "ይህ ማያ ገጽ ጃቫ ስክሪፕት (JavaScript) ይፈልጋል።"
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "ቋንቋ ይምረጡ"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "ቃና ለእያንዳንዱ የድር ጣቢያ ቋንቋ ይዘጋጃል፡ የፎርማሊቲ ነባሪ፣ ብዙ ወይም ትንሽ፣ በተጨማሪም አማራጭ መመሪያዎች።"
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "የ%s ዋጋ ከፈቀዱት አማራጮች አንዱ አይደለም።"
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "ይህንን ትርጉም ለመቀየር ፈቃድ የለዎትም።"
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "የዚህ ንጥል ቡድን ቀድሞውኑ %1$s ስሪት አለው (#%2$d)።"
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "እቃ የራሱ ትርጉም ሊሆን አይችልም።"
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "ይህ ንጥል አስቀድሞ የሌላ ነገር ትርጉም ነው። እባክዎ መጀመሪያ ከማያያዣው ይላቀቁ።"
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "የትርጉም አገናኙ ሊቀመጥ አልቻለም።"
 
@@ -2926,6 +2931,7 @@ msgstr "ይህ ተሰኪ (ፕለጊን) አዲስ የPHP ስሪት ይፈልጋ�
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "አይደለም"
 
@@ -4187,6 +4193,7 @@ msgstr "የሰዓት ማህተም"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "ርዕስ"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "ከ%s በፊት"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "የቋንቋ ሀሳብ"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "ይህ ገጽ በ%s ይገኛል።"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "በ %s አንብብ"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "ምንም አመሰግናለሁ አልልም"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "ቋንቋዎች በአድራሻዎችዎ ውስጥ እንዴት እንደሚታዩ ይምረጡ፡ አቃፊ፣ ንዑስ ጎራ (subdomain)፣ የተለየ ጎራ ወይም የጥያቄ መለኪያ (query parameter)።"
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "ንኡስ ጎራዎች እና ለእያንዳንዱ ቋንቋ የተለዩ ጎራዎች የTranzly Pro አካል ናቸው።"
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "የቋንቋ አቃፊዎች ዝርዝር መሆን አለባቸው።"
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" የቋንቋ አቃፊ ሊሆን አይችልም። ለሁሉምቋንቋ የተለዩ እና WordPress አስቀድሞ የማይጠቀምባቸውን ከ 2 እስከ 12 ንዑስ ፊደላት፣ ቁጥሮች ወይም ሰያፎች ይጠቀሙ።"
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "ዶሜይኖቹ ዝርዝር መሆን አለባቸው።"
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" እንደ example.de ያሉ የዶሜይን ስም አይደለም።"
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "እያንዳንዱ ቋንቋ የራሱ የሆነ ዶሜን ይፈልጋል።"
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "የተተረጎሙት የአድራሻ ቃላት ዝርዝር መሆን አለባቸው።"
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "የተተረጎሙት የአድራሻ ቃላት በቋንቋ መዘርዘር አለባቸው።"
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" በአድራሻ ውስጥ መጠቀም አይቻልም። ንዑስ ፊደላትን፣ አሃዞችን እና ሰያፍ ሰረዞችን (hyphens) ይጠቀሙ።"
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "ይህ ቅንብር በርቷል ወይም ጠፍቷል።"
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "ያልተተረጎሙ ገጾችን ከፍለጋ ሞተሮች መደበቅ የTranzly Pro አካል ነው።"
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "የቋንቋ መቀየሪያ"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "ቋንቋዎች (እንደ ንዑስ ምናሌ)"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "ቋንቋዎች (ጎን ለጎን)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "ወደ ምናሌ አክል"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "በጣቢያዎ ላይ ይህ ንጥል የጣቢያውን ቋንቋዎች ያሳያል፣ እያንዳንዱም ወደ የአሁኑ ገጽ በዚያው ቋንቋ አገናኝ አለው።"
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "በእያንዳንዱ ቋንቋዎችዎ ውስጥ ወደዚህ ገጽ የሚወስዱ አገናኞች።"
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "የቋንቋ ስም"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "የቋንቋ ኮድ"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "ስም እና ኮድ"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "ዲዛይን"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "እያንዳንዱን ቋንቋ እንደዚህ አሳይ"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "የሀገርን ባንዲራዎች አሳይ (ባንዲራ ማለት ቋንቋ ሳይሆን ሀገር ነው)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "ዝርዝር"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "ኪኒኖች"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "ቁልፎች"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "ተቆልቋይ ምናሌ"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "የቋንቋ ኮዶች"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "ሰንደቆች"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "የአሁኑን ቋንቋ አካትት"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "ይህ ገጽ ያልተተረጎመባቸውን ቋንቋዎች ደብቅ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "በቁመት ቁልል"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "የሚደረስበት መለያ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "ጽሑፍ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "ዳራ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "የአሁን ቋንቋ ጽሑፍ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "የአሁን የቋንቋ ዳራ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "ድንበር"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "የማዕዘን ራዲየስ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "በቋንቋዎች መካከል ያለው ቦታ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "የጽሁፍ መጠን"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "መቀያየሪያ"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4958,6 +5226,7 @@ msgid "Zinn Digital® website"
 msgstr "የZinn Digital® ድር ጣቢያ"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "ቅንብሮች ተቀምጠዋል።"
 
@@ -5290,6 +5559,7 @@ msgid "What went wrong"
 msgstr "ምን እንደተሳሳተ"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "አስተካክል"
 
@@ -5309,31 +5579,312 @@ msgstr "እንደገና ይሞክሩ"
 msgid "Translate by hand"
 msgstr "በእጅ ተርጎም"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "ቋንቋዎች እና ቅንብሮች"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "ሞተሮች"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "የትርጉም ስራዎች"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "አድራሻዎች እና SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "የቋንቋ መቀየሪያዎች"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "የSEO ኦዲት"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "ምንም ሜታ መግለጫ የለም"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "ጎብኚዎች መክፈት የሚችሉት የቋንቋ ስሪት (ረቂቅ፣ ግላዊ ወይም የይለፍ ቃል የተጠበቀ) አይደለም"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Adviser: አድራሻው አሁንም የመጀመሪያዎቹን ቃላት ይጠቀማል"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "ዋናው ጽሑፍ አሁንም አለ"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Tranzly Pro የባለብዙ ቋንቋ ኤስኢኦ ኦዲት አካል ነው። በቋንቋ መሰረት የጎደሉ ሜታ መግለጫዎችን፣ የተሰበሩ hreflang፣ ያልተተረጎሙ አድራሻዎችን እና ድገም ይዘቶችን ያገኛል።"
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "የሚመረመረው ቋንቋ"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "ኦዲቱን ማስኬድ"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "ቀጣዮቹን ገጾች ያረጋግጡ"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d ገጾች ተፈትተዋል፣ %2$d ችግሮች ተገኝተዋል።"
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "መላው ቋንቋ ተፈትዟል።"
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "ገጽ"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "ችግር"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "አስተካክል"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "ተንሳፋፊ መቀየሪያ"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "ያለ ማዋቀር፣ በማንኛውም ጭብጥ ላይ፣ በእያንዳንዱ ገጽ ጥግ ላይ ያለ ትንሽ አዝራር።"
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "የት አለ"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "ጠፍቷል"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "የታችኛው ማዕዘን፣ የመጨረሻ ጎን"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "የታችኛው ማዕዘን፣ መጀመሪያ ጎን"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "ከፍተኛ ጥግ፣ የጫፍ ጎን"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "ከፍተኛው ጥግ፣ መነሻ ጎን"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "በይዘቱ ዙሪያ መቀየሪያ"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "በእያንዳንዱ ልጥፍ እና ገጽ ላይ መቀየሪያ ያክሉ"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "ከይዘቱ በፊት"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "ከይዘቱ በኋላ"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "መቀየሪያን ለመጨመር ሌሎች መንገዶች"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "የብሎክ ማስተካከያ እና የጣቢያ ማስተካከያ፡ አምስት ንድፎች ያሉት የ“ቋንቋ መቀየሪያ” (Language switcher) ብሎክ።"
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: የ “Language switcher” ኤለመንት።"
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "ዝርዝሮች፡ መልክ → ዝርዝሮች → “የቋንቋ መቀየሪያ” ሳጥን።"
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "የጎን - ፓነሎች፡ “የቋንቋ መቀየሪያ” (Language switcher) መግብር።"
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "በሌላ ቦታ፣ አጭር ኮዱ፡"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "ኤለመንቶር እና ብሪክስ፡ በእያንዳንዱ ገንቢ ውስጥ ያለው የ“ቋንቋ መቀየሪያ” (Language switcher) መግብር።"
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "የElementor እና Bricks ዊጅቶች የTranzly Pro አካል ናቸው።"
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(ፕሮ)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "ለእያንዳንዱ ቋንቋ አንድ አቃፊ፡ example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "ለእያንዳንዱ ቋንቋ አንድ ንዑስ ዶሜይን፡ de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "ለእያንዳንዱ ቋንቋ የተለየ ዶሜን፡ example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "የጥያቄ መለኪያ፡ example.com/?lang=de (የቀድሞ ጣቢያዎች)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "ምደባ"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "መለያ ስም"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "ምርት"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "የምርት ምድብ"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "የምርት መለያየቱ"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "ተቀምጧል። የቋንቋ አድራሻዎችዎ ከዚህ በታች እንደታየው ተለውጠዋል።"
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "በአድራሻው ውስጥ ያለ ቋንቋ"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "ጎብኚዎች እና የፍለጋ ሞተሮች እያንዳንዱን ቋንቋ እንዴት እንደሚደርሱበት"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "ለ%s የመድረሻ ቃል"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "ነሳተኛው ቋንቋ በአድራሻዎቹ ውስጥ ምንም ቃል የለውም።"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "ለ%s ዶሜን (አማራጭ)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "መጀመሪያ ዶሜኑን ወደዚህ ጣቢያ ጠቁመው። ዶሜን የሌለው ቋንቋ ዋናው ዶሜንዎ ላይ ያለ ማህደር ይጠቀማል።"
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "እያንዳንዱ ቋንቋ አሁን የሚገኝበት ቦታ"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "የተተረጎሙ የአድራሻ ቃላት"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "የገጽ እና የልጥፍ አድራሻዎች የሚመጡት ከተተረጎሙ ርዕሶቻቸው ነው። እዚህ ላይ ቋሚ ቃላትን ይተረጎማሉ፣ ስለዚህ /de/category/ን /de/kategorie/ ይተካዋል።"
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (አሁን “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "የፍለጋ ሞተሮች እና ጎብኚዎች"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "ጎብኚዎች በትንሽ ሰንደቅ ዓላማ (ዳይሬክት ማድረጊያ በጭራሽ አይደለም) የራሳቸውን ቋንቋ እንዲያገኙ አድርጉ።"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "ያlተተረጎሙ ገጾችን ከፍለጋ ሞተሮች ደብቅ (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "ገና መሠረታዊውን ጽሑፍ የያዘ ትርጉም እስኪተረጎም ድረስ ከፍለጋ ውጤቶች ውጭ ይቆያል።"
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "የTranzly Pro አካል።"
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly የ hreflang አገናኞችን (ከ x-default ጋር)፣ የገጹን ቋንቋ እና አቅጣጫ፣ እና እያንዳንዱን ቋንቋ ወደ የእርስዎ የጣቢያ ካርታ (sitemap) ይጨምራል፡"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "ከዚህ ጋር እየሰራ ነው፡ %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "እያንዳንዱ የአድራሻ ቃል ከ2 እስከ 12 ንዑስ ፊደላት፣ አሃዞች ወይም ሰያፎች (hyphens) ሊኖሩት ይገባል።"
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "ሁለተኛ ቋንቋ በአስተዳዳሪው ምናሌ ውስጥ ካለው ትራንዝሊ (Tranzly) ስር ያክሉ፣ እና መቀየሪያው እዚህ ይታያል።"
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "መቀያየሪያ"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "በነባሪ ጠፍቷል፡ ባንዲራ ሀገር እንጂ ቋንቋ አይደለም።"
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "የሚደረስበት መለያ"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "የስክሪን አንባቢዎች የሚያነቡት፣ ለምሳሌ “ቋንቋ ይምረጡ”።"
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "ቀለማት"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "የቋንቋ መቀየሪያ"
@@ -5344,16 +5895,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "የጣቢያው እያንዳንዱ ቋንቋ በዚህ ገጽ ላይ የሚያደርጋቸው አገናኞች። ሁለት ወይም ከዚያ በላይ ቋንቋዎች እስኪዘረዘሩ ድረስ ምንም ነገር አያሳይም።"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "ቋንቋ"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "መቀየሪያ"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "ትርጉም"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "ጎብኚዎች ይህን ገጽ ከሌሎች ቋንቋዎችዎ በአንዱ እንዲያነቡ ይፈቅዳል፡ ዝርዝር፣ ሉሎች፣ አዝራሮች፣ ተቆልቋይ ወይም የቋንቋ ኮዶች፣ አማራጭ ባንዲራዎች ያሉት።"
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "ብዙ ቋንቋዎችን የሚደግፍ"

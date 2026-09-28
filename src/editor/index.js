@@ -5,6 +5,7 @@ import { PanelBody, TextControl } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 
 import switcher from '../../blocks/fixture-switcher/block.json';
+import './switcher';
 
 /*
  * The block is dynamic: the server renders it (includes/class-fixture.php), so the editor

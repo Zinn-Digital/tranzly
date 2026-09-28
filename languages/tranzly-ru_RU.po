@@ -442,7 +442,7 @@ msgstr "ИИ еще не настроен. Добавьте ключ для пр
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Для этой задачи не выбрана модель. Выберите её в настройках ИИ."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Этот провайдер искусственного интеллекта не поддерживается данной версией плагина."
 
@@ -633,24 +633,25 @@ msgstr "Сохранить ограничения и разрешения"
 msgid "Limits and permissions saved."
 msgstr "Лимиты и разрешения сохранены."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Этот язык не поддерживается на данном сайте."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Перевод должен быть того же типа контента, что и оригинал."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Выберите один из других языков сайта."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Для работы этого экрана требуется JavaScript."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Выберите язык"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Тон настраивается для каждого языка сайта: по умолчанию используется определенная степень формальности, а также могут добавляться дополнительные инструкции."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Значение для %s не входит в число разрешенных вариантов."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Вам не разрешено изменять этот перевод."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "У группы этого элемента уже есть версия %1$s (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Элемент не может быть переводом самого себя."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Этот элемент уже является переводом чего-то другого. Сначала отвяжите его."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Не удалось сохранить ссылку на перевод."
 
@@ -2927,6 +2932,7 @@ msgstr "Для этого плагина требуется более нова�
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Нет"
 
@@ -4188,6 +4194,7 @@ msgstr "Метка времени"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Название"
 
@@ -4939,6 +4946,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s назад"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Языковая рекомендация"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Эта страница также доступна на языке %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Прочитать на %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Нет, спасибо"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Выберите, как языки отображаются в ваших адресах: папка, поддомен, отдельный домен или параметр запроса."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Поддомены и отдельные домены для каждого языка входят в Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Папки языков должны быть списком."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "Папка языка не может называться «%s». Используйте от 2 до 12 строчных букв, цифр или дефисов, уникальных для каждого языка и не совпадающих со словами, которые уже использует WordPress."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Домены должны быть представлены в виде списка."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "«%s» не является доменным именем, например example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Для каждого языка необходим собственный домен."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Переведенные слова адреса должны представлять собой список."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Переведенные слова адреса должны быть указаны для каждого языка."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" нельзя использовать в адресе. Используйте строчные буквы, цифры и дефисы."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Эта настройка включена или выключена."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Скрытие непереведенных страниц от поисковых систем входит в состав Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Переключатель языка"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Языки"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Языки (параллельно)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Добавить в меню"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "На вашем сайте этот элемент отображает языки сайта, каждый из которых ведет на текущую страницу на соответствующем языке."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Ссылки на эту страницу на каждом из ваших языков."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Название языка"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Код языка"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Имя и код"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Дизайн"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Отображать каждый язык как"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Показывать флаги (флаг обозначает страну, а не язык)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Список"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Метки"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Выпадающий список"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Коды языков"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Флаги"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Включить текущий язык"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Скрывать языки, на которые эта страница не переведена"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Расположить вертикально"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Доступная метка"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Текст"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Фон"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Текущий язык текста"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Текущий язык интерфейса"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Граница"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Радиус скругления"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Пространство между языками"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Размер текста"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Переключатель"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
@@ -4959,6 +5227,7 @@ msgid "Zinn Digital® website"
 msgstr "Сайт Zinn Digital®"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
@@ -5291,6 +5560,7 @@ msgid "What went wrong"
 msgstr "Что пошло не так"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Исправить"
 
@@ -5310,31 +5580,312 @@ msgstr "Повторить"
 msgid "Translate by hand"
 msgstr "Перевести вручную"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Языки и настройки"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Модули"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Задания на перевод"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Адреса и SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Языковые панели"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO-аудит"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Метаописание отсутствует"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Языковая версия, которую посетители не могут открыть (черновик, личная или защищенная паролем)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Адрес по-прежнему использует исходные слова"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Исходный текст по-прежнему сохранен"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Аудит многоязычного SEO входит в состав Tranzly Pro. Он обнаруживает отсутствующие метаописания, неработающие hreflang, непереведенные адреса и дублирующийся контент для каждого языка."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Язык для аудита"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Запустить аудит"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Смотрите следующие страницы"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "Проверено страниц: %1$d, найдено проблем: %2$d."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "Весь язык проверен."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Страница"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Проблема"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Редактировать"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Плавающий переключатель"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Небольшая кнопка в углу каждой страницы, на любой теме, без какой-либо настройки."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Где"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Выкл."
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Нижний угол, торцевая сторона"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Нижний угол, стартовая сторона"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Верхний угол, с конца"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Верхний угол, начальная сторона"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Переключатель вокруг содержимого"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Добавить переключатель на каждую запись и страницу"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Перед содержимым"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "После содержимого"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Другие способы добавить переключатель"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Блочный редактор и редактор сайтов: блок «Переключатель языка» с пятью вариантами дизайна."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: элемент «Языковой переключатель»."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Меню: Внешний вид → Меню → блок «Переключатель языка»."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Боковые панели: виджет «Переключатель языка»."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "В любом другом месте шорткод:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor и Bricks: виджет «Переключатель языка» в каждом конструкторе."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Виджеты Elementor и Bricks являются частью Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Сохранить"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Папка для каждого языка: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Поддомен для каждого языка: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Отдельный домен для каждого языка: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Параметр запроса: example.com/?lang=de (старые сайты)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Категория"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Метка"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Продукт"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Категория продукта"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Метка продукта"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Сохранено. Ваши языковые адреса изменились, как показано ниже."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Язык в адресе"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Как посетители и поисковые системы находят каждый язык"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Почтовый индекс для %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "В языке по умолчанию нет слова в адресах."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Домен для %s (необязательно)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Сначала укажите домен для этого сайта. Для языка без домена используется папка на вашем основном домене."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Где каждый язык находится сейчас"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Переведенные слова адреса"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Адреса страниц и записей берутся из их переведенных заголовков. Здесь вы переводите фиксированные слова, поэтому /de/kategorie/ заменяет /de/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (теперь «%2$s»)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Поисковые системы и посетители"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Предложите посетителям их собственный язык с помощью небольшого баннера (никаких перенаправлений)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Скрывать непереведенные страницы от поисковых систем (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Перевод, в котором все еще содержится исходный текст, скрывается из результатов поиска до тех пор, пока он не будет переведен."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Часть Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly добавляет теги hreflang (включая x-default), язык и направление страницы, а также все языки в вашу карту сайта:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Сотрудничество с: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Каждое слово адреса состоит из 2–12 строчных букв, цифр или дефисов."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Добавьте второй язык в разделе Tranzly в меню администратора, и здесь появится переключатель."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Переключатель"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Отключено по умолчанию: флаг — это страна, а не язык."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Доступная метка"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "То, что озвучивают программы чтения с экрана, например «Выберите язык»."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Цвета"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Переключатель языков"
@@ -5345,16 +5896,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Ссылки на эту страницу на каждом из языков сайта. Элемент не отображается, пока не указано два или более языков."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Язык"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "Переключатель"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "Перевод"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Позволяет посетителям читать эту страницу на другом вашем языке: список, плашки, кнопки, выпадающий список или коды языков с дополнительными флажками."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "многоязычный"

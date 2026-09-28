@@ -442,7 +442,7 @@ msgstr "Hindi pa naka-set up ang AI. Magdagdag ng key para sa AI provider sa mga
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "Walang napiling modelo para sa gawaing ito. Pumili ng isa sa mga setting ng AI."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Ang AI provider na iyon ay hindi sinusuportahan ng bersyong ito ng plugin."
 
@@ -633,24 +633,25 @@ msgstr "I-save ang mga limitasyon at pahintulot"
 msgid "Limits and permissions saved."
 msgstr "Nai-save na ang mga limitasyon at pahintulot."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Ang wikang iyon ay hindi isa sa mga wika ng site na ito."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Ang pagsasalin ay dapat na parehong uri ng nilalaman ng orihinal."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Pumili ng isa sa iba pang mga wika ng site."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Kailangan ng screen na ito ang JavaScript."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Pumili ng wika"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "Ang tono ay itinatakda sa bawat wika ng site: default sa pormalidad, higit pa o mas mababa, kasama ang mga opsyonal na tagubilin."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Ang halaga para sa %s ay hindi isa sa mga pinapayagang pagpipilian."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "Hindi ka pinapayagang baguhin ang pagsasalin na iyon."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Mayroon nang %1$s bersiyon (#%2$d) ang grupo ng item na ito."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Hindi maaaring maging salin ng sarili nito ang isang aytem."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Ang item na iyon ay isa nang salin ng ibang bagay. I-unlink muna ito."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "Hindi na-save ang link ng pagsasalin."
 
@@ -2926,6 +2931,7 @@ msgstr "Nangangailangan ang plugin na ito ng mas bagong bersyon ng PHP."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Hindi"
 
@@ -4187,6 +4193,7 @@ msgstr "Timestamp"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Pamagat"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s na ang nakalipas"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Mungkahi sa wika"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Available din ang pahinang ito sa %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Basahin ito sa %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Hindi na, salamat"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Piliin kung paano lumilitaw ang mga wika sa iyong mga address: isang folder, isang subdomain, isang hiwalay na domain o isang query parameter."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Ang mga subdomain at hiwalay na domain bawat wika ay bahagi ng Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Ang mga folder ng wika ay dapat na isang listahan."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "Hindi maaaring maging folder ng wika ang \"%s\". Gumamit ng 2 hanggang 12 na maliit na titik, digit, o gitling, na naiiba para sa bawat wika, at hindi isang salitang ginagamit na ng WordPress."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Ang mga domain ay dapat na isang listahan."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "Ang \"%s\" ay hindi isang pangalan ng domain, tulad ng example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Ang bawat wika ay nangangailangan ng sarili nitong domain."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Ang isinaling mga salita ng address ay dapat na isang listahan."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Ang mga isinaling salita ng address ay dapat ilista bawat wika."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "Ang \"%s\" ay hindi maaaring gamitin sa isang address. Gumamit ng mga titik na nakasulat sa maliit na titik (lowercase), mga numero, at gitling."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Nakateknolohiya o nakapatay ang setting na ito."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Ang pagtago ng mga hindi pa na-translate na pahina mula sa mga search engine ay bahagi ng Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Tagapagpalit ng wika"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Mga Wika"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Mga Wika (magkatabi)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Idagdag sa Menu"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Sa iyong site, ipinapakita ng item na ito ang mga wika ng site, kung saan ang bawat isa ay nag-uugnay sa kasalukuyang pahina sa wikang iyon."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Mga link sa pahinang ito sa bawat isa sa iyong mga wika."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Pangalan ng wika"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Code ng wika"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Pangalan at code"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Disenyo"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Ipakita ang bawat wika bilang"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Ipakita ang mga bandila (ang bandila ay bansa, hindi wika)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Ilista"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Mga Pill"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Mga Button"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Dropdown"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Mga code ng wika"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Mga Bandera"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Isama ang kasalukuyang wika"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Itago ang mga wikang hindi nakasalin ang pahinang ito"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "I-stack nang patayo"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Madalas na label"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Teksto"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Background"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Kasalukuyang wika ng teksto"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Kasalukuyang background ng wika"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Hangganan"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Radius ng kanto"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Espasyo sa pagitan ng mga wika"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Laki ng teksto"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Tagapag-lipat"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Binuo ni Neil Lock, CEO ng Zinn Digital® Ltd"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "Website ng Zinn Digital®"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "Naka-save na ang mga setting."
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "Ano ang nagkamali"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Ayusin ito"
 
@@ -5308,31 +5578,312 @@ msgstr "Subuking muli"
 msgid "Translate by hand"
 msgstr "Isalin nang mano-mano"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Mga Wika at mga setting"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Mga Engine"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Mga trabaho sa pagsasalin"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Mga Address at SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Mga pampalit ng wika"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "SEO audit"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Walang meta description"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Isang bersyon ng wika na hindi mabuksan ng mga bisita (draft, pribado o may password)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Gumagamit pa rin ang address ng mga orihinal na salita"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Hawak pa rin ang orihinal na teksto"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Ang multilingual SEO audit ay bahagi ng Tranzly Pro. Nakakahanap ito ng mga nawawalang meta description, sira o broken na hreflang, hindi na-translate na address, at duplicate na nilalaman, bawat wika."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Wikang ia-audit"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Patakbuhin ang audit"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Suriin ang mga susunod na pahina"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "%1$d na pahina ang sinuri, %2$d na problema ang natagpuan."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "Nasuri na ang buong wika."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Pahina"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Problema"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "I-edit"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Lumulutang na switcher"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Isang maliit na button sa isang sulok ng bawat pahina, sa anumang tema, na walang kinakailangang set-up."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Saan"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Naka-off"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Ibabang sulok, dulo sa tagiliran"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Ibabang sulok, panimulang bahagi"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Nangungunang sulok, dulo ng gilid"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Ibabaw na sulok, panimulang bahagi"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Tagapagpalit sa paligid ng nilalaman"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Magdagdag ng switcher sa bawat post at page"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Bago ang nilalaman"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Pagkatapos ng nilalaman"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Iba pang paraan para magdagdag ng switcher"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Block editor at site editor: ang block na “Language switcher”, na may limang disenyo."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: ang elementong \"Language switcher\"."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Mga Menu: Hitsura → Mga Menu → Kahon ng \"Language switcher\"."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Mga Sidebar: ang widget na \"Language switcher\"."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Kahit saan pa, ang shortcode:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor at Bricks: ang widget na “Language switcher” sa bawat builder."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Ang mga widget ng Elementor at Bricks ay bahagi ng Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "I-save"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Isang folder bawat wika: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Isang subdomain bawat wika: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Isang hiwalay na domain bawat wika: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Isang parameter ng query: example.com/?lang=de (mga lumang site)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Kategorya"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Tag"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Produkto"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Kategorya ng produkto"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Tatak ng produkto"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "Na-save na. Nagbago ang iyong mga address ng wika tulad ng ipinapakita sa ibaba."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Wika sa address"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Paano inaabot ng mga bisita at search engine ang bawat wika"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Salita ng address para sa %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "Ang default na wika ay walang salita sa mga address nito."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Domain para sa %s (opsyonal)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Ituro muna ang domain sa site na ito. Ang isang wika na walang domain ay gumagamit ng isang folder sa iyong pangunahing domain."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Kung saan naroroon ang bawat wika ngayon"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Isinaling mga salita ng adres"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Ang mga address ng pahina at post ay nagmumula sa kanilang mga isinaling pamagat. Dito mo isinasalin ang mga nakapirming salita, kaya pinapalitan ng /de/kategorie/ ang /de/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (ngayon ay \"%2$s\")"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Mga search engine at bisita"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Mag-alok sa mga bisita ng sarili nilang wika gamit ang isang maliit na banner (hindi kailanman isang redirect)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Itago ang mga hindi pa naisasalin na pahina mula sa mga search engine (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Ang isang pagsasalin na naglalaman pa rin ng orihinal na teksto ay itinatago sa mga resulta ng paghahanap hanggang sa ito ay maisalin."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Bahagi ng Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Idinaragdag ng Tranzly ang mga hreflang link (kasama ang x-default), ang wika at direksyon ng pahina, at ang bawat wika sa iyong sitemap:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Nakikipagtulungan sa: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Ang bawat salita sa address ay 2 hanggang 12 na maliliit na titik, digit, o gitling."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Magdagdag ng pangalawang wika sa ilalim ng Tranzly sa admin menu, at lalabas dito ang switcher."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Tagapag-lipat"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Naka-off bilang default: ang bandera ay bansa, hindi wika."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Madalas na label"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Ang inaanunsyo ng mga screen reader, halimbawa ay “Pumili ng wika”."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Mga Kulay"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Tagapaglipat ng Wika"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Mga link sa pahinang ito sa bawat wika ng site. Wala itong ipinapakita hanggang sa dalawa o higit pang wika ang nakalista."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "wika"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "tagapaglipat"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "pagsasalin"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Nagpapahintulot sa mga bisita na basahin ang pahinang ito sa iba pang wika mo: isang listahan, mga pill, mga button, dropdown o mga code ng wika, na may mga opsyonal na bandila."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "multilingual"

@@ -4,6 +4,9 @@ import { TabPanel } from '@wordpress/components';
 import App from './App';
 import Engines from './Engines';
 import Jobs from './Jobs';
+import SeoAudit from './SeoAudit';
+import Switchers from './Switchers';
+import Urls from './Urls';
 
 /**
  * The Tranzly admin screen: settings, engines and background jobs, one tab each. The tabs are
@@ -24,6 +27,12 @@ export default function Root( { data } ) {
 				},
 				{ name: 'engines', title: __( 'Engines', 'tranzly' ) },
 				{ name: 'jobs', title: __( 'Translation jobs', 'tranzly' ) },
+				{ name: 'urls', title: __( 'Addresses and SEO', 'tranzly' ) },
+				{
+					name: 'switchers',
+					title: __( 'Language switchers', 'tranzly' ),
+				},
+				{ name: 'audit', title: __( 'SEO audit', 'tranzly' ) },
 			] }
 			initialTabName={
 				( window.location.hash || '' ).replace( '#/', '' ) || 'settings'
@@ -35,6 +44,15 @@ export default function Root( { data } ) {
 				}
 				if ( 'jobs' === tab.name ) {
 					return <Jobs />;
+				}
+				if ( 'urls' === tab.name ) {
+					return <Urls />;
+				}
+				if ( 'switchers' === tab.name ) {
+					return <Switchers pro={ 'pro' === data.edition } />;
+				}
+				if ( 'audit' === tab.name ) {
+					return <SeoAudit />;
 				}
 				return <App data={ data } />;
 			} }

@@ -442,7 +442,7 @@ msgstr "A ti seto AI sílẹ̀ tẹ́lẹ̀. Fi bọ́tìnnì kún fún olùpès
 msgid "No model is chosen for this task. Pick one in the AI settings."
 msgstr "A kò yàn àwọ̀ pátápátá kan fún iṣẹ́ yìí. Yan ọkan ninu awọn eto AI."
 
-#: includes/ai-core/class-client.php:83
+#: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Olupese AI yẹn ko ni atilẹyin nipasẹ ẹya yii ti afikun naa."
 
@@ -633,24 +633,25 @@ msgstr "Fipamọ awọn ààrọ̀ ati awọn àṣẹ"
 msgid "Limits and permissions saved."
 msgstr "Awon opin ati awon ase ti wa ni fipamọ."
 
-#: includes/api/class-rest-content.php:384
-#: includes/api/class-rest-content.php:423
+#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:431
 #: includes/class-rest.php:195
 #: includes/core/class-content.php:139
 #: includes/core/class-content.php:234
 #: includes/core/class-queue.php:151
 #: includes/core/class-translator.php:61
 #: includes/core/class-translator.php:177
+#: includes/seo/pro__premium_only/class-audit.php:88
 msgid "That language is not one of this site's languages."
 msgstr "Asẹ yẹn kii ṣe ọkan ninu awọn ede aaye yii."
 
-#: includes/api/class-rest-content.php:389
-#: includes/api/class-rest-content.php:392
+#: includes/api/class-rest-content.php:397
+#: includes/api/class-rest-content.php:400
 msgid "A translation must be the same kind of content as the original."
 msgstr "Ìtumọ̀ gbọ́dọ̀ jẹ́ irú àkóbá kan náà pẹ̀lu èyí tí a kọ́kọ́ ṣe."
 
-#: includes/api/class-rest-content.php:444
-#: includes/api/class-rest-content.php:464
+#: includes/api/class-rest-content.php:452
+#: includes/api/class-rest-content.php:472
 msgid "Choose one of the site's other languages."
 msgstr "Yan ọkan ninu awọn ede miiran ti o wa lori aaye naa."
 
@@ -663,6 +664,10 @@ msgid "This screen needs JavaScript."
 msgstr "Ibùjoko yìí nílò JavaScript."
 
 #: includes/class-fixture.php:60
+#: includes/switcher/class-switcher.php:125
+#: includes/switcher/class-switcher.php:193
+#: includes/switcher/pro__premium_only/class-bricks-element.php:108
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:114
 msgid "Choose a language"
 msgstr "Yan ede kan"
 
@@ -726,7 +731,7 @@ msgid "Tone is set per site language: formality default, more or less, plus opti
 msgstr "A ti n ṣeto ohùn (Tone) fún èdè ojula kọọkan: aiyipada ìfọ̀kanbẹlẹ, diẹ tabi ju bẹẹ lọ, pẹlu awọn ilana aṣayan."
 
 #. translators: %s: a settings field name.
-#: includes/core/class-options.php:101
+#: includes/core/class-options.php:113
 #, php-format
 msgid "The value for %s is not one of the allowed choices."
 msgstr "Iye fún %s kò sí nínú àwọn àṣàyàn tí a gbà láèyè."
@@ -754,21 +759,21 @@ msgid "You are not allowed to change that translation."
 msgstr "A kỢ fẹ́ kí o yí ìtumọ̀ yẹn padà."
 
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:176
-#: includes/core/class-relations.php:230
+#: includes/core/class-relations.php:210
+#: includes/core/class-relations.php:264
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr "Ẹgbẹ́ nǹkọ̀ kan náà yìí ti ní ẹ̀dà %1$s kan tẹ́lẹ̀ (#%2$d)."
 
-#: includes/core/class-relations.php:208
+#: includes/core/class-relations.php:242
 msgid "An item cannot be its own translation."
 msgstr "Ohun kan kò lè jẹ́ ìtumọ̀ ara rẹ̀."
 
-#: includes/core/class-relations.php:239
+#: includes/core/class-relations.php:273
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr "Ohun kan náà ti jẹ́ ìtumọ̀ nǹkan mìíràn tẹ́lẹ̀. Yọ ìsopọ̀ rẹ̀ kúrò kọ́kọ́."
 
-#: includes/core/class-relations.php:371
+#: includes/core/class-relations.php:405
 msgid "The translation link could not be saved."
 msgstr "A kò lè fipamọ́ ọna aṣojú ìtumọ̀ náà."
 
@@ -2926,6 +2931,7 @@ msgstr "Plagiọti yii nilo ẹ̀yà PHP ti o tuntun julọ."
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
+#: src/admin/Switchers.js:163
 msgid "No"
 msgstr "Bẹẹkọ"
 
@@ -4187,6 +4193,7 @@ msgstr "Àkókò tí a ṣeé"
 
 #: includes/freemius-strings.php:2540
 #: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
 msgid "Title"
 msgstr "Àkọlé"
 
@@ -4938,6 +4945,267 @@ msgctxt "x-ago"
 msgid "%s ago"
 msgstr "%s sẹ́yìn"
 
+#: includes/seo/class-suggest.php:116
+msgid "Language suggestion"
+msgstr "Ìbéèrè èdè"
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:118
+#, php-format
+msgid "This page is also available in %s."
+msgstr "Ojú ewé yìí tún wà ní %s."
+
+#. translators: %s: a language's name in that language, such as Deutsch.
+#: includes/seo/class-suggest.php:120
+#, php-format
+msgid "Read it in %s"
+msgstr "Ka a ninu %s"
+
+#: includes/seo/class-suggest.php:121
+msgid "No thanks"
+msgstr "Rara o seun"
+
+#: includes/seo/class-url-settings.php:129
+msgid "Choose how languages appear in your addresses: a folder, a subdomain, a separate domain or a query parameter."
+msgstr "Yan bí àwọn èdè ṣe hàn nínú àwọn àdírẹsì rẹ: fóńdà kan, àbápínlẹ̀ (subdomain), agbègbè ọtọ̀tọ̀ (domain) tàbí ìbéèrè ìparí (query parameter)."
+
+#: includes/seo/class-url-settings.php:132
+#: src/admin/Urls.js:115
+msgid "Subdomains and separate domains per language are part of Tranzly Pro."
+msgstr "Awọn subdomain ati awọn agbegbe lọtọ fun ede kọọkan jẹ apakan ti Tranzly Pro."
+
+#: includes/seo/class-url-settings.php:139
+msgid "The language folders must be a list."
+msgstr "Àwọn fọ́lífà èdè gbọ́dọ̀ jẹ́ àtòjọ."
+
+#. translators: %s: the folder name that was refused.
+#: includes/seo/class-url-settings.php:148
+#, php-format
+msgid "\"%s\" cannot be a language folder. Use 2 to 12 lowercase letters, digits or hyphens, different for every language, and not a word WordPress already uses."
+msgstr "\"%s\" kò le jẹ fífà èdè. Lo àwọn lẹ́tà kékeré 2 sí 12, àwọn nọ́mbà tàbí àwọn àmì ìdájọ́, tí ó yàtọ̀ fún èdè kọ̀ọ̀kan, tí kì í ṣe ọ̀rọ̀ tí WordPress ti ń lò tẹ́lẹ̀."
+
+#: includes/seo/class-url-settings.php:158
+msgid "The domains must be a list."
+msgstr "Awọn agbegbe wọnyi gbọdọ jẹ atọka kan."
+
+#. translators: %s: the domain that was refused.
+#: includes/seo/class-url-settings.php:169
+#, php-format
+msgid "\"%s\" is not a domain name, such as example.de."
+msgstr "\"%s\" kii ṣe orukọ agbegbe, bii example.de."
+
+#: includes/seo/class-url-settings.php:174
+msgid "Each language needs its own domain."
+msgstr "Ò kèkè ni èdè kọ̀ọ̀kan ni agbègbè rẹ̀."
+
+#: includes/seo/class-url-settings.php:181
+msgid "The translated address words must be a list."
+msgstr "Àwọn ọ̀rọ̀ àdírẹ̀sì tí a ti túmọ̀ gbọ́dọ̀ jẹ́ àkójọ."
+
+#: includes/seo/class-url-settings.php:187
+msgid "The translated address words must be listed per language."
+msgstr "Awọn ọrọ adirẹsi ti a tumọ gbọdọ wa ni atokọ fun ede kọọkan."
+
+#. translators: %s: the address word that was refused.
+#: includes/seo/class-url-settings.php:196
+#, php-format
+msgid "\"%s\" cannot be used in an address. Use lowercase letters, digits and hyphens."
+msgstr "\"%s\" ko le jẹ lilo ninu adirẹsi kan. Lo awọn lẹta kekere, awọn nọmba, ati awọn ami ayọkẹlẹ (-)."
+
+#: includes/seo/class-url-settings.php:207
+msgid "This setting is on or off."
+msgstr "Ètò yìí wà ní títàn tàbí pipa."
+
+#: includes/seo/class-url-settings.php:210
+msgid "Hiding untranslated pages from search engines is part of Tranzly Pro."
+msgstr "Titẹ awọn oju-iwe ti a ko tumọ mọ kuro lọdọ awọn ẹrọ iṣawari jẹ apakan ti Tranzly Pro."
+
+#: includes/switcher/class-places.php:256
+#: includes/switcher/class-widget.php:27
+#: includes/switcher/pro__premium_only/class-bricks-element.php:51
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:38
+msgid "Language switcher"
+msgstr "Olùyípadà èdè"
+
+#: includes/switcher/class-places.php:266
+msgid "Languages (as a submenu)"
+msgstr "Àwọn Èdè"
+
+#: includes/switcher/class-places.php:267
+msgid "Languages (side by side)"
+msgstr "Àwọn èdè (ní ẹ̀gbẹ́ ará wọn)"
+
+#: includes/switcher/class-places.php:277
+msgid "Add to Menu"
+msgstr "Fi kún Àkójọ aṣonjẹ"
+
+#: includes/switcher/class-places.php:278
+msgid "On your site, this item shows the site's languages, each linking to the current page in that language."
+msgstr "Lórí ojú-wẹ́bù rẹ, nǹkan yìí fi àwọn èdè ojú-wẹ́bù náà hàn, èkọ̀ọ̀kan wọn ń sopọ̀ mọ́ ojú-wẹ́bù lọ́wọ́lọ́wọ́ ní èdè yẹn."
+
+#. translators: 1: a switcher's accessible name, 2: its number on the page (2, 3, …).
+#: includes/switcher/class-switcher.php:147
+#, php-format
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#: includes/switcher/class-widget.php:29
+msgid "Links to this page in each of your languages."
+msgstr "Awọn ọna aṣopọ si oju-iwe yii ni olukuluku awọn ede rẹ."
+
+#: includes/switcher/class-widget.php:77
+#: includes/switcher/pro__premium_only/class-builders.php:89
+#: src/admin/Switchers.js:136
+#: src/editor/switcher-model.js:30
+msgid "Language name"
+msgstr "Oruko ede"
+
+#: includes/switcher/class-widget.php:78
+#: includes/switcher/pro__premium_only/class-builders.php:90
+#: src/admin/Switchers.js:140
+#: src/editor/switcher-model.js:31
+msgid "Language code"
+msgstr "Koodu ede"
+
+#: includes/switcher/class-widget.php:79
+#: includes/switcher/pro__premium_only/class-builders.php:91
+#: src/admin/Switchers.js:144
+#: src/editor/switcher-model.js:32
+msgid "Name and code"
+msgstr "Oruko ati koodu"
+
+#: includes/switcher/class-widget.php:84
+#: includes/switcher/pro__premium_only/class-bricks-element.php:71
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:78
+#: src/editor/switcher.js:51
+msgid "Design"
+msgstr "Apẹrẹ"
+
+#: includes/switcher/class-widget.php:85
+#: includes/switcher/pro__premium_only/class-bricks-element.php:78
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:87
+#: src/admin/Switchers.js:131
+#: src/editor/switcher.js:59
+msgid "Show each language as"
+msgstr "Fi èdè kọọkan han gẹgẹbi"
+
+#: includes/switcher/class-widget.php:93
+#: src/admin/Switchers.js:177
+msgid "Show flags (a flag is a country, not a language)"
+msgstr "Fi awọn àfíhàn han (àfíhàn jẹ orílẹ̀-èdè, kì í ṣe èdè kan)"
+
+#: includes/switcher/class-widget.php:129
+#: includes/switcher/pro__premium_only/class-builders.php:74
+#: src/editor/switcher-model.js:15
+msgid "List"
+msgstr "Àtòjọ"
+
+#: includes/switcher/class-widget.php:130
+#: includes/switcher/pro__premium_only/class-builders.php:75
+#: src/editor/switcher-model.js:16
+msgid "Pills"
+msgstr "Àwọn ohunèlò ìrànlọ́wọ́ kékeré"
+
+#: includes/switcher/class-widget.php:131
+#: includes/switcher/pro__premium_only/class-builders.php:76
+#: src/editor/switcher-model.js:17
+msgid "Buttons"
+msgstr "Awọn bọtini"
+
+#: includes/switcher/class-widget.php:132
+#: includes/switcher/pro__premium_only/class-builders.php:77
+#: src/editor/switcher-model.js:18
+msgid "Dropdown"
+msgstr "Akojọ ti o n ṣubu silẹ"
+
+#: includes/switcher/class-widget.php:133
+#: includes/switcher/pro__premium_only/class-builders.php:78
+#: src/editor/switcher-model.js:19
+msgid "Language codes"
+msgstr "Àwọn àmì èdè"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:85
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:94
+#: src/editor/switcher.js:66
+msgid "Flags"
+msgstr "Àwọn àmì"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:90
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:95
+#: src/editor/switcher.js:76
+msgid "Include the current language"
+msgstr "Fi ede lọwọlọwọ kun un"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:96
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:96
+#: src/editor/switcher.js:87
+msgid "Hide languages this page is not translated into"
+msgstr "Fi awọn ede ti a ko tumọ oju-iwe yii si pamọ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:101
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:97
+#: src/editor/switcher.js:98
+msgid "Stack vertically"
+msgstr "Ko sori si isale"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:106
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:112
+#: src/editor/index.js:33
+#: src/editor/switcher.js:107
+msgid "Accessible label"
+msgstr "Àwọn àmì tó ṣeé wọlé"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:112
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:128
+#: src/editor/switcher.js:120
+msgid "Text"
+msgstr "Ọrọ"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:113
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:129
+#: src/editor/switcher.js:121
+msgid "Background"
+msgstr "Ẹ̀yìn"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:114
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:130
+#: src/editor/switcher.js:124
+msgid "Current language text"
+msgstr "Èdè lọ́wọ́lọ́wọ́ báyìí"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:115
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:131
+#: src/editor/switcher.js:128
+msgid "Current language background"
+msgstr "Abẹ́lẹ̀ èdè lọ́wọ́lọ́wọ́"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:116
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:132
+msgid "Border"
+msgstr "Ààrùn"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:131
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:144
+msgid "Corner radius"
+msgstr "Ìwọ̀n borititi igun"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:132
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:145
+msgid "Space between languages"
+msgstr "Ààyè láàárín àwọn èdè"
+
+#: includes/switcher/pro__premium_only/class-bricks-element.php:133
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:146
+msgid "Text size"
+msgstr "Iwọn ọrọ"
+
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:74
+#: includes/switcher/pro__premium_only/class-elementor-widget.php:122
+#: src/editor/index.js:30
+#: src/editor/switcher.js:47
+msgid "Switcher"
+msgstr "Aṣọ̀yípadà"
+
 #: src/admin/About.js:17
 msgid "Built by Neil Lock, CEO of Zinn Digital® Ltd"
 msgstr "Tí a kọ́ nipasẹ Neil Lock, Alaga Zinn Digital® Ltd"
@@ -4957,6 +5225,7 @@ msgid "Zinn Digital® website"
 msgstr "oju opo wẹẹbù Zinn Digital®"
 
 #: src/admin/App.js:62
+#: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr "A ti fipamọ awọn eto naa."
 
@@ -5289,6 +5558,7 @@ msgid "What went wrong"
 msgstr "Kí ni ó ṣe aṣiṣe"
 
 #: src/admin/Jobs.js:407
+#: src/admin/SeoAudit.js:148
 msgid "Fix it"
 msgstr "Gbọ̀ rẹ̀"
 
@@ -5308,31 +5578,312 @@ msgstr "Tun gbiyanju"
 msgid "Translate by hand"
 msgstr "Tumọ pẹlu ọwọ"
 
-#: src/admin/Root.js:23
+#: src/admin/Root.js:26
 msgid "Languages and settings"
 msgstr "Àwọn èdè àti ètò"
 
-#: src/admin/Root.js:25
+#: src/admin/Root.js:28
 msgid "Engines"
 msgstr "Àwọn Ẹrọ"
 
-#: src/admin/Root.js:26
+#: src/admin/Root.js:29
 msgid "Translation jobs"
 msgstr "Àwọn iṣẹ́ ìtumọ̀"
 
-#: src/editor/index.js:17
+#: src/admin/Root.js:30
+msgid "Addresses and SEO"
+msgstr "Awọn adirẹsi ati SEO"
+
+#: src/admin/Root.js:33
+msgid "Language switchers"
+msgstr "Àwọn olùyípadà èdè"
+
+#: src/admin/Root.js:35
+msgid "SEO audit"
+msgstr "Àyẹ̀wò SEO"
+
+#: src/admin/SeoAudit.js:19
+msgid "No meta description"
+msgstr "Ko si apejuwe meta"
+
+#: src/admin/SeoAudit.js:20
+msgid "A language version visitors cannot open (draft, private or password)"
+msgstr "Ẹya èdè tí àwọn àlejò kò lè ṣí (ìwé àkọ́kọ́, ìkọ̀kọ̀ tàbí ọ̀rọ̀ aṣínà)"
+
+#: src/admin/SeoAudit.js:24
+msgid "The address still uses the original words"
+msgstr "Àdíìrẹ̀ náà tún ń lò àwọn ọ̀rọ̀ àtilẹ̀wá náà"
+
+#: src/admin/SeoAudit.js:28
+msgid "Still holds the original text"
+msgstr "Ṣẹ́kì nínú ọ̀rọ̀ àkọ́kọ́ náà lọ́wọ́"
+
+#: src/admin/SeoAudit.js:53
+msgid "The multilingual SEO audit is part of Tranzly Pro. It finds missing meta descriptions, broken hreflang, untranslated addresses and duplicate content, per language."
+msgstr "Àyẹ̀wò SEO oní-èdè púpọ̀ jẹ́ apá kan Tranzly Pro. Ó ń wá àwọn àpèjúwe meta tí ó sonù, hreflang tí ó bàjẹ́, àwọn àdírẹ́sì tí a kò túmọ̀, àti àkóópọ̀ tí ó ní ẹ̀dà méjì, fún èdè kọ̀ọ̀kan."
+
+#: src/admin/SeoAudit.js:85
+msgid "Language to audit"
+msgstr "Èdè fún àyẹ̀wò"
+
+#: src/admin/SeoAudit.js:106
+msgid "Run the audit"
+msgstr "Se ayewo naa"
+
+#: src/admin/SeoAudit.js:114
+msgid "Check the next pages"
+msgstr "Ṣayẹwo awọn oju-iwe ti o tẹle"
+
+#. translators: 1: pages checked, 2: problems found.
+#: src/admin/SeoAudit.js:128
+#, js-format
+msgid "%1$d pages checked, %2$d problems found."
+msgstr "Awọn oju-iwe %1$d ti a ṣayẹwo, awọn iṣoro %2$d ti a rii."
+
+#: src/admin/SeoAudit.js:136
+msgid "The whole language has been checked."
+msgstr "A ti ṣàyẹ̀wò gbogbo èdè náà."
+
+#: src/admin/SeoAudit.js:146
+msgid "Page"
+msgstr "Ojúewé"
+
+#: src/admin/SeoAudit.js:147
+msgid "Problem"
+msgstr "Àìṣédéédé"
+
+#: src/admin/SeoAudit.js:163
+msgid "Edit"
+msgstr "Ṣatunkọ"
+
+#: src/admin/Switchers.js:86
+msgid "Floating switcher"
+msgstr "Aiyipada ti n fo"
+
+#: src/admin/Switchers.js:88
+msgid "A small button in a corner of every page, on any theme, with no set-up."
+msgstr "Bọtínì kékeré kan ní apaǹtì gbogbo ojú ewé, lórí èyíkéyìí tiimu, láìsí ìṣètò kankan."
+
+#: src/admin/Switchers.js:96
+msgid "Where"
+msgstr "Nibo"
+
+#: src/admin/Switchers.js:99
+msgid "Off"
+msgstr "Pa"
+
+#: src/admin/Switchers.js:102
+msgid "Bottom corner, end side"
+msgstr "Ìgbọ̀nsẹ̀ ìsàlẹ̀, apá òpin"
+
+#: src/admin/Switchers.js:109
+msgid "Bottom corner, start side"
+msgstr "Ìgun ìsàlẹ̀, apá ìbẹ̀rẹ̀"
+
+#: src/admin/Switchers.js:116
+msgid "Top corner, end side"
+msgstr "Apakan igun oke, apa opin"
+
+#: src/admin/Switchers.js:120
+msgid "Top corner, start side"
+msgstr "Ẹ̀gbẹ́ òkè, ẹ̀gbẹ́ ìbẹ̀rẹ̀"
+
+#: src/admin/Switchers.js:151
+msgid "Switcher around the content"
+msgstr "Aṣẹ̀ṣe yíyípo àkóọ́lẹ̀ náà"
+
+#: src/admin/Switchers.js:157
+msgid "Add a switcher to every post and page"
+msgstr "Fi à yipada kún gbogbo ifiweranṣẹ ati oju-iwe"
+
+#: src/admin/Switchers.js:166
+msgid "Before the content"
+msgstr "Ṣaju akoonu naa"
+
+#: src/admin/Switchers.js:170
+msgid "After the content"
+msgstr "Lẹ́yìn àkópa náà"
+
+#: src/admin/Switchers.js:188
+msgid "Other ways to add a switcher"
+msgstr "Awọn ọna miiran lati fi oluyipada kun"
+
+#: src/admin/Switchers.js:193
+msgid "Block editor and site editor: the “Language switcher” block, with five designs."
+msgstr "Olùṣàtúnṣe ìdènà àti olùṣàtúnṣe ojú opo wẹ́bù: dínà “Olùyípadà èdè”, pẹ̀lu àwọn apẹrẹ márùn-ún."
+
+#: src/admin/Switchers.js:199
+msgid "Page Builder Sandwich: the “Language switcher” element."
+msgstr "Page Builder Sandwich: nǹkan \"Language switcher\"."
+
+#: src/admin/Switchers.js:205
+msgid "Menus: Appearance → Menus → “Language switcher” box."
+msgstr "Àwọn àkójọ aṣàyàn: Ìfarahàn → Àwọn àkójọ aṣàyàn → àpótí “Language switcher”."
+
+#: src/admin/Switchers.js:211
+msgid "Sidebars: the “Language switcher” widget."
+msgstr "Awọn ẹgbẹ gefe: wigi “Ayipada ede”."
+
+#: src/admin/Switchers.js:217
+msgid "Anywhere else, the shortcode:"
+msgstr "Nibi kankan miran, koodu kukuru:"
+
+#: src/admin/Switchers.js:224
+msgid "Elementor and Bricks: the “Language switcher” widget in each builder."
+msgstr "Elementor àti Bricks: widget “Language switcher” ní olùkọ̀lé kọ̀ọ̀kan."
+
+#: src/admin/Switchers.js:228
+msgid "Elementor and Bricks widgets are part of Tranzly Pro."
+msgstr "Àwọn nǹkan ìdánimọ̀ Elementor àti Bricks jẹ́ apَá kan Tranzly Pro."
+
+#: src/admin/Switchers.js:242
+#: src/admin/Urls.js:305
+msgid "Save"
+msgstr "Fi pamọ́"
+
+#: src/admin/urls-model.js:43
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: src/admin/urls-model.js:47
+msgid "A folder per language: example.com/de/"
+msgstr "Fáàlì kan fún èdè kọ̀ọ̀kan: example.com/de/"
+
+#: src/admin/urls-model.js:52
+msgid "A subdomain per language: de.example.com"
+msgstr "Subdomain kan fún èdè kọ̀ọ̀kan: de.example.com"
+
+#: src/admin/urls-model.js:59
+msgid "A separate domain per language: example.de"
+msgstr "Àìṣọ̀kan agbègbè fún èdè kọ̀ọ̀kan: example.de"
+
+#: src/admin/urls-model.js:65
+msgid "A query parameter: example.com/?lang=de (older sites)"
+msgstr "Gbólóhùn ìbéèrè ìwádìí: example.com/?lang=de (àwọn ojú òpó wẹ́bù tó ti pẹ́)"
+
+#: src/admin/urls-model.js:80
+msgid "Category"
+msgstr "Orísi"
+
+#: src/admin/urls-model.js:81
+msgid "Tag"
+msgstr "Àmì"
+
+#: src/admin/urls-model.js:82
+msgid "Product"
+msgstr "Ọjà"
+
+#: src/admin/urls-model.js:83
+msgid "Product category"
+msgstr "Ẹka ọja"
+
+#: src/admin/urls-model.js:84
+msgid "Product tag"
+msgstr "Àmì ọjà"
+
+#: src/admin/Urls.js:80
+msgid "Saved. Your language addresses have changed as shown below."
+msgstr "A ti fi pamọ́. Àwọn àdírẹ́sì èdè rẹ ti yí padà gẹ́gẹ́ bí ó ṣe hàn ní ìsàlẹ̀ yìí."
+
+#: src/admin/Urls.js:103
+msgid "Language in the address"
+msgstr "Èdè nínú àdírẹ́sì"
+
+#: src/admin/Urls.js:105
+msgid "How visitors and search engines reach each language"
+msgstr "Bẹ́ẹ̀ ni àwọn alábàábẹ̀wò àti àwọn ẹ̀rọ àwárí ṣe ń dé ọ̀dọ̀ èdè kọ̀ọ̀kan"
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:128
+#, js-format
+msgid "Address word for %s"
+msgstr "Ọ̀rọ̀ àdíréẹ̀ fún %s"
+
+#: src/admin/Urls.js:133
+msgid "The default language has no word in its addresses."
+msgstr "Èdè àkọkọ kò ní ọ̀rọ̀ kankan nínú àwọn àdírẹ́sì rẹ̀."
+
+#. translators: %s: a language code such as de_DE.
+#: src/admin/Urls.js:157
+#, js-format
+msgid "Domain for %s (optional)"
+msgstr "Agbegbe wẹbụ fun %s (aṣayan)"
+
+#: src/admin/Urls.js:160
+msgid "Point the domain at this site first. A language with no domain uses a folder on your main domain."
+msgstr "Kọ agbegbe naa si aaye yii ni akọkọ. Ede kan ti ko ni agbegbe nlo folda kan lori agbegbe akọkọ rẹ."
+
+#: src/admin/Urls.js:176
+msgid "Where each language lives now"
+msgstr "Nibikiti ti ede kọọkan n gbe bayii"
+
+#: src/admin/Urls.js:192
+msgid "Translated address words"
+msgstr "Awọn ọrọ adirẹsi ti a tumọ si"
+
+#: src/admin/Urls.js:196
+msgid "Page and post addresses come from their translated titles. Here you translate the fixed words, so /de/kategorie/ replaces /de/category/."
+msgstr "Àwọn àtọmọ adírẹ́sì ojú ewé àti àtúnṣe wá láti inú àwọn àkọlé tí a ti túmọ̀ wọn. Níbì yìí o túmọ̀ àwọn ọ̀rọ̀ tí a ti múlẹ̀, nítorí náà /de/kategorie/ rọ́pò /de/category/."
+
+#. translators: 1: what the word is for (Category), 2: the word WordPress uses now.
+#: src/admin/Urls.js:213
+#, js-format
+msgid "%1$s (now “%2$s”)"
+msgstr "%1$s (bayìí ni “%2$s”)"
+
+#: src/admin/Urls.js:245
+msgid "Search engines and visitors"
+msgstr "Àwọn ẹ̀rọ ìwárí àti àwọn alábèwò"
+
+#: src/admin/Urls.js:250
+msgid "Offer visitors their own language with a small banner (never a redirect)"
+msgstr "Fun awọn alejo ni ede tiwọn pẹlu asia kekere kan (kii ṣe atọnisọna lailai)"
+
+#: src/admin/Urls.js:259
+msgid "Hide untranslated pages from search engines (noindex)"
+msgstr "Fi awọn oju-ewe ti a ko tumọ pamọ kuro lọwọ awọn ẹ̀rọ àwárí (noindex)"
+
+#: src/admin/Urls.js:265
+msgid "A translation that still holds the original text is kept out of search results until it is translated."
+msgstr "Ìtumọ̀ kan tí ó ṣì ní ọ̀rọ̀ àkọ́kọ́ nínú ni a máa ń yọ kúrò nínú àwọn èsì wíwá titi di ìgbà tí a ó fi tú ẹ̀."
+
+#: src/admin/Urls.js:269
+msgid "Part of Tranzly Pro."
+msgstr "Apakan Tranzly Pro."
+
+#: src/admin/Urls.js:278
+msgid "Tranzly adds hreflang links (with x-default), the page language and direction, and every language to your sitemap:"
+msgstr "Tranzly fi àwọn àsopọ̀ hreflang (pẹ̀lú x-default), èdè ojú-ewé àti ìtọ́sọ́nà, àti gbogbo èdè kún sitemap rẹ:"
+
+#. translators: %s: names of SEO plugins, such as Yoast SEO.
+#: src/admin/Urls.js:292
+#, js-format
+msgid "Working together with: %s."
+msgstr "Ṣiṣẹ pọ pẹlu: %s."
+
+#: src/admin/Urls.js:309
+msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
+msgstr "Ọ̀rọ̀ àdírẹ̀sì kọ̀ọ̀dù jẹ́ lẹ́tà kékeré 2 sí 12, àwọn nọ́mbà tàbí àwọn àmì ìdájọ́ (hyphens)."
+
+#: src/editor/index.js:18
+#: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Fi ede keji kun labẹ Tranzly ni akojọ aṣayan abojuto, yoo si han nibi."
 
-#: src/editor/index.js:29
-msgid "Switcher"
-msgstr "Aṣọ̀yípadà"
+#: src/editor/switcher.js:67
+msgid "Off by default: a flag is a country, not a language."
+msgstr "Pa a fún àìní: àfìhàmọ̀ jẹ́ orílẹ̀-èdè, kì í ṣe èdè."
 
-#: src/editor/index.js:32
-msgid "Accessible label"
-msgstr "Àwọn àmì tó ṣeé wọlé"
+#: src/editor/switcher.js:108
+msgid "What screen readers announce, for example “Choose a language”."
+msgstr "Ohun tí àwọn olùkà aṣọ bẹ́ẹ̀ ń kéde, fún àpẹrẹ “Yan èdè kan”."
+
+#: src/editor/switcher.js:117
+msgid "Colours"
+msgstr "Àwọn àwọ̀"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block title"
 msgid "Language switcher"
 msgstr "Aláyípadà èdè"
@@ -5343,16 +5894,29 @@ msgid "Links to this page in each of the site's languages. It renders nothing un
 msgstr "Awọn ọna aṣopọ si oju-iwe yii ni olukuluku awọn ede aaye naa. Ko ni han ohunkohun titi ti a o fi ṣe akoስተ awọn ede meji tabi ju bẹ lọ."
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "language"
 msgstr "Èdè"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "switcher"
 msgstr "Olutiraka"
 
 #: blocks/fixture-switcher/block.json
+#: blocks/language-switcher/block.json
 msgctxt "block keyword"
 msgid "translation"
 msgstr "Ìtumọ̀"
+
+#: blocks/language-switcher/block.json
+msgctxt "block description"
+msgid "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags."
+msgstr "Jẹ ki awọn alejo ka oju-iwe yii ni ede miiran ti o ni: atokọ, awọn ìpilísì, awọn bọtini, akojọ aṣayan ti o n jo silẹ tabi awọn koodu ede, pẹlu awọn aami ifihan ti o ba fẹ."
+
+#: blocks/language-switcher/block.json
+msgctxt "block keyword"
+msgid "multilingual"
+msgstr "ọ̀pọ̀ èdè"
