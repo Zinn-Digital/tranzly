@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "编写和重写"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "翻译"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "抱歉，您无权访问此页面。"
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "这些设置由使用它们的每个插件共享：%s。"
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "您的密钥已在此网站的数据库中加密，且只会发送至您选择的服务提供商——绝不会发送给我们。"
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "第 1 步（共 2 步）：选择 AI 提供商"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "您自备密钥，因此您直接向服务商支付实际使用的费用。拿不准？以下任意一种都可以，您以后还可以添加更多。"
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "下一步"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "第 2 步，共 2 步：连接 %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "请输入您的 OpenAI 兼容服务的地址，以 /v1 结尾。仅当服务要求时才需要密钥。"
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "打开 %s 并登录（或创建一个免费账户）。"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "%s API 密钥页面"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "创建一个新密钥并复制它。"
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "将其粘贴在下方，然后点击“保存并测试”。我们会发送一个微小的请求以检查其是否正常工作。"
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "大多数提供商需要在账户中有少许余额后，密钥才能生效：%s。"
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "添加额度"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← 选择其他服务商"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "地址"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "已保存的密钥以……%s结尾 — 请粘贴新密钥以替换它"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "密钥（可选）"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "API 密钥"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "保存并测试"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "服务商"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "服务商"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "状态"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "密钥"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "获取密钥"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "测试"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "移除"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "保存自较新版本的插件：请更新此插件，或重新输入密钥。"
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "已保存的密钥无法再打开（网站的安全密钥已更改）。请重新输入。"
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "未连接"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "已连接 — 上次测试通过 %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "上一次测试失败：%s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "已连接 — 尚未测试"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "使用哪个模型"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ 表示我们针对该任务的推荐。此列表包含您的密钥可以使用的所有模型，由提供商实时读取。"
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— 建议服务商使用 —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "保存模型"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "从提供商处刷新模型列表"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "图像"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "连接 OpenAI 或 Google Gemini 以生成图片。"
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— 首家已连接提供商的最新图像模型 —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "最高品质"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "最低费用"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "最快"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "自行添加模型"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "今天发布了新模型？输入其准确名称即可直接使用。"
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "模型名称"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "添加模型"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "推荐模型列表"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "无法验证推荐模型列表，因此未显示任何推荐。请重新安装插件，或在下方开启每日更新。"
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "正在使用的列表发布于 %s。每次插件更新都会带来一个新的列表。"
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "每天也请查看一次 Zinn Digital® 以获取更新的列表。"
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "仅发送纯下载请求：不包含密钥、网站地址，也没有关于您内容的任何信息。该列表经过签名，签名检查未通过的列表将被忽略。"
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "最后检查于 %1$s：%2$s。"
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "保存并在开启时立即检查"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "已安装更新的列表"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "已经是最新版本"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "下载未能通过签名检查，已被忽略"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "无法连接到 Zinn Digital®；当前列表将继续使用"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "已关闭"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "打开"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "查看他们的状态页面"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "打开您的账单页面"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "打开您的 API 密钥页面"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "打开 AI 设置"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "很抱歉，您没有权限执行此操作。"
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "未知服务商。"
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "请输入您的服务地址，例如 http://localhost:11434/v1。"
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "这看起来不像 API 密钥。请重新复制，不要包含空格。"
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "请先粘贴您的API密钥。"
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "密钥已移除。"
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "模型已保存。"
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "请输入模型的准确名称，例如照供应商文档中所写的那样。"
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "已添加 %s。请在“使用哪个模型”下进行选择。"
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "模型已移除。"
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "每日更新已关闭。将使用插件自带的列表。"
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "已选中：%s。"
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "模型列表已刷新。"
 
@@ -445,6 +459,19 @@ msgstr "未为此任务选择模型。请在 AI 设置中选择一个。"
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "此版本的插件不支持该 AI 提供商。"
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "未连接能够生成图像的 AI 提供商。请在 AI 设置中添加 OpenAI 或 Google Gemini 密钥。"
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "此 AI 提供商无法生成图像。请在 AI 设置中选择 OpenAI 或 Google Gemini 以生成图像。"
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "您的 AI 密钥无法使用任何图像模型。请向提供商检查密钥的权限，或为图像选择其他提供商。"
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s 目前遇到问题（对方服务器出现故障或过载）。您的
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI 请求因未知原因失败。请重试；如果问题仍然存在，请将以下详细信息提供给客服支持。"
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "AI 提供商返回了此插件无法读取的格式。请重试；如果问题持续存在，请选择其他模型或联系支持人员。"
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" 不是语言代码。请使用 WordPress 区域设置，例如 fr
 msgid "List at least one language."
 msgstr "请列出至少一种语言。"
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "翻译"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "编辑 %s 版本"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "并排比较 %s 版本"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "为每种语言选择一个菜单。"
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "这不是翻译，因此没有什么需要保护的。"
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "此类内容不进行翻译。"
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "文本 %s 已不在本网站上。请重新加载页面。"
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "没有任何翻译引擎能够处理这段文本。"
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "选择您的其他语言之一。"
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "比较翻译"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "您无权编辑此翻译。"
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "这不是翻译，所以没有什么可比性。"
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "本翻译的原文已不复存在。"
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "片段 %s 已不再属于此翻译。请重新加载页面并重试。"
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "在此页面上翻译"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "无法保存翻译链接。"
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "无法在此处翻译该文本。"
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "该媒体文本无法在此处翻译。"
 
@@ -810,15 +909,15 @@ msgstr "尚未设置翻译引擎。请在 Tranzly → 引擎中添加一个密�
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "该翻译引擎尚未配置：请先添加其密钥。"
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "另一个翻译任务目前正在翻译相同的文本；此项目将使用该翻译结果。"
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "没有任何翻译引擎可以处理此项。"
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "引擎未返回此项目各个部分的翻译。未作任何更改。"
 
@@ -1497,6 +1596,7 @@ msgstr "立即购买许可证"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "取消"
 
@@ -3967,6 +4067,7 @@ msgstr "正在试用"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "状态"
 
@@ -5150,7 +5251,7 @@ msgstr "垂直堆叠"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "辅助功能标签"
@@ -5201,7 +5302,7 @@ msgstr "文字大小"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "切换器"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "查看 Pro 方案和价格"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "语言"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "内容"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "语言"
 
@@ -5578,29 +5681,95 @@ msgstr "重试"
 msgid "Translate by hand"
 msgstr "手动翻译"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "已保存菜单。"
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "已翻译 %d 个文本。"
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "已保存。您的更正已受到保护，免受机器翻译影响。"
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "已翻译的相同菜单"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "每种语言一个独立菜单"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "默认情况下，每个菜单都会被翻译：其链接会指向带有对应标题的已翻译页面。您也可以在此处为特定语言单独选择一个菜单。"
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "共享文本"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "哪个文本"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "菜单标签"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "模板、页眉、页脚和模式"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "模板、页眉、页脚和模式 (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "翻译缺失的文本"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "此处没有要翻译的文本。"
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "人工校对，已保护"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "保存修改"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "语言与设置"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "引擎"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "翻译任务"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "地址与SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "语言切换器"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO 审计"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "菜单与共享文本"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "问题"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "编辑"
 
@@ -5738,6 +5908,7 @@ msgstr "Elementor 和 Bricks 小部件是 Tranzly Pro 的一部分。"
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "保存"
 
@@ -5865,7 +6036,60 @@ msgstr "与 %s 合作。"
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "每个地址字词应包含 2 到 12 个小写字母、数字或连字符。"
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "已保存。您修改的部分已被标记为经人工核对，此翻译已受到保护，免受机器翻译影响。"
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "此翻译的布局已在编辑器中更改，因此某些部分不再与原文配对。没有配对的部分将显示为空白；请在编辑器中编辑其余部分。"
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "打开编辑器"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "原版 (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "翻译 (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "保存更改"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "在编辑器中打开"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "机器翻译"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "人工检查"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "已导入"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "尚未翻译"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "不在翻译中"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "在管理菜单的 Tranzly 下添加第二种语言，切换器就会显示在这里。"
@@ -5881,6 +6105,132 @@ msgstr "屏幕阅读器的朗读内容，例如“选择语言”。"
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "颜色"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "未翻译"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "原始"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "已发布"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "草稿"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "人工审核，安全保障"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "已导入，受保护"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "尚未翻译（副本）"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "请先保存此文章，然后再在此处进行翻译。"
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "并排"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "查看"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "解锁以便再次翻译"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "保护"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "发布翻译"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "翻译成 %d 种语言"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s：已翻译。"
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "显示此区块"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "在每种语言中"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "仅在勾选的语言中"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "除勾选的语言外，所有语言"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "多语言图片"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "向使用特定语言的读者展示另一张图片，例如带有文字的横幅。"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "替换 %s 图像"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "选择 %s 镜像"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "使用原图"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "校正此翻译"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "正在保存…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "已翻译文本。按回车键进行修改。"
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "点击任何带有轮廓的文本以纠正其翻译。"
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "在此页面上未找到可在此编辑的翻译文本。请改用并排编辑器。"
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

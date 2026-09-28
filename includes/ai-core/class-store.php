@@ -177,6 +177,20 @@ final class Store {
 	}
 
 	/**
+	 * The site owner's choice of provider and model for images (1.1.0); empty = automatic.
+	 *
+	 * @return array{provider: string, model: string}
+	 */
+	public static function image_default(): array {
+		$row = (array) ( self::get()['images'] ?? array() );
+
+		return array(
+			'provider' => (string) ( $row['provider'] ?? '' ),
+			'model'    => (string) ( $row['model'] ?? '' ),
+		);
+	}
+
+	/**
 	 * The default choice for a task: provider and model.
 	 *
 	 * @param string $task Task id.

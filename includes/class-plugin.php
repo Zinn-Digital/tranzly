@@ -34,6 +34,7 @@ final class Plugin {
 		Core\Boot::register();
 		Seo\Seo::register();
 		Switcher\Places::register();
+		Content\Content_Module::register();
 
 		register_activation_hook( TRANZLY_FILE, array( self::class, 'activate' ) );
 	}

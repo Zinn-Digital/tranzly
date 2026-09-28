@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "መጻፍ እና እንደገና መጻፍ"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "ትርጉም"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "ይቅርታ፣ ይህንን ገጽ እንዲደርሱበት አልተፈቀደልዎም።"
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "እነዚህ መቼቶች የሚጠቀሟቸው በሁሉም ተሰኪዎች የተጋሩ ናቸው፡ %s።"
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "ቁልፎችዎ በዚህ ጣቢያ የውታ መደብር ውስጥ የተመሰጠሩ ሲሆኑ የሚላኩት እርስዎ ለመረጡት አቅራቢ ብቻ ነው—ለእኛ ፈጽሞ አይላኩም።"
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "ደረጃ 1 ከ 2፡ የሰው ሰራሽ አስተዋይ (AI) አቅራቢ ይምረጡ"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "የራስዎን ቁልፍ ያመጣሉ፣ ስለዚህ ለተጠቀሙበት አገልግሎት አቅራቢውን በቀጥታ ይከፍላሉ። እርግጠኛ አይደሉም? ከእነዚህ ውስጥ ማንኛውም በጥሩ ሁኔታ ይሠራል; በኋላ ላይ ተጨማሪ ማከል ይችላሉ።"
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "ቀጣይ"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "ደረጃ 2 ከ 2፦ %s ያገናኙ"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "የOpenAI-compatible አገልግሎትዎን አድራሻ ያስገቡ፣ በ /v1 የሚጠናቀቅ። ቁልፍ የሚያስፈልገው አገልግሎቱ ከጠየቀ ብቻ ነው።"
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "%s ይክፈቱ እና ይግቡ (ወይም ነጻ መለያ ይፍጠሩ)።"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "የ%s የኤፒአይ (API) ቁልፎች ገጽ"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "አዲስ ቁልፍ ይፍጠሩ እና ይቅዱት።"
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "ከዚህ በታች ለጥፈው እና \"አስቀምጥ እና ሞክር\" የሚለውን ይጫኑ። እየሰራ መሆኑን ለማረጋገጥ አንድ አነስተኛ ጥያቄ እንልካለን።"
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "ቁልፍ ከመሥራቱ በፊት አብዛኞቹ አቅራቢዎች በሒሳቡ ላይ ጥቂት ክሬዲት ይፈልጋሉ፦ %s።"
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "ክሬዲት ጨምር"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← ሌላ አቅራቢ ይምረጡ"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "አድራሻ"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "የተቀመጠው ቁልፍ የሚያልቀው በ…%s — ለመተካት አዲስ ይለጥፉ"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "ቁልፍ (አማራጭ)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "የኤፒአይ ቁልፍ"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "አስቀምጥ እና ሞክር"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "አቅራቢዎች"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "አቅራቢ"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "የህክምና ሁኔታ"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "ቁልፍ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "ቁልፍ አግኝ"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "ሞክር"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "አስወግድ"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "በአዲስ ተሰኪ ስሪት ተቀምጧል፡ ይህንን ተሰኪ ያዘምኑ ወይም ቁልፉን እንደገና ያስገቡ።"
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "የተቀመጠውን ቁልፍ ከእንግዲህ መክፈት አይቻልም (የጣቢያው የደህንነት ቁልፎች ተለውጠዋል)። እባክዎ እንደገና ያስገቡት።"
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "አልተገናኘም"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "የተገናኘ — የመጨረሻው ሙከራ አልፏል %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "የመጨረሻው ሙከራ አልተሳካም፦ %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "የተገናኘ - እስካሁን አልተፈተነም"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "የትኛውን ሞዴል መጠቀም እንዳለበት"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ ለዚያ ተግባር የእኛን ምክር ያመለክታል። ዝርዝሩ ቁልፍዎ ሊጠቀምባቸው የሚችላቸውን ሁሉንም ሞዴሎች በቀጥታ ከአቅራቢው የተነበቡ ያካትታል።"
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— ለአቅራቢው የሚመከር —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "ሞዴሎችን አስቀምጥ"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "ከአቅራቢዎቹ የሞዴል ዝርዝሮችን አድስ"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "ምስሎች"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "ምስሎችን ለመሥራት OpenAI ወይም Google Geminiን ያገናኙ።"
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— የመጀመሪያው የተገናኘ አቅራቢ አዲሱ የምስል ሞዴል —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "ጥሩ ጥራት"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "ዝቅተኛው ዋጋ"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "ፈጣኑ"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "ሞዴል በራስዎ ያክሉ"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "አዲስ ሞዴል ዛሬ ወጥቷል? ወዲያውኑ ለመጠቀም ትክክለኛውን ስሙን ይለጥፉ።"
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "የሞዴል ስም"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "ሞዴል አክል"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "የሚመከሩ ሞዴሎች ዝርዝር"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "የሚመከሩት ሞዴሎች ዝርዝር ሊረጋገጥ አልቻለም፣ ስለዚህ ምንም ምክሮች አይታዩም። ተሰኪውን እንደገና ይጫኑ፣ ወይም ከዚህ በታች ያሉትን ዕለታዊ ዝመናዎች ያንቁ።"
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "ጥቅም ላይ ያለው ዝርዝር በ%s ታትሟል። እያንዳንዱ ተሰኪ (ፕለጊን) ዝማኔ አዲስ ያመጣል።"
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "እንዲሁም የዘመነ ዝርዝር ለማግኘት በቀን አንድ ጊዜ Zinn Digital®ን ይፈትሹ።"
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "ቀላል የማውረድ ጥያቄ ብቻ ይላካል፡ ምንም ቁልፍ፣ የጣቢያ አድራሻ የለም፣ ስለ ይዘትዎ ምንም ነገር የለም። ዝርዝሩ የተፈረመ ነው፣ እና የፊርማ ምርመራውን ማለፍ ያልቻለ ዝርዝር ችላ ይባላል።"
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "%1$s ለመs ስተካከለ፡ %2$s።"
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "አስቀምጥ፣ እና ከተበራ አሁን ጻፍ (ቼክ አድርግ)"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "አዲስ ዝርዝር ተጭኗል"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "አሁኑኑ ዘምኗል"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "ውርዱ የፊርማ ማረጋገጫውን አላለፈም እና ችላ ተብሏል"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® ሊደረስበት አልተቻለም፤ አሁን ያለው ዝርዝር ስራ ላይ ይቆያል"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "ጠፍቷል"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "ክፈት"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "የሁኔታ ገጻቸውን ያረጋግጡ"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "የሂሳብ መጠየቂያ ገጽዎን ይክፈቱ"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "የእርስዎን የAPI ቁልፎች ገጽ ይክፈቱ"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "የAI ቅንብሮችን ክፈት"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "ይቅርታ፣ ይህንን ለማድረግ ፈቃድ የለዎትም።"
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "ያልታወቀ አቅራቢ።"
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "የአገልግሎትዎን አድራሻ ያስገቡ፤ ለምሳሌ http://localhost:11434/v1።"
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "ያ የኤፒአይ ቁልፍ (API key) የሚመስል አይደለም። ክፍተት (ስፔስ) ሳይኖር እንደገና ይቅዱት።"
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "መጀመሪያ የእርስዎን ኤፒአይ ቁልፍ (API key) ይለጥፉ።"
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "ቁልፉ ተወግዷል።"
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "ሞዴሎች ተቀምጠዋል።"
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "የሞዴሉን ትክክለኛ ስም ያስገቡ፤ ለምሳሌ አቅራቢው ዶክመንቴሽን ላይ እንዳስቀመጠው።"
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s ተጨምሯል። ከ\"የትኛውን ሞዴል መጠቀም እንደሚቻል\" ስር ይምረጡት።"
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "ሞዴሉ ተወግዷል።"
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "ዕለታዊ ማሻሻያዎች ጠፍተዋል። ከፕለጊኑ ጋር የመጣው ዝርዝር ጥቅም ላይ ይውላል።"
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "የተመረጠው፡ %s።"
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "የሞዴል ዝርዝሮች ታድሰዋል።"
 
@@ -445,6 +459,19 @@ msgstr "ለዚህ ተግባር ምንም ሞዴል አልተመረጠም። በ 
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "የዚያ AI አቅራቢ በዚህ ተሰኪ (plugin) ስሪት አይደገፍም።"
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "ምስሎችን መፍጠር የሚችል ምንም የAI አቅራቢ አልተገናኘም። በAI መቼቶች ውስጥ የOpenAI ወይም Google Gemini ቁልፍ ያክሉ።"
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "ይህ የAI አቅራቢ ምስሎችን መፍጠር አይችልም። በAI መቼቶች ውስጥ ለምስሎች OpenAI ወይም Google Gemini ን ይምረጡ።"
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "የእርስዎ የAI ቁልፍ ምንም አይነት የምስል ሞዴል መጠቀም አይችልም። የቁልፉን ፈቃዶች ከአቅራቢው ጋር ያረጋግጡ፣ ወይም ለምስሎች ሌላ አቅራቢ ይምረጡ።"
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s አሁን ችግር አጋጥሞታል (በእነሱ በኩል መቋ
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "የAI ጥያቄ ባልታወቀ ምክንያት አልተሳካም። እንደገና ይሞክሩ፤ ችግሩ ከቀጠለ ከዚህ በታች ባሉት ዝርዝሮች ድጋፍ ሰጪዎችን ያግኙ።"
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "የአርቴፊሻል ኢንተለጀንስ (AI) አቅራቢው ይህ ተሰኪ (plugin) ሊያነበው በማይችል መልኩ ምላሽ ሰጥቷል። እንደገና ይሞክሩ፤ ችግሩ ከቀጠለ, ሌላ ሞዴል ይምረጡ ወይም የዕርዳታ ማዕከልን (support) ያግኙ።"
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" የቋንቋ ኮድ አይደለም። እንደ fr_FR ወይም 
 msgid "List at least one language."
 msgstr "ቢያንስ አንድ ቋንቋ ዘርዝር።"
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "ትርጉሞች"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "የ%s ስሪት አርም"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "የ %s ስሪቱን ጎን ለጎን ያወዳድሩ"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "ለእያንዳንዱ ቋንቋ ከምናሌዎችዎ ውስጥ አንዱን ይምረጡ።"
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "ይህ ትርጉም አይደለም፣ ስለዚህ የሚጠበቅ ነገር የለም።"
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "ይህ ዓይነት ይዘት አልተተረጎመም።"
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "ጽሁፍ %s በዚህ ድረ-ገጽ ላይ ከእንግዲህ የለም። ገጹን እንደገና ጫን (reload)።"
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "ምንም የትርጉም ሞተር ይህንን ጽሑፍ ሊወስደው አልቻለም።"
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "ከሌሎች ቋንቋዎችዎ ውስጥ አንዱን ይምረጡ።"
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "ትርጉም አወዳድር"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "ይህንን ትርጉም እንዲያስተካክሉ አልተፈቀደልዎትም።"
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "ይህ ትርጉም አይደለም፣ ስለዚህ የሚያወዳድረው ምንም ነገር የለም።"
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "የዚህ ትርጉም ዋናው ጽሑፍ ከአሁን በኋላ የለም።"
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "ክፍል %s ከአሁን በኋላ የዚህ ትርጉም አካል አይደለም። ገጹን እንደገና ጫንና ይሞክሩ።"
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "በዚህ ገጽ ላይ ተርጎም"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "የትርጉም አገናኙ ሊቀመጥ አልቻለም።"
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "ይህ ጽሑፍ እዚህ ሊተረጎም አይችልም።"
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "ይህ የሚዲያ ጽሑፍ እዚህ ሊተረጎም አይችልም።"
 
@@ -810,15 +909,15 @@ msgstr "ምንም የትርጉም ሞተር እስካሁን አልተዋቀረ�
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "የዚያ ትርጉም ማሽን ገና አልተዋቀረም፡ መጀመሪያ ቁልፉን (key) ያክሉ።"
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "ተመሳሳይ ጽሑፍ በአሁኑ ጊዜ በሌላ ሥራ እየተተረጎመ ነው፤ ይህ ንጥል ያንን መልስ ይጠቀማል።"
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "ማንም የትርጉም ሞተር ይህንን ንጥል መውሰድ አልቻለም።"
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ሞተሩ ለዚህ ንጥል ለእያንዳንዱ ክፍል ትርጉም አልመለሰም። ምንም የተለወጠ ነገር የለም።"
 
@@ -1497,6 +1596,7 @@ msgstr "ፈቃድ አሁን ይግዙ"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "ሰርዝ"
 
@@ -3967,6 +4067,7 @@ msgstr "ሙከራ በመጀመር ላይ"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "ግዛት"
 
@@ -5150,7 +5251,7 @@ msgstr "በቁመት ቁልል"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "የሚደረስበት መለያ"
@@ -5201,7 +5302,7 @@ msgstr "የጽሁፍ መጠን"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "መቀያየሪያ"
@@ -5235,6 +5336,7 @@ msgid "See the Pro plans and pricing"
 msgstr "የፕሮ እቅዶችን እና የዋጋ ዝርዝሮችን ይመልከቱ"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "ቋንቋዎች"
 
@@ -5551,6 +5653,7 @@ msgid "Content"
 msgstr "ይዘት"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "ቋንቋ"
 
@@ -5579,29 +5682,95 @@ msgstr "እንደገና ይሞክሩ"
 msgid "Translate by hand"
 msgstr "በእጅ ተርጎም"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "ሜኑዎች ተቀምጠዋል።"
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d ጽሁፎች ተተርጉመዋል።"
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "ተቀምጧል። የእርስዎ ማስተካከያዎች ከማሽን ትርጉም የተጠበቁ ናቸው።"
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "ያው መኑ፣ የተተረጎመ"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "ለእያንዳንዱ ቋንቋ የተለየ ምናሌ"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "በነባሪ እያንዳንዱ ምናሌ ተተርጉሟል፡ አገናኞቹ ከርዕሶቻቸው ጋር ወደተተረጎሙት ገጾች ይመራሉ። በምትኩ ለቋንቋው የሚሆን የራሱን ምናሌ እዚህ ይምረጡ።"
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "የተጋራ ጽሑፍ"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "የትኛው ጽሑፍ"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "የምናሌ መለያዎች"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "ቴምፕሌቶች፣ ራሶች፣ ግርጌዎች እና ንድፎች"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "አብነቶች፣ የላይኛው ራስጌዎች፣ የታችኛው ራስጌዎች እና ንድፎች (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "የጎደለውን ጽሁፍ ተርጉም"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "እዚህ የሚተረጎም ጽሑፍ የለም።"
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "በሰው የተስተካከለ፣ የተጠበቀ"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "እርማቶችን አስቀምጥ"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "ቋንቋዎች እና ቅንብሮች"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "ሞተሮች"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "የትርጉም ስራዎች"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "አድራሻዎች እና SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "የቋንቋ መቀየሪያዎች"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "የSEO ኦዲት"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "ምናንዎች እና የተጋራ ጽሑፍ"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5654,6 +5823,7 @@ msgid "Problem"
 msgstr "ችግር"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "አስተካክል"
 
@@ -5739,6 +5909,7 @@ msgstr "የElementor እና Bricks ዊጅቶች የTranzly Pro አካል ናቸ�
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "አስቀምጥ"
 
@@ -5866,7 +6037,60 @@ msgstr "ከዚህ ጋር እየሰራ ነው፡ %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "እያንዳንዱ የአድራሻ ቃል ከ2 እስከ 12 ንዑስ ፊደላት፣ አሃዞች ወይም ሰያፎች (hyphens) ሊኖሩት ይገባል።"
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "ተቀምጧል። የተቀየሩት ክፍሎች በሰው የተረጋገጡ በመሆን ምልክት ተደርጎባቸዋል፣ እና ይህ ትርጉም ከማሽን ትርጉም የተጠበቀ ነው።"
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "የዚህ ትርጉም ይዘት አቀማመጥ በአርታኢው ውስጥ ተቀይሯል፣ ስለዚህ አንዳንድ ክፍሎች ከአስተካካዩ ጋር አይጣጣሙም። አጋር የሌላቸው ክፍሎች ባዶ ሆኖ ይታያሉ፤ የቀረውን በአርታኢው ውስጥ ያርሙ።"
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "አርታኢውን ክፈት"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "ዋናው (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "ትርጉም (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "ለወጦችን አስቀምጥ"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "በማስተካከያው ክፈት"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "በማሽን የተተረጎመ"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "በሰው የተረጋገጠ"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "ገብቷል"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "እስካሁን አልተተረጎመም"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "በትርጉም ውስጥ የለም"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "ሁለተኛ ቋንቋ በአስተዳዳሪው ምናሌ ውስጥ ካለው ትራንዝሊ (Tranzly) ስር ያክሉ፣ እና መቀየሪያው እዚህ ይታያል።"
@@ -5882,6 +6106,133 @@ msgstr "የስክሪን አንባቢዎች የሚያነቡት፣ ለምሳሌ �
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "ቀለማት"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "ያልተተረጎመ"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "ዋናው"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "ታትሟል"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "የተዘጋጀው ድራፍት"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "በሰው የተረጋገጠ፣ የተጠበቀ"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "ገብቷል፣ የተጠበቀ"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "እስካሁን አልተተረጎመም (ቅጂ)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "መጀመሪያ ይህንን ልጥፍ ያስቀምጡ፣ ከዚያም እዚህ ይተርጉሙት።"
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "ጎን ለጎን"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "ይመልከቱ"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "እንደገና እንዲተረጎም ይክፈቱት"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "አስጠብቅ"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "ትርጉሞቹን አሳተም"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "ወደ %d ቋንቋ ተርጎም"
+msgstr[1] "ወደ %d ቋንቋዎች ተርጎም"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s፡ ተተርጉሟል።"
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "ይህንን ብሎክ አሳይ"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "በእያንዳንዱ ቋንቋ"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "በምልክት የተደረገባቸው ቋንቋዎች ብቻ"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "ከተመረጡት በስተቀር በሁሉም ቋንቋዎች"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "እንዳ ቋንቋው ምስል"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "ለአንድ ቋንቋ ተናባቢዎች ሌላ ምስል አሳይ፣ ለምሳሌ በውስጡ ጽሑፍ ያለበት ባነር።"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "የ%s ምስልን ተካ"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "የ%s ምስል ይምረጡ"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "ዋናውን ምስል ይጠቀሙ"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "ይህንን ትርጉም አስተካክል"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "በማስቀመጥ ላይ…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "የተተረጎመ ጽሑፍ። ለማስተካከል Enterን ይጫኑ።"
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "የተተረጎመውን ጽሑፍ ለማስተካከል ማንኛውንም በዙሪያው መስመር ያለበትን ጽሑፍ ይጫኑ።"
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "በዚህ ገጽ ላይ ለማስተካከል ምንም የተተረጎመ ጽሑፍ አልተገኘም። በምትኩ ጎን ለጎን ያለውን ማስተካከያ (ኤዲተር) ይጠቀሙ።"
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

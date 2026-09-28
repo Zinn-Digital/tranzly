@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "ការសរសេរ និងសរសេរឡើងវិញ"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "ការបកប្រែ"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "សូមអភ័យទោស អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យចូលប្រើទំព័រនេះទេ។"
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "ការកំណត់ទាំងនេះត្រូវបានចែករំលែកដោយគ្រប់កម្មវិធីជំនួយដែលប្រើប្រាស់ពួកវា៖ %s។"
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "កូនសោរបស់អ្នកត្រូវបានសរសេរកូដសម្ងាត់នៅក្នុងមូលដ្ឋានទិន្នន័យនៃគេហទំព័រនេះ ហើយត្រូវបានបញ្ជូនទៅកាន់អ្នកផ្តល់សេវាដែលអ្នកបានជ្រើសរើសតែប៉ុណ្ណោះ — មិនដែលផ្ញើមកកាន់យើងឡើយ។"
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "ជំហានទី ១ នៃទី ២៖ ជ្រើសរើសអ្នកផ្តល់សេវា AI"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "អ្នកនាំយកសោផ្ទាល់ខ្លួនរបស់អ្នក ដូច្នេះអ្នកទូទាត់ប្រាក់ដោយផ្ទាល់ទៅកាន់អ្នកផ្តល់សេវាសម្រាប់អ្វីដែលអ្នកប្រើ។ មិនប្រាកដមែនទេ? ទាំងនេះណាមួយដំណើរការបានល្អ; អ្នកអាចបន្ថែមទៀតនៅពេលក្រោយ។"
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "បន្ទាប់"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "ជំហានទី ២ ក្នុងចំណោម ២៖ ភ្ជាប់ %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "បញ្ចូលអាសយដ្ឋាននៃសេវាកម្មដែលត្រូវគ្នានឹង OpenAI របស់អ្នក ដែលបញ្ចប់ដោយ /v1។ តម្រូវឱ្យមានសោលុះត្រាតែសេវាកម្មស្នើសុំវា។"
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "បើក %s ហើយចូលគណនី (ឬបង្កើតគណនីឥតគិតថ្លៃមួយ)។"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "ទំព័រគ្រាប់ចុច API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "បង្កើតសោថ្មីមួយ ហើយចម្លងវា។"
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "សូមបិទភ្ជាប់វាខាងក្រោមហើយចុចលើពាក្យ \"រក្សាទុកនិងសាកល្បង\"។ យើងនឹងផ្ញើសំណើដ៏តូចមួយដើម្បីពិនិត្យមើលថាវាដំណើរការ។"
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "អ្នកផ្តល់សេវាភាគច្រើនត្រូវការឥណទានបន្តិចបន្តួចនៅលើគណនីមុនពេលគ្រាប់ចុចដំណើរការ៖ %s។"
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "បន្ថែមឥណទាន"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← ជ្រើសរើសអ្នកផ្តល់សេវាផ្សេង"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "អាសយដ្ឋាន"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "គន្លឹះដែលបានរក្សាទុកបញ្ចប់ដោយ …%s — សូមបិទភ្ជាប់ថ្មីដើម្បីជំនួសវា"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "សោ (ស្រេចចិត្ត)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "គ្រាប់ចុច API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "រក្សាទុក និងសាកល្បង"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "អ្នកផ្ដល់សេវា"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "អ្នកផ្តល់សេវា"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "ស្ថានភាព"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "សោ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "ទទួលយកសោ"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "សាកល្បង"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "លុបចេញ"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "រក្សាទុកដោយកំណែជំនួយការថ្មីជាងនេះ៖ សូមអាប់ដេតជំនួយការនេះ ឬបញ្ចូលគ្រាប់ចុចម្តងទៀត។"
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "សោដែលបានរក្សាទុកមិនអាចបើកបានទៀតទេ (សោសុវត្ថិភាពរបស់គេហទំព័រត្រូវបានផ្លាស់ប្តូរ)។ សូមបញ្ចូលវាឡើងវិញ។"
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "មិនបានភ្ជាប់"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "បានតភ្ជាប់ — ការធ្វើតេស្តចុងក្រោយបានឆ្លងកាត់ %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "ការសាកល្បងចុងក្រោយបានបរាជ័យ៖ %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "បានតភ្ជាប់ — មិនទាន់បានសាកល្បងនៅឡើយទេ"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "ម៉ូដែលណាត្រូវប្រើ"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ គឺចំណាំការណែនាំរបស់យើងសម្រាប់កិច្ចការនោះ។ បញ្ជីនេះរួមបញ្ចូលទាំងរាល់ម៉ូដែលដែលសោរបស់អ្នកអាចប្រើប្រាស់បាន ដោយអានផ្ទាល់ពីអ្នកផ្តល់សេវា។"
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— បានណែនាំសម្រាប់អ្នកផ្តល់សេវា —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "រក្សាទុកម៉ូដែល"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "ធ្វើឱ្យបញ្ជីម៉ូដែលស្រស់ឡើងវិញពីអ្នកផ្តល់សេវា"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "រូបភាព"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "ភ្ជាប់ OpenAI ឬ Google Gemini ដើម្បីបង្កើតរូបភាព។"
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— ម៉ូដរូបភាពថ្មីបំផុតរបស់អ្នកផ្តល់សេវាដែលបានតភ្ជាប់ដំបូងគេ —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "គុណភាពល្អបំផុត"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "តម្លៃទាបបំផុត"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "លឿនបំផុត"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "បន្ថែមម៉ូដែលដោយខ្លួនឯង"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "ម៉ូដែលថ្មីមួយចេញថ្ងៃនេះមែនទេ? បិទភ្ជាប់ឈ្មោះពិតប្រាកដរបស់វាដើម្បីប្រើប្រាស់វាបានភ្លាមៗ។"
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "ឈ្មោះម៉ូដែល"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "បន្ថែមម៉ូដែល"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "បញ្ជីម៉ូដែលដែលបានណែនាំ"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "បញ្ជីម៉ូដែលដែលបានណែនាំមិនអាចផ្ទៀងផ្ទាត់បានទេ ដូច្នេះគ្មានការណែនាំណាមួយត្រូវបានបង្ហាញទេ។ សូមដំឡើងជំនួយការឡើងវិញ ឬបើកដំណើរការបច្ចុប្បន្នភាពប្រចាំថ្ងៃខាងក្រោម។"
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "បញ្ជីដែលកំពុងប្រើត្រូវបានផ្សាយនៅលើ %s។ រាល់ការអាប់ដេតកម្មវិធីជំនួយនីមួយៗនាំមកនូវបញ្ជីថ្មីមួយ។"
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "សូមពិនិត្យមើល Zinn Digital® ម្តងក្នុងមួយថ្ងៃផងដែរ ដើម្បី Gay យកបញ្ជីដែលបានអាប់ដេត។"
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "មានតែសំណើទាញយកធម្មតាប៉ុណ្ណោះដែលត្រូវបានបញ្ជូន៖ គ្មានគ្រាប់ចុច គ្មានអាសយដ្ឋានគេហទំព័រ គ្មានអ្វីអំពីខ្លឹមសាររបស់អ្នកឡើយ។ បញ្ជីនេះត្រូវបានចុះហត្ថលេខា ហើយបញ្ជីដែលមិនឆ្លងកាត់ការពិនិត្យហត្ថលេខា នឹងត្រូវទុកចោល។"
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "បានពិនិត្យចុងក្រោយ %1$s៖ %2$s។"
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "រក្សាទុក ហើយពិនិត្យមើលឥឡូវនេះប្រសិនបើបានបើកដំណើរការ"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "បញ្ជីថ្មីជាងនេះត្រូវបានដំឡើង"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "រួចរាល់ហើយ"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "ការទាញយកបានបរាជ័យក្នុងការពិនិត្យមើលហត្ថលេខា ហើយត្រូវបានព្រងើយកន្តើយ"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® មិនអាចទាក់ទងបានទេ បញ្ជីបច្ចុប្បន្ននៅតែបន្តប្រើប្រាស់"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "បានបិទ"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "បើក"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "ពិនិត្យមើលទំព័រស្ថានភាពរបស់ពួកគេ"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "បើកទំព័រវិក្កយបត្ររបស់អ្នក"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "បើកទំព័រគ្រាប់ចុច API របស់អ្នក"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "បើកការកំណត់ AI"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "សូមអភ័យទោស អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យធ្វើសកម្មភាពនេះទេ។"
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "មិនស្គាល់អ្នកផ្តល់សេវា។"
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "សូមបញ្ចូលអាសយដ្ឋានសេវាកម្មរបស់អ្នក ឧទាហរណ៍ http://localhost:11434/v1។"
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "នោះមិនមែនជាគ្រាប់ចុច API ទេ។ សូមចម្លងវាម្ដងទៀតដោយគ្មានដកឃ្លា។"
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "សូមបិទភ្ជាប់កូនសោ API របស់អ្នកជាមុនសិន។"
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "គ្រាប់ចុចត្រូវបានដកចេញ។"
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "ម៉ូដែលត្រូវបានរក្សាទុក។"
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "បញ្ចូលឈ្មោះពិតប្រាកដរបស់ម៉ូដែល ឧទាហរណ៍ដូចដែលបានសរសេរនៅក្នុងឯកសាររបស់អ្នកផ្តល់សេវា។"
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "បានបន្ថែម %s ហើយ។ សូមជ្រើសរើសវានៅក្រោម \"តើត្រូវប្រើម៉ូដែលណា\"។"
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "ម៉ូដែលត្រូវបានដកចេញ។"
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "ការអាប់ដេតប្រចាំថ្ងៃត្រូវបានបិទ។ បញ្ជីដែលភ្ជាប់មកជាមួយកម្មវិធីជំនួយត្រូវបានប្រើប្រាស់។"
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "បានធីក៖ %s។"
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "បញ្ជីម៉ូដែលត្រូវបានធ្វើឱ្យស្រស់។"
 
@@ -445,6 +459,19 @@ msgstr "គ្មានម៉ូដែលណាមួយត្រូវបាន
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "អ្នកផ្តល់សេវា AI នោះមិនត្រូវបានគាំទ្រដោយជំនាន់នៃកម្មវិធីជំនួយនេះទេ។"
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "គ្មានអ្នកផ្តល់សេវា AI ណាដែលអាចបង្កើតរូបភាពត្រូវបានភ្ជាប់ទេ។ សូមបន្ថែមគ្រាប់ចុច OpenAI ឬ Google Gemini នៅក្នុងការកំណត់ AI។"
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "អ្នកផ្តល់សេវា AI នេះមិនអាចបង្កើតរូបភាពបានទេ។ សូមជ្រើសរើស OpenAI ឬ Google Gemini សម្រាប់រូបភាពនៅក្នុងការកំណត់ AI។"
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "គ្រាប់ចុច AI របស់អ្នកមិនអាចប្រើប្រាស់ម៉ូដែលរូបភាពណាមួយបានទេ។ សូមពិនិត្យមើលការអនុញ្ញាតរបស់គ្រាប់ចុចជាមួយអ្នកផ្តល់សេវា ឬជ្រើសរើសអ្នកផ្តល់សេវាផ្សេងទៀតសម្រាប់រូបភាព។"
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s កំពុងមានបញ្ហានៅពេលនេះ (ក�
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "សំណើ AI បានបរាជ័យដោយមូលហេតុដែលយើងមិនអាចកំណត់បាន។ សូមព្យាយាមម្តងទៀត បើវានៅតែកើតឡើង សូមទាក់ទងផ្នែកជំនួយដោយផ្ដល់នូវព័ត៌មានលម្អិតខាងក្រោម។"
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "អ្នកផ្តល់សេវា AI បានឆ្លើយតបក្នុងទម្រង់ដែលកម្មវិធីបន្ថែមនេះមិនអាចអានបាន។ សូមព្យាយាមម្តងទៀត ប្រសិនបើនៅតែបន្តកើតមាន សូមជ្រើសរើសម៉ូឌែលផ្សេងទៀត ឬទាក់ទងផ្នែកគាំទ្រ។"
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" មិនមែនជាកូដភាសាទេ។ សូម�
 msgid "List at least one language."
 msgstr "សូមរាយឈ្មោះភាសាឱ្យបានយ៉ាងតិចមួយ។"
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "ការបកប្រែ"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "កែសម្រួលកំណែ %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "ប្រៀបធៀបកំណែ %s ទល់មុខគ្នា"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "សូមជ្រើសរើសម៉ឺនុយមួយរបស់អ្នកសម្រាប់ភាសានីមួយៗ។"
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "នេះមិនមែនជាការបកប្រែទេ ដូច្នេះគ្មានអ្វីត្រូវការពារឡើយ។"
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "ខ្លឹមសារប្រភេទនេះមិនត្រូវបានបកប្រែទេ។"
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "អត្ថបទ %s មិនមាននៅលើគេហទំព័រនេះទៀតទេ។ សូមផ្ទុកទំព័រឡើងវិញ។"
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "គ្មានម៉ាស៊ីនបកប្រែណាមួយអាចយកអត្ថបទនេះបានទេ។"
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "សូមជ្រើសរើសភាសាផ្សេងទៀតរបស់អ្នក។"
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "ប្រៀបធៀបការបកប្រែ"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យកែសម្រួលការបកប្រែនេះទេ។"
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "នេះមិនមែនជាការបកប្រែទេ ដូច្នេះគ្មានអ្វីដែលត្រូវប្រៀបធៀបឡើយ។"
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "bản gốc của bản dịch này không còn tồn tại nữa។"
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "ចំណែក %s មិនមែនជាផ្នែកនៃការបកប្រែនេះទៀតទេ។ សូមផ្ទុកទំព័រឡើងវិញ ហើយព្យាយាមម្តងទៀត។"
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "បកប្រែទំព័រនេះ"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "តំណបកប្រែមិនអាចរក្សាទុកបានទេ។"
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "អត្ថបទនោះមិនអាចបកប្រែនៅទីនេះបានទេ។"
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "អត្ថបទមេឌៀនោះមិនអាចបកប្រែនៅទីនេះបានទេ។"
 
@@ -810,15 +909,15 @@ msgstr "មិនទាន់មានប្រព័ន្ធបកប្រែ
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ម៉ាស៊ីនបកប្រែនោះមិនទាន់បានរៀបចំនៅឡើយទេ៖ សូមបន្ថែមសោរបស់វាជាមុនសិន។"
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "អត្ថបទដូចគ្នា​កំពុង​ត្រូវបាន​បកប្រែ​ដោយ​ការងារ​ផ្សេង​ទៀត​នៅ​ពេល​នេះ។ ធាតុ​នេះ​នឹង​ប្រើ​ចម្លើយ​នោះ។"
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "គ្មានម៉ាស៊ីនបកប្រែណាមួយអាចទទួលយកធាតុនេះបានទេ។"
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ម៉ាស៊ីនមិនបានបញ្ជូនការបកប្រែមកវិញសម្រាប់គ្រប់ផ្នែកនៃធាតុនេះទេ។ គ្មានអ្វីត្រូវបានផ្លាស់ប្ដូរទេ។"
 
@@ -1497,6 +1596,7 @@ msgstr "ទិញអាជ្ញាប័ណ្ណឥឡូវនេះ"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "បោះបង់"
 
@@ -3968,6 +4068,7 @@ msgstr "កំពុងចាប់ផ្តើមការសាកល្បង
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "រដ្ឋ"
 
@@ -5151,7 +5252,7 @@ msgstr "ដាក់ជង់បញ្ឈរ"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "ស្លាកដែលអាចចូលប្រើបាន"
@@ -5202,7 +5303,7 @@ msgstr "ទំហំអត្ថបទ"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "កម្មវិធីប្តូរ"
@@ -5235,6 +5336,7 @@ msgid "See the Pro plans and pricing"
 msgstr "សូមមើលផែនការ និងតម្លៃ Pro"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "ភាសា"
 
@@ -5551,6 +5653,7 @@ msgid "Content"
 msgstr "មាតិកា"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "ភាសា"
 
@@ -5579,29 +5682,95 @@ msgstr "ព្យាយាមម្ដងទៀត"
 msgid "Translate by hand"
 msgstr "បកប្រែដោយដៃ"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "បានរក្សាទុកម៉ឺនុយ។"
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "បានបកប្រែអត្ថបទចំនួន %d។"
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "បានរក្សាទុក។ ការកែតម្រូវរបស់អ្នកត្រូវបានការពារពីការបកប្រែដោយម៉ាស៊ីន។"
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "ម៉ឺនុយដូចគ្នា បានបកប្រែ"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "ម៉ឺនុយដាច់ដោយឡែកមួយសម្រាប់ភាសានីមួយៗ"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "តាមលំនាំដើម ម៉ឺនុយនីមួយៗត្រូវបានបកប្រែ៖ តំណភ្ជាប់របស់វាដឹកនាំទៅកាន់ទំព័រដែលបានបកប្រែ ជាមួយនឹងចំណងជើងរបស់ពួកវា។ ជំនួសមកវិញ សូមជ្រើសរើសម៉ឺនុយផ្ទាល់ខ្លួនសម្រាប់ភាសានៅទីនេះ។"
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "អត្ថបទដែលបានចែករំលែក"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "អត្ថបទណា"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "ស្លាកម៉ឺនុយ"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "គំរូ ក្បាលទំព័រ ជើងទំព័រ និងទម្រង់"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "គំរូ ក្បាលទំព័រ ជើងទំព័រ និងគំរូគូសវាស (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "បកប្រែអត្ថបទដែលខ្វះ"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "គ្មានអត្ថបទសម្រាប់បកប្រែនៅទីនេះទេ។"
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "បានកែតម្រូវដោយមនុស្ស ការពារ"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "រក្សាទុកការកែតម្រូវ"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "ភាសា និងការកំណត់"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "ម៉ាស៊ីន"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "កិច្ចការបកប្រែ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "អាសយដ្ឋាន និង SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "កម្មវិធីប្ដូរភាសា"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "ការពិនិត្យអភិវឌ្ឍន៍ម៉ាស៊ីនស្វែងរក"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "ម៉ឺនុយ និងអត្ថបទចែករំលែក"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5654,6 +5823,7 @@ msgid "Problem"
 msgstr "បញ្ហា"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "កែសម្រួល"
 
@@ -5739,6 +5909,7 @@ msgstr "វីដជិត Elementor និង Bricks គឺជាផ្នែ�
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "រក្សាទុក"
 
@@ -5866,7 +6037,60 @@ msgstr "ធ្វើការរួមគ្នាជាមួយ៖ %s។"
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "ពាក្យអាសយដ្ឋាននីមួយៗត្រូវមានពី ២ ដល់ ១២ អក្សរតូច លេខ ឬសញ្ញាស្នៀត។"
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "បានរក្សាទុក។ ផ្នែកដែលអ្នកបានកែប្រែត្រូវបានសម្គាល់ថាបានពិនិត្យដោយមនុស្ស ហើយការបកប្រែនេះត្រូវបានការពារពីការបកប្រែដោយម៉ាស៊ីន។"
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "ប្លង់នៃការបកប្រែនេះត្រូវបានផ្លាស់ប្តូរនៅក្នុងកម្មវិធីកែសម្រួល ដូច្នេះផ្នែកខ្លះលែងត្រូវគ្នាជាមួយនឹងកំណែដើមទៀតហើយ។ ផ្នែកដែលគ្មានគូត្រូវបានបង្ហាញជាទទេ សូមកែសម្រួលផ្នែកដែលនៅសល់ក្នុងកម្មវិធីកែសម្រួល។"
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "បើកកម្មវិធីកែសម្រួល"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "ដើម (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "ការបកប្រែ (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "រក្សាទុកការផ្លាស់ប្តូរ"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "បើកក្នុងកម្មវិធីនិពន្ធ"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "បានបកប្រែដោយម៉ាស៊ីន"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "បានពិនិត្យដោយមនុស្សម្នាក់"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "បាននាំចូល"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "មិនទាន់បានបកប្រែនៅឡើយទេ"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "មិនស្ថិតក្នុងការបកប្រែទេ"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "សូមបន្ថែមភាសាទីពីរនៅក្រោម Tranzly ក្នុងម៉ឺនុយរដ្ឋបាល ហើយប៊ូតុងប្តូរភាសានឹងបង្ហាញនៅទីនេះ។"
@@ -5882,6 +6106,132 @@ msgstr "អ្វីដែលកម្មវិធីអានអេក្រង
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "ពណ៌"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "មិនទាន់បានបកប្រែ"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "ដើម"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "បានផ្សាយ"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "សេចក្តីព្រាង"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "ផ្ទៀងផ្ទាត់ដោយមនុស្ស បានការពារ"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "បាននាំចូល ដែលត្រូវបានការពារ"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "មិនទាន់បានបកប្រែនៅឡើយទេ (ច្បាប់ចម្លង)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "សូមរក្សាទុកអត្ថបទនេះជាមុនសិន សឹមបកប្រែវានៅទីនេះ។"
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "ទន្ទឹមគ្នា"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "មើល"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "ដោះសោដើម្បីឱ្យវាអាចបកប្រែបានម្តងទៀត"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "ការពារ"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "ផ្សាយបោះពុម្ពការបកប្រែ"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "បកប្រែទៅជាភាសា %d"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s៖ បានបកប្រែ។"
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "បង្ហាញប្លុកនេះ"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "គ្រប់ភាសា"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "មានតែក្នុងភាសាដែលបានធីកប៉ុណ្ណោះ"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "ជាភាសាទាំងអស់ លើកលែងតែភាសាដែលបានធីក"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "រូបភាពតាមភាសា"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "បង្ហាញរូបភាពផ្សេងទៀតដល់អ្នកអានភាសាណាមួយ ឧទាហរណ៍ បដាដែលមានអត្ថបទនៅលើនោះ។"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "ជំនួសរូបភាព %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "ជ្រើសរើសរូបភាព %s មួយ"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "ប្រើរូបភាពដើម"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "កែសម្រួលការបកប្រែនេះ"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "កំពុងរក្សាទុក..."
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "អត្ថបទដែលបានបកប្រែ។ ចុច Enter ដើម្បីកែតម្រូវវា។"
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "ចុចលើអត្ថបទដែលមានស៊ុមព័ទ្ធជុំវិញ ដើម្បីកែតម្រូវការបកប្រែរបស់វា។"
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "រកមិនឃើញអត្ថបទដែលបានបកប្រែនៅលើទំព័រនេះសម្រាប់កែសម្រួលនៅទីនេះទេ។ សូមប្រើកម្មវិធីកែសម្រួលទន្ទឹមគ្នាជំនួសវិញ។"
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

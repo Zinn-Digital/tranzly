@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Писање и преписивање"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Prevod"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Žao nam je, nemate pristup ovoj stranici."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Ova podešavanja deli svaki dodatak koji ih koristi: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Vaši ključevi su šifrovani u bazi podataka ovog sajta i šalju se samo i isključivo provajderu kojeg ste izabrali — nikada nama."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Korak 1 od 2: izaberite AI provajdera"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Vi sami donosite ključ, tako da plaćate direktno provajderu ono što potrošite. Niste sigurni? Bilo koja od ovih opcija radi dobro; možete ih dodati još kasnije."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Sledeće"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Korak 2 od 2: poveži %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Unesite adresu vaše OpenAI-kompatibilne usluge, koja se završava sa /v1. Ključ je potreban samo ako ga usluga zatraži."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Otvorite %s i prijavite se (ili kreirajte besplatan nalog)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "stranica za %s API ključeve"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Kreirajte novi ključ i kopirajte ga."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Nalepite ga ispod i pritisnite „Sačuvajte i testirajte“. Šaljemo jedan mali zahtev da proverimo da li radi."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Većini provajdera je potreban mali iznos kredita na nalogu pre nego što ključ počne da radi: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "dodaj kredit"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Izaberite drugog provajdera"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Adresa"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Sačuvani ključ se završava na …%s — nalepite novi da biste ga zamenili"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Ključ (opciono)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "API ključ"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Sačuvaj i testiraj"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Provajderi"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Dobavljač"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Статус"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Ključ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Nabavite ključ"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Тестирајте"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Ukloni"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Sačuvano novijom verzijom dodatka: ažurirajte ovaj dodatak ili ponovo unesite ključ."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Sačuvani ključ više ne može da se otvori (bezbednosni ključevi sajta su promenjeni). Unesite ga ponovo."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Nije povezano"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Povezano — poslednji test je uspeo %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Poslednji test nije uspeo: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Povezano — još uvek nije testirano"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Koji model koristiti"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ označava našu preporuku za taj zadatak. Lista uključuje svaki model koji vaš ključ može da koristi, učitan uživo od provajdera."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Preporučeno za provajdera —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Sačuvaj modele"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Osvežite liste modela od dobavljača"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Slike"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Povežite OpenAI ili Google Gemini da biste pravili slike."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Najnoviji model slike prvog povezanog provajdera —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "najbolji kvalitet"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "najniža cena"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "najbrže"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Dodajte sopstveni model"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Novi model je izašao danas? Nalepite njegov tačan naziv da biste ga odmah koristili."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Naziv modela"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Dodaj model"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Lista preporučenih modela"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Lista preporučenih modela nije mogla biti verifikovana, tako da se preporuke ne prikazuju. Ponovo instalirajte dodatak ili uključite dnevna ažuriranja u nastavku."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Lista koja se koristi objavljena je %s. Svako ažuriranje dodatka donosi novu."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Takođe proverite Zinn Digital® jednom dnevno za ažuriranu listu."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Šalje se samo običan zahtev za preuzimanje: bez ključa, bez adrese sajta, ništa o vašem sadržaju. Lista je potpisana, a lista koja ne prođe proveru potpisa se ignoriše."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Poslednja provera %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Sačuvajte i proveri odmah ako je uključeno"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "novija lista je instalirana"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "već je ažurirano"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "preuzimanje nije uspelo u proveri potpisa i ignorisano je"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® nije dostupan; trenutna lista ostaje u upotrebi"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "isključen"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Отвори"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Proverite njihovu stranicu sa statusom"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Otvorite stranicu za naplatu"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Otvorite stranicu sa vašim API ključevima"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Отворите подешавања за вештачку интелигенцију"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Žao nam je, nemate dozvolu za to."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Nepoznati provajder."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Unesite adresu svoje usluge, na primer http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "To ne liči na API ključ. Kopirajte ga ponovo, bez razmaka."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Prvo nalepite svoj API ključ."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Ključ je uklonjen."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Modeli su sačuvani."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Unesite tačan naziv modela, na primer onako kako je navedeno u dokumentaciji provajdera."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "Dodato %s. Izaberite ga u odeljku „Koji model koristiti“."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Model je uklonjen."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Dnevna ažuriranja su isključena. Koristi se lista koja je došla uz dodatak."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Označeno: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Liste modela su osvežene."
 
@@ -445,6 +459,19 @@ msgstr "Ni jedan model nije izabran za ovaj zadatak. Izaberite ga u AI podešava
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Taj AI provodnik nije podržan od strane ove verzije dodatka."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Nije povezan nijedan provajder veštačke inteligencije koji može da pravi slike. Dodajte OpenAI ili Google Gemini ključ u podešavanjima za veštačku inteligenciju."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Ovaj AI provajder ne može da pravi slike. Izaberite OpenAI ili Google Gemini za slike u AI podešavanjima."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Vaš AI ključ ne može da koristi nijedan model za slike. Proverite dozvole ključa kod provajdera ili izaberite drugog provajdera za slike."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s trenutno ima probleme (prekid rada ili preopterećenje sa njihove str
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "AI zahtev nije uspeo iz razloga koji nismo mogli da utvrdimo. Pokušajte ponovo; ako se to ponovi, obratite se podršci sa detaljima u nastavku."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "AI dobavljač je odgovorio u obliku koji ovaj dodatak nije mogao da pročita. Pokušajte ponovo; ako se to ponovi, izaberite drugi model ili se obratite podršci."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" nije jezički kod. Koristite WordPress lokalizaciju kao što je f
 msgid "List at least one language."
 msgstr "Navedite najmanje jedan jezik."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Prevodi"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Izmenite %s verziju"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Uporedite %s verziju uporedo"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Izaberite jedan od svojih menija za svaki jezik."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Ovo nije prevod, tako da nema ničega za zaštitu."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Ova vrsta sadržaja se ne prevodi."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Tekst %s više nije na ovom sajtu. Ponovo učitajte stranicu."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Nijedan prevodilački mehanizam nije mogao da obuhvati ovaj tekst."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Izaberite jedan od vaših drugih jezika."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Uporedi prevod"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Nije vam dozvoljeno da uređujete ovaj prevod."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Ovo nije prevod, tako da nema šta da se uporedi."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Original ovog prevoda više ne postoji."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "Deo %s više nije deo ovog prevoda. Ponovo učitajte stranicu i pokušajte ponovo."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Prevedi na ovoj stranici"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Veza za prevod nije mogla biti sačuvana."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Taj tekst se ovde ne može prevesti."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Taj tekst medija se ovde ne može prevesti."
 
@@ -810,15 +909,15 @@ msgstr "Još uvek nije podešen nijedan mašinski prevodilac. Dodajte ključ za 
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ta mašina za prevođenje još uvek nije podešena: prvo dodajte njen ključ."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Isti tekst se već prevodi u okviru drugog zadatka; ova stavka će iskoristiti taj odgovor."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Nijedan prevodilački mehanizam nije mogao da preuzme ovu stavku."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Motor nije vratio prevod za svaki deo ove stavke. Ništa nije promenjeno."
 
@@ -1497,6 +1596,7 @@ msgstr "Kupite licencu odmah"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Otkaži"
 
@@ -3967,6 +4067,7 @@ msgstr "Pokretanje probnog perioda"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Stanje"
 
@@ -5150,7 +5251,7 @@ msgstr "Постави вертикално"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Pristupačna oznaka"
@@ -5201,7 +5302,7 @@ msgstr "Veličina teksta"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Prekidač"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Pogledajte Pro planove i cene"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Jezici"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "Sadržaj"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Jezik"
 
@@ -5578,29 +5681,95 @@ msgstr "Pokušaj ponovo"
 msgid "Translate by hand"
 msgstr "Prevedi ručno"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Meniji su sačuvani."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d tekstova prevedeno."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Sačuvano. Vaše ispravke su zaštićene od mašinskog prevoda."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Isti meni, prevedeno"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Poseban meni po jeziku"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "Podrazumevano je svaki meni preveden: njegovi linkovi vode do prevedenih stranica, zajedno sa njihovim nazivima. Umesto toga, izaberite poseban meni za određeni jezik ovde."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Deljeni tekst"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Koji tekst"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Oznake menija"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Šabloni, zaglavlja, podnožja i šabloni"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Šabloni, zaglavlja, podnožja i šabloni (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Prevedi tekst koji nedostaje"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Ovde nema teksta za prevođenje."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Ispravila osoba, zaštićeno"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Сачувај исправке"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Језици и подешавања"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Engine"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Poslovi prevođenja"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Adrese i SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Jezički prekidači"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO ревизија"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Meniji i deljeni tekst"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "Problem"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Uredi"
 
@@ -5738,6 +5908,7 @@ msgstr "Elementor i Bricks vidžeti su deo Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Сачувај"
 
@@ -5865,7 +6036,60 @@ msgstr "Sarađujemo sa: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Svaka reč adrese ima od 2 do 12 malih slova, cifara ili crtica."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Sačuvano. Delovi koje ste promenili označeni su kao pregledani od strane osobe, a ovaj prevod je zaštićen od mašinskog prevođenja."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Raspored ovog prevoda je promenjen u uređivaču, tako da se neki delovi više ne podudaraju sa originalom. Delovi bez para se prikazuju prazni; uredite ostale u uređivaču."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Otvorite uređivač"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Originalno (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Превод (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Sačuvaj izmene"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Отвори у уређивачу"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Mašinski prevedeno"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Proverila osoba"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Увезено"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Još uvek nije prevedeno"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Nije u prevodu"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Dodajte drugi jezik pod Tranzly u administrativnom meniju, i prebacivač će se pojaviti ovde."
@@ -5881,6 +6105,134 @@ msgstr "Ono što čitači ekrana izgovaraju, na primer „Izaberite jezik“."
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Boje"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Nije prevedeno"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Originalni"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Objavljeno"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Nacrt"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Proverilo lice, zaštićeno"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Uvezeno, zaštićeno"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Još nije prevedeno (kopija)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Sačuvajte ovu objavu prvo, pa je prevedite ovde."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Uporedo"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Prikaži"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Otključajte da bi se moglo ponovo prevesti"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Zaštiti"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Objavi prevode"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Prevedi na %d jezik"
+msgstr[1] "Prevedi na %d jezika"
+msgstr[2] "Prevedi na %d jezika"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: prevedeno."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Prikaži ovaj blok"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "На сваком језику"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Samo na označenim jezicima"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "Na svim jezicima osim onih koji su označeni"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Slika po jeziku"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Prikažite drugu sliku čitaocima određenog jezika, na primer baner sa tekstom."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Zamenite %s sliku"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Izaberite %s sliku"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Koristi originalnu sliku"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Ispravite ovaj prevod"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Čuvanje…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Prevedeni tekst. Pritisnite Enter da biste ga ispravili."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Kliknite na bilo koji tekst uokvirenim linijom da biste ispravili njegov prevod."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Na ovoj stranici nije pronađen nijedan prevedeni tekst za uređivanje. Umesto toga koristite uređivač sa prikazom uporedo."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

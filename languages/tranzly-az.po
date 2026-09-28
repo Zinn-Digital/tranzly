@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Yazma və yenidən yazma"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Tərcümə"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Üzr istəyirik, bu səhifəyə daxil olmağa icazəniz yoxdur."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Bu ayarlar bunlardan istifadə edən hər bir plagin tərəfindən paylaşılır: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Açarınız bu saytın verilənlər bazasında şifrələnir və yalnız seçdiyiniz provayderə göndərilir — heç vaxt bizə yox."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Addım 1 / 2: AI provayderini seçin"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Öz açarınızı gətirirsiniz, ona görə də istifadə etdiyiniz qədər birbaşa provayderə ödəniş edirsiniz. Əmin deyilsiniz? Bunların hər biri yaxşı işləyir; sonradan daha çox əlavə edə bilərsiniz."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Növbəti"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Addim 2 / 2: %s qoşun"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "OpenAI ilə uyğun xidmətinizin ünvanını /v1 ilə bitəcək şəkildə daxil edin. Açar yalnız xidmət onu tələb etdikdə lazımdır."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "%s-i açın və daxil olun (və ya pulsuz hesab yaradın)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "%s API açarları səhifəsi"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Yeni açar yaradın və onu kopyalayın."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Onu aşağıya yapışdırın və \"Saxla və sınamaq\" düyməsini basın. İşlədiyini yoxlamaq üçün tək bir kiçik sorğu göndəririk."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Əksər provayderlərin açarın işləməsi üçün hesabda az miqdarda kredite ehtiyacı var: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "balans artır"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Başqa provayder seçin"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Ünvan"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Saxlanılan açır sonlanır …%s — onu əvəz etmək üçün yenisini yapışdırın"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Açar (istəyə görə)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "API açarı"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Yadda saxla və sınaqdan keçir"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Provayderlər"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Provayder"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Status"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Açar"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Açar əldə edin"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Test"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Sil"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Daha yeni plagin versiyası ilə yadda saxlanılıb: bu plaqini yeniləyin və ya açarı yenidən daxil edin."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Saxlanan açarı artıq açmaq mümkün deyil (saytın təhlükəsizlik açarları dəyişib). Onu yenidən daxil edin."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Bağlı deyil"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Bağlıdır — son test %s uğurla keçdi"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Sonuncu test uğursuz oldu: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Qoşulub — hələ sınaqdan keçirilməyib"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Hansı modeldən istifadə etməli"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ həmin tapşırıq üçün tövsiyəmizi göstərir. Siyahıya açarınızın istifadə edə biləcəyi hər bir model daxildir və birbaşa provayderdən canlı olaraq oxunur."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Provayder üçün tövsiyə olunur —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Modelləri yadda saxla"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Provayderlərdən model siyahılarını yeniləyin"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Şəkillər"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Şəkillər yaratmaq üçün OpenAI və ya Google Gemini-ni qoşun."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— İlk qoşulmuş provayderin ən yeni şəkil modeli —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "ən yaxşı keyfiyyət"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "ən aşağı qiymət"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "ən sürətli"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Öz modelinizi əlavə edin"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Bugün yeni model çıxdı? Dərhal istifadə etmək üçün onun dəqiq adını yapışdırın."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Model adı"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Model əlavə et"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Tövsiyə olunan modellər siyahısı"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Tövsiyə olunan modellər siyahısı yoxlanıla bilmədi, ona görə də heç bir tövsiyə göstərilmir. Plugin-i yenidən quraşdırın və ya aşağıdan gündəlik yeniləmələri aktivləşdirin."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Istifadədə olan siyahı %s tarixində dərc edilib. Hər bir plagin yeniləməsi yeni bir siyahı gətirir."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Yenilənmiş siyahı üçün gündə bir dəfə Zinn Digital® saytını da yoxlayın."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Yalnız sadə endirmə sorğusu göndərilir: açar yoxdur, sayt ünvanı yoxdur, məzmununuz haqqında heç nə yoxdur. Siyahı imzalanıb və imza yoxlamasından keçməyən siyahı nəzərə alınmır."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Sonuncu yoxlanış vaxtı %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Yadda saxlayın və əgər aktivdirsə, indi yoxlayın"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "daha yeni siyahı quraşdırıldı"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "artıq yenilənib"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "yükləmə imza yoxlamasından keçmədi və nəzərə alınmadı"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital®-ə qoşulmaq mümkün olmadı; cari siyahı istifadədə qalır"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "söndürülüb"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Aç"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Onlayn status səhifələrini yoxlayın"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Ödəniş səhifənizi açın"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "API açarları səhifənizi açın"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Süni intellekt parametrlərini açın"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Üzr istəyirik, bunu etməyə icazəniz yoxdur."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Naməlum provayder."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Xidmətinizin ünvanını daxil edin, məsələn, http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Bu API açarına oxşamır. Onu boşluqlar olmadan yenidən kopyalayın."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Əvvəlcə API açarınızı yapışdırın."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Açar silindi."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Modellər yadda saxlanıldı."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Modelin dəqiq adını daxil edin, məsələn, təminatçının sənədlərində yazıldığı kimi."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s əlavə edildi. Onu \"Hansı modeldən istifadə etməli\" bölməsindən seçin."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Model silindi."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Gündəlik yeniləmələr söndürülüb. Pleyində olan siyahı istifadə olunur."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Yoxlanıldı: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Model siyahıları yeniləndi."
 
@@ -445,6 +459,19 @@ msgstr "Bu tapşırıq üçün heç bir model seçilməyib. Süni intellekt para
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Həmin süni intellekt təminatçısı plaqinin bu versiyası tərəfindən dəstəklənmir."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Şəkil yarada bilən heç bir süni intellekt təminatçısı qoşulmayıb. Süni intellekt parametrlərində OpenAI və ya Google Gemini açarı əlavə edin."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Bu süni intellekt təminatçısı şəkillər yarada bilməz. Süni intellekt parametrlərində şəkillər üçün OpenAI və ya Google Gemini seçin."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Süni intellekt açarınız heç bir təsvir modelindən istifadə edə bilməz. Provayderlə açarın icazələrini yoxlayın və ya təsvirlər üçün başqa provayder seçin."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s hazırda problemlər yaşayır (tərəflərində kəsilmə və ya hə
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Səbəbini müəyyən edə bilmədiyimiz bir səbəbdən AI sorğusu uğursuz oldu. Yenidən cəhd edin; əgər bu hal təkrarlanmağa davam edərsə, aşağıdakı təfərrüatlarla dəstək xidməti ilə əlaqə saxlayın."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Süni intellekt təminatçısı bu plagin tərəfindən oxuna bilməyən formada cavab verdi. Yenidən cəhd edin; problem davam edərsə, başqa model seçin və ya dəstək xidməti ilə əlaqə saxlayın."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" dil kodu deyil. fr_FR və ya de_DE kimi WordPress lokallarından 
 msgid "List at least one language."
 msgstr "Ən azı bir dil daxil edin."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Tərcümələr"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "%s versiyasını redaktə edin"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "%s versiyasını yanaşı müqayisə edin"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Hər dil üçün menyularınızdan birini seçin."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Bu tərcümə deyil, ona görə də qorunacaq heç nə yoxdur."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Bu növ məzmun tərcümə edilmir."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "\"%s\" mətni artıq bu saytda yoxdur. Səhifəni yenidən yükləyin."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Heç bir tərcümə mühərriki bu mətni qəbul edə bilmədi."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Digər dillərinizdən birini seçin."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Tərcümələri müqayisə et"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Bu tərcüməni redaktə etməyə icazəniz yoxdur."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Bu tərcümə deyil, ona görə də müqayisə ediləcək heç nə yoxdur."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Bu tərcümənin əsli artıq mövcud deyil."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "%s hissəsi artıq bu tərcümənin bir hissəsi deyil. Səhifəni yeniləyin və yenidən cəhd edin."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Bu səhifədə tərcümə et"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Tərcümə keçidi yadda saxlanıla bilmədi."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Bu mətn burada tərcümə oluna bilməz."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Həmin media mətn burada tərcümə edilə bilməz."
 
@@ -810,15 +909,15 @@ msgstr "Hələ heç bir tərcümə mühərriki quraşdırılmayıb. Tranzly → 
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Həmin tərcümə mühərriki hələ quraşdırılmayıb: əvvəlcə onun açarını əlavə edin."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Eyni mətn başqa bir tapşırıq tərəfindən hazırda tərcümə olunur; bu element həmin cavabdan istifadə edəcək."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Heç bir tərcümə mühərriki bu elementi qəbul edə bilmədi."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Mühərrik bu elementin hər bir hissəsi üçün tərcümə qaytarmadı. Heç nə dəyişdirilmədi."
 
@@ -1497,6 +1596,7 @@ msgstr "İndi lisenziya alın"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Ləğv et"
 
@@ -3967,6 +4067,7 @@ msgstr "Sınaq müddəti başladılır"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Vəziyyət"
 
@@ -5150,7 +5251,7 @@ msgstr "Şaquli düzmək"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Əlçatanlıq etiketi"
@@ -5201,7 +5302,7 @@ msgstr "Mətn ölçüsü"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Keçirici"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Pro planları və qiymətləri ilə tanış olun"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Dillər"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "Məzmun"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Dil"
 
@@ -5578,29 +5681,95 @@ msgstr "Yenidən cəhd et"
 msgid "Translate by hand"
 msgstr "Əllə tərcümə et"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Menyular yadda saxlanıldı."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d mətn tərcümə edildi."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Yadda saxlanıldı. Dəyişiklikləriniz maşın tərcüməsindən qorunur."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Eyni menyu, tərcümə edilmişdir"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Hər dil üçün ayrıca menyu"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "Varsayılan olaraq hər bir menyu tərcümə olunur: onun keçidləri başlıqları ilə birlikdə tərcümə edilmiş səhifələrə aparır. Bunun əvəzinə burada bir dil üçün xüsusi menyu seçin."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Paylaşılan mətn"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Hansı mətn"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Menyu etiketləri"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Şablonlar, başlıqlar, altlıqlar və naxışlar"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Şablonlar, başlıqlar, altlıqlar və naxışlar (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Çatışmayan mətni tərcümə edin"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Burada tərcümə ediləcək mətn yoxdur."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "İnsan tərəfindən düzəliş edilmişdir, qorunur"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Düzəlişləri yadda saxla"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Dillər və parametrlər"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Mühərriklər"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Tərcümə tapşırıqları"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Ünvanlar və SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Dil dəyişdiriciləri"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO auditi"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Menyular və paylaşılan mətn"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "Problem"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Redaktə et"
 
@@ -5738,6 +5908,7 @@ msgstr "Elementor və Bricks vidjetləri Tranzly Pro-nun bir hissəsidir."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Yadda saxla"
 
@@ -5865,7 +6036,60 @@ msgstr "Birlikdə işləyir: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Hər bir ünvan sözü 2 ilə 12 arası kiçik hərf, rəqəm və ya defisdən ibarətdir."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Yadda saxlanıldı. Dəyişdiyiniz hissələr insan tərəfindən yoxlanılmış kimi işarələnib və bu tərcümə maşın tərcüməsindən qorunur."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Bu tərcümənin düzümü redaktorda dəyişdirildi, buna görə də bəzi hissələr artıq orijinal ilə uyğunlaşmır. Cütü olmayan hissələr boş göstərilir; qalanlarını redaktorda redaktə edin."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Redaktoru açın"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Orijinal (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Tərcümə (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Dəyişiklikləri yadda saxla"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Redaktorda aç"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Avtomatik tərcümə edilmiş"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "İnsan tərəfindən yoxlanılıb"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "İdxal edildi"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Hələ tərcümə olunmayıb"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Tərcümədə yoxdur"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "İdarəetmə menyusunda Tranzly altında ikinci dil əlavə edin və keçid düyməsi burada görünəcək."
@@ -5881,6 +6105,133 @@ msgstr "Ekran oxuyucularının elan etdiyi şey, məsələn, \"Dil seçin\"."
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Rənglər"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Tərcümə olunmayıb"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Orijinal"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Dərc edilib"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Qaralama"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "İnsan tərəfindən yoxlanılıb, qorunur"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "İdxal edilib, qorunur"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Hələ tərcümə olunmayıb (surət)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Əvvəlcə bu yazını yadda saxlayın, sonra burada tərcümə edin."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Yanbayan"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Bax"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Yenidən tərcümə oluna bilməsi üçün kiliddən azad edin"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Mühafizə et"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Tərcümələri dərc et"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "%d dilə tərcümə edin"
+msgstr[1] "%d dilə tərcümə et"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: tərcümə edildi."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Bu bloku göstər"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "Hər dildə"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Yalnız işarələnmiş dillərdə"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "İşarələnənlər istisna olmaqla, hər bir dildə"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Dilə görə şəkil"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Oxuculara başqa bir dildə başqa şəkil göstərin, məsələn, üzərində sözlər olan banner."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "%s şəkilini əvəz et"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "%s təsviri seçin"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Orijinal şəkildən istifadə edin"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Tərcüməni düzəldin"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Saxlanılır…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Tərcümə edilmiş mətn. Onu düzəltmək üçün Enter düyməsini basın."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Tərcüməni düzəltmək üçün istənilən konturlu mətnə klikləyin."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Bu səhifədə redaktə etmək üçün heç bir tərcümə edilmiş mətn tapılmadı. Bunun əvəzinə yan-yana redaktordan istifadə edin."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

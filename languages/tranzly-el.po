@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Εγγραφή και επανεγγραφή"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Μετάφραση"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Λυπούμαστε, δεν επιτρέπεται η πρόσβασή σας σε αυτή τη σελίδα."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Αυτές οι ρυθμίσεις κοιinοποιούνται από κάθε πρόσθετο που τις χρησιμοποιεί: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Τα κλειδιά σας είναι κρυπτογραφημένα στη βάση δεδομένων αυτού του ιστότοπου και αποστέλλονται μόνο στον πάροχο που επιλέξατε — ποτέ σε εμάς."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Βήμα 1 από 2: επιλέξτε έναν πάροχο τεχνητής νοημοσύνης"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Φέρνετε το δικό σας κλειδί, οπότε πληρώνετε απευθείας τον πάροχο για ό,τι χρησιμοποιείτε. Δεν είστε σίγουροι; Οποιοδήποτε από αυτά λειτουργεί καλά· μπορείτε να προσθέσετε περισσότερα αργότερα."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Επόμενο"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Βήμα 2 από 2: σύνδεση %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Εισάγετε τη διεύθυνση της υπηρεσίας σας που είναι συμβατή με το OpenAI, με κατάληξη /v1. Ένα κλειδί απαιτείται μόνο εάν η υπηρεσία ζητάει ένα."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Ανοίξτε το %s και συνδεθείτε (ή δημιουργήστε έναν δωρεάν λογαριασμό)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "η σελίδα API keys του %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Δημιουργήστε ένα νέο κλειδί και αντιγράφψτε το."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Επικολλήστε το παρακάτω και πατήστε «Αποθήκευση και δοκιμή». Στέλνουμε ένα μικρό αίτημα για να ελέγξουμε ότι λειτουργεί."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Οι περισσότεροι πάροχοι χρειάζονται λίγο υπόλοιπο στον λογαριασμό προτού να λειτουργήσει ένα κλειδί: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "προσθήκη πίστωσης"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Επιλέξτε διαφορετικό πάροχο"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Διεύθυνση"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Το αποθηκευμένο κλειδί λήγει σε …%s — επικολλήστε ένα νέο για να το αντικαταστήσετε"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Κλειδί (προαιρετικό)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "Κλειδί API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Αποθήκευση και δοκιμή"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Πάροχοι"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Προμηθευτής"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Κλειδί"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Λήψη κλειδιού"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Δοκιμή"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Κατάργηση"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Αποθηκεύτηκε από νεότερη έκδοση πρόσθετου: ενημερώστε αυτό το πρόσθετο ή εισαγάγετε ξανά το κλειδί."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Το αποθηκευμένο κλειδί δεν μπορεί πλέον να ανοιχτεί (τα κλειδιά ασφαλείας του ιστότοπου άλλαξαν). Εισαγάγετε το ξανά."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Μη συνδεδεμένο"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Συνδέθηκε — η τελευταία δοκιμή πέτυχε %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Η τελευταία δοκιμή απέτυχε: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Συνδέθηκε — δεν έχει δοκιμαστεί ακόμα"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Ποιο μοντέλο να χρησιμοποιήσετε"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ σημαίνει την πρότασή μας για αυτήν την εργασία. Η λίστα περιλαμβάνει κάθε μοντέλο που μπορεί να χρησιμοποιήσει το κλειδί σας, όπως διαβάζεται ζωντανά από τον πάροχο."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Συνιστάται για τον πάροχο —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Αποθήκευση μοντέλων"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Ανανέωση των λιστών μοντέλων από τους παρόχους"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Εικόνες"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Συνδέστε το OpenAI ή το Google Gemini για τη δημιουργία εικόνων."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Το νεότερο μοντέλο εικόνας του πρώτου συνδεδεμένου παρόχου —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "καλύτερη ποιότητα"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "χαμηλότερο κόστος"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "ταχύτερο"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Προσθήκη μοντέλου εσείς οι ίδιοι"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Ένα νέο μοντέλο κυκλοφόρησε σήμερα; Επικόλλησε το ακριβές όνομά του για να το χρησιμοποιήσεις αμέσως."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Όνομα μοντέλου"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Προσθήκη μοντέλου"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Λίστα προτεινόμενων μοντέλων"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Η λίστα των προτεινόμενων μοντέλων δεν μπόρεσε να επαληθευτεί, επομένως δεν εμφανίζονται προτάσεις. Εγκαταστήστε ξανά το πρόσθετο ή ενεργοποιήστε τις καθημερινές ενημερώσεις παρακάτω."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Η λίστα που χρησιμοποιείται δημοσιεύτηκε στις %s. Κάθε ενημέρωση πρόσθετου φέρνει μια νέα."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Ελέγξτε επίσης το Zinn Digital® μία φορά την ημέρα για μια ενημερωμένη λίστα."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Αποστέλλεται μόνο ένα απλό αίτημα λήψης: κανένα κλειδί, καμία διεύθυνση ιστότοπου, τίποτα σχετικά με το περιεχόμενό σας. Η λίστα είναι υπογεγραμμένη και μια λίστα που αποτυγχάνει στον έλεγχο υπογραφής αγνοείται."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Τελευταιος έλεγχος %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Αποθήκευση και έλεγχος τώρα αν είναι ενεργοποιημένο"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "εγκαταστάθηκε μια νεότερη λίστα"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "ήδη ενημερωμένο"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "η λήψη απέτυχε στον έλεγχο υπογραφής και αγνοήθηκε"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Η Zinn Digital® δεν ήταν δυνατή η επικοινωνία· η τρέχουσα λίστα παραμένει σε χρήση"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "απενεργοποιημένο"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Ελέγξτε τη σελίδα κατάστασής τους"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Άνοιγμα της σελίδας χρέωσής σας"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Ανοίξτε τη σελίδα των κλειδιών API σας"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Άνοιγμα των ρυθμίσεων AI"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Λυπούμαστε, δεν επιτρέπεται να το κάνετε αυτό."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Άγνωστος πάροχος."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Εισάγετε τη διεύθυνση της υπηρεσίας σας, για παράδειγμα http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Αυτό δεν μοιάζει με κλειδί API. Αντιγράψτε το ξανά, χωρίς κενά."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Επικολλήστε πρώτα το κλειδί API σας."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Το κλειδί αφαιρέθηκε."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Τα μοντέla αποθηκεύτηκαν."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Εισάγετε το ακριβές όνομα του μοντέλου, για παράδειγμα όπως το αναφέρει η τεκμηρίωση του παρόχου."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "Προστέθηκε το %s. Επιλέξτε το στην ενότητα \"Ποιο μοντέλο να χρησιμοποιήσετε\"."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Το μοντέλο αφαιρέθηκε."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Οι καθημερινές ενημερώσεις είναι απενεργοποιημένες. Χρησιμοποιείται η λίστα που περιλαμβανόταν στο πρόσθετο."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Επιλεγμένα: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Οι λίστες μοντέλων ανανεώθηκαν."
 
@@ -445,6 +459,19 @@ msgstr "Δεν έχει επιλεχθεί μοντέλο για αυτή την
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Αυτός ο πάροχος τεχνητής νοημοσύνης δεν υποστηρίζεται από αυτήν την έκδοση του προσθέτου."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Δεν υπάρχει συνδεδεμένος πάροχος τεχνητής νοημοσύνης που να μπορεί να δημιουργήσει εικόνες. Προσθέστε ένα κλειδί OpenAI ή Google Gemini στις ρυθμίσεις τεχνητής νοημοσύνης."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Αυτός ο πάροχος TN δεν μπορεί να δημιουργήσει εικόνες. Επιλέξτε OpenAI ή Google Gemini για εικόνες στις ρυθμίσεις TN."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Το κλειδί τεχνητής νοημοσύνης σας δεν μπορεί να χρησιμοποιήσει κανένα μοντέλο εικόνας. Ελέγξτε τα δικαιώματα του κλειδιού στον πάροχο ή επιλέξτε έναν άλλο πάροχο για εικόνες."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s αντιμετωπίζει προβλήματα αυτή τη στι�
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Η αίτηση τεχνητής νοημοσύνης απέτυχε για έναν λόγο που δεν μπορέσαμε να εντοπίσουμε. Δοκιμάστε ξανά· εάν το πρόβλημα επιμένει, επικοινωνήστε με την υποστήριξη παρέχοντας τις παρακάτω λεπτομέρειες."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Ο πάροχος τεχνητής νοημοσύνης απάντησε σε μορφή που αυτό το πρόσθετο δεν μπορούσε να διαβάσει. Δοκιμάστε ξανά· εάν συνεχίσει να συμβαίνει, επιλέξτε άλλο μοντέλο ή επικοινωνήστε με την υποστήριξη."
 
@@ -685,6 +712,77 @@ msgstr "Το \"%s\" δεν είναι κωδικός γλώσσας. Χρησι�
 msgid "List at least one language."
 msgstr "Καταχωρίστε τουλάχιστον μία γλώσσα."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Μεταφράσεις"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Επεξεργασία της έκδοσης %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Συγκρίνετε την έκδοση %s δίπλα-δίπλα"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Επιλέξτε ένα από τα μενού σας για κάθε γλώσσα."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Αυτή δεν είναι μετάφραση, οπότε δεν υπάρχει τίποτα για προστασία."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Αυτό το είδος περιεχομένου δεν μεταφράζεται."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Το κείμενο %s δεν βρίσκεται πλέον σε αυτόν τον ιστότοπο. Ανανεώστε τη σελίδα."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Καμία μηχανή μετάφρασης δεν μπόρεσε να αποδώσει αυτό το κείμενο."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Επιλέξτε μία από τις άλλες γλώσσες σας."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Σύγκριση μετάφρασης"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Δεν σας επιτρέπεται να επεξεργαστείτε αυτή τη μετάφραση."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Αυτή δεν είναι μετάφραση, επομένως δεν υπάρχει τίποτα για σύγκριση."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Το πρωτότυπο αυτής της μετάφρασης δεν υπάρχει πλέον."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "Το κομμάτι %s δεν αποτελεί πλέον μέρος αυτής της μετάφρασης. Ανανεώστε τη σελίδα και δοκιμάστε ξανά."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Μετάφραση σε αυτή τη σελίδα"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Δεν ήταν δυνατή η αποθήκευση του συνδέσμου μετάφρασης."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Αυτό το κείμενο δεν μπορεί να μεταφραστεί εδώ."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Αυτό το κείμενο πολυμέσων δεν μπορεί να μεταφραστεί εδώ."
 
@@ -810,15 +909,15 @@ msgstr "Δεν έχει ρυθμιστεί ακόμη καμία μηχανή μ
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Αυτή η μηχανή μετάφρασης δεν έχει ρυθμιστεί ακόμη: προσθέστε πρώτα το κλειδί της."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Το ίδιο κείμενο μεταφράζεται από άλλη εργασία αυτή τη στιγμή· αυτό το στοιχείο θα χρησιμοποιήσει αυτή την απάντηση."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Κανμία μηχανή μετάφρασης δεν μπόρεσε να αποδεχτεί αυτό το στοιχείο."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Η μηχανή δεν επέστρεψε μετάφραση για κάθε μέρος αυτού του στοιχείου. Δεν έγινε καμία αλλαγή."
 
@@ -1497,6 +1596,7 @@ msgstr "Αγοράστε άδεια χρήσης τώρα"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -3967,6 +4067,7 @@ msgstr "Έναρξη δοκιμής"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Κατάσταση"
 
@@ -5150,7 +5251,7 @@ msgstr "Κατάταξη σε στήλη"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Προσβάσιμη ετικέτα"
@@ -5201,7 +5302,7 @@ msgstr "Μέγεθος κειμένου"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Εναλλαγή"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Δείτε τα προγράμματα Pro και τις τιμές"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Γλώσσες"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "Περιεχόμενο"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Γλώσσα"
 
@@ -5578,29 +5681,95 @@ msgstr "Επανάληψη"
 msgid "Translate by hand"
 msgstr "Μετάφραση με το χέρι"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Τα μενού αποθηκεύτηκαν."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "Μεταφράστηκαν %d κείμενα."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Αποθηκεύτηκε. Οι διορθώσεις σας προστατεύονται από τη μηχανική μετάφραση."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Το ίδιο μενού, μεταφρασμένο"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Ξεχωριστό μενού ανά γλώσσα"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "Από προεπιλογή, κάθε μενού μεταφράζεται: οι σύνδεσμοί του οδηγούν στις μεταφρασμένες σελίδες, μαζί με τους τίτλους τους. Επιλέξτε εδώ ένα δικό του μενού για μια γλώσσα."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Κοινό κείμενο"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Ποιο κείμενο"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Ετικέτες μενού"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Πρότυπα, κεφαλίδες, υποσέλιδα και μοτίβα"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Πρότυπα, κεφαλίδες, υποσέλιδα και μοτίβα (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Μετάφραση του κειμένου που λείπει"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Δεν υπάρχει κείμενο για μετάφραση εδώ."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Διορθώθηκε από άνθρωπο, προστατευμένο"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Αποθήκευση διορθώσεων"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Γλώσσες και ρυθμίσεις"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Μηχανές"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Εργασίες μετάφρασης"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Διευθύνσεις και SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Εναλλαγές γλώσσας"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "Έλεγχος SEO"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Μενού και κοινόχρηστο κείμενο"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "Πρόβλημα"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Επεξεργασία"
 
@@ -5738,6 +5908,7 @@ msgstr "Τα widget των Elementor και Bricks είναι μέρος του 
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Αποθήκευση"
 
@@ -5865,7 +6036,60 @@ msgstr "Συνεργασία με: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Κάθε λέξη διεύθυνσης αποτελείται από 2 έως 12 πεζά γράμματα, ψηφία ή παύλες."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Αποθηκεύτηκε. Τα τμήματα που αλλάξατε επισημαίνονται ως ελεγμένα από άτομο και αυτή η μετάφραση προστατεύεται από τη μηχανική μετάφραση."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Η διάταξη αυτής της μετάφρασης άλλαξε στον επεξεργαστή, οπότε ορισμένα τμήματα δεν αντιστοιχούν πλέον με το πρωτότυπο. Τα τμήματα χωρίς αντιστοιχία εμφανίζονται κενά. Επεξεργαστείτε τα υπόλοιπα στον επεξεργαστή."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Άνοιγμα του επεξεργαστή"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Πρωτότυπο (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Μετάφραση (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Αποθήκευση αλλαγών"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Άνοιγμα στον επεξεργαστή"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Αυτόματα μεταφρασμένο"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Ελέγχθηκε από άτομο"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Εισηγμένα"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Δεν έχει μεταφραστεί ακόμα"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Εκτός μετάφρασης"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Προσθέστε μια δεύτερη γλώσσα στην ενότητα Tranzly στο μενού διαχείρισης και ο διακόπτης θα εμφανιστεί εδώ."
@@ -5881,6 +6105,133 @@ msgstr "Τι εκφωνούν τα προγράμματα ανάγνωσης ο�
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Χρώματα"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Δεν έχει μεταφραστεί"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Πρωτότυπο"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Δημοσιευμένο"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Πρόχειρο"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Ελέγχθηκε από άνθρωπο, προστατευμένο"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Εισηγμένα, προστατευμένα"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Δεν έχει μεταφραστεί ακόμα (αντίγραφο)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Αποθηκεύστε αυτήν τη δημοσίευση πρώτα και μετά μεταφράστε την εδώ."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Δίπλα-δίπλα"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Προβολή"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Ξεκλειδώστε ώστε να μπορέσει να μεταφραστεί ξανά"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Προστασία"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Δημοσίευση μεταφράσεων"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Μετάφραση σε %d γλώσσα"
+msgstr[1] "Μετάφραση σε %d γλώσσες"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: μεταφράστηκε."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Εμφάνιση αυτού του μπλοκ"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "Σε κάθε γλώσσα"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Μόνο στις γλώσσες που έχουν επιλεγεί"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "Σε κάθε γλώσσα εκτός από αυτές που είναι σημειωμένες"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Εικόνα ανά γλώσσα"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Εμφάνιση άλλης εικόνας σε αναγνώστες μιας γλώσσας, για παράδειγμα ενός banner με κείμενο σε αυτό."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Αντικατάσταση της εικόνας %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Επιλέξτε μια εικόνα %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Χρήση της αρχικής εικόνας"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Διόρθωση μετάφρασης"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Αποθήκευση…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Το κείμενο μεταφράστηκε. Πατήστε Enter για να το διορθώσετε."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Κάντε κλικ σε οποιοδήποτε κείμενο με περίγραμμα για να διορθώσετε τη μετάφρασή του."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Δεν βρέθηκε μεταφρασμένο κείμενο σε αυτή τη σελίδα για επεξεργασία εδώ. Χρησιμοποιήστε αντί αυτού τον διπλανό επεξεργαστή."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

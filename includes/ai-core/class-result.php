@@ -71,6 +71,13 @@ final class Result {
 	public ?Failure $failure = null;
 
 	/**
+	 * Images a generation returned (image generation, 1.1.0): each `mime` + base64 `data`.
+	 *
+	 * @var array<int, array{mime: string, data: string}>
+	 */
+	public array $images = array();
+
+	/**
 	 * A failed result.
 	 *
 	 * @param Failure $failure Why.

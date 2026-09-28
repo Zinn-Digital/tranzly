@@ -44,9 +44,10 @@ final class Http {
 	 * @param array<string, string> $headers Request headers.
 	 * @param string|null           $body    Request body, already encoded.
 	 * @param bool                  $local   Allow a private or loopback address (a self-hosted model).
+	 * @param int                   $timeout Seconds to wait (image generation takes longer than text).
 	 * @return array{status: int, body: string, error: string, headers?: array<string, string>} `status` 0 means no response arrived.
 	 */
-	public static function send( string $method, string $url, array $headers = array(), ?string $body = null, bool $local = false ): array {
+	public static function send( string $method, string $url, array $headers = array(), ?string $body = null, bool $local = false, int $timeout = 60 ): array {
 		if ( null !== self::$fake ) {
 			return ( self::$fake )( $method, $url, $headers, $body );
 		}
@@ -54,7 +55,7 @@ final class Http {
 		$args = array(
 			'method'      => $method,
 			'headers'     => $headers,
-			'timeout'     => 60,
+			'timeout'     => max( 5, $timeout ),
 			'redirection' => 2,
 			'user-agent'  => 'ZinnAiCore/' . Core::VERSION,
 		);

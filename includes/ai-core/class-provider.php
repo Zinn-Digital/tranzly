@@ -130,15 +130,17 @@ abstract class Provider {
 	 * @param string                    $path   Path below the API base.
 	 * @param string                    $key    API key.
 	 * @param array<string, mixed>|null $body   JSON body.
+	 * @param int                       $timeout Seconds (image generation needs longer than text).
 	 * @return array{0: array<mixed>|null, 1: array{status: int, body: string, error: string}} Decoded body (null unless 2xx JSON) and the raw response.
 	 */
-	protected function call( string $method, string $path, string $key, ?array $body = null ): array {
+	protected function call( string $method, string $path, string $key, ?array $body = null, int $timeout = 60 ): array {
 		$response = Http::send(
 			$method,
 			$this->base() . $path,
 			$this->headers( $key ),
 			null === $body ? null : (string) wp_json_encode( $body ),
-			$this->local()
+			$this->local(),
+			$timeout
 		);
 		$decoded  = null;
 		if ( $response['status'] >= 200 && $response['status'] < 300 ) {
@@ -176,13 +178,159 @@ abstract class Provider {
 		$turns  = array();
 		foreach ( $messages as $message ) {
 			if ( 'system' === $message['role'] ) {
-				$system[] = $message['content'];
+				$system[] = self::text_of( $message['content'] );
 			} else {
 				$turns[] = $message;
 			}
 		}
 
 		return array( implode( "\n\n", $system ), $turns );
+	}
+
+	/**
+	 * A message's content as a list of parts (1.1.0). Content is either a string (text) or a list of
+	 * parts: `{type: text, text}` and `{type: image, mime, data}` where `data` is base64. Anything
+	 * else is dropped, so a caller cannot smuggle a provider-specific field through the core.
+	 *
+	 * @param mixed $content Message content.
+	 * @return array<int, array{type: string, text?: string, mime?: string, data?: string}>
+	 */
+	protected static function parts( $content ): array {
+		if ( is_string( $content ) ) {
+			return array(
+				array(
+					'type' => 'text',
+					'text' => $content,
+				),
+			);
+		}
+		$parts = array();
+		foreach ( is_array( $content ) ? $content : array() as $part ) {
+			if ( ! is_array( $part ) ) {
+				continue;
+			}
+			if ( 'text' === ( $part['type'] ?? '' ) && isset( $part['text'] ) && is_string( $part['text'] ) ) {
+				$parts[] = array(
+					'type' => 'text',
+					'text' => $part['text'],
+				);
+			} elseif ( 'image' === ( $part['type'] ?? '' ) && isset( $part['data'], $part['mime'] ) && is_string( $part['data'] ) && 1 === preg_match( '#^image/(png|jpeg|webp|gif)$#', (string) $part['mime'] ) ) {
+				$parts[] = array(
+					'type' => 'image',
+					'mime' => (string) $part['mime'],
+					'data' => $part['data'],
+				);
+			}
+		}
+
+		return $parts;
+	}
+
+	/**
+	 * Just the text of a message's content.
+	 *
+	 * @param mixed $content Message content.
+	 * @return string
+	 */
+	protected static function text_of( $content ): string {
+		$text = array();
+		foreach ( self::parts( $content ) as $part ) {
+			if ( 'text' === $part['type'] ) {
+				$text[] = (string) $part['text'];
+			}
+		}
+
+		return implode( "\n", $text );
+	}
+
+	/**
+	 * Does a content value carry an image?
+	 *
+	 * @param mixed $content Message content.
+	 * @return bool
+	 */
+	protected static function has_image( $content ): bool {
+		foreach ( self::parts( $content ) as $part ) {
+			if ( 'image' === $part['type'] ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Can this provider make images (preset flag `images`)?
+	 *
+	 * @return bool
+	 */
+	public function supports_images(): bool {
+		return ! empty( $this->spec['images'] );
+	}
+
+	/**
+	 * Image-generation models this key can use, newest first. Providers that make images override.
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
+	public function image_models( string $key ) {
+		unset( $key );
+
+		return array();
+	}
+
+	/**
+	 * Generate an image. Providers that make images override.
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param string               $prompt  What to draw.
+	 * @param array<string, mixed> $options `size` (`square`, `landscape`, `portrait`).
+	 * @return Result
+	 */
+	public function generate_image( string $key, string $model, string $prompt, array $options = array() ): Result {
+		unset( $key, $prompt, $options );
+
+		return Result::failed( Failure::refused( __( 'This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings.', 'tranzly' ) ), $this->id, $model );
+	}
+
+	/**
+	 * Sort image model ids newest first: a higher version number first, then the plain name before
+	 * a variant (`-mini`, `-lite`), and dated snapshots and previews last.
+	 *
+	 * @param array<int, string> $ids Model ids.
+	 * @return array<int, string>
+	 */
+	protected static function newest_first( array $ids ): array {
+		$score = static function ( string $id ): array {
+			preg_match( '/(\d+(?:\.\d+)*)/', $id, $m );
+			$version = $m[1] ?? '0';
+			$penalty = 0;
+			if ( 1 === preg_match( '/\d{4}-\d{2}-\d{2}|preview|latest/', $id ) ) {
+				$penalty += 2;
+			}
+			if ( 1 === preg_match( '/mini|lite|nano/', $id ) ) {
+				++$penalty;
+			}
+			return array( $penalty, $version );
+		};
+		usort(
+			$ids,
+			static function ( string $a, string $b ) use ( $score ): int {
+				list( $pa, $va ) = $score( $a );
+				list( $pb, $vb ) = $score( $b );
+				if ( $pa !== $pb ) {
+					return $pa <=> $pb;
+				}
+				// version_compare, never `<=>` on arrays: PHP compares arrays by LENGTH first, which
+				// put 1.5 above 2 (measured by the test that pins this order).
+				$c = version_compare( (string) $vb, (string) $va );
+				return 0 !== $c ? $c : strcmp( $a, $b );
+			}
+		);
+
+		return array_values( $ids );
 	}
 
 	/**

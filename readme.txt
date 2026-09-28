@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.0.10
+Stable tag: 3.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,12 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Search in the visitor's language.** Site search, archives, the blog and category lists show the language being read.
 * **Language switchers everywhere.** A block for the block and site editors in five designs (list, pills, buttons, dropdown, language codes) with your own colours; a native Page Builder Sandwich element; a menu item and a widget for classic themes; a shortcode for anywhere else; and a floating button that works on any theme with no set-up. Each switcher links to this page's own translation in every language. With Pro, native widgets for Elementor and Bricks. (Bricks is a paid theme we could not install for testing: its element is built on Bricks' documented element interface and tested against a stand-in of it, while the Elementor widget is tested in Elementor itself.)
 * **Accessible switchers.** Keyboard and screen-reader friendly: each switcher is a named navigation landmark, every language is read in its own language, the current one is marked, and the dropdown works with Enter, Space, Tab and Escape. Flags are optional and off by default, because a flag is a country, not a language.
+* **Translation that keeps your blocks intact.** Posts are translated block by block: words are translated, while the block structure, code, HTML, shortcodes, links and image addresses are left exactly as they were, so every block still opens in the editor afterwards. This is tested on every core WordPress block.
+* **Your corrections are protected.** When a person edits a translation, background jobs and re-translation leave it alone until you unlock it.
+* **Translate from the editor.** The Translations panel in the block editor translates the post into the languages you tick with one click and links to every version; the admin bar's Translations menu does the same from any page of your site.
+* **Side-by-side editor.** Correct a translation piece by piece next to the original, with each piece marked as machine translated or checked by a person. With Pro, a visual editor: click any translated text on the page itself and correct it there.
+* **Blocks and images per language.** Show any block only in some languages (a German-only offer in the footer), and with Pro use a different image per language.
+* **Menus and shared text.** Menus are translated automatically (their links lead to the translated pages), or choose a separate menu per language; menu labels you typed can be corrected by hand. With Pro, the text in your block theme's headers, footers, templates and patterns is translated too.
 * **A language API for other plugins**: `tranzly_languages()`, `tranzly_current_language()`, `tranzly_language_url()`, `tranzly_get_translation()` and `tranzly_translatable_attributes()`, with a read-only REST mirror under `tranzly/v1`. Blocks mark which attributes are translatable with `"role": "content"` in their block.json.
 * **Footprint-free front end.** The switcher's markup uses neutral class names that start with a short prefix (`zd` unless you change it), with no HTML comments or generator tags, and its styles are served from `wp-content/uploads/<prefix>-assets/` rather than the plugin's folder (inline if that folder cannot be written).
 * **Settings and About screen** under the Tranzly menu, including the beta-update status for licensed installations.
@@ -105,11 +111,27 @@ They are imported in the background the first time the new version runs. The old
 
 From the address. With language folders (the default) /de/… is German and an address with no folder is your default language; with Pro, the subdomain or domain decides. A visitor's browser language never changes the page they get: it only lets Tranzly offer them their language in a small banner, which you can switch off under Tranzly → Addresses and SEO. Sites that prefer the older `?lang=de` style can choose it there; the language then comes from that parameter, then the post being viewed, then a cookie named after the class prefix (`zd_lang` by default), then the first listed language.
 
+= Will translation break my blocks or page builder layouts? =
+
+No. Tranzly sends a translation service only the words of each block and writes the answer back into the same place, so the layout, links, image addresses, code and HTML blocks are untouched and every block still opens in the editor. A text a person corrected is never overwritten by a later machine translation unless you unlock it.
+
 = Does it work with my SEO plugin? =
 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves titles, descriptions and schema to your SEO plugin. It is tested with WordPress's own sitemap, Yoast SEO, Rank Math, SEOPress and All in One SEO.
 
 == Changelog ==
+
+= 3.1.0 =
+* AI: the shared AI core can now read images and make images with OpenAI or Google Gemini (used by Page Builder Sandwich). Choose the image model under Settings → AI providers.
+
+= 3.0.11 =
+* Translation that keeps your blocks intact: posts are translated block by block, so layouts, links, image addresses, code and HTML blocks are untouched and every block still opens in the editor (tested on every core block).
+* A translation a person edited is protected from background jobs and re-translation until you unlock it.
+* Translate from the editor: a Translations panel with one-click translation and links to every version, and a Translations menu in the admin bar.
+* Side-by-side editor for correcting a translation piece by piece. Pro: click any translated text on the page itself to correct it.
+* Show a block only in some languages; Pro: a different image per language.
+* Menus are translated (links lead to the translated pages) or a separate menu per language; typed menu labels can be corrected. Pro: block-theme headers, footers, templates and patterns are translated too.
+* Fixed: a post containing the same text twice could not be translated when translation memory was on.
 
 = 3.0.10 =
 * Plugin Check: every database query the plugin runs is now a single prepared statement (no change in behaviour or speed).

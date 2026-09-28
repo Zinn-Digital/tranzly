@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Запис і перезапис"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Переклад"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Вибачте, але вам заборонено доступ до цієї сторінки."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Ці параметри спільно використовуються кожним плагіном, який їх застосовує: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Ваші ключі зашифровані в базі даних цього сайту і передаються лише вибраному вами провайдеру — ніколи нам."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Крок 1 із 2: виберіть провайдера штучного інтелекту"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Ви використовуєте власний ключ, тому сплачуєте постачальнику безпосередньо за використані ресурси. Не впевнені? Будь-який із цих варіантів підійде; ви зможете додати інші пізніше."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Далі"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Крок 2 з 2: підключіть %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Введіть адресу вашої сумісної з OpenAI служби, що закінчується на /v1. Ключ потрібен лише тоді, коли служба вимагає його."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Відкрийте %s і увійдіть (або створіть безкоштовний обліковий запис)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "сторінку ключів API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Створіть новий ключ і скопіюйте його."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Вставте його нижче та натисніть «Зберегти та перевірити». Ми надсилаємо один крихітний запит, щоб перевірити, чи все працює."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Більшості провайдерів потрібно трохи коштів на рахунку, перш ніж ключ почне працювати: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "поповнити баланс"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Вибрати іншого провайдера"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Адреса"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Збережений ключ закінчується на …%s — вставте новий, щоб замінити його"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Ключ (необов'язково)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "API-ключ"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Зберегти та перевірити"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Провайдери"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Постачальник"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Статус"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Ключ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Отримати ключ"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Тест"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Видалити"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Збережено новішою версією плагіна: оновіть цей плагін або введіть ключ знову."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Збережений ключ більше не можна відкрити (ключі безпеки сайту змінилися). Введіть його знову."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Не підключено"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Підключено — останній тест пройдено %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Останній тест не пройдено: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Підключено — ще не перевірено"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Яку модель використовувати"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ позначає нашу рекомендацію для цього завдання. Список містить усі моделі, які ваш ключ може використовувати, дані зчитуються в реальному часі від провайдера."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Рекомендовано провайдером —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Зберегти моделі"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Оновити списки моделей від провайдерів"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Зображення"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Підключіть OpenAI або Google Gemini для створення зображень."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Найновіша модель зображень від першого підключеного провайдера —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "найвища якість"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "найнижча вартість"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "найшвидший"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Додати модель самостійно"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Щойно вийшла нова модель? Вставте її точну назву, щоб використовувати її одразу."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Назва моделі"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Додати модель"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Список рекомендованих моделей"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Не вдалося перевірити список рекомендованих моделей, тому рекомендації не відображаються. Перевстановіть плагін або ввімкніть щоденні оновлення нижче."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Використовуваний список було опубліковано %s. Кожне оновлення плагіна містить новий."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Також перевіряйте Zinn Digital® раз на день на наявність оновленого списку."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Надсилається лише звичайний запит на завантаження: жодного ключа, жодної адреси сайту, нічого про ваш контент. Список підписано, а список, який не проходить перевірку підпису, ігнорується."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Востаннє перевірено %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Зберегти та перевірити зараз, якщо ввімкнено"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "встановлено новіший список"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "уже оновлено"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "завантаження не пройшло перевірку підпису і було проігнороване"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Не вдалося зв'язатися з Zinn Digital®; поточний список залишається в силі"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "вимкнено"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Відкрити"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Перевірте їхню сторінку стану"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Відкрити сторінку оплати"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Відкрийте сторінку ваших API-ключів"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Відкрити налаштування штучного інтелекту"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Вибачте, але вам не дозволено це робити."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Невідомий провайдер."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Введіть адресу вашої служби, наприклад http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Це не схоже на ключ API. Скопіюйте його знову без пробілів."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Спочатку вставте свій ключ API."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Ключ видалено."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Моделі збережено."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Введіть точну назву моделі, наприклад, так, як вона вказана в документації постачальника."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "Додано %s. Виберіть його в розділі \"Яку модель використовувати\"."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Модель видалено."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Щоденні оновлення вимкнено. Використовується список, який постачався разом із плагіном."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Перевірено: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Списки моделей оновлено."
 
@@ -445,6 +459,19 @@ msgstr "Для цього завдання не вибрано жодну мод
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Цей постачальник штучного інтелекту не підтримується цією версією плагіна."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Не підключено жодного провайдера штучного інтелекту, який може створювати зображення. Додайте ключ OpenAI або Google Gemini в налаштуваннях штучного інтелекту."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Цей постачальник штучного інтелекту не може створювати зображення. Виберіть OpenAI або Google Gemini для створення зображень у налаштуваннях штучного інтелекту."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Ваш ключ ШІ не може використовувати жодну модель зображень. Перевірте дозволи ключа у постачальника або виберіть іншого постачальника для зображень."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s наразі має проблеми (збій або переван�
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Запит до штучного інтелекту не вдалося виконати з невідомої причини. Спробуйте ще раз; якщо це повторюватиметься, зверніться до служби підтримки, надіславши наведені нижче відомості."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Штучний інтелект відповів у форматі, який цей плагін не зміг прочитати. Спробуйте ще раз; якщо це повторюватиметься, виберіть іншу модель або зверніться до служби підтримки."
 
@@ -685,6 +712,77 @@ msgstr "«%s» не є кодом мови. Використовуйте лок�
 msgid "List at least one language."
 msgstr "Додайте принаймні одну мову."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Переклади"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Редагувати версію %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Порівняйте версію %s пліч-о-пліч"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Виберіть одне з ваших меню для кожної мови."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Це не переклад, тому тут нічого захищати."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Цей вид контенту не перекладається."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Текст %s більше немає на цьому сайті. Перезавантажте сторінку."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Жодна система перекладу не змогла перекласти цей текст."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Виберіть одну з інших ваших мов."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Порівняти переклад"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Вам заборонено редагувати цей переклад."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Це не переклад, тому порівнювати нічого."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Оригінал цього перекладу більше не існує."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "Частина %s більше не є частиною цього перекладу. Перезавантажте сторінку та спробуйте знову."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Перекласти цю сторінку"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Не вдалося зберегти посилання на переклад."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Цей текст не може бути перекладений тут."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Цей медіатекст неможливо перекласти тут."
 
@@ -810,15 +909,15 @@ msgstr "Ще не налаштовано жодного рушія перекл�
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Цей механізм перекладу ще не налаштовано: спочатку додайте його ключ."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Цей же текст зараз перекладається іншим завданням; для цього елемента буде використано той результат."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Жодна система перекладу не змогла опрацювати цей елемент."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Рушій не повернув переклад для кожної частини цього елемента. Нічого не було змінено."
 
@@ -1497,6 +1596,7 @@ msgstr "Купити ліцензію зараз"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -3967,6 +4067,7 @@ msgstr "Запуск пробного періоду"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Стан"
 
@@ -5151,7 +5252,7 @@ msgstr "Розмістити вертикально"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Позначка для доступності"
@@ -5202,7 +5303,7 @@ msgstr "Розмір тексту"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Перемикач"
@@ -5236,6 +5337,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Переглянути плани та ціни Pro"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Мови"
 
@@ -5553,6 +5655,7 @@ msgid "Content"
 msgstr "Контент"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Мова"
 
@@ -5581,29 +5684,95 @@ msgstr "Повторити"
 msgid "Translate by hand"
 msgstr "Перекласти вручну"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Меню збережено."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d текстів перекладено."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Збережено. Ваші виправлення захищені від машинно-орієнтованого перекладу."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Те саме меню, перекладене"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Окреме меню для кожної мови"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "За замовчуванням кожне меню перекладається: його посилання ведуть на перекладені сторінки разом із їхніми назвами. Натомість виберіть окреме меню для певної мови тут."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Спільний текст"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Який текст"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Мал. меню"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Шаблони, заголовки, нижні колонтитули та патерни"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Шаблони, верхні колонтитули, нижні колонтитули та патерни (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Перекласти текст, якого бракує"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Тут немає тексту для перекладу."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Виправлено людиною, захищено"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Зберегти виправлення"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Мови та налаштування"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Рушії"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Завдання перекладу"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Адреси та SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Мовні перемикачі"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO-аудит"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Меню та спільний текст"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5657,6 +5826,7 @@ msgid "Problem"
 msgstr "Проблема"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Редагувати"
 
@@ -5742,6 +5912,7 @@ msgstr "Віджети Elementor та Bricks є частиною Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Зберегти"
 
@@ -5872,7 +6043,60 @@ msgstr "Працює у співпраці з: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Кожне слово адреси складається з 2–12 малих літер, цифр або дефісів."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Збережено. Змінені фрагменти позначено як перевірені людиною, і цей переклад захищено від машинного перекладу."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Макет цього перекладу було змінено в редакторі, тому деякі фрагменти більше не збігаються з оригіналом. Фрагменти без пари відображаються порожніми; відредагуйте решту в редакторі."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Відкрити редактор"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Оригінал (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Переклад (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Відкрити в редакторі"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Перекладено машинним способом"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Перевірено людиною"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Імпортовано"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Ще не перекладено"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Не у перекладі"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Додайте другу мову в меню адміністратора в розділі Tranzly, і перемикач з'явиться тут."
@@ -5888,6 +6112,134 @@ msgstr "Те, що озвучують екраночитачі, наприкла
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Кольори"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Не перекладено"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Оригінал"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Опубліковано"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Чернетка"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Перевірено людиною, захищено"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Імпортовано, захищено"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Ще не перекладено (копія)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Спочатку збережіть цей допис, а потім перекладіть його тут."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Пліч-о-пліч"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Переглянути"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Розблокуйте, щоб перекласти знову"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Захистити"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Опублікувати переклади"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Перекласти на %d мову"
+msgstr[1] "Перекласти на %d мов"
+msgstr[2] "Перекласти на %d мов"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: перекладено."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Показати цей блок"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "Кожне слово"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Лише у позначених мовах"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "Буphю всіма мовами, крім позначених галочкою"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Зображення для кожної мови"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Показати інше зображення читачам певної мови, наприклад банер із текстом."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Замінити зображення %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Виберіть зображення для %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Використати оригінальне зображення"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Виправити цей переклад"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Збереження…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Перекладений текст. Натисніть Enter, щоб виправити його."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Клацніть будь-який обведений текст, щоб виправити його переклад."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "На цій сторінці не знайдено перекладеного тексту для редагування. Натомість скористайтеся редактором із паралельним переглядом."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

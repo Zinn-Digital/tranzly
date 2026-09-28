@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "എഴുതുന്നുമുണ്ട് തിരുത്തിയെഴുതുന്നുമുണ്ട്"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "വിവർത്തനം"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "ക്ഷമിക്കണം, ഈ പേജ് ആക്സസ് ചെയ്യാൻ നിങ്ങൾക്ക് അനുവാദമില്ല."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "ഈ ക്രമീകരണങ്ങൾ അവ ഉപയോഗിക്കുന്ന എല്ലാ പ്ലഗിനുകളും പങ്കിടുന്നു: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "നിങ്ങളുടെ കീകൾ ഈ സൈറ്റിന്റെ ഡാറ്റാബേസിൽ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു, ഒപ്പം നിങ്ങൾ തിരഞ്ഞെടുത്ത ദാതാവിന് മാത്രമായി അയയ്ക്കപ്പെടുന്നു - ഒരിക്കലും ഞങ്ങൾക്കല്ല."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "ഘട്ടം 1 ൽ 2: ഒരു AI പ്രൊവൈഡറെ തിരഞ്ഞെടുക്കുക"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "നിങ്ങൾ നിങ്ങളുടെ സ്വന്തം കീ കൊണ്ടുവരികയാണ്, അതിനാൽ നിങ്ങൾ ഉപയോഗിക്കുന്നതിന് പ്രൊവൈഡർക്ക് നേരിട്ട് പണം നൽകുന്നു. ഉറപ്പില്ലേ? ഇവയിൽ ഏതെങ്കിലും നന്നായി പ്രവർത്തിക്കുന്നു; നിങ്ങൾക്ക് പിന്നീട് കൂടുതൽ ചേർക്കാവുന്നതാണ്."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "അടുത്തത്"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "2-ൽ 2-ആം ഘട്ടം: %s ബന്ധിപ്പിക്കുക"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "നിങ്ങളുടെ OpenAI-അനുയോജ്യമായ സേവനത്തിന്റെ വിലാസം എൻ്റർ ചെയ്യുക, ഇത് /v1-ൽ അവസാനിക്കണം. സേവനത്തിന് ആവശ്യമാണെങ്കിൽ മാത്രമേ ഒരു കീയുടെ ആവശ്യമുള്ളൂ."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "%s തുറന്ന് സൈൻ ഇൻ ചെയ്യുക (അല്ലെങ്കിൽ ഒരു സൗജന്യ അക്കൗണ്ട് സൃഷ്ടിക്കുക)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "%s API കീകളിന്റെ പേജ്"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "പുതിയ ഒരു കീ സൃഷ്ടിച്ച് അത് പകർത്തുക."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "ഇത് താഴെ ഒട്ടിച്ച് \"സേവ് ചെയ്ത് പരിശോധിക്കുക\" (Save and test) അമർത്തുക. ഇത് പ്രവർത്തിക്കുന്നുണ്ടോ എന്ന് പരിശോധിക്കാൻ ഞങ്ങൾ ഒരു ചെറിയ അഭ്യർത്ഥന അയയ്ക്കുന്നു."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "കീ പ്രവർത്തിക്കുന്നതിന് മിക്ക ദാദാക്കൾക്കും അക്കൗണ്ടിൽ ചെറിയൊരു തുക ക്രെഡിറ്റ് ചെയ്യേണ്ടതുണ്ട്: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "ക്രെഡിറ്റ് ചേർക്കുക"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← മറ്റൊരു ദാതാവിനെ തിരഞ്ഞെടുക്കുക"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "വിലാസം"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "സേവ് ചെയ്‌ത കീ അവസാനിക്കുന്നത് …%s എന്നതിലാണ് - അത് മാറ്റാൻ പുതിയൊരെണ്ണം ഒട്ടിക്കുക"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "കീ (ഓപ്ഷണൽ)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "API കീ"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "സംരക്ഷിച്ച് പരീക്ഷിക്കുക"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "ദാതാക്കൾ"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "ദാതാവ്"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "സ്റ്റാറ്റസ്"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "കീ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "ഒരു കീ നേടുക"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "ടെസ്റ്റ്"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "നീക്കം ചെയ്യുക"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "പുതിയ പ്ലഗിൻ പതിപ്പ് ഉപയോഗിച്ച് സേവ് ചെയ്തു: ഈ പ്ലഗിൻ അപ്ഡേറ്റ് ചെയ്യുക, അല്ലെങ്കിൽ കീ വീണ്ടും നൽകുക."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "സേവ് ചെയ്ത കീ ഇനി തുറക്കാൻ കഴിയില്ല (സൈറ്റിന്റെ സുരക്ഷാ കീകൾ മാറി). അത് വീണ്ടും നൽകുക."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "ബന്ധിപ്പിച്ചിട്ടില്ല"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "ബന്ധിപ്പിച്ചിരിക്കുന്നു — അവസാന പരിശോധന വിജയകരമായി പൂർത്തിയായി %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "അവസാന പരിശോധന പരാജയപ്പെട്ടു: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "ബന്ധിപ്പിച്ചിരിക്കുന്നു - ഇതുവരെ പരിശോധിച്ചിട്ടില്ല"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "ഏത് മോഡലാണ് ഉപയോഗിക്കേണ്ടത്"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ ആ ടാസ്കിലേക്കായി ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നതിനെ അടയാളപ്പെടുത്തുന്നു. പ്രൊവൈഡറിൽ നിന്ന് നേരിട്ട് ലഭ്യമാക്കിയ, നിങ്ങളുടെ കീ ഉപയോഗിക്കാൻ കഴിയുന്ന എല്ലാ മോഡലുകളും ലിസ്റ്റിൽ ഉൾപ്പെടുന്നു."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— ദാതാവിന് ശുപാർശ ചെയ്യുന്നത് —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "മോഡലുകൾ സംരക്ഷിക്കുക"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "പ്രൊവൈഡർമാരിൽ നിന്നുള്ള മോഡൽ ലിസ്റ്റുകൾ പുതുക്കുക"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "ചിത്രങ്ങൾ"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "ചിത്രങ്ങൾ നിർമ്മിക്കുന്നതിനായി OpenAI അല്ലെങ്കിൽ Google Gemini കണക്റ്റ് ചെയ്യുക."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— കണക്റ്റുചെയ്‌ത ആദ്യ ദാതാവിന്റെ ഏറ്റവും പുതിയ ഇമേജ് മോഡൽ —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "ഏറ്റവും മികച്ച ഗുണനിലവാരം"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "ഏറ്റവും കുറഞ്ഞ ചെലവ്"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "ഏറ്റവും വേഗതയേറിയ"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "സ്വയം ഒരു മോഡൽ ചേർക്കുക"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "ഇന്ന് പുതിയൊരു മോഡൽ ഇറങ്ങിയോ? അത് ഉടനടി ഉപയോഗിക്കാൻ അതിന്റെ കൃത്യമായ പേര് പേസ്റ്റ് ചെയ്യുക."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "മോഡലിന്റെ പേര്"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "മാതൃക ചേർക്കുക"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "ശുപാർശ ചെയ്യപ്പെട്ട മോഡലുകളുടെ ലിസ്റ്റ്"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "ശുപാർശ ചെയ്യപ്പെട്ട മോഡലുകളുടെ ലിസ്റ്റ് പരിശോധിക്കാൻ കഴിഞ്ഞില്ല, അതിനാൽ ശുപാർശകളൊന്നും കാണിക്കുന്നില്ല. പ്ലഗിൻ വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ താഴെയുള്ള പ്രതിദിന അപ്ഡേറ്റുകൾ ഓണാക്കുക."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "ഉപയോഗത്തിലുള്ള ലിസ്റ്റ് %s-ൽ പ്രസിദ്ധീകരിച്ചതാണ്. ഓരോ പ്ലഗിൻ അപ്‌ഡേറ്റും പുതിയൊരെണ്ണം നൽകുന്നു."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "അഡ്‍ഡേറ്റ് ചെയ്ത ലിസ്റ്റിനായി ദിവസത്തിൽ ഒരിക്കൽ Zinn Digital® പരിശോധിക്കുക."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "ഒരു ലളിതമായ ഡൗൺലോഡ് അഭ്യർത്ഥന മാത്രമാണ് അയക്കുന്നത്: കീ ഇല്ല, സൈറ്റ് വിലാസമില്ല, നിങ്ങളുടെ ഉള്ളടക്കത്തെക്കുറിച്ചൊന്നും ഇല്ല. ലിസ്റ്റ് ഒപ്പിട്ടിരിക്കുന്നു, ഒപ്പ് പരിശോധന പരാജയപ്പെടുന്ന ലിസ്റ്റ് അവഗണിക്കപ്പെടും."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "അവസാനം പരിശോധിച്ചത് %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "സേവ് ചെയ്യുക, ഓൺ ചെയ്തിട്ടുണ്ടെങ്കിൽ ഇപ്പോൾ പരിശോധിക്കുക"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "ഒരു പുതിയ ലിസ്റ്റ് ഇൻസ്റ്റാൾ ചെയ്തു"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "ഇതിനകം അപ്‌ഡേറ്റ് ചെയ്‌തു കഴിഞ്ഞു"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "ഡൗൺലോഡ് സിഗ്നേച്ചർ പരിശോധനയിൽ പരാജയപ്പെടുകയും അവഗണിക്കപ്പെടുകയും ചെയ്തു"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® ലഭ്യമായില്ല; നിലവിലെ ലിസ്റ്റ് ഉപയോഗത്തിൽ തുടരും"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "തുറക്കുക"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "അവരുടെ സ്റ്റാറ്റസ് പേജ് പരിശോധിക്കുക"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "നിങ്ങളുടെ ബില്ലിംഗ് പേജ് തുറക്കുക"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "നിങ്ങളുടെ API കീകൾ പേജ് തുറക്കുക"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "എ ഐ ക്രമീകരണങ്ങൾ തുറക്കുക"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "ക്ഷമിക്കണം, നിങ്ങൾക്ക് അത് ചെയ്യാൻ അനുവാദമില്ല."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "അജ്ഞാത ദാതാവ്."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "നിങ്ങളുടെ സേവനത്തിന്റെ വിലാസം നൽകുക, ഉദാഹരണത്തിന് http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "അത് ഒരു API കെയ്ല്‍ പോലെ തോന്നുന്നില്ല. സ്‌പെയ്‌സുകളില്ലാതെ അത് വീണ്ടും കോപ്പി ചെയ്യുക."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "നിങ്ങളുടെ API കീ ആദ്യം ഒട്ടിക്കുക."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "കീ നീക്കം ചെയ്തു."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "മാതൃകൾ സേവ് ചെയ്തിരിക്കുന്നു."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "മൊഡലിന്റെ കൃത്യമായ പേര് നൽകുക, ഉദാഹരണത്തിന് പ്രൊവൈഡറുടെ ഡോക്യുമെന്റേഷനിൽ എഴുതിയിരിക്കുന്നതുപോലെ."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s ചേർത്തു. \"ഏത് മോഡലാണ് ഉപയോഗിക്കേണ്ടത്\" എന്നതിന് കീഴിൽ അത് തിരഞ്ഞെടുക്കുക."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "മോഡൽ നീക്കംചെയ്‌തു."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "ദിവസേനയുള്ള അപ്‌ഡേറ്റുകൾ ഓഫാണ്. പ്ലഗിനോടൊപ്പമുള്ള ലിസ്റ്റാണ് ഉപയോഗിക്കുന്നത്."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "പരിശോധിച്ചു: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "മാതൃകാ പട്ടികകൾ പുതുക്കി."
 
@@ -445,6 +459,19 @@ msgstr "ഈ ടാസ്കിനായി ഒരു മോഡലും തി�
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "ഈ പ്ലഗിൻ്റെ ഈ പതിപ്പ് ആ AI ദാതാവിനെ പിന്തുണയ്ക്കുന്നില്ല."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "ചിത്രങ്ങൾ നിർമ്മിക്കാൻ കഴിയുന്ന AI ദാതാക്കളാരും കണക്റ്റ് ചെയ്‌തിട്ടില്ല. AI ക്രമീകരണങ്ങളിൽ ഒരു OpenAI അല്ലെങ്കിൽ Google Gemini കീ ചേർക്കുക."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "ഈ AI ദാതാവിന് ചിത്രങ്ങൾ നിർമ്മിക്കാൻ കഴിയില്ല. AI ക്രമീകരണങ്ങളിൽ ചിത്രങ്ങൾക്കായി OpenAI അല്ലെങ്കിൽ Google Gemini തിരഞ്ഞെടുക്കുക."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "നിങ്ങളുടെ AI കീക്ക് ഒരു ഇമേജ് മോഡൽ ഉപയോഗിക്കാൻ കഴിയില്ല. ദാതാവുമായുള്ള കീയുടെ അനുമതികൾ പരിശോധിക്കുക, അല്ലെങ്കിൽ ചിത്രങ്ങൾക്കായി മറ്റൊരു ദാതാവിനെ തിരഞ്ഞെടുക്കുക."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s-ൽ ഇപ്പോൾ പ്രശ്നങ്ങൾ നേരിട
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "തിരിച്ചറിയാൻ കഴിയാത്ത ഒരു കാരണത്താൽ AI അഭ്യർത്ഥന പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക; പ്രശ്നം ആവർത്തിക്കുകയാണെങ്കിൽ, താഴെയുള്ള വിശദാംശങ്ങൾ സഹിതം പിന്തുണ വിഭാഗവുമായി (support) ബന്ധപ്പെടുക."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "AI പ്രൊവൈഡർ ഈ പ്ലഗിന് വായിക്കാൻ കഴിയാത്ത രൂപത്തിലാണ് മറുപടി നൽകിയത്. വീണ്ടും ശ്രമിക്കുക; പ്രശ്നം തുടരുകയാണെങ്കിൽ, മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കുകയോ പിന്തുണയുമായി ബന്ധപ്പെടുകയോ ചെയ്യുക."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" ഒരു ഭാഷാ കോഡല്ല. fr_FR അല്ലെ�
 msgid "List at least one language."
 msgstr "കുറഞ്ഞത് ഒരു ഭാഷയെങ്കിലും ലിസ്റ്റ് ചെയ്യുക."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "വിവർത്തനങ്ങൾ"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "%s പതിപ്പ് തിരുത്തുക"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "%s പതിപ്പ് വശങ്ങളിലായി താരതമ്യം ചെയ്യുക"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "ഓരോ ഭാഷയ്ക്കും നിങ്ങളുടെ മെനുവിലൊന്ന് തിരഞ്ഞെടുക്കുക."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "ഇതൊരു വിവർത്തനമല്ല, അതിനാൽ സംരക്ഷിക്കാൻ ഒന്നുമില്ല."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "ഇത്തരം ഉള്ളടക്കം വിവർത്തനം ചെയ്യപ്പെടുന്നില്ല."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "ടെക്സ്റ്റ് %s ഇനി ഈ സൈറ്റിൽ ലഭ്യമല്ല. പേജ് വീണ്ടും ലോഡ് ചെയ്യുക."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "ഒരു വിവർത്തന എൻജിനും ഈ ടെക്സ്റ്റ് വിവർത്തനം ചെയ്യാൻ കഴിഞ്ഞില്ല."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "നിങ്ങളുടെ മറ്റ് ഭാഷകളിൽ ഒന്ന് തിരഞ്ഞെടുക്കുക."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "തർജ്ജമ താരതമ്യം ചെയ്യുക"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "ഈ വിവർത്തനം എഡിറ്റ് ചെയ്യാൻ നിങ്ങൾക്ക് അനുവാദമില്ല."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "ഇതൊരു വിവർത്തനമല്ല, അതിനാൽ താരതമ്യം ചെയ്യാൻ ഒന്നുമില്ല."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "ഈ വിവർത്തനത്തിന്റെ ഒറിജിനൽ ഇനി നിലവിലില്ല."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "%s പീസ് ഇനി ഈ പരിഭാഷയുടെ ഭാഗമല്ല. പേജ് റീലോഡ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "ഈ പേജിൽ വിവർത്തനം ചെയ്യുക"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "വിവർത്തന ലിങ്ക് സേവ് ചെയ്യാൻ കഴിഞ്ഞില്ല."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "ആ വാചകം ഇവിടെ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "ആ മീഡിയ ടെക്സ്റ്റ് ഇവിടെ വിവർത്തനം ചെയ്യാൻ കഴിയില്ല."
 
@@ -810,15 +909,15 @@ msgstr "ഒരു തർജ്ജമാ എഞ്ചിനും ഇതുവര
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ആ വിവർത്തന എഞ്ചിൻ ഇതുവരെ സജ്ജീകരിച്ചിട്ടില്ല: ആദ്യം അതിൻ്റെ കീ ചേർക്കുക."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "അതേ വാചകം മറ്റൊരു ജോലിയിലൂടെ ഇപ്പോൾ വിവർത്തനം ചെയ്യപ്പെടുന്നുണ്ട്; ഈ ഇനം ആ ഉത്തരം ഉപയോഗിക്കും."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "ഈ ഇനം ഒ വിവർത്തന എഞ്ചിനും സ്വീകരിച്ചില്ല."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ഈ ഇനത്തിന്റെ എല്ലാ ഭാഗങ്ങൾക്കും എഞ്ചിൻ വിവർത്തനം നൽകിയിട്ടില്ല. മാറ്റങ്ങളൊന്നും വരുത്തിയിട്ടില്ല."
 
@@ -1497,6 +1596,7 @@ msgstr "ഇപ്പോൾ ഒരു ലൈസൻസ് വാങ്ങുക"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
@@ -3967,6 +4067,7 @@ msgstr "ട്രയൽ ആരംഭിക്കുന്നു"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "സംസ്ഥാനം"
 
@@ -5150,7 +5251,7 @@ msgstr "ലംബമായി അടുക്കുക"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "പ്രവേസ്യ ലേബൽ"
@@ -5201,7 +5302,7 @@ msgstr "വാചകത്തിന്റെ വലിപ്പം"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "സ്വിച്ചർ"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "പ്രോ പ്ലാനുകളും വിലയും കാണുക"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "ഭാഷകൾ"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "ഉള്ളടക്കം"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "ഭാഷ"
 
@@ -5578,29 +5681,95 @@ msgstr "വീണ്ടും ശ്രമിക്കുക"
 msgid "Translate by hand"
 msgstr "കൈകൊണ്ട് വിവർത്തനം ചെയ്യുക"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "മെനുകൾ സേവ് ചെയ്തു."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d ടെക്സ്റ്റുകൾ വിവർത്തനം ചെയ്തു."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "സംരക്ഷിച്ചു. മെഷീൻ പരിഭാഷയിൽ നിന്ന് നിങ്ങളുടെ തിരുത്തലുകൾ സംരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "അതേ മെനു, വിവർത്തനം ചെയ്തത്"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "ഓരോ ഭാഷയ്ക്കും വെവ്വേറെ മെനു"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "സ്വതവേ ഓരോ മെനുവും വിവർത്തനം ചെയ്യപ്പെടുന്നു: അവയുടെ ലിങ്കുകൾ അവയുടെ തലക്കെട്ടുകളോടുകൂടിയ വിവർത്തനം ചെയ്ത പേജുകളിലേക്ക് നയിക്കുന്നു. പകരം ഇവിടെ ഒരു ഭാഷയ്ക്കായി അതിന്റേതായ ഒരു മെനു തിരഞ്ഞെടുക്കുക."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "പങ്കിട്ട വാചകം"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "ഏത് വാചകം"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "മെനു ലേബലുകൾ"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "ടെംപ്ലേറ്റുകൾ, ഹെഡറുകൾ, ഫൂട്ടറുകൾ, പാറ്റേണുകൾ"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "ടെംപ്ലേറ്റുകൾ, ഹെഡറുകൾ, ഫൂട്ടറുകൾ, പാറ്റേണുകൾ (പ്രോ)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "വിവർത്തനം ചെയ്യാത്ത വാചകം വിവർത്തനം ചെയ്യുക"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "ഇവിടെ വിവർത്തനം ചെയ്യാൻ ടെക്സ്റ്റ് ഒന്നുമില്ല."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "വ്യക്തി തിരുത്തിയത്, സംരക്ഷിക്കപ്പെട്ടത്"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "തിരുത്തലുകൾ സംരക്ഷിക്കുക"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "ഭാഷകളും ക്രമീകരണങ്ങളും"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "എഞ്ചിനുകൾ"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "വിവർത്തന ജോലികൾ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "വിലാസങ്ങളും എസ്‌ഇഒയും"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "ലാംഗ്വേജ് സ്വിച്ചറുകൾ"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO ഓഡിറ്റ്"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "മെനുകളും പങ്കിട്ട വാക്യങ്ങളും"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "പ്രശ്നം"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "തിരുത്തുക"
 
@@ -5738,6 +5908,7 @@ msgstr "Elementor, Bricks പ്രൊജക്‌റ്റുകൾ Tranzly Pro
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "സേവ് ചെയ്യുക"
 
@@ -5865,8 +6036,61 @@ msgstr "%s-മായി സഹകരിച്ച് പ്രവർത്തി�
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "ഓരോ വിലാസ പദവും 2 മുതൽ 12 വരെ ചെറിയ അക്ഷരങ്ങളോ അക്കങ്ങളോ ഹൈഫനുകളോ ആയിരിക്കണം."
 
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "saved. നിങ്ങൾ മാറ്റം വരുത്തിയ ഭാഗങ്ങൾ ഒരാൾ പരിശോധിച്ചതായി അടയാളപ്പെടുത്തിയിരിക്കുന്നു, കൂടാതെ ഈ വിവർത്തനം മെഷീൻ വിവർത്തനത്തിൽ നിന്ന് സംരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "ഈ വിവർത്തനത്തിന്റെ ലേഔട്ട് എഡിറ്ററിൽ മാറ്റിയതിനാൽ, ചില ഭാഗങ്ങൾ ഇപ്പോൾ ഒറിജിനലുമായി പൊരുത്തപ്പെടുന്നില്ല. പങ്കാളികളില്ലാത്ത ഭാഗങ്ങൾ ശൂന്യമായി കാണിച്ചിരിക്കുന്നു; ബാക്കിയുള്ളവ എഡിറ്ററിൽ എഡിറ്റ് ചെയ്യുക."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "എഡിറ്റർ തുറക്കുക"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "യഥാർത്ഥം (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "വിവർത്തനം (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "മാറ്റങ്ങൾ സംരക്ഷിക്കുക"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "എഡിറ്ററിൽ തുറക്കുക"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "യന്ത്രം വഴി തർജ്ജമ ചെയ്തത്"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "ഒരു വ്യക്തി പരിശോധിച്ചത്"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "ഇംപോർട്ട് ചെയ്തു"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "ഇതുവരെ വിവർത്തനം ചെയ്തിട്ടില്ല"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "വിവർത്തനത്തിലില്ല"
+
 #. zinn-i18n: human translation — a person corrected the machine translation
-#: src/editor/index.js:18
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "അഡ്മിൻ മെനുവിൽ Tranzly-ക്കു കീഴിൽ രണ്ടാമതൊരു ഭാഷ ചേർക്കുക, തുടർന്ന് സ്വിച്ചർ ഇവിടെ ദൃശ്യമാകും."
@@ -5882,6 +6106,133 @@ msgstr "സ്ക്രീൻ റീഡറുകൾ അറിയിക്കു�
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "നിറങ്ങൾ"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "വിവർത്തനം ചെയ്തിട്ടില്ല"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "യഥാർത്ഥമായത്"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "പ്രസിദ്ധീകരിച്ചു"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "ഡ്രാഫ്റ്റ്"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "വ്യക്തി പരിശോധിച്ചത്, സുരക്ഷിതം"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "ഇറക്കുമതി ചെയ്തു, പരിരക്ഷിച്ചിരിക്കുന്നു"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "ഇതുവരെ വിവർത്തനം ചെയ്തിട്ടില്ല (ഒരു പകർപ്പ്)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "ആദ്യം ഈ പോസ്റ്റ് സേവ് ചെയ്യുക, അതിനുശേഷം ഇവിടെ വിവർത്തനം ചെയ്യുക."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "വശം ചേർന്ന്"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "കാണുക"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "വീണ്ടും വിവർത്തനം ചെയ്യാൻ കഴിയുന്ന തരത്തിൽ അൺലോക്ക് ചെയ്യുക"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "സംരക്ഷിക്കുക"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "വിവർത്തനങ്ങൾ പ്രസിദ്ധീകരിക്കുക"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "%d ഭാഷയിലേക്ക് വിവർത്തനം ചെയ്യുക"
+msgstr[1] "%d ഭാഷകളിലേക്ക് വിവർത്തനം ചെയ്യുക"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: വിവർത്തനം ചെയ്തു."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "ഈ ബ്ലോക്ക് കാണിക്കുക"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "എല്ലാ ഭാഷകളിലും"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "ടിക്ക് ചെയ്ത ഭാഷകളിൽ മാത്രം"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "ടിക്ക് ചെയ്തവ ഒഴികെയുള്ള എല്ലാ ഭാഷകളിലും"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "ഭാഷ തിരിച്ചുള്ള ചിത്രം"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "ഒരു ഭാഷയിലെ വായനക്കാർക്കായി മറ്റൊരു ചിത്രം കാണിക്കുക, ഉദാഹരണത്തിന് അതിൽ വാക്കുകളുള്ള ഒരു ബാനർ."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "%s ചിത്രം മാറ്റുക"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "ഒരു %s ചിത്രം തിരഞ്ഞെടുക്കുക"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "യഥാർത്ഥ ചിത്രം ഉപയോഗിക്കുക"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "ഈ വിവർത്തനം തിരുത്തുക"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "സേവ് ചെയ്യുന്നു…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "വിവർത്തനം ചെയ്‌ത വാചകം. ഇത് തിരുത്താൻ എന്റർ അമർത്തുക."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "അതിന്റെ പരിഭാഷ തിരുത്താൻ ഔട്ട്‌ലൈൻ ചെയ്ത ഏതെങ്കിലും ടെക്സ്റ്റിൽ ക്ലിക്ക് ചെയ്യുക."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "ഇവിടെ എഡിറ്റ് ചെയ്യാൻ ഈ പേജിൽ പരിഭാഷപ്പെടുത്തിയ വാചകങ്ങളൊന്നും കണ്ടെത്തിയില്ല. പകരം സൈഡ്-ബൈ-സൈഡ് എഡിറ്റർ ഉപയോഗിക്കുക."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

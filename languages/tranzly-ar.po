@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "الكتابة وإعادة الكتابة"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "ترجمة"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "عذراً، لا يُسمح لك بالوصول إلى هذه الصفحة."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "تتم مشاركة هذه الإعدادات بواسطة كل ملحق يستخدمها: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "يتم تشفير مفاتيحك في قاعدة بيانات هذا الموقع ولا يتم إرسالها إلا إلى المزود الذي اخترته، ولا تُرسل إلينا أبداً."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "الخطوة 1 من 2: اختر موفر ذكاء اصطناعي"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "أنت توفر مفتاحك الخاص، لذا تدفع للمزود مباشرة مقابل ما تستخدمه. لست متأكداً؟ أي من هذه الخيارات يعمل بشكل جيد؛ يمكنك إضافة المزيد لاحقاً."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "التالي"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "الخطوة ٢ من ٢: توصيل %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "أدخل عنوان خدمتك المتوافقة مع OpenAI، منتهيًا بـ /v1. لا يلزم وجود مفتاح إلا إذا طلبت الخدمة ذلك."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "افتح %s وسجل الدخول (أو أنشئ حساباً مجانياً)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "صفحة مفاتيح API الخاصة بـ %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "أنشئ مفتاحاً جديداً وانسخه."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "الصقه أدناه واضغط على \"حفظ واختبار\". نرسل طلباً صغيراً واحداً للتحقق من عمله."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "تحتاج معظم الشركات المزودة إلى رصيد بسيط في الحساب قبل أن يعمل المفتاح: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "إضافة رصيد"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← اختر مزوداً مختلفاً"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "العنوان"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "تنتهي المفتاح المحفوظ بـ …%s — الصق مفتاحاً جديداً لاستبداله"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "مفتاح (اختياري)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "مفتاح واجهة برمجة التطبيقات"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "حفظ واختبار"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "مزودو الخدمة"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "المزود"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "الحالة"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "مفتاح"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "احصل على مفتاح"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "اختبار"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "إزالة"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "تم الحفظ بواسطة إصدار أحدث من الإضافة: قم بتحديث هذه الإضافة، أو أدخل المفتاح مرة أخرى."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "لم يعد من الممكن فتح المفتاح المحفوظ (تغيرت مفاتيح الأمان الخاصة بالموقع). أدخله مرة أخرى."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "غير متصل"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "متصل — نجح الاختبار الأخير %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "فشل الاختبار الأخير: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "متصل — لم يتم الاختبار بعد"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "ما النموذج المراد استخدامه"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ تشير إلى توصيتنا لتلك المهمة. تتضمن القائمة كل نموذج يمكن لمفتاحك استخدامه، وتُقرأ مباشرة من المزود."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— مُوصى به للمزوّد —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "حفظ النماذج"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "تحديث قوائم النماذج من المزودين"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "الصور"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "قم بربط OpenAI أو Google Gemini لإنشاء الصور."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— أحدث نموذج للصور من أول مزود متصل —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "أفضل جودة"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "أقل تكلفة"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "الأسرع"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "أضف نموذجاً بنفسك"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "صدر نموذج جديد اليوم؟ الصق اسمه الدقيق لاستخدامه على الفور."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "اسم النموذج"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "إضافة نموذج"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "قائمة النماذج الموصى بها"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "تعذر التحقق من قائمة النماذج الموصى بها، لذا لا يتم عرض أي توصيات. أعد تثبيت المكون الإضافي، أو قم بتفعيل التحديثات اليومية أدناه."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "تم نشر القائمة المستخدمة في %s. يجلب كل تحديث للإضافة قائمة جديدة."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "تحقق أيضًا من Zinn Digital® مرة واحدة في اليوم للحصول على قائمة محدثة."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "لا يُرسل سوى طلب تنزيل عادي: لا مفتاح، ولا عنوان موقع، ولا شيء عن محتواك. القائمة موقعة، وتلك التي تُخفق في التحقق من التوقيع يتم تجاهلها."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "آخر فحص في %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "احفظ، ثم تحقق الآن مما إذا كان مشغلاً"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "تم تثبيت قائمة أحدث"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "محدث بالفعل"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "فشل التنزيل في اختبار التوقيع وتم تجاهله"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "تعذر الاتصال بـ Zinn Digital®؛ ستبقى القائمة الحالية قيد الاستخدام"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "متوقف"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "فتح"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "تحقق من صفحة حالتهم"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "افتح صفحة الفواتير الخاصة بك"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "افتح صفحة مفاتيح واجهة برمجة التطبيقات الخاصة بك"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "فتح إعدادات الذكاء الاصطناعي"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "عذراً، لا يُسمح لك بتنفيذ هذا الإجراء."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "مزوّد غير معروف."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "أدخل عنوان خدمتك، على سبيل المثال http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "لا يبدو هذا مفتاح واجهة برمجة تطبيقات. انسخه مرة أخرى بدون مسافات."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "الصق مفتاح واجهة برمجة التطبيقات الخاص بك أولاً."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "تم إزالة المفتاح."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "تم حفظ النماذج."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "أدخل اسم النموذج بدقة، على النحو الوارد في وثائق المزود على سبيل المثال."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "تمت إضافة %s. اختره تحت \"أي نموذج يجب استخدامه\"."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "تمت إزالة النموذج."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "التحديثات اليومية متوقفة. تُستخدم القائمة التي جاءت مع المكون الإضافي."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "تم التحقق: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "تم تحديث قوائم النماذج."
 
@@ -445,6 +459,19 @@ msgstr "لم يتم اختيار أي نموذج لهذه المهام. قم ب�
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "مزود الذكاء الاصطناعي هذا غير مدعوم من هذا الإصدار من الملحق."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "لا يوجد أي مزود ذكاء اصطناعي قادر على إنشاء الصور متصلاً. أضف مفتاح OpenAI أو Google Gemini في إعدادات الذكاء الاصطناعي."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "مزود الذكاء الاصطناعي هذا لا يمكنه إنشاء صور. اختر OpenAI أو Google Gemini للصور في إعدادات الذكاء الاصطناعي."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "لا يمكن لمفتاح الذكاء الاصطناعي الخاص بك استخدام أي نموذج صور. تحقق من أذونات المفتاح لدى المزود، أو اختر مزوداً آخر للصور."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "يواجه %s مشكلات في الوقت الحالي (انقطاع أ
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "فشل طلب الذكاء الاصطناعي لسبب لم نتمكن من تحديده. حاول مرة أخرى؛ وإذا استمر حدوث ذلك، فاتصل بالدعم مع تقديم التفاصيل أدناه."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "أجاب موفر الذكاء الاصطناعي بصيغة تعذر على هذا البرنامج المساعد قراءتها. حاول مرة أخرى؛ وإذا استمر حدوث ذلك، فاختر نموذجاً آخر أو اتصل بالدعم."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" ليس رمز لغة. استخدم لغة WordPress المحلي�
 msgid "List at least one language."
 msgstr "أدرج لغة واحدة على الأقل."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "الترجمات"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "تعديل إصدار %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "قارن إصدار %s جنباً إلى جنب"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "اختر إحدى قوائمك لكل لغة."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "هذه ليست ترجمة، لذلك ليس هناك ما يجب حمايته."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "هذا النوع من المحتوى غير مترجم."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "النص %s لم يعد موجوداً على هذا الموقع. أعد تحميل الصفحة."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "لا توجد ترجمة آليا تستطيع ترجمة هذا النص."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "اختر إحدى لغاتك الأخرى."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "مقارنة الترجمة"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "غيرسموح لك بتعديل هذه الترجمة."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "هذه ليست ترجمة، لذا ليس هناك ما يمكن مقارنته."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "أصل هذه الترجمة لم يعد موجوداً."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "القطعة %s لم تعد جزءاً من هذا الترجمة. اعادة تحميل الصفحة وحاول مرة أخرى."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "الترجمة في هذه الصفحة"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "تعذر حفظ رابط الترجمة."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "لا يمكن ترجمة هذا النص هنا."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "لا يمكن ترجمة نص الوسائط هذا هنا."
 
@@ -810,15 +909,15 @@ msgstr "لم يتم إعداد أي محرك ترجمة حتى الآن. أضف 
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "محرك الترجمة هذا غير معد بعد: أضف مفتاحه أولاً."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "جاري ترجمة نفس النص بواسطة مهمة أخرى الآن؛ سيستخدم هذا العنصر تلك الإجابة."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "لم يتمكن أي محرك ترجمة من معالجة هذا العنصر."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "لم يُرجع المحرك ترجمة لكل جزء من هذا العنصر. لم يتم تغيير شيء."
 
@@ -1497,6 +1596,7 @@ msgstr "اشترِ ترخيصاً الآن"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "إلغاء"
 
@@ -3970,6 +4070,7 @@ msgstr "بدء التجربة"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "الحالة"
 
@@ -5155,7 +5256,7 @@ msgstr "ترتيب عمودياً"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "تسمية يمكن الوصول إليها"
@@ -5206,7 +5307,7 @@ msgstr "حجم النص"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "محول"
@@ -5240,6 +5341,7 @@ msgid "See the Pro plans and pricing"
 msgstr "اطلع على خطط الأسعار والأسعار المتقدمة Pro"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "اللغات"
 
@@ -5556,6 +5658,7 @@ msgid "Content"
 msgstr "المحتوى"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "اللغة"
 
@@ -5584,29 +5687,95 @@ msgstr "إعادة المحاولة"
 msgid "Translate by hand"
 msgstr "الترجمة يدوياً"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "تم حفظ القوائم."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "تمت ترجمة %d نص."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "تم الحفظ. تصحيحاتك محمية من الترجمة الآلية."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "القائمة نفسها، مترجمة"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "قائمة منفصلة لكل لغة"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "تتم ترجمة كل قائمة بشكل افتراضي: تؤدي روابطها إلى الصفحات المترجمة، مع عناوينها. اختر قائمة خاصة بلغة ما هنا بدلاً من ذلك."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "نص مشترك"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "أي نص"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "تسميات القائمة"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "القوالب، والروؤس، والتذييلات، والأنماط"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "القوالب، والرؤوس، والتذييلات، والأنماط (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "ترجم النص الناقص"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "لا توجد هنا أي نصوص للترجمة."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "صحيح من قبل شخص، محمي"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "حفظ التصحيحات"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "اللغات والإعدادات"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "محركات"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "مهام الترجمة"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "العناوين وتحسين محركات البحث"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "محولات اللغات"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "تدقيق تحسين محركات البحث"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "القوائم والنصوص المشتركة"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5659,6 +5828,7 @@ msgid "Problem"
 msgstr "مشكلة"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "تعديل"
 
@@ -5744,6 +5914,7 @@ msgstr "عناصر Elementor و Bricks هي جزء من Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "حفظ"
 
@@ -5871,7 +6042,60 @@ msgstr "نعمل بالتعاون مع: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "يتكون كل جزء من العنوان من 2 إلى 12 حرفاً صغيراً أو رقماً أو شرطة."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "تم الحفظ. القطع التي قمت بتغييرها مميزة على أنها مُراجعة من قبل شخص، وهذه الترجمة محمية من الترجمة الآلية."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "تم تغيير تخطيط هذا الترجمة في المحرر، لذا لم تعد بعض الأجزاء مقترنة بالأصل. تظهر الأجزاء التي بلا شريك فارغة؛ قم بتعديل الباقي في المحرر."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "فتح المحرر"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "الأصلي (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "ترجمة (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "حفظ التغييرات"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "فتح في المحرر"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "مترجم آليا"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "تم التحقق منها بواسطة شخص"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "مستورد"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "لم يُترجم بعد"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "غير موجود في الترجمة"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "أضف لغة ثانية ضمن Tranzly في قائمة الإدارة، وسيظهر محول اللغات هنا."
@@ -5887,6 +6111,137 @@ msgstr "ما تنطقه قارئات الشاشة، على سبيل المثال
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "الألوان"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "غير مترجم"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "الاصلي"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "منشور"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "مسودة"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "تمت مراجعته من قِبل شخص، محمي"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "مستورد، محمي"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "لم يتم الترجمة بعد (نسخة)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "احفظ هذا المنشور أولاً، ثم قم بترجمته هنا."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "جنبا إلى جنب"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "عرض"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "قم بإلغاء القفل لكي يتم ترجمته مرة أخرى"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "حماية"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "نشر الترجمات"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "الترجمة إلى %d لغة"
+msgstr[1] "الترجمة إلى %d لغات"
+msgstr[2] "الترجمة إلى %d لغات"
+msgstr[3] "الترجمة إلى %d لغات"
+msgstr[4] "الترجمة إلى %d لغات"
+msgstr[5] "الترجمة إلى %d لغات"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: تمت الترجمة."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "إظهار هذه الكتلة"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "بكل لغة"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "فقط باللغات المحددة"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "بكل لغة ما عدا تلك المحددة"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "صورة لكل لغة"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "عرض صورة أخرى للقراء الذين يقرؤون بلغتي، على سبيل المثال لافتة تحتوي على كلمات."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "استبدل صورة %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "اختر صورة %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "استخدم الصورة الأصلية"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "صحح هذا الترجمة"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "جار الحفظ..."
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "النص المترجم. اضغط على مفتاح الإدخال لتصحيحه."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "انقر فوق أي نص محدد بإطار لتصحيح ترجمته."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "لم يتم العثور على أي نص مترجم على هذه الصفحة لتعديله هنا. استخدم محرر جنباً إلى جنب بدلاً من ذلك."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

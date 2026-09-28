@@ -82,7 +82,7 @@ final class Anthropic extends Provider {
 		foreach ( $turns as $turn ) {
 			$body['messages'][] = array(
 				'role'    => 'assistant' === $turn['role'] ? 'assistant' : 'user',
-				'content' => $turn['content'],
+				'content' => self::anthropic_content( $turn['content'] ),
 			);
 		}
 		if ( isset( $options['temperature'] ) ) {
@@ -127,5 +127,35 @@ final class Anthropic extends Provider {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Content in the Messages API shape: a plain string, or text + base64 `image` blocks (1.1.0).
+	 *
+	 * @param mixed $content Message content.
+	 * @return string|array<int, array<string, mixed>>
+	 */
+	private static function anthropic_content( $content ) {
+		if ( is_string( $content ) || ! self::has_image( $content ) ) {
+			return self::text_of( $content );
+		}
+		$out = array();
+		foreach ( self::parts( $content ) as $part ) {
+			$out[] = 'image' === $part['type']
+				? array(
+					'type'   => 'image',
+					'source' => array(
+						'type'       => 'base64',
+						'media_type' => $part['mime'],
+						'data'       => $part['data'],
+					),
+				)
+				: array(
+					'type' => 'text',
+					'text' => (string) $part['text'],
+				);
+		}
+
+		return $out;
 	}
 }

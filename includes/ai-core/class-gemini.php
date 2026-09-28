@@ -74,7 +74,7 @@ final class Gemini extends Provider {
 		foreach ( $turns as $turn ) {
 			$body['contents'][] = array(
 				'role'  => 'assistant' === $turn['role'] ? 'model' : 'user',
-				'parts' => array( array( 'text' => $turn['content'] ) ),
+				'parts' => self::gemini_parts( $turn['content'] ),
 			);
 		}
 		if ( '' !== $system ) {
@@ -123,6 +123,126 @@ final class Gemini extends Provider {
 			if ( null === $result->data ) {
 				$result->failure = $this->unreadable( $response );
 			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Content as Gemini parts: `text` and `inline_data` (1.1.0, vision).
+	 *
+	 * @param mixed $content Message content.
+	 * @return array<int, array<string, mixed>>
+	 */
+	private static function gemini_parts( $content ): array {
+		$out = array();
+		foreach ( self::parts( $content ) as $part ) {
+			$out[] = 'image' === $part['type']
+				? array(
+					'inline_data' => array(
+						'mime_type' => $part['mime'],
+						'data'      => $part['data'],
+					),
+				)
+				: array( 'text' => (string) $part['text'] );
+		}
+
+		return $out ? $out : array( array( 'text' => '' ) );
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
+	public function image_models( string $key ) {
+		if ( ! $this->supports_images() ) {
+			return array();
+		}
+		list( $body, $response ) = $this->call( 'GET', (string) ( $this->spec['models_path'] ?? '/models' ) . '?pageSize=1000', $key );
+		if ( null === $body ) {
+			return $response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response );
+		}
+		$ids    = array();
+		$labels = array();
+		foreach ( (array) ( $body['models'] ?? array() ) as $row ) {
+			if ( ! is_array( $row ) || ! isset( $row['name'] ) || ! is_string( $row['name'] ) ) {
+				continue;
+			}
+			$id = str_starts_with( $row['name'], 'models/' ) ? substr( $row['name'], 7 ) : $row['name'];
+			if ( 1 === preg_match( '/^gemini-.*-image/', $id ) && in_array( 'generateContent', (array) ( $row['supportedGenerationMethods'] ?? array() ), true ) ) {
+				$ids[]         = $id;
+				$labels[ $id ] = isset( $row['displayName'] ) && is_string( $row['displayName'] ) ? $row['displayName'] : $id;
+			}
+		}
+
+		return array_map(
+			static fn( string $id ): array => array(
+				'id'    => $id,
+				'label' => $labels[ $id ],
+			),
+			self::newest_first( $ids )
+		);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param string               $prompt  What to draw.
+	 * @param array<string, mixed> $options `size`.
+	 * @return Result
+	 */
+	public function generate_image( string $key, string $model, string $prompt, array $options = array() ): Result {
+		if ( ! $this->supports_images() ) {
+			return parent::generate_image( $key, $model, $prompt, $options );
+		}
+		$ratios                  = array(
+			'square'    => '1:1',
+			'landscape' => '16:9',
+			'portrait'  => '9:16',
+		);
+		$body                    = array(
+			'contents'         => array(
+				array(
+					'role'  => 'user',
+					'parts' => array( array( 'text' => $prompt ) ),
+				),
+			),
+			'generationConfig' => array(
+				'responseModalities' => array( 'TEXT', 'IMAGE' ),
+				'imageConfig'        => array( 'aspectRatio' => $ratios[ (string) ( $options['size'] ?? 'square' ) ] ?? '1:1' ),
+			),
+		);
+		$path                    = str_replace( '{model}', rawurlencode( $model ), (string) ( $this->spec['chat_path'] ?? '/models/{model}:generateContent' ) );
+		list( $data, $response ) = $this->call( 'POST', $path, $key, $body, 180 );
+		if ( null === $data ) {
+			return Result::failed(
+				$response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response, $model ),
+				$this->id,
+				$model
+			);
+		}
+		$result                = new Result();
+		$result->provider      = $this->id;
+		$result->model         = $model;
+		$result->input_tokens  = (int) ( $data['usageMetadata']['promptTokenCount'] ?? 0 );
+		$result->output_tokens = (int) ( $data['usageMetadata']['candidatesTokenCount'] ?? 0 );
+		foreach ( (array) ( $data['candidates'][0]['content']['parts'] ?? array() ) as $part ) {
+			$inline = is_array( $part ) ? ( $part['inlineData'] ?? $part['inline_data'] ?? null ) : null;
+			if ( is_array( $inline ) && isset( $inline['data'] ) && is_string( $inline['data'] ) ) {
+				$result->images[] = array(
+					'mime' => (string) ( $inline['mimeType'] ?? $inline['mime_type'] ?? 'image/png' ),
+					'data' => $inline['data'],
+				);
+			} elseif ( is_array( $part ) && isset( $part['text'] ) && is_string( $part['text'] ) ) {
+				$result->text .= $part['text'];
+			}
+		}
+		if ( ! $result->images ) {
+			$result->failure = $this->unreadable( $response );
 		}
 
 		return $result;

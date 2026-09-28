@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "لیښل او بیا لیکل"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "ژباړه"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "بښنه غواړو، تاسو دې پاڼې ته د لاسرسي اجازه نه لرئ."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "دا تنظیمونه د هر هغه پلگ‌ین لخوا شریک شوي چې دا کاروي: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "ستاسو کیلي ګانې د دې سایټ په ډیټابیس کې کوډ شوي دي او یوازې هغه چمتو کونکي ته لیږل کیږي چې تاسو یې غوره کړی — هیڅکله موږ ته نه."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "لومړی ګام له 2 څخه: د مصنوعي ځيرکتیا چمتو کونکی وټاکئ"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "تاسو خپله کلي راوړئ، نو تاسو د خپلې کارونې لپاره چمتو کونکي ته په مستقیم ډول پیسې ورکوئ. ډاډه نه یاست؟ له دې څخه هر یو ښه کار کوي؛ تاسو کولی شئ وروسته نور هم اضافه کړئ."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "بل"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "د ۲ څخه ۲ پړاو: %s وصل کړئ"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "د خپل OpenAI سره مطابقت لرونکي خدمت پته دننه کړئ، چې په /v1 پای ته رسېږي. کلي، یوازې هغه وخت ته اړتیا ده چې خدمت یې وغواړي."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "%s خلاص کړئ او ننوتئ (یا یو وړیا حساب جوړ کړئ)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "د %s د API کیلي پاڼه"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "یو نوی کیلي جوړه کړئ او هغه کاپي کړئ."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "دلته یې پیسټ کړئ او پر \"خوندي کړئ او ازموینه وکړئ\" کېکاږئ. موږ د کار کولو د چک کولو لپاره یو کوچنی غوښتنه لیږو."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "ډیری چمتو کونکي د کیلي کارولو لپاره په اکاونټ کې لږ کریډیټ ته اړتیا لري: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "credit اضافه کول"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← بل عرضه کونکی وټاکئ"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "پته"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "خوندي شوی کيلي په …%s پای ته رسېږي – د بدلولو لپاره يې نوې وپیسوئ"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "کیلي (اختياري)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "د API کیلي"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "خپخول او ازمویل"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "عرضه کوونکي"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "ورکوونکی"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "حالت"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "کیلي"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "کلید ترلاسه کول"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "ازموینه"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "ليرې کول"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "د پلگین د یوې نوې نسخې لخوا خوندي شوی: دا پلگین تازه کړئ، یا کیلي بیا دننه کړئ."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "خپره شوې کیلي نور نشي خلاصېدلی (د سایټ د امنیت کیلي بدلې شوې دي). هغه بیا دننه کړئ."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "نښلول شوی نه دی"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "نښلول شوی - وروستۍ ازموینه بریالۍ شوه %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "وروستۍ ازموينه ناکامه شوه: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "وصل شوی — لا ندی ازمویل شوی"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "کوم ماډل وکاروئ"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ د دې دندې لپاره زموږ وړاندیز په ګوته کوي. په دې لړ کې هغه ټول ماډلونه شامل دي چې ستاسو کليمه یې کارولی شي، چې په مستقیم ډول له چمتو کوونکي څخه لوستل شوي دي."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— د چمتو کونکي لپاره وړاندیز شوی —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "موډلونه خوندي کول"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "د چمتو کونکو څخه د ماډل لیستونه تازه کړئ"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "انځورونه"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "د انځورونو جوړولو لپاره OpenAI یا Google Gemini وصل کړئ."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— د لومړي نښلول شوي چمتو کونکي تر ټولو وروستی عکس ماډل —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "غوره کیفیت"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "تر ټولو ټیټ لګښت"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "تر ټولو چټک"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "خپل ماډل پخپله اضافه کړئ"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "نن یو نوی ماډل راغلی؟ د هغې سم نوم دلته ولیکئ ترڅو سمدلاسه يې وکاروئ."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "ماډل نوم"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "ماډل اضافه کول"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "د وړاندیز شویو ماډلونو لړۍ"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "د وړاندیز شوي ماډلونو لیست نشي تایید کیدی، نو ځکه هیڅ وړاندیز نه ښودل کیږي. پلگ ان بیا نصب کړئ، یا لاندې هره ورځ تازه معلومات فعال کړئ."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "په کار وړل شوی لست په %s کې خپور شوی و. د پلگ‌ان هره تازه کېدنه یو تازه لست راوړي."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "همچنین د تازه شوي لړۍ لپاره په ورځ کې یو ځل Zinn Digital® وګورئ."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "يوازې د ډاونلوډ یو ساده غوښتنه استول کیږي: نه کیلي، نه د سایټ پته، او نه هم ستاسو د مینځپانګې په اړه څه. لست لاسلیک شوی دی، او هغه لست چې د لاسلیک په چک کې پاتې راشي له پامه غورځول کیږي."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "وروستی ځل په %1$s کې چیک شو: %2$s۔"
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "خپړه کړئ، او که چیرې فعال وي اوس یې وګورئ"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "يو نوی لېست نصب شو"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "لا دم نوی شوی دی"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "ډاونلوډ د لاسلیک په چک کې پاتې راغی او له پامه وغورځول شو"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® ته لاسرسی ناشونی شو؛ اوسنی لیسټ په خپل ځای پاتې کیږي"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "بند دی"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "خلاص کړئ"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "د دوی د حالت پاڼه وګورئ"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "خپل د بلing پاڼه خلاص کړئ"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "د خپلې API کیلي پاڼه پرانیزئ"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "د مصنوعي استخباراتو (AI) امشارات خلاص کړئ"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "بخښنه غواړو، تاسو د دې اجازه نه لرئ."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "نامعلومه برابرونکی."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "د خپل خدمت پته دننه کړئ، د بېلګې په توګه http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "دا د API کیلي په څیر نه ښکاري. دا یو ځل بیا د فاصلو له لرې کولو سره کاپي کړئ."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "لومړی خپل د API کيلي پیسټ کړئ."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "کیلي لرې شوه."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "ماډلونه خوندي شول."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "د ماډل دقیق نوم دننه کړئ، د بیلګې په توګه لکه څنګه چې د چمتو کونکي اسناد یې لیکي."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s اضافه شو. دا د \"کوم ماډل وکاروئ\" (Which model to use) لاندې وټاکئ."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "ماډل لرې شو."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "ورځنۍ تازه ګۍ بندې دي. هغه لېست کارول کېږي چې د پلګ ان سره مل و."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "تایید شوی: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "د ماډل لیستونه تازه شول."
 
@@ -445,6 +459,19 @@ msgstr "د دې کار لپاره کوم ماډل نه دی ټاکل شوی. د 
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "د مصنوعي ځيرکتیا (AI) هغه چمتوکوونکی د پلگ‌این په دې نسخه کې نه ملاتړ کېږي."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "هیڅ داسې AI چمتو کونکی چې نشي کولی انځورونه جوړ کړي، ندی وصل شوی. د AI په تنظیماتو کې د OpenAI یا Google Gemini کلي اضافه کړئ."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "دا AI چمتو کوونکی نشي کولی انځورونه جوړ کړي. د AI په امستنو کې د انځورونو لپاره OpenAI یا Google Gemini وټاکئ."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "ستاسو د مصنوعي استخباراتو کیلي نشي کولی کوم د انځور ماډل وکاروي. د چمتو کونکي سره د کیلي اجازه وګورئ، یا د انځورونو لپاره بل چمتو کونکی وټاکئ."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s اوس مهال ستونزې لري (د دوی په لوري کې ب�
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "د مصنوعي استخباراتو غوښتنه د یو داسې دلیل له امله ناکامه شوه چې موږ یې نشو پیژندلی. بیا هڅه وکړئ؛ که دا دوام ولري، لاندې معلوماتو سره ملاتړ سره اړیکه ونیسئ."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "د مصنوعي استخباراتو چمتوکوونکي په داسې بڼه ځواب ورکړ چې د دې پلگ ان له خوا لوستل کېدی نه شو. بیا هڅه وکړئ؛ که دا حالت دوام وکړي، بل ماډل وټاکئ یا ملاتړ ټیم سره اړیکه ونیسئ."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" د ژبي کوډ نه دی. د WordPress سیمه ایز تګلا
 msgid "List at least one language."
 msgstr "لږ تر لږه یوه ژبه ولیکئ."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "ژباړې"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "د %s نسخه سمول"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "د %s نسخه تر څنګ په تر څنګ پرتله کړئ"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "د هرې ژبې لپاره خپل یو مینو وټاکئ."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "دا ژباړه نه ده، نو د ساتلو لپاره هېڅ شی نشته."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "دې ډول مینځپانګې ته ژباړه نه ده شوې۔"
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "متن %s نور په دې سایټ کې نشته. پاڼه بیا پورته کړئ."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "هیڅ د ژباړې ماشین نشي کولی دا متن واخلي."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "خپل بل کوم ژبه وټاکئ."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "ژباړه پرتله کول"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "تاسو ته د دې ژباړې د سمولو اجازه نشته."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "دا ژباړه نه ده، نو د پرتله کولو لپاره هېڅ نشته."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "د دې ژباړې اصلي بڼه نور شتون نه لري."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "ټوټه %s نور د دې ژباړې برخه نه ده. پاڼه بیا پورته کړئ او بیا هڅه وکړئ."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "په دې پاڼه کې وژباړه"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "د ژباړې لینک نش شو خوندي کولای۔"
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "دا متن دلته نه شي ژباړل کېدای."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "د رسنیو هغه متن دلته نه شي ژباړل کېدای."
 
@@ -810,15 +909,15 @@ msgstr "تر اوسه پورې کوم د ژباړې ماشین نه دی تنظ�
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "دا ژباړې ماشین لا نه دی تنظیم شوی: لومړی یې کیلي اضافه کړئ."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "همدا متن په اوسني وخت کې د بلې دندې لخوا ژباړل کیږي؛ دا توکی به له همدې ځواب څخه کار واخلي."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "هیڅ ژباړن ماشین ونه شو کولی دا توکی واخلي."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "انجن د دې توکي د هرې برخې لپاره ژباړه ونه راستوله. هیڅ شی ونه بدل شو."
 
@@ -1497,6 +1596,7 @@ msgstr "اوس یو لایسنس وپ پیرئ"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "لغوه کول"
 
@@ -3967,6 +4067,7 @@ msgstr "ازموینه پیل کیږي"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "حالت"
 
@@ -5150,7 +5251,7 @@ msgstr "عمودی ډول برابرول"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "د لاسرسي وړ نښه"
@@ -5201,7 +5302,7 @@ msgstr "د متن اندازه"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "بدلوونکی"
@@ -5235,6 +5336,7 @@ msgid "See the Pro plans and pricing"
 msgstr "د Pro پلانونه او نرخونه وګورئ"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "ژبې"
 
@@ -5551,6 +5653,7 @@ msgid "Content"
 msgstr "محتوا"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "ژبه"
 
@@ -5579,29 +5682,95 @@ msgstr "بیا هڅه وکړئ"
 msgid "Translate by hand"
 msgstr "په لاس ژباړه"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "مینوونه خوندي شول."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d متنونه وژباړل شول."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "خوندي شو. ستاسو سمونونه د ماشیني ژباړې څخه خوندي دي."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "همغه مینو، ژباړل شوی"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "د هرې ژبې لپاره یو جلا مینو"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "په پخلنځي توګه هر مینو ژباړل شوې ده: د دې لینکونه د هغو د سرلیکونو سره ژباړل شویو مخونو ته لارښوونه کوي. د دې پر ځای دلته د یوه ژبې لپاره د هغې خپله مینو وټاکئ."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "شریک شوی متن"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "كومي متن"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "د مینو لیبلونه"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "کينډۍ، سرلیکونه، پایلیکونه او نمونې"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "کينډۍ، سرلیکونه، پښۍ او نمونې (پرو)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "ورک شوې متن وژباړه"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "دلته د ژباړلو لپاره کوم متن نشته."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "د یو کس لخوا سم شوی، خوندي شوی"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "سمونونه خوندي کول"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "ژبې او ترتیبات"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "انجنونه"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "د ژباړې دندې"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "آدرسونه او SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "د ژبې بدلونکي"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "SEO پلټنه"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "مینوګانې او شریک شوی متن"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5654,6 +5823,7 @@ msgid "Problem"
 msgstr "ستونزه"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "سمول"
 
@@ -5739,6 +5909,7 @@ msgstr "د Elementor او Bricks ویجټونه د Tranzly Pro برخه دي."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "خوندي کړئ"
 
@@ -5866,7 +6037,60 @@ msgstr "له دې سره کار کوي: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "د پته هره کلمه له ۲ تر ۱۲ پورې د کوچنیو تورو، عددونو یاهایفنونو څخه جوړه ده."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "خپل شو. هغه برخې چې تاسو بدلې کړې د یو کس لخوا د کتل شوې په توګه په نښه شوي، او دا ژباړه د ماشین له ژباړې څخه خوندي شوې ده."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "د دې ژباړې بڼه په اېډېټور کې بدله شوې ده، نو ځینې برخې نورې له اصلي سره نه سمون خوري. بېلګې برخې خالي ښودل شوې دي؛ پاتې نورې په اېډېټور کې سمې کړئ."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "اډېټر پرانیزئ"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "اصلي (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "ژباړه (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "بدلونونه خوندي کړئ"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "په اډېټور کې خلاصول"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "په ماشین ژباړل شوی"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "د یو کس لخوا چک شوی"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "وارد شوی"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "تر اوسه نه دی ژباړل شوی"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "په ژباړه کې نشته"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "د مدیر په مینو کې د Tranzly لاندې دویمه ژبە اضافه کړئ، او بدلونکی به دلته څرګند شي۔"
@@ -5882,6 +6106,133 @@ msgstr "څه شی چې سکرین لوستونکي اعلانوي، د بیلګ�
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "رنګونه"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "ژباړه شوې نه ده"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "اصلي"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "خپور شو"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "مسوده"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "د يو کس لخوا چک شوی، خوندي دی"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "وارد شوي، خوندي شوي"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "ترجمه شوی نه دی (یوه کاپي)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "لومړی دا پوست خوندي کړئ، بیا یې دلته وژباړئ."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "تر څنګ په څنګ"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "لیدل"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "خلاص کړئ ترڅو بیا وژباړل شي"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "ساتل"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "ژباړې خپرې کړئ"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "په %d ژبه وژباړه"
+msgstr[1] "په %d ژبو ژباړه وکړئ"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: وژباړل شو."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "دا بلاک وښایاست"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "په هره ژبه کې"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "یوازې په هغو ژبو کې چې نښه شوې دي"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "په هرې ژبې کې پرته له هغو څخه چې نښه شوي دي"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "د هرې ژبې لپاره انځور"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "د یوې ژبې لوستونکو ته بله انځوريزه برخه وښایاست، د بېلګې په توګه یو بینر چې پر مخ یې ټکي لیکلي وي."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "د %s انځور بدلول"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "د %s انځور وټاکئ"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "اصلي انځور وکاروئ"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "دا ژباړه سمه کړئ"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "خوندي کېږي..."
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "ژباړل شوی متن. د سمولو لپاره انټر (Enter) کېکښنئ."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "د خپلې ژباړې د سمولو لپاره په هره کښل شوې (پوله لرونکې) غاښه (متن) کلیک وکړئ."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "دلته د اډېټ کولو لپاره په دې پاڼه کې هېڅ ژباړل شوی متن ونه موندل شو. پرځای یې د تر څنګ پر څنګ (side-by-side) اډېټور څخه کار واخلئ."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

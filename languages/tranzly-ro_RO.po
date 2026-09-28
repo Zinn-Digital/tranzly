@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Scriere și rescriere"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Traducere"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Ne pare rău, nu aveți permisiunea de a accesa această pagină."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Aceste setări sunt partajate de fiecare modul care le utilizează: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Cheile dvs. sunt criptate în baza de date a acestui site și sunt trimise doar către furnizorul ales de dvs. — niciodată către noi."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Pasul 1 din 2: alegeți un furnizor de IA"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Folosiți propria cheie, astfel încât plătiți direct furnizorului pentru ceea ce utilizați. Nu sunteți sigur? Oricare dintre acestea funcționează bine; puteți adăuga mai multe mai târziu."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Înainte"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Pasul 2 din 2: conectați %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Introduceți adresa serviciului compatibil cu OpenAI, care se termină în /v1. O cheie este necesară doar dacă serviciul solicită una."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Deschideți %s și conectați-vă (sau creați un cont gratuit)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "pagina cu chei API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Creați o cheie nouă și copiați-o."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Lipiți-l mai jos și apăsați pe „Salvați și testați”. Trimitem o singură solicitare mică pentru a verifica dacă funcționează."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Majoritatea furnizorilor au nevoie de puțin credit în cont înainte ca o cheie să funcționeze: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "adaugă credit"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Alegeți un alt furnizor"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Adresă"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Cheia salvată se termină în …%s — inserați una nouă pentru a o înlocui"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Cheie (opțional)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "Cheie API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Salvează și testează"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Furnizori"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Furnizor"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Stare"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Cheie"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Obțineți o cheie"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Test"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Ștergere"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Salvat de o versiune mai nouă a pluginului: actualizați acest plugin sau introduceți cheia din nou."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Cheia salvată nu mai poate fi deschisă (cheile de securitate ale site-ului s-au schimbat). Introduceți-o din nou."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Neconectat"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Conectat — ultimul test a trecut %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Ultimul test a eșuat: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Conectat — încă netestat"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Ce model să utilizați"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ marchează recomandarea noastră pentru acea sarcină. Lista include fiecare model pe care cheia dumneavoastră îl poate folosi, preluat în timp real de la furnizor."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Recomandat pentru furnizor —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Salvați modelele"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Actualizați listele de modele de la furnizori"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Imagini"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Conectați OpenAI sau Google Gemini pentru a crea imagini."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Cel mai nou model de imagine de la primul furnizor conectat —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "cea mai bună calitate"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "cel mai mic preț"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "cel mai rapid"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Adăugați singur un model"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "A ieșit un model nou astăzi? Introduceți numele său exact pentru a-l folosi imediat."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Denumire model"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Adăugare model"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Listă de modele recomandate"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Lista de modele recomandate nu a putut fi verificată, așa că nu se afișează nicio recomandare. Reinstalați modulul sau activați actualizările zilnice de mai jos."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Lista utilizată a fost publicată la data de %s. Fiecare actualizare de plugin aduce una nouă."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Verificați, de asemenea, Zinn Digital® o dată pe zi pentru o listă actualizată."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Se trimite doar o simplă cerere de descărcare: nicio cheie, nicio adresă de site, nimic despre conținutul tău. Lista este semnată, iar o listă care nu trece de verificarea semnăturii este ignorată."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Ultima verificare %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Salvați și verificați acum dacă este activat"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "o listă mai nouă a fost instalată"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "deja la zi"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "descărcarea a eșuat la verificarea semnăturii și a fost ignorată"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® nu a putut fi contactat; se utilizează în continuare lista actuală"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "dezactivat"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Deschide"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Verificați pagina lor de stare"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Deschide pagina de facturare"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Deschide pagina cheilor tale API"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Deschideți setările AI"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Ne pare rău, nu aveți permisiunea de a face acest lucru."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Furnizor necunoscut."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Introduceți adresa serviciului dvs., de exemplu http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Aceasta nu arată ca o cheie API. Copiază-o din nou, fără spații."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Mai întâi, introduceți cheia API."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Cheie eliminată."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Modele salvate."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Introduceți numele exact al modelului, de exemplu așa cum este scris în documentația furnizorului."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s adăugat. Alegeți-l din secțiunea „Ce model să folosiți”."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Modelul a fost eliminat."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Actualizările zilnice sunt dezactivate. Se folosește lista inclusă în plugin."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Bifat: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Listele de modele au fost reîmprospătate."
 
@@ -445,6 +459,19 @@ msgstr "Niciun model nu este selectat pentru această sarcină. Alegeți unul î
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Furnizorul de AI respectiv nu este acceptat de această versiune a pluginului."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Nu este conectat niciun furnizor de AI care poate genera imagini. Adăugați o cheie OpenAI sau Google Gemini în setările AI."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Acest furnizor de AI nu poate genera imagini. Alegeți OpenAI sau Google Gemini pentru imagini în setările AI."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Cheia dumneavoastră AI nu poate utiliza niciun model de imagine. Verificați permisiunile cheii la furnizor sau alegeți un alt furnizor pentru imagini."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s întâmpină probleme în acest moment (o pană sau o suprasarcină d
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Solicitarea AI a eșuat dintr-un motiv pe care nu l-am putut identifica. Încercați din nou; dacă problema persistă, contactați asistența oferind detaliile de mai jos."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Furnizorul de AI a răspuns într-un format pe care acest plugin nu îl poate citi. Încercați din nou; dacă problema persistă, alegeți un alt model sau contactați asistența."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" nu este un cod de limbă. Utilizați o localizare WordPress, cum 
 msgid "List at least one language."
 msgstr "Enumerați cel puțin o limbă."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Traduceri"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Editați versiunea %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Compară versiunea %s una lângă alta"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Alegeți câte un meniu pentru fiecare limbă."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Aceasta nu este o traducere, deci nu există nimic de protejat."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Acest tip de conținut nu este tradus."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Textul %s nu mai este pe acest site. Reîncărcați pagina."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Niciun motor de traducere nu a putut prelua acest text."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Alegeți una dintre celelalte limbi ale dumneavoastră."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Compară traducerea"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Nu aveți permisiunea de a edita această traducere."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Aceasta nu este o traducere, deci nu există nimic de comparat."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Originalul acestei traduceri nu mai există."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "Piesa %s nu mai face parte din această traducere. Reîncărcați pagina și încercați din nou."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Traduceți pe această pagină"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Linkul de traducere nu a putut fi salvat."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Textul respectiv nu poate fi tradus aici."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Textul media respectiv nu poate fi tradus aici."
 
@@ -810,15 +909,15 @@ msgstr "Niciun motor de traducere nu este configurat încă. Adăugați o cheie 
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Motorul de traducere nu este configurat încă: adăugați mai întâi cheia acestuia."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Acest text este tradus în prezent de o altă sarcină; acest element va prelua acel rezultat."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Niciun motor de traducere nu a putut prelua acest element."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Motorul nu a returnat o traducere pentru fiecare parte a acestui element. Nimic nu a fost modificat."
 
@@ -1497,6 +1596,7 @@ msgstr "Cumpărați o licență acum"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Anulare"
 
@@ -3967,6 +4067,7 @@ msgstr "Se pornește perioada de probă"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Stare"
 
@@ -5150,7 +5251,7 @@ msgstr "Stivuiește vertical"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Etichetă accesibilă"
@@ -5201,7 +5302,7 @@ msgstr "Dimensiune text"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Comutator"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Consultați planurile și prețurile Pro"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Limbi"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "Conținut"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Limbă"
 
@@ -5578,29 +5681,95 @@ msgstr "Reîncearcă"
 msgid "Translate by hand"
 msgstr "Traducere manuală"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Meniuri salvate."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d texte traduse."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Salvat. Corecturile dumneavoastră sunt protejate împotriva traducerii automate."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Meniul același, tradus"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Un meniu separat pentru fiecare limbă"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "În mod implicit, fiecare meniu este tradus: linkurile sale duc către paginile traduse, împreună cu titlurile acestora. Alegeți în schimb un meniu dedicat pentru o limbă aici."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Text partajat"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Care text"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Etichete meniu"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Șabloane, anteturi, subsoluri și modele"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Șabloane, anteturi, subsoluri și modele (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Traduceți textul lipsă"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Nu există niciun text de tradus aici."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Corectat de o persoană, protejat"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Salvați corecturile"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Limbi și setări"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Motoare"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Sarcini de traducere"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Adrese și SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Comutatoare de limbă"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "Audit SEO"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Meniuri și text partajat"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "Problemă"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Editați"
 
@@ -5738,6 +5908,7 @@ msgstr "Widgeturile Elementor și Bricks fac parte din Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Salvează"
 
@@ -5865,7 +6036,60 @@ msgstr "Lucrăm împreună cu: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Fiecare cuvânt de adresă are între 2 și 12 litere mici, cifre sau cratime."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Salvat. Elementele modificate sunt marcate ca fiind verificate de o persoană, iar această traducere este protejată împotriva traducerii automate."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Aspectul acestei traduceri a fost modificat în editor, așa că unele fragmente nu se mai potrivesc cu originalul. Fragmentele fără partener sunt afișate goale; editați restul în editor."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Deschide editorul"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Original (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Traducere (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Salvează modificările"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Deschide în editor"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Tradus automat"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Verificat de o persoană"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Importat"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Încă netradus"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Nu este în traducere"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Adăugați o a doua limbă sub Tranzly în meniul de administrare, iar selectorul va apărea aici."
@@ -5881,6 +6105,134 @@ msgstr "Ce citesc cititoarele de ecran, de exemplu „Alegeți o limbă”."
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Culori"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Netradus"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Original"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Publicat"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Ciornă"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Verificat de o persoană, protejat"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Importat, protejat"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Încă netradus (o copie)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Salvează această postare mai întâi, apoi tradu-o aici."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Lângă lângă"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Vizualizare"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Deblocați-l pentru a putea fi tradus din nou"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Protejează"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Publicați traducerile"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Traduceți în %d limbă"
+msgstr[1] "Traduceți în %d limbi"
+msgstr[2] "Traduceți în %d limbi"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: tradus."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Afișați acest bloc"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "În fiecare limbă"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Doar în limbile bifate"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "În toate limbi, cu excepția celor bifate"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Imagine per limbă"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Afișați o altă imagine cititorilor unei limbi, de exemplu un banner cu text pe acesta."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Înlocuiți imaginea %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Alegeți o imagine %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Folosește imaginea originală"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Corectați această traducere"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Se salvează…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Text tradus. Apăsați Enter pentru a-l corecta."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Faceți clic pe orice text subliniat pentru a-i corecta traducerea."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Nu a fost găsit niciun text tradus pe această pagină pentru a fi editat aici. Folosiți în schimb editorul alăturat."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

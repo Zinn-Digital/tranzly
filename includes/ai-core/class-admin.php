@@ -118,7 +118,10 @@ final class Admin {
 		echo '<div class="wrap"><h1>' . esc_html__( 'AI providers', 'tranzly' ) . '</h1>';
 		self::print_notice();
 
-		$names = array_map( static fn( array $copy ): string => $copy['name'], Core::copies() );
+		$names = array_map(
+			static fn( array $copy ): string => (string) apply_filters( 'zinn_ai_core_host_name', $copy['name'], $copy['host'] ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- the core's own hook family (zinn_ai_core_*), shared by both plugins.
+			Core::copies()
+		);
 		echo '<p>' . esc_html(
 			sprintf(
 				/* translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich". */
@@ -326,10 +329,46 @@ final class Admin {
 			}
 			echo '</select></td></tr>';
 		}
+		self::render_image_row();
 		echo '</tbody></table>';
 		submit_button( __( 'Save models', 'tranzly' ), 'primary', '', false );
 		echo '</form>';
 		self::small_form( 'refresh_models', array(), __( 'Refresh the model lists from the providers', 'tranzly' ) );
+	}
+
+	/**
+	 * The image model row (1.1.0): providers that can make images, their image models newest first.
+	 *
+	 * @return void
+	 */
+	private static function render_image_row(): void {
+		$current = Store::image_default();
+		$groups  = array();
+		foreach ( Registry::all() as $id => $spec ) {
+			if ( ! Store::configured( $id ) || empty( $spec['images'] ) ) {
+				continue;
+			}
+			$groups[ $id ] = array(
+				'label'  => (string) ( $spec['label'] ?? $id ),
+				'models' => Models::image_choices( $id ),
+			);
+		}
+		echo '<tr><th scope="row"><label for="zinn-ai-task-images">' . esc_html__( 'Images', 'tranzly' ) . '</label></th><td>';
+		if ( ! $groups ) {
+			echo '<p>' . esc_html__( 'Connect OpenAI or Google Gemini to make images.', 'tranzly' ) . '</p></td></tr>';
+			return;
+		}
+		echo '<select id="zinn-ai-task-images" name="defaults[images]">';
+		echo '<option value="">' . esc_html__( '— The newest image model of the first connected provider —', 'tranzly' ) . '</option>';
+		foreach ( $groups as $id => $group ) {
+			echo '<optgroup label="' . esc_attr( $group['label'] ) . '">';
+			foreach ( $group['models'] as $model ) {
+				$value = $id . '|' . $model['id'];
+				echo '<option value="' . esc_attr( $value ) . '"' . selected( $current['provider'] . '|' . $current['model'], $value, false ) . '>' . esc_html( $model['label'] ) . '</option>';
+			}
+			echo '</optgroup>';
+		}
+		echo '</select></td></tr>';
 	}
 
 	/**
@@ -678,9 +717,17 @@ final class Admin {
 				);
 			}
 		}
+		$image = isset( $posted['images'] ) ? explode( '|', sanitize_text_field( (string) $posted['images'] ), 2 ) : array();
+		$image = 2 === count( $image ) && Store::configured( $image[0] ) && '' !== $image[1]
+			? array(
+				'provider' => $image[0],
+				'model'    => $image[1],
+			)
+			: array();
 		Store::update(
-			static function ( array $record ) use ( $defaults ): array {
+			static function ( array $record ) use ( $defaults, $image ): array {
 				$record['defaults'] = $defaults;
+				$record['images']   = $image;
 				return $record;
 			}
 		);

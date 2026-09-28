@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Menulis dan menulis semula"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Terjemahan"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Maaf, anda tidak dibenarkan mengakses halaman ini."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Tetapan ini dikongsi oleh setiap palam masuk yang menggunakannya: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Kekunci anda disulitkan dalam pangkalan data tapak ini dan hanya dihantar kepada pembekal yang anda pilih — tidak pernah kepada kami."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Langkah 1 daripada 2: pilih pembekal AI"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Anda membawa kunci anda sendiri, jadi anda membayar penyedia secara terus untuk apa yang anda guna. Tidak pasti? Mana-mana pilihan ini berfungsi dengan baik; anda boleh menambah lagi kemudian."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Seterusnya"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Langkah 2 daripada 2: sambungkan %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Masukkan alamat perkhidmatan yang serasi dengan OpenAI anda, diakhiri dengan /v1. Kunci hanya diperlukan jika perkhidmatan tersebut memintanya."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Buka %s dan log masuk (atau buat akaun percuma)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "halaman kekunci API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Cipta kunci baharu dan salin."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Tampal di bawah dan tekan \"Simpan dan uji\". Kami menghantar satu permintaan kecil untuk menyemak ia berfungsi."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "Kebanyakan pembekal memerlukan sedikit kredit pada akaun sebelum kunci berfungsi: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "tambah kredit"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Pilih pembekal lain"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Alamat"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "Kunci yang disimpan berakhir dengan …%s — tampal yang baharu untuk menggantikannya"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Kunci (pilihan)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "Kunci API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Simpan dan uji"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Pembekal"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Penyedia"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "Status"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Kunci"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Dapatkan kekunci"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Uji"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Buang"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Disimpan oleh versi plugin yang lebih baharu: kemas kini plugin ini, atau masukkan semula kekunci tersebut."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "Kunci yang disimpan tidak lagi boleh dibuka (kunci keselamatan tapak telah berubah). Masukkannya semula."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Tidak disambungkan"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Disambungkan — ujian terakhir lulus %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Ujian terakhir gagal: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Bersambung — belum diuji"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Model manakah yang hendak digunakan"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ menandakan cadangan kami untuk tugasan tersebut. Senarai ini merangkumi setiap model yang boleh digunakan oleh kunci anda, dibaca secara langsung daripada pembekal."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Disyorkan untuk penyedia —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Simpan model"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Muat semula senarai model daripada pembekal"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Imej"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Sambungkan OpenAI atau Google Gemini untuk menghasilkan imej."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Model imej terkini daripada penyedia pertama yang bersambung —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "kualiti terbaik"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "kos terendah"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "paling pantas"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Tambah model sendiri"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Model baharu dikeluarkan hari ini? Tampal nama tepatnya untuk menggunakannya serta-merta."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Nama model"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Tambah model"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Senarai model yang disyorkan"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Senarai model yang disyorkan tidak dapat disahkan, jadi tiada cadangan yang ditunjukkan. Pasang semula palam masuk, atau dayakan kemas kini harian di bawah."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "Senarai yang sedang digunakan telah diterbitkan pada %s. Setiap kemas kini palam masuk membawakan yang baharu."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Sila semak juga Zinn Digital® sekali sehari untuk senarai yang dikemas kini."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Hanya permintaan muat turun biasa dihantar: tiada kunci, tiada alamat tapak, tiada apa-apa tentang kandungan anda. Senarai tersebut ditandatangani, dan senarai yang gagal dalam semakan tandatangan akan diabaikan."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Kali terakhir disemak %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Simpan, dan semak sekarang jika dihidupkan"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "senarai yang lebih baharu telah dipasang"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "sudah dikemas kini"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "muat turun gagal dalam pemeriksaan tandatangan dan diabaikan"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Zinn Digital® tidak dapat dihubungi; senarai semasa terus digunakan"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "ditutup"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Buka"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Semak halaman status mereka"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Buka halaman pengebilan anda"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Buka halaman kunci API anda"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Buka tetapan AI"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Maaf, anda tidak dibenarkan berbuat demikian."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Penyedia tidak diketahui."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Masukkan alamat perkhidmatan anda, sebagai contoh http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Itu tidak kelihatan seperti kunci API. Salin sekali lagi, tanpa ruang."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Tampal kunci API anda terlebih dahulu."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Kunci telah dialih keluar."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Model disimpan."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Masukkan nama tepat model tersebut, contohnya seperti yang ditulis dalam dokumentasi pembekal."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "%s telah ditambah. Pilihnya di bawah \"Model mana yang hendak digunakan\"."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Model dialih keluar."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Kemas kini harian dimatikan. Senarai yang disertakan bersama palam masuk itu digunakan."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Disemak: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Senarai model telah segar semula."
 
@@ -445,6 +459,19 @@ msgstr "Tiada model dipilih untuk tugasan ini. Pilih satu dalam tetapan AI."
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Penyedia AI tersebut tidak disokong oleh versi plugin ini."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Tiada pembekal AI yang boleh menghasilkan imej disambungkan. Tambahkan kunci OpenAI atau Google Gemini dalam tetapan AI."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Penyedia AI ini tidak boleh menghasilkan imej. Pilih OpenAI atau Google Gemini untuk imej dalam tetapan AI."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Kunci AI anda tidak boleh menggunakan sebarang model imej. Semak kebenaran kunci dengan pembekal, atau pilih pembekal lain untuk imej."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s sedang menghadapi masalah sekarang (gangguan atau beban lampau pada p
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "Permintaan AI gagal atas sebab yang tidak dapat kami kenal pasti. Cuba lagi; jika ia terus berlaku, hubungi sokongan dengan butiran di bawah."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Penyedia AI menjawab dalam bentuk yang tidak dapat dibaca oleh palam ini. Cuba lagi; jika ia terus berlaku, pilih model lain atau hubungi sokongan."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" bukan kod bahasa. Gunakan lokal WordPress seperti fr_FR atau de_D
 msgid "List at least one language."
 msgstr "Senaraikan sekurang-kurangnya satu bahasa."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Terjemahan"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Sunting versi %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Bandingkan versi %s bersebelahan"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Pilih satu menu anda untuk setiap bahasa."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Ini bukan terjemahan, jadi tiada apa yang perlu dilindungi."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Jenis kandungan sedemikian tidak diterjemahkan."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Teks %s tiada lagi pada tapak ini. Muat semula halaman."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Tiada enjin terjemahan yang dapat menterjemahkan teks ini."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Pilih salah satu bahasa anda yang lain."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Bandingkan terjemahan"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Anda tidak dibenarkan untuk mengedit terjemahan ini."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Ini bukan terjemahan, jadi tiada apa untuk dibandingkan."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "Terjemahan asal ini tidak lagi wujud."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "Bahagian %s bukan lagi sebahagian daripada terjemahan ini. Muat semula halaman dan cuba lagi."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Terjemah pada halaman ini"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Pautan terjemahan tidak dapat disimpan."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Teks tersebut tidak boleh diterjemahkan di sini."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Teks media tersebut tidak boleh diterjemahkan di sini."
 
@@ -810,15 +909,15 @@ msgstr "Tiada enjin terjemahan yang disediakan lagi. Tambah kekunci untuk satu d
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Enjin terjemahan itu belum disediakan lagi: tambahkan kekuncinya dahulu."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Teks yang sama sedang diterjemahkan oleh tugasan lain sekarang; item ini akan menggunakan jawapan tersebut."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Tiada enjin terjemahan yang boleh mengambil item ini."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Enjin tidak mengembalikan terjemahan untuk setiap bahagian item ini. Tiada apa-apa yang diubah."
 
@@ -1497,6 +1596,7 @@ msgstr "Beli lesen sekarang"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Batal"
 
@@ -3968,6 +4068,7 @@ msgstr "Memulakan percubaan"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "Negeri"
 
@@ -5151,7 +5252,7 @@ msgstr "Susun secara menegak"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Label boleh diakses"
@@ -5202,7 +5303,7 @@ msgstr "Saiz teks"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Penukar"
@@ -5235,6 +5336,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Lihat pelan dan harga Pro"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Bahasa"
 
@@ -5551,6 +5653,7 @@ msgid "Content"
 msgstr "Kandungan"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Bahasa"
 
@@ -5579,29 +5682,95 @@ msgstr "Cuba semula"
 msgid "Translate by hand"
 msgstr "Terjemah secara manual"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Menu disimpan."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d teks diterjemahkan."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Disimpan. Pembetulan anda dilindungi daripada terjemahan mesin."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Menu yang sama, diterjemahkan"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Menu yang berasingan bagi setiap bahasa"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "Secara lalai setiap menu diterjemahkan: pautan menunjuk ke halaman yang diterjemahkan, berserta tajuknya. Pilih menu tersendiri untuk bahasa di sini sebagai ganti."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Teks dikongsi"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Teks yang mana"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Label menu"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Templat, pengepala, pengaki dan corak"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Templat, pengepala, pengaki dan corak (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Terjemah teks yang hilang"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Tiada teks untuk diterjemahkan di sini."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Dibetulkan oleh individu, dilindungi"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Simpan pembetulan"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Bahasa dan tetapan"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Enjin"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Terjemahan kerja"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Alamat dan SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Pemilih bahasa"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "Audit SEO"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Menu dan teks dikongsi"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5654,6 +5823,7 @@ msgid "Problem"
 msgstr "Masalah"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Sunting"
 
@@ -5739,6 +5909,7 @@ msgstr "Widget Elementor dan Bricks adalah sebahagian daripada Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Simpan"
 
@@ -5866,7 +6037,60 @@ msgstr "Bekerjasama dengan: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Setiap perkataan alamat mengandungi 2 hingga 12 huruf kecil, digit, atau tanda sempang."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Disimpan. Bahagian yang anda ubah ditandakan sebagai disemak oleh seseorang, dan terjemahan ini dilindungi daripada terjemahan mesin."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "Susun atur terjemahan ini telah diubah dalam penyunting, jadi beberapa bahagian tidak lagi dipasangkan dengan yang asal. Bahagian tanpa pasangan ditunjukkan kosong; sunting selebihnya dalam penyunting."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Buka editor"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Asal (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Terjemahan (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Simpan perubahan"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Buka dalam editor"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Diterjemahkan oleh mesin"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Disemak oleh individu"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Diimport"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Belum diterjemahkan lagi"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Tidak dalam terjemahan"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Tambahkan bahasa kedua di bawah Tranzly dalam menu pentadbir, dan pemilih akan dipaparkan di sini."
@@ -5882,6 +6106,132 @@ msgstr "Apa yang diumumkan oleh pembaca skrin, contohnya \"Pilih bahasa\"."
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Warna"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Belum diterjemah"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Asal"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Diterbitkan"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Draf"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Disemak oleh manusia, dilindungi"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Diimport, dilindungi"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Belum diterjemahkan lagi (satu salinan)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Simpan siaran ini dahulu, kemudian terjemahkannya di sini."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Sebelah menyebelah"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Lihat"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Buka kunci supaya ia boleh diterjemahkan semula"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Lindungi"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Terbitkan terjemahan"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Terjemahkan ke dalam %d bahasa"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: diterjemahkan."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Tunjukkan blok ini"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "Dalam setiap bahasa"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Hanya dalam bahasa yang ditandakan"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "Dalam setiap bahasa kecuali yang ditanda tanda raif"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Imej mengikut bahasa"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Tunjukkan imej lain kepada pembaca sesuatu bahasa, contohnya sepanduk yang mengandungi perkataan."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Ganti imej %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Pilih imej %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Gunakan imej asal"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Betulkan terjemahan ini"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Sedang menyimpan..."
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Teks diterjemahkan. Tekan Enter untuk membetulkannya."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Klik pada mana-mana teks bergaris luar untuk membetulkan terjemahannya."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Tiada teks terjemahan ditemui pada halaman ini untuk diedit di sini. Sila gunakan editor sebelah-menyebelah sebagai gantinya."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

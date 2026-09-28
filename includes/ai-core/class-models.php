@@ -119,4 +119,38 @@ final class Models {
 
 		return $out;
 	}
+
+	/**
+	 * Image models a provider's key can use, newest first, cached like the text list (1.1.0).
+	 *
+	 * @param string $provider Provider id.
+	 * @param bool   $fresh    Skip the cache.
+	 * @return array<int, array{id: string, label: string}>
+	 */
+	public static function image_choices( string $provider, bool $fresh = false ): array {
+		$settings = Store::provider( $provider );
+		$stamp    = md5( 'img|' . (string) ( $settings['key'] ?? '' ) . '|' . (string) ( $settings['base_url'] ?? '' ) );
+		$cached   = $fresh ? false : get_transient( self::transient( $provider ) . '_img' );
+		if ( is_array( $cached ) && ( $cached['stamp'] ?? '' ) === $stamp && is_array( $cached['models'] ?? null ) ) {
+			return $cached['models'];
+		}
+		$adapter = Registry::adapter( $provider, $settings );
+		if ( null === $adapter || ! $adapter->supports_images() || ! Store::configured( $provider ) ) {
+			return array();
+		}
+		$models = $adapter->image_models( (string) Store::key( $provider ) );
+		if ( $models instanceof Failure ) {
+			return array();
+		}
+		set_transient(
+			self::transient( $provider ) . '_img',
+			array(
+				'stamp'  => $stamp,
+				'models' => $models,
+			),
+			self::TTL
+		);
+
+		return $models;
+	}
 }

@@ -401,8 +401,15 @@ final class Translator {
 			}
 			foreach ( $missing as $texts ) {
 				foreach ( $texts as $key => $text ) {
+					// ⛔ The same text twice in ONE item (a repeated button label, two identical
+					// paragraphs) is already this call's reservation, not another job's: reserving it
+					// again refused the whole item as "busy" (found by T3's every-core-block round trip).
+					if ( in_array( $keys[ $key ], $reserved, true ) ) {
+						$reserved[ $key ] = $keys[ $key ];
+						continue;
+					}
 					if ( ! Memory::reserve( $keys[ $key ], $source, $target ) ) {
-						foreach ( $reserved as $mine ) {
+						foreach ( array_unique( $reserved ) as $mine ) {
 							Memory::release( $mine );
 						}
 						return new \WP_Error( 'tranzly_memory_busy', __( 'The same text is being translated by another job right now; this item will use that answer.', 'tranzly' ), array( 'status' => 409 ) );
@@ -449,7 +456,7 @@ final class Translator {
 			);
 		}
 
-		foreach ( $reserved as $mine ) {
+		foreach ( array_unique( $reserved ) as $mine ) {
 			Memory::release( $mine );
 		}
 

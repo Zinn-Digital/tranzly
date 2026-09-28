@@ -38,6 +38,15 @@ require_once __DIR__ . '/seo/class-primer.php';
 require_once __DIR__ . '/seo/class-seo.php';
 require_once __DIR__ . '/switcher/class-switcher.php';
 require_once __DIR__ . '/switcher/class-places.php';
+require_once __DIR__ . '/content/class-block-parser.php';
+require_once __DIR__ . '/content/class-protection.php';
+require_once __DIR__ . '/content/class-rest-editor.php';
+require_once __DIR__ . '/content/class-side-by-side.php';
+require_once __DIR__ . '/content/class-menus.php';
+require_once __DIR__ . '/content/class-menus-rest.php';
+require_once __DIR__ . '/content/class-shared-strings.php';
+require_once __DIR__ . '/content/class-visibility.php';
+require_once __DIR__ . '/content/class-content-module.php';
 require_once __DIR__ . '/class-plugin.php';
 
 \ZinnDigital\Tranzly\Plugin::boot();

@@ -93,7 +93,7 @@ final class Openai_Compatible extends Provider {
 		foreach ( $messages as $message ) {
 			$body['messages'][] = array(
 				'role'    => $message['role'],
-				'content' => $message['content'],
+				'content' => self::openai_content( $message['content'] ),
 			);
 		}
 		if ( isset( $options['max_tokens'] ) ) {
@@ -138,6 +138,118 @@ final class Openai_Compatible extends Provider {
 			if ( null === $result->data ) {
 				$result->failure = $this->unreadable( $response );
 			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Content in the chat-completions shape: a plain string, or text + `image_url` parts with the
+	 * image inlined as a data URL (1.1.0, vision).
+	 *
+	 * @param mixed $content Message content.
+	 * @return string|array<int, array<string, mixed>>
+	 */
+	private static function openai_content( $content ) {
+		if ( is_string( $content ) || ! self::has_image( $content ) ) {
+			return self::text_of( $content );
+		}
+		$out = array();
+		foreach ( self::parts( $content ) as $part ) {
+			$out[] = 'image' === $part['type']
+				? array(
+					'type'      => 'image_url',
+					'image_url' => array( 'url' => 'data:' . $part['mime'] . ';base64,' . $part['data'] ),
+				)
+				: array(
+					'type' => 'text',
+					'text' => (string) $part['text'],
+				);
+		}
+
+		return $out;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
+	public function image_models( string $key ) {
+		if ( ! $this->supports_images() ) {
+			return array();
+		}
+		list( $body, $response ) = $this->call( 'GET', (string) ( $this->spec['models_path'] ?? '/models' ), $key );
+		if ( null === $body ) {
+			return $response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response );
+		}
+		$ids = array();
+		foreach ( (array) ( $body['data'] ?? array() ) as $row ) {
+			if ( is_array( $row ) && isset( $row['id'] ) && is_string( $row['id'] ) && 1 === preg_match( '/^(gpt-image|dall-e)/', $row['id'] ) ) {
+				$ids[] = $row['id'];
+			}
+		}
+
+		return array_map(
+			static fn( string $id ): array => array(
+				'id'    => $id,
+				'label' => $id,
+			),
+			self::newest_first( $ids )
+		);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param string               $prompt  What to draw.
+	 * @param array<string, mixed> $options `size`.
+	 * @return Result
+	 */
+	public function generate_image( string $key, string $model, string $prompt, array $options = array() ): Result {
+		if ( ! $this->supports_images() ) {
+			return parent::generate_image( $key, $model, $prompt, $options );
+		}
+		$sizes = array(
+			'square'    => '1024x1024',
+			'landscape' => '1536x1024',
+			'portrait'  => '1024x1536',
+		);
+		$body  = array(
+			'model'  => $model,
+			'prompt' => $prompt,
+			'n'      => 1,
+			'size'   => $sizes[ (string) ( $options['size'] ?? 'square' ) ] ?? '1024x1024',
+		);
+		if ( str_starts_with( $model, 'dall-e' ) ) {
+			$body['response_format'] = 'b64_json';
+		}
+		list( $data, $response ) = $this->call( 'POST', (string) ( $this->spec['images_path'] ?? '/images/generations' ), $key, $body, 180 );
+		if ( null === $data ) {
+			return Result::failed(
+				$response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response, $model ),
+				$this->id,
+				$model
+			);
+		}
+		$result                = new Result();
+		$result->provider      = $this->id;
+		$result->model         = $model;
+		$result->input_tokens  = (int) ( $data['usage']['input_tokens'] ?? 0 );
+		$result->output_tokens = (int) ( $data['usage']['output_tokens'] ?? 0 );
+		foreach ( (array) ( $data['data'] ?? array() ) as $row ) {
+			if ( is_array( $row ) && isset( $row['b64_json'] ) && is_string( $row['b64_json'] ) ) {
+				$result->images[] = array(
+					'mime' => 'image/' . (string) ( $data['output_format'] ?? 'png' ),
+					'data' => $row['b64_json'],
+				);
+			}
+		}
+		if ( ! $result->images ) {
+			$result->failure = $this->unreadable( $response );
 		}
 
 		return $result;

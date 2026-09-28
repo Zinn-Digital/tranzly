@@ -4,6 +4,7 @@ import { TabPanel } from '@wordpress/components';
 import App from './App';
 import Engines from './Engines';
 import Jobs from './Jobs';
+import MenusTab from './MenusTab';
 import SeoAudit from './SeoAudit';
 import Switchers from './Switchers';
 import Urls from './Urls';
@@ -33,6 +34,10 @@ export default function Root( { data } ) {
 					title: __( 'Language switchers', 'tranzly' ),
 				},
 				{ name: 'audit', title: __( 'SEO audit', 'tranzly' ) },
+				{
+					name: 'menus',
+					title: __( 'Menus and shared text', 'tranzly' ),
+				},
 			] }
 			initialTabName={
 				( window.location.hash || '' ).replace( '#/', '' ) || 'settings'
@@ -53,6 +58,9 @@ export default function Root( { data } ) {
 				}
 				if ( 'audit' === tab.name ) {
 					return <SeoAudit />;
+				}
+				if ( 'menus' === tab.name ) {
+					return <MenusTab pro={ 'pro' === data.edition } />;
 				}
 				return <App data={ data } />;
 			} }

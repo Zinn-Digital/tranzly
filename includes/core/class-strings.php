@@ -124,7 +124,35 @@ final class Strings {
 			return true;
 		}
 
-		return 1 === preg_match( '/^widget\.[a-z0-9_-]{1,100}-[0-9]{1,9}\.(title|text|content)$/', $key );
+		// Lane L05 (T3): a menu item's own label (`menu.<item id>`), and any other shared text by
+		// the hash of its source (`text.<sha1>`: block-theme navigation labels, templates, patterns).
+		return 1 === preg_match( '/^(?:widget\.[a-z0-9_-]{1,100}-[0-9]{1,9}\.(title|text|content)|menu\.[0-9]{1,19}|text\.[0-9a-f]{40})$/', $key );
+	}
+
+	/**
+	 * Save (or, with an empty string, remove) many strings of one language in ONE write.
+	 *
+	 * @param string                $lang Language code.
+	 * @param array<string, string> $map  Key => translation.
+	 * @return true|\WP_Error
+	 */
+	public static function set_many( string $lang, array $map ) {
+		$all = self::all( $lang );
+		foreach ( $map as $key => $translation ) {
+			$key = (string) $key;
+			if ( ! self::is_valid_key( $key ) ) {
+				return new \WP_Error( 'tranzly_bad_string_key', __( 'That text cannot be translated here.', 'tranzly' ), array( 'status' => 400 ) );
+			}
+			if ( '' === (string) $translation ) {
+				unset( $all[ $key ] );
+			} else {
+				$all[ $key ] = (string) $translation;
+			}
+		}
+		update_option( self::option_name( $lang ), $all, false );
+		self::$loaded[ $lang ] = $all;
+
+		return true;
 	}
 
 	/**

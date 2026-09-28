@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "Écriture et réécriture"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "Traduction"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "Désolé, vous n'êtes pas autorisé à accéder à cette page."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "Ces paramètres sont partagés par tous les plugins qui les utilisent : %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "Vos clés sont chiffrées dans la base de données de ce site et ne sont jamais envoyées qu'au fournisseur que vous avez choisi — jamais à nous."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "Étape 1 sur 2 : choisissez un fournisseur d'IA"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "Vous utilisez votre propre clé, vous payez donc directement le fournisseur pour votre consommation. Vous avez un doute ? N'importe laquelle de ces options conviendra ; vous pourrez en ajouter d'autres plus tard."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "Suivant"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "Étape 2 sur 2 : connecter %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "Entrez l'adresse de votre service compatible avec OpenAI, se terminant par /v1. Une clé n'est nécessaire que si le service en demande une."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "Ouvrez %s et connectez-vous (ou créez un compte gratuit)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "la page des clés API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "Créez une nouvelle clé et copiez-la."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "Collez-le ci-dessous et appuyez sur « Enregistrer et tester ». Nous envoyons une seule et unique requête pour vérifier que tout fonctionne."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "La plupart des fournisseurs nécessitent un petit crédit sur le compte pour qu'une clé fonctionne : %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "ajouter du crédit"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← Choisir un autre fournisseur"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "Adresse"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "La clé enregistrée se termine par …%s — collez-en une nouvelle pour la remplacer"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "Clé (facultative)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "Clé API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "Enregistrer et tester"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "Fournisseurs"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "Fournisseur"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "État"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "Clé"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "Obtenir une clé"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "Test"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "Supprimer"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "Enregistré par une version de plugin plus récente : mettez ce plugin à jour ou saisissez à nouveau la clé."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "La clé enregistrée ne peut plus être ouverte (les clés de sécurité du site ont changé). Veuillez la saisir à nouveau."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "Non connecté"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "Connecté — dernier test réussi %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "Dernier test échoué : %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "Connecté — pas encore testé"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "Quel modèle utiliser"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ indique notre recommandation pour cette tâche. La liste inclut tous les modèles que votre clé peut utiliser, actualisés en direct auprès du fournisseur."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— Recommandé par le fournisseur —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "Enregistrer les modèles"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "Actualiser les listes de modèles des fournisseurs"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "Images"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "Connectez OpenAI ou Google Gemini pour créer des images."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— Le tout dernier modèle d'image du premier fournisseur connecté —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "meilleure qualité"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "coût le plus bas"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "le plus rapide"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "Ajouter un modèle vous-même"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "Un nouveau modèle est sorti aujourd'hui ? Collez son nom exact pour l'utiliser immédiatement."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "Nom du modèle"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "Ajouter un modèle"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "Liste des modèles recommandés"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "Impossible de vérifier la liste des modèles recommandés, aucune recommandation n'est donc affichée. Réinstallez l'extension ou activez les mises à jour quotidiennes ci-dessous."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "La liste utilisée a été publiée le %s. Chaque mise à jour de plugin en apporte une nouvelle."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "Consultez également Zinn Digital® une fois par jour pour obtenir une liste mise à jour."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "Seule une requête de téléchargement simple est envoyée : aucune clé, aucune adresse de site, rien concernant votre contenu. La liste est signée, et toute liste dont la vérification de la signature échoue est ignorée."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "Dernière vérification %1$s : %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "Enregistrer, et vérifier maintenant si activé"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "une liste plus récente a été installée"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "déjà à jour"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "le téléchargement a échoué lors de la vérification de la signature et a été ignoré"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "Impossible de joindre Zinn Digital® ; la liste actuelle reste en vigueur"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "désactivé"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "Ouvrir"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "Consulter leur page d'état"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "Ouvrir votre page de facturation"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "Ouvrez votre page de clés API"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "Ouvrir les paramètres de l'IA"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "Désolé, vous n'avez pas l'autorisation d'effectuer cette action."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "Fournisseur inconnu."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "Entrez l'adresse de votre service, par exemple http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "Cela ne ressemble pas à une clé API. Copiez-la à nouveau, sans espaces."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "Veuillez d'abord coller votre clé API."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "Clé supprimée."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "Modèles enregistrés."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "Entrez le nom exact du modèle, tel qu'il est écrit dans la documentation du fournisseur, par exemple."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "Ajouté %s. Choisissez-le sous « Quel modèle utiliser »."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "Modèle supprimé."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "Les mises à jour quotidiennes sont désactivées. La liste fournie avec le plugin est utilisée."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "Coché : %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "Listes de modèles actualisées."
 
@@ -445,6 +459,19 @@ msgstr "Aucun modèle n'est sélectionné pour cette tâche. Choisissez-en un da
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "Ce fournisseur d'IA n'est pas pris en charge par cette version du module."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "Aucun fournisseur d'IA capable de générer des images n'est connecté. Ajoutez une clé OpenAI ou Google Gemini dans les paramètres de l'IA."
+
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "Ce fournisseur d'IA ne peut pas créer d'images. Choisissez OpenAI ou Google Gemini pour les images dans les paramètres de l'IA."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "Votre clé IA ne peut utiliser aucun modèle d'image. Vérifiez les autorisations de la clé auprès du fournisseur, ou choisissez un autre fournisseur pour les images."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -502,7 +529,7 @@ msgstr "%s rencontre des problèmes actuellement (une panne ou une surcharge de 
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "La requête IA a échoué pour une raison que nous n'avons pas pu identifier. Réessayez ; si le problème persiste, contactez le support en fournissant les détails ci-dessous."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "Le fournisseur d'IA a répondu sous une forme que ce plugin ne peut pas lire. Réessayez ; si le problème persiste, choisissez un autre modèle ou contactez le support."
 
@@ -685,6 +712,77 @@ msgstr "\"%s\" n'est pas un code de langue. Utilisez une locale WordPress telle 
 msgid "List at least one language."
 msgstr "Veuillez lister au moins une langue."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "Traductions"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "Modifier la version %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "Comparez la version %s côte à côte"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "Choisissez l'un de vos menus pour chaque langue."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "Ceci n'est pas une traduction, il n'y a donc rien à protéger."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "Ce type de contenu n'est pas traduit."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "Le texte %s n'est plus sur ce site. Rechargez la page."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "Aucun moteur de traduction n'a pu prendre en charge ce texte."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "Choisissez l'une de vos autres langues."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "Comparer la traduction"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "Vous n'êtes pas autorisé à modifier cette traduction."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "Il ne s'agit pas d'une traduction, il n'y a donc rien à comparer."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "L'original de cette traduction n'existe plus."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "L'élément %s ne fait plus partie de cette traduction. Rechargez la page et réessayez."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "Traduire cette page"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -778,10 +876,11 @@ msgid "The translation link could not be saved."
 msgstr "Le lien de traduction n'a pas pu être enregistré."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "Ce texte ne peut pas être traduit ici."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "Ce texte multimédia ne peut pas être traduit ici."
 
@@ -810,15 +909,15 @@ msgstr "Aucun moteur de traduction n'est encore configuré. Ajoutez une clé pou
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "Ce moteur de traduction n'est pas encore configuré : ajoutez d'abord sa clé."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "Le même texte est déjà en cours de traduction par une autre tâche ; cet élément utilisera cette réponse."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "Aucun moteur de traduction n'a pu prendre cet élément."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "Le moteur n'a pas renvoyé de traduction pour toutes les parties de cet élément. Aucune modification n'a été apportée."
 
@@ -1497,6 +1596,7 @@ msgstr "Acheter une licence maintenant"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -3967,6 +4067,7 @@ msgstr "Démarrage de l'essai"
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "État"
 
@@ -5150,7 +5251,7 @@ msgstr "Empiler verticalement"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "Étiquette accessible"
@@ -5201,7 +5302,7 @@ msgstr "Taille du texte"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "Sélecteur"
@@ -5234,6 +5335,7 @@ msgid "See the Pro plans and pricing"
 msgstr "Voir les forfaits Pro et les tarifs"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "Langues"
 
@@ -5550,6 +5652,7 @@ msgid "Content"
 msgstr "Contenu"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "Langue"
 
@@ -5578,29 +5681,95 @@ msgstr "Réessayer"
 msgid "Translate by hand"
 msgstr "Traduire manuellement"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "Menus enregistrés."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "%d textes traduits."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "Enregistré. Vos modifications sont protégées contre la traduction automatique."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "Le même menu, traduit"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "Un menu distinct par langue"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "Par défaut, chaque menu est traduit : ses liens mènent vers les pages traduites, avec leurs titres respectifs. Choisissez plutôt ici un menu propre à chaque langue."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "Texte partagé"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "Quel texte"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "Libellés de menu"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "Modèles, en-têtes, pieds de page et compositions"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "Modèles, en-têtes, pieds de page et motifs (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "Traduire le texte manquant"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "Il n'y a aucun texte à traduire ici."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "Corrigé par une personne, protégé"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "Enregistrer les corrections"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "Langues et paramètres"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "Moteurs"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "Travaux de traduction"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "Adresses et référencement SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "Sélecteurs de langue"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "Audit SEO"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "Menus et texte partagé"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5653,6 +5822,7 @@ msgid "Problem"
 msgstr "Problème"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "Modifier"
 
@@ -5738,6 +5908,7 @@ msgstr "Les widgets Elementor et Bricks font partie de Tranzly Pro."
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -5865,7 +6036,60 @@ msgstr "En collaboration avec : %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "Chaque mot d'adresse comporte de 2 à 12 lettres minuscules, chiffres ou traits d'union."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "Enregistré. Les éléments que vous avez modifiés sont marqués comme vérifiés par une personne, et cette traduction est protégée contre la traduction automatique."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "La mise en page de cette traduction a été modifiée dans l'éditeur, de sorte que certains éléments ne correspondent plus à l'original. Les éléments sans correspondance apparaissent vides ; modifiez les autres dans l'éditeur."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "Ouvrir l'éditeur"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "Original (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "Traduction (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "Ouvrir dans l'éditeur"
+
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "Traduit par machine"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "Vérifié par une personne"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "Importé"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "Non traduit"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "Hors traduction"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "Ajoutez une deuxième langue sous Tranzly dans le menu d'administration, et le sélecteur apparaîtra ici."
@@ -5881,6 +6105,134 @@ msgstr "Ce que les lecteurs d'écran annoncent, par exemple « Choisissez une la
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "Couleurs"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "Non traduit"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "Original"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "Publié"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "Brouillon"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "Vérifié par une personne, protégé"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "Importé, protégé"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "Pas encore traduit (une copie)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "Enregistrez d'abord cette publication, puis traduisez-la ici."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "Côte à côte"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "Afficher"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "Déverrouiller pour pouvoir le retraduire"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "Protéger"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "Publier les traductions"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "Traduire dans %d langue"
+msgstr[1] "Traduire en %d langues"
+msgstr[2] "Traduire en %d langues"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s : traduit."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "Afficher ce bloc"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "Dans toutes les langues"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "Seulement dans les langues cochées"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "Dans toutes les langues sauf celles cochées"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "Image par langue"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "Afficher une autre image aux lecteurs d'une autre langue, par exemple une bannière comportant du texte."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "Remplacer l'image %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "Choisissez une image %s"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "Utiliser l'image originale"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "Corriger cette traduction"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "Enregistrement…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "Texte traduit. Appuyez sur Entrée pour le corriger."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "Cliquez sur n'importe quel texte souligné pour corriger sa traduction."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "Aucun texte traduit n'a été trouvé sur cette page à modifier ici. Utilisez plutôt l'éditeur côte à côte."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json

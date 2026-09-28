@@ -80,6 +80,8 @@ msgid "Writing and rewriting"
 msgstr "ການຂຽນ ແລະ ຂຽນຄືນ"
 
 #: includes/ai-core/class-admin.php:103
+#: src/compare/index.js:130
+#: src/pro__premium_only/visual/index.js:24
 msgid "Translation"
 msgstr "ການແປພາສາ"
 
@@ -93,336 +95,348 @@ msgid "Sorry, you are not allowed to access this page."
 msgstr "ຂໍອະໄພ, ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເຂົ້າເຖິງໜ້ານີ້."
 
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:125
+#: includes/ai-core/class-admin.php:128
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr "ການຕັ້ງຄ່າເຫຼົ່ານີ້ຖືກນຳໃຊ້ຮ່ວມກັນໂດຍທຸກປລັກອິນທີ່ໃຊ້ພວກມັນ: %s."
 
-#: includes/ai-core/class-admin.php:128
+#: includes/ai-core/class-admin.php:131
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr "ກຸນແຈຂອງທ່ານຖືກເຂົ້າລະຫັດໄວ້ໃນຖານຂໍ້ມູນຂອງເວັບໄຊນີ້ ແລະ ຖືກສົ່ງໄປຫາຜູ້ໃຫ້ບໍລິການທີ່ທ່ານເລືອກເທົ່ານັ້ນ — ບໍ່ເຄີຍຖືກສົ່ງມາຫາພວກເຮົາເລີຍ."
 
-#: includes/ai-core/class-admin.php:155
+#: includes/ai-core/class-admin.php:158
 msgid "Step 1 of 2: choose an AI provider"
 msgstr "ຂັ້ນຕອນທີ 1 ຈາກ 2: ເລືອກຜູ້ໃຫ້ບໍລິການ AI"
 
-#: includes/ai-core/class-admin.php:156
+#: includes/ai-core/class-admin.php:159
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr "ທ່ານນຳໃຊ້ຄີຂອງທ່ານເອງ, ດັ່ງນັ້ນທ່ານຈຶ່ງຈ່າຍເງິນໃຫ້ຜູ້ໃຫ້ບໍລິການໂດຍກົງຕາມທີ່ທ່ານນຳໃຊ້. ຍັງບໍ່ແນ່ໃຈບໍ? ຕົວເລືອກເຫຼົ່ານີ້ອັນໃດກໍສາມາດນຳໃຊ້ໄດ້ດີ; ທ່ານສາມາດເພີ່ມຕື່ມໄດ້ໃນພາຍຫຼັງ."
 
-#: includes/ai-core/class-admin.php:166
+#: includes/ai-core/class-admin.php:169
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4586
 msgid "Next"
 msgstr "ຖັດໄປ"
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:175
+#: includes/ai-core/class-admin.php:178
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr "ຂັ້ນຕອນທີ 2 ຈາກ 2: ເຊື່ອມຕໍ່ %s"
 
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:183
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr "ປ້ອນທີ່ຢູ່ບໍລິການທີ່ຮອງຮັບກັບ OpenAI ຂອງທ່ານ, ໂດຍລົງທ້າຍດ້ວຍ /v1. ຄີແມ່ນຈຳເປັນກໍຕໍ່ເມື່ອບໍລິການນັ້ນຮ້ອງຂໍເທົ່ານັ້ນ."
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:185
+#: includes/ai-core/class-admin.php:188
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr "ເປີດ %s ແລະເຂົ້າສູ່ລະບົບ (ຫຼືສ້າງບັນຊີຟຣີ)."
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:189
+#: includes/ai-core/class-admin.php:192
 #, php-format
 msgid "the %s API keys page"
 msgstr "ໜ້າຄີ API %s"
 
-#: includes/ai-core/class-admin.php:194
+#: includes/ai-core/class-admin.php:197
 msgid "Create a new key and copy it."
 msgstr "ສ້າງກະແຈໃໝ່ ແລະ ຄັດລອກມັນ."
 
-#: includes/ai-core/class-admin.php:195
+#: includes/ai-core/class-admin.php:198
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr "ວາງມັນໃສ່ດ້ານລຸ່ມ ແລະ ກົດ \"ບັນທຶກ ແລະ ທົດສອບ\". ພວກຮູບເຮົາສົ່ງຄຳຮ້ອງຂໍຂະໜາດນ້ອຍໜຶ່ງລາຍການເພື່ອdistກວດ hisສອບວ່າທຳງານໄດ້ບໍ."
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:203
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr "ຜູ້ໃຫ້ບໍລິການສ່ວນໃຫຍ່ຕ້ອງການຍອດເງິນໃນບັນຊີເລັກນ້ອຍກ່ອນທີ່ລະຫັດຈະເຮັດວຽກ: %s."
 
-#: includes/ai-core/class-admin.php:201
+#: includes/ai-core/class-admin.php:204
 msgid "add credit"
 msgstr "ເພີ່ມວົງເງິນ"
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:209
 msgid "← Choose a different provider"
 msgstr "← ເລືອກຜູ້ໃຫ້ບໍລິການອື່ນ"
 
-#: includes/ai-core/class-admin.php:224
+#: includes/ai-core/class-admin.php:227
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3187
 msgid "Address"
 msgstr "ທີ່ຢູ່"
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:228
+#: includes/ai-core/class-admin.php:231
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr "ຄີທີ່ບັນທຶກໄວ້ລົງທ້າຍດ້ວຍ …%s — ວາງຄີໃໝ່ເພື່ອປ່ຽນແທນຄີເກົ່າ"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "Key (optional)"
 msgstr "ຄີ (ທາງເລືອກ)"
 
-#: includes/ai-core/class-admin.php:230
+#: includes/ai-core/class-admin.php:233
 msgid "API key"
 msgstr "ລະຫັດ API"
 
-#: includes/ai-core/class-admin.php:232
+#: includes/ai-core/class-admin.php:235
 msgid "Save and test"
 msgstr "ບັນທຶກ ແລະ ທົດສອບ"
 
-#: includes/ai-core/class-admin.php:242
+#: includes/ai-core/class-admin.php:245
 msgid "Providers"
 msgstr "ຜູ້ໃຫ້ບໍລິການ"
 
-#: includes/ai-core/class-admin.php:243
-#: includes/ai-core/class-admin.php:365
+#: includes/ai-core/class-admin.php:246
+#: includes/ai-core/class-admin.php:404
 msgid "Provider"
 msgstr "ຜູ້ໃຫ້ບໍລິການ"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 msgid "Status"
 msgstr "ສະຖານະ"
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:246
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4347
 msgid "Key"
 msgstr "ລະຫັດລັບ"
 
-#: includes/ai-core/class-admin.php:248
+#: includes/ai-core/class-admin.php:251
 msgid "Get a key"
 msgstr "ຮັບກະແຈ"
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:256
 msgid "Test"
 msgstr "ທົດສອບ"
 
-#: includes/ai-core/class-admin.php:254
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:257
+#: includes/ai-core/class-admin.php:426
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin/App.js:147
 msgid "Remove"
 msgstr "ລຶບອອກ"
 
-#: includes/ai-core/class-admin.php:273
+#: includes/ai-core/class-admin.php:276
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr "ບັນທຶກໄວ້ໂດຍເວີຊັນປລັກອິນທີ່ໃຫມ່ກວ່າ: ກະລຸນາອັບເດດປລັກອິນນີ້, ຫຼືໃສ່ຄີອີກຄັ້ງ."
 
-#: includes/ai-core/class-admin.php:275
+#: includes/ai-core/class-admin.php:278
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr "ຄຳແຈ້ງທີ່ບັນທຶກໄວ້ບໍ່ສາມາດເປີດໄດ້ອີກຕໍ່ໄປ (ຄຳແຈ້ງຄວາມປອດໄພຂອງເວັບໄຊໄດ້ປ່ຽນແປງ). ກະລຸນາໃສ່ມັນອີກຄັ້ງ."
 
-#: includes/ai-core/class-admin.php:278
+#: includes/ai-core/class-admin.php:281
 msgid "Not connected"
 msgstr "ບໍ່ໄດ້ເຊື່ອມຕໍ່"
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:284
+#: includes/ai-core/class-admin.php:287
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr "ເຊື່ອມຕໍ່ແລ້ວ — ການທົດສອບຫຼ້າສຸດຜ່ານໃນ %s"
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:293
 #, php-format
 msgid "Last test failed: %s"
 msgstr "ການທົດສອບຄັ້ງຫຼ້າສຸດລົ້ມເຫຼວ: %s"
 
-#: includes/ai-core/class-admin.php:293
+#: includes/ai-core/class-admin.php:296
 msgid "Connected — not tested yet"
 msgstr "ເຊື່ອມຕໍ່ແລ້ວ — ຍັງບໍ່ທັນໄດ້ທົດສອບເທື່ອ"
 
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:305
 msgid "Which model to use"
 msgstr "ຮູບແບບໃດທີ່ຈະໃຊ້"
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:306
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr "★ ໝາຍເຖິງຄຳແນະນຳຂອງພວກເຮົາສຳລັບໜ້າວຽກນັ້ນ. ລາຍການດັ່ງກ່າວລວມມີທຸກຮູບແບບທີ່ກະແຈຂອງທ່ານສາມາດໃຊ້ໄດ້, ອ່ານແບບສົດໆຈາກຜູ້ໃຫ້ບໍລິການ."
 
-#: includes/ai-core/class-admin.php:311
+#: includes/ai-core/class-admin.php:314
 msgid "— Recommended for the provider —"
 msgstr "— ແນະນຳສຳລັບຜູ້ໃຫ້ບໍລິການ —"
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "Save models"
 msgstr "ບັນທຶກແບບຈຳລອງ"
 
-#: includes/ai-core/class-admin.php:332
+#: includes/ai-core/class-admin.php:336
 msgid "Refresh the model lists from the providers"
 msgstr "ໂຫຼດລາຍຊື່ຕົວແບບໃໝ່ຈາກຜູ້ໃຫ້ບໍລິການຄືນໃໝ່"
 
-#: includes/ai-core/class-admin.php:344
+#: includes/ai-core/class-admin.php:356
+msgid "Images"
+msgstr "ຮູບພາບ"
+
+#: includes/ai-core/class-admin.php:358
+msgid "Connect OpenAI or Google Gemini to make images."
+msgstr "ເຊື່ອມຕໍ່ OpenAI ຫຼື Google Gemini ເພື່ອສ້າງຮູບພາບ."
+
+#: includes/ai-core/class-admin.php:362
+msgid "— The newest image model of the first connected provider —"
+msgstr "— ຮູບແບບຮູບພາບໃໝ່ຫຼ້າສຸດຂອງຜູ້ໃຫ້ບໍລິການທີ່ເຊື່ອມຕໍ່ທຳອິດ —"
+
+#: includes/ai-core/class-admin.php:383
 msgid "best quality"
 msgstr "ຄຸນນະພາບດີທີ່ສຸດ"
 
-#: includes/ai-core/class-admin.php:346
+#: includes/ai-core/class-admin.php:385
 msgid "lowest cost"
 msgstr "ລາຄາຕໍ່າສຸດ"
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:387
 msgid "fastest"
 msgstr "ໄວທີ່ສຸດ"
 
-#: includes/ai-core/class-admin.php:360
+#: includes/ai-core/class-admin.php:399
 msgid "Add a model yourself"
 msgstr "ເພີ່ມໂມເດວດ້ວຍຕົວເອງ"
 
-#: includes/ai-core/class-admin.php:361
+#: includes/ai-core/class-admin.php:400
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr "ມີໂມເດວໃໝ່ອອກມາໃນມື້ນີ້ບໍ? ວາງຊື່ທີ່ຖືກຕ້ອງຂອງໂມເດວເພື່ອເລີ່ມນຳໃຊ້ໄດ້ທັນທີ."
 
-#: includes/ai-core/class-admin.php:372
+#: includes/ai-core/class-admin.php:411
 msgid "Model name"
 msgstr "ຊື່ແບບຈຳລອງ"
 
-#: includes/ai-core/class-admin.php:373
+#: includes/ai-core/class-admin.php:412
 msgid "Add model"
 msgstr "ເພີ່ມໂມເດວ"
 
-#: includes/ai-core/class-admin.php:403
+#: includes/ai-core/class-admin.php:442
 msgid "Recommended models list"
 msgstr "ລາຍຊື່ຮູບແບບທີ່ແນະນຳ"
 
-#: includes/ai-core/class-admin.php:406
+#: includes/ai-core/class-admin.php:445
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr "ບໍ່ສາມາດກວດສອບລາຍຊື່ແບບຈຳລອງທີ່ແນະນຳໄດ້, ດັ່ງນັ້ນຈຶ່ງບໍ່ມີການສະແດງຄຳແນະນຳ. ກະລຸນາຕິດຕັ້ງປລັກອິນຄືນໃໝ່, ຫຼື ເປີດໃຊ້ການອັບເດດປະຈຳວັນຂ້າງລຸ່ມນີ້."
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:448
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr "ບັນຊີລາຍຊື່ທີ່ກຳລັງໃຊ້ຢູ່ໄດ້ຖືກເຜີຍແຜ່ເມື່ອ %s. ການອັບເດດປລັກອິນແຕ່ລະຄັ້ງຈະນຳເອົາລາຍຊື່ໃໝ່ເຂົ້າມາ."
 
-#: includes/ai-core/class-admin.php:416
+#: includes/ai-core/class-admin.php:455
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr "ກວດເບິ່ງ Zinn Digital® ມື້ລະຄັ້ງເຊັ່ນກັນ ເພື່ອອັບເດດລາຍຊື່ຫຼ້າສຸດ."
 
-#: includes/ai-core/class-admin.php:417
+#: includes/ai-core/class-admin.php:456
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr "ມີພຽງແຕ່ການຮ້ອງຂໍດາວໂຫລດແບບທຳມະດາເທົ່ານັ້ນທີ່ຖືກສົ່ງໄປ: ບໍ່ມີກະແຈ, ບໍ່ມີທີ່ຢູ່ເວັບໄຊ, ບໍ່ມີຫຍັງກ່ຽວກັບເນື້ອຫາຂອງທ່ານ. ລາຍຊື່ດັ່ງກ່າວແມ່ນຖືກເຊັນຊື່, ແລະ ລາຍຊື່ໃດທີ່ບໍ່ຜ່ານການກວດສອບລາຍເຊັນແມ່ນຈະຖືກລະເລີຍ."
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:422
+#: includes/ai-core/class-admin.php:461
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr "ກວດສອບຄັ້ງຫຼ້າສຸດ %1$s: %2$s."
 
-#: includes/ai-core/class-admin.php:428
+#: includes/ai-core/class-admin.php:467
 msgid "Save, and check now if turned on"
 msgstr "ບັນທຶກ ແລະ ກວດສອບດຽວນີ້ວ່າໄດ້ເປີດໃຊ້ງານແລ້ວ"
 
-#: includes/ai-core/class-admin.php:441
+#: includes/ai-core/class-admin.php:480
 msgid "a newer list was installed"
 msgstr "ລາຍຊື່ໃໝ່ກວ່າໄດ້ຖືກຕິດຕັ້ງແລ້ວ"
 
-#: includes/ai-core/class-admin.php:443
+#: includes/ai-core/class-admin.php:482
 msgid "already up to date"
 msgstr "ອັບເດດເປັນເວີຊັ່ນຫຼ້າສຸດແລ້ວ"
 
-#: includes/ai-core/class-admin.php:445
+#: includes/ai-core/class-admin.php:484
 msgid "the download failed the signature check and was ignored"
 msgstr "ການດາວໂຫຼດບໍ່ຜ່ານການກວດສອບລາຍເຊັນ ແລະ ໄດ້ຖືກລະເລີຍ"
 
-#: includes/ai-core/class-admin.php:447
+#: includes/ai-core/class-admin.php:486
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr "ບໍ່ສາມາດເຊື່ອມຕໍ່ຫາ Zinn Digital® ໄດ້; ລາຍການປັດຈຸບັນຈະຖືກນຳໃຊ້ຕໍ່ໄປ"
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:489
 msgid "turned off"
 msgstr "ປິດໃຊ້ງານແລ້ວ"
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:526
 #: src/admin/Jobs.js:432
 msgid "Open"
 msgstr "ເປີດ"
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:569
 msgid "Check their status page"
 msgstr "ກວດເບິ່ງໜ້າສະຖານະຂອງພວກເຂົາ"
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:572
 msgid "Open your billing page"
 msgstr "ເປີດໜ້າການຮຽກເກັບເງິນຂອງທ່ານ"
 
-#: includes/ai-core/class-admin.php:535
+#: includes/ai-core/class-admin.php:574
 msgid "Open your API keys page"
 msgstr "ເປີດໜ້າຄີ API ຂອງທ່ານ"
 
-#: includes/ai-core/class-admin.php:538
+#: includes/ai-core/class-admin.php:577
 msgid "Open the AI settings"
 msgstr "ເປີດການຕັ້ງຄ່າ AI"
 
-#: includes/ai-core/class-admin.php:549
+#: includes/ai-core/class-admin.php:588
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:296
 msgid "Sorry, you are not allowed to do that."
 msgstr "ຂໍໂທດ, ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ດຳເນີນການນີ້."
 
-#: includes/ai-core/class-admin.php:575
-#: includes/ai-core/class-admin.php:609
+#: includes/ai-core/class-admin.php:614
+#: includes/ai-core/class-admin.php:648
 msgid "Unknown provider."
 msgstr "ຜູ້ໃຫ້ບໍລິການທີ່ບໍ່ຮູ້ຈັກ."
 
-#: includes/ai-core/class-admin.php:583
+#: includes/ai-core/class-admin.php:622
 msgid "Enter the address of your service, for example http://localhost:11434/v1."
 msgstr "ປ້ອນທີ່ຢູ່ບໍລິການຂອງທ່ານ, ຕົວຢ່າງ http://localhost:11434/v1."
 
-#: includes/ai-core/class-admin.php:590
+#: includes/ai-core/class-admin.php:629
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr "ອັນນັ້ນບໍ່ເບິ່ງຄືວ່າເປັນລະຫັດ API. ກະລຸນາສຳເນົາອີກຄັ້ງ ໂດຍບໍ່ໃຫ້ມີຊ່ອງຫວ່າງ."
 
-#: includes/ai-core/class-admin.php:594
+#: includes/ai-core/class-admin.php:633
 msgid "Paste your API key first."
 msgstr "ກະລຸນາວາງລະຫັດ API ຂອງທ່ານກ່ອນ."
 
-#: includes/ai-core/class-admin.php:658
+#: includes/ai-core/class-admin.php:697
 msgid "Key removed."
 msgstr "ໄດ້ລຶບກະແຈແລ້ວ."
 
-#: includes/ai-core/class-admin.php:687
+#: includes/ai-core/class-admin.php:734
 msgid "Models saved."
 msgstr "ບັນທຶກໂມເດວແລ້ວ."
 
-#: includes/ai-core/class-admin.php:701
+#: includes/ai-core/class-admin.php:748
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr "ປ້ອນຊື່ທີ່ແນ່ນອນຂອງໂມເດັນ, ຕົວຢ່າງຕາມທີ່ເອກະສານອ້າງອີງຂອງຜູ້ໃຫ້ບໍລິການໄດ້ຂຽນໄວ້."
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:725
+#: includes/ai-core/class-admin.php:772
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr "ເພີ່ມ %s ແລ້ວ. ເລືອກມັນ ພາຍໃຕ້ \"ຮູບແບບໃດທີ່ຈະໃຊ້\"."
 
-#: includes/ai-core/class-admin.php:754
+#: includes/ai-core/class-admin.php:801
 msgid "Model removed."
 msgstr "ຮູບແບບຖືກລຶບແລ້ວ."
 
-#: includes/ai-core/class-admin.php:781
+#: includes/ai-core/class-admin.php:828
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr "ການອັບເດດປະຈຳວັນຖືກປິດໄວ້. ລາຍການທີ່ມາມາພ້ອມກັບປລັກອິນແມ່ນຖືກໃຊ້."
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:788
+#: includes/ai-core/class-admin.php:835
 #, php-format
 msgid "Checked: %s."
 msgstr "ກວດສອບແລ້ວ: %s."
 
-#: includes/ai-core/class-admin.php:810
+#: includes/ai-core/class-admin.php:857
 msgid "Model lists refreshed."
 msgstr "ລາຍຊື່ຕົວແບບຖືກໂຫຼດໃໝ່ແລ້ວ."
 
@@ -445,6 +459,20 @@ msgstr "ບໍ່ໄດ້ເລືອກຮູບແບບສຳລັບວຽ
 #: includes/ai-core/class-client.php:87
 msgid "That AI provider is not supported by this version of the plugin."
 msgstr "ຕົວແທນ AI ນັ້ນບໍ່ໄດ້ຮັບການຮອງຮັບໂດຍປລັກອິນເວີຊັນນີ້."
+
+#: includes/ai-core/class-client.php:125
+msgid "No AI provider that can make images is connected. Add an OpenAI or Google Gemini key in the AI settings."
+msgstr "ບໍ່ມີຜູ້ໃຫ້ບໍລິການ AI ທີ່ສາມາດສ້າງຮູບພາບຖືກເຊື່ອມຕໍ່ຢູ່. ກະລຸນາເພີ່ມຄີ OpenAI ຫຼື Google Gemini ໃນການຕັ້ງຄ່າ AI."
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: includes/ai-core/class-client.php:129
+#: includes/ai-core/class-provider.php:295
+msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
+msgstr "ຜູ້ໃຫ້ບໍລິການ AI ນີ້ສ້າງຮູບພາບບໍ່ໄດ້. ເລືອກ OpenAI ຫຼື Google Gemini ສຳລັບຮູບພາບໃນການຕັ້ງຄ່າ AI."
+
+#: includes/ai-core/class-client.php:135
+msgid "Your AI key cannot use any image model. Check the key's permissions with the provider, or choose another provider for images."
+msgstr "ຄີ AI ຂອງທ່ານບໍ່ສາມາດໃຊ້ຮູບແບບຮູບພາບໃດໆໄດ້. ກະລຸນາ ກວດສອບສິດຂອງຄີກັບຜູ້ໃຫ້ບໍລິການ, ຫຼື ເລືອກຜູ້ໃຫ້ບໍລິການອື່ນສຳລັບຮູບພາບ."
 
 #: includes/ai-core/class-failure.php:141
 msgid "This site could not reach your AI service. Check that it is running and that its address is reachable from your web server (a service on your own computer is not reachable from a hosted site)."
@@ -503,7 +531,7 @@ msgstr "%s ຳລັງມີບັນຫາໃນຕອນນີ້ (ການ�
 msgid "The AI request failed for a reason we could not identify. Try again; if it keeps happening, contact support with the details below."
 msgstr "ການຮ້ອງຂໍ AI ລົ້ມເຫຼວດ້ວຍເຫດຜົນທີ່ພວກເຮົາບໍ່ສາມາດລະບຸໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ; ຫາກຍັງເກີດຂຶ້ນຢູ່, ກະລຸນາຕິດຕໍ່ຝ່າຍສະໜັບສະໜູນພ້ອມກັບລາຍລະອຽດດ້ານລຸ່ມນີ້."
 
-#: includes/ai-core/class-provider.php:162
+#: includes/ai-core/class-provider.php:164
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr "ຜູ້ໃຫ້ບໍລິການ AI ໄດ້ຕອບຮັບໃນຮູບແບບທີ່ປລັກອິນນີ້ບໍ່ສາມາດອ່ານໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ; ຖ້າ ຫາກຍັງເກີດບັນຫາເດີມ, ໃຫ້ເລືອກໂມເດວອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອ."
 
@@ -686,6 +714,77 @@ msgstr "\"%s\" ບໍ່ແມ່ນລະຫັດພາສາ. ໃຫ້ໃຊ
 msgid "List at least one language."
 msgstr "ກະລຸນາລະບຸຢ່າງໜ້ອຍໜຶ່ງພາສາ."
 
+#: includes/content/class-content-module.php:73
+#: src/editor/translations-panel.js:57
+#: src/editor/translations-panel.js:102
+msgid "Translations"
+msgstr "ການແປພາສາ"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:86
+#, php-format
+msgid "Edit the %s version"
+msgstr "ແກ້ໄຂເວີຊັນ %s"
+
+#. translators: %s: a language's name.
+#: includes/content/class-content-module.php:96
+#, php-format
+msgid "Compare the %s version side by side"
+msgstr "ປຽບທຽບເວີຊັນ %s ເຂົ້າກັນແບບຄຽງຄູ່ກັນ"
+
+#: includes/content/class-menus.php:86
+msgid "Choose one of your menus for each language."
+msgstr "ເລືອກເມນູໜຶ່ງສຳລັບແຕ່ລະພາສາ."
+
+#: includes/content/class-protection.php:129
+msgid "This is not a translation, so there is nothing to protect."
+msgstr "ນີ້ບໍ່ແມ່ນການແປ, ດັ່ງນັ້ນຈຶ່ງບໍ່ມີຫຍັງທີ່ຕ້ອງປົກປ້ອງ."
+
+#: includes/content/class-rest-editor.php:65
+msgid "This kind of content is not translated."
+msgstr "ເນື້ອຫາປະເພດນີ້ບໍ່ໄດ້ຮັບການແປ."
+
+#. translators: %s: an internal text identifier.
+#: includes/content/class-shared-strings.php:280
+#, php-format
+msgid "Text %s is not on this site any more. Reload the page."
+msgstr "ຂໍ້ຄວາມ %s ບໍ່ມີຢູ່ໃນເວັບໄຊນີ້ແລ້ວ. ໂຫຼດໜ້າເວັບຄືນໃໝ່."
+
+#: includes/content/class-shared-strings.php:337
+msgid "No translation engine could take this text."
+msgstr "ບໍ່ມີໂປຣແກຣມແປພາສາໃດສາມາດແປຂໍ້ຄວາມນີ້ໄດ້."
+
+#: includes/content/class-shared-strings.php:381
+msgid "Choose one of your other languages."
+msgstr "ເລືອກພາສາອື່ນຂອງທ່ານໜຶ່ງພາສາ."
+
+#: includes/content/class-side-by-side.php:77
+#: includes/content/class-side-by-side.php:90
+msgid "Compare translation"
+msgstr "ປຽບທຽບການແປ"
+
+#: includes/content/class-side-by-side.php:88
+msgid "You are not allowed to edit this translation."
+msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ແກ້ໄຂການແປນີ້."
+
+#: includes/content/class-side-by-side.php:204
+msgid "This is not a translation, so there is nothing to compare."
+msgstr "ນີ້ບໍ່ແມ່ນການແປ, ດັ່ງນັ້ນຈຶ່ງບໍ່ມີຫຍັງໃຫ້ປຽບທຽບ."
+
+#: includes/content/class-side-by-side.php:217
+msgid "The original of this translation no longer exists."
+msgstr "ຕົ້ນສະບັບຂອງການແປນີ້ບໍ່ມີຢູື່ອີກຕໍ່ໄປ."
+
+#. translators: %s: an internal piece identifier.
+#: includes/content/class-side-by-side.php:288
+#, php-format
+msgid "Piece %s is not part of this translation any more. Reload the page and try again."
+msgstr "ສ່ວນ %s ບໍ່ໄດ້ເປັນສ່ວນໜຶ່ງຂອງການແປນີ້ອີກຕໍ່ໄປ. ກະລຸນາໂຫຼດໜ້ານີ້ຄືນໃໝ່ ແລ້ວລອງໃໝ່ອີກຄັ້ງ."
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
+msgstr "ແປພາສາໃນໜ້ານີ້"
+
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:68
@@ -779,10 +878,11 @@ msgid "The translation link could not be saved."
 msgstr "ບໍ່ສາມາດບັນທຶກລິ້ງການແປໄດ້."
 
 #: includes/core/class-strings.php:102
+#: includes/core/class-strings.php:144
 msgid "That text cannot be translated here."
 msgstr "ຂໍ້ຄວາມນັ້ນບໍ່ສາມາດແປຢູ່ບ່ອນນີ້ໄດ້."
 
-#: includes/core/class-strings.php:141
+#: includes/core/class-strings.php:169
 msgid "That media text cannot be translated here."
 msgstr "ຂໍ້ຄວາມສື່ນັ້ນບໍ່ສາມາດແປໄດ້ທີ່ນີ້."
 
@@ -811,15 +911,15 @@ msgstr "ຍັງບໍ່ທັນມີການຕັ້ງຄ່າເຄື
 msgid "That translation engine is not set up yet: add its key first."
 msgstr "ເຄື່ອງມືແປພາສານັ້ນຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າ: ກະລຸນາເພີ່ມຄີຂອງມັນກ່ອນ."
 
-#: includes/core/class-translator.php:408
+#: includes/core/class-translator.php:415
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr "ຂໍ້ຄວາມດຽວກັນນີ້ກຳລັງຖືກແປໂດຍງານອື່ນຢູ່ໃນຂະນະນີ້; ລາຍການນີ້ຈະໃຊ້ຄຳຕອບນັ້ນ."
 
-#: includes/core/class-translator.php:456
+#: includes/core/class-translator.php:463
 msgid "No translation engine could take this item."
 msgstr "ບໍ່ມີເຄື່ອງມືແປພາສາໃດສາມາດຮັບເອົາລາຍການນີ້ໄດ້."
 
-#: includes/core/class-translator.php:477
+#: includes/core/class-translator.php:484
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr "ເຄື່ອງຈັກບໍ່ໄດ້ສົ່ງຄືນການແປສຳລັບທຸກສ່ວນຂອງລາຍການນີ້. ບໍ່ມີຫຍັງຖືກປ່ຽນແປງ."
 
@@ -1498,6 +1598,7 @@ msgstr "ຊື້ໃບອະນຸຍາດດຽວນີ້"
 
 #: includes/freemius-strings.php:479
 #: includes/freemius-strings.php:3453
+#: src/pro__premium_only/visual/index.js:35
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
@@ -3971,6 +4072,7 @@ msgstr "ກຳລັງເລີ່ມຕົ້ນການທົດລອງໃ
 
 #: includes/freemius-strings.php:2370
 #: includes/freemius-strings.php:5255
+#: src/compare/index.js:116
 msgid "State"
 msgstr "ສະຖານະ"
 
@@ -5155,7 +5257,7 @@ msgstr "ຈັດວາງລຽນລົງລຸ່ມ"
 
 #: includes/switcher/pro__premium_only/class-bricks-element.php:106
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:112
-#: src/editor/index.js:33
+#: src/editor/index.js:35
 #: src/editor/switcher.js:107
 msgid "Accessible label"
 msgstr "ປ້າຍກຳກັບທີ່ສາມາດເຂົ້າເຖິງໄດ້"
@@ -5206,7 +5308,7 @@ msgstr "ຂະໜາດຂໍ້ຄວາມ"
 
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:122
-#: src/editor/index.js:30
+#: src/editor/index.js:32
 #: src/editor/switcher.js:47
 msgid "Switcher"
 msgstr "ຕົວສະຫຼັບ"
@@ -5239,6 +5341,7 @@ msgid "See the Pro plans and pricing"
 msgstr "ເບິ່ງແຜນງານ Pro ແລະລາຄາ"
 
 #: src/admin/App.js:113
+#: src/editor/visibility.js:42
 msgid "Languages"
 msgstr "ພາສາ"
 
@@ -5555,6 +5658,7 @@ msgid "Content"
 msgstr "ເນື້ອຫາ"
 
 #: src/admin/Jobs.js:398
+#: src/admin/MenusTab.js:211
 msgid "Language"
 msgstr "ພາສາ"
 
@@ -5583,29 +5687,95 @@ msgstr "ລອງໃໝ່ອີກຄັ້ງ"
 msgid "Translate by hand"
 msgstr "ແປດ້ວຍມື"
 
-#: src/admin/Root.js:26
+#: src/admin/MenusTab.js:94
+msgid "Menus saved."
+msgstr "ບັນທຶກເມນູແລ້ວ."
+
+#. translators: %d: how many texts were translated.
+#: src/admin/MenusTab.js:119
+#, js-format
+msgid "%d texts translated."
+msgstr "ແປແລ້ວ %d ຂໍ້ຄວາມ."
+
+#: src/admin/MenusTab.js:140
+msgid "Saved. Your corrections are protected from machine translation."
+msgstr "ບັນທຶກແລ້ວ. ການແກ້ໄຂຂອງທ່ານຖືກປົກປ້ອງຈາກການແປດ້ວຍເຄື່ອງຈັກ."
+
+#: src/admin/MenusTab.js:152
+msgid "The same menu, translated"
+msgstr "ເມນູດຽວກັນ, ແປແລ້ວ"
+
+#: src/admin/MenusTab.js:169
+msgid "A separate menu per language"
+msgstr "ເມນູແຍກຕ່າງຫາກສຳລັບແຕ່ລະພາສາ"
+
+#: src/admin/MenusTab.js:172
+msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
+msgstr "ຕາມຄ່າເລີ່ມຕົ້ນ ແຕ່ລະເມນູຈະຖືກແປ: ລິ້ງຂອງມັນນຳໄປສູ່ໜ້າທີ່ຖືກແປແລ້ວ ພ້ອມດ້ວຍຫົວຂໍ້ຂອງພວກມັນ. ເລືອກເມນູສຳລັບແຕ່ລະພາສາສະເພາະຢູ່ບ່ອນນີ້ແທນ."
+
+#: src/admin/MenusTab.js:207
+msgid "Shared text"
+msgstr "ຂໍ້ຄວາມທີ່ໃຊ້ຮ່ວມກັນ"
+
+#: src/admin/MenusTab.js:222
+msgid "Which text"
+msgstr "ຂໍ້ຄວາມໃດ"
+
+#: src/admin/MenusTab.js:227
+msgid "Menu labels"
+msgstr "ປ້າຍຊື່ເມນູ"
+
+#: src/admin/MenusTab.js:232
+msgid "Templates, headers, footers and patterns"
+msgstr "ແມ່ແບບ, ຫົວຂໍ້, ທ້າຍກະດາດ ແລະ ຮູບແບບ"
+
+#: src/admin/MenusTab.js:236
+msgid "Templates, headers, footers and patterns (Pro)"
+msgstr "ແມ່ແບບ, ຫົວຂໍ້, ທ້າຍກະດາດ ແລະ ຮູບແບບ (Pro)"
+
+#: src/admin/MenusTab.js:252
+msgid "Translate the missing text"
+msgstr "ແປຂໍ້ຄວາມທີ່ຂາດຫາຍໄປ"
+
+#: src/admin/MenusTab.js:257
+msgid "There is no text to translate here."
+msgstr "ບໍ່ມີຂໍ້ຄວາມໃຫ້ແປໃນນີ້."
+
+#: src/admin/MenusTab.js:268
+msgid "Corrected by a person, protected"
+msgstr "ແກ້ໄຂໂດຍມະນຸດ, ປົກປ້ອງ"
+
+#: src/admin/MenusTab.js:290
+msgid "Save corrections"
+msgstr "ບັນທຶກການແກ້ໄຂ"
+
+#: src/admin/Root.js:27
 msgid "Languages and settings"
 msgstr "ພາສາ ແລະ ການຕັ້ງຄ່າ"
 
-#: src/admin/Root.js:28
+#: src/admin/Root.js:29
 msgid "Engines"
 msgstr "ເຄື່ອງຈັກ"
 
-#: src/admin/Root.js:29
+#: src/admin/Root.js:30
 msgid "Translation jobs"
 msgstr "ວຽກແປພາສາ"
 
-#: src/admin/Root.js:30
+#: src/admin/Root.js:31
 msgid "Addresses and SEO"
 msgstr "ທີ່ຢູ່ ແລະ SEO"
 
-#: src/admin/Root.js:33
+#: src/admin/Root.js:34
 msgid "Language switchers"
 msgstr "ຕົວປ່ຽນພາສາ"
 
-#: src/admin/Root.js:35
+#: src/admin/Root.js:36
 msgid "SEO audit"
 msgstr "ການກວດສອບ SEO"
+
+#: src/admin/Root.js:39
+msgid "Menus and shared text"
+msgstr "ເມນູ ແລະ ຂໍ້ຄວາມທີ່ໃຊ້ຮ່ວມກັນ"
 
 #: src/admin/SeoAudit.js:19
 msgid "No meta description"
@@ -5659,6 +5829,7 @@ msgid "Problem"
 msgstr "ບັນຫາ"
 
 #: src/admin/SeoAudit.js:163
+#: src/editor/translations-panel.js:143
 msgid "Edit"
 msgstr "ແກ້ໄຂ"
 
@@ -5744,6 +5915,7 @@ msgstr "ວິດເຈັດ Elementor ແລະ Bricks ແມ່ນສ່ວ�
 
 #: src/admin/Switchers.js:242
 #: src/admin/Urls.js:305
+#: src/pro__premium_only/visual/index.js:32
 msgid "Save"
 msgstr "ບັນທຶກ"
 
@@ -5871,7 +6043,61 @@ msgstr "ເຮັດວຽກຮ່ວມກັບ: %s."
 msgid "Each address word is 2 to 12 lowercase letters, digits or hyphens."
 msgstr "ແຕ່ລະຄຳສັບໃນທີ່ຢູ່ແມ່ນມີຄວາມຍາວຈາກ 2 ເຖິງ 12 ຕົວອັກສອນພິມນ້ອຍ, ຕົວເລກ ຫຼື ເຄື່ອງໝາຍຂີດກາງ."
 
-#: src/editor/index.js:18
+#: src/compare/index.js:66
+msgid "Saved. The pieces you changed are marked as checked by a person, and this translation is protected from machine translation."
+msgstr "ບັນທຶກແລ້ວ. ພາກສ່ວນທີ່ທ່ານໄດ້ປ່ຽນແປງແມ່ນຖືກໝາຍວ່າກວດສອບໂດຍບຸກຄົນ, ແລະການແປນີ້ແມ່ນຖືກປົກປ້ອງຈາກການແປດ້ວຍເຄື່ອງຈັກ."
+
+#: src/compare/index.js:92
+msgid "The layout of this translation was changed in the editor, so some pieces no longer pair with the original. Pieces without a partner are shown empty; edit the rest in the editor."
+msgstr "ຮູບແບບການແປນີ້ຖືກປ່ຽນແປງຢູ່ໃນຕົວແກ້ໄຂ, ສະນັ້ນ ບາງສ່ວນຈຶ່ງບໍ່ຈັບຄູ່ກັບຕົ້ນສະບັບອີກຕໍ່ໄປ. ສ່ວນທີ່ບໍ່ມີຄູ່ຈະສະແດງເປັນ້ອງເປົ່າ; ແກ້ໄຂສ່ວນທີ່ເຫຼືອໃນຕົວແກ້ໄຂ."
+
+#: src/compare/index.js:96
+msgid "Open the editor"
+msgstr "ເປີດຕົວແກ້ໄຂ"
+
+#. translators: %s: a language tag such as en-US.
+#: src/compare/index.js:105
+#, js-format
+msgid "Original (%s)"
+msgstr "ຕົ້ນສະບັບ (%s)"
+
+#. translators: %s: a language tag such as de-DE.
+#: src/compare/index.js:112
+#, js-format
+msgid "Translation (%s)"
+msgstr "ການແປ (%s)"
+
+#: src/compare/index.js:162
+msgid "Save changes"
+msgstr "ບັນທຶກການປ່ຽນແປງ"
+
+#: src/compare/index.js:164
+msgid "Open in the editor"
+msgstr "ເປີດໃນຕົວແກ້ໄຂ"
+
+#. zinn-i18n: human translation — the machine translator refused this string
+#: src/compare/model.js:37
+#: src/editor/translations-model.js:38
+msgid "Machine translated"
+msgstr "ແປດ້ວຍເຄື່ອງ"
+
+#: src/compare/model.js:38
+msgid "Checked by a person"
+msgstr "ກວດສອບໂດຍມະນຸດ"
+
+#: src/compare/model.js:39
+msgid "Imported"
+msgstr "ນຳເຂົ້າແລ້ວ"
+
+#: src/compare/model.js:40
+msgid "Not translated yet"
+msgstr "ຍັງບໍ່ທັນໄດ້ແປເທື່ອ"
+
+#: src/compare/model.js:41
+msgid "Not in the translation"
+msgstr "ບໍ່ຢູ່ໃນການແປ"
+
+#: src/editor/index.js:20
 #: src/editor/switcher.js:28
 msgid "Add a second language under Tranzly in the admin menu, and the switcher appears here."
 msgstr "ເພີ່ມພາສາທີສອງພາຍໃຕ້ Tranzly ໃນເມນູຜູູ້ບລິຫານ, ແລະປຸ່ມສະຫຼັບຈະປະກົດຂຶ້ນຢູ່ບ່ອນນີ້."
@@ -5887,6 +6113,132 @@ msgstr "ສິ່ງທີ່ໂປຣແກຣມອ່ານໜ້າຈໍປ
 #: src/editor/switcher.js:117
 msgid "Colours"
 msgstr "ສີ"
+
+#: src/editor/translations-model.js:26
+msgid "Not translated"
+msgstr "ຍັງບໍ່ໄດ້ແປ"
+
+#: src/editor/translations-model.js:29
+msgid "Original"
+msgstr "ຕົ້ນສະບັບ"
+
+#: src/editor/translations-model.js:33
+msgid "Published"
+msgstr "ເຜີຍແຜ່ແລ້ວ"
+
+#: src/editor/translations-model.js:34
+msgid "Draft"
+msgstr "ຮ່າງ"
+
+#: src/editor/translations-model.js:36
+msgid "Checked by a person, protected"
+msgstr "ກວດສອບໂດຍມະນຸດ, ປົກປ້ອງແລ້ວ"
+
+#: src/editor/translations-model.js:37
+msgid "Imported, protected"
+msgstr "ນຳເຂົ້າແລ້ວ, ປົກປ້ອງແລ້ວ"
+
+#: src/editor/translations-model.js:39
+msgid "Not translated yet (a copy)"
+msgstr "ຍັງບໍ່ທັນໄດ້ແປ (ສຳເນົາ)"
+
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr "ບັນທຶກໂພສນີ້ກ່ອນ, ແລ້ວຈຶ່ງແປຢູ່ທີ່ນີ້."
+
+#: src/editor/translations-panel.js:148
+msgid "Side by side"
+msgstr "ຄຽງຂ້າງກັນ"
+
+#: src/editor/translations-panel.js:153
+msgid "View"
+msgstr "ເບິ່ງ"
+
+#: src/editor/translations-panel.js:161
+msgid "Unlock so it can be translated again"
+msgstr "ປົດລັອກເພື່ອໃຫ້ສາມາດແປໄດ້ອີກຄັ້ງ"
+
+#: src/editor/translations-panel.js:176
+msgid "Protect"
+msgstr "ປົກປ້ອງ"
+
+#: src/editor/translations-panel.js:184
+msgid "Publish the translations"
+msgstr "ເຜີຍແຜ່ການແປ"
+
+#. translators: %d: how many languages are ticked.
+#: src/editor/translations-panel.js:196
+#, js-format
+msgid "Translate into %d language"
+msgid_plural "Translate into %d languages"
+msgstr[0] "ແປເປັນ %d ພາສາ"
+
+#. translators: %s: a language code.
+#: src/editor/translations-panel.js:214
+#, js-format
+msgid "%s: translated."
+msgstr "%s: ແປແລ້ວ."
+
+#: src/editor/visibility.js:46
+msgid "Show this block"
+msgstr "ສະແດງບລັອກນີ້"
+
+#: src/editor/visibility.js:49
+msgid "In every language"
+msgstr "ໃນທຸກໆພາສາ"
+
+#: src/editor/visibility.js:50
+msgid "Only in the languages ticked"
+msgstr "ສະເພາະໃນພາສາທີ່ໝາຍຖືກໄວ້ເທົ່ານັ້ນ"
+
+#: src/editor/visibility.js:51
+msgid "In every language except those ticked"
+msgstr "ໃນທຸກພາສາ ຍົກເວັ້ນພາສາທີ່ຖືກໝາຍຕິກໄວ້"
+
+#: src/pro__premium_only/editor/index.js:45
+msgid "Image per language"
+msgstr "ຮູບພາບຕໍ່ພາສາ"
+
+#: src/pro__premium_only/editor/index.js:49
+msgid "Show another image to readers of a language, for example a banner with words on it."
+msgstr "ສະແດງຮູບພາບອື່ນໃຫ້ກັບຜູ້ອ່ານພາສາໃດໜຶ່ງ, ຕົວຢ່າງເຊັ່ນ: ປ້າຍໂຄສະນາທີ່ມີຄຳສັບຢູ່ໃນນັ້ນ."
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:82
+#, js-format
+msgid "Replace the %s image"
+msgstr "ປ່ຽນແທນຮູບ %s"
+
+#. translators: %s: a language's name.
+#: src/pro__premium_only/editor/index.js:87
+#, js-format
+msgid "Choose a %s image"
+msgstr "ເລືອກຮູບພາບ %s ອັນ"
+
+#: src/pro__premium_only/editor/index.js:108
+msgid "Use the original image"
+msgstr "ໃຊ້ຮູບພາບຕົ້ນສະບັບ"
+
+#: src/pro__premium_only/visual/index.js:17
+#: src/pro__premium_only/visual/index.js:19
+msgid "Correct this translation"
+msgstr "ແກ້ໄຂຄຳແປນີ້"
+
+#: src/pro__premium_only/visual/index.js:45
+msgid "Saving…"
+msgstr "ກຳລັງບັນທຶກ…"
+
+#: src/pro__premium_only/visual/index.js:73
+msgid "Translated text. Press Enter to correct it."
+msgstr "ຂໍ້ຄວາມທີ່ແປແລ້ວ. ໃຫ້ກົດປຸ່ມ Enter ເພື່ອແກ້ໄຂ."
+
+#: src/pro__premium_only/visual/index.js:97
+msgid "Click any outlined text to correct its translation."
+msgstr "ຄລິກໃສ່ຂໍ້ຄວາມທີ່ມີເສັ້ນກອບເພື່ອແກ້ໄຂຄຳແປຂອງມັນ."
+
+#: src/pro__premium_only/visual/index.js:101
+msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
+msgstr "ບໍ່ພົບຂໍ້ຄວາມທີ່ແປແລ້ວຢູ່ໃນໜ້ານີ້ເພື່ອແກ້ໄຂທີ່ນີ້. ກະລຸນາໃຊ້ເຄື່ອງມືແກ້ໄຂແບບຄຽງຄູ່ກັນແທນ."
 
 #: blocks/fixture-switcher/block.json
 #: blocks/language-switcher/block.json
