@@ -6,6 +6,7 @@ import {
 	DropdownMenu,
 	MenuGroup,
 	MenuItem,
+	MenuItemsChoice,
 	Notice,
 } from '@wordpress/components';
 
@@ -175,24 +176,23 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 						>
 							{ ( { onClose } ) => (
 								<MenuGroup>
-									{ Object.keys( themeLabels ).map(
-										( key ) => (
-											<MenuItem
-												key={ key }
-												isSelected={
-													( prefs.theme ||
-														'auto' ) === key
-												}
-												role="menuitemradio"
-												onClick={ () => {
-													savePrefs( { theme: key } );
-													onClose();
-												} }
-											>
-												{ themeLabels[ key ] }
-											</MenuItem>
-										)
-									) }
+									{ /* ⛔ MenuItemsChoice, not MenuItem + isSelected: the latter sets
+										aria-checked but draws NO tick, so the only visible mark was
+										the focus ring on the first item — the owner read "Match my
+										computer" as chosen while "Light" was (2026-09-28). */ }
+									<MenuItemsChoice
+										choices={ Object.keys( themeLabels ).map(
+											( key ) => ( {
+												value: key,
+												label: themeLabels[ key ],
+											} )
+										) }
+										value={ prefs.theme || 'auto' }
+										onSelect={ ( key ) => {
+											savePrefs( { theme: key } );
+											onClose();
+										} }
+									/>
 								</MenuGroup>
 							) }
 						</DropdownMenu>
