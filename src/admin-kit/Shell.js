@@ -181,12 +181,12 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 										the focus ring on the first item — the owner read "Match my
 										computer" as chosen while "Light" was (2026-09-28). */ }
 									<MenuItemsChoice
-										choices={ Object.keys( themeLabels ).map(
-											( key ) => ( {
-												value: key,
-												label: themeLabels[ key ],
-											} )
-										) }
+										choices={ Object.keys(
+											themeLabels
+										).map( ( key ) => ( {
+											value: key,
+											label: themeLabels[ key ],
+										} ) ) }
 										value={ prefs.theme || 'auto' }
 										onSelect={ ( key ) => {
 											savePrefs( { theme: key } );

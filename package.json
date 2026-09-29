@@ -12,7 +12,7 @@
 	"scripts": {
 		"build": "wp-scripts build",
 		"start": "wp-scripts start",
-		"lint-js": "wp-scripts lint-js src --ignore-pattern 'src/admin-kit/**' && cd ../../packages/zinn-admin-kit && ../../plugins/tranzly/node_modules/.bin/wp-scripts lint-js src/js",
+		"lint-js": "wp-scripts lint-js src --ignore-pattern 'src/admin-kit/**' && cd ../../packages/zinn-admin-kit && ../../plugins/tranzly/node_modules/.bin/wp-scripts lint-js src/js --config wp-scripts-eslint.config.cjs",
 		"test-unit-js": "wp-scripts test-unit-js"
 	},
 	"dependencies": {

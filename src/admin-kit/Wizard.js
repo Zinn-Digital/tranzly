@@ -96,10 +96,7 @@ export default function Wizard( {
 			<CardBody>
 				<ol className="zak-steps" aria-hidden="true">
 					{ all.map( ( s, i ) => (
-						<li
-							key={ s.id }
-							className={ stepClass( i, index ) }
-						>
+						<li key={ s.id } className={ stepClass( i, index ) }>
 							{ s.title }
 						</li>
 					) ) }
