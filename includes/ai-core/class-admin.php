@@ -330,6 +330,7 @@ final class Admin {
 			echo '</select></td></tr>';
 		}
 		self::render_image_row();
+		self::render_embedding_row();
 		echo '</tbody></table>';
 		submit_button( __( 'Save models', 'tranzly' ), 'primary', '', false );
 		echo '</form>';
@@ -369,6 +370,41 @@ final class Admin {
 			echo '</optgroup>';
 		}
 		echo '</select></td></tr>';
+	}
+
+	/**
+	 * The embedding model row (1.2.0): site search / semantic index, newest model first.
+	 *
+	 * @return void
+	 */
+	private static function render_embedding_row(): void {
+		$current = Store::embed_default();
+		$groups  = array();
+		foreach ( Registry::all() as $id => $spec ) {
+			if ( ! Store::configured( $id ) || empty( $spec['embeddings'] ) ) {
+				continue;
+			}
+			$groups[ $id ] = array(
+				'label'  => (string) ( $spec['label'] ?? $id ),
+				'models' => Models::embedding_choices( $id ),
+			);
+		}
+		echo '<tr><th scope="row"><label for="zinn-ai-task-embeddings">' . esc_html__( 'Site search (embeddings)', 'tranzly' ) . '</label></th><td>';
+		if ( ! $groups ) {
+			echo '<p>' . esc_html__( 'Connect Google Gemini, OpenAI, Mistral or OpenRouter to build a search index of your site.', 'tranzly' ) . '</p></td></tr>';
+			return;
+		}
+		echo '<select id="zinn-ai-task-embeddings" name="defaults[embeddings]">';
+		echo '<option value="">' . esc_html__( '— The newest embedding model of the first connected provider —', 'tranzly' ) . '</option>';
+		foreach ( $groups as $id => $group ) {
+			echo '<optgroup label="' . esc_attr( $group['label'] ) . '">';
+			foreach ( $group['models'] as $model ) {
+				$value = $id . '|' . $model['id'];
+				echo '<option value="' . esc_attr( $value ) . '"' . selected( $current['provider'] . '|' . $current['model'], $value, false ) . '>' . esc_html( $model['label'] ) . '</option>';
+			}
+			echo '</optgroup>';
+		}
+		echo '</select><p class="description">' . esc_html__( 'Changing this rebuilds the search index of every plugin that uses it.', 'tranzly' ) . '</p></td></tr>';
 	}
 
 	/**
@@ -724,10 +760,18 @@ final class Admin {
 				'model'    => $image[1],
 			)
 			: array();
+		$embed = isset( $posted['embeddings'] ) ? explode( '|', sanitize_text_field( (string) $posted['embeddings'] ), 2 ) : array();
+		$embed = 2 === count( $embed ) && Store::configured( $embed[0] ) && '' !== $embed[1]
+			? array(
+				'provider' => $embed[0],
+				'model'    => $embed[1],
+			)
+			: array();
 		Store::update(
-			static function ( array $record ) use ( $defaults, $image ): array {
-				$record['defaults'] = $defaults;
-				$record['images']   = $image;
+			static function ( array $record ) use ( $defaults, $image, $embed ): array {
+				$record['defaults']   = $defaults;
+				$record['images']     = $image;
+				$record['embeddings'] = $embed;
 				return $record;
 			}
 		);
@@ -853,6 +897,8 @@ final class Admin {
 			if ( $models instanceof Failure ) {
 				self::done( false, '', $models );
 			}
+			Models::image_choices( $provider, true );
+			Models::embedding_choices( $provider, true );
 		}
 		self::done( true, __( 'Model lists refreshed.', 'tranzly' ) );
 	}

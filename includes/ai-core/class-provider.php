@@ -260,6 +260,52 @@ abstract class Provider {
 	}
 
 	/**
+	 * Can this provider embed text (preset flag `embeddings`, 1.2.0)?
+	 *
+	 * @return bool
+	 */
+	public function supports_embeddings(): bool {
+		return ! empty( $this->spec['embeddings'] );
+	}
+
+	/**
+	 * Embedding models this key can use, newest first. Providers that embed override.
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
+	public function embedding_models( string $key ) {
+		unset( $key );
+
+		return array();
+	}
+
+	/**
+	 * Embed texts (1.2.0). Providers that embed override.
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param array<int, string>   $texts   Texts, in order.
+	 * @param array<string, mixed> $options `dimensions` (int), `type` (`document`|`query`).
+	 * @return Result `vectors`: one per text, in order.
+	 */
+	public function embed( string $key, string $model, array $texts, array $options = array() ): Result {
+		unset( $key, $texts, $options );
+
+		return Result::failed( Failure::refused( __( 'This AI provider cannot build a search index. Connect Google Gemini, OpenAI, Mistral or a compatible service for site search.', 'tranzly' ) ), $this->id, $model );
+	}
+
+	/**
+	 * Is this model id an embedding model?
+	 *
+	 * @param string $id Model id.
+	 * @return bool
+	 */
+	protected static function is_embedding_model( string $id ): bool {
+		return 1 === preg_match( '/embed/i', $id );
+	}
+
+	/**
 	 * Can this provider make images (preset flag `images`)?
 	 *
 	 * @return bool

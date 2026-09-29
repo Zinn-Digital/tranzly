@@ -176,6 +176,88 @@ final class Openai_Compatible extends Provider {
 	 * @param string $key API key.
 	 * @return array<int, array{id: string, label: string}>|Failure
 	 */
+	public function embedding_models( string $key ) {
+		if ( ! $this->supports_embeddings() ) {
+			return array();
+		}
+		// OpenRouter lists embedding models on their own path, and those ids need not contain
+		// "embed" (voyage-4, measured 2026-09-29); everywhere else they share the model list.
+		$own                     = isset( $this->spec['embeddings_models_path'] );
+		list( $body, $response ) = $this->call( 'GET', (string) ( $this->spec['embeddings_models_path'] ?? $this->spec['models_path'] ?? '/models' ), $key );
+		if ( null === $body ) {
+			return $response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response );
+		}
+		$ids = array();
+		foreach ( (array) ( $body['data'] ?? array() ) as $row ) {
+			if ( is_array( $row ) && isset( $row['id'] ) && is_string( $row['id'] ) && ( $own || self::is_embedding_model( $row['id'] ) ) ) {
+				$ids[] = $row['id'];
+			}
+		}
+
+		return array_map(
+			static fn( string $id ): array => array(
+				'id'    => $id,
+				'label' => $id,
+			),
+			self::newest_first( $ids )
+		);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param array<int, string>   $texts   Texts.
+	 * @param array<string, mixed> $options Options.
+	 * @return Result
+	 */
+	public function embed( string $key, string $model, array $texts, array $options = array() ): Result {
+		if ( ! $this->supports_embeddings() ) {
+			return parent::embed( $key, $model, $texts, $options );
+		}
+		$body = array(
+			'model' => $model,
+			'input' => array_values( array_map( 'strval', $texts ) ),
+		);
+		// Only providers whose preset says so accept `dimensions` (OpenAI's text-embedding-3
+		// family); sending it elsewhere is a 400, so the vectors come back at their own size.
+		if ( ! empty( $this->spec['embeddings_dimensions'] ) && isset( $options['dimensions'] ) && (int) $options['dimensions'] > 0 && 1 === preg_match( '/text-embedding-3/', $model ) ) {
+			$body['dimensions'] = (int) $options['dimensions'];
+		}
+		list( $data, $response ) = $this->call( 'POST', (string) ( $this->spec['embeddings_path'] ?? '/embeddings' ), $key, $body );
+		if ( null === $data ) {
+			return Result::failed(
+				$response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response, $model ),
+				$this->id,
+				$model
+			);
+		}
+		$rows = array();
+		foreach ( (array) ( $data['data'] ?? array() ) as $position => $row ) {
+			if ( is_array( $row ) && isset( $row['embedding'] ) && is_array( $row['embedding'] ) ) {
+				$rows[ (int) ( $row['index'] ?? $position ) ] = array_map( 'floatval', $row['embedding'] );
+			}
+		}
+		ksort( $rows );
+		$result               = new Result();
+		$result->provider     = $this->id;
+		$result->model        = $model;
+		$result->vectors      = array_values( $rows );
+		$result->input_tokens = (int) ( $data['usage']['prompt_tokens'] ?? $data['usage']['total_tokens'] ?? 0 );
+		if ( count( $result->vectors ) !== count( $texts ) ) {
+			$result->failure = $this->unreadable( $response );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
 	public function image_models( string $key ) {
 		if ( ! $this->supports_images() ) {
 			return array();

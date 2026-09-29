@@ -20,7 +20,9 @@
 		"models_public": false,
 		"error_notes": "Body {error:{message,type,param,code}}. Invalid key: 401 type=invalid_request_error code=invalid_api_key ('Incorrect API key provided'); no key: 401 'Missing bearer authentication in header', code=null. Billing: 429 code=credit_balance_exhausted | organization_spend_limit_exceeded | project_spend_limit_exceeded | organization_usage_limit_exceeded (type may be insufficient_quota) - do NOT retry, switch on error.code not the status. Rate limit: 429 type=rate_limit_error (code slow_down when ramping too fast), honour Retry-After. Overload: 503 type=service_unavailable_error code=server_is_overloaded; 500 server error. 403 = unsupported country/region. max_tokens is deprecated in favour of max_completion_tokens and incompatible with o-series.",
 		"images": true,
-		"images_path": "/images/generations"
+		"images_path": "/images/generations",
+		"embeddings": true,
+		"embeddings_dimensions": true
 	},
 	"anthropic": {
 		"label": "Anthropic (Claude)",
@@ -66,7 +68,8 @@
 		"structured_output_param": "generationConfig.responseJsonSchema (+ responseMimeType 'application/json')",
 		"models_public": false,
 		"error_notes": "Body {error:{code,message,status,details[]}}. Invalid key on generateContent/models: HTTP 400 status=INVALID_ARGUMENT with details[].reason=API_KEY_INVALID (NOT 401) - match on reason. No key: 403 PERMISSION_DENIED 'unregistered callers'. Docs table: 401 authentication, 402 payment_required = Prepay credit balance depleted (do not retry), 400 failed_precondition = e.g. billing disabled, 403 permission_denied. Rate/quota: 429 RESOURCE_EXHAUSTED (rate_limit_exceeded per-minute, quota_exceeded daily). Overload/outage: 503 UNAVAILABLE (service_unavailable), 500 INTERNAL, 504 DEADLINE_EXCEEDED. Model list names are prefixed 'models/' and paginate (pageSize, nextPageToken). maxOutputTokens goes inside generationConfig. responseSchema (OpenAPI subset) is marked deprecated in the API reference; responseJsonSchema accepts standard JSON Schema; a newer generationConfig.responseFormat.text {mimeType, schema} also exists.",
-		"images": true
+		"images": true,
+		"embeddings": true
 	},
 	"mistral": {
 		"label": "Mistral AI",
@@ -87,7 +90,8 @@
 		"structured_output": "json_schema",
 		"structured_output_param": "response_format",
 		"models_public": false,
-		"error_notes": "Invalid or missing key: 401 body {\"detail\":\"Invalid API Key\"} (measured - FastAPI-style, NOT the OpenAI {error:{}} envelope). Mistral publishes no per-status error table in its API reference (measured 2026-09-25); treat 402/429 as billing/rate, 5xx as outage, and parse both {detail} and {message} shapes. response_format supports {type:'json_object'} and {type:'json_schema'}."
+		"error_notes": "Invalid or missing key: 401 body {\"detail\":\"Invalid API Key\"} (measured - FastAPI-style, NOT the OpenAI {error:{}} envelope). Mistral publishes no per-status error table in its API reference (measured 2026-09-25); treat 402/429 as billing/rate, 5xx as outage, and parse both {detail} and {message} shapes. response_format supports {type:'json_object'} and {type:'json_schema'}.",
+		"embeddings": true
 	},
 	"deepseek": {
 		"label": "DeepSeek",
@@ -129,7 +133,9 @@
 		"structured_output": "json_schema",
 		"structured_output_param": "response_format",
 		"models_public": true,
-		"error_notes": "Body {error:{code,message,metadata?}}. Invalid key: 401 (measured body {\"error\":{\"message\":\"User not found.\",\"code\":401}}). 402 insufficient credits (without Retry-After = not a wait-and-retry case). 403 forbidden/guardrail/moderation. 408 timeout. 429 rate limited (Retry-After may be present). 502 chosen model down / invalid upstream response; 503 no provider meets routing requirements. error.metadata.error_type carries a typed code (e.g. payment_required) and provider_code the upstream code (omitted on 5xx). /models is public (200 without a key); use GET /key to validate a key."
+		"error_notes": "Body {error:{code,message,metadata?}}. Invalid key: 401 (measured body {\"error\":{\"message\":\"User not found.\",\"code\":401}}). 402 insufficient credits (without Retry-After = not a wait-and-retry case). 403 forbidden/guardrail/moderation. 408 timeout. 429 rate limited (Retry-After may be present). 502 chosen model down / invalid upstream response; 503 no provider meets routing requirements. error.metadata.error_type carries a typed code (e.g. payment_required) and provider_code the upstream code (omitted on 5xx). /models is public (200 without a key); use GET /key to validate a key.",
+		"embeddings": true,
+		"embeddings_models_path": "/embeddings/models"
 	},
 	"custom": {
 		"label": "Custom (OpenAI-compatible)",
@@ -154,6 +160,7 @@
 		"structured_output": "json_object",
 		"structured_output_param": "response_format",
 		"models_public": true,
-		"error_notes": "Server-dependent. Ollama's OpenAI-compatible API ignores the key (docs: api_key 'required but ignored') and supports /v1/models and response_format; LM Studio serves GET /v1/models and /v1/chat/completions on port 1234. Treat connection refused/timeout as 'server not running' rather than an outage; json_object is the conservative default - json_schema support varies by server and model."
+		"error_notes": "Server-dependent. Ollama's OpenAI-compatible API ignores the key (docs: api_key 'required but ignored') and supports /v1/models and response_format; LM Studio serves GET /v1/models and /v1/chat/completions on port 1234. Treat connection refused/timeout as 'server not running' rather than an outage; json_object is the conservative default - json_schema support varies by server and model.",
+		"embeddings": true
 	}
 }

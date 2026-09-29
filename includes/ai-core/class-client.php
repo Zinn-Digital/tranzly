@@ -36,7 +36,7 @@ final class Client {
 	 * Generate.
 	 *
 	 * @param array<int, array{role: string, content: string|array<int, array<string, string>>}> $messages Conversation. Content may be a list of parts: `{type: text, text}` and `{type: image, mime, data}` (base64), for models that read images (1.1.0).
-	 * @param array<string, mixed>                                                               $options `task`, `purpose` (for the usage log), `provider`, `model`, `schema`, `schema_name`, `max_tokens`, `temperature`.
+	 * @param array<string, mixed>                                                               $options `task`, `purpose` (for the usage log), `provider`, `model`, `schema`, `schema_name`, `max_tokens`, `temperature`, `system` (1.2.0: made by the site, not a person).
 	 * @return Result
 	 */
 	public static function generate( array $messages, array $options = array() ): Result {
@@ -71,6 +71,10 @@ final class Client {
 			'provider' => $provider,
 			'model'    => $model,
 			'user'     => get_current_user_id(),
+			// 1.2.0: a request the SITE makes on nobody's behalf (a visitor's chat answer, a
+			// background index run) is not refused by the "which roles may use AI" rule, which
+			// is about people; spending limits still apply.
+			'system'   => ! empty( $options['system'] ),
 		);
 		$refusal = Core::policy()->check( $context );
 		if ( null !== $refusal ) {
@@ -141,6 +145,10 @@ final class Client {
 			'provider' => $provider,
 			'model'    => $model,
 			'user'     => get_current_user_id(),
+			// 1.2.0: a request the SITE makes on nobody's behalf (a visitor's chat answer, a
+			// background index run) is not refused by the "which roles may use AI" rule, which
+			// is about people; spending limits still apply.
+			'system'   => ! empty( $options['system'] ),
 		);
 		$refusal = Core::policy()->check( $context );
 		if ( null !== $refusal ) {
@@ -151,6 +159,109 @@ final class Client {
 		Core::policy()->record( $context, $result );
 
 		return $result;
+	}
+
+	/**
+	 * Embed texts for search (1.2.0). The site owner's embedding choice decides the provider and
+	 * model; with none saved, the provider of the `general` default is used when it can embed,
+	 * else the first connected provider that can, with its newest embedding model. Texts are sent
+	 * in batches; the vectors come back in input order. Same policy and usage log as text.
+	 *
+	 * @param array<int, string>   $texts   Texts to embed.
+	 * @param array<string, mixed> $options `purpose`, `provider`, `model`, `dimensions`, `type` (`document`|`query`), `batch`, `system`.
+	 * @return Result `vectors`, one per text; `provider`/`model` say what built them.
+	 */
+	public static function embed( array $texts, array $options = array() ): Result {
+		$choice   = self::embedding_choice( $options );
+		$provider = $choice['provider'];
+		$model    = $choice['model'];
+		if ( '' === $provider ) {
+			return Result::failed( Failure::refused( __( 'No connected AI provider can build a search index. Add a Google Gemini, OpenAI, Mistral or OpenRouter key in the AI settings.', 'tranzly' ), Core::settings_url() ) );
+		}
+		if ( '' === $model ) {
+			return Result::failed( Failure::refused( __( 'Your AI key cannot use any embedding model. Check the key\'s permissions with the provider, or choose another provider for site search.', 'tranzly' ), Core::settings_url() ), $provider );
+		}
+		$context = array(
+			'task'     => 'embed',
+			'purpose'  => (string) ( $options['purpose'] ?? 'embed' ),
+			'provider' => $provider,
+			'model'    => $model,
+			'user'     => get_current_user_id(),
+			// 1.2.0: a request the SITE makes on nobody's behalf (a visitor's chat answer, a
+			// background index run) is not refused by the "which roles may use AI" rule, which
+			// is about people; spending limits still apply.
+			'system'   => ! empty( $options['system'] ),
+		);
+		$refusal = Core::policy()->check( $context );
+		if ( null !== $refusal ) {
+			Core::policy()->record( $context, Result::failed( $refusal, $provider, $model ) );
+			return Result::failed( $refusal, $provider, $model );
+		}
+		$adapter = Registry::adapter( $provider, Store::provider( $provider ) );
+		if ( null === $adapter || ! $adapter->supports_embeddings() ) {
+			return Result::failed( Failure::refused( __( 'This AI provider cannot build a search index. Connect Google Gemini, OpenAI, Mistral or a compatible service for site search.', 'tranzly' ) ), $provider, $model );
+		}
+		$size            = max( 1, min( 100, (int) ( $options['batch'] ?? 64 ) ) );
+		$total           = new Result();
+		$total->provider = $provider;
+		$total->model    = $model;
+		$pass            = array(
+			'dimensions' => (int) ( $options['dimensions'] ?? 0 ),
+			'type'       => (string) ( $options['type'] ?? 'document' ),
+		);
+		foreach ( array_chunk( array_values( $texts ), $size ) as $batch ) {
+			$result = $adapter->embed( (string) Store::key( $provider ), $model, $batch, $pass );
+			if ( ! $result->ok() ) {
+				Core::policy()->record( $context, $result );
+				return $result;
+			}
+			$total->input_tokens += $result->input_tokens;
+			foreach ( $result->vectors as $vector ) {
+				$total->vectors[] = $vector;
+			}
+		}
+		Core::policy()->record( $context, $total );
+
+		return $total;
+	}
+
+	/**
+	 * Which provider and model embeddings would use now, without calling anything but a cached
+	 * model list. Callers store it beside their vectors: a change means the index must be rebuilt.
+	 *
+	 * @param array<string, mixed> $options `provider`, `model` overrides.
+	 * @return array{provider: string, model: string}
+	 */
+	public static function embedding_choice( array $options = array() ): array {
+		$saved    = Store::embed_default();
+		$provider = (string) ( $options['provider'] ?? $saved['provider'] );
+		$model    = (string) ( $options['model'] ?? ( $provider === $saved['provider'] ? $saved['model'] : '' ) );
+		if ( '' !== $provider && ! Store::configured( $provider ) ) {
+			$provider = '';
+			$model    = '';
+		}
+		if ( '' === $provider ) {
+			$candidates = array_keys( Registry::all() );
+			$general    = Store::default_for( 'general' )['provider'];
+			if ( '' !== $general ) {
+				array_unshift( $candidates, $general );
+			}
+			foreach ( array_unique( $candidates ) as $id ) {
+				$adapter = Store::configured( $id ) ? Registry::adapter( $id, Store::provider( $id ) ) : null;
+				if ( $adapter && $adapter->supports_embeddings() ) {
+					$provider = $id;
+					break;
+				}
+			}
+		}
+		if ( '' !== $provider && '' === $model ) {
+			$model = (string) ( Models::embedding_choices( $provider )[0]['id'] ?? '' );
+		}
+
+		return array(
+			'provider' => $provider,
+			'model'    => $model,
+		);
 	}
 
 	/**

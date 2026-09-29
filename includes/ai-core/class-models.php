@@ -153,4 +153,39 @@ final class Models {
 
 		return $models;
 	}
+
+	/**
+	 * Embedding models for a provider, newest first (1.2.0). Read live from the provider's own
+	 * model list and cached like the other lists, so a new model appears without a plugin update.
+	 *
+	 * @param string $provider Provider id.
+	 * @param bool   $fresh    Skip the cache.
+	 * @return array<int, array{id: string, label: string}>
+	 */
+	public static function embedding_choices( string $provider, bool $fresh = false ): array {
+		$settings = Store::provider( $provider );
+		$stamp    = md5( 'emb|' . (string) ( $settings['key'] ?? '' ) . '|' . (string) ( $settings['base_url'] ?? '' ) );
+		$cached   = $fresh ? false : get_transient( self::transient( $provider ) . '_emb' );
+		if ( is_array( $cached ) && ( $cached['stamp'] ?? '' ) === $stamp && is_array( $cached['models'] ?? null ) ) {
+			return $cached['models'];
+		}
+		$adapter = Registry::adapter( $provider, $settings );
+		if ( null === $adapter || ! $adapter->supports_embeddings() || ! Store::configured( $provider ) ) {
+			return array();
+		}
+		$models = $adapter->embedding_models( (string) Store::key( $provider ) );
+		if ( $models instanceof Failure ) {
+			return array();
+		}
+		set_transient(
+			self::transient( $provider ) . '_emb',
+			array(
+				'stamp'  => $stamp,
+				'models' => $models,
+			),
+			self::TTL
+		);
+
+		return $models;
+	}
 }

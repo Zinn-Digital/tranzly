@@ -156,6 +156,82 @@ final class Gemini extends Provider {
 	 * @param string $key API key.
 	 * @return array<int, array{id: string, label: string}>|Failure
 	 */
+	public function embedding_models( string $key ) {
+		list( $body, $response ) = $this->call( 'GET', (string) ( $this->spec['models_path'] ?? '/models' ) . '?pageSize=1000', $key );
+		if ( null === $body ) {
+			return $response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response );
+		}
+		$ids = array();
+		foreach ( (array) ( $body['models'] ?? array() ) as $row ) {
+			if ( ! is_array( $row ) || ! isset( $row['name'] ) || ! is_string( $row['name'] ) ) {
+				continue;
+			}
+			if ( ! in_array( 'embedContent', (array) ( $row['supportedGenerationMethods'] ?? array() ), true ) ) {
+				continue;
+			}
+			$ids[] = str_starts_with( $row['name'], 'models/' ) ? substr( $row['name'], 7 ) : $row['name'];
+		}
+
+		return array_map(
+			static fn( string $id ): array => array(
+				'id'    => $id,
+				'label' => $id,
+			),
+			self::newest_first( $ids )
+		);
+	}
+
+	/**
+	 * {@inheritDoc} Uses `batchEmbedContents` (measured 2026-09-29: accepted by
+	 * gemini-embedding-001 and gemini-embedding-2 with `outputDimensionality`).
+	 *
+	 * @param string               $key     API key.
+	 * @param string               $model   Model id.
+	 * @param array<int, string>   $texts   Texts.
+	 * @param array<string, mixed> $options Options.
+	 * @return Result
+	 */
+	public function embed( string $key, string $model, array $texts, array $options = array() ): Result {
+		$requests = array();
+		foreach ( array_values( $texts ) as $text ) {
+			$request = array(
+				'model'    => 'models/' . $model,
+				'content'  => array( 'parts' => array( array( 'text' => (string) $text ) ) ),
+				'taskType' => 'query' === ( $options['type'] ?? 'document' ) ? 'RETRIEVAL_QUERY' : 'RETRIEVAL_DOCUMENT',
+			);
+			if ( isset( $options['dimensions'] ) && (int) $options['dimensions'] > 0 ) {
+				$request['outputDimensionality'] = (int) $options['dimensions'];
+			}
+			$requests[] = $request;
+		}
+		$path                    = str_replace( '{model}', rawurlencode( $model ), (string) ( $this->spec['embeddings_path'] ?? '/models/{model}:batchEmbedContents' ) );
+		list( $data, $response ) = $this->call( 'POST', $path, $key, array( 'requests' => $requests ) );
+		if ( null === $data ) {
+			return Result::failed(
+				$response['status'] >= 200 && $response['status'] < 300 ? $this->unreadable( $response ) : Failure::from_response( $this->id, $response, $model ),
+				$this->id,
+				$model
+			);
+		}
+		$result           = new Result();
+		$result->provider = $this->id;
+		$result->model    = $model;
+		foreach ( (array) ( $data['embeddings'] ?? array() ) as $row ) {
+			$result->vectors[] = is_array( $row ) && isset( $row['values'] ) && is_array( $row['values'] ) ? array_map( 'floatval', $row['values'] ) : array();
+		}
+		if ( count( $result->vectors ) !== count( $texts ) ) {
+			$result->failure = $this->unreadable( $response );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param string $key API key.
+	 * @return array<int, array{id: string, label: string}>|Failure
+	 */
 	public function image_models( string $key ) {
 		if ( ! $this->supports_images() ) {
 			return array();
