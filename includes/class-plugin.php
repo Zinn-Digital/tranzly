@@ -30,6 +30,8 @@ final class Plugin {
 		Blocks::register();
 		Rest::register();
 		Admin::register();
+		// HOSTDISC — offered only on a site Zinn hosts, and never to a site already on Pro.
+		Pro_Discount::register( Admin::SLUG, array( Licensing::class, 'can_use_premium' ) );
 		Freemius_I18n::register();
 		Core\Boot::register();
 		Seo\Seo::register();

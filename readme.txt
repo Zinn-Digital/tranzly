@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.12.0
+Stable tag: 3.13.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,10 @@ The admin screen and editor script are built from the human-readable sources in 
 `npm ci && npm run build`
 
 == External services ==
+
+= Zinn Digital® hosting-customer discount (only on sites Zinn Digital® hosts) =
+
+On a WordPress site hosted by Zinn Digital®, the plugin's screen shows administrators a card offering hosting customers a personal discount code for the Pro edition. Nothing is sent when the page loads. Only when an administrator presses the card's button does the site send one request to Zinn Digital® at `https://api.zinndigital.com/v1/wp/pro-discount/<site id>`, containing the plugin's slug, the word `issue` and the administrator's WordPress language, signed with the site's own key. The address and key come from the `ZINN_UPDATE_URL` (`…/v1/wp/plugin-update/<site id>`) and `ZINN_UPDATE_SECRET` constants the platform writes into wp-config.php; on any other site they do not exist and the card is never shown. The answer is the customer's code and a Freemius checkout link, to which the browser is then sent. Terms: https://zinndigital.com/legal/terms · Privacy policy: https://zinndigital.com/legal/privacy
 
 = Translation services you choose (DeepL, Google Cloud Translation, Microsoft Translator) =
 
@@ -147,6 +151,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.13.0 =
+* On a site hosted by Zinn Digital®, the plugin screen offers hosting customers a personal discount code for their first payment of the Pro edition. Nothing is shown on other sites, and nothing is fetched until you press the button.
 
 = 3.12.0 =
 * The AI settings can now choose a model for site search (embeddings), and the shared AI layer gains the embeddings API that Zinn® Chat uses. Nothing else changes.
