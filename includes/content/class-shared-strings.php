@@ -156,7 +156,9 @@ final class Shared_Strings {
 				$out[ 'site.' . $field ] = $value;
 			}
 		}
-		foreach ( (array) wp_get_sidebars_widgets() as $sidebar => $ids ) {
+		// The stored placement, read directly: wp_get_sidebars_widgets() is a private core function
+		// (Plugin Check forbids it), and the option is what it returns outside the Customizer.
+		foreach ( (array) get_option( 'sidebars_widgets', array() ) as $sidebar => $ids ) {
 			if ( 'wp_inactive_widgets' === $sidebar || ! is_array( $ids ) ) {
 				continue;
 			}

@@ -1,4 +1,4 @@
-=== Tranzly – AI Translation & Multilingual ===
+=== Tranzly ===
 Contributors: zinndigital
 Plugin URI: https://zinndigital.com/wordpress-plugins/tranzly
 Author: Neil Lock — CEO, Zinn Digital® Ltd
@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.16.0
+Stable tag: 3.17.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.17.0 =
+* The plugin's name is Tranzly again in wp-admin (the longer title is the WordPress.org listing's); the site title and widgets list no longer uses a private WordPress function.
 
 = 3.16.0 =
 * Translate categories and tags from their edit screen, image text per language in the Media Library, and the site title, tagline and widgets under Menus and shared text. Pick a language by its name. The status list shows only what you may read.
