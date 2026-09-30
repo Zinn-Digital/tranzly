@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.17.0\n"
+"Project-Id-Version: Tranzly 3.18.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-30T10:13:51+00:00\n"
+"POT-Creation-Date: 2026-09-30T11:19:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -1421,7 +1421,8 @@ msgstr ""
 msgid "List at least one language."
 msgstr ""
 
-#: includes/content/class-content-module.php:75
+#: includes/content/class-content-module.php:76
+#: includes/content/class-post-admin.php:63
 #: includes/content/class-term-admin.php:71
 #: src/editor/translations-panel.js:57
 #: src/editor/translations-panel.js:107
@@ -1429,13 +1430,13 @@ msgid "Translations"
 msgstr ""
 
 #. translators: %s: a language's name.
-#: includes/content/class-content-module.php:88
+#: includes/content/class-content-module.php:89
 #, php-format
 msgid "Edit the %s version"
 msgstr ""
 
 #. translators: %s: a language's name.
-#: includes/content/class-content-module.php:98
+#: includes/content/class-content-module.php:99
 #, php-format
 msgid "Compare the %s version side by side"
 msgstr ""
@@ -1463,6 +1464,68 @@ msgstr ""
 
 #: includes/content/class-menus.php:86
 msgid "Choose one of your menus for each language."
+msgstr ""
+
+#: includes/content/class-post-admin.php:83
+#: src/editor/translations-panel.js:60
+msgid "Save this post first, then translate it here."
+msgstr ""
+
+#: includes/content/class-post-admin.php:97
+#: includes/content/class-term-admin.php:77
+msgid "This one"
+msgstr ""
+
+#: includes/content/class-post-admin.php:103
+#: src/admin/SeoAudit.js:163
+#: src/admin/StatusTab.js:406
+#: src/editor/translations-panel.js:149
+msgid "Edit"
+msgstr ""
+
+#: includes/content/class-post-admin.php:104
+#: src/admin/StatusTab.js:418
+#: src/editor/translations-panel.js:154
+msgid "Side by side"
+msgstr ""
+
+#: includes/content/class-post-admin.php:106
+#: includes/content/class-term-admin.php:84
+msgid "Translate again"
+msgstr ""
+
+#: includes/content/class-post-admin.php:108
+#: includes/content/class-term-admin.php:86
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr ""
+
+#: includes/content/class-post-admin.php:109
+#: includes/content/class-term-admin.php:87
+msgid "Create a copy to translate by hand"
+msgstr ""
+
+#: includes/content/class-post-admin.php:113
+#: includes/content/class-term-admin.php:91
+msgid "Translate uses the engine set for that language. A version a person edited is never overwritten."
+msgstr ""
+
+#: includes/content/class-post-admin.php:151
+#: includes/content/class-term-admin.php:130
+#: includes/core/class-content.php:142
+#: includes/core/class-content.php:237
+#: includes/core/class-translator.php:82
+#: includes/core/class-translator.php:156
+#: includes/core/class-translator.php:246
+msgid "You are not allowed to translate this item."
+msgstr ""
+
+#. translators: %s: a language's name, e.g. Deutsch.
+#: includes/content/class-post-admin.php:162
+#: includes/content/class-term-admin.php:142
+#: src/editor/translations-panel.js:222
+#, php-format,js-format
+msgid "%s: translated."
 msgstr ""
 
 #: includes/content/class-protection.php:129
@@ -1513,43 +1576,6 @@ msgstr ""
 #: includes/content/class-side-by-side.php:288
 #, php-format
 msgid "Piece %s is not part of this translation any more. Reload the page and try again."
-msgstr ""
-
-#: includes/content/class-term-admin.php:77
-msgid "This one"
-msgstr ""
-
-#: includes/content/class-term-admin.php:84
-msgid "Translate again"
-msgstr ""
-
-#: includes/content/class-term-admin.php:86
-#: src/admin/IntegrationsTab.js:656
-msgid "Translate"
-msgstr ""
-
-#: includes/content/class-term-admin.php:87
-msgid "Create a copy to translate by hand"
-msgstr ""
-
-#: includes/content/class-term-admin.php:91
-msgid "Translate uses the engine set for that language. A version a person edited is never overwritten."
-msgstr ""
-
-#: includes/content/class-term-admin.php:130
-#: includes/core/class-content.php:142
-#: includes/core/class-content.php:237
-#: includes/core/class-translator.php:82
-#: includes/core/class-translator.php:156
-#: includes/core/class-translator.php:246
-msgid "You are not allowed to translate this item."
-msgstr ""
-
-#. translators: %s: a language's name, e.g. Deutsch.
-#: includes/content/class-term-admin.php:149
-#: src/editor/translations-panel.js:222
-#, php-format,js-format
-msgid "%s: translated."
 msgstr ""
 
 #: includes/content/pro__premium_only/class-visual-editor.php:55
@@ -5828,6 +5854,10 @@ msgstr ""
 msgid "Blocks with repeated items, and synced patterns"
 msgstr ""
 
+#: includes/integrations/class-woo-products.php:78
+msgid "WooCommerce products"
+msgstr ""
+
 #: includes/integrations/pro__premium_only/class-comments.php:65
 #: src/admin/WorkflowTab.js:695
 msgid "Comments and reviews"
@@ -7734,12 +7764,6 @@ msgstr ""
 msgid "Problem"
 msgstr ""
 
-#: src/admin/SeoAudit.js:163
-#: src/admin/StatusTab.js:406
-#: src/editor/translations-panel.js:149
-msgid "Edit"
-msgstr ""
-
 #. translators: 1: a job number, 2: how many pages it translates.
 #: src/admin/StatusTab.js:103
 #, js-format
@@ -7853,11 +7877,6 @@ msgstr ""
 
 #: src/admin/StatusTab.js:385
 msgid "waiting for review"
-msgstr ""
-
-#: src/admin/StatusTab.js:418
-#: src/editor/translations-panel.js:154
-msgid "Side by side"
 msgstr ""
 
 #: src/admin/StatusTab.js:436
@@ -8402,10 +8421,6 @@ msgstr ""
 
 #: src/editor/translations-model.js:39
 msgid "Not translated yet (a copy)"
-msgstr ""
-
-#: src/editor/translations-panel.js:60
-msgid "Save this post first, then translate it here."
 msgstr ""
 
 #: src/editor/translations-panel.js:159

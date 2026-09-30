@@ -138,27 +138,37 @@ final class Term_Admin {
 			wp_safe_redirect( $back );
 			exit;
 		}
-		$code = (string) Languages::resolve( $lang );
-		$name = $code;
-		foreach ( Languages::all() as $language ) {
-			if ( $code === $language['code'] && '' !== (string) $language['name'] ) {
-				$name = (string) $language['name'];
-			}
-		}
 		/* translators: %s: a language's name, e.g. Deutsch. */
-		self::remember( 'success', sprintf( __( '%s: translated.', 'tranzly' ), $name ) );
+		self::remember( 'success', sprintf( __( '%s: translated.', 'tranzly' ), self::language_name( $lang ) ) );
 		wp_safe_redirect( 'copy' === $how ? (string) get_edit_term_link( (int) $made, $term->taxonomy ) : $back );
 		exit;
 	}
 
 	/**
-	 * Keep an outcome for the next screen this user opens.
+	 * A language's own name ("Deutsch"), or its code when it has none.
+	 *
+	 * @param string $lang A language code, as given.
+	 * @return string
+	 */
+	public static function language_name( string $lang ): string {
+		$code = (string) Languages::resolve( $lang );
+		foreach ( Languages::all() as $language ) {
+			if ( $code === $language['code'] && '' !== (string) $language['name'] ) {
+				return (string) $language['name'];
+			}
+		}
+
+		return '' !== $code ? $code : $lang;
+	}
+
+	/**
+	 * Keep an outcome for the next admin screen this user opens (the term and post screens share it).
 	 *
 	 * @param string $status  `success` or `error`.
 	 * @param string $message Plain text.
 	 * @return void
 	 */
-	private static function remember( string $status, string $message ): void {
+	public static function remember( string $status, string $message ): void {
 		set_transient(
 			'tranzly_term_notice_' . get_current_user_id(),
 			array(

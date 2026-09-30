@@ -45,6 +45,7 @@ require_once __DIR__ . '/content/class-protection.php';
 require_once __DIR__ . '/content/class-rest-editor.php';
 require_once __DIR__ . '/content/class-side-by-side.php';
 require_once __DIR__ . '/content/class-term-admin.php';
+require_once __DIR__ . '/content/class-post-admin.php';
 require_once __DIR__ . '/content/class-media-admin.php';
 require_once __DIR__ . '/content/class-menus.php';
 require_once __DIR__ . '/content/class-menus-rest.php';

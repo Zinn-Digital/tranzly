@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.17.0
+Stable tag: 3.18.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,14 +38,14 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Accessible switchers.** Each switcher is a named navigation landmark, every language is read in its own language, the current one is marked, and the dropdown works from the keyboard. Flags are optional and off by default: a flag is a country, not a language.
 * **Translation that keeps your blocks intact.** Posts are translated block by block: only words change, while structure, code, HTML, shortcodes, links and image addresses stay exactly as they were. Tested on every core block.
 * **Your corrections are protected.** When a person edits a translation, background jobs and re-translation leave it alone until you unlock it.
-* **Translate from the editor.** The block editor's Translations panel, and the admin bar's Translations menu, translate into the languages you tick with one click and link to every version.
+* **Translate from the editor.** The block editor's Translations panel, and the admin bar's Translations menu, translate into the languages you tick with one click and link to every version. Products and anything else edited in the classic editor have a Translations box that does the same, and categories and tags have one on their edit screen.
 * **Side-by-side editor.** Correct a translation piece by piece next to the original, each piece marked machine or human. With Pro, click any translated text on the page itself and correct it there.
 * **Blocks and images per language.** Show any block only in some languages (a German-only offer in the footer), and with Pro use a different image per language.
 * **Menus and shared text.** Menus are translated automatically (their links lead to the translated pages), or use a separate menu per language. With Pro, the text in your block theme's headers, footers, templates and patterns too.
 * **Page Builder Sandwich, deeply.** Every Page Builder Sandwich block translates, including the text inside repeated items (tabs, cards, price rows), widgets placed on a page, saved sections and synced patterns, which show in the visitor's language.
 * **Translation status at a glance.** For every language: what is translated, missing, out of date or corrected by a person, with one click to translate everything missing or out of date in the background.
 * **Other page builders (Pro).** Elementor, Beaver Builder, Bricks, Divi (4 and 5), Oxygen and WPBakery: only visible text is translated; every setting, link and layout stays as it was. (Bricks, Divi, Oxygen and WPBakery are tested against stand-ins of their documented storage formats.)
-* **WooCommerce, all of it (Pro).** Products, variations, attributes, categories, the shop, cart, checkout and account pages, the checkout and payment texts, and every customer e-mail, sent in the language the order was placed in. Stock and prices stay the same in every language.
+* **WooCommerce products, complete.** A product translates like any other content, in every edition, from its own edit screen: title, description, short description, categories and tags, and the new translation carries the product's price, sale price, SKU, stock, tax settings, gallery and downloads, so it can be bought straight away. With Pro: price and stock kept in step across languages after that, variations, attributes, the shop, cart, checkout and account pages, the checkout and payment texts, and every customer e-mail, sent in the language the order was placed in.
 * **Prices in the visitor's currency (Pro).** Per language, per country or chosen by the visitor, with your own rounding, and rates you set or the European Central Bank's, updated daily.
 * **SEO fields (Pro).** Titles, descriptions, social titles and focus keywords of Yoast SEO, Rank Math, SEOPress and All in One SEO, for posts and categories; their variables (%%sitename%%, %title%, #site_title) are kept.
 * **Custom fields (Pro).** ACF, Meta Box and Pods fields, with a choice per field: translate it, copy it, or leave it empty.
@@ -149,6 +149,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.18.0 =
+* The block inserter offers one Language switcher (the first release's reference block stays for pages that use it, hidden from the list).
 
 = 3.17.0 =
 * The plugin's name is Tranzly again in wp-admin (the longer title is the WordPress.org listing's); the site title and widgets list no longer uses a private WordPress function.

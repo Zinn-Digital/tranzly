@@ -40,6 +40,7 @@ final class Content_Module {
 		Menus_Rest::register();
 		Shared_Strings::register();
 		Term_Admin::register();
+		Post_Admin::register();
 		Media_Admin::register();
 		Visibility::register();
 		add_action( 'admin_bar_menu', array( self::class, 'admin_bar' ), 90 );

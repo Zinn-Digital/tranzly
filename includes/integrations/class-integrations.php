@@ -105,7 +105,7 @@ final class Integrations {
 	 */
 	public static function all(): array {
 		if ( null === self::$all ) {
-			$list = array( new Pbs(), new Nested_Blocks() );
+			$list = array( new Pbs(), new Nested_Blocks(), new Woo_Products() );
 			$pro  = __DIR__ . '/pro_' . '_premium_only'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- the free package must not carry the premium token (CONTRACT §3).
 			if ( is_readable( $pro . '/class-load.php' ) && Edition::pro() ) {
 				require_once $pro . '/class-load.php';

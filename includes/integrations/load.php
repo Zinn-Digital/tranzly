@@ -19,4 +19,5 @@ require_once __DIR__ . '/class-text.php';
 require_once __DIR__ . '/class-integration.php';
 require_once __DIR__ . '/class-nested-blocks.php';
 require_once __DIR__ . '/class-pbs.php';
+require_once __DIR__ . '/class-woo-products.php';
 require_once __DIR__ . '/class-integrations.php';
