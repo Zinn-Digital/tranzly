@@ -45,7 +45,10 @@ final class Network {
 	 * @return bool
 	 */
 	public static function enabled(): bool {
-		$agency = function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code() && tranzly_fs()->is_plan( 'agency' );
+		// ⛔ Ask the admin kit, never the SDK's is_plan(): that ranks plans by store position, and
+		// the legacy plan (11459) predates Agency, so an unlimited legacy licence would never be
+		// Agency here although D34 makes it one (docs/843; LegacyAgencyGateTest).
+		$agency = 'agency' === \ZinnDigital\Tranzly\AdminKit\Licence::tier();
 
 		/**
 		 * Filters whether the multisite network layer is on.

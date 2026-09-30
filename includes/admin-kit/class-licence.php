@@ -311,7 +311,10 @@ final class Licence {
 		if ( false === $ends || $ends > time() + 30 * DAY_IN_SECONDS ) {
 			return null;
 		}
-		$subscription = method_exists( $fs, '_get_subscription' ) ? $fs->_get_subscription() : null;
+		// ⛔ The SDK's _get_subscription() REQUIRES the licence id: called bare it throws
+		// ArgumentCountError, which was a fatal on the admin screen for every licence within 30
+		// days of its end (AdminKitRenewalTest, measured on real WordPress 2026-09-30).
+		$subscription = method_exists( $fs, '_get_subscription' ) && isset( $licence->id ) ? $fs->_get_subscription( $licence->id ) : null;
 		if ( is_object( $subscription ) && method_exists( $subscription, 'is_active' ) && $subscription->is_active() ) {
 			return null; // It renews by itself.
 		}
