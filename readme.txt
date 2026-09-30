@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.14.0
+Stable tag: 3.15.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.15.0 =
+* The Tranzly menu now sits below Settings; the licensing SDK uses the plugin's own icon, so nothing is fetched before you opt in.
 
 = 3.14.0 =
 * Legacy licences: an unlimited legacy licence is Agency everywhere (Tranzly multisite network layer; PBS white label, client review, network); no more error on the plugin screen for a licence within 30 days of its end.

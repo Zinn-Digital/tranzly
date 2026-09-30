@@ -58,7 +58,10 @@ final class Admin {
 			self::SLUG,
 			array( self::class, 'render' ),
 			'dashicons-translation',
-			59
+			// ⛔ Below Settings (80), never higher: WordPress.org's 2026-09-25 closure notice listed a
+			// high menu position (T-6, docs/plugins-overhaul/02-wporg-closure-notices.md), and the
+			// re-review is one shot. wp/tests/e2e/tranzly/wporg-closure.sh asserts it.
+			81
 		);
 	}
 
