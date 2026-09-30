@@ -16,6 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Pure: every input is an argument, so the unit suite runs the exact code the import runs.
  *
+ * ⭐ Tranzly 1.x (1.0.1-1.1.1, measured on the wordpress.org 1.1.1 zip, TRZ-ASSETS 2026-09-30) wrote
+ * the SAME shapes under a `tranzly_` prefix instead of `cn_`: `tranzly_mylang`,
+ * `tranzly_post_translated_to` (edges keyed `tranzly_child_post_id`) and
+ * `tranzly_post_translated_to_from` (edges keyed `tranzly_parent_post_id`); the scalars
+ * `translated_from` / `translated_to` and `deepl_translated` are shared. Before 3.18.2 only the
+ * `cn_` names were read, so a 1.x site upgraded with every translation group dropped.
+ *
  * ⭐ WHAT THE LEGACY DATA ACTUALLY LOOKS LIKE (11-audit-tranzly.md §1, §7, and the fixture made by
  * the real legacy plugin, /home/zinn/plugins-overhaul/fixtures/tranzly-free-2.0.0):
  *
@@ -228,6 +235,7 @@ final class Legacy_Graph {
 		);
 		switch ( $key ) {
 			case 'cn_mylang':
+			case 'tranzly_mylang':
 				if ( '' === $fact['lang'] && is_scalar( $value ) ) {
 					$fact['lang'] = (string) $value;
 				}
@@ -243,16 +251,20 @@ final class Legacy_Graph {
 				}
 				break;
 			case 'cn_post_translated_to':
+			case 'tranzly_post_translated_to':
+				$id = 'cn_post_translated_to' === $key ? 'cn_child_post_id' : 'tranzly_child_post_id';
 				foreach ( is_array( $value ) ? $value : array() as $edge ) {
-					if ( is_array( $edge ) && isset( $edge['cn_child_post_id'] ) ) {
-						$fact['children'][ (int) $edge['cn_child_post_id'] ] = (string) ( $edge['translated_to'] ?? '' );
+					if ( is_array( $edge ) && isset( $edge[ $id ] ) ) {
+						$fact['children'][ (int) $edge[ $id ] ] = (string) ( $edge['translated_to'] ?? '' );
 					}
 				}
 				break;
 			case 'cn_post_translated_to_from':
+			case 'tranzly_post_translated_to_from':
+				$id = 'cn_post_translated_to_from' === $key ? 'cn_parent_post_id' : 'tranzly_parent_post_id';
 				foreach ( is_array( $value ) ? $value : array() as $edge ) {
-					if ( is_array( $edge ) && isset( $edge['cn_parent_post_id'] ) ) {
-						$fact['parents'][ (int) $edge['cn_parent_post_id'] ] = (string) ( $edge['translated_from'] ?? '' );
+					if ( is_array( $edge ) && isset( $edge[ $id ] ) ) {
+						$fact['parents'][ (int) $edge[ $id ] ] = (string) ( $edge['translated_from'] ?? '' );
 					}
 				}
 				break;

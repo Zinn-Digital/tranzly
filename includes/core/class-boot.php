@@ -139,7 +139,7 @@ final class Boot {
 	public static function uninstall(): void {
 		global $wpdb;
 		Schema::uninstall();
-		foreach ( array( Options::OPTION, Secrets::OPTION, Legacy_Import::OPTION, Legacy_Import::STATUS_OPTION, Engine_Settings::OPTION, Engine_Settings::SPEND, Glossary::OPTION, 'tranzly_deepl_glossaries' ) as $option ) {
+		foreach ( array( Options::OPTION, Secrets::OPTION, Legacy_Import::OPTION, Legacy_Import::STATUS_OPTION, Legacy_Import::FORMAT_OPTION, 'tranzly_legacy_widgets', Engine_Settings::OPTION, Engine_Settings::SPEND, Glossary::OPTION, 'tranzly_deepl_glossaries' ) as $option ) {
 			delete_option( $option );
 		}
 		$like = $wpdb->esc_like( 'tranzly_strings_' ) . '%';

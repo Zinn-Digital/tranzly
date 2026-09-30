@@ -54,8 +54,20 @@ final class Legacy_Import {
 	/** Post meta marking a post the legacy plugin produced as a translation (see `apply_group()`). */
 	public const STATUS_META = '_tranzly_translation_status';
 
-	/** The legacy meta keys that carry language data. */
-	public const KEYS = array( 'cn_mylang', 'translated_from', 'translated_to', 'cn_post_translated_to', 'cn_post_translated_to_from', 'deepl_translated' );
+	/** The legacy meta keys that carry language data: 2.x (`cn_*`) and 1.x (`tranzly_*`, see Legacy_Graph). */
+	public const KEYS = array( 'cn_mylang', 'translated_from', 'translated_to', 'cn_post_translated_to', 'cn_post_translated_to_from', 'deepl_translated', 'tranzly_mylang', 'tranzly_post_translated_to', 'tranzly_post_translated_to_from' );
+
+	/** The 1.x keys an import before FORMAT 2 did not read. */
+	public const V1_KEYS = array( 'tranzly_mylang', 'tranzly_post_translated_to', 'tranzly_post_translated_to_from' );
+
+	/**
+	 * What the import reads. 2 = the 1.x keys too (3.18.2). A site whose import finished at an
+	 * older format and holds 1.x rows is imported again once (`maybe_rescan()`).
+	 */
+	public const FORMAT = 2;
+
+	/** Autoloaded: the format the site's import last ran at, so the check costs no query. */
+	public const FORMAT_OPTION = 'tranzly_legacy_import_format';
 
 	/** Rows read per collect query: a bound on ONE query's size, not on the work (see above). */
 	private const BATCH = 500;
@@ -80,6 +92,10 @@ final class Legacy_Import {
 	 */
 	public static function maybe_start(): void {
 		$status = get_option( self::STATUS_OPTION, false );
+		if ( in_array( $status, array( 'none', 'done' ), true ) && (int) get_option( self::FORMAT_OPTION, 1 ) < self::FORMAT ) {
+			self::maybe_rescan( (string) $status );
+			return;
+		}
 		if ( in_array( $status, array( 'none', 'done', 'undone' ), true ) ) {
 			return;
 		}
@@ -99,6 +115,45 @@ final class Legacy_Import {
 	}
 
 	/**
+	 * Once per site, when the import finished (or found nothing) before it read the 1.x keys: if
+	 * the site holds 1.x rows, read everything again. Safe to repeat — `apply_group()` is
+	 * idempotent — and it keeps what undo needs (the options snapshot, the languages as they were
+	 * before the FIRST import): the legacy options were already moved, so they are not re-read.
+	 * An `undone` import is never restarted: the owner of the site chose to undo it.
+	 *
+	 * @param string $status `none` or `done`.
+	 * @return void
+	 */
+	public static function maybe_rescan( string $status ): void {
+		global $wpdb;
+		update_option( self::FORMAT_OPTION, self::FORMAT, true );
+		$has_v1 = null !== $wpdb->get_var(
+			$wpdb->prepare(
+				'SELECT meta_id FROM %i WHERE meta_key IN (' . implode( ',', array_fill( 0, count( self::V1_KEYS ), '%s' ) ) . ') LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
+				array_merge( array( $wpdb->postmeta ), self::V1_KEYS )
+			)
+		);
+		if ( ! $has_v1 ) {
+			return;
+		}
+		if ( 'none' === $status ) {
+			self::begin();
+			self::schedule();
+			return;
+		}
+		$state = self::state();
+		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', Schema::tables()['staging'] ) );
+		$state['status']         = 'collecting';
+		$state['cursor']         = 0;
+		$state['applied']        = 0;
+		$state['skipped']        = array();
+		$state['languages_done'] = false;
+		$state['rescan_gmt']     = gmdate( 'c' );
+		self::save_state( $state );
+		self::schedule();
+	}
+
+	/**
 	 * Is there any legacy data on this site?
 	 *
 	 * @return bool
@@ -111,10 +166,19 @@ final class Legacy_Import {
 
 		return null !== $wpdb->get_var(
 			$wpdb->prepare(
-				"SELECT meta_id FROM {$wpdb->postmeta} WHERE meta_key IN (%s,%s,%s,%s,%s,%s) OR meta_key LIKE %s LIMIT 1",
+				"SELECT meta_id FROM {$wpdb->postmeta} WHERE meta_key IN (" . self::key_placeholders() . ') OR meta_key LIKE %s LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%' ) )
 			)
 		);
+	}
+
+	/**
+	 * `%s,%s,...`, one per KEYS entry.
+	 *
+	 * @return string
+	 */
+	private static function key_placeholders(): string {
+		return implode( ',', array_fill( 0, count( self::KEYS ), '%s' ) );
 	}
 
 	/**
@@ -141,6 +205,7 @@ final class Legacy_Import {
 	public static function begin(): void {
 		global $wpdb;
 		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', Schema::tables()['staging'] ) );
+		update_option( self::FORMAT_OPTION, self::FORMAT, true );
 		self::save_state(
 			array(
 				'status'      => 'collecting',
@@ -282,7 +347,7 @@ final class Legacy_Import {
 
 		return (array) $wpdb->get_results(
 			$wpdb->prepare(
-				"SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value FROM {$wpdb->postmeta} m INNER JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE m.meta_id > %d AND p.post_type <> 'revision' AND ( m.meta_key IN (%s,%s,%s,%s,%s,%s) OR m.meta_key LIKE %s ) ORDER BY m.meta_id ASC LIMIT %d",
+				"SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value FROM {$wpdb->postmeta} m INNER JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE m.meta_id > %d AND p.post_type <> 'revision' AND ( m.meta_key IN (" . self::key_placeholders() . ') OR m.meta_key LIKE %s ) ORDER BY m.meta_id ASC LIMIT %d', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( array( $cursor ), self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%', self::BATCH ) )
 			),
 			ARRAY_A
@@ -349,9 +414,12 @@ final class Legacy_Import {
 		$plan = self::plan( $facts );
 
 		if ( empty( $state['languages_done'] ) ) {
-			$state['languages_before'] = Languages::all();
-			$listed                    = $state['languages_before'];
-			$codes                     = array_map( static fn( $l ) => strtolower( $l['code'] ), $listed );
+			if ( ! isset( $state['languages_before'] ) || ! is_array( $state['languages_before'] ) ) {
+				$state['languages_before'] = Languages::all(); // Kept across a rescan: undo restores the list as it was before the FIRST import.
+			}
+			$listed = Languages::all();
+			$count  = count( $listed );
+			$codes  = array_map( static fn( $l ) => strtolower( $l['code'] ), $listed );
 			foreach ( $plan['languages'] as $code ) {
 				if ( ! in_array( strtolower( $code ), $codes, true ) && Settings::is_valid_code( $code ) ) {
 					$listed[] = array(
@@ -360,7 +428,7 @@ final class Legacy_Import {
 					);
 				}
 			}
-			if ( count( $listed ) !== count( $state['languages_before'] ) ) {
+			if ( count( $listed ) !== $count ) {
 				Settings::save( array( 'languages' => $listed ) );
 			}
 			$state['languages_done'] = true;

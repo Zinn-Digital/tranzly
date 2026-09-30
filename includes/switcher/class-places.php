@@ -43,6 +43,8 @@ final class Places {
 		add_action( 'init', array( self::class, 'register_block' ) );
 		add_shortcode( self::SHORTCODE, array( self::class, 'shortcode' ) );
 		add_action( 'widgets_init', array( self::class, 'register_widget' ) );
+		require_once __DIR__ . '/class-legacy-widgets.php';
+		add_action( 'plugins_loaded', array( Legacy_Widgets::class, 'maybe_migrate' ), 30 );
 		add_filter( 'wp_nav_menu_objects', array( self::class, 'expand_menu_items' ), 20, 1 );
 		add_filter( 'nav_menu_link_attributes', array( self::class, 'menu_link_attributes' ), 20, 2 );
 		add_action( 'admin_head-nav-menus.php', array( self::class, 'add_menu_meta_box' ) );
