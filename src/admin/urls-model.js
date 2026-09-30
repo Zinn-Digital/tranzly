@@ -34,32 +34,37 @@ export function isValidSegment( segment ) {
 }
 
 /**
- * The URL modes, with the Pro ones disabled in the free edition.
+ * The URL modes. The Pro ones (subdomain, separate domain) are offered only with Pro: the free
+ * edition shows no locked option (WordPress.org guideline 5, closure item T-2); the plan
+ * comparison is where a free user reads what Pro adds.
  *
  * @param {boolean} pro Whether Pro is active.
  * @return {Array<Object>} RadioControl options.
  */
 export function modeOptions( pro ) {
-	const proSuffix = pro ? '' : ' ' + __( '(Pro)', 'tranzly' );
 	return [
 		{
 			value: 'directory',
 			label: __( 'A folder per language: example.com/de/', 'tranzly' ),
 		},
-		{
-			value: 'subdomain',
-			label:
-				__( 'A subdomain per language: de.example.com', 'tranzly' ) +
-				proSuffix,
-			disabled: ! pro,
-		},
-		{
-			value: 'domain',
-			label:
-				__( 'A separate domain per language: example.de', 'tranzly' ) +
-				proSuffix,
-			disabled: ! pro,
-		},
+		...( pro
+			? [
+					{
+						value: 'subdomain',
+						label: __(
+							'A subdomain per language: de.example.com',
+							'tranzly'
+						),
+					},
+					{
+						value: 'domain',
+						label: __(
+							'A separate domain per language: example.de',
+							'tranzly'
+						),
+					},
+				]
+			: [] ),
 		{
 			value: 'query',
 			label: __(

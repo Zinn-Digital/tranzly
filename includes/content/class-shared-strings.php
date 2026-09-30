@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * already loads (Core\Strings). Human edits are recorded in `tranzly_string_states` (admin-only)
  * and never overwritten by a machine (tz-r1), exactly like a post.
  *
- * `GET|POST tranzly/v1/shared-strings?lang=&scope=menus|templates` lists the texts with their
+ * `GET|POST tranzly/v1/shared-strings?lang=&scope=menus|site|templates` lists the texts with their
  * translations and states, translates the missing ones with the site's engine (`POST`, in pages of
  * 50 with a cursor — no cap on how many pages), and `PUT` saves a person's corrections.
  */
@@ -64,9 +64,9 @@ final class Shared_Strings {
 				 * Filters the shared-text scopes (lane L06, T6: integrations add `woocommerce`,
 				 * `forms` and `theme`; their texts come in on `tranzly_shared_strings`).
 				 *
-				 * @param array<int, string> $scopes `menus`, `templates`.
+				 * @param array<int, string> $scopes `menus`, `site`, `templates`.
 				 */
-				'enum'    => array_values( array_unique( (array) apply_filters( 'tranzly_shared_string_scopes', array( 'menus', 'templates' ) ) ) ),
+				'enum'    => array_values( array_unique( (array) apply_filters( 'tranzly_shared_string_scopes', array( 'menus', 'site', 'templates' ) ) ) ),
 				'default' => 'menus',
 			),
 		);
@@ -123,14 +123,66 @@ final class Shared_Strings {
 	 * @return array<string, string>
 	 */
 	public static function sources( string $scope ): array {
+		$own = array();
+		if ( 'menus' === $scope ) {
+			$own = self::menu_sources();
+		} elseif ( 'site' === $scope ) {
+			$own = self::site_sources();
+		}
+
 		/**
 		 * Filters the shared texts Tranzly translates as strings, per scope. The Pro layer adds
 		 * block templates, template parts and patterns to `templates`.
 		 *
 		 * @param array<string, string> $sources Key => source text.
-		 * @param string                $scope   `menus` or `templates`.
+		 * @param string                $scope   `menus`, `site` or `templates`.
 		 */
-		return (array) apply_filters( 'tranzly_shared_strings', 'menus' === $scope ? self::menu_sources() : array(), $scope );
+		return (array) apply_filters( 'tranzly_shared_strings', $own, $scope );
+	}
+
+	/**
+	 * The site title, the tagline and the text of every widget placed in a sidebar (tz-c13), keyed
+	 * as Core\Strings applies them on the front end (`site.<option>`, `widget.<id>.<field>`).
+	 * Widget text and content are HTML; a title is plain text. Inactive widgets are left out: a
+	 * visitor never reads them.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public static function site_sources(): array {
+		$out = array();
+		foreach ( Strings::SITE_FIELDS as $field ) {
+			$value = trim( (string) get_option( $field ) );
+			if ( '' !== $value && Block_Parser::has_words( $value ) ) {
+				$out[ 'site.' . $field ] = $value;
+			}
+		}
+		foreach ( (array) wp_get_sidebars_widgets() as $sidebar => $ids ) {
+			if ( 'wp_inactive_widgets' === $sidebar || ! is_array( $ids ) ) {
+				continue;
+			}
+			foreach ( $ids as $id ) {
+				if ( ! is_string( $id ) || 1 !== preg_match( '/^([a-z0-9_-]{1,100})-([0-9]{1,9})$/', $id, $m ) ) {
+					continue;
+				}
+				$instances = get_option( 'widget_' . $m[1] );
+				$instance  = is_array( $instances ) ? ( $instances[ (int) $m[2] ] ?? null ) : null;
+				if ( ! is_array( $instance ) ) {
+					continue;
+				}
+				foreach ( array( 'title', 'text', 'content' ) as $field ) {
+					$value = $instance[ $field ] ?? null;
+					if ( ! is_string( $value ) || ! Block_Parser::has_words( wp_strip_all_tags( $value ) ) ) {
+						continue;
+					}
+					$out[ 'widget.' . $id . '.' . $field ] = 'title' === $field ? $value : array(
+						'text'   => $value,
+						'format' => 'html',
+					);
+				}
+			}
+		}
+
+		return $out;
 	}
 
 	/**

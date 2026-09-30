@@ -44,6 +44,8 @@ require_once __DIR__ . '/content/class-block-parser.php';
 require_once __DIR__ . '/content/class-protection.php';
 require_once __DIR__ . '/content/class-rest-editor.php';
 require_once __DIR__ . '/content/class-side-by-side.php';
+require_once __DIR__ . '/content/class-term-admin.php';
+require_once __DIR__ . '/content/class-media-admin.php';
 require_once __DIR__ . '/content/class-menus.php';
 require_once __DIR__ . '/content/class-menus-rest.php';
 require_once __DIR__ . '/content/class-shared-strings.php';

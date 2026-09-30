@@ -254,6 +254,13 @@ final class Status {
 		$items = array();
 		foreach ( $rows as $row ) {
 			$source = (int) $row['ID'];
+			// ⛔ The list is open to anyone who may edit posts, and the page query reads every
+			// status: a contributor must not learn the titles of other people's drafts or private
+			// pages (L07 adversarial sweep, wp/tests/e2e/tranzly/endpoints.spec.mjs). The cursor
+			// still advances past a skipped row, so paging is unchanged.
+			if ( ! current_user_can( 'read_post', $source ) ) {
+				continue;
+			}
 			$target = null === $row['target'] ? 0 : (int) $row['target'];
 			$score  = null === $row['score'] ? null : (int) $row['score'];
 			$state  = 'missing';

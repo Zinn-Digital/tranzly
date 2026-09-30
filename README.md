@@ -1,4 +1,4 @@
-# Tranzly
+# Tranzly – AI Translation & Multilingual
 
 Multilingual WordPress, one post per language: linked translations of posts, pages, terms, media, widgets and the site title.
 
@@ -15,7 +15,7 @@ Both are the same file. The download page is the canonical one: it is served fro
 
 | | |
 |---|---|
-| Version | `3.15.0` |
+| Version | `3.16.0` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |

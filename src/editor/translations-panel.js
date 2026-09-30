@@ -66,6 +66,11 @@ function TranslationsPanel() {
 		);
 	}
 
+	// A result names the language as the list above does ("Deutsch"), never by its code.
+	const nameOf = ( code ) =>
+		( ( data && data.languages ) || [] ).find( ( l ) => l.code === code )
+			?.name || code;
+
 	const translate = async () => {
 		const out = [];
 		for ( const code of picked ) {
@@ -131,7 +136,7 @@ function TranslationsPanel() {
 									/>
 								) : (
 									<strong>{ row.name }</strong>
-								) }
+								) }{ ' ' }
 								<span className="tranzly-editor__state">
 									{ busy === row.code ? (
 										<Spinner />
@@ -213,11 +218,11 @@ function TranslationsPanel() {
 						>
 							{ r.ok
 								? sprintf(
-										/* translators: %s: a language code. */
+										/* translators: %s: a language's name, e.g. Deutsch. */
 										__( '%s: translated.', 'tranzly' ),
-										r.code
+										nameOf( r.code )
 									)
-								: `${ r.code }: ${ r.message }` }
+								: `${ nameOf( r.code ) }: ${ r.message }` }
 						</Notice>
 					) ) }
 				</>

@@ -3,6 +3,7 @@ import { useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import {
 	Button,
+	ComboboxControl,
 	ExternalLink,
 	Flex,
 	FlexItem,
@@ -16,6 +17,7 @@ import {
 import About from './About';
 import { isValidPrefix } from './prefix';
 import { addLanguage, isValidCode } from './languages';
+import { localeOptions } from './locale-options';
 
 /**
  * The admin screen.
@@ -151,6 +153,27 @@ export default function App( { data } ) {
 								</li>
 							) ) }
 						</ul>
+						<ComboboxControl
+							__next40pxDefaultSize
+							label={ __( 'Find a language', 'tranzly' ) }
+							help={ __(
+								'Type its name in your language or in its own, then choose it. The code and name below fill in by themselves.',
+								'tranzly'
+							) }
+							value={ isValidCode( newCode ) ? newCode : null }
+							options={ localeOptions(
+								languages,
+								document.documentElement.lang
+							) }
+							onChange={ ( code ) => {
+								const picked = localeOptions(
+									languages,
+									document.documentElement.lang
+								).find( ( option ) => option.value === code );
+								setNewCode( code || '' );
+								setNewName( picked ? picked.name : '' );
+							} }
+						/>
 						<Flex align="flex-end">
 							<FlexItem>
 								<TextControl

@@ -2,25 +2,21 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.15.0\n"
+"Project-Id-Version: Tranzly – AI Translation & Multilingual 3.16.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-30T08:03:30+00:00\n"
+"POT-Creation-Date: 2026-09-30T09:59:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
 
 #. Plugin Name of the plugin
 #: tranzly.php
-#: includes/class-admin.php:55
-#: includes/class-admin.php:56
-#: includes/class-admin.php:84
-#: includes/class-admin.php:89
-msgid "Tranzly"
+msgid "Tranzly – AI Translation & Multilingual"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -862,7 +858,7 @@ msgstr ""
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
 #: src/admin-kit/Support.js:605
-#: src/admin/App.js:147
+#: src/admin/App.js:149
 #: src/admin/IntegrationsTab.js:465
 msgid "Remove"
 msgstr ""
@@ -1361,6 +1357,13 @@ msgstr ""
 msgid "Choose one of the site's other languages."
 msgstr ""
 
+#: includes/class-admin.php:55
+#: includes/class-admin.php:56
+#: includes/class-admin.php:84
+#: includes/class-admin.php:89
+msgid "Tranzly"
+msgstr ""
+
 #: includes/class-admin.php:86
 msgid "The admin screen's scripts are missing from this copy of the plugin. Reinstall it from a released package."
 msgstr ""
@@ -1421,22 +1424,44 @@ msgstr ""
 msgid "List at least one language."
 msgstr ""
 
-#: includes/content/class-content-module.php:73
+#: includes/content/class-content-module.php:75
+#: includes/content/class-term-admin.php:71
 #: src/editor/translations-panel.js:57
-#: src/editor/translations-panel.js:102
+#: src/editor/translations-panel.js:107
 msgid "Translations"
 msgstr ""
 
 #. translators: %s: a language's name.
-#: includes/content/class-content-module.php:86
+#: includes/content/class-content-module.php:88
 #, php-format
 msgid "Edit the %s version"
 msgstr ""
 
 #. translators: %s: a language's name.
-#: includes/content/class-content-module.php:96
+#: includes/content/class-content-module.php:98
 #, php-format
 msgid "Compare the %s version side by side"
+msgstr ""
+
+#. translators: 1: a field such as "Alternative text", 2: a language's name, e.g. Deutsch.
+#: includes/content/class-media-admin.php:61
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: includes/content/class-media-admin.php:120
+msgid "Alternative text"
+msgstr ""
+
+#: includes/content/class-media-admin.php:122
+msgid "Caption"
+msgstr ""
+
+#: includes/content/class-media-admin.php:123
+#: includes/freemius-strings.php:2540
+#: includes/freemius-strings.php:5520
+#: includes/switcher/class-widget.php:81
+msgid "Title"
 msgstr ""
 
 #: includes/content/class-menus.php:86
@@ -1452,18 +1477,18 @@ msgid "This kind of content is not translated."
 msgstr ""
 
 #. translators: %s: an internal text identifier.
-#: includes/content/class-shared-strings.php:286
+#: includes/content/class-shared-strings.php:338
 #, php-format
 msgid "Text %s is not on this site any more. Reload the page."
 msgstr ""
 
-#: includes/content/class-shared-strings.php:343
+#: includes/content/class-shared-strings.php:395
 msgid "No translation engine could take this text."
 msgstr ""
 
-#: includes/content/class-shared-strings.php:387
+#: includes/content/class-shared-strings.php:439
 #: includes/workflow/class-status.php:250
-#: includes/workflow/class-status.php:304
+#: includes/workflow/class-status.php:311
 #: includes/workflow/pro__premium_only/class-bulk.php:134
 #: includes/workflow/pro__premium_only/class-exchange.php:122
 #: includes/workflow/pro__premium_only/class-quality.php:127
@@ -1493,16 +1518,45 @@ msgstr ""
 msgid "Piece %s is not part of this translation any more. Reload the page and try again."
 msgstr ""
 
-#: includes/content/pro__premium_only/class-visual-editor.php:55
-msgid "Translate on this page"
+#: includes/content/class-term-admin.php:77
+msgid "This one"
 msgstr ""
 
+#: includes/content/class-term-admin.php:84
+msgid "Translate again"
+msgstr ""
+
+#: includes/content/class-term-admin.php:86
+#: src/admin/IntegrationsTab.js:656
+msgid "Translate"
+msgstr ""
+
+#: includes/content/class-term-admin.php:87
+msgid "Create a copy to translate by hand"
+msgstr ""
+
+#: includes/content/class-term-admin.php:91
+msgid "Translate uses the engine set for that language. A version a person edited is never overwritten."
+msgstr ""
+
+#: includes/content/class-term-admin.php:130
 #: includes/core/class-content.php:142
 #: includes/core/class-content.php:237
 #: includes/core/class-translator.php:82
 #: includes/core/class-translator.php:156
 #: includes/core/class-translator.php:246
 msgid "You are not allowed to translate this item."
+msgstr ""
+
+#. translators: %s: a language's name, e.g. Deutsch.
+#: includes/content/class-term-admin.php:149
+#: src/editor/translations-panel.js:222
+#, php-format,js-format
+msgid "%s: translated."
+msgstr ""
+
+#: includes/content/pro__premium_only/class-visual-editor.php:55
+msgid "Translate on this page"
 msgstr ""
 
 #: includes/core/class-content.php:150
@@ -5023,12 +5077,6 @@ msgstr ""
 msgid "Timestamp"
 msgstr ""
 
-#: includes/freemius-strings.php:2540
-#: includes/freemius-strings.php:5520
-#: includes/switcher/class-widget.php:81
-msgid "Title"
-msgstr ""
-
 #: includes/freemius-strings.php:2544
 #: includes/freemius-strings.php:5311
 msgid "Terms of Service"
@@ -5166,7 +5214,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:2646
 #: includes/freemius-strings.php:5632
-#: src/admin/App.js:100
+#: src/admin/App.js:102
 msgid "Upgrade"
 msgstr ""
 
@@ -6126,19 +6174,19 @@ msgstr ""
 msgid "Switcher"
 msgstr ""
 
-#: includes/workflow/class-status.php:265
+#: includes/workflow/class-status.php:272
 msgid "(no title)"
 msgstr ""
 
-#: includes/workflow/class-status.php:308
+#: includes/workflow/class-status.php:315
 msgid "There is nothing to fix here."
 msgstr ""
 
-#: includes/workflow/class-status.php:388
+#: includes/workflow/class-status.php:395
 msgid "No content type is translated on this site."
 msgstr ""
 
-#: includes/workflow/class-status.php:391
+#: includes/workflow/class-status.php:398
 msgid "That content type is not translated on this site."
 msgstr ""
 
@@ -6954,83 +7002,91 @@ msgstr ""
 msgid "Zinn Digital® website"
 msgstr ""
 
-#: src/admin/App.js:62
+#: src/admin/App.js:64
 #: src/admin/Switchers.js:66
 msgid "Settings saved."
 msgstr ""
 
-#: src/admin/App.js:103
+#: src/admin/App.js:105
 msgid "See the Pro plans and pricing"
 msgstr ""
 
-#: src/admin/App.js:113
+#: src/admin/App.js:115
 #: src/admin/index.js:29
 #: src/admin/StatusTab.js:551
 #: src/editor/visibility.js:51
 msgid "Languages"
 msgstr ""
 
-#: src/admin/App.js:117
+#: src/admin/App.js:119
 msgid "The first language is the one your content is written in. Visitors switch with the language switcher block."
 msgstr ""
 
-#: src/admin/App.js:131
+#: src/admin/App.js:133
 msgid "(default)"
 msgstr ""
 
 #: src/admin/App.js:158
-msgid "Locale code"
+msgid "Find a language"
 msgstr ""
 
 #: src/admin/App.js:159
+msgid "Type its name in your language or in its own, then choose it. The code and name below fill in by themselves."
+msgstr ""
+
+#: src/admin/App.js:181
+msgid "Locale code"
+msgstr ""
+
+#: src/admin/App.js:182
 msgid "For example fr_FR"
 msgstr ""
 
-#: src/admin/App.js:170
+#: src/admin/App.js:193
 msgid "Name (optional)"
 msgstr ""
 
-#: src/admin/App.js:171
+#: src/admin/App.js:194
 msgid "For example Français"
 msgstr ""
 
-#: src/admin/App.js:185
+#: src/admin/App.js:208
 msgid "Add language"
 msgstr ""
 
-#: src/admin/App.js:193
+#: src/admin/App.js:216
 msgid "Front-end output"
 msgstr ""
 
-#: src/admin/App.js:198
+#: src/admin/App.js:221
 msgid "Class name prefix"
 msgstr ""
 
-#: src/admin/App.js:199
+#: src/admin/App.js:222
 msgid "Every class name the plugin prints on your pages starts with this prefix, so the pages do not reveal which plugin built them. 1 to 8 lowercase letters or digits, starting with a letter."
 msgstr ""
 
-#: src/admin/App.js:210
+#: src/admin/App.js:233
 msgid "Beta updates"
 msgstr ""
 
-#: src/admin/App.js:217
+#: src/admin/App.js:240
 msgid "This site receives beta versions as updates."
 msgstr ""
 
-#: src/admin/App.js:221
+#: src/admin/App.js:244
 msgid "This site receives stable versions only."
 msgstr ""
 
-#: src/admin/App.js:230
+#: src/admin/App.js:253
 msgid "Change this on the Account page"
 msgstr ""
 
-#: src/admin/App.js:239
+#: src/admin/App.js:262
 msgid "Beta versions are offered to licensed Pro installations that are connected to their account. Once connected, you can join from the Account page."
 msgstr ""
 
-#: src/admin/App.js:255
+#: src/admin/App.js:278
 msgid "Save settings"
 msgstr ""
 
@@ -7395,10 +7451,6 @@ msgstr ""
 msgid "Read its text"
 msgstr ""
 
-#: src/admin/IntegrationsTab.js:656
-msgid "Translate"
-msgstr ""
-
 #. translators: %d: how many post/language pairs the job holds.
 #: src/admin/Jobs.js:139
 #, js-format
@@ -7569,30 +7621,30 @@ msgstr ""
 msgid "Menu labels"
 msgstr ""
 
-#: src/admin/MenusTab.js:238
+#: src/admin/MenusTab.js:237
+msgid "Site title, tagline and widgets"
+msgstr ""
+
+#: src/admin/MenusTab.js:248
 msgid "Templates, headers, footers and patterns"
 msgstr ""
 
-#: src/admin/MenusTab.js:242
-msgid "Templates, headers, footers and patterns (Pro)"
-msgstr ""
-
-#: src/admin/MenusTab.js:258
+#: src/admin/MenusTab.js:265
 #: src/admin/StringsEditor.js:142
 msgid "Translate the missing text"
 msgstr ""
 
-#: src/admin/MenusTab.js:264
+#: src/admin/MenusTab.js:271
 #: src/admin/StringsEditor.js:148
 msgid "There is no text to translate here."
 msgstr ""
 
-#: src/admin/MenusTab.js:279
+#: src/admin/MenusTab.js:286
 #: src/admin/StringsEditor.js:168
 msgid "Corrected by a person, protected"
 msgstr ""
 
-#: src/admin/MenusTab.js:302
+#: src/admin/MenusTab.js:309
 #: src/admin/StringsEditor.js:201
 msgid "Save corrections"
 msgstr ""
@@ -7687,7 +7739,7 @@ msgstr ""
 
 #: src/admin/SeoAudit.js:163
 #: src/admin/StatusTab.js:406
-#: src/editor/translations-panel.js:144
+#: src/editor/translations-panel.js:149
 msgid "Edit"
 msgstr ""
 
@@ -7807,7 +7859,7 @@ msgid "waiting for review"
 msgstr ""
 
 #: src/admin/StatusTab.js:418
-#: src/editor/translations-panel.js:149
+#: src/editor/translations-panel.js:154
 msgid "Side by side"
 msgstr ""
 
@@ -7953,43 +8005,39 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/admin/urls-model.js:43
-msgid "(Pro)"
-msgstr ""
-
-#: src/admin/urls-model.js:47
+#: src/admin/urls-model.js:48
 msgid "A folder per language: example.com/de/"
 msgstr ""
 
-#: src/admin/urls-model.js:52
+#: src/admin/urls-model.js:54
 msgid "A subdomain per language: de.example.com"
 msgstr ""
 
-#: src/admin/urls-model.js:59
+#: src/admin/urls-model.js:61
 msgid "A separate domain per language: example.de"
 msgstr ""
 
-#: src/admin/urls-model.js:65
+#: src/admin/urls-model.js:70
 msgid "A query parameter: example.com/?lang=de (older sites)"
 msgstr ""
 
-#: src/admin/urls-model.js:80
+#: src/admin/urls-model.js:85
 msgid "Category"
 msgstr ""
 
-#: src/admin/urls-model.js:81
+#: src/admin/urls-model.js:86
 msgid "Tag"
 msgstr ""
 
-#: src/admin/urls-model.js:82
+#: src/admin/urls-model.js:87
 msgid "Product"
 msgstr ""
 
-#: src/admin/urls-model.js:83
+#: src/admin/urls-model.js:88
 msgid "Product category"
 msgstr ""
 
-#: src/admin/urls-model.js:84
+#: src/admin/urls-model.js:89
 msgid "Product tag"
 msgstr ""
 
@@ -8363,35 +8411,29 @@ msgstr ""
 msgid "Save this post first, then translate it here."
 msgstr ""
 
-#: src/editor/translations-panel.js:154
+#: src/editor/translations-panel.js:159
 msgid "View"
 msgstr ""
 
-#: src/editor/translations-panel.js:164
+#: src/editor/translations-panel.js:169
 msgid "Unlock so it can be translated again"
 msgstr ""
 
-#: src/editor/translations-panel.js:179
+#: src/editor/translations-panel.js:184
 msgid "Protect"
 msgstr ""
 
-#: src/editor/translations-panel.js:187
+#: src/editor/translations-panel.js:192
 msgid "Publish the translations"
 msgstr ""
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:199
+#: src/editor/translations-panel.js:204
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"
 msgstr[0] ""
 msgstr[1] ""
-
-#. translators: %s: a language code.
-#: src/editor/translations-panel.js:217
-#, js-format
-msgid "%s: translated."
-msgstr ""
 
 #: src/editor/visibility.js:57
 msgid "Show this block"

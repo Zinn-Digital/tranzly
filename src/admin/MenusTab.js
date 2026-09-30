@@ -233,18 +233,25 @@ export default function MenusTab( { pro } ) {
 								label: __( 'Menu labels', 'tranzly' ),
 							},
 							{
-								value: 'templates',
-								label: pro
-									? __(
-											'Templates, headers, footers and patterns',
-											'tranzly'
-										)
-									: __(
-											'Templates, headers, footers and patterns (Pro)',
-											'tranzly'
-										),
-								disabled: ! pro,
+								value: 'site',
+								label: __(
+									'Site title, tagline and widgets',
+									'tranzly'
+								),
 							},
+							// Pro only, and then simply offered: the free edition shows no locked
+							// option (WordPress.org guideline 5, closure item T-2).
+							...( pro
+								? [
+										{
+											value: 'templates',
+											label: __(
+												'Templates, headers, footers and patterns',
+												'tranzly'
+											),
+										},
+									]
+								: [] ),
 						] }
 						onChange={ setScope }
 					/>
