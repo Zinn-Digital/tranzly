@@ -73,9 +73,15 @@ final class Legacy_Widgets {
 				continue;
 			}
 			$out = array();
-			foreach ( $ids as $id ) {
+			$ids = array_values( $ids );
+			foreach ( $ids as $i => $id ) {
 				$out[] = $id;
 				if ( ! is_string( $id ) || 1 !== preg_match( '/^' . self::LEGACY_BASE . '-(\d+)$/', $id, $m ) ) {
+					continue;
+				}
+				// Already carried (an earlier run; this one runs again after a rollback to the
+				// legacy plugin, TRZ-LEGACY2): the switcher right after it stays the only one.
+				if ( is_string( $ids[ $i + 1 ] ?? null ) && 1 === preg_match( '/^' . self::BASE . '-\d+$/', $ids[ $i + 1 ] ) ) {
 					continue;
 				}
 				$old                = is_array( $legacy[ (int) $m[1] ] ?? null ) ? $legacy[ (int) $m[1] ] : array();

@@ -69,6 +69,12 @@ final class Legacy_Import {
 	/** Autoloaded: the format the site's import last ran at, so the check costs no query. */
 	public const FORMAT_OPTION = 'tranzly_legacy_import_format';
 
+	/**
+	 * Autoloaded: `{version, fp}` — the plugin version that last checked for legacy data, and the
+	 * legacy data's fingerprint when the import last finished (see `maybe_restart()`).
+	 */
+	public const SEEN_OPTION = 'tranzly_legacy_seen';
+
 	/** Rows read per collect query: a bound on ONE query's size, not on the work (see above). */
 	private const BATCH = 500;
 
@@ -96,6 +102,10 @@ final class Legacy_Import {
 			self::maybe_rescan( (string) $status );
 			return;
 		}
+		if ( in_array( $status, array( 'none', 'done' ), true ) ) {
+			self::maybe_restart( (string) $status );
+			return;
+		}
 		if ( in_array( $status, array( 'none', 'done', 'undone' ), true ) ) {
 			return;
 		}
@@ -108,10 +118,105 @@ final class Legacy_Import {
 		}
 		if ( ! self::detect() ) {
 			self::save_state( array( 'status' => 'none' ) + $state );
+			self::remember_seen();
 			return;
 		}
 		self::begin();
 		self::schedule();
+	}
+
+	/**
+	 * ⭐ A "done" (or "none") that the LEGACY plugin has run after (TRZ-LEGACY2, V1 2026-09-30).
+	 * A host that rolls an update back restores the plugin's FILES only: 3.x's options — this
+	 * import's "done"/"none", the widget flag — stay, and the legacy plugin then runs on the site
+	 * again, maybe writing translations or saving settings 3.x never saw. When a newer 3.x starts,
+	 * those stale flags must not skip the import. So once per plugin version (the check costs one
+	 * query over the legacy keys, not one per request), the legacy data is fingerprinted and
+	 * compared with its fingerprint when the import last finished; a site that differs — or has
+	 * legacy data and no fingerprint at all (finished before 3.18.3) — is imported again. That is
+	 * safe to repeat (`apply_group()` is idempotent; undo keeps its first snapshot), and the widget
+	 * migration runs again (idempotent too: `Legacy_Widgets::migrate()`).
+	 *
+	 * @param string $status `none` or `done`.
+	 * @return void
+	 */
+	public static function maybe_restart( string $status ): void {
+		$seen = get_option( self::SEEN_OPTION, array() );
+		$seen = is_array( $seen ) ? $seen : array();
+		if ( defined( 'TRANZLY_VERSION' ) && TRANZLY_VERSION === ( $seen['version'] ?? '' ) ) {
+			return;
+		}
+		$fp = self::fingerprint();
+		update_option(
+			self::SEEN_OPTION,
+			array(
+				'version' => defined( 'TRANZLY_VERSION' ) ? TRANZLY_VERSION : '',
+				'fp'      => (string) ( $seen['fp'] ?? '' ),
+			),
+			true
+		);
+		if ( ! self::must_restart( (string) ( $seen['fp'] ?? '' ), $fp, self::detect() ) ) {
+			return;
+		}
+		delete_option( 'tranzly_legacy_widgets' ); // Legacy_Widgets::DONE_OPTION: carry a placement made since.
+		self::restart( $status );
+	}
+
+	/**
+	 * Pure: import again? Only when there IS legacy data, and it is not the data the last finished
+	 * import saw (no fingerprint recorded = not known to be the same).
+	 *
+	 * @param string $recorded Fingerprint when the import last finished ('' = none recorded).
+	 * @param string $now      Fingerprint now.
+	 * @param bool   $has_data Whether any legacy data exists.
+	 * @return bool
+	 */
+	public static function must_restart( string $recorded, string $now, bool $has_data ): bool {
+		return $has_data && ! hash_equals( $recorded, $now ); // '' (none recorded) never equals an md5.
+	}
+
+	/**
+	 * The legacy data as it stands: the legacy meta rows (count, newest row, a checksum of every
+	 * row), the legacy settings and the legacy widget instances. Never 3.x's own data, which the
+	 * import writes elsewhere, so importing does not change it.
+	 *
+	 * @return string
+	 */
+	public static function fingerprint(): string {
+		global $wpdb;
+		$rows = $wpdb->get_row(
+			$wpdb->prepare(
+				'SELECT COUNT(*) AS n, COALESCE(MAX(meta_id), 0) AS top, COALESCE(SUM(CRC32(CONCAT(meta_id, ":", post_id, ":", meta_key, ":", meta_value))), 0) AS crc FROM %i WHERE meta_key IN (' . self::key_placeholders() . ') OR meta_key LIKE %s', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
+				array_merge( array( $wpdb->postmeta ), self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%' ) )
+			),
+			ARRAY_A
+		);
+
+		return md5(
+			wp_json_encode(
+				array(
+					is_array( $rows ) ? array_values( $rows ) : null,
+					get_option( 'tranzly_options', false ),
+					get_option( 'widget_tranzly_language_switcher', false ),
+				)
+			)
+		);
+	}
+
+	/**
+	 * Record the legacy data the finished import saw.
+	 *
+	 * @return void
+	 */
+	private static function remember_seen(): void {
+		update_option(
+			self::SEEN_OPTION,
+			array(
+				'version' => defined( 'TRANZLY_VERSION' ) ? TRANZLY_VERSION : '',
+				'fp'      => self::fingerprint(),
+			),
+			true
+		);
 	}
 
 	/**
@@ -125,23 +230,51 @@ final class Legacy_Import {
 	 * @return void
 	 */
 	public static function maybe_rescan( string $status ): void {
-		global $wpdb;
 		update_option( self::FORMAT_OPTION, self::FORMAT, true );
-		$has_v1 = null !== $wpdb->get_var(
+		$has_v1 = self::has_v1_rows();
+		if ( ! $has_v1 ) {
+			return;
+		}
+		self::restart( $status );
+	}
+
+	/**
+	 * Does the site hold any 1.x (`tranzly_*`) rows?
+	 *
+	 * @return bool
+	 */
+	private static function has_v1_rows(): bool {
+		global $wpdb;
+
+		return null !== $wpdb->get_var(
 			$wpdb->prepare(
 				'SELECT meta_id FROM %i WHERE meta_key IN (' . implode( ',', array_fill( 0, count( self::V1_KEYS ), '%s' ) ) . ') LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( array( $wpdb->postmeta ), self::V1_KEYS )
 			)
 		);
-		if ( ! $has_v1 ) {
-			return;
-		}
+	}
+
+	/**
+	 * Read everything again from the start, keeping what undo needs. The legacy settings are
+	 * imported again only when they are back (the legacy plugin saved them since), or when this
+	 * site has 1.x rows and no switcher position was ever saved (an import before 3.18.3 left it at
+	 * 3.x's `none`, where 1.x showed the links after the content).
+	 *
+	 * @param string $status `none` or `done`.
+	 * @return void
+	 */
+	private static function restart( string $status ): void {
+		global $wpdb;
 		if ( 'none' === $status ) {
 			self::begin();
 			self::schedule();
 			return;
 		}
 		$state = self::state();
+		$shown = get_option( Options::OPTION, array() );
+		if ( false !== get_option( 'tranzly_options', false ) || ( self::has_v1_rows() && ! isset( $shown['switcher']['position'] ) ) ) {
+			$state['options_done'] = false;
+		}
 		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', Schema::tables()['staging'] ) );
 		$state['status']         = 'collecting';
 		$state['cursor']         = 0;
@@ -451,7 +584,8 @@ final class Legacy_Import {
 		if ( $i >= $total ) {
 			$state['status']       = 'done';
 			$state['finished_gmt'] = gmdate( 'c' );
-			$state['report']       = self::report( $plan, $facts ) + array(
+			self::remember_seen();
+			$state['report'] = self::report( $plan, $facts ) + array(
 				'options'         => $state['options_report'] ?? array(),
 				'already_present' => count( $skips ),
 			);
@@ -516,6 +650,10 @@ final class Legacy_Import {
 		$legacy                  = get_option( 'tranzly_options', false );
 		$state['options_report'] = self::options_report( $legacy );
 		if ( ! is_array( $legacy ) ) {
+			// Never configured, yet the legacy plugin still showed its links after the content of
+			// every translated post (TRZ-LEGACY2): keep them where they were.
+			$state['display_before_absent'] = false === get_option( Options::OPTION, false );
+			Options::save( array( 'switcher' => self::legacy_switcher( false ) ) );
 			return $state;
 		}
 
@@ -526,14 +664,9 @@ final class Legacy_Import {
 		}
 
 		$state['display_before_absent'] = false === get_option( Options::OPTION, false );
-		$switcher                       = array( 'new_tab' => 'newtab' === ( $legacy['selector_tab'] ?? '' ) );
-		if ( in_array( $legacy['selector_position'] ?? '', array( 'before', 'after' ), true ) ) {
-			$switcher['position'] = $legacy['selector_position'];
-		}
-		$switcher['style'] = 'flags' === ( $legacy['selector_mode'] ?? '' ) ? 'flags' : 'names';
 		Options::save(
 			array(
-				'switcher' => $switcher,
+				'switcher' => self::legacy_switcher( $legacy ),
 				'credit'   => false,
 			)
 		);
@@ -542,6 +675,29 @@ final class Legacy_Import {
 		delete_option( 'tranzly_options' );
 
 		return $state;
+	}
+
+	/**
+	 * The switcher settings that show what the legacy plugin showed. 1.1.1 and 2.0.0 alike
+	 * (`Tranzly_Public::tranzly_slug_filter_the_title`) put the translation links on every
+	 * translated post: BEFORE the content only when `selector_position` is `before`, AFTER it
+	 * otherwise — an empty or missing position, and a site that never saved its settings at all,
+	 * included. Flags only when `selector_mode` is `flags` (the rest is `text`, the language names).
+	 * So the position is never left at 3.x's own default, `none`: that silently removed the links
+	 * from every translated post of a site that had not saved a position (TRZ-LEGACY2, V1 rolled
+	 * 3.18.2 back on two sites).
+	 *
+	 * @param array<string, mixed>|false $legacy The legacy `tranzly_options`, or false when absent.
+	 * @return array{position: string, style: string, new_tab: bool}
+	 */
+	public static function legacy_switcher( $legacy ): array {
+		$legacy = is_array( $legacy ) ? $legacy : array();
+
+		return array(
+			'position' => 'before' === ( $legacy['selector_position'] ?? '' ) ? 'before' : 'after',
+			'style'    => 'flags' === ( $legacy['selector_mode'] ?? '' ) ? 'flags' : 'names',
+			'new_tab'  => 'newtab' === ( $legacy['selector_tab'] ?? '' ),
+		);
 	}
 
 	/**
@@ -669,6 +825,16 @@ final class Legacy_Import {
 	private static function schedule(): void {
 		if ( false === wp_next_scheduled( self::HOOK ) ) {
 			wp_schedule_single_event( time(), self::HOOK );
+		}
+		// ⭐ Under WP-CLI, also run it NOW, once WordPress has finished loading (TRZ-LEGACY2).
+		// A host updates a plugin by `wp plugin install --force` and then reads the version back
+		// with WP-CLI: that read is the new version's FIRST load, and nothing on the host will hit
+		// WordPress cron before the site is looked at again. Run here, the legacy links are on
+		// the translated posts before the first visitor (or a checked update's render, which
+		// compares them with what the legacy plugin showed) sees the page. Time-bounded exactly
+		// like the cron step (it IS the cron step); the rest, if any, stays scheduled.
+		if ( defined( 'WP_CLI' ) && WP_CLI && ! did_action( 'init' ) && false === has_action( 'init', array( self::class, 'run_scheduled_step' ) ) ) {
+			add_action( 'init', array( self::class, 'run_scheduled_step' ), 99 );
 		}
 	}
 

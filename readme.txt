@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.18.2
+Stable tag: 3.18.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ No. Tranzly sends a translation service only the words of each block and writes 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
 == Changelog ==
+
+= 3.18.3 =
+* Legacy Tranzly 1.x/2.x sites: the language links the old plugin showed on translated posts stay after (or before) the content, including on a site that never saved its settings, and the import finishes as soon as the update is installed.
 
 = 3.18.2 =
 * Legacy Tranzly 1.x sites: translations made by 1.x (tranzly_* post meta) are imported, and a 1.x language-switcher widget keeps a switcher in its place.
