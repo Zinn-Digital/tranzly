@@ -80,7 +80,7 @@ final class Support {
 		$kind    = in_array( $input['kind'] ?? '', self::KINDS, true ) ? (string) $input['kind'] : 'help';
 		$subject = trim( sanitize_text_field( (string) ( $input['subject'] ?? '' ) ) );
 		$message = trim( sanitize_textarea_field( (string) ( $input['message'] ?? '' ) ) );
-		$email   = sanitize_email( (string) ( $input['email'] ?? '' ) );
+		$email   = self::reply_address( (string) ( $input['email'] ?? '' ) );
 		$token   = Connection::token();
 		if ( '' === $subject || '' === $message ) {
 			return self::fail( 400, __( 'Write a subject and a message.', 'tranzly' ) );
@@ -88,10 +88,18 @@ final class Support {
 		if ( '' === $token && ! is_email( $email ) ) {
 			return self::fail( 400, __( 'Enter an e-mail address support can reply to.', 'tranzly' ) );
 		}
+		// 0 = no temporary access; anything else must be one of the lifetimes the screen offers.
+		$days_raw = $input['access_days'] ?? 0;
+		if ( is_string( $days_raw ) && ctype_digit( $days_raw ) ) {
+			$days_raw = (int) $days_raw; // A client that sends "3" means 3.
+		}
+		if ( ! is_int( $days_raw ) || ( 0 !== $days_raw && ! in_array( $days_raw, Temp_Access::DAYS, true ) ) ) {
+			return self::fail( 400, __( 'Choose 1, 3 or 7 days.', 'tranzly' ) );
+		}
 
 		$credentials = self::credentials( (array) ( $input['credentials'] ?? array() ) );
 		$access      = null;
-		$days        = (int) ( $input['access_days'] ?? 0 );
+		$days        = $days_raw;
 		$may_attach  = in_array( $kind, array( 'help', 'bug' ), true );
 		if ( ! $may_attach ) {
 			$credentials = array(); // Feedback and feature requests never carry access.
@@ -168,6 +176,24 @@ final class Support {
 				'expires_at' => $access['expires_at'],
 			),
 		);
+	}
+
+	/**
+	 * The reply address exactly as typed, or '' when it is not one plain address.
+	 *
+	 * ⛔ sanitize_email() CLEANS an address rather than refusing it: "a@b.test\r\nBcc: c@d.test"
+	 * came back as the single address "a@b.testBccc@d.test", which passed is_email() and was sent
+	 * to support as the customer's reply address, so the answer went nowhere (D28904). An address
+	 * that sanitize_email() had to change is not the address the person meant: refuse it.
+	 *
+	 * @param string $raw What the screen sent.
+	 * @return string
+	 */
+	public static function reply_address( string $raw ): string {
+		$typed = trim( $raw );
+		$clean = sanitize_email( $typed );
+
+		return ( '' !== $typed && $clean === $typed ) ? $clean : '';
 	}
 
 	/**

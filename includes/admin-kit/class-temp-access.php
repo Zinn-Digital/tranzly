@@ -71,6 +71,14 @@ final class Temp_Access {
 	public const DAYS         = array( 1, 3, 7 );
 	public const DEFAULT_DAYS = 3;
 
+	/**
+	 * At most this many unexpired temporary support logins at once (D28905). Each is an
+	 * administrator-level login whose password was sent to Zinn Digital®; a burst of tickets used
+	 * to leave one per ticket (8 tickets, 8 logins). Support needs one; three covers a
+	 * hand-over between people. Revoking one, or its expiry, frees a place.
+	 */
+	public const MAX_ACTIVE = 3;
+
 	/** User meta, shared by every copy of the kit so either plugin can expire either's users. */
 	public const META_EXPIRES = 'zinn_support_expires_at';
 	public const META_PRODUCT = 'zinn_support_product';
@@ -132,6 +140,9 @@ final class Temp_Access {
 		if ( ! self::may_grant() ) {
 			return new \WP_Error( 'zinn_kit_forbidden', __( 'Only a site administrator, signed in to this screen, can create temporary support access.', 'tranzly' ), array( 'status' => 403 ) );
 		}
+		if ( self::active_count() >= self::MAX_ACTIVE ) {
+			return new \WP_Error( 'zinn_kit_too_many', __( 'This site already has the most temporary support logins it can have at once. Revoke one below, or send the request without a login.', 'tranzly' ), array( 'status' => 409 ) );
+		}
 		self::ensure_role();
 
 		$username = '';
@@ -171,6 +182,15 @@ final class Temp_Access {
 			'url'        => wp_login_url(),
 			'expires_at' => gmdate( 'Y-m-d\TH:i:s\Z', $expires ),
 		);
+	}
+
+	/**
+	 * How many temporary support logins have not expired yet.
+	 *
+	 * @return int
+	 */
+	public static function active_count(): int {
+		return count( array_filter( self::all(), static fn( array $u ): bool => ! $u['expired'] ) );
 	}
 
 	/**
