@@ -58,8 +58,13 @@ require_once __DIR__ . '/workflow/class-backfill.php';
 require_once __DIR__ . '/workflow/class-status.php';
 require_once __DIR__ . '/integrations/load.php';
 require_once __DIR__ . '/class-plugin.php';
+// Lane PLUGIN-MCP: the abilities (WordPress Abilities API) and this site's own MCP server, through
+// the shared MCP kit (wp/packages/zinn-mcp-kit) and the bundled WordPress MCP adapter.
+require_once __DIR__ . '/mcp-kit/load.php';
+require_once __DIR__ . '/mcp/class-abilities.php';
 
 \ZinnDigital\Tranzly\Plugin::boot();
+\ZinnDigital\Tranzly\Mcp\Abilities::boot();
 
 /*
  * The shared AI core (wp/packages/zinn-ai-core, rendered into ai-core/ by wp/bin/build-ai-core.php).

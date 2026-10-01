@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.18.3
+Stable tag: 3.19.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,7 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 
 = What this release does =
 
+* **AI agents (MCP) and REST.** Claude, ChatGPT, Cursor and other AI assistants can translate your site through its own MCP server, signed in as you with an application password and allowed only what you are allowed. Turn it off in Tranzly, AI agents (MCP).
 * **One post per language, linked together.** Create the German version of a post, page or custom post type and Tranzly links the two. A new translation starts as a draft copy of the original's title, content, excerpt, featured image, template and categories (or their translations).
 * **Categories, tags and custom taxonomies** get linked translations with their own names, descriptions and slugs.
 * **Media, widgets, site title and tagline.** Image alt text, captions and titles, widget text and the site title and tagline can each carry a translation per language, shown to visitors of that language.
@@ -148,7 +149,14 @@ No. Tranzly sends a translation service only the words of each block and writes 
 
 Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-language addresses and every language in the sitemap) and leaves schema to your SEO plugin. With Pro, the SEO titles, descriptions, social titles and focus keywords you wrote in Yoast SEO, Rank Math, SEOPress or All in One SEO are translated too. It is tested with WordPress's own sitemap and all four.
 
+= Can an AI assistant translate my site? =
+
+Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
+
 == Changelog ==
+
+= 3.19.0 =
+* AI agents (MCP) and REST: 76 abilities and the site's own MCP server — languages, engines, translation of posts, terms, media, menus and strings, jobs, status, SEO and more; in Pro, bulk translation, AI quality check, glossary and translator files. On by default for signed-in users with the right permissions; switch in Tranzly, AI agents (MCP).
 
 = 3.18.3 =
 * Legacy Tranzly 1.x/2.x sites: the language links the old plugin showed on translated posts stay after (or before) the content, including on a site that never saved its settings, and the import finishes as soon as the update is installed.

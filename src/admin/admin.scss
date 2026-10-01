@@ -48,3 +48,17 @@
 	text-align: start;
 	vertical-align: top;
 }
+
+// The AI agents (MCP) panel (wp/packages/zinn-mcp-kit): the client configuration block scrolls
+// rather than widening the screen.
+.zd-mcp-panel__config {
+	overflow-x: auto;
+	max-inline-size: 100%;
+	padding: 12px;
+	background: #f6f7f7;
+	font-size: 12px;
+}
+
+.zd-mcp-panel__tools {
+	columns: 2 16em;
+}

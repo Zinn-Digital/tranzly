@@ -33,7 +33,10 @@ final class Settings {
 	/**
 	 * The stored settings merged over the defaults.
 	 *
-	 * @return array{prefix: string, languages: array<int, array{code: string, name: string}>}
+	 * `mcp` (default on, owner 2026-09-30): signed-in users with the right capability may drive
+	 * Tranzly through AI agents (MCP) and the abilities REST API. Off, neither is registered.
+	 *
+	 * @return array{prefix: string, languages: array<int, array{code: string, name: string}>, mcp: bool}
 	 */
 	public static function get(): array {
 		$stored = get_option( self::OPTION, array() );
@@ -51,6 +54,7 @@ final class Settings {
 				? (string) $stored['prefix']
 				: self::DEFAULT_PREFIX,
 			'languages' => $languages,
+			'mcp'       => ! array_key_exists( 'mcp', $stored ) || true === $stored['mcp'],
 		);
 	}
 
@@ -97,6 +101,10 @@ final class Settings {
 				);
 			}
 			$current['languages'] = $languages;
+		}
+
+		if ( array_key_exists( 'mcp', $input ) ) {
+			$current['mcp'] = (bool) $input['mcp'];
 		}
 
 		update_option( self::OPTION, $current, true );

@@ -1,10 +1,11 @@
 import { __ } from '@wordpress/i18n';
-import { TabPanel } from '@wordpress/components';
+import { Panel, TabPanel } from '@wordpress/components';
 
 import App from './App';
 import Engines from './Engines';
 import IntegrationsTab from './IntegrationsTab';
 import Jobs from './Jobs';
+import McpPanel from '../mcp-kit/McpPanel';
 import MenusTab from './MenusTab';
 import SeoAudit from './SeoAudit';
 import StatusTab from './StatusTab';
@@ -50,6 +51,7 @@ export default function Root( { data } ) {
 					name: 'integrations',
 					title: __( 'Integrations', 'tranzly' ),
 				},
+				{ name: 'mcp', title: __( 'AI agents (MCP)', 'tranzly' ) },
 			] }
 			initialTabName={
 				( window.location.hash || '' ).replace( '#/', '' ) || 'settings'
@@ -82,6 +84,13 @@ export default function Root( { data } ) {
 				}
 				if ( 'integrations' === tab.name ) {
 					return <IntegrationsTab pro={ 'pro' === data.edition } />;
+				}
+				if ( 'mcp' === tab.name ) {
+					return (
+						<Panel>
+							<McpPanel path={ data.restPath } />
+						</Panel>
+					);
 				}
 				return <App data={ data } />;
 			} }

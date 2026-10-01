@@ -62,6 +62,10 @@ final class Rest {
 							'type'     => 'string',
 							'required' => false,
 						),
+						'mcp'       => array(
+							'type'     => 'boolean',
+							'required' => false,
+						),
 						'languages' => array(
 							'type'     => 'array',
 							'required' => false,
@@ -153,7 +157,7 @@ final class Rest {
 	 */
 	public static function update_settings( \WP_REST_Request $request ) {
 		$input = array();
-		foreach ( array( 'prefix', 'languages' ) as $key ) {
+		foreach ( array( 'prefix', 'languages', 'mcp' ) as $key ) {
 			if ( null !== $request->get_param( $key ) ) {
 				$input[ $key ] = $request->get_param( $key );
 			}
@@ -238,6 +242,8 @@ final class Rest {
 			'prefix'    => $settings['prefix'],
 			'languages' => $settings['languages'],
 			'beta'      => Licensing::beta(),
+			// The switch as saved, and what is live on THIS request (the kit booted before it).
+			'mcp'       => array( 'saved' => $settings['mcp'] ) + \ZinnDigital\Tranzly\McpKit\Server::describe(),
 		);
 	}
 }
