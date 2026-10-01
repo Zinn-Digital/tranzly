@@ -110,7 +110,7 @@ export default function McpPanel( { path, initialOpen = true } ) {
 				<>
 					<p>
 						{ __(
-							'Let AI assistants such as Claude, ChatGPT, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do.',
+							'Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do.',
 							'tranzly'
 						) }
 					</p>
@@ -166,6 +166,12 @@ export default function McpPanel( { path, initialOpen = true } ) {
 							<pre className="zd-mcp-panel__config" dir="ltr">
 								{ clientConfig( mcp.server, mcp.endpoint ) }
 							</pre>
+							<p className="description">
+								{ __(
+									'VS Code: put the same entry under "servers" in .vscode/mcp.json, not under "mcpServers".',
+									'tranzly'
+								) }
+							</p>
 							<p>
 								{ sprintf(
 									/* translators: %d: how many tools an AI agent can use. */

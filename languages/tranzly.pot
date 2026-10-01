@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.19.0\n"
+"Project-Id-Version: Tranzly 3.20.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-01T01:00:46+00:00\n"
+"POT-Creation-Date: 2026-10-01T06:48:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -5963,6 +5963,10 @@ msgstr ""
 msgid "A required value is missing or has the wrong form. Check the ability's input schema."
 msgstr ""
 
+#: includes/mcp-kit/class-rest-bridge.php:314
+msgid "The site refused the request."
+msgstr ""
+
 #: includes/mcp-kit/class-server.php:216
 #: src/admin/Root.js:54
 #: src/mcp-kit/McpPanel.js:96
@@ -5971,7 +5975,7 @@ msgstr ""
 
 #: includes/mcp-kit/class-server.php:217
 #: src/mcp-kit/McpPanel.js:112
-msgid "Let AI assistants such as Claude, ChatGPT, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do."
+msgid "Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do."
 msgstr ""
 
 #: includes/mcp-kit/class-server.php:219
@@ -6004,20 +6008,25 @@ msgstr ""
 msgid "Add this to your AI app’s MCP settings, with your username and that password:"
 msgstr ""
 
+#: includes/mcp-kit/class-server.php:238
+#: src/mcp-kit/McpPanel.js:170
+msgid "VS Code: put the same entry under \"servers\" in .vscode/mcp.json, not under \"mcpServers\"."
+msgstr ""
+
 #. translators: %d: how many tools an AI agent can use.
-#: includes/mcp-kit/class-server.php:241
-#: src/mcp-kit/McpPanel.js:172
+#: includes/mcp-kit/class-server.php:242
+#: src/mcp-kit/McpPanel.js:178
 #, php-format,js-format
 msgid "Tools an AI agent can use here (%d):"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:252
-#: src/mcp-kit/McpPanel.js:191
+#: includes/mcp-kit/class-server.php:253
+#: src/mcp-kit/McpPanel.js:197
 msgid "User guide: AI agents and MCP"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:255
-#: src/mcp-kit/McpPanel.js:201
+#: includes/mcp-kit/class-server.php:256
+#: src/mcp-kit/McpPanel.js:207
 msgid "Developer docs: abilities, REST and MCP"
 msgstr ""
 

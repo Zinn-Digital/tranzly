@@ -282,9 +282,39 @@ final class Rest_Bridge {
 		}
 		$response = rest_do_request( $request );
 		if ( $response->is_error() ) {
-			return $response->as_error();
+			return self::refusal( $response );
 		}
 
 		return $response->get_data();
+	}
+
+	/**
+	 * A refused route as a WP_Error that always says why.
+	 *
+	 * ⛔ A route that answers `{ "error": "…" }` (or nothing) with no `message` became a WP_Error with
+	 * an EMPTY message, which an MCP client shows as "Failed to execute tool" and an admin as a blank
+	 * notice (found by L11-P10, 2026-10-01). Falls back to the body's `error`, then the HTTP status
+	 * text, then a plain sentence — so any route, now or later, degrades to a readable refusal.
+	 *
+	 * @param \WP_REST_Response $response A response whose status is 400 or above.
+	 * @return \WP_Error
+	 */
+	public static function refusal( $response ): \WP_Error {
+		$error = $response->as_error();
+		if ( '' !== trim( (string) $error->get_error_message() ) ) {
+			return $error;
+		}
+		$data   = $response->get_data();
+		$status = (int) $response->get_status();
+		$reason = is_array( $data ) && is_string( $data['error'] ?? null ) ? trim( $data['error'] ) : '';
+		if ( '' === $reason ) {
+			$reason = function_exists( 'get_status_header_desc' ) ? (string) get_status_header_desc( $status ) : '';
+		}
+		if ( '' === $reason ) {
+			$reason = __( 'The site refused the request.', 'tranzly' );
+		}
+		$code = (string) $error->get_error_code();
+
+		return new \WP_Error( '' !== $code ? $code : 'zinn_refused', $reason, array( 'status' => $status ) );
 	}
 }
