@@ -107,14 +107,6 @@ export default function kitTours() {
 					'tranzly'
 				),
 			},
-			{
-				target: '[data-zak-tour="access"]',
-				title: __( 'Temporary support access', 'tranzly' ),
-				content: __(
-					'If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time.',
-					'tranzly'
-				),
-			},
 		],
 		feedback: [
 			{

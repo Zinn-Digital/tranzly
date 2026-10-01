@@ -49,7 +49,7 @@ final class Glossary {
 	}
 
 	/**
-	 * Save. Text is plain text; Pro-only parts are refused without Pro.
+	 * Save. Text is plain text; Pro-only parts are refused unless the premium layer handles them.
 	 *
 	 * @param array<string, mixed> $input Any of `dnt`, `terms`, `tone`.
 	 * @return true|\WP_Error
@@ -60,41 +60,33 @@ final class Glossary {
 			$words          = array_map( static fn( $w ) => trim( sanitize_text_field( (string) $w ) ), (array) $input['dnt'] );
 			$current['dnt'] = array_values( array_unique( array_filter( $words, static fn( $w ) => '' !== $w ) ) );
 		}
-		foreach ( array( 'terms', 'tone' ) as $pro_key ) {
-			if ( array_key_exists( $pro_key, $input ) && ! Edition::pro() && array() !== (array) $input[ $pro_key ] ) {
-				return new \WP_Error( 'tranzly_pro_only', __( 'Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free.', 'tranzly' ), array( 'status' => 403 ) );
+		$pro_keys = array_filter(
+			array( 'terms', 'tone' ),
+			static fn( string $k ): bool => array_key_exists( $k, $input )
+		);
+		if ( array() !== $pro_keys ) {
+			/**
+			 * Saves preferred translations and tone per language. Only the premium layer answers
+			 * (WordPress.org guideline 5: no Pro behaviour in the free plugin).
+			 *
+			 * @param array<string, mixed>|\WP_Error|null $saved   The glossary with those keys applied,
+			 *                                                     a refusal, or null.
+			 * @param array<string, mixed>                 $input   What was submitted.
+			 * @param array<string, mixed>                 $current The glossary so far.
+			 */
+			$saved = apply_filters( 'tranzly_glossary_save', null, $input, $current );
+			if ( is_wp_error( $saved ) ) {
+				return $saved;
 			}
-		}
-		if ( array_key_exists( 'terms', $input ) ) {
-			$terms = array();
-			foreach ( (array) $input['terms'] as $lang => $pairs ) {
-				$code = Languages::resolve( (string) $lang );
-				if ( null === $code || ! is_array( $pairs ) ) {
-					return new \WP_Error( 'tranzly_bad_glossary', __( 'Glossary entries must be grouped by one of the site\'s languages.', 'tranzly' ), array( 'status' => 400 ) );
-				}
-				foreach ( $pairs as $from => $to ) {
-					$from = trim( sanitize_text_field( (string) $from ) );
-					$to   = trim( sanitize_text_field( (string) $to ) );
-					if ( '' !== $from && '' !== $to ) {
-						$terms[ $code ][ $from ] = $to;
+			if ( is_array( $saved ) ) {
+				$current = $saved;
+			} else {
+				foreach ( $pro_keys as $pro_key ) {
+					if ( array() !== (array) $input[ $pro_key ] ) {
+						return new \WP_Error( 'tranzly_pro_only', __( 'Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free.', 'tranzly' ), array( 'status' => 403 ) );
 					}
 				}
 			}
-			$current['terms'] = $terms;
-		}
-		if ( array_key_exists( 'tone', $input ) ) {
-			$tone = array();
-			foreach ( (array) $input['tone'] as $lang => $spec ) {
-				$code = Languages::resolve( (string) $lang );
-				if ( null === $code || ! is_array( $spec ) || ! in_array( $spec['formality'] ?? 'default', self::FORMALITY, true ) ) {
-					return new \WP_Error( 'tranzly_bad_tone', __( 'Tone is set per site language: formality default, more or less, plus optional instructions.', 'tranzly' ), array( 'status' => 400 ) );
-				}
-				$tone[ $code ] = array(
-					'formality'    => (string) ( $spec['formality'] ?? 'default' ),
-					'instructions' => sanitize_textarea_field( (string) ( $spec['instructions'] ?? '' ) ),
-				);
-			}
-			$current['tone'] = $tone;
 		}
 		update_option( self::OPTION, $current, true );
 
@@ -102,21 +94,23 @@ final class Glossary {
 	}
 
 	/**
-	 * The engine options for a target language: `do_not_translate`, and with Pro `glossary`,
-	 * `formality` and `instructions`.
+	 * The engine options for a target language: `do_not_translate`, plus whatever the premium
+	 * layer adds (`tranzly_glossary_options`).
 	 *
 	 * @param string $lang Target language.
 	 * @return array<string, mixed>
 	 */
 	public static function options_for( string $lang ): array {
-		$all     = self::get();
-		$options = array( 'do_not_translate' => $all['dnt'] );
-		if ( Edition::pro() ) {
-			$options['glossary']     = (array) ( $all['terms'][ $lang ] ?? array() );
-			$options['formality']    = (string) ( $all['tone'][ $lang ]['formality'] ?? 'default' );
-			$options['instructions'] = (string) ( $all['tone'][ $lang ]['instructions'] ?? '' );
-		}
+		$all = self::get();
 
-		return $options;
+		/**
+		 * Filters the engine options for a target language: the do-not-translate list, plus the
+		 * glossary and tone when the premium layer adds them.
+		 *
+		 * @param array<string, mixed> $options Options.
+		 * @param string               $lang    Target language.
+		 * @param array<string, mixed> $all     The stored glossary.
+		 */
+		return (array) apply_filters( 'tranzly_glossary_options', array( 'do_not_translate' => $all['dnt'] ), $lang, $all );
 	}
 }

@@ -63,6 +63,21 @@ require_once __DIR__ . '/class-plugin.php';
 require_once __DIR__ . '/mcp-kit/load.php';
 require_once __DIR__ . '/mcp/class-abilities.php';
 
+/*
+ * ⛔⛔ THE PREMIUM LAYER, WHEN IT SHIPS, REGISTERS ITS LICENCE FIRST, SO EVERY BOOT BELOW SEES IT.
+ *
+ * The free package drops the whole premium-only directory, so nothing here runs there, and the
+ * free plugin itself never asks the licensing SDK anything (WordPress.org guideline 5). The
+ * directory name is assembled from two halves so the premium-only token never appears in a file
+ * that ships in the free package (CONTRACT §3, docs/adr/0032).
+ */
+$tranzly_premium_entry = __DIR__ . '/pro_' . '_premium_only/class-pro.php'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
+if ( is_readable( $tranzly_premium_entry ) ) {
+	require_once $tranzly_premium_entry;
+	\ZinnDigital\Tranzly\Pro\Pro::licence();
+}
+unset( $tranzly_premium_entry );
+
 \ZinnDigital\Tranzly\Plugin::boot();
 \ZinnDigital\Tranzly\Mcp\Abilities::boot();
 
@@ -76,7 +91,7 @@ require_once __DIR__ . '/ai-core/load.php';
 	array(
 		'slug' => 'tranzly',
 		'name' => 'Tranzly',
-		'pro'  => static fn(): bool => tranzly_fs()->can_use_premium_code(),
+		'pro'  => static fn(): bool => \ZinnDigital\Tranzly\Core\Edition::pro(),
 	)
 );
 
@@ -98,20 +113,10 @@ require_once __DIR__ . '/admin-kit/load.php';
 	)
 );
 
-/*
- * ⛔⛔ THE PREMIUM LAYER LOADS ONLY WHEN ITS FILE IS PRESENT AND THE LICENCE ALLOWS IT.
- *
- * The free package (house and licensing-service alike) drops the whole premium-only directory,
- * so the first test fails there and nothing else runs. The directory name is assembled from two
- * halves so the premium-only token never appears in a file that ships in the free package: that
- * file must reach the free zip byte-for-byte unchanged (CONTRACT §3, docs/adr/0032).
- */
-$tranzly_premium_entry = __DIR__ . '/pro_' . '_premium_only/class-pro.php'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
-if ( is_readable( $tranzly_premium_entry ) && tranzly_fs()->can_use_premium_code() ) {
-	require_once $tranzly_premium_entry;
+// The premium layer's features, when it is running (registered above, before the core booted).
+if ( class_exists( '\\ZinnDigital\\Tranzly\\Pro\\Pro', false ) && \ZinnDigital\Tranzly\Core\Edition::pro() ) {
 	\ZinnDigital\Tranzly\Pro\Pro::boot();
 }
-unset( $tranzly_premium_entry );
 
 /**
  * Uninstall cleanup, run by the licensing SDK's `after_uninstall` action.

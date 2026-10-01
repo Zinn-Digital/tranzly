@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.21.2
+Stable tag: 3.22.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,8 +114,7 @@ Recommended models list (off unless you turn it on). If you turn on the daily ch
 The plugin's Get help screen can send a support request to Zinn Digital®, the plugin's developer. Nothing is sent until you connect the site or send a request yourself.
 
 * Connecting the site (Get help → Connect) calls `https://api.zinndigital.com/v1/plugin-support/connections` with the email address and name you type, the plugin's name and version, this site's address and title, the WordPress and PHP versions and your language. The answer is a connection token, stored encrypted in your database. The screen checks it with `/v1/plugin-support/connection`; Disconnect deletes it there and here.
-* Sending a request calls `https://api.zinndigital.com/v1/plugin-support/tickets` with what you type (subject, message, your name), the plugin's name, your language, and your licence's plan and ids. Only if you tick "Include site details" does it add the site details the screen shows you before sending (site address, WordPress, PHP, theme and plugin versions, a few server settings and the last lines of the PHP error log). Any login you choose to add is sent over HTTPS, stored encrypted by Zinn Digital®, and deleted 30 days after the request is closed.
-* Temporary support access, only if you choose it with a request: the plugin creates a WordPress user on your own site with a support role that cannot install, edit or delete plugins or themes, manage users, update WordPress or export content, sends its login with the request, and deletes the user when the time you picked (1, 3 or 7 days) runs out, or sooner if you remove it on the Get help screen.
+* Sending a request calls `https://api.zinndigital.com/v1/plugin-support/tickets` with what you type (subject, message, your name), the plugin's name, your language, and your licence's plan and ids. Only if you tick "Include site details" does it add the site details the screen shows you before sending (site address, WordPress, PHP, theme and plugin versions, a few server settings and the last lines of the PHP error log).
 
 == Installation ==
 
@@ -154,6 +153,10 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.22.0 =
+* Security: the Get help screen no longer creates a temporary support login and a support request never carries a login. It sends your message and, only if you tick it, the site details. Support users created by earlier versions are removed the next time an administrator opens wp-admin.
+* The free plugin no longer contains Pro code or licence checks: translation memory, an engine per language, fallback, spending caps and glossary terms/tone now live only in the Pro add-on.
 
 = 3.21.2 =
 * Fix: the licence-activation fix in the previous release no longer adds a background request handler to the free plugin (it now applies only where the licensing service's own "Activate License" handler exists).

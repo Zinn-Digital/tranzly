@@ -27,6 +27,6 @@ require_once __DIR__ . '/class-crypto.php';
 require_once __DIR__ . '/class-engine.php';
 require_once __DIR__ . '/class-connection.php';
 require_once __DIR__ . '/class-diagnostics.php';
-require_once __DIR__ . '/class-temp-access.php';
+require_once __DIR__ . '/class-legacy-support-users.php';
 require_once __DIR__ . '/class-support.php';
 require_once __DIR__ . '/class-rest.php';

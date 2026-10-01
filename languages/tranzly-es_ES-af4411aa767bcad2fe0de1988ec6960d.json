@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-01T06:59:01+00:00",
+    "translation-revision-date": "2026-10-01T13:18:36+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -84,9 +84,6 @@
             ],
             "No": [
                 "No"
-            ],
-            "Other": [
-                "Otros"
             ],
             "Sites": [
                 "Sitios"
@@ -400,9 +397,6 @@
             "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;": [
                 "solo si la marcas: los detalles del sitio (versiones de WordPress y PHP, tema, plugins, un fragmento del registro de errores con las contrase\u00f1as y direcciones de correo electr\u00f3nico eliminadas), que puede leer antes de enviar;"
             ],
-            "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed.": [
-                "solo si los a\u00f1ade: credenciales de inicio de sesi\u00f3n para su sitio, almacenadas cifradas y eliminadas 30 d\u00edas despu\u00e9s de que se cierre su solicitud."
-            ],
             "Privacy policy": [
                 "Pol\u00edtica de privacidad"
             ],
@@ -463,18 +457,6 @@
             "Your request could not be sent. Try again in a few minutes.": [
                 "No se ha podido enviar su solicitud. Int\u00e9ntelo de nuevo en unos minutos."
             ],
-            "WordPress admin": [
-                "Administraci\u00f3n de WordPress"
-            ],
-            "File manager": [
-                "Administrador de archivos"
-            ],
-            "cPanel": [
-                "cPanel"
-            ],
-            "FTP \/ SFTP": [
-                "FTP \/ SFTP"
-            ],
             "Feedback and feature requests": [
                 "Comentarios y solicitudes de funciones"
             ],
@@ -502,58 +484,8 @@
             "Loading\u2026": [
                 "Cargando\u2026"
             ],
-            "Logins for support (optional, stored encrypted)": [
-                "Datos de acceso para soporte (opcional, almacenados de forma cifrada)"
-            ],
-            "A login is only sent with its password. Leave a row out rather than half-filled.": [
-                "Un inicio de sesi\u00f3n solo se env\u00eda con su contrase\u00f1a. Omita una fila en lugar de dejarla a medias."
-            ],
-            "Login address": [
-                "Direcci\u00f3n de acceso"
-            ],
-            "Username": [
-                "Nombre de usuario"
-            ],
-            "Password": [
-                "Contrase\u00f1a"
-            ],
-            "Add a login": [
-                "A\u00f1adir un inicio de sesi\u00f3n"
-            ],
-            "Create a temporary support login": [
-                "Crear un inicio de sesi\u00f3n de soporte temporal"
-            ],
-            "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below.": [
-                "Un usuario independiente para nuestro equipo de soporte, sin acceso a usuarios, instalaci\u00f3n de complementos o edici\u00f3n de c\u00f3digo. Se elimina autom\u00e1ticamente cuando caduca o cuando lo revoca a continuaci\u00f3n."
-            ],
-            "Yes, for %d day": [
-                "S\u00ed, durante %d d\u00eda",
-                "S\u00ed, durante %d d\u00edas",
-                "S\u00ed, durante %d d\u00edas"
-            ],
             "Send": [
                 "Enviar"
-            ],
-            "The list could not be loaded.": [
-                "No se ha podido cargar la lista."
-            ],
-            "That login could not be removed.": [
-                "No se pudo eliminar ese inicio de sesi\u00f3n."
-            ],
-            "Temporary support logins": [
-                "Inicios de sesi\u00f3n de soporte temporales"
-            ],
-            "None. Support can only log in to this site if you create a login here.": [
-                "Ninguno. El servicio de asistencia solo puede iniciar sesi\u00f3n en este sitio si crea un acceso aqu\u00ed."
-            ],
-            "expired, being removed": [
-                "expirado, elimin\u00e1ndose"
-            ],
-            "expires %s": [
-                "expira %s"
-            ],
-            "Revoke now": [
-                "Revocar ahora"
             ],
             "Step %1$d of %2$d": [
                 "Paso %1$d de %2$d"
@@ -623,12 +555,6 @@
             ],
             "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first.": [
                 "Describa lo que pas\u00f3. Usted elige si desea adjuntar informaci\u00f3n del sitio y puede ver exactamente qu\u00e9 contiene primero."
-            ],
-            "Temporary support access": [
-                "Acceso de soporte temporal"
-            ],
-            "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time.": [
-                "Si el servicio de asistencia t\u00e9cnica necesita acceder a su sitio, cree un inicio de sesi\u00f3n temporal aqu\u00ed. Se elimina autom\u00e1ticamente al caducar y puede revocarlo en cualquier momento."
             ],
             "Tell us what to build": [
                 "D\u00edganos qu\u00e9 desea construir"
@@ -777,27 +703,6 @@
             "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
                 "Un motor diferente por idioma, la alternancia autom\u00e1tica y los l\u00edmites de gasto mensual son funciones de Tranzly Pro."
             ],
-            "Engine for %s": [
-                "Motor para %s"
-            ],
-            "The default engine": [
-                "El motor predeterminado"
-            ],
-            "If an engine fails or reaches a limit, try these next, in this order": [
-                "Si un motor falla o alcanza un l\u00edmite, pruebe con los siguientes en este orden"
-            ],
-            "Monthly spending caps": [
-                "L\u00edmites de gasto mensual"
-            ],
-            "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap.": [
-                "Cuando un motor alcanza su l\u00edmite, no se le env\u00eda nada m\u00e1s hasta el mes siguiente y el informe de traducci\u00f3n fallida indica el motivo. D\u00e9jelo vac\u00edo si no desea establecer un l\u00edmite."
-            ],
-            "%1$s (spent this month: $%2$s)": [
-                "%1$s (gastado este mes: $%2$s)"
-            ],
-            "Save caps": [
-                "Guardar may\u00fasculas"
-            ],
             "Glossary and words never translated": [
                 "Glosario y palabras que nunca se traducen"
             ],
@@ -809,24 +714,6 @@
             ],
             "Preferred translations and tone per language are Tranzly Pro features.": [
                 "Las traducciones preferidas y el tono por idioma son caracter\u00edsticas de Tranzly Pro."
-            ],
-            "Preferred translations (one per line: term = translation)": [
-                "Traducciones preferidas (una por l\u00ednea: t\u00e9rmino = traducci\u00f3n)"
-            ],
-            "Formality": [
-                "Formalidad"
-            ],
-            "Default": [
-                "Predeterminado"
-            ],
-            "Formal": [
-                "Formal"
-            ],
-            "Informal": [
-                "No oficial"
-            ],
-            "Style instructions (audience, brand voice)": [
-                "Instrucciones de estilo (audiencia, tono de marca)"
             ],
             "Save glossary": [
                 "Guardar glosario"

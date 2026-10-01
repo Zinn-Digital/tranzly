@@ -14,8 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Pro features in the core check here. The premium CODE lives in `__premium_only` paths; this
- * gates Pro BEHAVIOUR of shared code (per-language engines, fallback, caps, memory, glossary).
+ * Whether the premium layer is running. ⛔ WordPress.org guideline 5 (review 2026-10-01): the
+ * free plugin carries no licence check and no Pro behaviour. Every Pro feature lives in a
+ * `__premium_only` path, and the premium layer (absent from the free package) answers the
+ * `tranzly_is_pro` filter with its licence. Free code only asks it to decide whether to SHOW an
+ * upgrade prompt.
  */
 final class Edition {
 
@@ -25,13 +28,11 @@ final class Edition {
 	 * @return bool
 	 */
 	public static function pro(): bool {
-		$pro = function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code();
-
 		/**
-		 * Filters whether Pro features are on (tests and staging use it; the licence decides).
+		 * Filters whether the premium layer is running. Only the premium layer answers it.
 		 *
-		 * @param bool $pro True with an active Pro licence.
+		 * @param bool $pro False in the free plugin.
 		 */
-		return (bool) apply_filters( 'tranzly_is_pro', $pro );
+		return (bool) apply_filters( 'tranzly_is_pro', false );
 	}
 }

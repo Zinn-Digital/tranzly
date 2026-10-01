@@ -461,18 +461,25 @@ final class Translator {
 		$out      = array();
 		$missing  = array(); // format => key => text.
 		$reserved = array(); // key => memory key.
-		$memory   = Memory::enabled();
-		$keys     = array();
+		/**
+		 * Filters the translation memory in use: none in the free plugin; the premium layer offers
+		 * one (docs/843, WordPress.org guideline 5).
+		 *
+		 * @param Translation_Memory|null $memory The memory, or null.
+		 */
+		$memory = apply_filters( 'tranzly_translation_memory', null );
+		$memory = $memory instanceof Translation_Memory ? $memory : null;
+		$keys   = array();
 		foreach ( $segments as $key => $segment ) {
 			$format = ( $segment['format'] ?? 'text' ) === 'html' ? 'html' : 'text';
 			$text   = (string) $segment['text'];
-			if ( $memory ) {
-				$keys[ (string) $key ] = Memory::key( $text, $format, $source, $target, $options );
+			if ( null !== $memory ) {
+				$keys[ (string) $key ] = $memory->key( $text, $format, $source, $target, $options );
 			}
 			$missing[ $format ][ (string) $key ] = $text;
 		}
-		if ( $memory ) {
-			$hits = Memory::lookup( array_values( $keys ) );
+		if ( null !== $memory ) {
+			$hits = $memory->lookup( array_values( $keys ) );
 			foreach ( $missing as $format => $texts ) {
 				foreach ( $texts as $key => $text ) {
 					if ( isset( $hits[ $keys[ $key ] ] ) ) {
@@ -490,9 +497,9 @@ final class Translator {
 						$reserved[ $key ] = $keys[ $key ];
 						continue;
 					}
-					if ( ! Memory::reserve( $keys[ $key ], $source, $target ) ) {
+					if ( ! $memory->reserve( $keys[ $key ], $source, $target ) ) {
 						foreach ( array_unique( $reserved ) as $mine ) {
-							Memory::release( $mine );
+							$memory->release( $mine );
 						}
 						return new \WP_Error( 'tranzly_memory_busy', __( 'The same text is being translated by another job right now; this item will use that answer.', 'tranzly' ), array( 'status' => 409 ) );
 					}
@@ -526,8 +533,8 @@ final class Translator {
 			Engine_Settings::add_spend( $engine->id(), $cost );
 			foreach ( $answer as $key => $translation ) {
 				$out[ $key ] = $translation;
-				if ( isset( $reserved[ $key ] ) ) {
-					Memory::store( $reserved[ $key ], $translation, $engine->id() );
+				if ( null !== $memory && isset( $reserved[ $key ] ) ) {
+					$memory->store( $reserved[ $key ], $translation, $engine->id() );
 					unset( $reserved[ $key ] );
 				}
 			}
@@ -538,8 +545,8 @@ final class Translator {
 			);
 		}
 
-		foreach ( array_unique( $reserved ) as $mine ) {
-			Memory::release( $mine );
+		foreach ( null === $memory ? array() : array_unique( $reserved ) as $mine ) {
+			$memory->release( $mine );
 		}
 
 		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this item.', 'tranzly' ), array( 'status' => 400 ) );

@@ -1,9 +1,9 @@
 import { __, sprintf } from '@wordpress/i18n';
 import { useCallback, useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
+import { applyFilters } from '@wordpress/hooks';
 import {
 	Button,
-	CheckboxControl,
 	Notice,
 	Panel,
 	PanelBody,
@@ -73,7 +73,18 @@ export default function Engines() {
 		return <Spinner />;
 	}
 
-	const pro = !! state?.pro;
+	// ⛔ WordPress.org guideline 5 (2026-10-01): the Pro editors are not in the free plugin. The
+	// premium layer's own bundle (src/pro__premium_only/settings) supplies them through these
+	// filters; without it, the free screen shows what Pro adds, and nothing locked.
+	const ProEngineFields = applyFilters(
+		'tranzly.engines.languageFields',
+		null
+	);
+	const ProCapsPanel = applyFilters( 'tranzly.engines.capsPanel', null );
+	const ProGlossaryFields = applyFilters(
+		'tranzly.glossary.languageFields',
+		null
+	);
 	const engines = state?.engines || [];
 	const languages = ( state?.languages || [] ).slice( 1 );
 	const settings = state?.settings || {
@@ -125,7 +136,7 @@ export default function Engines() {
 			'/tranzly/v1/glossary',
 			{
 				dnt: linesToList( glossary.dnt ),
-				...( pro
+				...( ProGlossaryFields
 					? {
 							terms: Object.fromEntries(
 								Object.entries( glossary.terms ).map(
@@ -272,7 +283,7 @@ export default function Engines() {
 							saveSettings( { default: value } )
 						}
 					/>
-					{ ! pro && (
+					{ ! ProEngineFields && (
 						<p className="tranzly-engines__pro">
 							{ __(
 								'A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.',
@@ -280,126 +291,26 @@ export default function Engines() {
 							) }
 						</p>
 					) }
-					{ pro &&
-						languages.map( ( language ) => (
-							<SelectControl
-								key={ language.code }
-								__next40pxDefaultSize
-								label={ sprintf(
-									/* translators: %s: a language name. */
-									__( 'Engine for %s', 'tranzly' ),
-									language.name
-								) }
-								value={
-									settings.per_lang[ language.code ] || ''
-								}
-								options={ [
-									{
-										value: '',
-										label: __(
-											'The default engine',
-											'tranzly'
-										),
-									},
-									...engineOptions.slice( 1 ),
-								] }
-								onChange={ ( value ) => {
-									const perLang = { ...settings.per_lang };
-									if ( value ) {
-										perLang[ language.code ] = value;
-									} else {
-										delete perLang[ language.code ];
-									}
-									saveSettings( { per_lang: perLang } );
-								} }
-							/>
-						) ) }
-					{ pro && (
-						<fieldset className="tranzly-engines__fallback">
-							<legend>
-								{ __(
-									'If an engine fails or reaches a limit, try these next, in this order',
-									'tranzly'
-								) }
-							</legend>
-							{ configured.map( ( engine ) => (
-								<CheckboxControl
-									key={ engine.id }
-									label={ engine.label }
-									checked={ settings.fallback.includes(
-										engine.id
-									) }
-									onChange={ ( on ) =>
-										saveSettings( {
-											fallback: on
-												? [
-														...settings.fallback,
-														engine.id,
-													]
-												: settings.fallback.filter(
-														( id ) =>
-															id !== engine.id
-													),
-										} )
-									}
-								/>
-							) ) }
-						</fieldset>
+					{ ProEngineFields && (
+						<ProEngineFields
+							languages={ languages }
+							settings={ settings }
+							engineOptions={ engineOptions }
+							configured={ configured }
+							saveSettings={ saveSettings }
+						/>
 					) }
 				</PanelBody>
 
-				{ pro && (
-					<PanelBody
-						title={ __( 'Monthly spending caps', 'tranzly' ) }
-						initialOpen={ false }
-					>
-						<p>
-							{ __(
-								'When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap.',
-								'tranzly'
-							) }
-						</p>
-						{ configured.map( ( engine ) => (
-							<TextControl
-								key={ engine.id }
-								__next40pxDefaultSize
-								type="number"
-								min="0"
-								step="0.01"
-								label={ sprintf(
-									/* translators: 1: an engine's name, 2: dollars spent this month. */
-									__(
-										'%1$s (spent this month: $%2$s)',
-										'tranzly'
-									),
-									engine.label,
-									Number( engine.spent || 0 ).toFixed( 2 )
-								) }
-								value={ settings.caps[ engine.id ] ?? '' }
-								onChange={ ( value ) => {
-									const caps = { ...settings.caps };
-									if ( '' === value ) {
-										delete caps[ engine.id ];
-									} else {
-										caps[ engine.id ] = Number( value );
-									}
-									setState( {
-										...state,
-										settings: { ...settings, caps },
-									} );
-								} }
-							/>
-						) ) }
-						<Button
-							variant="secondary"
-							disabled={ busy }
-							onClick={ () =>
-								saveSettings( { caps: settings.caps } )
-							}
-						>
-							{ __( 'Save caps', 'tranzly' ) }
-						</Button>
-					</PanelBody>
+				{ ProCapsPanel && (
+					<ProCapsPanel
+						configured={ configured }
+						settings={ settings }
+						state={ state }
+						setState={ setState }
+						saveSettings={ saveSettings }
+						busy={ busy }
+					/>
 				) }
 
 				{ glossary && (
@@ -425,7 +336,7 @@ export default function Engines() {
 								setGlossary( { ...glossary, dnt: value } )
 							}
 						/>
-						{ ! pro && (
+						{ ! ProGlossaryFields && (
 							<p className="tranzly-engines__pro">
 								{ __(
 									'Preferred translations and tone per language are Tranzly Pro features.',
@@ -433,107 +344,13 @@ export default function Engines() {
 								) }
 							</p>
 						) }
-						{ pro &&
-							languages.map( ( language ) => (
-								<div
-									key={ language.code }
-									className="tranzly-engines__language"
-								>
-									<h3>{ language.name }</h3>
-									<TextareaControl
-										__nextHasNoMarginBottom
-										label={ __(
-											'Preferred translations (one per line: term = translation)',
-											'tranzly'
-										) }
-										value={
-											glossary.terms[ language.code ] ||
-											''
-										}
-										onChange={ ( value ) =>
-											setGlossary( {
-												...glossary,
-												terms: {
-													...glossary.terms,
-													[ language.code ]: value,
-												},
-											} )
-										}
-									/>
-									<SelectControl
-										__next40pxDefaultSize
-										label={ __( 'Formality', 'tranzly' ) }
-										value={
-											glossary.tone[ language.code ]
-												?.formality || 'default'
-										}
-										options={ [
-											{
-												value: 'default',
-												label: __(
-													'Default',
-													'tranzly'
-												),
-											},
-											{
-												value: 'more',
-												label: __(
-													'Formal',
-													'tranzly'
-												),
-											},
-											{
-												value: 'less',
-												label: __(
-													'Informal',
-													'tranzly'
-												),
-											},
-										] }
-										onChange={ ( value ) =>
-											setGlossary( {
-												...glossary,
-												tone: {
-													...glossary.tone,
-													[ language.code ]: {
-														...( glossary.tone[
-															language.code
-														] || {} ),
-														formality: value,
-													},
-												},
-											} )
-										}
-									/>
-									<TextareaControl
-										__nextHasNoMarginBottom
-										label={ __(
-											'Style instructions (audience, brand voice)',
-											'tranzly'
-										) }
-										value={
-											glossary.tone[ language.code ]
-												?.instructions || ''
-										}
-										onChange={ ( value ) =>
-											setGlossary( {
-												...glossary,
-												tone: {
-													...glossary.tone,
-													[ language.code ]: {
-														formality:
-															glossary.tone[
-																language.code
-															]?.formality ||
-															'default',
-														instructions: value,
-													},
-												},
-											} )
-										}
-									/>
-								</div>
-							) ) }
+						{ ProGlossaryFields && (
+							<ProGlossaryFields
+								languages={ languages }
+								glossary={ glossary }
+								setGlossary={ setGlossary }
+							/>
+						) }
 						<Button
 							variant="primary"
 							disabled={ busy }

@@ -24,7 +24,7 @@ final class Licensing {
 	 * @return bool
 	 */
 	public static function can_use_premium(): bool {
-		return function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code();
+		return \ZinnDigital\Tranzly\Core\Edition::pro();
 	}
 
 	/**
@@ -68,7 +68,7 @@ final class Licensing {
 		if ( $fs->is_registered() ) {
 			$state['accountUrl'] = (string) $fs->get_account_url();
 		}
-		$state['available'] = $fs->is_premium() && $fs->is_registered();
+		$state['available'] = \ZinnDigital\Tranzly\Core\Edition::pro() && $fs->is_registered();
 		if ( $state['available'] ) {
 			$site             = $fs->get_site();
 			$state['enabled'] = is_object( $site ) && method_exists( $site, 'is_beta' ) && $site->is_beta();

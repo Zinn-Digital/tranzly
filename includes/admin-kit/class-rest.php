@@ -169,38 +169,15 @@ final class Rest {
 				'permission_callback' => array( self::class, 'can_manage' ),
 			)
 		);
-		register_rest_route(
-			$ns,
-			'/kit/support/access',
-			array(
-				array(
-					'methods'             => \WP_REST_Server::READABLE,
-					'callback'            => static fn(): \WP_REST_Response => new \WP_REST_Response( Temp_Access::all() ),
-					'permission_callback' => array( self::class, 'can_manage' ),
-				),
-				array(
-					'methods'             => \WP_REST_Server::DELETABLE,
-					'callback'            => array( self::class, 'revoke_access' ),
-					'permission_callback' => array( self::class, 'can_manage' ),
-					'args'                => array(
-						'ids' => array(
-							'type'     => 'array',
-							'items'    => array( 'type' => 'integer' ),
-							'required' => true,
-						),
-					),
-				),
-			)
-		);
 	}
 
 	/**
-	 * Permission: a site administrator who is not a temporary support user.
+	 * Permission: a site administrator (never a support user an earlier version created).
 	 *
 	 * @return bool
 	 */
 	public static function can_manage(): bool {
-		return current_user_can( 'manage_options' ) && ! Temp_Access::is_temp_user( get_current_user_id() );
+		return current_user_can( 'manage_options' ) && ! Legacy_Support_Users::is_legacy_user( get_current_user_id() );
 	}
 
 	/**
@@ -276,27 +253,5 @@ final class Rest {
 		$status = $result['ok'] ? 201 : max( 400, min( 599, (int) $result['status'] ) );
 
 		return new \WP_REST_Response( $result, $status );
-	}
-
-	/**
-	 * Revoke temporary support users now (one or many).
-	 *
-	 * @param \WP_REST_Request $request Request.
-	 * @return \WP_REST_Response
-	 */
-	public static function revoke_access( \WP_REST_Request $request ): \WP_REST_Response {
-		$revoked = array();
-		foreach ( (array) $request['ids'] as $id ) {
-			if ( Temp_Access::revoke( (int) $id ) ) {
-				$revoked[] = (int) $id;
-			}
-		}
-
-		return new \WP_REST_Response(
-			array(
-				'revoked' => $revoked,
-				'access'  => Temp_Access::all(),
-			)
-		);
 	}
 }

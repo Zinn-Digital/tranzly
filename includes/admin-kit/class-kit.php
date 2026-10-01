@@ -45,7 +45,7 @@ final class Kit {
 
 		Screens::register();
 		Licence::register();
-		Temp_Access::register();
+		Legacy_Support_Users::register();
 		Rest::register();
 	}
 
@@ -135,13 +135,10 @@ final class Kit {
 			'privacyUrl'    => (string) ( $products['privacy_url'] ?? '' ),
 			'companyUrl'    => (string) ( $products['company_url'] ?? '' ),
 			'support'       => array(
-				'consented'   => Support::has_consent(),
-				'email'       => $user instanceof \WP_User ? (string) $user->user_email : '',
-				'name'        => $user instanceof \WP_User ? (string) $user->display_name : '',
-				'canGrant'    => current_user_can( 'create_users' ) && ! Temp_Access::is_temp_user( get_current_user_id() ),
-				'accessDays'  => Temp_Access::DAYS,
-				'defaultDays' => Temp_Access::DEFAULT_DAYS,
-				'recipient'   => 'Zinn Digital® Ltd',
+				'consented' => Support::has_consent(),
+				'email'     => $user instanceof \WP_User ? (string) $user->user_email : '',
+				'name'      => $user instanceof \WP_User ? (string) $user->display_name : '',
+				'recipient' => 'Zinn Digital® Ltd',
 			),
 			'rtl'           => is_rtl(),
 		);

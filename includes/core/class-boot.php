@@ -26,7 +26,7 @@ require_once __DIR__ . '/class-network.php';
 require_once __DIR__ . '/class-edition.php';
 require_once __DIR__ . '/class-engine-settings.php';
 require_once __DIR__ . '/class-glossary.php';
-require_once __DIR__ . '/class-memory.php';
+require_once __DIR__ . '/interface-translation-memory.php';
 require_once __DIR__ . '/class-queue.php';
 require_once dirname( __DIR__ ) . '/engines/interface-engine.php';
 require_once dirname( __DIR__ ) . '/engines/class-registry.php';
@@ -109,12 +109,12 @@ final class Boot {
 	 */
 	private static function premium(): void {
 		$file = dirname( __DIR__ ) . '/api/compat_' . '_premium_only/class-compat.php'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
-		if ( is_readable( $file ) && function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code() ) {
+		if ( is_readable( $file ) && Edition::pro() ) {
 			require_once $file;
 			\ZinnDigital\Tranzly\Api\Compat::register();
 		}
 		$engines = dirname( __DIR__ ) . '/engines/pro_' . '_premium_only'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
-		if ( is_readable( $engines . '/class-google.php' ) && function_exists( 'tranzly_fs' ) && tranzly_fs()->can_use_premium_code() ) {
+		if ( is_readable( $engines . '/class-google.php' ) && Edition::pro() ) {
 			require_once $engines . '/class-google.php';
 			require_once $engines . '/class-microsoft.php';
 			self::$pro_engines = array( '\\ZinnDigital\\Tranzly\\Engines\\Pro\\Google', '\\ZinnDigital\\Tranzly\\Engines\\Pro\\Microsoft' );

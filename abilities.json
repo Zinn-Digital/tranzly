@@ -1504,29 +1504,6 @@
       "mcp_tool": "tranzly-list-status-items"
     },
     {
-      "name": "tranzly/list-support-access",
-      "label": "List temporary support logins",
-      "description": "Lists the temporary support users granted to our team and when each expires.",
-      "edition": "free",
-      "capability": "manage_options (the REST route's own check)",
-      "annotations": {
-        "readonly": true,
-        "destructive": false,
-        "idempotent": true
-      },
-      "input_schema": {
-        "type": "object",
-        "additionalProperties": true,
-        "default": {}
-      },
-      "output_schema": {},
-      "rest": {
-        "method": "GET",
-        "path": "/wp-json/wp-abilities/v1/abilities/tranzly/list-support-access/run"
-      },
-      "mcp_tool": "tranzly-list-support-access"
-    },
-    {
       "name": "tranzly/list-theme-strings",
       "label": "List theme and plugin text sources (Pro)",
       "description": "Lists the themes and plugins whose texts can be scanned for translation, and how many strings each has.",
@@ -1552,7 +1529,7 @@
     {
       "name": "tranzly/open-support-ticket",
       "label": "Open a support ticket",
-      "description": "Files a support ticket (subject, message, kind, email) with this site's diagnostics; access_days and credentials optionally grant our team temporary access.",
+      "description": "Files a support ticket (subject, message, kind, email), with this site's diagnostics when the administrator agreed. It never creates a login or sends one.",
       "edition": "free",
       "capability": "manage_options (the REST route's own check)",
       "annotations": {
@@ -1677,39 +1654,6 @@
         "path": "/wp-json/wp-abilities/v1/abilities/tranzly/review-translation/run"
       },
       "mcp_tool": "tranzly-review-translation"
-    },
-    {
-      "name": "tranzly/revoke-support-access",
-      "label": "Revoke temporary support logins",
-      "description": "Removes temporary support users now (ids).",
-      "edition": "free",
-      "capability": "manage_options (the REST route's own check)",
-      "annotations": {
-        "readonly": false,
-        "destructive": true,
-        "idempotent": true
-      },
-      "input_schema": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "ids": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        },
-        "required": [
-          "ids"
-        ]
-      },
-      "output_schema": {},
-      "rest": {
-        "method": "POST",
-        "path": "/wp-json/wp-abilities/v1/abilities/tranzly/revoke-support-access/run"
-      },
-      "mcp_tool": "tranzly-revoke-support-access"
     },
     {
       "name": "tranzly/run-legacy-import",

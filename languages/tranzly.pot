@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.21.2\n"
+"Project-Id-Version: Tranzly 3.22.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-01T13:03:16+00:00\n"
+"POT-Creation-Date: 2026-10-01T13:15:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -78,6 +78,10 @@ msgstr ""
 
 #: includes/admin-kit/class-engine.php:142
 msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
+msgstr ""
+
+#: includes/admin-kit/class-legacy-support-users.php:108
+msgid "This temporary support access has expired."
 msgstr ""
 
 #: includes/admin-kit/class-licence.php:333
@@ -634,11 +638,11 @@ msgstr ""
 msgid "%s is made by the same team and works alongside this plugin."
 msgstr ""
 
-#: includes/admin-kit/class-rest.php:238
+#: includes/admin-kit/class-rest.php:215
 msgid "Agree to connecting this site first."
 msgstr ""
 
-#: includes/admin-kit/class-rest.php:248
+#: includes/admin-kit/class-rest.php:225
 msgid "Enter a valid e-mail address."
 msgstr ""
 
@@ -652,36 +656,6 @@ msgstr ""
 
 #: includes/admin-kit/class-support.php:89
 msgid "Enter an e-mail address support can reply to."
-msgstr ""
-
-#: includes/admin-kit/class-support.php:97
-#: includes/admin-kit/class-temp-access.php:138
-msgid "Choose 1, 3 or 7 days."
-msgstr ""
-
-#: includes/admin-kit/class-support.php:121
-msgid "Temporary support access created by the site owner. It is deleted automatically when it expires."
-msgstr ""
-
-#: includes/admin-kit/class-temp-access.php:141
-msgid "Only a site administrator, signed in to this screen, can create temporary support access."
-msgstr ""
-
-#: includes/admin-kit/class-temp-access.php:144
-msgid "This site already has the most temporary support logins it can have at once. Revoke one below, or send the request without a login."
-msgstr ""
-
-#: includes/admin-kit/class-temp-access.php:156
-msgid "A unique user name could not be chosen. Try again."
-msgstr ""
-
-#: includes/admin-kit/class-temp-access.php:166
-#: includes/admin-kit/class-temp-access.php:380
-msgid "Zinn Digital® support (temporary)"
-msgstr ""
-
-#: includes/admin-kit/class-temp-access.php:320
-msgid "This temporary support access has expired."
 msgstr ""
 
 #: includes/ai-core/class-admin.php:59
@@ -867,7 +841,6 @@ msgstr ""
 #: includes/ai-core/class-admin.php:462
 #: includes/freemius-strings.php:2132
 #: includes/freemius-strings.php:4997
-#: src/admin-kit/Support.js:605
 #: src/admin/App.js:149
 #: src/admin/IntegrationsTab.js:465
 msgid "Remove"
@@ -1599,32 +1572,12 @@ msgstr ""
 msgid "That translation engine is not available on this site."
 msgstr ""
 
-#: includes/core/class-engine-settings.php:71
+#: includes/core/class-engine-settings.php:92
 msgid "Different engines per language, automatic fallback and spending caps are Tranzly Pro features."
 msgstr ""
 
-#: includes/core/class-engine-settings.php:78
-msgid "Each language must be one of the site's languages, with an available engine."
-msgstr ""
-
-#: includes/core/class-engine-settings.php:88
-msgid "The fallback list may only name available engines."
-msgstr ""
-
-#: includes/core/class-engine-settings.php:97
-msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
-msgstr ""
-
-#: includes/core/class-glossary.php:65
+#: includes/core/class-glossary.php:86
 msgid "Preferred translations and tone per language are Tranzly Pro features. The do-not-translate list is free."
-msgstr ""
-
-#: includes/core/class-glossary.php:73
-msgid "Glossary entries must be grouped by one of the site's languages."
-msgstr ""
-
-#: includes/core/class-glossary.php:90
-msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
 msgstr ""
 
 #. translators: %s: a settings field name.
@@ -1715,16 +1668,36 @@ msgstr ""
 msgid "That translation engine is not set up yet: add its key first."
 msgstr ""
 
-#: includes/core/class-translator.php:497
+#: includes/core/class-translator.php:504
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr ""
 
-#: includes/core/class-translator.php:545
+#: includes/core/class-translator.php:552
 msgid "No translation engine could take this item."
 msgstr ""
 
-#: includes/core/class-translator.php:566
+#: includes/core/class-translator.php:573
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
+msgstr ""
+
+#: includes/core/pro__premium_only/class-engine-routing.php:56
+msgid "Each language must be one of the site's languages, with an available engine."
+msgstr ""
+
+#: includes/core/pro__premium_only/class-engine-routing.php:66
+msgid "The fallback list may only name available engines."
+msgstr ""
+
+#: includes/core/pro__premium_only/class-engine-routing.php:75
+msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
+msgstr ""
+
+#: includes/core/pro__premium_only/class-glossary-pro.php:51
+msgid "Glossary entries must be grouped by one of the site's languages."
+msgstr ""
+
+#: includes/core/pro__premium_only/class-glossary-pro.php:68
+msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
 msgstr ""
 
 #: includes/engines/class-ai.php:65
@@ -2918,7 +2891,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3745
-#: src/admin-kit/Support.js:253
+#: src/admin-kit/Support.js:243
 msgid "Disconnect"
 msgstr ""
 
@@ -3607,7 +3580,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:1394
 #: includes/freemius-strings.php:4468
-#: src/admin-kit/Support.js:490
+#: src/admin-kit/Support.js:448
 msgid "Message"
 msgstr ""
 
@@ -3843,7 +3816,6 @@ msgstr ""
 
 #: includes/freemius-strings.php:1574
 #: includes/freemius-strings.php:4591
-#: src/admin-kit/Support.js:638
 #: src/admin/Switchers.js:163
 msgid "No"
 msgstr ""
@@ -4016,7 +3988,6 @@ msgstr ""
 #: includes/freemius-strings.php:1701
 #: includes/freemius-strings.php:2108
 #: includes/freemius-strings.php:4705
-#: src/admin-kit/Support.js:425
 msgid "Other"
 msgstr ""
 
@@ -5178,7 +5149,6 @@ msgstr ""
 
 #: includes/freemius-strings.php:2596
 #: includes/freemius-strings.php:5575
-#: src/admin-kit/Support.js:551
 #: src/admin/IntegrationsTab.js:197
 msgid "Type"
 msgstr ""
@@ -6271,362 +6241,346 @@ msgid "Returns this site's Tranzly plan, licence state, renewal date and what th
 msgstr ""
 
 #: includes/mcp/class-rest-map.php:251
-msgid "Revoke temporary support logins"
-msgstr ""
-
-#: includes/mcp/class-rest-map.php:252
-msgid "Removes temporary support users now (ids)."
-msgstr ""
-
-#: includes/mcp/class-rest-map.php:260
-msgid "List temporary support logins"
-msgstr ""
-
-#: includes/mcp/class-rest-map.php:261
-msgid "Lists the temporary support users granted to our team and when each expires."
-msgstr ""
-
-#: includes/mcp/class-rest-map.php:269
 msgid "Disconnect from support"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:270
+#: includes/mcp/class-rest-map.php:252
 msgid "Disconnects this site from support."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:278
+#: includes/mcp/class-rest-map.php:260
 msgid "Read the support connection"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:279
+#: includes/mcp/class-rest-map.php:261
 msgid "Says whether this site is connected to Zinn Digital® support, and as whom."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:287
+#: includes/mcp/class-rest-map.php:269
 msgid "Connect to support"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:288
+#: includes/mcp/class-rest-map.php:270
 msgid "Connects this site to Zinn Digital® support (name, email, consent)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:296
+#: includes/mcp/class-rest-map.php:278
 msgid "Consent to support diagnostics"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:297
+#: includes/mcp/class-rest-map.php:279
 msgid "Records the administrator's consent to send diagnostics with support tickets."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:305
+#: includes/mcp/class-rest-map.php:287
 msgid "Read the site diagnostics"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:306
+#: includes/mcp/class-rest-map.php:288
 msgid "Returns the diagnostics a support ticket would carry: versions, active plugins, limits and recent errors."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:314
+#: includes/mcp/class-rest-map.php:296
 msgid "Open a support ticket"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:315
-msgid "Files a support ticket (subject, message, kind, email) with this site's diagnostics; access_days and credentials optionally grant our team temporary access."
+#: includes/mcp/class-rest-map.php:297
+msgid "Files a support ticket (subject, message, kind, email), with this site's diagnostics when the administrator agreed. It never creates a login or sends one."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:323
+#: includes/mcp/class-rest-map.php:305
 msgid "Start the free Pro trial"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:324
+#: includes/mcp/class-rest-map.php:306
 msgid "Starts the 14-day Tranzly Pro trial for this site (no payment needed)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:342
+#: includes/mcp/class-rest-map.php:324
 msgid "Read the Tranzly 2.x import"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:343
+#: includes/mcp/class-rest-map.php:325
 msgid "Returns the state and report of importing translations from Tranzly 2.x."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:351
+#: includes/mcp/class-rest-map.php:333
 msgid "Import Tranzly 2.x translations"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:352
+#: includes/mcp/class-rest-map.php:334
 msgid "Runs the 2.x import: dry-run (report only), run, or undo."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:360
+#: includes/mcp/class-rest-map.php:342
 msgid "Translate an image's text"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:361
+#: includes/mcp/class-rest-map.php:343
 msgid "Saves an image's alt text, title or caption (field) in a language (lang)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:369
+#: includes/mcp/class-rest-map.php:351
 msgid "Read the menus per language"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:370
+#: includes/mcp/class-rest-map.php:352
 msgid "Returns which menu each language shows in each menu location."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:378
+#: includes/mcp/class-rest-map.php:360
 msgid "Set the menus per language"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:379
+#: includes/mcp/class-rest-map.php:361
 msgid "Assigns a menu per language per location (map)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:392
+#: includes/mcp/class-rest-map.php:374
 msgid "Protect or unlock a translation"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:393
+#: includes/mcp/class-rest-map.php:375
 msgid "Protects a translation from being overwritten by the engine (protected: true), or unlocks it."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:401
+#: includes/mcp/class-rest-map.php:383
 msgid "Read a quality report (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:402
+#: includes/mcp/class-rest-map.php:384
 msgid "Returns a translation's AI quality report: score and the segments it flagged."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:410
+#: includes/mcp/class-rest-map.php:392
 msgid "Approve or reject a translation (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:411
+#: includes/mcp/class-rest-map.php:393
 msgid "Approves a translation (and publishes it when the original is published) or sends it back (decision, note)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:419
+#: includes/mcp/class-rest-map.php:401
 msgid "Read a translation side by side"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:420
+#: includes/mcp/class-rest-map.php:402
 msgid "Returns a translation's segments beside the original's, for review and correction."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:428
+#: includes/mcp/class-rest-map.php:410
 msgid "Correct a translation"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:429
+#: includes/mcp/class-rest-map.php:411
 msgid "Saves corrected segments of a translation (segments: key to text); corrected text is protected from re-translation."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:442
+#: includes/mcp/class-rest-map.php:424
 msgid "Unlink a post from its translations"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:443
+#: includes/mcp/class-rest-map.php:425
 msgid "Takes a post out of its translation group; it keeps its language."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:451
+#: includes/mcp/class-rest-map.php:433
 msgid "Read a post's translations"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:452
+#: includes/mcp/class-rest-map.php:434
 msgid "Lists a post's translation group: every language's member with its title, status and edit link."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:460
+#: includes/mcp/class-rest-map.php:442
 msgid "Create an empty translation"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:461
+#: includes/mcp/class-rest-map.php:443
 msgid "Creates a draft translation of a post in a language (lang) to write by hand, without an engine."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:469
+#: includes/mcp/class-rest-map.php:451
 msgid "Link an existing post as a translation"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:470
+#: includes/mcp/class-rest-map.php:452
 msgid "Makes an existing post (target) the translation of this post in a language."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:478
+#: includes/mcp/class-rest-map.php:460
 msgid "Check translations with AI (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:479
+#: includes/mcp/class-rest-map.php:461
 msgid "Schedules the AI quality check of the next page of a language's translations (or the given posts)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:487
+#: includes/mcp/class-rest-map.php:469
 msgid "Multilingual SEO audit (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:488
+#: includes/mcp/class-rest-map.php:470
 msgid "Checks translations for missing SEO titles, descriptions, slugs and hreflang in a language, page by page."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:501
+#: includes/mcp/class-rest-map.php:483
 msgid "Change languages and settings"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:502
+#: includes/mcp/class-rest-map.php:484
 msgid "Sets the site's languages (languages: list of code and name; the first is the original language), the front-end class prefix, and whether AI agents (MCP) are allowed."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:510
+#: includes/mcp/class-rest-map.php:492
 msgid "Read theme and plugin texts"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:511
+#: includes/mcp/class-rest-map.php:493
 msgid "Returns the theme and plugin texts (scope) in a language with their translations."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:519
+#: includes/mcp/class-rest-map.php:501
 msgid "Translate missing theme and plugin texts"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:520
+#: includes/mcp/class-rest-map.php:502
 msgid "Translates the next page of untranslated theme and plugin texts in a language with the default engine (repeat with after until done)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:528
+#: includes/mcp/class-rest-map.php:510
 msgid "Correct theme and plugin texts"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:529
+#: includes/mcp/class-rest-map.php:511
 msgid "Saves corrected translations of theme and plugin texts (strings); they become protected."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:542
+#: includes/mcp/class-rest-map.php:524
 msgid "Translate what is missing"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:543
+#: includes/mcp/class-rest-map.php:525
 msgid "Queues translation of every missing (or out-of-date) item in a language and post type."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:551
+#: includes/mcp/class-rest-map.php:533
 msgid "List what is missing or out of date"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:552
+#: includes/mcp/class-rest-map.php:534
 msgid "Lists originals with their translation state in a language (state: missing, stale, current), page by page."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:560
+#: includes/mcp/class-rest-map.php:542
 msgid "Read the site's texts in a language"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:561
+#: includes/mcp/class-rest-map.php:543
 msgid "Returns the site title, tagline and widget texts in a language."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:569
+#: includes/mcp/class-rest-map.php:551
 msgid "Translate a site text"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:570
+#: includes/mcp/class-rest-map.php:552
 msgid "Saves one site text (key) in a language, e.g. the site title or tagline."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:578
+#: includes/mcp/class-rest-map.php:560
 msgid "Translate a category or tag"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:579
+#: includes/mcp/class-rest-map.php:561
 msgid "Translates one term (category, tag or product attribute) into a language (lang) with an engine, creating or updating its translation."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:587
+#: includes/mcp/class-rest-map.php:569
 msgid "Unlink a term from its translations"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:588
+#: includes/mcp/class-rest-map.php:570
 msgid "Takes a term out of its translation group."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:596
+#: includes/mcp/class-rest-map.php:578
 msgid "Read a term's translations"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:597
+#: includes/mcp/class-rest-map.php:579
 msgid "Lists a category's or tag's translation group."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:605
+#: includes/mcp/class-rest-map.php:587
 msgid "Create a term translation by hand"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:606
+#: includes/mcp/class-rest-map.php:588
 msgid "Creates a term's translation in a language with a name, slug and description you give."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:614
+#: includes/mcp/class-rest-map.php:596
 msgid "Link an existing term as a translation"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:615
+#: includes/mcp/class-rest-map.php:597
 msgid "Makes an existing term (target) the translation of this term in a language."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:623
+#: includes/mcp/class-rest-map.php:605
 msgid "List theme and plugin text sources (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:624
+#: includes/mcp/class-rest-map.php:606
 msgid "Lists the themes and plugins whose texts can be scanned for translation, and how many strings each has."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:632
+#: includes/mcp/class-rest-map.php:614
 msgid "Scan a theme or plugin for texts (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:633
+#: includes/mcp/class-rest-map.php:615
 msgid "Scans the next page of a component's PHP files for translatable texts (repeat with after until done)."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:646
+#: includes/mcp/class-rest-map.php:628
 msgid "Read the address settings"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:647
+#: includes/mcp/class-rest-map.php:629
 msgid "Returns how languages appear in addresses (folder, subdomain or domain), translated slugs and bases, and noindex for untranslated pages."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:655
+#: includes/mcp/class-rest-map.php:637
 msgid "Change the address settings"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:656
+#: includes/mcp/class-rest-map.php:638
 msgid "Sets the address mode (mode), per-language domains, translated bases and segments, noindex_untranslated and slug suggestions."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:669
+#: includes/mcp/class-rest-map.php:651
 msgid "Estimate translating the site (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:670
+#: includes/mcp/class-rest-map.php:652
 msgid "Estimates a whole-site translation in a language (post_types, scope, engine) before starting it."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:678
+#: includes/mcp/class-rest-map.php:660
 msgid "Read the workflow settings (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:679
+#: includes/mcp/class-rest-map.php:661
 msgid "Returns auto-translation on publish and on update, review before publish, and the AI quality check's threshold, provider and model."
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:687
+#: includes/mcp/class-rest-map.php:669
 msgid "Change the workflow settings (Pro)"
 msgstr ""
 
-#: includes/mcp/class-rest-map.php:688
+#: includes/mcp/class-rest-map.php:670
 msgid "Sets on_update (off, stale, translate), on_publish, review, quality_threshold, quality_provider and quality_model."
 msgstr ""
 
@@ -7225,7 +7179,7 @@ msgid "Staging, test and localhost copies of a site are free and never count tow
 msgstr ""
 
 #: src/admin-kit/PlansScreen.js:164
-#: src/admin-kit/Support.js:452
+#: src/admin-kit/Support.js:410
 msgid "Your plan includes priority support."
 msgstr ""
 
@@ -7361,7 +7315,7 @@ msgid "Take the tour"
 msgstr ""
 
 #: src/admin-kit/Shell.js:236
-#: src/admin-kit/Support.js:433
+#: src/admin-kit/Support.js:391
 msgid "Get help or report a bug"
 msgstr ""
 
@@ -7369,249 +7323,159 @@ msgstr ""
 msgid "Plugin screens"
 msgstr ""
 
-#: src/admin-kit/Support.js:48
+#: src/admin-kit/Support.js:47
 msgid "That could not be saved."
 msgstr ""
 
-#: src/admin-kit/Support.js:91
+#: src/admin-kit/Support.js:87
 msgid "Before you contact support"
 msgstr ""
 
 #. translators: %s: company name.
-#: src/admin-kit/Support.js:98
+#: src/admin-kit/Support.js:94
 #, js-format
 msgid "Your request is sent from this site to %s, who make this plugin. We send:"
 msgstr ""
 
-#: src/admin-kit/Support.js:107
+#: src/admin-kit/Support.js:103
 msgid "your e-mail address and name, so we can reply;"
 msgstr ""
 
-#: src/admin-kit/Support.js:113
+#: src/admin-kit/Support.js:109
 msgid "the subject and message you write;"
 msgstr ""
 
-#: src/admin-kit/Support.js:119
+#: src/admin-kit/Support.js:115
 msgid "your licence ID, so paying customers get priority;"
 msgstr ""
 
-#: src/admin-kit/Support.js:125
+#: src/admin-kit/Support.js:121
 msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
 msgstr ""
 
-#: src/admin-kit/Support.js:131
-msgid "only if you add them: logins for your site, stored encrypted and deleted 30 days after your request is closed."
-msgstr ""
-
-#: src/admin-kit/Support.js:139
+#: src/admin-kit/Support.js:129
 msgid "Privacy policy"
 msgstr ""
 
-#: src/admin-kit/Support.js:143
+#: src/admin-kit/Support.js:133
 msgid "I agree, continue"
 msgstr ""
 
-#: src/admin-kit/Support.js:173
+#: src/admin-kit/Support.js:163
 msgid "The connection could not be checked."
 msgstr ""
 
-#: src/admin-kit/Support.js:196
+#: src/admin-kit/Support.js:186
 msgid "That did not work. Try again."
 msgstr ""
 
-#: src/admin-kit/Support.js:204
+#: src/admin-kit/Support.js:194
 msgid "Zinn Digital® support disconnected this site."
 msgstr ""
 
-#: src/admin-kit/Support.js:208
+#: src/admin-kit/Support.js:198
 msgid "Zinn Digital® support no longer recognises this site."
 msgstr ""
 
-#: src/admin-kit/Support.js:212
+#: src/admin-kit/Support.js:202
 msgid "You disconnected this site."
 msgstr ""
 
-#: src/admin-kit/Support.js:219
+#: src/admin-kit/Support.js:209
 msgid "Connect this site to support"
 msgstr ""
 
 #. translators: %s: e-mail address.
-#: src/admin-kit/Support.js:234
+#: src/admin-kit/Support.js:224
 #, js-format
 msgid "Connected. Replies go to %s."
 msgstr ""
 
-#: src/admin-kit/Support.js:261
+#: src/admin-kit/Support.js:251
 msgid "Not connected. You can still send a request with your e-mail address below; connecting saves typing it each time."
 msgstr ""
 
-#: src/admin-kit/Support.js:269
+#: src/admin-kit/Support.js:259
 msgid "E-mail address"
 msgstr ""
 
-#: src/admin-kit/Support.js:275
-#: src/admin-kit/Support.js:479
+#: src/admin-kit/Support.js:265
+#: src/admin-kit/Support.js:437
 msgid "Your name (optional)"
 msgstr ""
 
-#: src/admin-kit/Support.js:283
+#: src/admin-kit/Support.js:273
 msgid "I agree to connect this site to Zinn Digital® support. It sends this site’s address, WordPress and PHP versions and the plugin version, and can be disconnected at any time from here or by Zinn Digital®."
 msgstr ""
 
-#: src/admin-kit/Support.js:303
+#: src/admin-kit/Support.js:293
 msgid "Connect"
 msgstr ""
 
-#: src/admin-kit/Support.js:332
+#: src/admin-kit/Support.js:314
 msgid "I need help"
 msgstr ""
 
-#: src/admin-kit/Support.js:333
+#: src/admin-kit/Support.js:315
 msgid "Report a bug"
 msgstr ""
 
-#: src/admin-kit/Support.js:338
+#: src/admin-kit/Support.js:320
 msgid "Send feedback"
 msgstr ""
 
-#: src/admin-kit/Support.js:342
+#: src/admin-kit/Support.js:324
 msgid "Request a feature"
 msgstr ""
 
-#: src/admin-kit/Support.js:364
+#: src/admin-kit/Support.js:344
 msgid "The site details could not be read."
 msgstr ""
 
-#: src/admin-kit/Support.js:407
+#: src/admin-kit/Support.js:376
 msgid "Your request could not be sent. Try again in a few minutes."
 msgstr ""
 
-#: src/admin-kit/Support.js:418
-msgid "WordPress admin"
-msgstr ""
-
-#: src/admin-kit/Support.js:421
-msgid "File manager"
-msgstr ""
-
-#: src/admin-kit/Support.js:423
-msgid "cPanel"
-msgstr ""
-
-#: src/admin-kit/Support.js:424
-msgid "FTP / SFTP"
-msgstr ""
-
-#: src/admin-kit/Support.js:434
+#: src/admin-kit/Support.js:392
 msgid "Feedback and feature requests"
 msgstr ""
 
 #. translators: %s: request reference, e.g. ZT-ABC234.
-#: src/admin-kit/Support.js:445
+#: src/admin-kit/Support.js:403
 #, js-format
 msgid "Sent. Your reference is %s, and our reply will come by e-mail."
 msgstr ""
 
-#: src/admin-kit/Support.js:465
+#: src/admin-kit/Support.js:423
 msgid "What is it about?"
 msgstr ""
 
-#: src/admin-kit/Support.js:473
+#: src/admin-kit/Support.js:431
 msgid "Reply to (e-mail)"
 msgstr ""
 
-#: src/admin-kit/Support.js:485
+#: src/admin-kit/Support.js:443
 msgid "Subject"
 msgstr ""
 
-#: src/admin-kit/Support.js:493
+#: src/admin-kit/Support.js:451
 msgid "What did you do, what did you expect, and what happened instead?"
 msgstr ""
 
-#: src/admin-kit/Support.js:506
+#: src/admin-kit/Support.js:464
 msgid "Include site details (versions, theme, plugins, error log excerpt)"
 msgstr ""
 
-#: src/admin-kit/Support.js:523
+#: src/admin-kit/Support.js:481
 msgid "See exactly what is sent"
 msgstr ""
 
-#: src/admin-kit/Support.js:530
+#: src/admin-kit/Support.js:488
 msgid "Loading…"
 msgstr ""
 
-#: src/admin-kit/Support.js:536
-msgid "Logins for support (optional, stored encrypted)"
-msgstr ""
-
-#: src/admin-kit/Support.js:542
-msgid "A login is only sent with its password. Leave a row out rather than half-filled."
-msgstr ""
-
-#: src/admin-kit/Support.js:560
-msgid "Login address"
-msgstr ""
-
-#: src/admin-kit/Support.js:571
-msgid "Username"
-msgstr ""
-
-#: src/admin-kit/Support.js:584
-msgid "Password"
-msgstr ""
-
-#: src/admin-kit/Support.js:619
-msgid "Add a login"
-msgstr ""
-
-#: src/admin-kit/Support.js:626
-msgid "Create a temporary support login"
-msgstr ""
-
-#: src/admin-kit/Support.js:630
-msgid "A separate user for our support team, without access to users, plugins installation or code editing. It is deleted automatically when it expires, or whenever you revoke it below."
-msgstr ""
-
-#. translators: %d: number of days.
-#: src/admin-kit/Support.js:645
-#, js-format
-msgid "Yes, for %d day"
-msgid_plural "Yes, for %d days"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/admin-kit/Support.js:669
+#: src/admin-kit/Support.js:500
 msgid "Send"
-msgstr ""
-
-#: src/admin-kit/Support.js:694
-msgid "The list could not be loaded."
-msgstr ""
-
-#: src/admin-kit/Support.js:709
-msgid "That login could not be removed."
-msgstr ""
-
-#: src/admin-kit/Support.js:721
-msgid "Temporary support logins"
-msgstr ""
-
-#: src/admin-kit/Support.js:733
-msgid "None. Support can only log in to this site if you create a login here."
-msgstr ""
-
-#: src/admin-kit/Support.js:745
-msgid "expired, being removed"
-msgstr ""
-
-#. translators: %s: date and time.
-#: src/admin-kit/Support.js:751
-#, js-format
-msgid "expires %s"
-msgstr ""
-
-#: src/admin-kit/Support.js:764
-msgid "Revoke now"
 msgstr ""
 
 #. translators: 1: this step, 2: number of steps.
@@ -7710,19 +7574,11 @@ msgstr ""
 msgid "Describe what happened. You choose whether to attach site information, and you can see exactly what it contains first."
 msgstr ""
 
-#: src/admin-kit/tours.js:112
-msgid "Temporary support access"
-msgstr ""
-
-#: src/admin-kit/tours.js:113
-msgid "If support needs to look inside your site, create a temporary login here. It deletes itself when it expires, and you can remove it at any time."
-msgstr ""
-
-#: src/admin-kit/tours.js:122
+#: src/admin-kit/tours.js:114
 msgid "Tell us what to build"
 msgstr ""
 
-#: src/admin-kit/tours.js:123
+#: src/admin-kit/tours.js:115
 msgid "Send an idea, a feature request or any feedback. It goes straight to the team."
 msgstr ""
 
@@ -7856,153 +7712,97 @@ msgstr ""
 msgid "Save settings"
 msgstr ""
 
-#: src/admin/Engines.js:87
+#: src/admin/Engines.js:98
 msgid "First engine that is set up"
 msgstr ""
 
-#: src/admin/Engines.js:110
+#: src/admin/Engines.js:121
 msgid "Key saved. It is stored encrypted and never shown again."
 msgstr ""
 
-#: src/admin/Engines.js:120
+#: src/admin/Engines.js:131
 msgid "Engine settings saved."
 msgstr ""
 
-#: src/admin/Engines.js:142
+#: src/admin/Engines.js:153
 msgid "Glossary saved."
 msgstr ""
 
-#: src/admin/Engines.js:163
+#: src/admin/Engines.js:174
 msgid "Your keys"
 msgstr ""
 
-#: src/admin/Engines.js:165
+#: src/admin/Engines.js:176
 msgid "Tranzly calls the translation services with your own account. Keys are stored encrypted in your database and are only ever sent to the service they belong to. AI model keys are set in the AI settings."
 msgstr ""
 
 #. translators: %s: a translation service's name.
-#: src/admin/Engines.js:183
+#: src/admin/Engines.js:194
 #, js-format
 msgid "%s API key"
 msgstr ""
 
 #. translators: %s: the last characters of a saved key, masked.
-#: src/admin/Engines.js:190
+#: src/admin/Engines.js:201
 #, js-format
 msgid "Saved: %s. Enter a new key to replace it, or save an empty field to remove it."
 msgstr ""
 
-#: src/admin/Engines.js:196
+#: src/admin/Engines.js:207
 msgid "No key saved."
 msgstr ""
 
-#: src/admin/Engines.js:209
+#: src/admin/Engines.js:220
 msgid "Azure region (leave empty for a global resource)"
 msgstr ""
 
-#: src/admin/Engines.js:223
+#: src/admin/Engines.js:234
 msgid "Save key"
 msgstr ""
 
-#: src/admin/Engines.js:231
+#: src/admin/Engines.js:242
 msgid "Check my DeepL usage"
 msgstr ""
 
 #. translators: 1: characters used, 2: the account's limit.
-#: src/admin/Engines.js:241
+#: src/admin/Engines.js:252
 #, js-format
 msgid "%1$s of %2$s characters used this billing period."
 msgstr ""
 
-#: src/admin/Engines.js:255
+#: src/admin/Engines.js:266
 msgid "Which engine translates"
 msgstr ""
 
-#: src/admin/Engines.js:260
+#: src/admin/Engines.js:271
 msgid "No engine is set up yet. Save a key above (or set up an AI model) to start translating."
 msgstr ""
 
-#: src/admin/Engines.js:268
+#: src/admin/Engines.js:279
 msgid "Default engine"
 msgstr ""
 
-#: src/admin/Engines.js:277
+#: src/admin/Engines.js:288
 msgid "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features."
 msgstr ""
 
-#. translators: %s: a language name.
-#: src/admin/Engines.js:290
-#, js-format
-msgid "Engine for %s"
-msgstr ""
-
-#: src/admin/Engines.js:299
-msgid "The default engine"
-msgstr ""
-
-#: src/admin/Engines.js:320
-msgid "If an engine fails or reaches a limit, try these next, in this order"
-msgstr ""
-
-#: src/admin/Engines.js:353
-msgid "Monthly spending caps"
-msgstr ""
-
-#: src/admin/Engines.js:357
-msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
-msgstr ""
-
-#. translators: 1: an engine's name, 2: dollars spent this month.
-#: src/admin/Engines.js:371
-#, js-format
-msgid "%1$s (spent this month: $%2$s)"
-msgstr ""
-
-#: src/admin/Engines.js:400
-msgid "Save caps"
-msgstr ""
-
-#: src/admin/Engines.js:407
+#: src/admin/Engines.js:318
 msgid "Glossary and words never translated"
 msgstr ""
 
-#: src/admin/Engines.js:415
+#: src/admin/Engines.js:326
 msgid "Never translate these words (one per line)"
 msgstr ""
 
-#: src/admin/Engines.js:419
+#: src/admin/Engines.js:330
 msgid "Brand and product names stay exactly as they are, with every engine."
 msgstr ""
 
-#: src/admin/Engines.js:430
+#: src/admin/Engines.js:341
 msgid "Preferred translations and tone per language are Tranzly Pro features."
 msgstr ""
 
-#: src/admin/Engines.js:445
-msgid "Preferred translations (one per line: term = translation)"
-msgstr ""
-
-#: src/admin/Engines.js:465
-msgid "Formality"
-msgstr ""
-
-#: src/admin/Engines.js:473
-msgid "Default"
-msgstr ""
-
-#: src/admin/Engines.js:480
-msgid "Formal"
-msgstr ""
-
-#: src/admin/Engines.js:487
-msgid "Informal"
-msgstr ""
-
-#: src/admin/Engines.js:510
-msgid "Style instructions (audience, brand voice)"
-msgstr ""
-
-#: src/admin/Engines.js:542
+#: src/admin/Engines.js:359
 msgid "Save glossary"
 msgstr ""
 
@@ -9227,6 +9027,62 @@ msgstr ""
 
 #: src/pro__premium_only/editor/index.js:120
 msgid "Use the original image"
+msgstr ""
+
+#. translators: %s: a language name.
+#: src/pro__premium_only/settings/index.js:45
+#, js-format
+msgid "Engine for %s"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:52
+msgid "The default engine"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:70
+msgid "If an engine fails or reaches a limit, try these next, in this order"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:119
+msgid "Monthly spending caps"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:123
+msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
+msgstr ""
+
+#. translators: 1: an engine's name, 2: dollars spent this month.
+#: src/pro__premium_only/settings/index.js:137
+#, js-format
+msgid "%1$s (spent this month: $%2$s)"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:161
+msgid "Save caps"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:187
+msgid "Preferred translations (one per line: term = translation)"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:204
+msgid "Formality"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:212
+msgid "Default"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:216
+msgid "Formal"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:220
+msgid "Informal"
+msgstr ""
+
+#: src/pro__premium_only/settings/index.js:239
+msgid "Style instructions (audience, brand voice)"
 msgstr ""
 
 #: src/pro__premium_only/visual/index.js:19

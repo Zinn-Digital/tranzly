@@ -66,39 +66,33 @@ final class Engine_Settings {
 			}
 			$current['default'] = (string) $input['default'];
 		}
-		foreach ( array( 'per_lang', 'fallback', 'caps' ) as $pro_key ) {
-			if ( array_key_exists( $pro_key, $input ) && ! Edition::pro() && array() !== (array) $input[ $pro_key ] ) {
-				return self::refuse( __( 'Different engines per language, automatic fallback and spending caps are Tranzly Pro features.', 'tranzly' ), 403 );
+		$pro_keys = array_filter(
+			array( 'per_lang', 'fallback', 'caps' ),
+			static fn( string $k ): bool => array_key_exists( $k, $input )
+		);
+		if ( array() !== $pro_keys ) {
+			/**
+			 * Saves the per-language engines, the fallback list and the monthly caps. Only the
+			 * premium layer answers (WordPress.org guideline 5: no Pro behaviour in the free plugin).
+			 *
+			 * @param array<string, mixed>|\WP_Error|null $saved   The settings with those keys applied,
+			 *                                                     a refusal, or null (nobody handled them).
+			 * @param array<string, mixed>                 $input   What was submitted.
+			 * @param array<string, mixed>                 $current The settings so far.
+			 */
+			$saved = apply_filters( 'tranzly_engine_settings_save', null, $input, $current );
+			if ( is_wp_error( $saved ) ) {
+				return $saved;
 			}
-		}
-		if ( array_key_exists( 'per_lang', $input ) ) {
-			$map = array();
-			foreach ( (array) $input['per_lang'] as $lang => $id ) {
-				if ( null === \ZinnDigital\Tranzly\Languages::resolve( (string) $lang ) || ! $engine( $id ) ) {
-					return self::refuse( __( 'Each language must be one of the site\'s languages, with an available engine.', 'tranzly' ) );
+			if ( is_array( $saved ) ) {
+				$current = $saved;
+			} else {
+				foreach ( $pro_keys as $pro_key ) {
+					if ( array() !== (array) $input[ $pro_key ] ) {
+						return self::refuse( __( 'Different engines per language, automatic fallback and spending caps are Tranzly Pro features.', 'tranzly' ), 403 );
+					}
 				}
-				$map[ (string) \ZinnDigital\Tranzly\Languages::resolve( (string) $lang ) ] = (string) $id;
 			}
-			$current['per_lang'] = $map;
-		}
-		if ( array_key_exists( 'fallback', $input ) ) {
-			$list = array_values( (array) $input['fallback'] );
-			foreach ( $list as $id ) {
-				if ( ! $engine( $id ) ) {
-					return self::refuse( __( 'The fallback list may only name available engines.', 'tranzly' ) );
-				}
-			}
-			$current['fallback'] = array_values( array_unique( array_map( 'strval', $list ) ) );
-		}
-		if ( array_key_exists( 'caps', $input ) ) {
-			$caps = array();
-			foreach ( (array) $input['caps'] as $id => $usd ) {
-				if ( ! $engine( $id ) || ! is_numeric( $usd ) || (float) $usd < 0 ) {
-					return self::refuse( __( 'A monthly cap is an amount in US dollars, zero or more, for an available engine.', 'tranzly' ) );
-				}
-				$caps[ (string) $id ] = round( (float) $usd, 2 );
-			}
-			$current['caps'] = $caps;
 		}
 		update_option( self::OPTION, $current, true );
 
@@ -106,8 +100,8 @@ final class Engine_Settings {
 	}
 
 	/**
-	 * The engines to try for a language, in order. Free: the default engine. Pro: the language's
-	 * own engine (else the default), then the fallback list.
+	 * The engines to try for a language, in order: the default engine, unless the premium layer
+	 * extends the chain (`tranzly_engine_chain`).
 	 *
 	 * @param string $lang Target language.
 	 * @return array<int, string>
@@ -119,26 +113,36 @@ final class Engine_Settings {
 			$default = Registry::instance()->default_engine();
 			$first   = null === $default ? '' : $default->id();
 		}
-		if ( ! Edition::pro() ) {
-			return '' === $first ? array() : array( $first );
-		}
-		$first = $settings['per_lang'][ $lang ] ?? $first;
+		$chain = '' === $first ? array() : array( $first );
 
-		return array_values( array_unique( array_filter( array_merge( array( $first ), $settings['fallback'] ) ) ) );
+		/**
+		 * Filters the engines to try for a language, in order. Free: the default engine. The
+		 * premium layer adds the language's own engine and the fallback list.
+		 *
+		 * @param array<int, string>   $chain    Engine ids.
+		 * @param string               $lang     Target language.
+		 * @param string               $first    The default engine.
+		 * @param array<string, mixed> $settings The stored settings.
+		 */
+		return array_values( (array) apply_filters( 'tranzly_engine_chain', $chain, $lang, $first, $settings ) );
 	}
 
 	/**
-	 * The monthly cap for an engine, or null (none; always null without Pro).
+	 * The monthly cap for an engine, or null (none unless the premium layer sets one).
 	 *
 	 * @param string $engine Engine id.
 	 * @return float|null
 	 */
 	public static function cap( string $engine ): ?float {
-		if ( ! Edition::pro() ) {
-			return null;
-		}
+		/**
+		 * Filters an engine's monthly cap in US dollars: none in the free plugin.
+		 *
+		 * @param float|null $cap    The cap, or null.
+		 * @param string     $engine Engine id.
+		 */
+		$cap = apply_filters( 'tranzly_engine_cap', null, $engine );
 
-		return self::get()['caps'][ $engine ] ?? null;
+		return is_numeric( $cap ) ? (float) $cap : null;
 	}
 
 	/**

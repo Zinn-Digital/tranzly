@@ -17,6 +17,10 @@ module.exports = {
 			__dirname,
 			'src/pro__premium_only/editor/index.js'
 		),
+		settings__premium_only: path.resolve(
+			__dirname,
+			'src/pro__premium_only/settings/index.js'
+		),
 		visual__premium_only: path.resolve(
 			__dirname,
 			'src/pro__premium_only/visual/index.js'
