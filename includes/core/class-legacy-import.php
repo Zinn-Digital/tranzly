@@ -184,7 +184,7 @@ final class Legacy_Import {
 	 */
 	public static function fingerprint(): string {
 		global $wpdb;
-		$rows = $wpdb->get_row(
+		$rows = $wpdb->get_row( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter -- prepared: key_placeholders() is one %s per key.
 			$wpdb->prepare(
 				'SELECT COUNT(*) AS n, COALESCE(MAX(meta_id), 0) AS top, COALESCE(SUM(CRC32(CONCAT(meta_id, ":", post_id, ":", meta_key, ":", meta_value))), 0) AS crc FROM %i WHERE meta_key IN (' . self::key_placeholders() . ') OR meta_key LIKE %s', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( array( $wpdb->postmeta ), self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%' ) )
@@ -297,7 +297,7 @@ final class Legacy_Import {
 			return true;
 		}
 
-		return null !== $wpdb->get_var(
+		return null !== $wpdb->get_var( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter -- prepared: key_placeholders() is one %s per key.
 			$wpdb->prepare(
 				"SELECT meta_id FROM {$wpdb->postmeta} WHERE meta_key IN (" . self::key_placeholders() . ') OR meta_key LIKE %s LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%' ) )
@@ -478,7 +478,7 @@ final class Legacy_Import {
 	private static function read_batch( int $cursor ): array {
 		global $wpdb;
 
-		return (array) $wpdb->get_results(
+		return (array) $wpdb->get_results( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter -- prepared: key_placeholders() is one %s per key.
 			$wpdb->prepare(
 				"SELECT m.meta_id, m.post_id, m.meta_key, m.meta_value FROM {$wpdb->postmeta} m INNER JOIN {$wpdb->posts} p ON p.ID = m.post_id WHERE m.meta_id > %d AND p.post_type <> 'revision' AND ( m.meta_key IN (" . self::key_placeholders() . ') OR m.meta_key LIKE %s ) ORDER BY m.meta_id ASC LIMIT %d', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- one %s per key (key_placeholders()).
 				array_merge( array( $cursor ), self::KEYS, array( $wpdb->esc_like( '_tranzly_post_translated_to_' ) . '%', self::BATCH ) )
