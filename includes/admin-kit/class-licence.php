@@ -46,11 +46,68 @@ final class Licence {
 	);
 
 	/**
-	 * Nothing to hook today; kept so boot() reads as the list of parts.
+	 * Hook the licence guards.
 	 *
 	 * @return void
 	 */
-	public static function register(): void {}
+	public static function register(): void {
+		$fs = Kit::fs();
+		if ( null === $fs || ! method_exists( $fs, 'get_ajax_action' ) ) {
+			return;
+		}
+		// Priority 1: before the SDK's own handler (10) on the SDK's own action. No admin-ajax action
+		// of ours is added; PbsSecurityFindingsTest pins this line as the only admin-ajax hook.
+		add_action( 'wp_ajax_' . $fs->get_ajax_action( 'activate_license' ), array( self::class, 'guard_bundle_activation' ), 1 );
+	}
+
+	/**
+	 * Before the SDK activates a licence key on a site that SKIPPED the opt-in, switch its bundle
+	 * auto-activation off for this one request.
+	 *
+	 * ⛔⛔ FATAL in Freemius SDK 2.13.4 (the latest release, checked 2026-10-01; docs/640 PF-453):
+	 * on a site that skipped the opt-in, "Activate License" with a valid key activates the licence
+	 * and THEN, because the plugin sets `bundle_license_auto_activation`, asks for the bundle's
+	 * parent licence with the account's user API scope — and an install that was never registered
+	 * has no user (`$this->_user === false`). `get_api_user_scope_by_user()` refuses `false` with a
+	 * TypeError, so the AJAX call answers 500 and the buyer sees an error for a licence that was in
+	 * fact activated. Every customer who skips the opt-in and then buys Pro hits it.
+	 *
+	 * The SDK offers no switch for one request and we never edit the vendored SDK, so the private
+	 * flag is set through a bound closure, and only where the SDK would otherwise crash: this AJAX
+	 * action, on an install that is not registered. A registered site keeps bundle activation; the
+	 * account screen's "Activate license" runs it again once the site is connected.
+	 *
+	 * @return void
+	 */
+	public static function guard_bundle_activation(): void {
+		$fs = Kit::fs();
+		if ( null === $fs || ! method_exists( $fs, 'is_registered' ) || $fs->is_registered() ) {
+			return;
+		}
+		self::disable_bundle_auto_activation( $fs );
+	}
+
+	/**
+	 * Switch an SDK instance's bundle auto-activation off. Separate so it can be tested.
+	 *
+	 * @param object $fs The SDK instance.
+	 * @return bool True when the instance no longer auto-activates a bundle.
+	 */
+	public static function disable_bundle_auto_activation( object $fs ): bool {
+		if ( ! property_exists( $fs, '_is_bundle_license_auto_activation_enabled' ) ) {
+			return ! method_exists( $fs, 'is_bundle_license_auto_activation_enabled' ) || ! $fs->is_bundle_license_auto_activation_enabled();
+		}
+		$off = \Closure::bind(
+			static function ( object $instance ): void {
+				$instance->_is_bundle_license_auto_activation_enabled = false;
+			},
+			null,
+			get_class( $fs )
+		);
+		$off( $fs );
+
+		return ! method_exists( $fs, 'is_bundle_license_auto_activation_enabled' ) || ! $fs->is_bundle_license_auto_activation_enabled();
+	}
 
 	/**
 	 * The plan tier in force: `free`, `personal`, `business` or `agency`.
