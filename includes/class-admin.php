@@ -57,7 +57,7 @@ final class Admin {
 			'manage_options',
 			self::SLUG,
 			array( self::class, 'render' ),
-			'dashicons-translation',
+			self::menu_icon(),
 			// ⛔ Below Settings (80), never higher: WordPress.org's 2026-09-25 closure notice listed a
 			// high menu position (T-6, docs/plugins-overhaul/02-wporg-closure-notices.md), and the
 			// re-review is one shot. wp/tests/e2e/tranzly/wporg-closure.sh asserts it.
@@ -145,5 +145,20 @@ final class Admin {
 				'companyUrl' => 'https://zinndigital.com',
 			)
 		);
+	}
+
+	/**
+	 * The admin menu icon: the product's own pictogram as a monochrome SVG data URI (PLUGIN-ICONS,
+	 * 2026-10-01 — the owner asked for the product icons "to be used everywhere", and a dashicon
+	 * is nobody's icon). Fill-only on purpose: WordPress's svg-painter recolours `fill` to the
+	 * admin colour scheme and leaves strokes alone. Source:
+	 * `ui/src/brand/product-icons/menu/tranzly.svg`; `node scripts/product-icons.mjs --check`
+	 * fails when this copy drifts from it.
+	 *
+	 * @return string
+	 */
+	private static function menu_icon(): string {
+		$menu_svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black"><path fill-rule="evenodd" d="M1 2h11v12H1zM3 4v2h2.5v6h2V6H10V4z"/><path fill-rule="evenodd" d="M13.5 6H19v12H8v-2.5h5.5zM14 9h1.4l1 3.2 1-3.2h1.4l-1.8 5h-1.2z"/></svg>';
+		return 'data:image/svg+xml;base64,' . base64_encode( $menu_svg ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode -- a data URI is the documented form for a menu icon.
 	}
 }
