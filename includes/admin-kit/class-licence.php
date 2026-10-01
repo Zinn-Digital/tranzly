@@ -51,13 +51,33 @@ final class Licence {
 	 * @return void
 	 */
 	public static function register(): void {
+		// Last on `admin_init`: the SDK adds its activate-licence handler there (premium builds only),
+		// and the guard rides on that handler or does not exist at all.
+		add_action( 'admin_init', array( self::class, 'arm_bundle_guard' ), PHP_INT_MAX );
+	}
+
+	/**
+	 * Hook the bundle guard onto the SDK's activate-licence action, ONLY when the SDK has registered
+	 * its own handler there.
+	 *
+	 * ⛔ PF-453 follow-up (WPORG, test-wp-compat.sh): hooked unconditionally, the guard was the ONLY
+	 * callback on that action in a free build (the SDK offers "Activate License" in the premium
+	 * build alone), so the access gate saw an admin-ajax action of ours that answers a subscriber
+	 * `200 '0'` with no capability check. Riding on the SDK's handler adds no endpoint.
+	 *
+	 * @return void
+	 */
+	public static function arm_bundle_guard(): void {
 		$fs = Kit::fs();
 		if ( null === $fs || ! method_exists( $fs, 'get_ajax_action' ) ) {
 			return;
 		}
-		// Priority 1: before the SDK's own handler (10) on the SDK's own action. No admin-ajax action
-		// of ours is added; PbsSecurityFindingsTest pins this line as the only admin-ajax hook.
-		add_action( 'wp_ajax_' . $fs->get_ajax_action( 'activate_license' ), array( self::class, 'guard_bundle_activation' ), 1 );
+		// PbsSecurityFindingsTest pins these two statements as the only admin-ajax references.
+		$sdk_action = 'wp_ajax_' . $fs->get_ajax_action( 'activate_license' );
+		if ( false !== has_action( $sdk_action ) ) {
+			// Priority 1: before the SDK's own handler (10) on the SDK's own action.
+			add_action( $sdk_action, array( self::class, 'guard_bundle_activation' ), 1 );
+		}
 	}
 
 	/**
@@ -80,6 +100,9 @@ final class Licence {
 	 * @return void
 	 */
 	public static function guard_bundle_activation(): void {
+		if ( ! current_user_can( 'activate_plugins' ) ) {
+			return; // The SDK refuses a non-administrator itself; the guard changes nothing for one.
+		}
 		$fs = Kit::fs();
 		if ( null === $fs || ! method_exists( $fs, 'is_registered' ) || $fs->is_registered() ) {
 			return;
