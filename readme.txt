@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.24.2
+Stable tag: 3.24.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -153,6 +153,10 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.24.3 =
+* Fix: very long pages (tens of thousands of characters) translate with AI models. They were sent as one request and could time out as "unreachable"; they are now sent in parts and joined back exactly.
+* Fix: a translation is never more public than its original. Publishing the translations of a whole post type now takes only published originals, and a draft's translation stays a draft.
 
 = 3.24.2 =
 * Serbian: quotation marks are now „…“ throughout, as the Serbian WordPress translation team writes them.

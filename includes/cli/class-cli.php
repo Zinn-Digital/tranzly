@@ -228,7 +228,9 @@ final class Cli {
 	 * : Also overwrite protected translations.
 	 *
 	 * [--publish]
-	 * : Publish the translations (new ones are drafts otherwise).
+	 * : Publish the translations (new ones are drafts otherwise). Never more public than the
+	 * original: with --post-type only published originals are taken, and a draft's translation
+	 * stays a draft.
 	 *
 	 * [--dry-run]
 	 * : Print the estimate and translate nothing.
@@ -254,7 +256,7 @@ final class Cli {
 		$engine = (string) ( $assoc['engine'] ?? '' );
 		$force  = isset( $assoc['force'] );
 
-		$batches = self::batches( $args, (string) ( $assoc['post-type'] ?? '' ) );
+		$batches = self::batches( $args, (string) ( $assoc['post-type'] ?? '' ), isset( $assoc['publish'] ) );
 		if ( isset( $assoc['dry-run'] ) ) {
 			$ids = array();
 			foreach ( $batches as $batch ) {
@@ -420,7 +422,8 @@ final class Cli {
 	 * : create/retry: the engine (retry: try another one).
 	 *
 	 * [--publish]
-	 * : create: publish the translations.
+	 * : create: publish the translations. With --post-type, only published originals are taken;
+	 * a translation is never more public than its original.
 	 *
 	 * [--force]
 	 * : create: also overwrite protected translations.
@@ -458,7 +461,7 @@ final class Cli {
 				}
 				$ids = array_map( 'intval', $args );
 				if ( isset( $assoc['post-type'] ) ) {
-					$ids = array_merge( $ids, \ZinnDigital\Tranzly\Api\Rest_Jobs::sources_of_type( (string) $assoc['post-type'] ) );
+					$ids = array_merge( $ids, \ZinnDigital\Tranzly\Api\Rest_Jobs::sources_of_type( (string) $assoc['post-type'], isset( $assoc['publish'] ) ) );
 				}
 				$made = Queue::create(
 					$ids,
@@ -537,11 +540,13 @@ final class Cli {
 	 * The posts to translate, 100 at a time: the IDs given, or every post of a type in the default
 	 * language.
 	 *
-	 * @param array<int, string> $ids       IDs given.
-	 * @param string             $post_type A post type.
+	 * @param array<int, string> $ids        IDs given.
+	 * @param string             $post_type  A post type.
+	 * @param bool               $publishing Are the translations to be published? Then only
+	 *                                       published originals (never more public than the source).
 	 * @return \Generator<int, array<int, int>>
 	 */
-	private static function batches( array $ids, string $post_type ): \Generator {
+	private static function batches( array $ids, string $post_type, bool $publishing = false ): \Generator {
 		if ( array() !== $ids ) {
 			yield array_map( 'intval', $ids );
 			return;
@@ -554,7 +559,7 @@ final class Cli {
 			$found = get_posts(
 				array(
 					'post_type'      => $post_type,
-					'post_status'    => array( 'publish', 'future', 'draft', 'pending', 'private' ),
+					'post_status'    => \ZinnDigital\Tranzly\Api\Rest_Jobs::source_statuses( $publishing ),
 					'fields'         => 'ids',
 					'posts_per_page' => 100,
 					'paged'          => $page,

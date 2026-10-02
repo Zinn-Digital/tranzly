@@ -262,7 +262,7 @@ final class Rest_Jobs {
 		$ids  = array_map( 'intval', (array) $request->get_param( 'posts' ) );
 		$type = (string) $request->get_param( 'post_type' );
 		if ( '' !== $type ) {
-			$ids = array_merge( $ids, self::sources_of_type( $type ) );
+			$ids = array_merge( $ids, self::sources_of_type( $type, 'publish' === (string) $request->get_param( 'status' ) ) );
 		}
 		$made = Queue::create(
 			$ids,
@@ -445,19 +445,35 @@ final class Rest_Jobs {
 	}
 
 	/**
+	 * The post statuses a whole-type job takes its originals from.
+	 *
+	 * @param bool $publishing Whether the translations are to be published.
+	 * @return array<int, string>
+	 */
+	public static function source_statuses( bool $publishing ): array {
+		return $publishing ? array( 'publish' ) : array( 'publish', 'future', 'draft', 'pending', 'private' );
+	}
+
+	/**
 	 * Every post of a type in the default language (all of them, paged through; no cap).
 	 *
-	 * @param string $type A post type.
+	 * ⛔ When the translations are to be PUBLISHED, only published originals: a translation is
+	 * never more public than its source (live 2026-10-02, `jobs create --post-type --publish`
+	 * translated and published drafts). {@see Translator::status_for()} holds the same line for
+	 * a post named by ID.
+	 *
+	 * @param string $type       A post type.
+	 * @param bool   $publishing Whether the translations are to be published.
 	 * @return array<int, int>
 	 */
-	public static function sources_of_type( string $type ): array {
+	public static function sources_of_type( string $type, bool $publishing = false ): array {
 		$default = Languages::default_code();
 		$out     = array();
 		for ( $page = 1; ; ++$page ) {
 			$found = get_posts(
 				array(
 					'post_type'      => $type,
-					'post_status'    => array( 'publish', 'future', 'draft', 'pending', 'private' ),
+					'post_status'    => self::source_statuses( $publishing ),
 					'fields'         => 'ids',
 					'posts_per_page' => 100,
 					'paged'          => $page,

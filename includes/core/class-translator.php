@@ -137,6 +137,20 @@ final class Translator {
 	}
 
 	/**
+	 * The status a translation is written with: the one asked for, except that a translation is
+	 * never more public than its source. Asked to publish the translation of a draft, pending,
+	 * scheduled or private original, it stays a draft (live 2026-10-02: `jobs create --post-type
+	 * --publish` published the translations of drafts).
+	 *
+	 * @param string $asked  `publish`, `draft` or '' (leave the status as it is).
+	 * @param string $source The original's post status.
+	 * @return string
+	 */
+	public static function status_for( string $asked, string $source ): string {
+		return 'publish' === $asked && 'publish' !== $source ? 'draft' : $asked;
+	}
+
+	/**
 	 * Write translated segments into a post's translation, creating it when it does not exist. The
 	 * ONE write path: the engine (above), a translator's XLIFF/CSV file and a competitor import (T7)
 	 * all come through here, so integrations see every translation on `tranzly_translated_post_fields`.
@@ -159,7 +173,7 @@ final class Translator {
 		if ( ! $post instanceof \WP_Post ) {
 			return new \WP_Error( 'tranzly_not_found', __( 'That item does not exist.', 'tranzly' ), array( 'status' => 404 ) );
 		}
-		$status = (string) ( $args['status'] ?? '' );
+		$status = self::status_for( (string) ( $args['status'] ?? '' ), (string) $post->post_status );
 		$target = Relations::translations( 'post', $source_id )[ $code ] ?? null;
 		if ( null !== $target && ! current_user_can( 'edit_post', $target ) ) {
 			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to change that translation.', 'tranzly' ), array( 'status' => 403 ) );

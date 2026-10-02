@@ -96,16 +96,147 @@ final class Ai implements Engine {
 		if ( ! self::available() ) {
 			return Failure::make( Failure::CREDENTIAL, $this, 'the AI core is not in this build' );
 		}
-		$out = array();
-		foreach ( $this->chunks( $texts ) as $chunk ) {
+		// ⛔ A text longer than one call is SPLIT, never sent whole (live 2026-10-02: a 70 KB page
+		// went to Gemini as one call, outlived the core's 60 s HTTP timeout and was reported
+		// "unreachable"). Each piece travels under its own key and the answer is joined back in order.
+		$pieces = array();
+		$send   = array();
+		foreach ( $texts as $key => $text ) {
+			$text = (string) $text;
+			if ( mb_strlen( $text ) <= self::CHUNK ) {
+				$send[ $key ] = $text;
+				continue;
+			}
+			foreach ( self::split_long( $text, self::CHUNK ) as $i => $piece ) {
+				// The model is asked for the words, so the whitespace around a piece stays ours.
+				$body = trim( $piece );
+				$lead = '' === $body ? $piece : (string) substr( $piece, 0, (int) strpos( $piece, $body ) );
+				$tail = '' === $body ? '' : (string) substr( $piece, strlen( $lead ) + strlen( $body ) );
+				$sub  = $key . '#part' . $i;
+				while ( array_key_exists( $sub, $texts ) || array_key_exists( $sub, $send ) ) {
+					$sub .= '_';
+				}
+				$pieces[ $key ][] = array( $sub, $lead, $tail, '' === $body );
+				if ( '' !== $body ) {
+					$send[ $sub ] = $body;
+				}
+			}
+		}
+
+		$got = array();
+		foreach ( $this->chunks( $send ) as $chunk ) {
 			$answer = $this->call( $chunk, $source, $target, $options );
 			if ( is_wp_error( $answer ) ) {
 				return $answer;
 			}
-			$out += $answer;
+			$got += $answer;
+		}
+
+		$out = array();
+		foreach ( $texts as $key => $text ) {
+			if ( ! isset( $pieces[ $key ] ) ) {
+				$out[ $key ] = $got[ $key ];
+				continue;
+			}
+			$joined = '';
+			foreach ( $pieces[ $key ] as list( $sub, $lead, $tail, $blank ) ) {
+				$joined .= $blank ? $lead : $lead . $got[ $sub ] . $tail;
+			}
+			$out[ $key ] = $joined;
 		}
 
 		return $out;
+	}
+
+	/**
+	 * One long text as consecutive pieces of at most `$max` characters, joined back losslessly
+	 * (`implode( '', $pieces ) === $text`). A piece ends at the best boundary the window offers:
+	 * before a block comment, after a closing block-level tag, at a blank line, a line end, a
+	 * sentence end, a space outside a tag, and only then anywhere outside a tag.
+	 *
+	 * @param string $text The text.
+	 * @param int    $max  Characters per piece.
+	 * @return array<int, string>
+	 */
+	public static function split_long( string $text, int $max ): array {
+		$max    = max( 1, $max );
+		$pieces = array();
+		while ( mb_strlen( $text ) > $max ) {
+			$window   = mb_substr( $text, 0, $max );
+			$cut      = self::boundary( $window );
+			$pieces[] = mb_substr( $text, 0, $cut );
+			$text     = mb_substr( $text, $cut );
+		}
+		if ( '' !== $text ) {
+			$pieces[] = $text;
+		}
+
+		return $pieces;
+	}
+
+	/**
+	 * Where to end a piece inside `$window` (a character count, at least 1).
+	 *
+	 * @param string $window The longest the piece may be.
+	 * @return int
+	 */
+	private static function boundary( string $window ): int {
+		$len   = mb_strlen( $window );
+		$floor = intdiv( $len, 4 );
+		$best  = static function ( array $needles, bool $before ) use ( $window, $floor ): int {
+			$at = 0;
+			foreach ( $needles as $needle ) {
+				$pos = mb_strrpos( $window, $needle );
+				if ( false === $pos ) {
+					continue;
+				}
+				$cut = $before ? $pos : $pos + mb_strlen( $needle );
+				if ( $cut > $at ) {
+					$at = $cut;
+				}
+			}
+
+			return $at > $floor ? $at : 0;
+		};
+		$rules = array(
+			array( array( '<!-- wp:', '<!-- /wp:' ), true ),
+			array( array( '</p>', '</h1>', '</h2>', '</h3>', '</h4>', '</h5>', '</h6>', '</li>', '</ul>', '</ol>', '</div>', '</blockquote>', '</table>', '</tr>', '</figure>', '</section>', '</pre>', '-->' ), false ),
+			array( array( "\n\n" ), false ),
+			array( array( "\n" ), false ),
+			array( array( '. ', '! ', '? ', '。', '！', '？', '; ' ), false ),
+		);
+		foreach ( $rules as list( $needles, $before ) ) {
+			$cut = $best( $needles, $before );
+			if ( $cut > 0 && ! self::inside_tag( mb_substr( $window, 0, $cut ) ) ) {
+				return $cut;
+			}
+		}
+		// A space outside a tag, then anywhere outside a tag.
+		for ( $cut = $len; $cut > $floor; --$cut ) {
+			$head = mb_substr( $window, 0, $cut );
+			if ( ' ' === mb_substr( $window, $cut - 1, 1 ) && ! self::inside_tag( $head ) ) {
+				return $cut;
+			}
+		}
+		$open = mb_strrpos( $window, '<' );
+		if ( self::inside_tag( $window ) && false !== $open && $open > 0 ) {
+			return $open;
+		}
+
+		return $len;
+	}
+
+	/**
+	 * Does `$head` end inside an HTML tag or comment (a `<` with no `>` after it)?
+	 *
+	 * @param string $head Text.
+	 * @return bool
+	 */
+	private static function inside_tag( string $head ): bool {
+		$open  = strrpos( $head, '<' );
+		$close = strrpos( $head, '>' );
+
+		return false !== $open && ( false === $close || $close < $open );
 	}
 
 	/**
@@ -282,7 +413,7 @@ final class Ai implements Engine {
 	}
 
 	/**
-	 * Texts in groups of at most CHUNK characters (a single longer text travels alone).
+	 * Texts in groups of at most CHUNK characters ({@see translate()} has already split any longer text).
 	 *
 	 * @param array<string, string> $texts key => text.
 	 * @return array<int, array<string, string>>
