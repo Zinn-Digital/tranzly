@@ -63,6 +63,10 @@ final class Staleness {
 	 * @return void
 	 */
 	public static function on_save( $post_id, $post = null ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		$post_id = (int) $post_id;
 		if ( ! $post instanceof \WP_Post || wp_is_post_revision( $post_id ) || wp_is_post_autosave( $post_id ) || 'auto-draft' === $post->post_status ) {
 			return;
@@ -82,6 +86,10 @@ final class Staleness {
 	 * @return void
 	 */
 	public static function on_transition( $new_status, $old_status, $post ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		if ( 'publish' !== $new_status || 'publish' === $old_status || ! $post instanceof \WP_Post ) {
 			return;
 		}
@@ -101,6 +109,10 @@ final class Staleness {
 	 * @return void
 	 */
 	public static function on_meta( $meta_id, $post_id, $meta_key ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		unset( $meta_id );
 		$post_id = (int) $post_id;
 		if ( isset( self::$dirty[ $post_id ] ) || str_starts_with( (string) $meta_key, '_tranzly' ) || '_edit_lock' === $meta_key || '_edit_last' === $meta_key ) {

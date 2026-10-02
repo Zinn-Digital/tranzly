@@ -39,6 +39,32 @@ final class Schema {
 	}
 
 	/**
+	 * Per-site memo for {@see self::live()}: blog ID => installed here?
+	 *
+	 * @var array<int, bool>
+	 */
+	private static array $live = array();
+
+	/**
+	 * Is Tranzly installed on the CURRENT site (the one `switch_to_blog()` points at)?
+	 *
+	 * ⛔⛤ ESTATE-TZ, 2026-10-02: with Tranzly active on the main site only, code there that called
+	 * `switch_to_blog( 2 )` and wrote a post ran Tranzly's hooks against `wp_2_tranzly_relations`,
+	 * which does not exist, and every write raised a database error. A site Tranzly was never
+	 * installed on has no schema version option; its hooks must do nothing there.
+	 *
+	 * @return bool
+	 */
+	public static function live(): bool {
+		$blog = get_current_blog_id();
+		if ( ! isset( self::$live[ $blog ] ) ) {
+			self::$live[ $blog ] = '' !== (string) get_option( self::OPTION, '' );
+		}
+
+		return self::$live[ $blog ];
+	}
+
+	/**
 	 * Install or upgrade when the stored version differs. One option read on every request, which
 	 * is autoloaded, so it costs no query.
 	 *
@@ -175,6 +201,7 @@ final class Schema {
 		);
 
 		update_option( self::OPTION, self::VERSION, true );
+		self::$live[ get_current_blog_id() ] = true;
 		self::warm_sdk_options();
 	}
 

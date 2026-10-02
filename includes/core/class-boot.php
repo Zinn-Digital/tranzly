@@ -59,6 +59,7 @@ final class Boot {
 	public static function register(): void {
 		Schema::register();
 		Content::register();
+		Relations::register();
 		Strings::register();
 		Legacy_Import::register();
 		Network::register();

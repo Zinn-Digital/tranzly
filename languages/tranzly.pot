@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.23.0\n"
+"Project-Id-Version: Tranzly 3.23.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-02T01:53:55+00:00\n"
+"POT-Creation-Date: 2026-10-02T04:52:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -1610,22 +1610,27 @@ msgstr ""
 msgid "You are not allowed to change that translation."
 msgstr ""
 
+#: includes/core/class-relations.php:233
+#: includes/core/class-relations.php:276
+msgid "Tranzly is not set up on this site."
+msgstr ""
+
 #. translators: 1: language code, 2: the ID of the item that already has it.
-#: includes/core/class-relations.php:210
-#: includes/core/class-relations.php:264
+#: includes/core/class-relations.php:244
+#: includes/core/class-relations.php:302
 #, php-format
 msgid "This item's group already has a %1$s version (#%2$d)."
 msgstr ""
 
-#: includes/core/class-relations.php:242
+#: includes/core/class-relations.php:280
 msgid "An item cannot be its own translation."
 msgstr ""
 
-#: includes/core/class-relations.php:273
+#: includes/core/class-relations.php:311
 msgid "That item is already a translation of something else. Unlink it first."
 msgstr ""
 
-#: includes/core/class-relations.php:405
+#: includes/core/class-relations.php:463
 msgid "The translation link could not be saved."
 msgstr ""
 

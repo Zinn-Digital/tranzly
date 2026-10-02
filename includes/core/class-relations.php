@@ -48,6 +48,16 @@ final class Relations {
 	}
 
 	/**
+	 * Hook: the memo is keyed by object ID, and IDs repeat across a network's sites, so a switch to
+	 * another site must not answer from the previous site's rows.
+	 *
+	 * @return void
+	 */
+	public static function register(): void {
+		add_action( 'switch_blog', array( self::class, 'reset_memo' ), 1, 0 );
+	}
+
+	/**
 	 * The language an object is written in, or null when it has no row (the default language).
 	 *
 	 * @param string $type `post` or `term`.
@@ -55,6 +65,10 @@ final class Relations {
 	 * @return string|null
 	 */
 	public static function language_of( string $type, int $id ): ?string {
+		if ( ! Schema::live() ) {
+			return null; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		$map = self::translations( $type, $id );
 		foreach ( $map as $lang => $object_id ) {
 			if ( $object_id === $id ) {
@@ -74,6 +88,10 @@ final class Relations {
 	 * @return array<string, int>
 	 */
 	public static function translations( string $type, int $id ): array {
+		if ( ! Schema::live() ) {
+			return array(); // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		if ( $id <= 0 ) {
 			return array();
 		}
@@ -119,6 +137,10 @@ final class Relations {
 	 * @return void
 	 */
 	public static function seed( string $type, array $map, int $id ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		if ( array() === $map ) {
 			self::$memo[ $type . ':' . $id ] = array();
 			return;
@@ -136,6 +158,10 @@ final class Relations {
 	 * @return void
 	 */
 	public static function note_ungrouped( string $type, array $ids ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		foreach ( $ids as $id ) {
 			if ( ! isset( self::$memo[ $type . ':' . (int) $id ] ) ) {
 				self::$memo[ $type . ':' . (int) $id ] = array();
@@ -151,6 +177,10 @@ final class Relations {
 	 * @return void
 	 */
 	public static function prime( string $type, array $ids ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		$missing = array();
 		foreach ( array_unique( array_map( 'intval', $ids ) ) as $id ) {
 			if ( $id > 0 && ! isset( self::$memo[ $type . ':' . $id ] ) ) {
@@ -199,6 +229,10 @@ final class Relations {
 	 * @return true|\WP_Error
 	 */
 	public static function set_language( string $type, int $id, string $lang, string $origin = '' ) {
+		if ( ! Schema::live() ) {
+			return new \WP_Error( 'tranzly_not_installed', __( 'Tranzly is not set up on this site.', 'tranzly' ) );
+		}
+
 		$members = self::translations( $type, $id );
 		if ( array() === $members ) {
 			return self::insert( $type, $id, self::new_group( $type ), $lang, true, $origin );
@@ -238,6 +272,10 @@ final class Relations {
 	 * @return true|\WP_Error
 	 */
 	public static function link( string $type, int $source, string $source_lang, int $target, string $target_lang, string $origin = '' ) {
+		if ( ! Schema::live() ) {
+			return new \WP_Error( 'tranzly_not_installed', __( 'Tranzly is not set up on this site.', 'tranzly' ) );
+		}
+
 		if ( $source === $target || $source <= 0 || $target <= 0 ) {
 			return new \WP_Error( 'tranzly_bad_link', __( 'An item cannot be its own translation.', 'tranzly' ), array( 'status' => 400 ) );
 		}
@@ -292,6 +330,10 @@ final class Relations {
 	 * @return void
 	 */
 	public static function unlink( string $type, int $id ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		$lang = self::language_of( $type, $id );
 		if ( null === $lang ) {
 			return;
@@ -309,6 +351,10 @@ final class Relations {
 	 * @return void
 	 */
 	public static function delete( string $type, int $id ): void {
+		if ( ! Schema::live() ) {
+			return; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		$members = self::translations( $type, $id );
 		if ( array() === $members ) {
 			return;
@@ -332,6 +378,10 @@ final class Relations {
 	 * @return int
 	 */
 	public static function group_id( string $type, int $id ): int {
+		if ( ! Schema::live() ) {
+			return 0; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		global $wpdb;
 
 		return (int) $wpdb->get_var(
@@ -347,6 +397,10 @@ final class Relations {
 	 * @return array<int, int>
 	 */
 	public static function objects_in( string $type, string $lang ): array {
+		if ( ! Schema::live() ) {
+			return array(); // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		global $wpdb;
 
 		return array_map(
@@ -364,6 +418,10 @@ final class Relations {
 	 * @return int
 	 */
 	public static function new_group( string $type ): int {
+		if ( ! Schema::live() ) {
+			return 0; // Not installed on this site (multisite: another site's code switched here).
+		}
+
 		global $wpdb;
 		$wpdb->insert(
 			Schema::tables()['groups'],
