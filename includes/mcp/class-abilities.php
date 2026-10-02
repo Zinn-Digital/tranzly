@@ -182,6 +182,7 @@ final class Abilities {
 					'additionalProperties' => false,
 				),
 				'output_schema'       => array( 'type' => 'object' ),
+				'annotations'         => array( 'destructive' => true ),
 				'execute_callback'    => array( self::class, 'translate_post' ),
 				'permission_callback' => static fn( array $input ): bool => Content::can_translate_post( Ability::int( $input, 'id' ) ),
 			)

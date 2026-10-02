@@ -110,7 +110,7 @@ export default function McpPanel( { path, initialOpen = true } ) {
 				<>
 					<p>
 						{ __(
-							'Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do.',
+							'Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user (Claude and ChatGPT by approving them here, others with an application password) and can do only what that user is allowed to do.',
 							'tranzly'
 						) }
 					</p>
@@ -147,6 +147,90 @@ export default function McpPanel( { path, initialOpen = true } ) {
 								onChange={ () => {} }
 								onFocus={ ( event ) => event.target.select() }
 							/>
+							{ mcp.oauth && mcp.oauth.available && (
+								<>
+									<p>
+										<strong>
+											{ __(
+												'Claude and ChatGPT: sign in instead',
+												'tranzly'
+											) }
+										</strong>
+										<br />
+										{ __(
+											'Add the connection address as a custom connector in Claude, or as an app in ChatGPT developer mode. They open this site so you can approve them; no password to copy.',
+											'tranzly'
+										) }
+									</p>
+									{ mcp.oauth.apps.length > 0 && (
+										<>
+											<p>
+												{ __(
+													'AI apps connected to your account:',
+													'tranzly'
+												) }
+											</p>
+											<ul className="zd-mcp-panel__apps">
+												{ mcp.oauth.apps.map(
+													( app ) => (
+														<li key={ app.id }>
+															{ app.name }{ ' ' }
+															<form
+																method="post"
+																action={
+																	mcp.oauth
+																		.action
+																}
+																style={ {
+																	display:
+																		'inline',
+																} }
+															>
+																<input
+																	type="hidden"
+																	name="action"
+																	value="zinn_mcp_oauth_disconnect"
+																/>
+																<input
+																	type="hidden"
+																	name="app"
+																	value={
+																		app.id
+																	}
+																/>
+																<input
+																	type="hidden"
+																	name="_wpnonce"
+																	value={
+																		app.nonce
+																	}
+																/>
+																<button
+																	type="submit"
+																	className="button-link"
+																>
+																	{ __(
+																		'Disconnect',
+																		'tranzly'
+																	) }
+																</button>
+															</form>
+														</li>
+													)
+												) }
+											</ul>
+										</>
+									) }
+									<p>
+										<strong>
+											{ __(
+												'Other AI apps: an application password',
+												'tranzly'
+											) }
+										</strong>
+									</p>
+								</>
+							) }
 							<ol>
 								<li>
 									<ExternalLink href={ mcp.passwords }>

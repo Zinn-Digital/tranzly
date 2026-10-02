@@ -25,7 +25,7 @@
       "capability": "edit_posts; publish_posts to publish",
       "annotations": {
         "readonly": false,
-        "destructive": false,
+        "destructive": true,
         "idempotent": false
       },
       "input_schema": {
@@ -2147,7 +2147,7 @@
       "capability": "may translate that post (edit_post on it); edit_post on an existing translation; the type's publish capability to publish",
       "annotations": {
         "readonly": false,
-        "destructive": false,
+        "destructive": true,
         "idempotent": false
       },
       "input_schema": {
@@ -2516,7 +2516,7 @@
       "capability": "manage_options",
       "annotations": {
         "readonly": false,
-        "destructive": false,
+        "destructive": true,
         "idempotent": true
       },
       "input_schema": {

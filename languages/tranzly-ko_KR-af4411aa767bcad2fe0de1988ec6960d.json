@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T00:16:41+00:00",
+    "translation-revision-date": "2026-10-02T02:15:16+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -109,8 +109,8 @@
             "AI agents (MCP)": [
                 "AI \uc5d0\uc774\uc804\ud2b8 (MCP)"
             ],
-            "Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user with an application password and can do only what that user is allowed to do.": [
-                "Claude, Cursor \ub610\ub294 VS Code\uc640 \uac19\uc740 AI \uc5b4\uc2dc\uc2a4\ud134\ud2b8\uac00 MCP(Model Context Protocol)\ub97c \ud1b5\ud574 \uadc0\ud558\ub97c \ub300\uc2e0\ud558\uc5ec \uc774 \uc0ac\uc774\ud2b8\uc5d0\uc11c \uc791\uc5c5\ud560 \uc218 \uc788\ub3c4\ub85d \ud5c8\uc6a9\ud558\uc138\uc694. \uc774\ub7ec\ud55c \uc5b4\uc2dc\uc2a4\ud134\ud2b8\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ube44\ubc00\ubc88\ud638\ub97c \uc0ac\uc6a9\ud558\uc5ec WordPress \uc0ac\uc6a9\uc790\ub85c \ub85c\uadf8\uc778\ud558\uba70, \ud574\ub2f9 \uc0ac\uc6a9\uc790\uc5d0\uac8c \ud5c8\uc6a9\ub41c \uc791\uc5c5\ub9cc \uc218\ud589\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."
+            "Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user (Claude and ChatGPT by approving them here, others with an application password) and can do only what that user is allowed to do.": [
+                "Claude, Cursor \ub610\ub294 VS Code\uc640 \uac19\uc740 AI \uc5b4\uc2dc\uc2a4\ud134\ud2b8\uac00 MCP(Model Context Protocol)\ub97c \ud1b5\ud574 \uadc0\ud558\ub97c \ub300\uc2e0\ud558\uc5ec \uc774 \uc0ac\uc774\ud2b8\uc5d0\uc11c \uc791\uc5c5\ud560 \uc218 \uc788\ub3c4\ub85d \ud5c8\uc6a9\ud558\uc138\uc694. \uc774\ub4e4\uc740 WordPress \uc0ac\uc6a9\uc790\ub85c \ub85c\uadf8\uc778\ud558\uba70(Claude \ubc0f ChatGPT\ub294 \uc5ec\uae30\uc5d0\uc11c \uc2b9\uc778, \uae30\ud0c0 \uc5b4\uc2dc\uc2a4\ud134\ud2b8\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ube44\ubc00\ubc88\ud638 \uc0ac\uc6a9), \ud574\ub2f9 \uc0ac\uc6a9\uc790\uc5d0\uac8c \ud5c8\uc6a9\ub41c \uc791\uc5c5\ub9cc \uc218\ud589\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."
             ],
             "AI agents need WordPress 6.9 or later. Update WordPress to use them.": [
                 "AI \uc5d0\uc774\uc804\ud2b8\ub97c \uc0ac\uc6a9\ud558\ub824\uba74 WordPress 6.9 \uc774\uc0c1\uc774 \ud544\uc694\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\ud558\ub824\uba74 WordPress\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\uc138\uc694."
@@ -123,6 +123,18 @@
             ],
             "Connection address (MCP endpoint)": [
                 "\uc5f0\uacb0 \uc8fc\uc18c(MCP \uc5d4\ub4dc\ud3ec\uc778\ud2b8)"
+            ],
+            "Claude and ChatGPT: sign in instead": [
+                "Claude \ubc0f ChatGPT: \ub300\uc2e0 \ub85c\uadf8\uc778"
+            ],
+            "Add the connection address as a custom connector in Claude, or as an app in ChatGPT developer mode. They open this site so you can approve them; no password to copy.": [
+                "\uc5f0\uacb0 \uc8fc\uc18c\ub97c Claude\uc758 \ucee4\uc2a4\ud140 \ucee4\ub125\ud130\ub85c \ucd94\uac00\ud558\uac70\ub098 ChatGPT \uac1c\ubc1c\uc790 \ubaa8\ub4dc\uc758 \uc571\uc73c\ub85c \ucd94\uac00\ud558\uc138\uc694. \uc2b9\uc778\ud560 \uc218 \uc788\ub3c4\ub85d \uc774 \uc0ac\uc774\ud2b8\uac00 \uc5f4\ub9ac\uba70, \ubcf5\uc0ac\ud560 \ube44\ubc00\ubc88\ud638\ub294 \uc5c6\uc2b5\ub2c8\ub2e4."
+            ],
+            "AI apps connected to your account:": [
+                "\uacc4\uc815\uc5d0 \uc5f0\uacb0\ub41c AI \uc571:"
+            ],
+            "Other AI apps: an application password": [
+                "\uae30\ud0c0 AI \uc571: \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ube44\ubc00\ubc88\ud638"
             ],
             "Create an application password for your user": [
                 "\uc0ac\uc6a9\uc790\ub97c \uc704\ud55c \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ube44\ubc00\ubc88\ud638 \uc0dd\uc131"
