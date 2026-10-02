@@ -54,6 +54,89 @@ final class Licence {
 		// Last on `admin_init`: the SDK adds its activate-licence handler there (premium builds only),
 		// and the guard rides on that handler or does not exist at all.
 		add_action( 'admin_init', array( self::class, 'arm_bundle_guard' ), PHP_INT_MAX );
+		// Also last on `admin_init`: the SDK registers its hidden contact screen on `admin_menu`.
+		add_action( 'admin_init', array( self::class, 'guard_contact_page' ), PHP_INT_MAX );
+	}
+
+	/**
+	 * Render the SDK's hidden "Contact Us" screen through {@see render_contact_page_for()}.
+	 *
+	 * The plugin hides the screen from the menu (`menu.contact = false`), but the SDK still
+	 * registers it, because its own notices, pricing page and deactivation form link to it. The kit
+	 * swaps only the SDK's render callback on that screen's hook; the screen, its URL and its
+	 * capability stay the SDK's.
+	 *
+	 * @return void
+	 */
+	public static function guard_contact_page(): void {
+		$fs = Kit::fs();
+		if ( null === $fs || ! method_exists( $fs, 'contact_url' ) || ! method_exists( $fs, '_contact_page_render' ) || ! function_exists( 'get_plugin_page_hookname' ) ) {
+			return;
+		}
+		$query = (string) wp_parse_url( (string) $fs->contact_url(), PHP_URL_QUERY );
+		wp_parse_str( $query, $args );
+		$page = isset( $args['page'] ) && is_string( $args['page'] ) ? $args['page'] : '';
+		if ( '' === $page ) {
+			return;
+		}
+		$sdk_render = array( $fs, '_contact_page_render' );
+		$parents    = array( '', method_exists( $fs, 'get_menu_slug' ) ? (string) $fs->get_menu_slug() : '' );
+		foreach ( array_unique( $parents ) as $parent ) {
+			$hook     = get_plugin_page_hookname( $page, $parent );
+			$priority = has_action( $hook, $sdk_render );
+			if ( false === $priority ) {
+				continue;
+			}
+			remove_action( $hook, $sdk_render, $priority );
+			add_action(
+				$hook,
+				static function () use ( $fs ): void {
+					self::render_contact_page_for( $fs );
+				},
+				$priority
+			);
+		}
+	}
+
+	/**
+	 * Render the SDK's contact screen, unsigned when the SDK holds a user but no install.
+	 *
+	 * ⛔⛔ FATAL in Freemius SDK 2.13.4 (CARRY-PBSCONTACT, found by FLEET 2026-09-28 on a moved site):
+	 * the contact screen signs its form with the install (`FS_Security::get_context_params(
+	 * $fs->get_site() )`) whenever the SDK has a user. When the SDK resolves a site that moved to a
+	 * new address it deletes the install (`delete_current_install()`: `_site = null`) and keeps the
+	 * user for the rest of that request, and a network admin can hold a network user with no
+	 * install; either way the screen threw a TypeError instead of rendering. A user with no install
+	 * has nothing to sign with, so the kit renders the SDK's own UNSIGNED form (the one an
+	 * unconnected site gets) by hiding the user for the render alone, then puts it back. A connected
+	 * site and an unconnected one render exactly as before. The vendored SDK is never edited.
+	 *
+	 * @param object $fs The SDK instance.
+	 * @return void
+	 */
+	public static function render_contact_page_for( object $fs ): void {
+		$orphaned = method_exists( $fs, 'is_registered' ) && $fs->is_registered()
+			&& method_exists( $fs, 'get_site' ) && ! is_object( $fs->get_site() )
+			&& property_exists( $fs, '_user' );
+		if ( ! $orphaned ) {
+			$fs->_contact_page_render();
+			return;
+		}
+		$swap = \Closure::bind(
+			static function ( object $instance, $user ) {
+				$previous        = $instance->_user;
+				$instance->_user = $user;
+				return $previous;
+			},
+			null,
+			get_class( $fs )
+		);
+		$user = $swap( $fs, false );
+		try {
+			$fs->_contact_page_render();
+		} finally {
+			$swap( $fs, $user );
+		}
 	}
 
 	/**
