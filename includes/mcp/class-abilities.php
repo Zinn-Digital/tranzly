@@ -163,11 +163,11 @@ final class Abilities {
 							'items'       => array( 'type' => 'string' ),
 							'minItems'    => 1,
 							'maxItems'    => self::MAX_LANGS,
-							'description' => __( 'Language codes from tranzly/list-languages, e.g. de_DE, or just de when only one German is listed.', 'tranzly' ),
+							'description' => __( 'Codes of languages set up on this site, e.g. de_DE, or just de when only one German is listed.', 'tranzly' ),
 						),
 						'engine'    => array(
 							'type'        => 'string',
-							'description' => __( 'An engine id from tranzly/list-engines; the default engine when omitted.', 'tranzly' ),
+							'description' => __( 'The id of a translation engine set up on this site; the default engine when omitted.', 'tranzly' ),
 						),
 						'publish'   => array(
 							'type'    => 'boolean',

@@ -123,7 +123,7 @@
           "id": {
             "type": "integer",
             "minimum": 1,
-            "description": "The translation's post ID (see tranzly/translation-status)."
+            "description": "The translation's post ID."
           }
         },
         "required": [
@@ -483,7 +483,7 @@
     {
       "name": "tranzly/export-translation-file",
       "label": "Export a file for human translators",
-      "description": "Returns an XLIFF or CSV file (as text) with the originals and their translations in one language, for a translator or a translation agency: the given posts, or a page of up to 100 originals of a content type in a state (missing, stale, translated or all; repeat with after). Import it back with tranzly/upload-translation-file.",
+      "description": "Returns an XLIFF or CSV file (as text) with the originals and their translations in one language, for a translator or a translation agency: the given posts, or a page of up to 100 originals of a content type in a state (missing, stale, translated or all; repeat with after). The same file can be imported back once translated.",
       "edition": "pro",
       "capability": "edit_posts; each post is included only if the user may edit it",
       "annotations": {
@@ -1540,7 +1540,42 @@
       "input_schema": {
         "type": "object",
         "additionalProperties": true,
-        "default": {}
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "The ticket subject (up to 200 characters)."
+          },
+          "message": {
+            "type": "string",
+            "description": "What happened, or the question."
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "help",
+              "bug",
+              "feedback",
+              "feature_request"
+            ],
+            "description": "The kind of request; help when omitted."
+          },
+          "email": {
+            "type": "string",
+            "description": "Reply address; the connected support email when omitted."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name to reply to."
+          },
+          "diagnostics": {
+            "type": "boolean",
+            "description": "True attaches this site's diagnostics (needs the administrator's consent)."
+          }
+        },
+        "required": [
+          "subject",
+          "message"
+        ]
       },
       "output_schema": {},
       "rest": {
@@ -1563,7 +1598,15 @@
       "input_schema": {
         "type": "object",
         "additionalProperties": true,
-        "default": {}
+        "properties": {
+          "consent": {
+            "type": "boolean",
+            "description": "True records the administrator's consent to send diagnostics with support tickets."
+          }
+        },
+        "required": [
+          "consent"
+        ]
       },
       "output_schema": {},
       "rest": {
@@ -2164,11 +2207,11 @@
             },
             "minItems": 1,
             "maxItems": 10,
-            "description": "Language codes from tranzly/list-languages, e.g. de_DE, or just de when only one German is listed."
+            "description": "Codes of languages set up on this site, e.g. de_DE, or just de when only one German is listed."
           },
           "engine": {
             "type": "string",
-            "description": "An engine id from tranzly/list-engines; the default engine when omitted."
+            "description": "The id of a translation engine set up on this site; the default engine when omitted."
           },
           "publish": {
             "type": "boolean",
@@ -2499,6 +2542,27 @@
       "input_schema": {
         "type": "object",
         "additionalProperties": true,
+        "properties": {
+          "default": {
+            "type": "string",
+            "description": "ID of the default translation engine (deepl, ai, google or microsoft); empty for automatic."
+          },
+          "per_lang": {
+            "type": "object",
+            "description": "Pro: language code => engine ID used for that language."
+          },
+          "fallback": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Pro: engine IDs tried in order when the first one fails."
+          },
+          "caps": {
+            "type": "object",
+            "description": "Pro: engine ID => monthly spending cap in US dollars."
+          }
+        },
         "default": {}
       },
       "output_schema": {},
@@ -2627,6 +2691,39 @@
       "input_schema": {
         "type": "object",
         "additionalProperties": true,
+        "properties": {
+          "on_update": {
+            "type": "string",
+            "enum": [
+              "off",
+              "stale",
+              "translate"
+            ],
+            "description": "When an original changes: nothing, mark its translations out of date, or translate them again."
+          },
+          "on_publish": {
+            "type": "boolean",
+            "description": "Translate a post into every language when it is published."
+          },
+          "review": {
+            "type": "boolean",
+            "description": "New translations wait for review instead of being published."
+          },
+          "quality_threshold": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Quality score below which a translation is flagged."
+          },
+          "quality_provider": {
+            "type": "string",
+            "description": "AI provider of the quality check."
+          },
+          "quality_model": {
+            "type": "string",
+            "description": "AI model of the quality check."
+          }
+        },
         "default": {}
       },
       "output_schema": {},
@@ -2639,7 +2736,7 @@
     {
       "name": "tranzly/upload-translation-file",
       "label": "Import a translated file (Pro)",
-      "description": "Uploads a Tranzly XLIFF or CSV file (content, filename) translated elsewhere; answers a token for tranzly/import-translation-file.",
+      "description": "Uploads a Tranzly XLIFF or CSV file (content, filename) translated elsewhere; answers a token that identifies the upload for the import.",
       "edition": "pro",
       "capability": "edit_posts (the REST route's own check)",
       "annotations": {
@@ -2650,7 +2747,20 @@
       "input_schema": {
         "type": "object",
         "additionalProperties": true,
-        "default": {}
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The XLIFF or CSV file's text."
+          },
+          "filename": {
+            "type": "string",
+            "description": "The file name, e.g. site-de.xlf."
+          }
+        },
+        "required": [
+          "content",
+          "filename"
+        ]
       },
       "output_schema": {},
       "rest": {

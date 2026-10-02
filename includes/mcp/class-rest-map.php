@@ -26,7 +26,7 @@ final class Rest_Map {
 	/**
 	 * The entries. Called on `wp_abilities_api_init`, when translations are loaded.
 	 *
-	 * @return array<int, array<string, string>>
+	 * @return array<int, array<string, mixed>>
 	 */
 	public static function entries(): array {
 		return array(
@@ -97,6 +97,25 @@ final class Rest_Map {
 				'description' => __( 'Sets the default engine, a fallback engine and per-language engines (default, fallback, per_lang). Per-language engines and fallback are Pro.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
+				'args'        => array(
+					'default'  => array(
+						'type'        => 'string',
+						'description' => __( 'ID of the default translation engine (deepl, ai, google or microsoft); empty for automatic.', 'tranzly' ),
+					),
+					'per_lang' => array(
+						'type'        => 'object',
+						'description' => __( 'Pro: language code => engine ID used for that language.', 'tranzly' ),
+					),
+					'fallback' => array(
+						'type'        => 'array',
+						'items'       => array( 'type' => 'string' ),
+						'description' => __( 'Pro: engine IDs tried in order when the first one fails.', 'tranzly' ),
+					),
+					'caps'     => array(
+						'type'        => 'object',
+						'description' => __( 'Pro: engine ID => monthly spending cap in US dollars.', 'tranzly' ),
+					),
+				),
 			),
 			array(
 				'method'      => 'PUT',
@@ -131,9 +150,21 @@ final class Rest_Map {
 				'route'       => '/tranzly/v1/import',
 				'name'        => 'tranzly/upload-translation-file',
 				'label'       => __( 'Import a translated file (Pro)', 'tranzly' ),
-				'description' => __( 'Uploads a Tranzly XLIFF or CSV file (content, filename) translated elsewhere; answers a token for tranzly/import-translation-file.', 'tranzly' ),
+				'description' => __( 'Uploads a Tranzly XLIFF or CSV file (content, filename) translated elsewhere; answers a token that identifies the upload for the import.', 'tranzly' ),
 				'edition'     => 'pro',
 				'capability'  => 'edit_posts (the REST route\'s own check)',
+				'args'        => array(
+					'content'  => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The XLIFF or CSV file\'s text.', 'tranzly' ),
+					),
+					'filename' => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The file name, e.g. site-de.xlf.', 'tranzly' ),
+					),
+				),
 			),
 			array(
 				'method'      => 'GET',
@@ -279,6 +310,13 @@ final class Rest_Map {
 				'description' => __( 'Records the administrator\'s consent to send diagnostics with support tickets.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
+				'args'        => array(
+					'consent' => array(
+						'type'        => 'boolean',
+						'required'    => true,
+						'description' => __( 'True records the administrator\'s consent to send diagnostics with support tickets.', 'tranzly' ),
+					),
+				),
 			),
 			array(
 				'method'      => 'GET',
@@ -297,6 +335,35 @@ final class Rest_Map {
 				'description' => __( 'Files a support ticket (subject, message, kind, email), with this site\'s diagnostics when the administrator agreed. It never creates a login or sends one.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
+				'args'        => array(
+					'subject'     => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The ticket subject (up to 200 characters).', 'tranzly' ),
+					),
+					'message'     => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'What happened, or the question.', 'tranzly' ),
+					),
+					'kind'        => array(
+						'type'        => 'string',
+						'enum'        => array( 'help', 'bug', 'feedback', 'feature_request' ),
+						'description' => __( 'The kind of request; help when omitted.', 'tranzly' ),
+					),
+					'email'       => array(
+						'type'        => 'string',
+						'description' => __( 'Reply address; the connected support email when omitted.', 'tranzly' ),
+					),
+					'name'        => array(
+						'type'        => 'string',
+						'description' => __( 'Name to reply to.', 'tranzly' ),
+					),
+					'diagnostics' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True attaches this site\'s diagnostics (needs the administrator\'s consent).', 'tranzly' ),
+					),
+				),
 			),
 			array(
 				'method'      => 'POST',
@@ -670,6 +737,35 @@ final class Rest_Map {
 				'description' => __( 'Sets on_update (off, stale, translate), on_publish, review, quality_threshold, quality_provider and quality_model.', 'tranzly' ),
 				'edition'     => 'pro',
 				'capability'  => 'manage_options (the REST route\'s own check)',
+				'args'        => array(
+					'on_update'         => array(
+						'type'        => 'string',
+						'enum'        => array( 'off', 'stale', 'translate' ),
+						'description' => __( 'When an original changes: nothing, mark its translations out of date, or translate them again.', 'tranzly' ),
+					),
+					'on_publish'        => array(
+						'type'        => 'boolean',
+						'description' => __( 'Translate a post into every language when it is published.', 'tranzly' ),
+					),
+					'review'            => array(
+						'type'        => 'boolean',
+						'description' => __( 'New translations wait for review instead of being published.', 'tranzly' ),
+					),
+					'quality_threshold' => array(
+						'type'        => 'integer',
+						'minimum'     => 0,
+						'maximum'     => 100,
+						'description' => __( 'Quality score below which a translation is flagged.', 'tranzly' ),
+					),
+					'quality_provider'  => array(
+						'type'        => 'string',
+						'description' => __( 'AI provider of the quality check.', 'tranzly' ),
+					),
+					'quality_model'     => array(
+						'type'        => 'string',
+						'description' => __( 'AI model of the quality check.', 'tranzly' ),
+					),
+				),
 			),
 		);
 	}
