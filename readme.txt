@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.23.5
+Stable tag: 3.24.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -153,6 +153,9 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.24.0 =
+* New: on a translated page, links to your own pages lead to their translations in the same language - in the content, in menus (custom links too) and in page-builder blocks - each with its own translated address. Links to other sites, to files, to pages without a translation and language-switcher links are left as they are. The answer is kept with the page, so a repeat visit costs no extra database query. Turn it off with the `tranzly_localize_links` filter.
 
 = 3.23.5 =
 * Ukrainian: a site's visitors are now «відвідувачі» everywhere; some screens called them «користувачі» (users).

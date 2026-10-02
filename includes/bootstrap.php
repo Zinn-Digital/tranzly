@@ -48,6 +48,7 @@ require_once __DIR__ . '/content/class-term-admin.php';
 require_once __DIR__ . '/content/class-post-admin.php';
 require_once __DIR__ . '/content/class-media-admin.php';
 require_once __DIR__ . '/content/class-menus.php';
+require_once __DIR__ . '/content/class-links.php';
 require_once __DIR__ . '/content/class-menus-rest.php';
 require_once __DIR__ . '/content/class-shared-strings.php';
 require_once __DIR__ . '/content/class-visibility.php';
@@ -133,5 +134,7 @@ function tranzly_uninstall(): void {
 	delete_option( \ZinnDigital\Tranzly\Settings::OPTION );
 	delete_post_meta_by_key( \ZinnDigital\Tranzly\Languages::META_TRANSLATIONS );
 	delete_post_meta_by_key( \ZinnDigital\Tranzly\Languages::META_LANGUAGE );
+	delete_post_meta_by_key( \ZinnDigital\Tranzly\Content\Links::META );
+	delete_option( \ZinnDigital\Tranzly\Content\Links::VERSION_OPTION );
 	\ZinnDigital\Tranzly\Core\Boot::uninstall();
 }

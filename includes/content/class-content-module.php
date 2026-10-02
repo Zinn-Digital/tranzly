@@ -37,6 +37,7 @@ final class Content_Module {
 		Rest_Editor::register();
 		Side_By_Side::register();
 		Menus::register();
+		Links::register();
 		Menus_Rest::register();
 		Shared_Strings::register();
 		Term_Admin::register();
