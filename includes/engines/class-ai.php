@@ -585,7 +585,10 @@ final class Ai implements Engine {
 			$run = trim( (string) $run );
 			// A sentence, not a list of names: enough words, three of them in lower case (a run of
 			// product names or a title may rightly stay as it is).
-			if ( preg_match_all( '/\p{L}{2,}/u', $run ) >= self::ECHO_WORDS && preg_match_all( '/(?<!\p{L})\p{Ll}{2,}/u', $run ) >= 3 && ! preg_match( '#https?://|[{}=;$]#', $run ) ) {
+			// Nor an enumeration of values ("string: any, draft, pending, publish, private" in an API
+			// reference, measured live 2026-10-04): commas between most of the words.
+			$words = preg_match_all( '/\p{L}{2,}/u', $run );
+			if ( $words >= self::ECHO_WORDS && preg_match_all( '/(?<!\p{L})\p{Ll}{2,}/u', $run ) >= 3 && substr_count( $run, ',' ) * 2 < $words && ! preg_match( '#https?://|[{}=;$]#', $run ) ) {
 				$runs[] = $run;
 			}
 		}

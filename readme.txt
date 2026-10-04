@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.24.5
+Stable tag: 3.24.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -153,6 +153,9 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.24.6 =
+* An enumeration of values in a page (an API reference's allowed values) is no longer mistaken for an untranslated sentence.
 
 = 3.24.5 =
 * AI translation is batched: one call carries many languages, and Gemini 3.7/3.8 is asked for the least thinking it accepts (a fraction of the cost). Translations follow their original's noindex. Rank Math sitemaps no longer skip or repeat pages saved in the same second.
