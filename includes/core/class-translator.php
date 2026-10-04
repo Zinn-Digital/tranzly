@@ -460,17 +460,7 @@ final class Translator {
 	 * @return array{texts: array<string, string>, engine: Engine}|\WP_Error
 	 */
 	private static function run( array $chain, array $segments, string $source, string $target ) {
-		$options = Glossary::options_for( $target );
-
-		/**
-		 * Filters the options passed to the engine (do-not-translate list, glossary, formality,
-		 * instructions).
-		 *
-		 * @param array<string, mixed> $options Options.
-		 * @param string               $target  The target language.
-		 * @param Engine               $engine  The first engine of the chain.
-		 */
-		$options = (array) apply_filters( 'tranzly_engine_options', $options, $target, $chain[0] );
+		$options = self::options_for( $target, $chain[0] );
 
 		$out      = array();
 		$missing  = array(); // format => key => text.
@@ -564,6 +554,140 @@ final class Translator {
 		}
 
 		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this item.', 'tranzly' ), array( 'status' => 400 ) );
+	}
+
+	/**
+	 * The options an engine receives for a language (do-not-translate list, glossary, formality,
+	 * instructions), before the format is added.
+	 *
+	 * @param string $target The target language.
+	 * @param Engine $engine The first engine of the language's chain.
+	 * @return array<string, mixed>
+	 */
+	public static function options_for( string $target, Engine $engine ): array {
+		/**
+		 * Filters the options passed to the engine (do-not-translate list, glossary, formality,
+		 * instructions).
+		 *
+		 * @param array<string, mixed> $options Options.
+		 * @param string               $target  The target language.
+		 * @param Engine               $engine  The first engine of the chain.
+		 */
+		return (array) apply_filters( 'tranzly_engine_options', Glossary::options_for( $target ), $target, $engine );
+	}
+
+	/**
+	 * Translate one original into several languages in BATCHED calls ahead of the per-language
+	 * work (owner, 2026-10-01: translation is always batched; docs/28 §"Batching"). Whatever the
+	 * batch answers waits in the engine for {@see translate_post()}, which a caller runs next for
+	 * each language as before; a language the batch did not answer is translated by its own call.
+	 *
+	 * Only engines that batch take part (the AI engine; DeepL already takes one language per
+	 * request by design). Segments translation memory already holds for a language are not sent
+	 * again, and nothing is sent when the engine's monthly cap would not cover it.
+	 *
+	 * @param int                $source_id The original post.
+	 * @param array<int, string> $langs     Target languages.
+	 * @param string             $engine_id An engine id; empty for each language's chain.
+	 * @param callable|null      $tick      Called after every engine call.
+	 * @return int Answers prepared (segments × languages).
+	 */
+	public static function prefetch( int $source_id, array $langs, string $engine_id = '', ?callable $tick = null ): int {
+		$post = get_post( $source_id );
+		if ( ! $post instanceof \WP_Post || ! Content::can_translate_post( $source_id ) ) {
+			return 0;
+		}
+		return self::prefetch_segments( self::post_segments( $post ), Relations::language_of( 'post', $source_id ) ?? Languages::default_code(), $langs, $engine_id, $tick );
+	}
+
+	/**
+	 * {@see prefetch()} for any segments (a term, the shared strings).
+	 *
+	 * @param array<string, array{text: string, format: string}> $segments The segments.
+	 * @param string                                             $source   Source language.
+	 * @param array<int, string>                                 $langs    Target languages.
+	 * @param string                                             $engine_id An engine id; empty for each language's chain.
+	 * @param callable|null                                      $tick     Called after every engine call.
+	 * @param bool                                               $memory_first Leave out what translation memory holds (posts and terms read it; the shared strings do not).
+	 * @return int
+	 */
+	public static function prefetch_segments( array $segments, string $source, array $langs, string $engine_id = '', ?callable $tick = null, bool $memory_first = true ): int {
+		$memory  = $memory_first ? apply_filters( 'tranzly_translation_memory', null ) : null;
+		$memory  = $memory instanceof Translation_Memory ? $memory : null;
+		$engines = array();
+		$plan    = array(); // engine id => signature => array( texts => format => key => text, targets => target => options ).
+		foreach ( array_unique( array_map( 'strval', $langs ) ) as $lang ) {
+			$code = Languages::resolve( $lang );
+			if ( null === $code || $code === $source ) {
+				continue;
+			}
+			$chain = self::chain( $engine_id, $code );
+			if ( is_wp_error( $chain ) || ! method_exists( $chain[0], 'prefetch' ) ) {
+				continue;
+			}
+			$engine  = $chain[0];
+			$options = self::options_for( $code, $engine );
+			$texts   = array();
+			$keys    = array();
+			foreach ( $segments as $key => $segment ) {
+				$format = ( $segment['format'] ?? 'text' ) === 'html' ? 'html' : 'text';
+				$text   = (string) $segment['text'];
+				if ( '' === trim( $text ) ) {
+					continue;
+				}
+				if ( null !== $memory ) {
+					$keys[ (string) $key ] = $memory->key( $text, $format, $source, $code, $options );
+				}
+				$texts[ $format ][ (string) $key ] = $text;
+			}
+			if ( null !== $memory && array() !== $keys ) {
+				$hits = $memory->lookup( array_values( $keys ) );
+				foreach ( $texts as $format => $list ) {
+					foreach ( $list as $key => $unused ) {
+						if ( isset( $hits[ $keys[ $key ] ] ) ) {
+							unset( $texts[ $format ][ $key ] );
+						}
+					}
+				}
+				$texts = array_filter( $texts );
+			}
+			if ( array() === $texts ) {
+				continue;
+			}
+			// Languages that need exactly the same texts are batched together.
+			$sig                                    = md5( (string) wp_json_encode( $texts ) );
+			$engines[ $engine->id() ]               = $engine;
+			$plan[ $engine->id() ][ $sig ]['texts'] = $texts;
+			$plan[ $engine->id() ][ $sig ]['targets'][ $code ] = $options;
+		}
+
+		$done = 0;
+		foreach ( $plan as $id => $groups ) {
+			$engine = $engines[ $id ];
+			foreach ( $groups as $group ) {
+				if ( count( $group['targets'] ) < 2 ) {
+					continue;
+				}
+				$cost = 0.0;
+				foreach ( $group['texts'] as $texts ) {
+					foreach ( array_keys( $group['targets'] ) as $code ) {
+						$cost += (float) ( $engine->estimate( $texts, $code )['cost_usd'] ?? 0 );
+					}
+				}
+				if ( Engine_Settings::over_cap( $id, $cost ) ) {
+					continue; // Each language's own call meets the cap and reports it.
+				}
+				foreach ( $group['texts'] as $format => $texts ) {
+					$targets = array();
+					foreach ( $group['targets'] as $code => $options ) {
+						$targets[ $code ] = array( 'format' => $format ) + $options;
+					}
+					$done += (int) $engine->prefetch( $texts, $source, $targets, $tick );
+				}
+			}
+		}
+
+		return $done;
 	}
 
 	/**

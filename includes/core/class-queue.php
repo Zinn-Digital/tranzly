@@ -50,6 +50,13 @@ final class Queue {
 	/** Items claimed at a time by one worker. */
 	private const CLAIM = 5;
 
+	/**
+	 * Items one WP-CLI worker claims when the job's engine batches languages: one claim is one
+	 * batched pass over that many (post, language) items (owner, 2026-10-01: always batched). A web
+	 * worker keeps CLAIM, so its request never runs longer than translating those items one by one.
+	 */
+	private const BATCH_CLAIM = 30;
+
 	/** A claimed item's lease, in seconds. */
 	private const LEASE = 300;
 
@@ -253,10 +260,16 @@ final class Queue {
 		 * @param int $seconds 20.
 		 */
 		$deadline = microtime( true ) + (int) apply_filters( 'tranzly_queue_worker_seconds', 20 );
+		$engine   = Translator::engine( (string) $row['engine'] );
+		$batching = ! is_wp_error( $engine ) && method_exists( $engine, 'prefetch' );
+		$size     = $batching && defined( 'WP_CLI' ) && WP_CLI ? self::BATCH_CLAIM : self::CLAIM;
 		while ( microtime( true ) < $deadline ) {
-			$items = self::claim( $job_id );
+			$items = self::claim( $job_id, $size );
 			if ( array() === $items ) {
 				break;
+			}
+			if ( $batching ) {
+				self::prefetch( $items, (string) $row['engine'] );
 			}
 			foreach ( $items as $item ) {
 				// ⛔ A claim covers several items but they are worked one at a time, so the lease of
@@ -476,9 +489,10 @@ final class Queue {
 	 * Claim up to CLAIM items: queued and due, or running with an expired lease.
 	 *
 	 * @param int $job_id Job ID.
+	 * @param int $size   Items to claim at most.
 	 * @return array<int, array<string, mixed>>
 	 */
-	private static function claim( int $job_id ): array {
+	private static function claim( int $job_id, int $size = self::CLAIM ): array {
 		global $wpdb;
 		$t     = Schema::tables();
 		$token = wp_generate_password( 32, false, false );
@@ -493,11 +507,40 @@ final class Queue {
 				$job_id,
 				$now,
 				$now,
-				self::CLAIM
+				max( 1, $size )
 			)
 		);
 
 		return (array) $wpdb->get_results( $wpdb->prepare( 'SELECT * FROM %i WHERE claim = %s', $t['items'], $token ), ARRAY_A );
+	}
+
+	/**
+	 * Batch the claimed items' languages, one original at a time, before they are worked: the
+	 * answers wait in the engine for each item's own translate call (Translator::prefetch). Every
+	 * lease is renewed after each engine call, so a long batched pass never lets another worker
+	 * take an item back while its answer is on the way.
+	 *
+	 * @param array<int, array<string, mixed>> $items  Claimed items.
+	 * @param string                           $engine The job's engine.
+	 * @return void
+	 */
+	private static function prefetch( array $items, string $engine ): void {
+		$by = array();
+		foreach ( $items as $item ) {
+			if ( '' === (string) $item['engine'] || (string) $item['engine'] === $engine ) {
+				$by[ (int) $item['object_id'] ][] = (string) $item['lang'];
+			}
+		}
+		$tick = static function () use ( $items ): void {
+			foreach ( $items as $item ) {
+				self::renew( $item );
+			}
+		};
+		foreach ( $by as $post_id => $langs ) {
+			if ( count( $langs ) > 1 ) {
+				Translator::prefetch( $post_id, $langs, $engine, $tick );
+			}
+		}
 	}
 
 	/**

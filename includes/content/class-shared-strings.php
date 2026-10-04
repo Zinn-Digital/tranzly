@@ -10,7 +10,6 @@ declare( strict_types = 1 );
 
 namespace ZinnDigital\Tranzly\Content;
 
-use ZinnDigital\Tranzly\Core\Glossary;
 use ZinnDigital\Tranzly\Core\Strings;
 use ZinnDigital\Tranzly\Core\Translator;
 use ZinnDigital\Tranzly\Languages;
@@ -375,7 +374,7 @@ final class Shared_Strings {
 		foreach ( $texts as $key => $source ) {
 			$by_format[ self::format( $source ) ][ (string) $key ] = self::text( $source );
 		}
-		$options = Glossary::options_for( $lang );
+		$options = Translator::options_for( $lang, $chain[0] );
 		$last    = null;
 		foreach ( $chain as $engine ) {
 			$out = array();
@@ -395,6 +394,44 @@ final class Shared_Strings {
 		}
 
 		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this text.', 'tranzly' ), array( 'status' => 400 ) );
+	}
+
+	/**
+	 * Translate the missing texts of a scope for SEVERAL languages in batched calls (owner,
+	 * 2026-10-01: translation is always batched). The answers wait in the engine for each
+	 * language's own {@see translate()} (the REST route's pages, or a script's), which then makes
+	 * no call for them. The texts sent are those missing in ANY of the languages, so languages
+	 * that miss almost the same texts share their calls.
+	 *
+	 * @param string             $scope `menus`, `site` or `templates`.
+	 * @param array<int, string> $langs Target languages.
+	 * @return int Answers prepared (texts × languages).
+	 */
+	public static function prefetch_missing( string $scope, array $langs ): int {
+		$sources = self::sources( $scope );
+		$need    = array();
+		$codes   = array();
+		foreach ( $langs as $lang ) {
+			$code = Languages::resolve( (string) $lang );
+			if ( null === $code || Languages::default_code() === $code ) {
+				continue;
+			}
+			$have = Strings::all( $code );
+			foreach ( $sources as $key => $source ) {
+				if ( '' === ( $have[ $key ] ?? '' ) ) {
+					$need[ (string) $key ] = array(
+						'text'   => self::text( $source ),
+						'format' => self::format( $source ),
+					);
+					$codes[ $code ]        = true;
+				}
+			}
+		}
+		if ( count( $codes ) < 2 || array() === $need ) {
+			return 0;
+		}
+
+		return Translator::prefetch_segments( $need, Languages::default_code(), array_keys( $codes ), '', null, false );
 	}
 
 	/**

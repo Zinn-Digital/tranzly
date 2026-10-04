@@ -33,6 +33,7 @@ final class Seo {
 		Query_Filter::register();
 		Head::register();
 		Sitemaps::register();
+		Robots::register();
 		Suggest::register();
 		Primer::register();
 		add_action( 'rest_api_init', array( self::class, 'register_routes' ) );

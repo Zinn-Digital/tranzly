@@ -35,6 +35,7 @@ require_once __DIR__ . '/seo/class-router.php';
 require_once __DIR__ . '/seo/class-query-filter.php';
 require_once __DIR__ . '/seo/class-head.php';
 require_once __DIR__ . '/seo/class-sitemaps.php';
+require_once __DIR__ . '/seo/class-robots.php';
 require_once __DIR__ . '/seo/class-suggest.php';
 require_once __DIR__ . '/seo/class-primer.php';
 require_once __DIR__ . '/seo/class-seo.php';

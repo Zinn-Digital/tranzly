@@ -34,9 +34,49 @@ final class Sitemaps {
 		add_action( 'init', array( self::class, 'register_core_provider' ), 20 );
 		add_filter( 'wpseo_sitemap_post_type_first_links', array( self::class, 'yoast_first_links' ), 20, 2 );
 		add_filter( 'rank_math/sitemap/page_content', array( self::class, 'rank_math_content' ), 20, 1 );
+		add_filter( 'rank_math/sitemap/get_posts/where', array( self::class, 'rank_math_stable_order' ), 20, 1 );
 		add_filter( 'aioseo_sitemap_posts', array( self::class, 'aioseo_posts' ), 20, 2 );
 		add_filter( 'seopress_sitemaps_single_query', array( self::class, 'all_languages_args' ), 20, 1 );
 		add_filter( 'seopress_sitemaps_xml_single', array( self::class, 'seopress_xml' ), 20, 1 );
+	}
+
+	/** Rank Math's page-query ORDER BY (seo-by-rank-math 1.0.279, providers/class-post-type.php). */
+	private const RANK_MATH_ORDER = 'ORDER BY p.post_modified DESC LIMIT';
+
+	/**
+	 * Rank Math: make the next post-sitemap page query order deterministically.
+	 *
+	 * ⛔ WHY. Rank Math pages its post sitemaps with `ORDER BY p.post_modified DESC LIMIT n OFFSET
+	 * m`. A translated site has many posts saved in the same second (a bulk translation writes
+	 * dozens a second), and MySQL orders equal rows arbitrarily per query, so consecutive pages
+	 * overlapped and skipped: live 2026-10-04, pagebuildersandwich.com's page sitemaps listed 865
+	 * URLs for 870 published pages, with duplicates, and lost the English /features/, /pricing/,
+	 * /woocommerce/ and the home page (870 pages, 813 distinct modified times). Adding the ID as a
+	 * tie-break makes every page of the sitemap a slice of ONE order. The rewrite is armed by
+	 * Rank Math's own `get_posts/where` filter, which runs immediately before that query, and
+	 * touches only a query carrying Rank Math's exact ORDER BY.
+	 *
+	 * @param string $where Rank Math's extra WHERE clause (returned unchanged).
+	 * @return string
+	 */
+	public static function rank_math_stable_order( $where ) {
+		add_filter( 'query', array( self::class, 'stable_order_sql' ), 20, 1 );
+		return $where;
+	}
+
+	/**
+	 * The one Rank Math page query with an ID tie-break (then unhooked).
+	 *
+	 * @param string $sql A query.
+	 * @return string
+	 */
+	public static function stable_order_sql( $sql ) {
+		if ( ! is_string( $sql ) || false === strpos( $sql, self::RANK_MATH_ORDER ) ) {
+			return $sql;
+		}
+		remove_filter( 'query', array( self::class, 'stable_order_sql' ), 20 );
+
+		return str_replace( self::RANK_MATH_ORDER, 'ORDER BY p.post_modified DESC, p.ID DESC LIMIT', $sql );
 	}
 
 	/**
