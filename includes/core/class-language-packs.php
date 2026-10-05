@@ -31,8 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class Language_Packs {
 
-	/** The background action. */
-	public const HOOK = 'tranzly_install_language_packs';
+	/**
+	 * The background action. ⛔ NOT the name of the on/off filter (`tranzly_install_language_packs`):
+	 * in 3.25.0 they were the same hook, so asking the filter RAN the install, synchronously, in the
+	 * request that saved the settings, for a locale named `1` (live on demo.tranzly.io, 2026-10-05).
+	 */
+	public const HOOK = 'tranzly_language_packs_run';
+
+	/** A queued install older than this is taken as lost and queued again. */
+	private const STALE = HOUR_IN_SECONDS;
 
 	/** Per locale: what the last install did. */
 	public const STATUS = 'tranzly_language_packs';
@@ -46,6 +53,31 @@ final class Language_Packs {
 		add_action( 'update_option_' . Settings::OPTION, array( self::class, 'changed' ), 10, 2 );
 		add_action( 'add_option_' . Settings::OPTION, array( self::class, 'added' ), 10, 2 );
 		add_action( self::HOOK, array( self::class, 'install' ) );
+		add_action( 'admin_init', array( self::class, 'requeue_lost' ) );
+	}
+
+	/**
+	 * Languages whose install was queued and never ran (3.25.0's runs, a cleared queue) are queued
+	 * again; rows for codes that are not languages of the site (3.25.0 wrote one named `1`) go.
+	 *
+	 * @return void
+	 */
+	public static function requeue_lost(): void {
+		$status = self::status();
+		$codes  = array_map( static fn( $row ) => (string) ( $row['code'] ?? '' ), Settings::get()['languages'] );
+		$clean  = array_intersect_key( $status, array_flip( $codes ) );
+		$lost   = array();
+		foreach ( $clean as $code => $row ) {
+			if ( 'queued' === ( $row['state'] ?? '' ) && strtotime( (string) ( $row['at'] ?? '' ) ) < time() - self::STALE ) {
+				$lost[] = (string) $code;
+			}
+		}
+		if ( $clean !== $status ) {
+			update_option( self::STATUS, $clean, false );
+		}
+		if ( array() !== $lost ) {
+			self::schedule( $lost );
+		}
 	}
 
 	/**
@@ -149,7 +181,10 @@ final class Language_Packs {
 	 * @return array<string, array<string, mixed>> The status of each.
 	 */
 	public static function install( $locales ): array {
-		$locales = array_values( array_filter( array_map( 'strval', (array) $locales ) ) );
+		if ( ! is_array( $locales ) ) {
+			return self::status();
+		}
+		$locales = array_values( array_filter( array_map( 'strval', $locales ) ) );
 		require_once ABSPATH . 'wp-admin/includes/file.php';
 		require_once ABSPATH . 'wp-admin/includes/translation-install.php';
 		require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
