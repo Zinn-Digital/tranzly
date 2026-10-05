@@ -205,7 +205,7 @@ final class Side_By_Side {
 			if ( null === $shell ) {
 				return new \WP_Error( 'tranzly_segment_has_markup', __( 'This piece now contains formatting. Reload the page to edit it.', 'tranzly' ), array( 'status' => 409 ) );
 			}
-			$changes[ $key ] = $shell[0] . esc_html( $text ) . $shell[2];
+			$changes[ $key ] = self::put_back( $shell, $text );
 		}
 		$saved = self::save( $pair['translation'], $changes );
 		if ( is_wp_error( $saved ) ) {
@@ -335,6 +335,38 @@ final class Side_By_Side {
 			html_entity_decode( trim( $run ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ),
 			$tail . implode( '', array_slice( $parts, $at + 1 ) ),
 		);
+	}
+
+	/**
+	 * What a person typed in a piece shown as words, put back inside the piece's markup.
+	 *
+	 * Words go in escaped. ⛔ Q98, 2026-10-05: 3.25.1 escaped EVERYTHING, so a person who typed (or
+	 * pasted) HTML into the box — `<p>Erster</p>`, `<strong>Neu</strong>` — saved
+	 * `<p>&lt;p&gt;Erster&lt;/p&gt;</p>`: their tags shown as text on the live page. Typed markup is
+	 * markup: a wrapper the piece already has (`<p>` around a `<p class="…">` piece) is taken off so
+	 * the original's classes stay, and the rest goes in as HTML (save() runs it through
+	 * wp_kses_post()).
+	 *
+	 * @param array{0: string, 1: string, 2: string} $shell From text_shell().
+	 * @param string                                 $text  What the person typed.
+	 * @return string The piece's HTML.
+	 */
+	public static function put_back( array $shell, string $text ): string {
+		if ( ! preg_match( '/<\/?[a-zA-Z][^>]*>/', $text ) ) {
+			return $shell[0] . esc_html( $text ) . $shell[2];
+		}
+		$inner = trim( $text );
+		// The shell's own opening elements, outermost first: `<li><strong>` → li, strong.
+		preg_match_all( '/<([a-zA-Z][a-zA-Z0-9-]*)\b[^>]*>/', $shell[0], $open );
+		foreach ( $open[1] as $name ) {
+			$quoted = preg_quote( strtolower( $name ), '/' );
+			if ( ! preg_match( '/^<' . $quoted . '\b[^>]*>(.*)<\/' . $quoted . '\s*>$/is', $inner, $m ) ) {
+				break;
+			}
+			$inner = trim( $m[1] );
+		}
+
+		return $shell[0] . $inner . $shell[2];
 	}
 
 	/**
