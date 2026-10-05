@@ -50,12 +50,15 @@
 }
 
 // The AI agents (MCP) panel (wp/packages/zinn-mcp-kit): the client configuration block scrolls
-// rather than widening the screen.
+// rather than widening the screen. A translucent tint (as the kit's .zak-pre), never a fixed light
+// grey: under the kit's dark scheme a #f6f7f7 block kept the shell's light text (axe
+// color-contrast on the PBS Settings screen, admin-kit e2e 2026-10-05).
 .zd-mcp-panel__config {
 	overflow-x: auto;
 	max-inline-size: 100%;
 	padding: 12px;
-	background: #f6f7f7;
+	background: rgba(0, 0, 0, 0.04);
+	color: inherit;
 	font-size: 12px;
 }
 

@@ -53,8 +53,11 @@
 			fill: var(--zak-text);
 		}
 
+		// WordPress's own help text (`p.description`, #646970) is 2.5:1 on the dark surface (axe
+		// color-contrast, the AI agents panel on the PBS Settings screen, 2026-10-05).
 		.components-base-control__help,
-		.components-form-token-field__help {
+		.components-form-token-field__help,
+		.description {
 			color: var(--zak-muted);
 		}
 
