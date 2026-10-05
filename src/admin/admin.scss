@@ -33,8 +33,11 @@
 	border-block-end: 1px solid #dcdcde;
 }
 
+// ⛔ Greys are the kit's muted token, never a fixed #50575e: under the kit's dark scheme a fixed
+// grey is 1.9:1 on the dark surface (live axe, Settings → Languages, every one of our sites,
+// 2026-10-05). The fallback keeps the light value outside the shell.
 .tranzly-engines__pro {
-	color: #50575e;
+	color: var(--zak-muted, #50575e);
 	font-style: italic;
 }
 
@@ -77,7 +80,7 @@
 .tranzly-admin__pack {
 	display: block;
 	margin-block-start: 2px;
-	color: var(--wp-components-color-gray-700, #50575e);
+	color: var(--zak-muted, #50575e);
 	font-size: 12px;
 }
 
