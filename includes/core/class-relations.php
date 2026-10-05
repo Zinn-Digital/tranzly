@@ -285,9 +285,20 @@ final class Relations {
 			$group = self::new_group( $type );
 			$made  = self::insert( $type, $source, $group, $source_lang, true, $origin );
 			if ( is_wp_error( $made ) ) {
-				return $made;
+				// ⛔ Live on tranzly.io (W4, 2026-10-04, job 12): two workers translating the same
+				// original at once both found it ungrouped, and the second one's insert of the
+				// SOURCE row hit the unique key — the item failed although the link was there. The
+				// row another worker just wrote is the group: use it.
+				// A LOCKING read: inside the caller's transaction a plain read still sees the
+				// snapshot from before the other worker committed.
+				$group         = self::locked_group( $type, $source );
+				$group_members = 0 === $group ? array() : self::locked_members( $type, $group );
+				if ( array() === $group_members ) {
+					return $made;
+				}
+			} else {
+				$group_members = array( $source_lang => $source );
 			}
-			$group_members = array( $source_lang => $source );
 		} else {
 			$group = self::group_id( $type, $source );
 		}
@@ -318,8 +329,65 @@ final class Relations {
 
 		$made = self::insert( $type, $target, (int) $group, $target_lang, false, $origin );
 		self::flush( $type, $group_members );
+		// The same race on the target row: another worker linked exactly this pair first.
+		if ( is_wp_error( $made ) && (int) self::locked_group( $type, $target ) === (int) $group && ( self::locked_members( $type, (int) $group )[ $target_lang ] ?? 0 ) === $target ) {
+			return true;
+		}
 
 		return $made;
+	}
+
+	/**
+	 * The post translation of `$source` in `$lang`, or null — and a row whose post no longer exists
+	 * is removed rather than returned. ⛔ Live on tranzly.io (W4, 2026-10-04): after two workers raced,
+	 * a group held rows for posts 4132 and 4387 that were gone; the next translation updated the dead
+	 * ID and WordPress died ("Attempt to assign property page_template on null"), killing the run.
+	 *
+	 * @param int    $source The original post.
+	 * @param string $lang   A language.
+	 * @return int|null
+	 */
+	public static function live_post_translation( int $source, string $lang ): ?int {
+		$id = self::translations( 'post', $source )[ $lang ] ?? null;
+		if ( null === $id ) {
+			return null;
+		}
+		if ( get_post( (int) $id ) instanceof \WP_Post ) {
+			return (int) $id;
+		}
+		self::delete( 'post', (int) $id );
+
+		return null;
+	}
+
+	/**
+	 * An object's group, read with a shared lock (the latest committed row, not the snapshot).
+	 *
+	 * @param string $type `post` or `term`.
+	 * @param int    $id   Object ID.
+	 * @return int 0 when it has none.
+	 */
+	private static function locked_group( string $type, int $id ): int {
+		global $wpdb;
+
+		return (int) $wpdb->get_var( $wpdb->prepare( 'SELECT group_id FROM %i WHERE object_type = %s AND object_id = %d LOCK IN SHARE MODE', Schema::tables()['relations'], $type, $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- a locking read must reach the database.
+	}
+
+	/**
+	 * A group's members, read with a shared lock.
+	 *
+	 * @param string $type  `post` or `term`.
+	 * @param int    $group Group ID.
+	 * @return array<string, int> Language => object ID.
+	 */
+	private static function locked_members( string $type, int $group ): array {
+		global $wpdb;
+		$out = array();
+		foreach ( (array) $wpdb->get_results( $wpdb->prepare( 'SELECT lang, object_id FROM %i WHERE object_type = %s AND group_id = %d LOCK IN SHARE MODE', Schema::tables()['relations'], $type, $group ) ) as $row ) { // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- a locking read must reach the database.
+			$out[ (string) $row->lang ] = (int) $row->object_id;
+		}
+
+		return $out;
 	}
 
 	/**
@@ -447,19 +515,22 @@ final class Relations {
 	 */
 	private static function insert( string $type, int $id, int $group, string $lang, bool $is_source, string $origin ) {
 		global $wpdb;
-		$ok = $wpdb->insert(
-			Schema::tables()['relations'],
-			array(
-				'object_type' => $type,
-				'object_id'   => $id,
-				'group_id'    => $group,
-				'lang'        => $lang,
-				'is_source'   => $is_source ? 1 : 0,
-				'origin'      => $origin,
+		// IGNORE: a row another worker wrote a moment ago is not a database error for the log; the
+		// caller sees "not inserted" and checks what is there (see link()).
+		$ok = $wpdb->query(
+			$wpdb->prepare(
+				'INSERT IGNORE INTO %i (object_type, object_id, group_id, lang, is_source, origin) VALUES (%s, %d, %d, %s, %d, %s)',
+				Schema::tables()['relations'],
+				$type,
+				$id,
+				$group,
+				$lang,
+				$is_source ? 1 : 0,
+				$origin
 			)
 		);
 		self::flush( $type, array( $lang => $id ) );
-		if ( false === $ok ) {
+		if ( false === $ok || 0 === (int) $ok ) {
 			return new \WP_Error( 'tranzly_link_failed', __( 'The translation link could not be saved.', 'tranzly' ), array( 'status' => 500 ) );
 		}
 

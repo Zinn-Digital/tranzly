@@ -92,6 +92,7 @@ export default function Engines() {
 		per_lang: {},
 		fallback: [],
 		caps: {},
+		models: {},
 	};
 	const configured = engines.filter( ( engine ) => engine.configured );
 	const engineOptions = [
@@ -286,7 +287,7 @@ export default function Engines() {
 					{ ! ProEngineFields && (
 						<p className="tranzly-engines__pro">
 							{ __(
-								'A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.',
+								'A different engine or AI model per language, automatic fallback and monthly spending caps are Tranzly Pro features.',
 								'tranzly'
 							) }
 						</p>
@@ -298,6 +299,7 @@ export default function Engines() {
 							engineOptions={ engineOptions }
 							configured={ configured }
 							saveSettings={ saveSettings }
+							ai={ state?.ai }
 						/>
 					) }
 				</PanelBody>

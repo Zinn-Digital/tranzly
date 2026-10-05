@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.24.6
+Stable tag: 3.25.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,9 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Media, widgets, site title and tagline.** Image alt text, captions and titles, widget text and the site title and tagline can each carry a translation per language, shown to visitors of that language.
 * **Unlimited languages**, in the free edition as well, added by their WordPress locale code (for example `fr_FR`). The first one is the language your content is written in.
 * **Your old Tranzly translations come with you.** On a site that ran Tranzly 2.x, the old language links, languages and DeepL key are imported in the background without changing the old data, and anything that cannot be imported is reported rather than stopping it. `wp tranzly legacy dry-run` shows what it would do first.
-* **Machine translation with your own account.** DeepL (Free and Pro keys), AI models with your own key, and with Pro Google Cloud Translation and Microsoft Translator. See the cost before you start.
+* **Machine translation with your own account.** DeepL (free and paid API keys), AI models with your own key, and with Pro Google Cloud Translation and Microsoft Translator. See the cost before you start.
+* **Translations that read like a native writer's.** Every translation follows its language's house style, whichever engine wrote it: French « » with the right spaces, German „…“, Japanese spacing, and the quotation marks, apostrophes and punctuation of 15 languages (links, code and placeholders untouched). AI models also get each language's tone and form of address (26 languages) from its WordPress.org translation team's style guide.
+* **Pick the best AI for each language (Pro).** Choose the AI provider and model per language (Gemini for Japanese, Claude for German) plus one for all others. Estimates, fallback and per-provider monthly caps follow each language's choice.
 * **Translate in the background.** Translate a whole post type into several languages as one job that keeps going after you close the browser; a report shows what failed and why, with one-click retry.
 * **Words that are never translated** (brand and product names) in every edition; with Pro, preferred translations, tone per language, translation memory (a text already translated is never paid for again), a different engine per language, automatic fallback and monthly spending caps.
 * **For developers:** PHP functions (translations, current language, switching language in code), an interface for adding your own translation engine, hooks, a REST API and WP-CLI (`wp tranzly translate --lang=de --post-type=page`). Pro adds Polylang and WPML function compatibility; the Agency plan adds multisite network set-up.
@@ -75,7 +77,7 @@ On a WordPress site hosted by Zinn Digital®, the plugin's screen shows administ
 
 Tranzly translates through the services you set up in Tranzly → Engines, with your own account and key. Nothing is sent to any of them until you save a key and start a translation, and nothing is ever sent to Zinn Digital®. What is sent is the text being translated (post titles, excerpts and content, term names and descriptions), the source and target language, and your key; the answer is the translation.
 
-* DeepL: `https://api.deepl.com` (DeepL API Pro keys) or `https://api-free.deepl.com` (keys ending in `:fx`). Tranzly calls `/v2/translate` to translate, `/v2/languages` to learn which languages your account supports, `/v2/usage` when you check your usage, and `/v2/glossaries` when you use a glossary (Pro). Terms: https://www.deepl.com/pro-license · Privacy policy: https://www.deepl.com/privacy
+* DeepL: `https://api.deepl.com` (paid DeepL API keys) or `https://api-free.deepl.com` (keys ending in `:fx`). Tranzly calls `/v2/translate` to translate, `/v2/languages` to learn which languages your account supports, `/v2/usage` when you check your usage, and `/v2/glossaries` when you use a glossary (Pro). Terms: https://www.deepl.com/pro-license · Privacy policy: https://www.deepl.com/privacy
 * Google Cloud Translation (Pro): `https://translation.googleapis.com/language/translate/v2`. Terms: https://cloud.google.com/terms · Privacy policy: https://policies.google.com/privacy
 * Microsoft Translator (Pro): `https://api.cognitive.microsofttranslator.com/translate`. Terms: https://azure.microsoft.com/support/legal/ · Privacy policy: https://privacy.microsoft.com/privacystatement
 
@@ -154,6 +156,21 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.25.0 =
+* New: every translation follows its language's WordPress.org translation team style guide, whichever engine wrote it (AI models and DeepL alike): quotation marks, punctuation spacing, apostrophes, ellipsis, Japanese half-width spacing and lower-case pronouns of address, for 15 languages. Links, HTML, code and placeholders are never changed. Turn it off per language with the `tranzly_style_rules_enabled` filter.
+* New: AI models are given each language's tone, form of address and conventions from its translation team's style guide (26 languages). Your own formality setting still wins.
+* New (Pro): a different AI provider and model per language, plus one for all other languages. Batches never mix models, the estimate uses each language's model price, fallback still applies, and each AI provider can have its own monthly cap (`ai:<provider>`). The job report and the REST/MCP job status show the model used per language.
+* Fix: shared texts (menus, site and template texts) and translated comments now respect the monthly spending caps and count towards them; they were sent to the engine directly and bypassed both.
+* New: when you add a language, Tranzly installs WordPress's own translations for it (WordPress, your theme and your plugins, such as WooCommerce's "Add to cart"), in the background, so translated pages are not half in English. Settings, Languages shows what was installed. Turn it off with the `tranzly_install_language_packs` filter.
+* Fix (Pro, WooCommerce): a translated shop page with its own address (/fr/boutique/) is now the product listing in that language; it showed an empty page, and the language links, switcher and search-engine alternates now all point to it. /fr/shop/ redirects there.
+* Fix (Pro, WooCommerce): a product's main picture, set or changed after the product was translated, now reaches its translations (a picture you chose for a translation yourself is kept).
+* Fix (Pro): "Switch from WPML, Polylang or TranslatePress": the dry run now counts the translations it would link; it said 0.
+* Fix: on the Translation status tab the chosen language no longer shows as a solid dark block. In dark mode, secondary buttons ("Save key") are readable.
+* DeepL's cost estimate uses its current paid API price (US$27.50 per million characters).
+* Fix: background jobs are sturdier. Two workers translating the same page no longer fail with "The translation link could not be saved". A translation link to a page that was deleted is repaired instead of stopping the run. An error in one item fails only that item. When an AI model leaves one part of a page untranslated, Tranzly asks again for that part only, so the page is not failed.
+* Fix: a child page translated before its parent moves under the parent's translation once the parent is translated, so its address is all in one language.
+* WP-CLI: `wp tranzly jobs retry-failed <job-id>` queues every failed item of a job again. `wp tranzly jobs retry <item-id>` refuses an item that is already translated, and `wp tranzly jobs failures` shows each service's own error message.
+
 = 3.24.6 =
 * An enumeration of values in a page (an API reference's allowed values) is no longer mistaken for an untranslated sentence.
 
@@ -171,7 +188,7 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * Serbian: quotation marks are now „…“ throughout, as the Serbian WordPress translation team writes them.
 
 = 3.24.1 =
-* Translations follow each language's WordPress.org translation team style guide: its quotation marks, spacing before punctuation, apostrophes and ellipsis, and the forms of address it uses.
+* Tranzly's own screens and messages (the plugin's interface translations shipped with it) follow each language's WordPress.org translation team style guide: its quotation marks, spacing before punctuation, apostrophes and ellipsis, and the forms of address it uses. This did not yet apply to your site's translated content; that came in 3.25.0.
 
 = 3.24.0 =
 * New: on a translated page, links to your own pages lead to their translations in the same language - in the content, in menus (custom links too) and in page-builder blocks - each with its own translated address. Links to other sites, to files, to pages without a translation and language-switcher links are left as they are. The answer is kept with the page, so a repeat visit costs no extra database query. Turn it off with the `tranzly_localize_links` filter.

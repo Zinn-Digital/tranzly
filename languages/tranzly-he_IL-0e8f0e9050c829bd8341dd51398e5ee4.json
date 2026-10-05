@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:19+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings__premium_only.js",
     "domain": "messages",
@@ -10,11 +10,32 @@
                 "lang": "he_IL",
                 "plural-forms": "nplurals=3; plural=(((((n == 1)) && ((0 == 0))) || (((n == 0)) && ((((0 == 0)) == 0)))) ? 0 : (((n == 2)) && ((0 == 0))) ? 1 : 2);"
             },
+            "%1$s: %2$s": [
+                "%1$s: %2$s"
+            ],
+            "The AI settings' choice (%1$s %2$s)": [
+                "\u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05e9\u05dc \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4-AI (%1$s %2$s)"
+            ],
+            "The AI settings' choice": [
+                "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d4-AI"
+            ],
+            "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages.": [
+                "\u05d1\u05d7\u05e8 \u05d0\u05ea \u05de\u05d5\u05d3\u05dc \u05d4-AI \u05e9\u05de\u05ea\u05e8\u05d2\u05dd \u05db\u05dc \u05e9\u05e4\u05d4, \u05dc\u05de\u05e9\u05dc \u05de\u05d5\u05d3\u05dc \u05d0\u05d7\u05d3 \u05dc\u05d9\u05e4\u05e0\u05d9\u05ea \u05d5\u05d0\u05d7\u05e8 \u05dc\u05d2\u05e8\u05de\u05e0\u05d9\u05ea. \u05e9\u05e4\u05d5\u05ea \u05dc\u05dc\u05d0 \u05d1\u05d7\u05d9\u05e8\u05d4 \u05de\u05e9\u05dc\u05d4\u05df \u05de\u05e9\u05ea\u05de\u05e9\u05d5\u05ea \u05d1\u05de\u05d5\u05d3\u05dc \u05e2\u05d1\u05d5\u05e8 \u05db\u05dc \u05e9\u05d0\u05e8 \u05d4\u05e9\u05e4\u05d5\u05ea."
+            ],
+            "AI model for all other languages": [
+                "\u05de\u05d5\u05d3\u05dc \u05d1\u05d9\u05e0\u05d4 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9\u05ea \u05dc\u05db\u05dc \u05e9\u05d0\u05e8 \u05d4\u05e9\u05e4\u05d5\u05ea"
+            ],
             "Engine for %s": [
                 "\u05de\u05e0\u05d5\u05e2 \u05e2\u05d1\u05d5\u05e8 %s"
             ],
             "The default engine": [
                 "\u05de\u05e0\u05d5\u05e2 \u05d1\u05e8\u05d9\u05e8\u05ea \u05d4\u05de\u05d7\u05d3\u05dc"
+            ],
+            "AI model for %s": [
+                "\u05d3\u05d2\u05dd AI \u05e2\u05d1\u05d5\u05e8 %s"
+            ],
+            "The model for all other languages": [
+                "\u05d4\u05de\u05d5\u05d3\u05dc \u05e2\u05d1\u05d5\u05e8 \u05db\u05dc \u05e9\u05d0\u05e8 \u05d4\u05e9\u05e4\u05d5\u05ea"
             ],
             "If an engine fails or reaches a limit, try these next, in this order": [
                 "\u05d0\u05dd \u05de\u05e0\u05d5\u05e2 \u05e0\u05db\u05e9\u05dc \u05d0\u05d5 \u05de\u05d2\u05d9\u05e2 \u05dc\u05de\u05d2\u05d1\u05dc\u05d4, \u05e0\u05e1\u05d4 \u05d0\u05ea \u05d4\u05d1\u05d0\u05d9\u05dd \u05dc\u05e4\u05d9 \u05d4\u05e1\u05d3\u05e8 \u05d4\u05d6\u05d4"
@@ -28,8 +49,11 @@
             "%1$s (spent this month: $%2$s)": [
                 "%1$s (\u05d4\u05d5\u05e6\u05d0 \u05d4\u05d7\u05d5\u05d3\u05e9: $%2$s)"
             ],
-            "Save caps": [
-                "\u05e9\u05de\u05d9\u05e8\u05ea \u05d9\u05db\u05d5\u05dc\u05d5\u05ea"
+            "AI provider %1$s, every language it translates (spent this month: $%2$s)": [
+                "\u05e1\u05e4\u05e7 AI %1$s, \u05db\u05dc \u05e9\u05e4\u05d4 \u05e9\u05d4\u05d5\u05d0 \u05de\u05ea\u05e8\u05d2\u05dd (\u05d4\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05d7\u05d5\u05d3\u05e9: %2$s$)"
+            ],
+            "Save spending caps": [
+                "\u05e9\u05de\u05d9\u05e8\u05ea \u05ea\u05e7\u05e8\u05d5\u05ea \u05d4\u05d5\u05e6\u05d0\u05d4"
             ],
             "Preferred translations (one per line: term = translation)": [
                 "\u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05de\u05d5\u05e2\u05d3\u05e4\u05d9\u05dd (\u05d0\u05d7\u05d3 \u05d1\u05db\u05dc \u05e9\u05d5\u05e8\u05d4: \u05de\u05d5\u05e0\u05d7 = \u05ea\u05e8\u05d2\u05d5\u05dd)"

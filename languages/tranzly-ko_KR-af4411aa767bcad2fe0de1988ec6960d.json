@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:18+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings.js",
     "domain": "messages",
@@ -595,6 +595,21 @@
             "Zinn Digital\u00ae website": [
                 "Zinn Digital\u00ae \uc6f9\uc0ac\uc774\ud2b8"
             ],
+            "Installing WordPress's own words for this language in the background.": [
+                "\uc774 \uc5b8\uc5b4\uc5d0 \ub300\ud55c WordPress \uc790\uccb4 \ud14d\uc2a4\ud2b8\ub97c \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0\uc11c \uc124\uce58\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."
+            ],
+            "WordPress's own words are installed for this language (and %d plugin and theme translations).": [
+                "\uc774 \uc5b8\uc5b4\uc5d0 \ub300\ud55c WordPress \uc790\uccb4 \ud14d\uc2a4\ud2b8\uac00 \uc124\uce58\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4(%d\uac1c\uc758 \ud50c\ub7ec\uadf8\uc778 \ubc0f \ud14c\ub9c8 \ubc88\uc5ed \ud3ec\ud568)."
+            ],
+            "Plugin and theme words are installed; WordPress.org has no translation of WordPress itself for this language yet.": [
+                "\ud50c\ub7ec\uadf8\uc778 \ubc0f \ud14c\ub9c8 \ubb38\uad6c\uac00 \uc124\uce58\ub418\uc5c8\uc2b5\ub2c8\ub2e4. WordPress.org\uc5d0\ub294 \uc544\uc9c1 \uc774 \uc5b8\uc5b4\ub85c \ub41c WordPress \uc790\uccb4\uc758 \ubc88\uc5ed\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."
+            ],
+            "WordPress.org has no translation of WordPress's own words for this language yet.": [
+                "WordPress.org\uc5d0\ub294 \uc774 \uc5b8\uc5b4\ub85c \ub41c WordPress \uc790\uccb4 \ub2e8\uc5b4\uc758 \ubc88\uc5ed\uc774 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4."
+            ],
+            "This site does not allow installing translations (file changes are switched off), so WordPress's own words stay in English for this language.": [
+                "\uc774 \uc0ac\uc774\ud2b8\ub294 \ubc88\uc5ed \uc124\uce58\ub97c \ud5c8\uc6a9\ud558\uc9c0 \uc54a\uc73c\ubbc0\ub85c(\ud30c\uc77c \ubcc0\uacbd\uc774 \ube44\ud65c\uc131\ud654\ub428) \uc774 \uc5b8\uc5b4\uc758 \uacbd\uc6b0 WordPress \uc790\uccb4 \ubb38\uad6c\uac00 \uc601\uc5b4\ub85c \uc720\uc9c0\ub429\ub2c8\ub2e4."
+            ],
             "Settings saved.": [
                 "\uc124\uc815\uc774 \uc800\uc7a5\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
             ],
@@ -706,8 +721,8 @@
             "Default engine": [
                 "\uae30\ubcf8 \uc5d4\uc9c4"
             ],
-            "A different engine per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
-                "\uc5b8\uc5b4\ubcc4 \uac1c\ubcc4 \uc5d4\uc9c4, \uc790\ub3d9 \ub300\uccb4(fallback) \ubc0f \uc6d4\ubcc4 \uc9c0\ucd9c \ud55c\ub3c4\ub294 Tranzly Pro\uc758 \uae30\ub2a5\uc785\ub2c8\ub2e4."
+            "A different engine or AI model per language, automatic fallback and monthly spending caps are Tranzly Pro features.": [
+                "\uc5b8\uc5b4\ubcc4 \uac1c\ubcc4 \uc5d4\uc9c4 \ub610\ub294 AI \ubaa8\ub378, \uc790\ub3d9 \ud3f4\ubc31, \uc6d4\ubcc4 \uc9c0\ucd9c \ud55c\ub3c4\ub294 Tranzly Pro\uc758 \uae30\ub2a5\uc785\ub2c8\ub2e4."
             ],
             "Glossary and words never translated": [
                 "\uc6a9\uc5b4\uc9d1 \ubc0f \ubc88\uc5ed\ub418\uc9c0 \uc54a\ub294 \ub2e8\uc5b4"
@@ -924,6 +939,9 @@
             ],
             "%1$d of %2$d translated, %3$d failed, %4$d skipped (protected or already in that language)": [
                 "%2$d\uac1c \uc911 %1$d\uac1c \ubc88\uc5ed\ub428, %3$d\uac1c \uc2e4\ud328, %4$d\uac1c \uac74\ub108\ub700 (\ubcf4\ud638\ub418\uc5c8\uac70\ub098 \uc774\ubbf8 \ud574\ub2f9 \uc5b8\uc5b4\ub85c \ub418\uc5b4 \uc788\uc74c)"
+            ],
+            "%1$s: %2$d translated by %3$s": [
+                "%1$s: %2$d\uac1c \ubc88\uc5ed\ub428 (\ubc88\uc5ed\uc790: %3$s)"
             ],
             "Stop this job": [
                 "\uc774 \uc791\uc5c5 \uc911\uc9c0"

@@ -682,7 +682,7 @@
     {
       "name": "tranzly/get-engine-settings",
       "label": "Read the engine settings",
-      "description": "Returns the default and fallback engine, per-language engines, each engine's state and this month's spend.",
+      "description": "Returns the default and fallback engine, per-language engines and AI models, each engine's state, the connected AI providers with their models, and this month's spend.",
       "edition": "free",
       "capability": "manage_options (the REST route's own check)",
       "annotations": {
@@ -2531,7 +2531,7 @@
     {
       "name": "tranzly/update-engine-settings",
       "label": "Change the engine settings",
-      "description": "Sets the default engine, a fallback engine and per-language engines (default, fallback, per_lang). Per-language engines and fallback are Pro.",
+      "description": "Sets the default engine, a fallback engine, per-language engines and per-language AI models (default, fallback, per_lang, models, caps). Everything but the default engine is Pro.",
       "edition": "free",
       "capability": "manage_options (the REST route's own check)",
       "annotations": {
@@ -2560,7 +2560,11 @@
           },
           "caps": {
             "type": "object",
-            "description": "Pro: engine ID => monthly spending cap in US dollars."
+            "description": "Pro: engine ID => monthly spending cap in US dollars. An AI provider has its own cap, keyed ai: and the provider id, for example ai:anthropic."
+          },
+          "models": {
+            "type": "object",
+            "description": "Pro: language code => {provider, model} used when the AI engine translates that language; the key * sets the model for every other language. Empty model: the provider's recommended one."
           }
         },
         "default": {}

@@ -294,7 +294,7 @@ final class Cli {
 							\WP_CLI::error( $result->get_error_message() );
 						}
 						++$failed;
-						\WP_CLI::warning( sprintf( '#%d %s: %s', $id, $lang, $result->get_error_message() ) );
+						\WP_CLI::warning( sprintf( '#%d %s: %s', $id, $lang, self::why( $result ) ) );
 						continue;
 					}
 					++$done;
@@ -407,10 +407,10 @@ final class Cli {
 	 * ## OPTIONS
 	 *
 	 * <action>
-	 * : create | status | failures | retry | cancel | run
+	 * : create | status | failures | retry | retry-failed | cancel | run
 	 *
 	 * [<id>...]
-	 * : create: post IDs. status/failures/cancel/run: the job ID. retry: the item ID.
+	 * : create: post IDs. status/failures/retry-failed/cancel/run: the job ID. retry: the item ID.
 	 *
 	 * [--lang=<codes>]
 	 * : create: languages, comma-separated.
@@ -419,7 +419,7 @@ final class Cli {
 	 * : create: every post of this type in the default language.
 	 *
 	 * [--engine=<id>]
-	 * : create/retry: the engine (retry: try another one).
+	 * : create/retry/retry-failed: the engine (retry: try another one).
 	 *
 	 * [--publish]
 	 * : create: publish the translations. With --post-type, only published originals are taken;
@@ -440,6 +440,7 @@ final class Cli {
 	 *     wp tranzly jobs status 12
 	 *     wp tranzly jobs failures 12
 	 *     wp tranzly jobs retry 345 --engine=deepl
+	 *     wp tranzly jobs retry-failed 12
 	 *     wp tranzly jobs run 12      # work the job here instead of waiting for the queue runner
 	 *
 	 * @param array<int, string>    $args  Positional.
@@ -482,14 +483,27 @@ final class Cli {
 				return;
 			case 'failures':
 				$rows = Queue::failures( (int) ( $args[0] ?? 0 ) );
-				\WP_CLI\Utils\format_items( 'yaml' === $format ? 'table' : $format, $rows, array( 'item', 'post', 'lang', 'engine', 'class', 'message' ) );
+				// The service's own words (`detail`) too: "a reason Tranzly could not identify" alone told the
+				// site owner nothing (W4, tranzly.io job 12, 2026-10-04).
+				\WP_CLI\Utils\format_items( 'yaml' === $format ? 'table' : $format, $rows, array( 'item', 'post', 'lang', 'engine', 'class', 'message', 'detail' ) );
 				return;
 			case 'retry':
 				$done = Queue::retry( (int) ( $args[0] ?? 0 ), (string) ( $assoc['engine'] ?? '' ) );
 				if ( is_wp_error( $done ) ) {
 					\WP_CLI::error( $done->get_error_message() );
 				}
-				\WP_CLI::success( 'Queued again.' );
+				\WP_CLI::success( sprintf( 'Item %d queued again.', (int) ( $args[0] ?? 0 ) ) );
+				return;
+			case 'retry-failed':
+				$count = Queue::retry_failed( (int) ( $args[0] ?? 0 ), (string) ( $assoc['engine'] ?? '' ) );
+				if ( is_wp_error( $count ) ) {
+					\WP_CLI::error( $count->get_error_message() );
+				}
+				if ( 0 === $count ) {
+					\WP_CLI::warning( 'This job has no failed items: nothing was queued.' );
+					return;
+				}
+				\WP_CLI::success( sprintf( '%d failed item(s) queued again; the job is running.', $count ) );
 				return;
 			case 'cancel':
 				Queue::cancel( (int) ( $args[0] ?? 0 ) );
@@ -504,7 +518,7 @@ final class Cli {
 				self::print( Queue::progress( $job ), $format );
 				return;
 			default:
-				\WP_CLI::error( 'Use create, status, failures, retry, cancel or run.' );
+				\WP_CLI::error( 'Use create, status, failures, retry, retry-failed, cancel or run.' );
 		}
 	}
 
@@ -588,5 +602,18 @@ final class Cli {
 			return;
 		}
 		\WP_CLI::print_value( $data, array( 'format' => 'yaml' ) );
+	}
+
+	/**
+	 * An engine failure in one line: the headline, then what the service said.
+	 *
+	 * @param \WP_Error $error The failure.
+	 * @return string
+	 */
+	private static function why( \WP_Error $error ): string {
+		$data   = (array) $error->get_error_data();
+		$detail = trim( (string) ( $data['detail'] ?? '' ) );
+
+		return $error->get_error_message() . ( '' === $detail ? '' : ' (' . $detail . ')' );
 	}
 }

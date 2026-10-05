@@ -10,6 +10,8 @@ declare( strict_types = 1 );
 
 namespace ZinnDigital\Tranzly\Engines;
 
+use ZinnDigital\Tranzly\Core\Style_Rules;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -125,7 +127,49 @@ final class Ai implements Engine {
 		$store  = '\\ZinnDigital\\Tranzly\\AiCore\\Store';
 		$choice = $this->choice();
 
+		if ( '' !== $choice['provider'] && $store::configured( $choice['provider'] ) ) {
+			return true;
+		}
+		// Tranzly Pro: a language may use a provider other than the default one.
+		foreach ( self::providers_in_use() as $provider ) {
+			if ( $store::configured( $provider ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Can this engine translate into `$target`: is the provider chosen for that language set up?
+	 *
+	 * @param string $target Target locale.
+	 * @return bool
+	 */
+	public function is_configured_for( string $target ): bool {
+		if ( ! self::available() ) {
+			return false;
+		}
+		$store  = '\\ZinnDigital\\Tranzly\\AiCore\\Store';
+		$choice = $this->choice_for( $target );
+
 		return '' !== $choice['provider'] && $store::configured( $choice['provider'] );
+	}
+
+	/**
+	 * The AI providers chosen for particular languages (Tranzly Pro), beside the default one.
+	 *
+	 * @return array<int, string>
+	 */
+	private static function providers_in_use(): array {
+		/**
+		 * Filters the AI providers chosen for particular languages. None in the free plugin: every
+		 * language uses the provider and model chosen for the `translate` task. Tranzly Pro lists
+		 * the providers of its per-language models.
+		 *
+		 * @param array<int, string> $providers Provider ids.
+		 */
+		return array_values( array_filter( array_map( 'strval', (array) apply_filters( 'tranzly_ai_providers_in_use', array() ) ) ) );
 	}
 
 	/**
@@ -153,7 +197,7 @@ final class Ai implements Engine {
 				unset( $send[ $key ] );
 				continue;
 			}
-			$bk = self::batch_key( $text, $source, $target, $options );
+			$bk = $this->batch_key( $text, $source, $target, $options );
 			if ( isset( self::$batched[ $bk ] ) ) {
 				$got[ $key ] = self::$batched[ $bk ];
 				unset( self::$batched[ $bk ], $send[ $key ] );
@@ -201,7 +245,8 @@ final class Ai implements Engine {
 		// given per language inside it.
 		$groups = array();
 		foreach ( $targets as $target => $options ) {
-			$sig                                = md5( (string) wp_json_encode( array( $options['format'] ?? 'text', $options['do_not_translate'] ?? array(), $options['formality'] ?? 'default', $options['instructions'] ?? '' ) ) );
+			// Languages answered by different models never share a call (Tranzly Pro: a model per language).
+			$sig                                = md5( (string) wp_json_encode( array( $options['format'] ?? 'text', $options['do_not_translate'] ?? array(), $options['formality'] ?? 'default', $options['instructions'] ?? '', $this->choice_for( (string) $target ) ) ) );
 			$groups[ $sig ][ (string) $target ] = (array) $options;
 		}
 		$cached = 0;
@@ -210,7 +255,7 @@ final class Ai implements Engine {
 				$todo = array();
 				foreach ( $group as $target => $options ) {
 					foreach ( $chunk as $text ) {
-						if ( ! isset( self::$batched[ self::batch_key( $text, $source, $target, $options ) ] ) ) {
+						if ( ! isset( self::$batched[ $this->batch_key( $text, $source, $target, $options ) ] ) ) {
 							$todo[ $target ] = $options;
 							break;
 						}
@@ -249,7 +294,7 @@ final class Ai implements Engine {
 					}
 					foreach ( $answers as $target => $items ) {
 						foreach ( $chunk as $key => $text ) {
-							self::$batched[ self::batch_key( $text, $source, $target, $batch[ $target ] ) ] = $items[ $key ];
+							self::$batched[ $this->batch_key( $text, $source, $target, $batch[ $target ] ) ] = $items[ $key ];
 							++$cached;
 						}
 					}
@@ -278,8 +323,10 @@ final class Ai implements Engine {
 	 * @param array<string, mixed> $options Options.
 	 * @return string
 	 */
-	private static function batch_key( string $text, string $source, string $target, array $options ): string {
-		return md5( (string) wp_json_encode( array( $source, $target, $options['format'] ?? 'text', $options['do_not_translate'] ?? array(), $options['glossary'] ?? array(), $options['formality'] ?? 'default', $options['instructions'] ?? '', $text ) ) );
+	private function batch_key( string $text, string $source, string $target, array $options ): string {
+		// The model is part of the key: an answer a batch got from one model is never used for a
+		// language the owner gave to another (Tranzly Pro, a model per language).
+		return md5( (string) wp_json_encode( array( $source, $target, $options['format'] ?? 'text', $options['do_not_translate'] ?? array(), $options['glossary'] ?? array(), $options['formality'] ?? 'default', $options['instructions'] ?? '', $this->choice_for( $target ), $text ) ) );
 	}
 
 	/**
@@ -444,7 +491,7 @@ final class Ai implements Engine {
 	 */
 	public function estimate( array $texts, string $target ): array {
 		$characters = (int) array_sum( array_map( 'mb_strlen', $texts ) );
-		$choice     = $this->choice();
+		$choice     = $this->choice_for( $target );
 		$catalogue  = '\\ZinnDigital\\Tranzly\\AiCore\\Catalogue';
 		$price      = self::available() && '' !== $choice['provider'] ? $catalogue::price( $choice['provider'], $choice['model'] ) : null;
 		if ( null === $price ) {
@@ -477,6 +524,7 @@ final class Ai implements Engine {
 	private function call( array $texts, string $source, string $target, array $options ) {
 		$rules = array_merge(
 			array( sprintf( 'Translate the "text" of every item from %1$s to %2$s. Return every item with its "key" unchanged.', $source, $target ) ),
+			self::guidance( array( $target ) ),
 			self::rules( $options )
 		);
 		foreach ( (array) ( $options['glossary'] ?? array() ) as $from => $to ) {
@@ -495,7 +543,7 @@ final class Ai implements Engine {
 					'content' => (string) wp_json_encode( array( 'items' => self::items( $texts ) ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
 				),
 			),
-			array(
+			$this->route( $target ) + array(
 				'task'        => 'translate',
 				'purpose'     => 'tranzly-translate',
 				'schema'      => array(
@@ -516,6 +564,16 @@ final class Ai implements Engine {
 		}
 		$out = self::answers( (array) ( $result->data['items'] ?? array() ), $texts );
 		if ( count( $out ) !== count( $texts ) ) {
+			// ⛔ Live on tranzly.io (W4, 2026-10-04, job 12): Gemini answered 5 of the home page's 6
+			// segments in Hindi and Marathi, and the whole item failed three times over. Only the
+			// missing texts are asked again, once (the per-item retry the batching rule allows).
+			$missing = array_diff_key( $texts, $out );
+			if ( empty( $options['_retry'] ) ) {
+				$again = $this->call( $missing, $source, $target, array( '_retry' => true ) + $options );
+				if ( ! is_wp_error( $again ) ) {
+					return $again + $out;
+				}
+			}
 			return Failure::make( Failure::UNKNOWN, $this, 'the model returned ' . count( $out ) . ' of ' . count( $texts ) . ' translations' );
 		}
 		$echoed = self::echoed( $texts, $out );
@@ -613,6 +671,7 @@ final class Ai implements Engine {
 				sprintf( 'Translate the "text" of every item from %s into EACH of the languages listed. Return one entry per language, with its "lang" exactly as listed, and in it every item with its "key" unchanged.', $source ),
 				'Languages: ' . implode( ', ', array_keys( $targets ) ) . '.',
 			),
+			self::guidance( array_map( 'strval', array_keys( $targets ) ) ),
 			self::rules( $first )
 		);
 		foreach ( $targets as $target => $options ) {
@@ -633,7 +692,7 @@ final class Ai implements Engine {
 					'content' => (string) wp_json_encode( array( 'items' => self::items( $texts ) ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
 				),
 			),
-			array(
+			$this->route( (string) array_key_first( $targets ) ) + array(
 				'task'        => 'translate',
 				'purpose'     => 'tranzly-translate-batch',
 				'schema'      => array(
@@ -702,9 +761,9 @@ final class Ai implements Engine {
 		}
 		$formality = (string) ( $options['formality'] ?? 'default' );
 		if ( 'more' === $formality ) {
-			$rules[] = 'Use the formal form of address.';
+			$rules[] = 'Use the formal form of address (the site owner\'s choice: it overrides any default form of address above).';
 		} elseif ( 'less' === $formality ) {
-			$rules[] = 'Use the informal form of address.';
+			$rules[] = 'Use the informal form of address (the site owner\'s choice: it overrides any default form of address above).';
 		}
 		if ( '' !== trim( (string) ( $options['instructions'] ?? '' ) ) ) {
 			$rules[] = 'Style instructions from the site owner: ' . trim( (string) $options['instructions'] );
@@ -814,6 +873,75 @@ final class Ai implements Engine {
 			'provider' => (string) ( $choice['provider'] ?? '' ),
 			'model'    => (string) ( $choice['model'] ?? '' ),
 		);
+	}
+
+	/**
+	 * The provider and model that translate into `$target`: the language's own choice in Tranzly
+	 * Pro, else the one chosen for the `translate` task.
+	 *
+	 * @param string $target Target locale.
+	 * @return array{provider: string, model: string}
+	 */
+	public function choice_for( string $target ): array {
+		$base = $this->choice();
+		/**
+		 * Filters the AI provider and model that translate into a language. Free: the provider and
+		 * model chosen for the `translate` task, for every language. Tranzly Pro: the language's
+		 * own choice, else the "all other languages" choice.
+		 *
+		 * @param array{provider: string, model: string} $choice The provider and model.
+		 * @param string                                 $target The target locale.
+		 */
+		$choice = (array) apply_filters( 'tranzly_ai_model', $base, $target );
+		if ( ! is_string( $choice['provider'] ?? null ) || '' === $choice['provider'] ) {
+			return $base;
+		}
+
+		return array(
+			'provider' => (string) $choice['provider'],
+			'model'    => is_string( $choice['model'] ?? null ) ? (string) $choice['model'] : '',
+		);
+	}
+
+	/**
+	 * The `generate()` options that send a call to the language's provider and model.
+	 *
+	 * @param string $target Target locale.
+	 * @return array<string, string>
+	 */
+	private function route( string $target ): array {
+		$choice = $this->choice_for( $target );
+		if ( '' === $choice['provider'] ) {
+			return array();
+		}
+		$out = array( 'provider' => $choice['provider'] );
+		if ( '' !== $choice['model'] ) {
+			$out['model'] = $choice['model'];
+		}
+
+		return $out;
+	}
+
+	/**
+	 * Each language's own translation-team guidance (register, form of address, conventions from
+	 * its WordPress.org Polyglots style guide), for every Tranzly user. The mechanical rules
+	 * (quotation marks, spacing) are applied to the answer afterwards, so they are not asked for.
+	 *
+	 * @param array<int, string> $targets Target locales.
+	 * @return array<int, string>
+	 */
+	private static function guidance( array $targets ): array {
+		$out = array();
+		foreach ( $targets as $target ) {
+			$one = Style_Rules::guidance( $target );
+			if ( '' !== $one ) {
+				$out[] = 1 === count( $targets )
+					? 'House style for this language (its WordPress.org translation team\'s style guide): ' . $one
+					: sprintf( 'House style for %1$s (its WordPress.org translation team\'s style guide): %2$s', $target, $one );
+			}
+		}
+
+		return $out;
 	}
 
 	/**

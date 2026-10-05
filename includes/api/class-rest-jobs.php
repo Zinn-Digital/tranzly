@@ -367,8 +367,57 @@ final class Rest_Jobs {
 				'engines'   => $engines,
 				'pro'       => \ZinnDigital\Tranzly\Core\Edition::pro(),
 				'languages' => Languages::all(),
+				'ai'        => self::ai_choices(),
 			)
 		);
+	}
+
+	/**
+	 * What a per-language AI model can be (Pro): each connected AI provider with its models, the
+	 * AI settings' choice for translation (the default), and each provider's spend and cap.
+	 *
+	 * @return array{default: array{provider: string, model: string}, providers: array<int, array<string, mixed>>}
+	 */
+	private static function ai_choices(): array {
+		$out = array(
+			'default'   => array(
+				'provider' => '',
+				'model'    => '',
+			),
+			'providers' => array(),
+		);
+		$ai  = Registry::instance()->get( 'ai' );
+		if ( ! $ai instanceof \ZinnDigital\Tranzly\Engines\Ai || ! \ZinnDigital\Tranzly\Engines\Ai::available() ) {
+			return $out;
+		}
+		$store          = '\\ZinnDigital\\Tranzly\\AiCore\\Store';
+		$registry       = '\\ZinnDigital\\Tranzly\\AiCore\\Registry';
+		$models         = '\\ZinnDigital\\Tranzly\\AiCore\\Models';
+		$out['default'] = (array) $store::default_for( 'translate' );
+		foreach ( array_keys( (array) $registry::all() ) as $provider ) {
+			$provider = (string) $provider;
+			if ( ! $store::configured( $provider ) ) {
+				continue;
+			}
+			$row                = (array) $registry::get( $provider );
+			$out['providers'][] = array(
+				'id'     => $provider,
+				'label'  => (string) ( $row['label'] ?? $provider ),
+				'models' => array_values(
+					array_map(
+						static fn( $m ) => array(
+							'id'    => (string) ( $m['id'] ?? '' ),
+							'label' => (string) ( $m['label'] ?? '' ),
+						),
+						(array) $models::choices( $provider )
+					)
+				),
+				'spent'  => Engine_Settings::spent( 'ai:' . $provider ),
+				'cap'    => Engine_Settings::cap( 'ai:' . $provider ),
+			);
+		}
+
+		return $out;
 	}
 
 	/**
@@ -378,7 +427,7 @@ final class Rest_Jobs {
 	 * @return \WP_REST_Response|\WP_Error
 	 */
 	public static function put_engine_settings( \WP_REST_Request $request ) {
-		$input = array_intersect_key( (array) $request->get_json_params(), array_flip( array( 'default', 'per_lang', 'fallback', 'caps' ) ) );
+		$input = array_intersect_key( (array) $request->get_json_params(), array_flip( array( 'default', 'per_lang', 'fallback', 'caps', 'models' ) ) );
 		$saved = Engine_Settings::save( $input );
 
 		return is_wp_error( $saved ) ? $saved : self::get_engine_settings();

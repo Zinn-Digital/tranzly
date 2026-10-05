@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:19+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings__premium_only.js",
     "domain": "messages",
@@ -10,11 +10,32 @@
                 "lang": "tr_TR",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "%1$s: %2$s": [
+                "%1$s: %2$s"
+            ],
+            "The AI settings' choice (%1$s %2$s)": [
+                "Yapay zeka ayarlar\u0131n\u0131n se\u00e7imi (%1$s %2$s)"
+            ],
+            "The AI settings' choice": [
+                "YZ ayarlar\u0131n\u0131n se\u00e7imi"
+            ],
+            "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages.": [
+                "Her dili \u00e7evirecek yapay zek\u00e2 modelini se\u00e7in; \u00f6rne\u011fin Japonca i\u00e7in bir model, Almanca i\u00e7in ba\u015fka bir model. Kendine ait bir se\u00e7imi olmayan diller, di\u011fer t\u00fcm diller i\u00e7in belirlenen modeli kullan\u0131r."
+            ],
+            "AI model for all other languages": [
+                "Di\u011fer t\u00fcm diller i\u00e7in yapay zek\u00e2 modeli"
+            ],
             "Engine for %s": [
                 "%s i\u00e7in motor"
             ],
             "The default engine": [
                 "Varsay\u0131lan motor"
+            ],
+            "AI model for %s": [
+                "%s i\u00e7in Yapay Zeka modeli"
+            ],
+            "The model for all other languages": [
+                "Di\u011fer t\u00fcm diller i\u00e7in model"
             ],
             "If an engine fails or reaches a limit, try these next, in this order": [
                 "Bir motor ba\u015far\u0131s\u0131z olursa veya s\u0131n\u0131ra ula\u015f\u0131rsa, bu s\u0131rayla bunlar\u0131 deneyin"
@@ -28,8 +49,11 @@
             "%1$s (spent this month: $%2$s)": [
                 "%1$s (bu ay harcanan: $%2$s)"
             ],
-            "Save caps": [
-                "Yetenekleri kaydet"
+            "AI provider %1$s, every language it translates (spent this month: $%2$s)": [
+                "Yapay zeka sa\u011flay\u0131c\u0131s\u0131 %1$s, \u00e7evirdi\u011fi her dil (bu ay harcanan: $%2$s)"
+            ],
+            "Save spending caps": [
+                "Harcama limitlerini kaydet"
             ],
             "Preferred translations (one per line: term = translation)": [
                 "Tercih edilen \u00e7eviriler (her sat\u0131ra bir tane: terim = \u00e7eviri)"

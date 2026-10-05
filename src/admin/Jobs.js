@@ -364,6 +364,26 @@ export default function Jobs() {
 								) }
 							</p>
 							<ProgressBar value={ percentDone( job ) } />
+							{ ( job.languages || [] ).length > 0 && (
+								<ul className="tranzly-jobs__used">
+									{ job.languages.map( ( used ) => (
+										<li
+											key={ `${ used.lang }|${ used.engine }|${ used.model }` }
+										>
+											{ sprintf(
+												/* translators: 1: a language code, 2: number translated, 3: the AI provider/model, or the engine, that translated them. */
+												__(
+													'%1$s: %2$d translated by %3$s',
+													'tranzly'
+												),
+												used.lang,
+												used.done,
+												used.model || used.engine
+											) }
+										</li>
+									) ) }
+								</ul>
+							) }
 							{ 'running' === job.status && (
 								<Button
 									variant="link"

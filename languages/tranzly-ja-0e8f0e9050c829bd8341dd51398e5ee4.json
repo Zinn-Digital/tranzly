@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:18+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings__premium_only.js",
     "domain": "messages",
@@ -10,11 +10,32 @@
                 "lang": "ja",
                 "plural-forms": "nplurals=1; plural=0;"
             },
+            "%1$s: %2$s": [
+                "%1$s: %2$s"
+            ],
+            "The AI settings' choice (%1$s %2$s)": [
+                "AI \u8a2d\u5b9a\u306e\u9078\u629e (%1$s %2$s)"
+            ],
+            "The AI settings' choice": [
+                "AI \u8a2d\u5b9a\u306e\u9078\u629e"
+            ],
+            "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages.": [
+                "\u8a00\u8a9e\u3054\u3068\u306b\u7ffb\u8a33\u3092\u884c\u3046 AI \u30e2\u30c7\u30eb\u3092\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044 (\u4f8b: \u65e5\u672c\u8a9e\u306b\u306f1\u3064\u306e\u30e2\u30c7\u30eb\u3001\u30c9\u30a4\u30c4\u8a9e\u306b\u306f\u5225\u306e\u30e2\u30c7\u30eb)\u3002\u500b\u5225\u306e\u9078\u629e\u304c\u306a\u3044\u8a00\u8a9e\u306b\u306f\u3001\u4ed6\u306e\u3059\u3079\u3066\u306e\u8a00\u8a9e\u5411\u3051\u306e\u30e2\u30c7\u30eb\u304c\u4f7f\u7528\u3055\u308c\u307e\u3059\u3002"
+            ],
+            "AI model for all other languages": [
+                "\u305d\u306e\u4ed6\u306e\u3059\u3079\u3066\u306e\u8a00\u8a9e\u7528\u306e AI \u30e2\u30c7\u30eb"
+            ],
             "Engine for %s": [
                 "%s \u7528\u30a8\u30f3\u30b8\u30f3"
             ],
             "The default engine": [
                 "\u30c7\u30d5\u30a9\u30eb\u30c8\u30a8\u30f3\u30b8\u30f3"
+            ],
+            "AI model for %s": [
+                "%s\u306e AI \u30e2\u30c7\u30eb"
+            ],
+            "The model for all other languages": [
+                "\u4ed6\u306e\u3059\u3079\u3066\u306e\u8a00\u8a9e\u306e\u30e2\u30c7\u30eb"
             ],
             "If an engine fails or reaches a limit, try these next, in this order": [
                 "\u30a8\u30f3\u30b8\u30f3\u3067\u969c\u5bb3\u304c\u767a\u751f\u3057\u305f\u304b\u5236\u9650\u306b\u9054\u3057\u305f\u5834\u5408\u306f\u3001\u6b21\u306e\u9806\u5e8f\u3067\u3053\u308c\u3089\u3092\u8a66\u3057\u3066\u304f\u3060\u3055\u3044"
@@ -28,8 +49,11 @@
             "%1$s (spent this month: $%2$s)": [
                 "%1$s (\u4eca\u6708\u306e\u5229\u7528\u984d: $%2$s)"
             ],
-            "Save caps": [
-                "\u6a29\u9650\u3092\u4fdd\u5b58"
+            "AI provider %1$s, every language it translates (spent this month: $%2$s)": [
+                "AI \u30d7\u30ed\u30d0\u30a4\u30c0\u30fc %1$s\u3001\u7ffb\u8a33\u5bfe\u5fdc\u306e\u5168\u8a00\u8a9e (\u4eca\u6708\u306e\u652f\u51fa: $%2$s)"
+            ],
+            "Save spending caps": [
+                "\u5229\u7528\u9650\u5ea6\u984d\u3092\u4fdd\u5b58"
             ],
             "Preferred translations (one per line: term = translation)": [
                 "\u512a\u5148\u3055\u308c\u308b\u7ffb\u8a33 (1\u884c\u306b1\u3064: \u7528\u8a9e = \u7ffb\u8a33)"

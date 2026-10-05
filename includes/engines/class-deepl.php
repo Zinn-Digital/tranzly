@@ -29,14 +29,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  *   with Pro a glossary created in the owner's DeepL account per language pair;
  * - up to 50 texts per request, far fewer requests than the legacy one-request-per-chunk loop.
  *
- * Price: DeepL publishes $25 per million characters beyond a plan's allowance (checked on
- * deepl.com, 2026-09-25; it is a published price, not one measured on an account — §2.45). Free
- * keys estimate at $0. The `tranzly_deepl_price_per_million` filter overrides it.
+ * Price: DeepL's paid API plan is now "Growth": US$27.50 per million characters beyond the 1
+ * million it includes (deepl.com/en/pro#api with the US selected, checked 2026-10-04; in Germany
+ * the same plan is €22 per million — packageId `api-growth`, `usageBasedPrice` 2200 cents per
+ * 1,000,000, read from the page's own data the same day). The "API Pro" $25 it replaced is no
+ * longer sold. A published price, not one measured on an account (§2.45). Free keys estimate at
+ * $0. The `tranzly_deepl_price_per_million` filter overrides it.
  */
 final class DeepL implements Engine {
 
 	/** The secret name. */
 	public const SECRET = 'deepl';
+
+	/** US dollars per million characters: DeepL's Growth plan beyond its included million (see above). */
+	public const PRICE_PER_MILLION = 27.5;
 
 	/** Tag wrapped around do-not-translate words, listed in `ignore_tags`. */
 	private const KEEP = 'zdkeep';
@@ -152,9 +158,9 @@ final class DeepL implements Engine {
 		/**
 		 * Filters DeepL's price per million characters in US dollars.
 		 *
-		 * @param float $price 25.0 (published; Free keys estimate at 0).
+		 * @param float $price 27.5 (DeepL Growth, published; Free keys estimate at 0).
 		 */
-		$price = str_ends_with( $key, ':fx' ) ? 0.0 : (float) apply_filters( 'tranzly_deepl_price_per_million', 25.0 );
+		$price = str_ends_with( $key, ':fx' ) ? 0.0 : (float) apply_filters( 'tranzly_deepl_price_per_million', self::PRICE_PER_MILLION );
 
 		return array(
 			'characters' => $characters,

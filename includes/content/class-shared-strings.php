@@ -374,26 +374,24 @@ final class Shared_Strings {
 		foreach ( $texts as $key => $source ) {
 			$by_format[ self::format( $source ) ][ (string) $key ] = self::text( $source );
 		}
-		$options = Translator::options_for( $lang, $chain[0] );
-		$last    = null;
-		foreach ( $chain as $engine ) {
-			$out = array();
-			foreach ( $by_format as $format => $batch ) {
-				$answer = $engine->translate( $batch, Languages::default_code(), $lang, array( 'format' => $format ) + $options );
-				if ( is_wp_error( $answer ) ) {
-					$last = $answer;
-					continue 2;
-				}
-				foreach ( $batch as $key => $unused ) {
-					if ( isset( $answer[ $key ] ) && is_string( $answer[ $key ] ) && '' !== $answer[ $key ] ) {
-						$out[ $key ] = 'html' === $format ? wp_kses_post( $answer[ $key ] ) : sanitize_text_field( $answer[ $key ] );
-					}
+		// ⛔ Through the ONE chain path: until 3.25.0 the shared strings called each engine
+		// directly, so they bypassed the monthly spending caps and recorded no spend, and they now
+		// also get the language's style rules like every other translation.
+		$ran = Translator::through_chain( $chain, $by_format, Languages::default_code(), $lang, Translator::options_for( $lang, $chain[0] ) );
+		if ( is_wp_error( $ran ) ) {
+			return $ran;
+		}
+		$out = array();
+		foreach ( $by_format as $format => $batch ) {
+			foreach ( $batch as $key => $unused ) {
+				$answer = $ran['texts'][ $key ] ?? '';
+				if ( is_string( $answer ) && '' !== $answer ) {
+					$out[ $key ] = 'html' === $format ? wp_kses_post( $answer ) : sanitize_text_field( $answer );
 				}
 			}
-			return $out;
 		}
 
-		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this text.', 'tranzly' ), array( 'status' => 400 ) );
+		return $out;
 	}
 
 	/**

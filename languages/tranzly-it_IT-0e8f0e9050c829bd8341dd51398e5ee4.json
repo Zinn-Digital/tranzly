@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:18+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings__premium_only.js",
     "domain": "messages",
@@ -10,11 +10,32 @@
                 "lang": "it_IT",
                 "plural-forms": "nplurals=3; plural=(((((((0 == 0)) && ((((n == 0)) == 0))) && (((n % 1000000) == 0))) && ((0 == 0))) || ((((0 >= 0 && 0 <= 5)) == 0))) ? 1 : (((n == 1)) && ((0 == 0))) ? 0 : 2);"
             },
+            "%1$s: %2$s": [
+                "%1$s: %2$s"
+            ],
+            "The AI settings' choice (%1$s %2$s)": [
+                "La scelta delle impostazioni dell'IA (%1$s %2$s)"
+            ],
+            "The AI settings' choice": [
+                "La scelta delle impostazioni AI"
+            ],
+            "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages.": [
+                "Scegli il modello di IA che traduce ciascuna lingua, ad esempio un modello per il giapponese e un altro per il tedesco. Le lingue senza una scelta dedicata usano il modello valido per tutte le altre lingue."
+            ],
+            "AI model for all other languages": [
+                "Modello di IA per tutte le altre lingue"
+            ],
             "Engine for %s": [
                 "Motore per %s"
             ],
             "The default engine": [
                 "Il motore predefinito"
+            ],
+            "AI model for %s": [
+                "Modello IA per %s"
+            ],
+            "The model for all other languages": [
+                "Il modello per tutte le altre lingue"
             ],
             "If an engine fails or reaches a limit, try these next, in this order": [
                 "Se un motore non funziona o raggiunge un limite, prova i seguenti in questo ordine"
@@ -28,8 +49,11 @@
             "%1$s (spent this month: $%2$s)": [
                 "%1$s (spesi questo mese: $%2$s)"
             ],
-            "Save caps": [
-                "Salva permessi"
+            "AI provider %1$s, every language it translates (spent this month: $%2$s)": [
+                "Provider di IA %1$s, ogni lingua che traduce (spesa di questo mese: $%2$s)"
+            ],
+            "Save spending caps": [
+                "Salva limiti di spesa"
             ],
             "Preferred translations (one per line: term = translation)": [
                 "Traduzioni preferite (una per riga: termine = traduzione)"

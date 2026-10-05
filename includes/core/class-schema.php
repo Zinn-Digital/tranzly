@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Schema {
 
 	/** Bump when a table definition below changes; dbDelta() applies the difference. */
-	public const VERSION = '2';
+	public const VERSION = '3';
 
 	/** Option holding the installed schema version. */
 	public const OPTION = 'tranzly_schema_version';
@@ -176,6 +176,7 @@ final class Schema {
   claim char(32) NOT NULL DEFAULT '',
   lease_until datetime DEFAULT NULL,
   engine_used varchar(40) NOT NULL DEFAULT '',
+  model_used varchar(191) NOT NULL DEFAULT '',
   result_id bigint(20) unsigned NOT NULL DEFAULT 0,
   error_code varchar(60) NOT NULL DEFAULT '',
   error_message text NOT NULL,
@@ -201,6 +202,8 @@ final class Schema {
 		);
 
 		update_option( self::OPTION, self::VERSION, true );
+		// Languages added before 3.25.0 never had WordPress's own words installed (W5, 2026-10-04).
+		Language_Packs::backfill();
 		self::$live[ get_current_blog_id() ] = true;
 		self::warm_sdk_options();
 	}

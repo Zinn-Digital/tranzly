@@ -22,7 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * - `per_lang`: language => engine (Pro, tz-e4: DeepL for German, an AI model for Japanese);
  * - `fallback`: engines tried in order when the first one fails or hits a limit (Pro, tz-e5);
  * - `caps`: engine => monthly budget in US dollars (Pro, tz-r12). Spend is counted from each
- *   engine's own estimate at the moment of the call, per calendar month (UTC).
+ *   engine's own estimate at the moment of the call, per calendar month (UTC). With a model per
+ *   language an AI provider has its own budget too: `ai:<provider>` (e.g. `ai:anthropic`).
+ * - `models`: language => AI provider + model (Pro, 2026-10-04: Gemini for Japanese, Claude for
+ *   German), and `*` => the provider + model for every other language. Empty: the AI settings'
+ *   choice for the `translate` task.
  */
 final class Engine_Settings {
 
@@ -35,7 +39,7 @@ final class Engine_Settings {
 	/**
 	 * The settings over their defaults.
 	 *
-	 * @return array{default: string, per_lang: array<string, string>, fallback: array<int, string>, caps: array<string, float>}
+	 * @return array{default: string, per_lang: array<string, string>, fallback: array<int, string>, caps: array<string, float>, models: array<string, array{provider: string, model: string}>}
 	 */
 	public static function get(): array {
 		$stored = get_option( self::OPTION, array() );
@@ -46,7 +50,28 @@ final class Engine_Settings {
 			'per_lang' => array_map( 'strval', is_array( $stored['per_lang'] ?? null ) ? $stored['per_lang'] : array() ),
 			'fallback' => array_values( array_map( 'strval', is_array( $stored['fallback'] ?? null ) ? $stored['fallback'] : array() ) ),
 			'caps'     => array_map( 'floatval', is_array( $stored['caps'] ?? null ) ? $stored['caps'] : array() ),
+			'models'   => self::clean_models( $stored['models'] ?? array() ),
 		);
+	}
+
+	/**
+	 * Stored models, each `{provider, model}` with a provider.
+	 *
+	 * @param mixed $models Stored value.
+	 * @return array<string, array{provider: string, model: string}>
+	 */
+	private static function clean_models( $models ): array {
+		$out = array();
+		foreach ( is_array( $models ) ? $models : array() as $lang => $row ) {
+			if ( is_array( $row ) && is_string( $row['provider'] ?? null ) && '' !== $row['provider'] ) {
+				$out[ (string) $lang ] = array(
+					'provider' => (string) $row['provider'],
+					'model'    => is_string( $row['model'] ?? null ) ? (string) $row['model'] : '',
+				);
+			}
+		}
+
+		return $out;
 	}
 
 	/**
@@ -67,12 +92,12 @@ final class Engine_Settings {
 			$current['default'] = (string) $input['default'];
 		}
 		$pro_keys = array_filter(
-			array( 'per_lang', 'fallback', 'caps' ),
+			array( 'per_lang', 'fallback', 'caps', 'models' ),
 			static fn( string $k ): bool => array_key_exists( $k, $input )
 		);
 		if ( array() !== $pro_keys ) {
 			/**
-			 * Saves the per-language engines, the fallback list and the monthly caps. Only the
+			 * Saves the per-language engines and AI models, the fallback list and the monthly caps. Only the
 			 * premium layer answers (WordPress.org guideline 5: no Pro behaviour in the free plugin).
 			 *
 			 * @param array<string, mixed>|\WP_Error|null $saved   The settings with those keys applied,
@@ -89,7 +114,7 @@ final class Engine_Settings {
 			} else {
 				foreach ( $pro_keys as $pro_key ) {
 					if ( array() !== (array) $input[ $pro_key ] ) {
-						return self::refuse( __( 'Different engines per language, automatic fallback and spending caps are Tranzly Pro features.', 'tranzly' ), 403 );
+						return self::refuse( __( 'Different engines and AI models per language, automatic fallback and spending caps are Tranzly Pro features.', 'tranzly' ), 403 );
 					}
 				}
 			}
@@ -143,6 +168,43 @@ final class Engine_Settings {
 		$cap = apply_filters( 'tranzly_engine_cap', null, $engine );
 
 		return is_numeric( $cap ) ? (float) $cap : null;
+	}
+
+	/**
+	 * The budgets a call into `$lang` is charged to: the engine's own, and for an AI model the
+	 * provider's (`ai:anthropic`), so a cap on one provider holds whichever languages use it.
+	 *
+	 * @param \ZinnDigital\Tranzly\Engines\Engine $engine The engine.
+	 * @param string                              $lang   Target language.
+	 * @return array<int, string>
+	 */
+	public static function budgets( \ZinnDigital\Tranzly\Engines\Engine $engine, string $lang ): array {
+		$out = array( $engine->id() );
+		if ( method_exists( $engine, 'choice_for' ) ) {
+			$provider = (string) ( $engine->choice_for( $lang )['provider'] ?? '' );
+			if ( '' !== $provider ) {
+				$out[] = $engine->id() . ':' . $provider;
+			}
+		}
+
+		return $out;
+	}
+
+	/**
+	 * The provider and model an engine uses for a language (`gemini/gemini-3.8-flash`), or '' for
+	 * an engine that has no model choice.
+	 *
+	 * @param \ZinnDigital\Tranzly\Engines\Engine $engine The engine.
+	 * @param string                              $lang   Target language.
+	 * @return string
+	 */
+	public static function model_of( \ZinnDigital\Tranzly\Engines\Engine $engine, string $lang ): string {
+		if ( ! method_exists( $engine, 'choice_for' ) ) {
+			return '';
+		}
+		$choice = (array) $engine->choice_for( $lang );
+
+		return '' === (string) ( $choice['provider'] ?? '' ) ? '' : trim( (string) $choice['provider'] . '/' . (string) ( $choice['model'] ?? '' ), '/' );
 	}
 
 	/**

@@ -425,9 +425,45 @@ final class Router {
 		if ( is_404() ) {
 			return self::home_for( $code );
 		}
+		$archive = self::archive_page_url( $code );
+		if ( null !== $archive ) {
+			return $archive;
+		}
 		$uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '/'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- becomes a URL and is escaped where printed.
 
 		return self::language_url( self::request_origin() . $uri, $code );
+	}
+
+	/**
+	 * A post type archive that a PAGE stands for (WooCommerce's shop: the archive's queried object
+	 * is the shop page), shown in a language: that language's translation of the page, which may
+	 * have its own slug (`/fr/boutique/`), else the default page's address in that language. Null
+	 * for any other request. ⛔ Live on demo.tranzly.io (2026-10-04): the French alternate of
+	 * /shop/ was /fr/shop/ while the menu and canonical said /fr/boutique/.
+	 *
+	 * @param string $lang A language code.
+	 * @return string|null
+	 */
+	public static function archive_page_url( string $lang ): ?string {
+		if ( ! did_action( 'wp' ) || ! is_post_type_archive() ) {
+			return null;
+		}
+		$page = get_queried_object();
+		if ( ! $page instanceof \WP_Post || 'page' !== $page->post_type ) {
+			return null;
+		}
+		$code   = Languages::resolve( $lang ) ?? Languages::default_code();
+		$target = (int) $page->ID;
+		if ( self::post_language( $target ) !== $code ) {
+			$target = (int) ( Languages::translation( (int) $page->ID, $code ) ?? 0 );
+		}
+		if ( $target > 0 && self::is_public_post( $target ) ) {
+			return (string) get_permalink( $target );
+		}
+		$group    = Relations::translations( 'post', (int) $page->ID );
+		$original = (int) ( $group[ Languages::default_code() ] ?? $page->ID );
+
+		return self::language_url( (string) get_permalink( $original ), $code );
 	}
 
 	/**

@@ -62,3 +62,23 @@
 .zd-mcp-panel__tools {
 	columns: 2 16em;
 }
+
+// Translation status: the chosen language reads as the current one
+// (bold, no underline), never as a pressed button.
+.tranzly-status__lang.is-current {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+// Settings → Languages: WordPress's own words for each language.
+.tranzly-admin__pack {
+	display: block;
+	margin-block-start: 2px;
+	color: var(--wp-components-color-gray-700, #50575e);
+	font-size: 12px;
+}
+
+// Engines → Your keys: "Save key" and "Check my DeepL usage" side by side.
+.tranzly-engines__key .components-button + .components-button {
+	margin-inline-start: 12px;
+}

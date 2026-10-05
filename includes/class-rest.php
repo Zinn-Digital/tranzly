@@ -241,6 +241,8 @@ final class Rest {
 		return array(
 			'prefix'    => $settings['prefix'],
 			'languages' => $settings['languages'],
+			// WordPress's, the theme's and the plugins' own words per language (installed in the background).
+			'packs'     => \ZinnDigital\Tranzly\Core\Language_Packs::status(),
 			'beta'      => Licensing::beta(),
 			// The switch as saved, and what is live on THIS request (the kit booted before it).
 			'mcp'       => array( 'saved' => $settings['mcp'] ) + \ZinnDigital\Tranzly\McpKit\Server::describe(),

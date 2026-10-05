@@ -143,7 +143,7 @@ final class Content {
 		}
 		$source      = get_post( $source_id );
 		$source_lang = Relations::language_of( 'post', $source_id ) ?? Languages::default_code();
-		$existing    = Relations::translations( 'post', $source_id )[ $code ] ?? null;
+		$existing    = Relations::live_post_translation( $source_id, $code );
 		if ( $source_lang === $code || null !== $existing ) {
 			return new \WP_Error(
 				'tranzly_language_taken',
@@ -214,8 +214,56 @@ final class Content {
 		 * @param string $code      Its language.
 		 */
 		do_action( 'tranzly_post_translation_created', (int) $new_id, $source_id, $code );
+		self::adopt_children( $source_id, (int) $new_id, $code );
 
 		return (int) $new_id;
+	}
+
+	/**
+	 * The translations (in `$code`) of `$source_id`'s children move under its new translation.
+	 *
+	 * ⛔ Live on tranzly.io (W4, 2026-10-04): a child page translated BEFORE its parent stays under
+	 * the original parent (there is no translated one yet), and nothing moved it when the parent's
+	 * translation appeared — 314 pages had addresses like /ar/migrate/<arabic slug>/. WordPress keeps
+	 * a moved page's old address redirecting (`_wp_old_slug` covers the slug; the parent part is
+	 * answered by the page's new permalink).
+	 *
+	 * @param int    $source_id The original parent.
+	 * @param int    $new_id    Its new translation.
+	 * @param string $code      The language.
+	 * @return int Children moved.
+	 */
+	public static function adopt_children( int $source_id, int $new_id, string $code ): int {
+		$children = get_posts(
+			array(
+				'post_type'        => 'any',
+				'post_status'      => 'any',
+				'post_parent'      => $source_id,
+				'fields'           => 'ids',
+				'posts_per_page'   => -1,
+				'suppress_filters' => true,
+				'no_found_rows'    => true,
+			)
+		);
+		$moved    = 0;
+		foreach ( array_map( 'intval', (array) $children ) as $child ) {
+			$translation = Relations::live_post_translation( $child, $code );
+			if ( null === $translation || $translation === $new_id || (int) wp_get_post_parent_id( $translation ) === $new_id ) {
+				continue;
+			}
+			$done = wp_update_post(
+				array(
+					'ID'          => $translation,
+					'post_parent' => $new_id,
+				),
+				true
+			);
+			if ( ! is_wp_error( $done ) ) {
+				++$moved;
+			}
+		}
+
+		return $moved;
 	}
 
 	/**

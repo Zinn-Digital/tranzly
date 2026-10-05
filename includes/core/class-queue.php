@@ -269,7 +269,12 @@ final class Queue {
 				break;
 			}
 			if ( $batching ) {
-				self::prefetch( $items, (string) $row['engine'] );
+				// Batching only saves calls: if it crashes, each item still runs (and fails) alone.
+				try {
+					self::prefetch( $items, (string) $row['engine'] );
+				} catch ( \Throwable $crash ) {
+					unset( $crash );
+				}
 			}
 			foreach ( $items as $item ) {
 				// ⛔ A claim covers several items but they are worked one at a time, so the lease of
@@ -317,6 +322,17 @@ final class Queue {
 			$counts[ (string) $count['status'] ] = (int) $count['n'];
 		}
 
+		// The job log per language: which engine and which AI model translated each language's items.
+		$languages = array();
+		foreach ( (array) $wpdb->get_results( $wpdb->prepare( "SELECT lang, engine_used, model_used, COUNT(*) AS n FROM %i WHERE job_id = %d AND status = 'done' GROUP BY lang, engine_used, model_used ORDER BY lang", Schema::tables()['items'], $job_id ), ARRAY_A ) as $used ) {
+			$languages[] = array(
+				'lang'   => (string) $used['lang'],
+				'engine' => (string) $used['engine_used'],
+				'model'  => (string) $used['model_used'],
+				'done'   => (int) $used['n'],
+			);
+		}
+
 		return array(
 			'id'         => $job_id,
 			'status'     => (string) $row['status'],
@@ -326,6 +342,7 @@ final class Queue {
 			'finished'   => $row['finished_gmt'],
 			'total'      => array_sum( $counts ),
 			'counts'     => $counts,
+			'languages'  => $languages,
 		);
 	}
 
@@ -376,6 +393,17 @@ final class Queue {
 		if ( ! is_array( $item ) ) {
 			return new \WP_Error( 'tranzly_no_item', __( 'That item is not part of a translation job.', 'tranzly' ), array( 'status' => 404 ) );
 		}
+		// ⛔ Only an item that did not get translated is retried (W4, 2026-10-04: `jobs retry 12`
+		// meant job 12, retried ITEM 12 — already done — and said "Queued again.").
+		if ( in_array( (string) $item['status'], array( 'done', 'queued', 'running' ), true ) ) {
+			return new \WP_Error(
+				'tranzly_not_failed',
+				'done' === (string) $item['status']
+					? __( 'That item is already translated, so there is nothing to retry. To retry every failed item of a job, run wp tranzly jobs retry-failed with the job ID, or retry each one from the job\'s list of what failed.', 'tranzly' )
+					: __( 'That item is already waiting to be translated.', 'tranzly' ),
+				array( 'status' => 409 )
+			);
+		}
 		if ( '' !== $engine ) {
 			$check = Translator::engine( $engine );
 			if ( is_wp_error( $check ) ) {
@@ -407,6 +435,29 @@ final class Queue {
 		self::start_workers( (int) $item['job_id'] );
 
 		return true;
+	}
+
+	/**
+	 * Retry every failed item of a job (optionally with another engine) and set the job running.
+	 *
+	 * @param int    $job_id Job ID.
+	 * @param string $engine An engine id, or empty for the item's own.
+	 * @return int|\WP_Error Items queued again.
+	 */
+	public static function retry_failed( int $job_id, string $engine = '' ) {
+		if ( null === self::job( $job_id ) ) {
+			return new \WP_Error( 'tranzly_no_job', __( 'There is no translation job with that ID.', 'tranzly' ), array( 'status' => 404 ) );
+		}
+		$count = 0;
+		foreach ( self::failures( $job_id ) as $row ) {
+			$done = self::retry( (int) $row['item'], $engine );
+			if ( is_wp_error( $done ) ) {
+				return $done;
+			}
+			++$count;
+		}
+
+		return $count;
 	}
 
 	/**
@@ -593,16 +644,29 @@ final class Queue {
 	 * @return void
 	 */
 	private static function process( array $item, string $engine, array $options ): void {
-		$use    = '' !== (string) $item['engine'] ? (string) $item['engine'] : $engine;
-		$result = Translator::translate_post(
-			(int) $item['object_id'],
-			(string) $item['lang'],
-			$use,
-			array(
-				'force'  => ! empty( $options['force'] ),
-				'status' => (string) ( $options['status'] ?? '' ),
-			)
-		);
+		$use = '' !== (string) $item['engine'] ? (string) $item['engine'] : $engine;
+		// ⛔ One item's crash must not end the run (W4, tranzly.io job 15, 2026-10-04: a PHP Error in
+		// one item killed `wp tranzly jobs run` mid-job). It becomes that item's failure instead.
+		try {
+			$result = Translator::translate_post(
+				(int) $item['object_id'],
+				(string) $item['lang'],
+				$use,
+				array(
+					'force'  => ! empty( $options['force'] ),
+					'status' => (string) ( $options['status'] ?? '' ),
+				)
+			);
+		} catch ( \Throwable $crash ) {
+			$result = new \WP_Error(
+				'tranzly_item_crashed',
+				__( 'Translating this item stopped with an error in WordPress or another plugin. The details are below; retry it once the cause is fixed.', 'tranzly' ),
+				array(
+					'detail'    => mb_substr( get_class( $crash ) . ': ' . $crash->getMessage() . ' (' . basename( $crash->getFile() ) . ':' . $crash->getLine() . ')', 0, 300 ),
+					'retryable' => false,
+				)
+			);
+		}
 
 		$update = array(
 			'claim'       => '',
@@ -613,6 +677,7 @@ final class Queue {
 				'status'      => 'done',
 				'result_id'   => (int) $result,
 				'engine_used' => (string) get_post_meta( (int) $result, Translator::ENGINE_META, true ),
+				'model_used'  => (string) get_post_meta( (int) $result, Translator::MODEL_META, true ),
 				'lease_until' => null,
 			);
 		} else {

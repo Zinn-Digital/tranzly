@@ -1,4 +1,4 @@
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import {
@@ -26,6 +26,48 @@ import { localeOptions } from './locale-options';
  * @param {Object} props.data Boot data printed by Admin::data().
  * @return {Element} The screen.
  */
+/**
+ * What happened to WordPress's own words (its, the theme's and the plugins' language packs) for a
+ * language, in a sentence.
+ *
+ * @param {Object|undefined} pack The language's status from the settings (`state`, `packs`).
+ * @return {Element|null} The line, or nothing.
+ */
+function packLine( pack ) {
+	if ( ! pack ) {
+		return null;
+	}
+	const lines = {
+		queued: __(
+			"Installing WordPress's own words for this language in the background.",
+			'tranzly'
+		),
+		installed: sprintf(
+			/* translators: %d: number of plugin and theme translations installed. */
+			__(
+				"WordPress's own words are installed for this language (and %d plugin and theme translations).",
+				'tranzly'
+			),
+			pack.packs || 0
+		),
+		partial: __(
+			'Plugin and theme words are installed; WordPress.org has no translation of WordPress itself for this language yet.',
+			'tranzly'
+		),
+		unavailable: __(
+			"WordPress.org has no translation of WordPress's own words for this language yet.",
+			'tranzly'
+		),
+		not_allowed: __(
+			"This site does not allow installing translations (file changes are switched off), so WordPress's own words stay in English for this language.",
+			'tranzly'
+		),
+	};
+	return lines[ pack.state ] ? (
+		<span className="tranzly-admin__pack">{ lines[ pack.state ] }</span>
+	) : null;
+}
+
 export default function App( { data } ) {
 	const [ settings, setSettings ] = useState( null );
 	const [ prefix, setPrefix ] = useState( '' );
@@ -134,6 +176,11 @@ export default function App( { data } ) {
 														'(default)',
 														'tranzly'
 													) }
+											{ packLine(
+												settings.packs?.[
+													language.code
+												]
+											) }
 										</FlexItem>
 										<FlexItem>
 											<Button

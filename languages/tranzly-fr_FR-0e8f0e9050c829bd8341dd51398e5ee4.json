@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2026-10-02T17:52:12+00:00",
+    "translation-revision-date": "2026-10-04T21:38:18+00:00",
     "generator": "WP-CLI\/2.12.0",
     "source": "build\/settings__premium_only.js",
     "domain": "messages",
@@ -10,11 +10,32 @@
                 "lang": "fr_FR",
                 "plural-forms": "nplurals=3; plural=(((((((0 == 0)) && ((((n == 0)) == 0))) && (((n % 1000000) == 0))) && ((0 == 0))) || ((((0 >= 0 && 0 <= 5)) == 0))) ? 1 : ((n == 0) || (n == 1)) ? 0 : 2);"
             },
+            "%1$s: %2$s": [
+                "%1$s\u00a0: %2$s"
+            ],
+            "The AI settings' choice (%1$s %2$s)": [
+                "Le choix des r\u00e9glages de l\u2019IA (%1$s %2$s)"
+            ],
+            "The AI settings' choice": [
+                "Le choix des r\u00e9glages d\u2019IA"
+            ],
+            "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages.": [
+                "Choisissez le mod\u00e8le d\u2019IA qui traduit chaque langue, par exemple un mod\u00e8le pour le japonais et un autre pour l\u2019allemand. Les langues sans choix sp\u00e9cifique utilisent le mod\u00e8le d\u00e9fini pour toutes les autres langues."
+            ],
+            "AI model for all other languages": [
+                "Mod\u00e8le d\u2019IA pour toutes les autres langues"
+            ],
             "Engine for %s": [
                 "Moteur pour %s"
             ],
             "The default engine": [
                 "Le moteur par d\u00e9faut"
+            ],
+            "AI model for %s": [
+                "Mod\u00e8le d\u2019IA pour %s"
+            ],
+            "The model for all other languages": [
+                "Le mod\u00e8le pour toutes les autres langues"
             ],
             "If an engine fails or reaches a limit, try these next, in this order": [
                 "Si un moteur \u00e9choue ou atteint une limite, essayez ensuite les options suivantes dans cet ordre"
@@ -28,8 +49,11 @@
             "%1$s (spent this month: $%2$s)": [
                 "%1$s (d\u00e9pens\u00e9 ce mois-ci\u00a0: $%2$s)"
             ],
-            "Save caps": [
-                "Enregistrer les capacit\u00e9s"
+            "AI provider %1$s, every language it translates (spent this month: $%2$s)": [
+                "Fournisseur d\u2019IA %1$s, chaque langue qu\u2019il traduit (d\u00e9pens\u00e9 ce mois-ci\u00a0: %2$s $)"
+            ],
+            "Save spending caps": [
+                "Enregistrer les plafonds de d\u00e9penses"
             ],
             "Preferred translations (one per line: term = translation)": [
                 "Traductions pr\u00e9f\u00e9r\u00e9es (une par ligne\u00a0: terme = traduction)"

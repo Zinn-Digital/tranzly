@@ -85,7 +85,7 @@ final class Rest_Map {
 				'route'       => '/tranzly/v1/engines/settings',
 				'name'        => 'tranzly/get-engine-settings',
 				'label'       => __( 'Read the engine settings', 'tranzly' ),
-				'description' => __( 'Returns the default and fallback engine, per-language engines, each engine\'s state and this month\'s spend.', 'tranzly' ),
+				'description' => __( 'Returns the default and fallback engine, per-language engines and AI models, each engine\'s state, the connected AI providers with their models, and this month\'s spend.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
 			),
@@ -94,7 +94,7 @@ final class Rest_Map {
 				'route'       => '/tranzly/v1/engines/settings',
 				'name'        => 'tranzly/update-engine-settings',
 				'label'       => __( 'Change the engine settings', 'tranzly' ),
-				'description' => __( 'Sets the default engine, a fallback engine and per-language engines (default, fallback, per_lang). Per-language engines and fallback are Pro.', 'tranzly' ),
+				'description' => __( 'Sets the default engine, a fallback engine, per-language engines and per-language AI models (default, fallback, per_lang, models, caps). Everything but the default engine is Pro.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
 				'args'        => array(
@@ -113,7 +113,11 @@ final class Rest_Map {
 					),
 					'caps'     => array(
 						'type'        => 'object',
-						'description' => __( 'Pro: engine ID => monthly spending cap in US dollars.', 'tranzly' ),
+						'description' => __( 'Pro: engine ID => monthly spending cap in US dollars. An AI provider has its own cap, keyed ai: and the provider id, for example ai:anthropic.', 'tranzly' ),
+					),
+					'models'   => array(
+						'type'        => 'object',
+						'description' => __( 'Pro: language code => {provider, model} used when the AI engine translates that language; the key * sets the model for every other language. Empty model: the provider\'s recommended one.', 'tranzly' ),
 					),
 				),
 			),

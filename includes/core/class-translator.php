@@ -37,6 +37,9 @@ final class Translator {
 	/** Post / term meta: the engine that made it. */
 	public const ENGINE_META = '_tranzly_engine';
 
+	/** The AI provider/model that wrote a translation (`gemini/gemini-3.8-flash`); empty for other engines. */
+	public const MODEL_META = '_tranzly_model';
+
 	/** Post / term meta: sha1 of the source segments it was made from (staleness, T7). */
 	public const SOURCE_HASH_META = '_tranzly_source_hash';
 
@@ -94,7 +97,7 @@ final class Translator {
 			return new \WP_Error( 'tranzly_same_language', __( 'This item is already written in that language.', 'tranzly' ), array( 'status' => 400 ) );
 		}
 
-		$target = Relations::translations( 'post', $source_id )[ $code ] ?? null;
+		$target = Relations::live_post_translation( $source_id, $code );
 		if ( null !== $target ) {
 			if ( ! current_user_can( 'edit_post', $target ) ) {
 				return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to change that translation.', 'tranzly' ), array( 'status' => 403 ) );
@@ -131,6 +134,7 @@ final class Translator {
 				'status'   => $status,
 				'mark'     => 'machine',
 				'engine'   => $engine->id(),
+				'model'    => (string) ( $ran['model'] ?? '' ),
 				'segments' => $segments,
 			)
 		);
@@ -174,7 +178,7 @@ final class Translator {
 			return new \WP_Error( 'tranzly_not_found', __( 'That item does not exist.', 'tranzly' ), array( 'status' => 404 ) );
 		}
 		$status = self::status_for( (string) ( $args['status'] ?? '' ), (string) $post->post_status );
-		$target = Relations::translations( 'post', $source_id )[ $code ] ?? null;
+		$target = Relations::live_post_translation( $source_id, $code );
 		if ( null !== $target && ! current_user_can( 'edit_post', $target ) ) {
 			return new \WP_Error( 'tranzly_forbidden', __( 'You are not allowed to change that translation.', 'tranzly' ), array( 'status' => 403 ) );
 		}
@@ -223,6 +227,7 @@ final class Translator {
 		$segments  = isset( $args['segments'] ) && is_array( $args['segments'] ) ? $args['segments'] : self::post_segments( $post );
 		update_post_meta( $target, self::STATUS_META, (string) ( $args['mark'] ?? 'machine' ) );
 		update_post_meta( $target, self::ENGINE_META, $engine_id );
+		update_post_meta( $target, self::MODEL_META, (string) ( $args['model'] ?? '' ) );
 		update_post_meta( $target, self::SOURCE_HASH_META, self::hash( $segments ) );
 
 		/**
@@ -319,6 +324,7 @@ final class Translator {
 		}
 		update_term_meta( $target, self::STATUS_META, 'machine' );
 		update_term_meta( $target, self::ENGINE_META, $engine->id() );
+		update_term_meta( $target, self::MODEL_META, (string) ( $ran['model'] ?? '' ) );
 
 		/**
 		 * Fires after an engine translated a term, with every translated segment (integrations write
@@ -441,7 +447,8 @@ final class Translator {
 		$chain = array();
 		foreach ( Engine_Settings::chain( $lang ) as $id ) {
 			$engine = Registry::instance()->get( $id );
-			if ( null !== $engine && $engine->is_configured() ) {
+			// An AI engine is usable for a language only when THAT language's provider is set up.
+			if ( null !== $engine && ( method_exists( $engine, 'is_configured_for' ) ? $engine->is_configured_for( $lang ) : $engine->is_configured() ) ) {
 				$chain[] = $engine;
 			}
 		}
@@ -457,7 +464,7 @@ final class Translator {
 	 * @param array<string, array{text: string, format: string}> $segments The segments.
 	 * @param string                                             $source   Source language.
 	 * @param string                                             $target   Target language.
-	 * @return array{texts: array<string, string>, engine: Engine}|\WP_Error
+	 * @return array{texts: array<string, string>, engine: Engine, model: string}|\WP_Error
 	 */
 	private static function run( array $chain, array $segments, string $source, string $target ) {
 		$options = self::options_for( $target, $chain[0] );
@@ -512,48 +519,42 @@ final class Translator {
 			}
 		}
 		$missing = array_filter( $missing );
+		// Memory may hold answers stored before the style rules existed: they are styled too
+		// (idempotent, so an answer already styled is unchanged).
+		$sources = array();
+		foreach ( $segments as $key => $segment ) {
+			$sources[ (string) $key ] = (string) $segment['text'];
+		}
+		$out = Style_Rules::apply_all( $out, $sources, $target );
 		if ( array() === $missing ) {
 			return array(
 				'texts'  => $out,
 				'engine' => $chain[0],
+				'model'  => '',
 			);
 		}
 
-		$last = null;
-		foreach ( $chain as $engine ) {
-			$cost = 0.0;
-			foreach ( $missing as $texts ) {
-				$cost += (float) ( $engine->estimate( $texts, $target )['cost_usd'] ?? 0 );
-			}
-			if ( Engine_Settings::over_cap( $engine->id(), $cost ) ) {
-				$last = Failure::make( Failure::CAP, $engine );
-				continue;
-			}
-			$answer = self::call( $engine, $missing, $source, $target, $options );
-			if ( is_wp_error( $answer ) ) {
-				$last = $answer;
-				continue;
-			}
-			Engine_Settings::add_spend( $engine->id(), $cost );
-			foreach ( $answer as $key => $translation ) {
+		$ran = self::through_chain( $chain, $missing, $source, $target, $options );
+		if ( ! is_wp_error( $ran ) ) {
+			foreach ( $ran['texts'] as $key => $translation ) {
 				$out[ $key ] = $translation;
 				if ( null !== $memory && isset( $reserved[ $key ] ) ) {
-					$memory->store( $reserved[ $key ], $translation, $engine->id() );
+					$memory->store( $reserved[ $key ], $translation, $ran['engine']->id() );
 					unset( $reserved[ $key ] );
 				}
 			}
 
 			return array(
 				'texts'  => $out,
-				'engine' => $engine,
+				'engine' => $ran['engine'],
+				'model'  => $ran['model'],
 			);
 		}
-
 		foreach ( null === $memory ? array() : array_unique( $reserved ) as $mine ) {
 			$memory->release( $mine );
 		}
 
-		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this item.', 'tranzly' ), array( 'status' => 400 ) );
+		return $ran;
 	}
 
 	/**
@@ -668,13 +669,22 @@ final class Translator {
 				if ( count( $group['targets'] ) < 2 ) {
 					continue;
 				}
-				$cost = 0.0;
+				// Each budget (the engine's, and with a model per language the AI provider's) is
+				// charged with the cost of the languages it pays for.
+				$cost = array();
 				foreach ( $group['texts'] as $texts ) {
 					foreach ( array_keys( $group['targets'] ) as $code ) {
-						$cost += (float) ( $engine->estimate( $texts, $code )['cost_usd'] ?? 0 );
+						$one = (float) ( $engine->estimate( $texts, (string) $code )['cost_usd'] ?? 0 );
+						foreach ( Engine_Settings::budgets( $engine, (string) $code ) as $budget ) {
+							$cost[ $budget ] = ( $cost[ $budget ] ?? 0.0 ) + $one;
+						}
 					}
 				}
-				if ( Engine_Settings::over_cap( $id, $cost ) ) {
+				$capped = false;
+				foreach ( $cost as $budget => $usd ) {
+					$capped = $capped || Engine_Settings::over_cap( (string) $budget, $usd );
+				}
+				if ( $capped ) {
 					continue; // Each language's own call meets the cap and reports it.
 				}
 				foreach ( $group['texts'] as $format => $texts ) {
@@ -688,6 +698,58 @@ final class Translator {
 		}
 
 		return $done;
+	}
+
+	/**
+	 * Translate through a chain: each engine in turn within its monthly cap(s), the next taking over
+	 * when one fails; the answers styled by the target language's team rules ({@see Style_Rules}),
+	 * whichever engine wrote them, and the spend recorded. The ONE path every engine call takes
+	 * (posts, terms, shared strings, comments), so caps, fallback and style rules hold everywhere.
+	 *
+	 * @param array<int, Engine>                   $chain   Engines, in order.
+	 * @param array<string, array<string, string>> $missing format => key => text.
+	 * @param string                               $source  Source language.
+	 * @param string                               $target  Target language.
+	 * @param array<string, mixed>                 $options Engine options (no format).
+	 * @return array{texts: array<string, string>, engine: Engine, model: string}|\WP_Error
+	 */
+	public static function through_chain( array $chain, array $missing, string $source, string $target, array $options ) {
+		$last = null;
+		foreach ( $chain as $engine ) {
+			$cost = 0.0;
+			foreach ( $missing as $texts ) {
+				$cost += (float) ( $engine->estimate( $texts, $target )['cost_usd'] ?? 0 );
+			}
+			$budgets = Engine_Settings::budgets( $engine, $target );
+			$capped  = false;
+			foreach ( $budgets as $budget ) {
+				$capped = $capped || Engine_Settings::over_cap( $budget, $cost );
+			}
+			if ( $capped ) {
+				$last = Failure::make( Failure::CAP, $engine );
+				continue;
+			}
+			$answer = self::call( $engine, $missing, $source, $target, $options );
+			if ( is_wp_error( $answer ) ) {
+				$last = $answer;
+				continue;
+			}
+			foreach ( $budgets as $budget ) {
+				Engine_Settings::add_spend( $budget, $cost );
+			}
+			$sources = array();
+			foreach ( $missing as $texts ) {
+				$sources += $texts;
+			}
+
+			return array(
+				'texts'  => Style_Rules::apply_all( $answer, $sources, $target ),
+				'engine' => $engine,
+				'model'  => Engine_Settings::model_of( $engine, $target ),
+			);
+		}
+
+		return $last instanceof \WP_Error ? $last : new \WP_Error( 'tranzly_no_engine', __( 'No translation engine could take this item.', 'tranzly' ), array( 'status' => 400 ) );
 	}
 
 	/**

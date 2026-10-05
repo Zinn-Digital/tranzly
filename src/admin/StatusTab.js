@@ -236,12 +236,24 @@ export default function StatusTab( { pro } ) {
 							{ others.map( ( row ) => (
 								<tr key={ row.code }>
 									<th scope="row">
+										{ /* ⛔ Not aria-pressed: it makes a link Button
+										`is-pressed`, painted as a solid dark block (live,
+										2026-10-04). The chosen language is the current item. */ }
 										<Button
 											variant="link"
+											className={
+												lang === row.code
+													? 'tranzly-status__lang is-current'
+													: 'tranzly-status__lang'
+											}
 											onClick={ () =>
 												setLang( row.code )
 											}
-											aria-pressed={ lang === row.code }
+											aria-current={
+												lang === row.code
+													? 'true'
+													: undefined
+											}
 										>
 											{ row.name }
 										</Button>

@@ -26,6 +26,8 @@ require_once __DIR__ . '/class-network.php';
 require_once __DIR__ . '/class-edition.php';
 require_once __DIR__ . '/class-engine-settings.php';
 require_once __DIR__ . '/class-glossary.php';
+require_once __DIR__ . '/class-style-rules.php';
+require_once __DIR__ . '/class-language-packs.php';
 require_once __DIR__ . '/interface-translation-memory.php';
 require_once __DIR__ . '/class-queue.php';
 require_once dirname( __DIR__ ) . '/engines/interface-engine.php';
@@ -64,6 +66,7 @@ final class Boot {
 		Legacy_Import::register();
 		Network::register();
 		Queue::register();
+		Language_Packs::register();
 		add_action( 'tranzly_register_engines', array( self::class, 'register_engines' ), 5 );
 		\ZinnDigital\Tranzly\Api\Language_Switch::register();
 		\ZinnDigital\Tranzly\Api\Rest_Content::register();
