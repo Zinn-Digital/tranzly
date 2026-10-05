@@ -18,11 +18,48 @@ export function changedSegments( segments, draft ) {
 			continue;
 		}
 		const next = draft[ segment.key ];
-		if ( 'string' === typeof next && next !== segment.target ) {
+		if ( 'string' === typeof next && next !== editable( segment ) ) {
 			out[ segment.key ] = next;
 		}
 	}
 	return out;
+}
+
+/**
+ * What a person edits for a piece: its words when the piece is shown as text (`view: text`, the
+ * markup kept by the server), else the piece itself.
+ *
+ * @param {Object} segment A row from GET posts/{id}/segments.
+ * @return {string} The editable value.
+ */
+export function editable( segment ) {
+	if ( 'text' === segment.view && 'string' === typeof segment.target_text ) {
+		return segment.target_text;
+	}
+	return segment.target ?? '';
+}
+
+/**
+ * The PUT body: pieces shown as text go in `texts` (the server puts them back inside their markup),
+ * the rest in `segments`.
+ *
+ * @param {Array<Object>}         segments Rows.
+ * @param {Object<string,string>} changes  Key => new value, from changedSegments().
+ * @return {{segments: Object<string,string>, texts: Object<string,string>}} The body.
+ */
+export function saveBody( segments, changes ) {
+	const body = { segments: {}, texts: {} };
+	for ( const segment of segments ) {
+		if ( ! ( segment.key in changes ) ) {
+			continue;
+		}
+		const bucket =
+			'text' === segment.view && 'string' === typeof segment.target_text
+				? 'texts'
+				: 'segments';
+		body[ bucket ][ segment.key ] = changes[ segment.key ];
+	}
+	return body;
 }
 
 /**

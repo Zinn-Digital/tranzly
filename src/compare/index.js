@@ -8,7 +8,7 @@ import {
 	TextareaControl,
 } from '@wordpress/components';
 
-import { changedSegments, stateText } from './model';
+import { changedSegments, editable, saveBody, stateText } from './model';
 import './compare.scss';
 
 /*
@@ -27,7 +27,7 @@ function Compare( { postId } ) {
 		setData( result );
 		setDraft(
 			Object.fromEntries(
-				result.segments.map( ( s ) => [ s.key, s.target ?? '' ] )
+				result.segments.map( ( s ) => [ s.key, editable( s ) ] )
 			)
 		);
 	};
@@ -57,7 +57,7 @@ function Compare( { postId } ) {
 		apiFetch( {
 			path: `/tranzly/v1/posts/${ postId }/segments`,
 			method: 'PUT',
-			data: { segments: changes },
+			data: saveBody( data.segments, changes ),
 		} )
 			.then( ( result ) => {
 				take( result );
@@ -123,7 +123,7 @@ function Compare( { postId } ) {
 						<tr key={ segment.key }>
 							<td lang={ sourceLang } dir="auto">
 								<div className="tranzly-compare__source">
-									{ segment.source }
+									{ segment.source_text ?? segment.source }
 								</div>
 							</td>
 							<td>
@@ -131,6 +131,14 @@ function Compare( { postId } ) {
 									__nextHasNoMarginBottom
 									label={ __( 'Translation', 'tranzly' ) }
 									hideLabelFromVision
+									help={
+										'html' === segment.view
+											? __(
+													'This piece has formatting or links, so it is shown with its HTML. Change only the words between the tags.',
+													'tranzly'
+												)
+											: undefined
+									}
 									lang={ targetLang }
 									dir="auto"
 									disabled={ null === segment.target }

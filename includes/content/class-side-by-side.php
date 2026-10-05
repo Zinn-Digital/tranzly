@@ -139,8 +139,12 @@ final class Side_By_Side {
 					'permission_callback' => array( self::class, 'can_edit' ),
 					'args'                => array(
 						'segments' => array(
-							'type'     => 'object',
-							'required' => true,
+							'type'    => 'object',
+							'default' => array(),
+						),
+						'texts'    => array(
+							'type'    => 'object',
+							'default' => array(),
 						),
 					),
 				),
@@ -184,7 +188,26 @@ final class Side_By_Side {
 		if ( is_wp_error( $pair ) ) {
 			return $pair;
 		}
-		$saved = self::save( $pair['translation'], (array) $request->get_param( 'segments' ) );
+		$changes = (array) $request->get_param( 'segments' );
+		// `texts`: key => plain text for a piece shown as text; it goes back inside the piece's own markup.
+		$current = self::pieces( $pair['translation'] );
+		foreach ( (array) $request->get_param( 'texts' ) as $key => $text ) {
+			$key   = (string) $key;
+			$piece = $current[ $key ] ?? null;
+			if ( null === $piece || ! is_string( $text ) ) {
+				continue; // save() names an unknown piece.
+			}
+			if ( 'html' !== $piece['format'] ) {
+				$changes[ $key ] = $text;
+				continue;
+			}
+			$shell = self::text_shell( (string) $piece['text'] );
+			if ( null === $shell ) {
+				return new \WP_Error( 'tranzly_segment_has_markup', __( 'This piece now contains formatting. Reload the page to edit it.', 'tranzly' ), array( 'status' => 409 ) );
+			}
+			$changes[ $key ] = $shell[0] . esc_html( $text ) . $shell[2];
+		}
+		$saved = self::save( $pair['translation'], $changes );
 		if ( is_wp_error( $saved ) ) {
 			return $saved;
 		}
@@ -248,12 +271,20 @@ final class Side_By_Side {
 					$state = 'legacy' === $whole ? 'legacy' : ( 'human' === $whole ? 'human' : 'machine' );
 				}
 			}
-			$rows[] = array(
-				'key'    => $key,
-				'format' => $piece['format'],
-				'source' => $piece['text'],
-				'target' => $target,
-				'state'  => $state,
+			// ⛔ W8, demo.tranzly.io 2026-10-05: an HTML piece showed as raw block markup on both
+			// sides (`<h1 class="wp-block-heading …">About …</h1>`). A piece whose markup wraps ONE run
+			// of text is shown and edited as that text; the markup is kept as it is on save.
+			$src_shell = 'html' === $piece['format'] ? self::text_shell( (string) $piece['text'] ) : null;
+			$tgt_shell = 'html' === $piece['format'] && null !== $target ? self::text_shell( (string) $target ) : null;
+			$rows[]    = array(
+				'key'         => $key,
+				'format'      => $piece['format'],
+				'source'      => $piece['text'],
+				'target'      => $target,
+				'state'       => $state,
+				'view'        => 'html' !== $piece['format'] || ( null !== $tgt_shell ) ? 'text' : 'html',
+				'source_text' => 'html' !== $piece['format'] ? (string) $piece['text'] : ( null !== $src_shell ? $src_shell[1] : html_entity_decode( wp_strip_all_tags( (string) $piece['text'] ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ) ),
+				'target_text' => 'html' !== $piece['format'] ? $target : ( null !== $tgt_shell ? $tgt_shell[1] : null ),
 			);
 		}
 
@@ -267,6 +298,42 @@ final class Side_By_Side {
 			'aligned'     => array_keys( $from ) === array_keys( array_intersect_key( $to, $from ) ) && count( $to ) === count( $from ),
 			'edit'        => get_edit_post_link( $translation->ID, 'raw' ),
 			'segments'    => $rows,
+		);
+	}
+
+	/**
+	 * An HTML piece as markup + ONE run of text + markup, or null when it holds no text or several
+	 * runs (inline formatting, links). The text is decoded (`&amp;` → `&`).
+	 *
+	 * @param string $html The piece.
+	 * @return array{0: string, 1: string, 2: string}|null
+	 */
+	public static function text_shell( string $html ): ?array {
+		$parts = preg_split( '/(<[^>]*>)/', $html, -1, PREG_SPLIT_DELIM_CAPTURE );
+		if ( ! is_array( $parts ) ) {
+			return null;
+		}
+		$at = null;
+		foreach ( $parts as $i => $part ) {
+			if ( '' === trim( $part ) || str_starts_with( $part, '<' ) ) {
+				continue;
+			}
+			if ( null !== $at ) {
+				return null;
+			}
+			$at = $i;
+		}
+		if ( null === $at ) {
+			return null;
+		}
+		$run  = $parts[ $at ];
+		$lead = substr( $run, 0, strlen( $run ) - strlen( ltrim( $run ) ) );
+		$tail = substr( $run, strlen( rtrim( $run ) ) );
+
+		return array(
+			implode( '', array_slice( $parts, 0, $at ) ) . $lead,
+			html_entity_decode( trim( $run ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ),
+			$tail . implode( '', array_slice( $parts, $at + 1 ) ),
 		);
 	}
 

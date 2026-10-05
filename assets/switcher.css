@@ -239,6 +239,17 @@
 	line-height: 1.4;
 }
 
+/*
+ * On a phone the banner fills the width, exactly where chat launchers float (Zinn Chat, Tidio,
+ * Crisp, Intercom: a ~60px button about 20px from a bottom corner), so it sits above them
+ * (W8, demo.zinnchat.com/ar/ at 390px, 2026-10-05: the launcher covered "Read it in English").
+ */
+@media (max-width: 40rem) {
+	.__PREFIX__-lsg {
+		inset-block-end: 6rem;
+	}
+}
+
 .__PREFIX__-lsg__text {
 	margin: 0;
 	flex: 1 1 12rem;

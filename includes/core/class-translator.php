@@ -267,6 +267,11 @@ final class Translator {
 		$term        = get_term( $term_id );
 		$source_lang = Relations::language_of( 'term', $term_id ) ?? Languages::default_code();
 		$target      = Relations::translations( 'term', $term_id )[ $code ] ?? null;
+		// A row whose term was deleted is not a translation (the same repair as for posts, W3/W4 2026-10-04).
+		if ( null !== $target && ! get_term( (int) $target ) instanceof \WP_Term ) {
+			Relations::delete( 'term', (int) $target );
+			$target = null;
+		}
 		if ( null !== $target && in_array( (string) get_term_meta( $target, self::STATUS_META, true ), self::PROTECTED, true ) && empty( $args['force'] ) ) {
 			return new \WP_Error( 'tranzly_protected', __( 'This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again.', 'tranzly' ), array( 'status' => 409 ) );
 		}

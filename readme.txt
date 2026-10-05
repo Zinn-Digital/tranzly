@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.25.0
+Stable tag: 3.25.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -155,6 +155,11 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.25.1 =
+* Fix: the side-by-side screen (Compare translation) shows each piece's words instead of its HTML, and a correction keeps the block's formatting and classes. Pieces with links or inline formatting show their HTML, with a hint to change only the words.
+* Fix: a category or tag translation whose term was deleted is made again instead of failing.
+* Fix: on phones, the "this page is also available in your language" banner sits above chat buttons (Zinn® Chat, Tidio, Crisp, Intercom) instead of under them.
 
 = 3.25.0 =
 * New: every translation follows its language's WordPress.org translation team style guide, whichever engine wrote it (AI models and DeepL alike): quotation marks, punctuation spacing, apostrophes, ellipsis, Japanese half-width spacing and lower-case pronouns of address, for 15 languages. Links, HTML, code and placeholders are never changed. Turn it off per language with the `tranzly_style_rules_enabled` filter.

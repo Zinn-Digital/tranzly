@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly 3.25.0\n"
+"Project-Id-Version: Tranzly 3.25.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-04T21:56:39+00:00\n"
+"POT-Creation-Date: 2026-10-05T01:27:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -1540,16 +1540,20 @@ msgstr ""
 msgid "You are not allowed to edit this translation."
 msgstr ""
 
-#: includes/content/class-side-by-side.php:204
+#: includes/content/class-side-by-side.php:206
+msgid "This piece now contains formatting. Reload the page to edit it."
+msgstr ""
+
+#: includes/content/class-side-by-side.php:227
 msgid "This is not a translation, so there is nothing to compare."
 msgstr ""
 
-#: includes/content/class-side-by-side.php:217
+#: includes/content/class-side-by-side.php:240
 msgid "The original of this translation no longer exists."
 msgstr ""
 
 #. translators: %s: an internal piece identifier.
-#: includes/content/class-side-by-side.php:288
+#: includes/content/class-side-by-side.php:355
 #, php-format
 msgid "Piece %s is not part of this translation any more. Reload the page and try again."
 msgstr ""
@@ -1564,7 +1568,7 @@ msgid "This item already has a version in that language."
 msgstr ""
 
 #: includes/core/class-engine-settings.php:90
-#: includes/core/class-translator.php:425
+#: includes/core/class-translator.php:430
 msgid "That translation engine is not available on this site."
 msgstr ""
 
@@ -1668,7 +1672,7 @@ msgid "This item is already written in that language."
 msgstr ""
 
 #: includes/core/class-translator.php:111
-#: includes/core/class-translator.php:271
+#: includes/core/class-translator.php:276
 msgid "This translation was edited by a person (or imported), so it is protected. Unlock it to translate it again."
 msgstr ""
 
@@ -1677,23 +1681,23 @@ msgstr ""
 msgid "That item does not exist."
 msgstr ""
 
-#: includes/core/class-translator.php:425
+#: includes/core/class-translator.php:430
 msgid "No translation engine is set up yet. Add a key for one in Tranzly → Engines."
 msgstr ""
 
-#: includes/core/class-translator.php:428
+#: includes/core/class-translator.php:433
 msgid "That translation engine is not set up yet: add its key first."
 msgstr ""
 
-#: includes/core/class-translator.php:515
+#: includes/core/class-translator.php:520
 msgid "The same text is being translated by another job right now; this item will use that answer."
 msgstr ""
 
-#: includes/core/class-translator.php:752
+#: includes/core/class-translator.php:757
 msgid "No translation engine could take this item."
 msgstr ""
 
-#: includes/core/class-translator.php:773
+#: includes/core/class-translator.php:778
 msgid "The engine did not return a translation for every part of this item. Nothing was changed."
 msgstr ""
 
@@ -8544,7 +8548,7 @@ msgid "Edited by a person"
 msgstr ""
 
 #: src/admin/StatusTab.js:152
-#: src/compare/model.js:37
+#: src/compare/model.js:74
 #: src/editor/translations-model.js:38
 msgid "Machine translated"
 msgstr ""
@@ -8980,7 +8984,7 @@ msgid "Export and import for translators"
 msgstr ""
 
 #: src/admin/WorkflowTab.js:450
-#: src/compare/model.js:40
+#: src/compare/model.js:77
 msgid "Not translated yet"
 msgstr ""
 
@@ -9102,23 +9106,27 @@ msgstr ""
 msgid "Translation (%s)"
 msgstr ""
 
-#: src/compare/index.js:167
+#: src/compare/index.js:136
+msgid "This piece has formatting or links, so it is shown with its HTML. Change only the words between the tags."
+msgstr ""
+
+#: src/compare/index.js:175
 msgid "Save changes"
 msgstr ""
 
-#: src/compare/index.js:170
+#: src/compare/index.js:178
 msgid "Open in the editor"
 msgstr ""
 
-#: src/compare/model.js:38
+#: src/compare/model.js:75
 msgid "Checked by a person"
 msgstr ""
 
-#: src/compare/model.js:39
+#: src/compare/model.js:76
 msgid "Imported"
 msgstr ""
 
-#: src/compare/model.js:41
+#: src/compare/model.js:78
 msgid "Not in the translation"
 msgstr ""
 
