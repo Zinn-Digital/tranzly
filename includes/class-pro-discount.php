@@ -18,7 +18,7 @@ namespace ZinnDigital\Tranzly;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * "Hosting customer? Get 50% off Tranzly Pro" — HOSTDISC, owner ruling 2026-09-29.
+ * "Hosting customer? Get 50% off Tranzly™ Pro" — HOSTDISC, owner ruling 2026-09-29.
  *
  * ⚖️ The owner asked for the discount to be offered *"in the sites etc and panels where
  * applicable"*. A customer of Zinn hosting gets ONE personal code per Pro plugin, for their
@@ -131,7 +131,7 @@ final class Pro_Discount {
 				/* translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name. */
 				__( 'Hosting customer? Get %1$d%% off %2$s', 'tranzly' ),
 				50,
-				'Tranzly Pro'
+				'Tranzly™ Pro'
 			)
 		);
 		echo '</strong><br>';

@@ -236,13 +236,13 @@ final class Content {
 	public static function adopt_children( int $source_id, int $new_id, string $code ): int {
 		$children = get_posts(
 			array(
-				'post_type'        => 'any',
-				'post_status'      => 'any',
-				'post_parent'      => $source_id,
-				'fields'           => 'ids',
-				'posts_per_page'   => -1,
-				'suppress_filters' => true,
-				'no_found_rows'    => true,
+				'post_type'      => 'any',
+				'post_status'    => 'any',
+				'post_parent'    => $source_id,
+				'fields'         => 'ids',
+				'posts_per_page' => -1,
+				// get_posts() already suppresses filters by default; naming it is a Plugin Check ERROR.
+				'no_found_rows'  => true,
 			)
 		);
 		$moved    = 0;

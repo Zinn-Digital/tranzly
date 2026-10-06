@@ -1,4 +1,4 @@
-# Tranzly
+# Tranzly™
 
 Multilingual WordPress, one post per language: linked translations of posts, pages, terms, media, widgets and the site title.
 
@@ -6,7 +6,7 @@ Built and maintained by **Neil Lock — CEO, Zinn Digital® Ltd** — https://zi
 
 ## Download
 
-**[Install Tranzly from WordPress.org](https://wordpress.org/plugins/tranzly/)** — or in wp-admin open **Plugins → Add New Plugin** and search for **Tranzly**.
+**[Install Tranzly™ from WordPress.org](https://wordpress.org/plugins/tranzly/)** — or in wp-admin open **Plugins → Add New Plugin** and search for **Tranzly™**.
 
 It is free, and it updates itself from WordPress.org like any directory plugin.
 
@@ -14,7 +14,7 @@ It is free, and it updates itself from WordPress.org like any directory plugin.
 
 | | |
 |---|---|
-| Version | `3.25.9` |
+| Version | `3.25.10` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |
@@ -24,7 +24,7 @@ Every release is installed and activated against the current stable WordPress be
 
 ## Install
 
-1. In WordPress: **Plugins → Add New Plugin**, search for **Tranzly**.
+1. In WordPress: **Plugins → Add New Plugin**, search for **Tranzly™**.
 2. **Install Now**, then **Activate**.
 
 The listing is at https://wordpress.org/plugins/tranzly/. On a site we host it is already installed and kept current for you. Anywhere else it updates from WordPress.org — WordPress shows the new version on your Plugins screen.
@@ -37,7 +37,7 @@ The listing is at https://wordpress.org/plugins/tranzly/. On a site we host it i
 - **[zinn-migrate](https://github.com/Zinn-Digital/zinn-migrate)** — Install it on the WordPress site you are LEAVING. It packages that site — files and database — into one archive and gives you a private link to paste into your Zinn Digital® migration. For hosts that give you no FTP, no SSH and no control-panel API; if you have any of those, Zinn® can fetch the site directly and you do not need this.
 - **[zinn-offload](https://github.com/Zinn-Digital/zinn-offload)** — Move a WordPress media library to Zinn® object storage and serve it from a CDN. Configured from the Zinn® dashboard — no access key is ever typed into WordPress. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-offload/)
 - **[zinn-reseller](https://github.com/Zinn-Digital/zinn-reseller-toolkit)** — Sell Zinn Digital® hosting from your own WordPress site — domain search, one-click client sign-in, and WooCommerce provisioning. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-reseller/)
-- **[zinn-translate](https://github.com/Zinn-Digital/zinn-translate)** — Publish a WordPress site in 58 languages on their own web addresses — translated slugs, SEO metadata, menus, WooCommerce and hreflang — translated with a Zinn Digital® plan or the site owner's own provider key.
+- **[zinn-translate](https://github.com/Zinn-Digital/zinn-translate)** — Publish a WordPress site in 58 languages on their own web addresses — translated slugs, SEO metadata, menus, WooCommerce and hreflang — translated with a Zinn Digital® plan or the site owner's own provider key. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-translate/)
 
 All of them are free to download from https://zinndigital.com/wordpress-plugins.
 

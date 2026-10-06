@@ -1,4 +1,4 @@
-=== Tranzly ===
+=== Tranzly™ ===
 Contributors: zinndigital
 Plugin URI: https://zinndigital.com/wordpress-plugins/tranzly
 Author: Neil Lock — CEO, Zinn Digital® Ltd
@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.25.9
+Stable tag: 3.25.10
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,14 +30,14 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Pick the best AI for each language (Pro).** Choose the AI provider and model per language (Gemini for Japanese, Claude for German) plus one for all others. Estimates, fallback and per-provider monthly caps follow each language's choice.
 * **Translate in the background.** Translate a whole post type into several languages as one job that keeps going after you close the browser; a report shows what failed and why, with one-click retry.
 * **Words that are never translated** (brand and product names) in every edition; with Pro, preferred translations, tone per language, translation memory (a text already translated is never paid for again), a different engine per language, automatic fallback and monthly spending caps.
-* **For developers:** PHP functions (translations, current language, switching language in code), an interface for adding your own translation engine, hooks, a REST API and WP-CLI (`wp tranzly translate --lang=de --post-type=page`). Pro adds Polylang and WPML function compatibility; the Agency plan adds multisite network set-up.
-* **Fast:** a translated page adds at most two database queries and sets no cookie, so page caches keep working. This is measured automatically on every change.
+* **For developers:** `tranzly_languages()`, `tranzly_current_language()`, `tranzly_language_url()` and `tranzly_get_translation()` (read-only under `tranzly/v1` too), hooks, an interface for your own translation engine, a REST API and WP-CLI (`wp tranzly translate --lang=de --post-type=page`). Pro adds Polylang and WPML function compatibility; the Agency plan adds multisite network set-up.
+* **Fast:** a translated page adds at most two database queries and no cookie, so page caches keep working.
 * **Security by design.** Every change needs the right permission and a valid request token; API keys are stored encrypted; the old version's "AI translated by Tranzly" link is off.
 * **The language in the address: /de/, /fr/.** Translated pages keep their own translated address (/about/ becomes /de/ueber-uns/), including category, tag and product bases. Old addresses and 3.0's `?lang=` links redirect permanently, so no ranking is lost. With Pro, a subdomain (de.example.com) or a separate domain (example.de) per language.
 * **Multilingual SEO done right.** Reciprocal hreflang links with x-default, the page's `lang` and right-to-left `dir`, `og:locale`, canonical addresses per language, and every language in your sitemap (WordPress, Yoast SEO, Rank Math, SEOPress or All in One SEO). With Pro, untranslated copies can be kept out of search results, and a per-language SEO audit finds missing descriptions, broken hreflang and duplicate content.
 * **Suggest the visitor's language.** A small, dismissible banner offers a reader the page in their own language, written in that language. It never redirects anybody, so search engines see every page at its own address.
 * **Search in the visitor's language.** Site search, archives, the blog and category lists show the language being read.
-* **Language switchers everywhere.** A block for the block and site editors in five designs with your own colours, a native Page Builder Sandwich element, a menu item, a widget, a shortcode and a floating button that works on any theme. Each links to this page's own translation. With Pro, native Elementor and Bricks widgets (Bricks is tested against a stand-in of its documented element interface).
+* **Language switchers everywhere.** A block for the block and site editors in five designs with your own colours, a native Page Builder Sandwich element, a menu item, a widget, a shortcode and a floating button that works on any theme. Each links to this page's own translation. With Pro, native Elementor and Bricks widgets.
 * **Accessible switchers.** Each switcher is a named navigation landmark, every language is read in its own language, the current one is marked, and the dropdown works from the keyboard. Flags are optional and off by default: a flag is a country, not a language.
 * **Translation that keeps your blocks intact.** Posts are translated block by block: only words change, while structure, code, HTML, shortcodes, links and image addresses stay exactly as they were. Tested on every core block.
 * **Your corrections are protected.** When a person edits a translation, background jobs and re-translation leave it alone until you unlock it.
@@ -47,16 +47,15 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Menus and shared text.** Menus are translated automatically (their links lead to the translated pages), or use a separate menu per language. With Pro, the text in your block theme's headers, footers, templates and patterns too.
 * **Page Builder Sandwich, deeply.** Every Page Builder Sandwich block translates, including the text inside repeated items (tabs, cards, price rows), widgets placed on a page, saved sections and synced patterns, which show in the visitor's language.
 * **Translation status at a glance.** For every language: what is translated, missing, out of date or corrected by a person, with one click to translate everything missing or out of date in the background.
-* **Other page builders (Pro).** Elementor, Beaver Builder, Bricks, Divi (4 and 5), Oxygen and WPBakery: only visible text is translated; every setting, link and layout stays as it was. (Bricks, Divi, Oxygen and WPBakery are tested against stand-ins of their documented storage formats.)
+* **Other page builders (Pro).** Elementor, Beaver Builder, Bricks, Divi (4 and 5), Oxygen and WPBakery: only visible text is translated; every setting, link and layout stays as it was. (Bricks, Divi, Oxygen, WPBakery and Gravity Forms: tested against stand-ins.)
 * **WooCommerce products, complete.** A product translates like any other content, in every edition, from its own edit screen: title, description, short description, categories and tags, and the new translation carries the product's price, sale price, SKU, stock, tax settings, gallery and downloads, so it can be bought straight away. With Pro: price and stock kept in step across languages after that, variations, attributes, the shop, cart, checkout and account pages, the checkout and payment texts, and every customer e-mail, sent in the language the order was placed in.
 * **Prices in the visitor's currency (Pro).** Per language, per country or chosen by the visitor, with your own rounding, and rates you set or the European Central Bank's, updated daily.
 * **SEO fields (Pro).** Titles, descriptions, social titles and focus keywords of Yoast SEO, Rank Math, SEOPress and All in One SEO, for posts and categories; their variables (%%sitename%%, %title%, #site_title) are kept.
 * **Custom fields (Pro).** ACF, Meta Box and Pods fields, with a choice per field: translate it, copy it, or leave it empty.
 * **Theme and plugin text (Pro).** Read your theme's or a plugin's own words ("Read more", "Add to cart") and translate them in one place.
-* **Forms (Pro).** Contact Form 7, WPForms, Gravity Forms and Fluent Forms: labels, buttons, messages and their e-mails, in the visitor's language, with one list of entries. (Gravity Forms is a paid plugin: tested against a stand-in of its documented form data and filters.)
+* **Forms (Pro).** Contact Form 7, WPForms, Gravity Forms and Fluent Forms: labels, buttons, messages and their e-mails, in the visitor's language, with one list of entries.
 * **Comments and reviews (Pro, optional).** Show the comments and product reviews of every language on every version, optionally translated into the reader's language.
 * **Workflow (Pro).** Bulk translate the whole site with an estimate first; translate new and updated content automatically; Translator and Reviewer roles with approval before publishing; XLIFF and CSV export and import; switch from WPML, Polylang or TranslatePress with languages and links kept; and an AI quality check that names what a person should review.
-* **A language API for other plugins**: `tranzly_languages()`, `tranzly_current_language()`, `tranzly_language_url()` and `tranzly_get_translation()`, mirrored read-only under `tranzly/v1`; blocks mark translatable attributes with `"role": "content"`.
 * **Footprint-free front end.** The switcher uses neutral class names with a short prefix (`zd` by default), no HTML comments or generator tags, and styles served from `wp-content/uploads/<prefix>-assets/` rather than the plugin's folder.
 
 The admin screens stay clearly branded; only what your visitors see is neutral.
@@ -68,6 +67,10 @@ The admin screen and editor script are built from the human-readable sources in 
 `npm ci && npm run build`
 
 == External services ==
+
+= AI apps you connect (MCP sign-in) =
+
+Only when an AI app such as Claude or ChatGPT starts connecting to the site's MCP server does the site fetch that app's public OAuth client metadata from the address the app gives, for example `https://claude.ai/oauth/mcp-oauth-client-metadata` or `https://chatgpt.com/oauth/client.json`. No site content is sent. Anthropic's and OpenAI's terms and privacy policies are listed under AI features below.
 
 = Zinn Digital® hosting-customer discount (only on sites Zinn Digital® hosts) =
 
@@ -155,6 +158,9 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.25.10 =
+* The plugin's name now carries its trade mark sign: Tranzly™ (UK trade mark application UK00004455746); same folder, settings and updates. The readme's External services section now lists the AI-app sign-in (MCP client metadata) request.
 
 = 3.25.9 =
 * Build tooling: a dependency of the admin build (source-map-js) is updated; no change to what the plugin does.
