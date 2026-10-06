@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.25.10
+Stable tag: 3.25.11
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,6 +158,9 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.25.11 =
+* Security: build toolchain dependencies patched (postcss-selector-parser, smol-toml, shell-quote, source-map-js, katex). No change to the shipped plugin code.
 
 = 3.25.10 =
 * The plugin's name now carries its trade mark sign: Tranzly™ (UK trade mark application UK00004455746); same folder, settings and updates. The readme's External services section now lists the AI-app sign-in (MCP client metadata) request.
