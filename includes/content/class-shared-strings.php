@@ -250,13 +250,18 @@ final class Shared_Strings {
 		if ( is_wp_error( $lang ) ) {
 			return $lang;
 		}
-		$scope   = (string) $request->get_param( 'scope' );
-		$have    = Strings::all( $lang );
-		$states  = self::states( $lang );
-		$covered = self::covered( $scope, $lang );
-		$rows    = array();
-		foreach ( self::sources( $scope ) as $key => $source ) {
-			$rows[] = self::row( (string) $key, $source, $have, $states, $covered );
+		$have   = Strings::all( $lang );
+		$states = self::states( $lang );
+		$rows   = array();
+		foreach ( self::sources( (string) $request->get_param( 'scope' ) ) as $key => $source ) {
+			$tr     = $have[ $key ] ?? '';
+			$rows[] = array(
+				'key'         => $key,
+				'source'      => self::text( $source ),
+				'format'      => self::format( $source ),
+				'translation' => $tr,
+				'state'       => '' === $tr ? 'missing' : ( $states[ $key ] ?? 'machine' ),
+			);
 		}
 
 		return new \WP_REST_Response(
@@ -278,16 +283,15 @@ final class Shared_Strings {
 		if ( is_wp_error( $lang ) ) {
 			return $lang;
 		}
-		$scope   = (string) $request->get_param( 'scope' );
-		$covered = self::covered( $scope, $lang );
-		// A person's correction of a language-pack text reaches the page (see aliases()).
-		$synced = Strings::set_many( $lang, self::aliases( $covered, self::states( $lang ), Strings::all( $lang ) ) );
-		if ( is_wp_error( $synced ) ) {
-			return $synced;
+		$have    = Strings::all( $lang );
+		$missing = array();
+		foreach ( self::sources( (string) $request->get_param( 'scope' ) ) as $key => $text ) {
+			if ( '' === ( $have[ $key ] ?? '' ) ) {
+				$missing[ $key ] = $text;
+			}
 		}
-		$missing = self::missing( self::sources( $scope ), Strings::all( $lang ), $covered );
-		$after   = (int) $request->get_param( 'after' );
-		$page    = array_slice( $missing, $after, self::PAGE, true );
+		$after = (int) $request->get_param( 'after' );
+		$page  = array_slice( $missing, $after, self::PAGE, true );
 		if ( array() === $page ) {
 			return new \WP_REST_Response(
 				array(
@@ -349,13 +353,6 @@ final class Shared_Strings {
 			}
 		}
 		update_option( self::STATES, $states, false );
-		$covered = array_intersect_key( self::covered( (string) $request->get_param( 'scope' ), $lang ), $map );
-		if ( array() !== $covered ) {
-			$synced = Strings::set_many( $lang, self::aliases( $covered, self::states( $lang ), Strings::all( $lang ) ) );
-			if ( is_wp_error( $synced ) ) {
-				return $synced;
-			}
-		}
 
 		return self::get_strings( $request );
 	}
@@ -417,12 +414,15 @@ final class Shared_Strings {
 			if ( null === $code || Languages::default_code() === $code ) {
 				continue;
 			}
-			foreach ( self::missing( $sources, Strings::all( $code ), self::covered( $scope, $code ) ) as $key => $source ) {
-				$need[ (string) $key ] = array(
-					'text'   => self::text( $source ),
-					'format' => self::format( $source ),
-				);
-				$codes[ $code ]        = true;
+			$have = Strings::all( $code );
+			foreach ( $sources as $key => $source ) {
+				if ( '' === ( $have[ $key ] ?? '' ) ) {
+					$need[ (string) $key ] = array(
+						'text'   => self::text( $source ),
+						'format' => self::format( $source ),
+					);
+					$codes[ $code ]        = true;
+				}
 			}
 		}
 		if ( count( $codes ) < 2 || array() === $need ) {
@@ -430,111 +430,6 @@ final class Shared_Strings {
 		}
 
 		return Translator::prefetch_segments( $need, Languages::default_code(), array_keys( $codes ), '', null, false );
-	}
-
-	/**
-	 * The texts of a scope that a WordPress.org language pack already translates for a language,
-	 * key => the pack's translation (as the page shows it). A theme's pattern that prints
-	 * `__( 'Designed with %s' )` reaches a German page as WordPress's own "Gestaltet mit …", so a
-	 * machine translation of the English would cost money and never be seen (Q108, 2026-10-05).
-	 *
-	 * @param string $scope The scope.
-	 * @param string $lang  The language.
-	 * @return array<string, string>
-	 */
-	public static function covered( string $scope, string $lang ): array {
-		/**
-		 * Filters the texts of a shared-text scope that a language pack translates for a language.
-		 * The Pro layer reports the theme's and core's registered patterns for `templates`.
-		 *
-		 * @param array<string, string> $covered Key => the language pack's translation.
-		 * @param string                $scope   The scope.
-		 * @param string                $lang    The language.
-		 */
-		$covered = apply_filters( 'tranzly_shared_strings_covered', array(), $scope, $lang );
-		$out     = array();
-		foreach ( is_array( $covered ) ? $covered : array() as $key => $text ) {
-			if ( is_string( $text ) && '' !== $text ) {
-				$out[ (string) $key ] = $text;
-			}
-		}
-
-		return $out;
-	}
-
-	/**
-	 * One row of the strings screen. ⭐ The norm WordPress itself follows: a language pack's
-	 * translation is shown by default (`pack`: never machine-translated, so it costs nothing), and a
-	 * person's own wording, once saved, wins over it (`human`) — on the screen and on the page.
-	 *
-	 * @param string                $key     Key.
-	 * @param mixed                 $source  Source.
-	 * @param array<string, string> $have    The language's store.
-	 * @param array<string, string> $states  A person's edits.
-	 * @param array<string, string> $covered Key => the language pack's translation.
-	 * @return array{key: string, source: string, format: string, translation: string, state: string}
-	 */
-	public static function row( string $key, $source, array $have, array $states, array $covered ): array {
-		$tr    = (string) ( $have[ $key ] ?? '' );
-		$state = '' === $tr ? 'missing' : ( $states[ $key ] ?? 'machine' );
-		if ( isset( $covered[ $key ] ) && 'human' !== $state ) {
-			// A machine translation stored before 3.25.6 is never shown on the page: the pack's is.
-			$tr    = $covered[ $key ];
-			$state = 'pack';
-		}
-
-		return array(
-			'key'         => $key,
-			'source'      => self::text( $source ),
-			'format'      => self::format( $source ),
-			'translation' => $tr,
-			'state'       => $state,
-		);
-	}
-
-	/**
-	 * The texts a machine should translate: no translation yet, and no language pack's either.
-	 *
-	 * @param array<string, mixed>  $sources Key => source.
-	 * @param array<string, string> $have    The language's store.
-	 * @param array<string, string> $covered Key => the language pack's translation.
-	 * @return array<string, mixed>
-	 */
-	public static function missing( array $sources, array $have, array $covered ): array {
-		$out = array();
-		foreach ( $sources as $key => $source ) {
-			if ( '' === ( $have[ $key ] ?? '' ) && ! isset( $covered[ $key ] ) ) {
-				$out[ $key ] = $source;
-			}
-		}
-
-		return $out;
-	}
-
-	/**
-	 * What the store needs so a person's correction of a language-pack text reaches the page: the
-	 * page shows the PACK's words, so the correction is also kept under the key of those words
-	 * (`text.<sha1 of the pack's text>`), and removed from it when the correction is cleared. Run
-	 * on every save and every "Translate the missing text", so a pack update that changed its
-	 * wording is followed too.
-	 *
-	 * @param array<string, string> $covered Key => the language pack's translation.
-	 * @param array<string, string> $states  A person's edits.
-	 * @param array<string, string> $have    The language's store.
-	 * @return array<string, string> Key => text ('' removes it).
-	 */
-	public static function aliases( array $covered, array $states, array $have ): array {
-		$out = array();
-		foreach ( $covered as $key => $pack ) {
-			$alias = 'text.' . sha1( $pack );
-			$human = 'human' === ( $states[ $key ] ?? '' ) ? (string) ( $have[ $key ] ?? '' ) : '';
-			if ( $alias === $key || ( $have[ $alias ] ?? '' ) === $human ) {
-				continue;
-			}
-			$out[ $alias ] = $human;
-		}
-
-		return $out;
 	}
 
 	/**

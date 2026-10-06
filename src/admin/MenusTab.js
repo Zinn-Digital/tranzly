@@ -14,25 +14,6 @@ import {
 import { changedStrings } from './menus-model';
 
 /**
- * The line under a text that says who translated it.
- *
- * @param {string} state `human`, `pack`, `machine` or `missing`.
- * @return {string|undefined} The line, if any.
- */
-function stateHelp( state ) {
-	if ( 'human' === state ) {
-		return __( 'Corrected by a person, protected', 'tranzly' );
-	}
-	if ( 'pack' === state ) {
-		return __(
-			'Translated by WordPress (language pack), at no cost. Type your own wording to use it instead.',
-			'tranzly'
-		);
-	}
-	return undefined;
-}
-
-/**
  * "Menus and templates" (tz-c4, Pro tz-c12): a separate menu per language, the words of menus
  * (and, with Pro, of block-theme templates and patterns) translated as shared text, and each
  * translation editable by hand — a hand edit is protected from the machine.
@@ -300,7 +281,14 @@ export default function MenusTab( { pro } ) {
 								__nextHasNoMarginBottom
 								key={ row.key }
 								label={ row.source.replace( /<[^>]+>/g, '' ) }
-								help={ stateHelp( row.state ) }
+								help={
+									'human' === row.state
+										? __(
+												'Corrected by a person, protected',
+												'tranzly'
+											)
+										: undefined
+								}
 								value={ draft[ row.key ] || '' }
 								onChange={ ( value ) =>
 									setDraft( { ...draft, [ row.key ]: value } )
