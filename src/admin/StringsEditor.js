@@ -13,6 +13,25 @@ import { changedStrings } from './menus-model';
 import { walkPages } from './workflow-model';
 
 /**
+ * The line under a text that says who translated it.
+ *
+ * @param {string} state `human`, `pack`, `machine` or `missing`.
+ * @return {string|undefined} The line, if any.
+ */
+function stateHelp( state ) {
+	if ( 'human' === state ) {
+		return __( 'Corrected by a person, protected', 'tranzly' );
+	}
+	if ( 'pack' === state ) {
+		return __(
+			'Translated by WordPress (language pack), at no cost. Type your own wording to use it instead.',
+			'tranzly'
+		);
+	}
+	return undefined;
+}
+
+/**
  * Translate one scope of shared text (form labels, shop e-mails, a theme's or plugin's strings):
  * the machine translates what is missing, a person corrects any line, and a correction is
  * protected from the machine.
@@ -163,14 +182,7 @@ export default function StringsEditor( { scope, languages } ) {
 					__nextHasNoMarginBottom
 					key={ row.key }
 					label={ row.source.replace( /<[^>]+>/g, '' ) }
-					help={
-						'human' === row.state
-							? __(
-									'Corrected by a person, protected',
-									'tranzly'
-								)
-							: undefined
-					}
+					help={ stateHelp( row.state ) }
 					value={ draft[ row.key ] || '' }
 					onChange={ ( value ) =>
 						setDraft( { ...draft, [ row.key ]: value } )
