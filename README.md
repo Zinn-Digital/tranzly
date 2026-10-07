@@ -14,7 +14,7 @@ It is free, and it updates itself from WordPress.org like any directory plugin.
 
 | | |
 |---|---|
-| Version | `3.25.11` |
+| Version | `3.25.12` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |

@@ -84,12 +84,13 @@ final class Promotions {
 			return self::plugin_card( $card, $row );
 		}
 		if ( 'bundle' === $kind ) {
-			$bundle    = (array) ( Data::get( 'products' )['bundle'] ?? array() );
-			$bundle_id = (string) preg_replace( '/\D/', '', (string) ( $bundle['id'] ?? '' ) );
-			if ( '' === $bundle_id || 'free' !== Licence::tier() ) {
+			$offer = self::bundle_offer();
+			if ( null === $offer || 'free' !== Licence::tier() ) {
 				return null; // No bundle configured, or this site already pays: nothing to offer.
 			}
-			$card['url'] = 'https://checkout.freemius.com/bundle/' . $bundle_id . '/';
+			// The bundle's section of this plugin's own pricing page: the three plans, what the two
+			// plugins cost separately and the saving, then Freemius's checkout (owner, 2026-10-07).
+			$card['url'] = $offer['url'];
 		}
 
 		$copy = self::copy( $kind, (string) ( $row['brand'] ?? '' ), '' );
@@ -139,6 +140,27 @@ final class Promotions {
 	}
 
 	/**
+	 * The Page Builder Sandwich Pro + Tranzly Pro bundle as this plugin offers it: the largest saving
+	 * (products.json `bundle.saving_percent`, held equal to wp/freemius-plans.json by
+	 * wp/tests/unit/AdminKitBundleOfferTest.php) and the bundle section of the host's own pricing page.
+	 *
+	 * @return array{percent: int, url: string}|null Null when no bundle is configured.
+	 */
+	public static function bundle_offer(): ?array {
+		$bundle  = (array) ( Data::get( 'products' )['bundle'] ?? array() );
+		$percent = (int) ( $bundle['saving_percent'] ?? 0 );
+		$site    = (string) ( Data::product( (string) Kit::host( 'slug' ) )['site'] ?? '' );
+		$url     = self::safe_url( '' === $site ? '' : rtrim( $site, '/' ) . '/' . ltrim( (string) ( $bundle['pricing_path'] ?? '' ), '/' ) );
+		if ( '' === (string) preg_replace( '/\D/', '', (string) ( $bundle['id'] ?? '' ) ) || $percent <= 0 || '' === $url ) {
+			return null;
+		}
+		return array(
+			'percent' => $percent,
+			'url'     => $url,
+		);
+	}
+
+	/**
 	 * The translated copy for a card.
 	 *
 	 * @param string $kind  Card kind.
@@ -177,10 +199,14 @@ final class Promotions {
 					'activeBody'  => '',
 				);
 			case 'bundle':
+				$offer = self::bundle_offer();
 				return array(
 					'brand'       => $brand,
 					'title'       => __( 'Get Page Builder Sandwich Pro and Tranzly Pro together', 'tranzly' ),
-					'body'        => __( 'The bundle costs less than buying both plugins separately, on the same plans and site limits.', 'tranzly' ),
+					'body'        => null === $offer
+						? __( 'The bundle costs less than buying both plugins separately, on the same plans and site limits.', 'tranzly' )
+						/* translators: %d: the largest saving, in whole percent. */
+						: sprintf( __( 'Both Pro plugins on the same plan and site limit, for up to %d%% less than buying them separately.', 'tranzly' ), $offer['percent'] ),
 					'cta'         => __( 'See the bundle', 'tranzly' ),
 					'activeTitle' => '',
 					'activeBody'  => '',

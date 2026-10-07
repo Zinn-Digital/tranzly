@@ -353,6 +353,7 @@ final class Licence {
 			'accountUrl'    => '',
 			'renewal'       => null,
 			'bundle'        => '' !== (string) ( Data::get( 'products' )['bundle']['id'] ?? '' ),
+			'bundleOffer'   => Promotions::bundle_offer(),
 			'installId'     => '',
 			'licenceId'     => '',
 		);

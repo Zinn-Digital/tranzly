@@ -4,12 +4,15 @@
 		"A new plugin that carries the kit is a row here plus an `admin_kit` entry in wp/plugins.json. A product the kit only PROMOTES (Zinn SEO, later) is a row in promotions.json instead, and needs no code.",
 		"The bundle ids are Freemius's public identifiers (docs/843 D8, bundle 40216, read back by the L03 store configuration 2026-09-27). The public key is public by design; the secret key lives in Vault (secret/vendors/freemius/bundle) and never appears in a plugin. build-admin-kit.php writes these three values into each host's SDK init, so changing them here is the whole change.",
 		"`main_files` lists every basename the product is installed under (free and premium), so 'is the other plugin active?' is answered for both editions.",
+		"`bundle.saving_percent` is the largest saving of the bundle over buying both Pro plugins separately, in whole percent rounded DOWN, from wp/freemius-plans.json; wp/tests/unit/AdminKitBundleOfferTest.php fails when a price changes and this does not. `pricing_path` is the page on the host plugin's own site whose bundle section the card and the Plans screen link to.",
 		"`docs_root` is where a help link goes when a screen has no guide of its own. It must be a page that answers 200 today (CLAUDE.md 2.41): scripts/wp-admin-kit-check.py --live asserts it."
 	],
 	"bundle": {
 		"id": "40216",
 		"public_key": "pk_1bcbfe8657c755d37d4b8a4c29f46",
-		"license_auto_activation": true
+		"license_auto_activation": true,
+		"saving_percent": 21,
+		"pricing_path": "pricing/"
 	},
 	"products": {
 		"tranzly": {

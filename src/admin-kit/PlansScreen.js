@@ -231,13 +231,29 @@ export default function Plans( { kit } ) {
 								</Button>
 							) }
 						</p>
-						{ licence.bundle && (
+						{ licence.bundleOffer ? (
 							<p className="zak-muted">
-								{ __(
-									'Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less.',
-									'tranzly'
-								) }
+								{ sprintf(
+									/* translators: %d: the largest saving, in whole percent. */
+									__(
+										'Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for up to %d%% less.',
+										'tranzly'
+									),
+									licence.bundleOffer.percent
+								) }{ ' ' }
+								<ExternalLink href={ licence.bundleOffer.url }>
+									{ __( 'See the bundle', 'tranzly' ) }
+								</ExternalLink>
 							</p>
+						) : (
+							licence.bundle && (
+								<p className="zak-muted">
+									{ __(
+										'Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less.',
+										'tranzly'
+									) }
+								</p>
+							)
 						) }
 					</CardBody>
 				</Card>
