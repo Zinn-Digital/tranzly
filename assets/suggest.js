@@ -5,11 +5,21 @@
  */
 ( function () {
 	'use strict';
-	const data = window.__PREFIX__Lsg;
+	// The class prefix: written into the copy published under uploads, or read from this
+	// script's own URL when it is served from the plugin folder (uploads not writable).
+	const PFX =
+		'__PREFIX__'.indexOf( '__' ) === 0
+			? ( document.currentScript &&
+					new URL( document.currentScript.src ).searchParams.get(
+						'pfx'
+					) ) ||
+				''
+			: '__PREFIX__';
+	const data = window[ PFX + 'Lsg' ];
 	if ( ! data || ! data.offers || ! window.navigator ) {
 		return;
 	}
-	const key = '__PREFIX__-lsg-dismissed';
+	const key = PFX + '-lsg-dismissed';
 	try {
 		if ( window.localStorage.getItem( key ) ) {
 			return;
@@ -49,22 +59,22 @@
 		return;
 	}
 	const box = document.createElement( 'div' );
-	box.className = '__PREFIX__-lsg';
+	box.className = PFX + '-lsg';
 	box.setAttribute( 'role', 'region' );
 	box.setAttribute( 'aria-label', pick.label );
 	box.setAttribute( 'lang', pick.tag );
 	box.setAttribute( 'dir', pick.dir );
 	const text = document.createElement( 'p' );
-	text.className = '__PREFIX__-lsg__text';
+	text.className = PFX + '-lsg__text';
 	text.textContent = pick.text;
 	const go = document.createElement( 'a' );
-	go.className = '__PREFIX__-lsg__go';
+	go.className = PFX + '-lsg__go';
 	go.href = pick.url;
 	go.setAttribute( 'hreflang', pick.tag );
 	go.textContent = pick.yes;
 	const close = document.createElement( 'button' );
 	close.type = 'button';
-	close.className = '__PREFIX__-lsg__close';
+	close.className = PFX + '-lsg__close';
 	close.setAttribute( 'aria-label', pick.no );
 	close.textContent = '×';
 	close.addEventListener( 'click', function () {
@@ -82,6 +92,6 @@
 	box.appendChild( close );
 	document.body.appendChild( box );
 	window.document.dispatchEvent(
-		new window.CustomEvent( '__PREFIX__-lsg-shown' )
+		new window.CustomEvent( PFX + '-lsg-shown' )
 	);
 } )();

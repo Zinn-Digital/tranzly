@@ -159,7 +159,11 @@ final class Post_Admin {
 			exit;
 		}
 		/* translators: %s: a language's name, e.g. Deutsch. */
-		Term_Admin::remember( 'success', sprintf( __( '%s: translated.', 'tranzly' ), Term_Admin::language_name( $lang ) ) );
+		$said = sprintf( __( '%s: translated.', 'tranzly' ), Term_Admin::language_name( $lang ) );
+		if ( 'machine' === $how ) {
+			$said = trim( $said . ' ' . Translator::billed_sentence( Translator::last_billed() ) );
+		}
+		Term_Admin::remember( 'success', $said );
 		wp_safe_redirect( (string) get_edit_post_link( (int) $made, 'raw' ) );
 		exit;
 	}

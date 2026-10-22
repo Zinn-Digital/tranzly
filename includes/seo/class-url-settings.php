@@ -114,6 +114,21 @@ final class Url_Settings {
 	}
 
 	/**
+	 * The mode the site owner chose, even when it is a Pro mode that a lapsed licence no longer
+	 * serves (get() then answers `directory`). Router::lapsed_host_target() uses it to send a
+	 * visitor arriving on a language subdomain or domain to the same page's /de/ address (lane
+	 * R35, owner 2026-10-18: nothing 404s, and paying restores the hosts instantly).
+	 *
+	 * @return string
+	 */
+	public static function stored_mode(): string {
+		$stored = get_option( self::OPTION, array() );
+		$mode   = is_array( $stored ) ? (string) ( $stored['mode'] ?? '' ) : '';
+
+		return in_array( $mode, self::MODES, true ) ? $mode : 'directory';
+	}
+
+	/**
 	 * Save. Returns the refusal for the first invalid field and changes nothing then.
 	 *
 	 * @param array<string, mixed> $input Any of the keys `get()` returns.

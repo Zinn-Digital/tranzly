@@ -30,3 +30,8 @@ require_once __DIR__ . '/class-diagnostics.php';
 require_once __DIR__ . '/class-legacy-support-users.php';
 require_once __DIR__ . '/class-support.php';
 require_once __DIR__ . '/class-rest.php';
+// ⭐ Absent from a WordPress.org build, which fetches nothing from us (translate.wordpress.org
+// serves its translations); everywhere else it installs the plugin's language packs.
+if ( is_readable( __DIR__ . '/class-language-packs.php' ) ) {
+	require_once __DIR__ . '/class-language-packs.php';
+}

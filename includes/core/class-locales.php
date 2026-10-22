@@ -44,6 +44,28 @@ final class Locales {
 	);
 
 	/**
+	 * Language codes whose WordPress locale is spelled differently. Tranzly (and the language
+	 * picker) store ISO 639 `fil` for Filipino; WordPress's locale, its core language packs and
+	 * ours are `tl` (R27, s1014 2026-10-17: Filipino pages loaded no WordPress or plugin
+	 * translation). Only LOOKUPS use this: the stored code, the public URL prefix and hreflang
+	 * keep `fil`, so nothing a search engine has indexed changes.
+	 */
+	private const WP_LOCALE_ALIASES = array(
+		'fil' => 'tl',
+	);
+
+	/**
+	 * The WordPress locale to load translations for a listed language code: `tl` for `fil` or
+	 * `fil_PH`, every other code unchanged.
+	 *
+	 * @param string $code A listed language code.
+	 * @return string
+	 */
+	public static function wp_locale( string $code ): string {
+		return self::WP_LOCALE_ALIASES[ self::primary( $code ) ] ?? $code;
+	}
+
+	/**
 	 * Is the language written right to left?
 	 *
 	 * @param string $code A WordPress locale.

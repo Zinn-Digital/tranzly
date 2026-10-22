@@ -96,7 +96,7 @@ final class Places {
 	}
 
 	/**
-	 * `[tranzly_switcher style="dropdown" display="code" flags="1" current="0" hide_missing="1" vertical="1" label="…"]`.
+	 * `[tranzly_switcher style="dropdown" display="code" flags="1" flag_shape="circle" flag_size="large" current="0" hide_missing="1" vertical="1" label="…"]`.
 	 *
 	 * @param array<string, string>|string $atts Shortcode attributes.
 	 * @return string
@@ -107,6 +107,8 @@ final class Places {
 				'style'        => 'list',
 				'display'      => 'name',
 				'flags'        => '0',
+				'flag_shape'   => '',
+				'flag_size'    => '',
 				'current'      => '1',
 				'hide_missing' => '0',
 				'vertical'     => '0',
@@ -121,6 +123,8 @@ final class Places {
 				'style'       => $atts['style'],
 				'display'     => $atts['display'],
 				'flags'       => $atts['flags'],
+				'flagShape'   => $atts['flag_shape'],
+				'flagSize'    => $atts['flag_size'],
 				'showCurrent' => $atts['current'],
 				'hideMissing' => $atts['hide_missing'],
 				'vertical'    => $atts['vertical'],

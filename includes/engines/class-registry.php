@@ -42,16 +42,57 @@ final class Registry {
 	public static function instance(): Registry {
 		if ( null === self::$instance ) {
 			self::$instance = new self();
-
-			/**
-			 * Register translation engines. Call `$registry->add( new Your_Engine() )`.
-			 *
-			 * @param Registry $registry The engine registry.
-			 */
-			do_action( 'tranzly_register_engines', self::$instance );
+			// Under WP-CLI Tranzly starts once WordPress has loaded (Cli_Start, stage PERF3), and the
+			// public functions exist before that: an engine added that early is kept, and the engines
+			// are asked for when Tranzly has started (announce()), as they would have been here.
+			if ( class_exists( '\\ZinnDigital\\Tranzly\\Cli_Start', false ) && \ZinnDigital\Tranzly\Cli_Start::waiting() ) {
+				self::$unannounced = true;
+				return self::$instance;
+			}
+			self::announce_to( self::$instance );
 		}
 
 		return self::$instance;
+	}
+
+	/**
+	 * Was the registry made before Tranzly started, and not yet announced?
+	 *
+	 * @var bool
+	 */
+	private static bool $unannounced = false;
+
+	/**
+	 * Tranzly has started: announce a registry made before that (see instance()). The engines
+	 * registered on `tranzly_register_engines` come first and an engine added directly keeps its
+	 * place after them, as when the registry is made after the start.
+	 *
+	 * @return void
+	 */
+	public static function announce(): void {
+		if ( null === self::$instance || ! self::$unannounced ) {
+			return;
+		}
+		self::$unannounced       = false;
+		$early                   = self::$instance->engines;
+		self::$instance->engines = array();
+		self::announce_to( self::$instance );
+		self::$instance->engines = array_merge( self::$instance->engines, $early );
+	}
+
+	/**
+	 * Fire `tranzly_register_engines`.
+	 *
+	 * @param Registry $registry The registry.
+	 * @return void
+	 */
+	private static function announce_to( Registry $registry ): void {
+		/**
+		 * Register translation engines. Call `$registry->add( new Your_Engine() )`.
+		 *
+		 * @param Registry $registry The engine registry.
+		 */
+		do_action( 'tranzly_register_engines', $registry );
 	}
 
 	/**
@@ -60,7 +101,8 @@ final class Registry {
 	 * @return void
 	 */
 	public static function reset(): void {
-		self::$instance = null;
+		self::$instance    = null;
+		self::$unannounced = false;
 	}
 
 	/**

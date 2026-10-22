@@ -68,8 +68,32 @@
 }
 
 .__PREFIX__-lsw__flag {
+	display: inline-block;
 	font-size: 1.15em;
 	line-height: 1;
+	vertical-align: middle;
+}
+
+/* Flag sizes and shapes (Switchers settings, or each switcher's own). The flag is an emoji, so a
+   shape is a clip of its glyph box, not a second image to download. */
+.__PREFIX__-lsw__flag--small {
+	font-size: 0.9em;
+}
+
+.__PREFIX__-lsw__flag--large {
+	font-size: 1.6em;
+}
+
+.__PREFIX__-lsw__flag--rounded {
+	clip-path: inset(0.12em 0 round 0.18em);
+}
+
+.__PREFIX__-lsw__flag--square {
+	clip-path: inset(0.12em 0.22em);
+}
+
+.__PREFIX__-lsw__flag--circle {
+	clip-path: circle(0.36em at 50% 50%);
 }
 
 .__PREFIX__-lsw__code {

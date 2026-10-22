@@ -176,6 +176,16 @@ final class Rest_Engines {
 			? Translator::translate_term( $id, (string) $request->get_param( 'lang' ), (string) $request->get_param( 'engine' ), $args )
 			: Translator::translate_post( $id, (string) $request->get_param( 'lang' ), (string) $request->get_param( 'engine' ), $args );
 
-		return is_wp_error( $done ) ? $done : new \WP_REST_Response( array( 'id' => $done ), 200 );
+		if ( is_wp_error( $done ) ) {
+			return $done;
+		}
+		$out    = array( 'id' => $done );
+		$billed = Translator::last_billed();
+		if ( null !== $billed ) {
+			// What the provider counted for this translation on the site owner's account (DeepL).
+			$out['billed'] = $billed + array( 'message' => Translator::billed_sentence( $billed ) );
+		}
+
+		return new \WP_REST_Response( $out, 200 );
 	}
 }

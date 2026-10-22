@@ -76,7 +76,25 @@ final class Query_Filter {
 		}
 		$uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- matched, never printed.
 
-		return 1 !== preg_match( '#(?:sitemap[^/]*\.xml|sitemap\.xsl|/sitemap(?:_index)?/?|\.xsl)(?:\?|$)#i', $uri );
+		return ! self::is_sitemap_uri( $uri );
+	}
+
+	/**
+	 * Is this request a sitemap? A sitemap FILE anywhere (`…sitemap….xml`, `.xsl`), or a sitemap
+	 * ROUTE at the site root or under a language folder (`/sitemap/`, `/de/sitemap_index/`).
+	 *
+	 * A PAGE whose slug is `sitemap` deeper down (`/de/blocks/sitemap/`) is content, not a sitemap:
+	 * matching it switched the language filter off, so the German page rendered the English post
+	 * and canonicalised to it (Search Console, pagebuildersandwich.com, 2026-10-15).
+	 *
+	 * @param string $uri Request URI, query string included.
+	 * @return bool
+	 */
+	public static function is_sitemap_uri( string $uri ): bool {
+		$path = (string) preg_replace( '#[?\#].*$#', '', $uri );
+
+		return 1 === preg_match( '#(?:sitemap[^/]*\.xml|sitemap\.xsl|\.xsl)$#i', $path )
+			|| 1 === preg_match( '#^/(?:[a-z]{2}(?:-[a-z]{2,4})?/)?sitemap(?:_index)?/?$#i', $path );
 	}
 
 	/**

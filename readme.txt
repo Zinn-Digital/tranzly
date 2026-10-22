@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.25.12
+Stable tag: 3.27.26
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,7 +108,7 @@ AI features use the AI provider you choose, with your own API key. Nothing is se
 * OpenRouter: https://openrouter.ai/api/v1 (terms: https://openrouter.ai/terms, privacy policy: https://openrouter.ai/privacy)
 * A service you run yourself (any OpenAI-compatible address you enter): only that address is contacted.
 
-Recommended models list (off unless you turn it on). If you turn on the daily check for a newer recommended models list under Settings → AI providers, the plugin requests https://api.zinndigital.com/v1/ai-model-catalogue once a day. The request is a plain download: it carries no key, no site address and nothing about your content, and the list is signed so a changed copy is ignored.
+Recommended models list (off until ticked). The daily check under Settings → AI providers requests the signed list from https://api.zinndigital.com/v1/ai-model-catalogue, sending no key, site address or content. Connecting to Zinn® credits does not turn it on (in Pro it does).
 
 * Service: https://zinndigital.com
 * Terms: https://zinndigital.com/legal/terms
@@ -158,6 +158,102 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.27.26 =
+* New: after a machine translation with DeepL, Tranzly shows how many characters DeepL billed for it — in the editor's Translations panel, the classic Translations box, the REST answer and WP-CLI — as DeepL counted them on your own account.
+* New: flags in every language switcher can be a rectangle, rounded rectangle, square or circle, and small, medium or large. Set it once under Tranzly → Language switchers → Flags, or per block, widget, shortcode (`flag_shape`, `flag_size`), Page Builder Sandwich element, or (Pro) Elementor and Bricks widget.
+* New: the posts list shows a view per language with its count, beside All, Published and Drafts, and a "Not translated into …" filter lists the posts that still need a translation into a language.
+
+= 3.27.25 =
+* New: a Zinn® Ads card among the Zinn® services on this plugin's own screens — Google Ads management that asks before it spends, with a click-fraud shield free on Zinn® hosting. It links to the page in your language and is never shown on a footprint-free site.
+
+= 3.27.24 =
+* New (Pro): full GeoDirectory support. A translated listing now carries its address, map location and custom fields (text fields translated, choice fields kept), its categories and tags are translated with it, editing the original updates every language, and trashing, restoring or deleting a listing does the same to its translations. Your own GeoDirectory and UsersWP field names and GetPaid payment method names can be translated in Theme and plugin text. GetPaid invoices are no longer offered for translation.
+
+= 3.27.23 =
+* Fix (Pro): activating Tranzly Pro beside UsersWP no longer stops the site with the error "Undefined constant PLL_COOKIE". Tranzly Pro's Polylang compatibility now also defines PLL_COOKIE and the term and language-switcher functions (pll_get_term_language, pll_get_term_translations, pll_the_languages, pll_is_translated_post_type, pll_is_translated_taxonomy, pll_translate_string). Tested with UsersWP, GeoDirectory and GetPaid in two languages.
+
+= 3.27.22 =
+* WordPress MCP adapter updated to 0.7.1 (MCP protocol 2026-07-28, session-storage security fix); no deprecation notice from the bundled copy.
+
+= 3.27.21 =
+* When a Pro trial or licence ends, every language stays online: language subdomains and domains send visitors to the free /xx/ address, Pro engines and automatic translation pause, and translations are kept. Paying restores Pro instantly, with nothing lost.
+
+= 3.27.19 =
+* Language packs now refresh after background, WP-CLI and host updates, without anyone opening wp-admin.
+
+= 3.27.18 =
+* After an update made without opening wp-admin (WP-CLI, background auto-update, host updaters), the language switcher and suggestion scripts now keep loading from their neutral copies instead of the plugin folder.
+
+= 3.27.17 =
+* Filipino pages now load WordPress's and our Filipino translations: the language code fil is looked up as WordPress's tl, while URLs and hreflang keep fil.
+* Plural forms are placed by each language's plural rule (Arabic and others showed the wrong form).
+* Development dependencies updated.
+
+= 3.27.16 =
+* Language packs: our strings are now fetched for every language the site serves (Tranzly, TranslatePress, Polylang or WPML), not only the site's and its users' languages, so translated pages show this plugin's words in that language.
+
+= 3.27.15 =
+* AI agents (MCP): this plugin's tools now always appear to your AI app, even when another Zinn® plugin on the same site is an older version.
+
+= 3.27.14 =
+* Fix: a page whose address ends in /sitemap/ (for example a block demo page) now shows its translated version in every language and points search engines at that language's address, instead of showing the English page.
+
+= 3.27.13 =
+* Fix: DeepL translations no longer fail with "A non-empty request body is required" (DeepL API Free keys). Tranzly now sends text to DeepL in the form every DeepL service accepts, retries once in the other format if DeepL says the request arrived empty, never lets a redirect drop the text, and says plainly when something on the site removed it.
+
+= 3.27.12 =
+* Maintenance release: comes with the latest list of recommended AI models.
+
+= 3.27.11 =
+* More dependable AI app sign-in (MCP): Claude, ChatGPT and other AI apps connect to your site the same way whether a visitor, a scheduled task or a WP-CLI command started WordPress.
+
+= 3.27.10 =
+* Privacy: the recommended AI models list is downloaded only when you tick its daily check under Settings → AI providers; connecting to Zinn® credits no longer turns it on. In the Pro edition, a site connected to Zinn® keeps its list current, and the screen says so.
+
+= 3.27.9 =
+* Faster and lighter on servers: WP-CLI commands, scheduled tasks and AI agents (MCP) on your site now start with far less memory, so they keep working beside large plugins such as WooCommerce.
+
+= 3.27.8 =
+* Seven new messages are now translated in every language.
+
+= 3.27.7 =
+* AI agent (MCP) tools load faster and use less memory.
+
+= 3.27.6 =
+* Inline stylesheets are escaped as they are printed, and scripts are always loaded as files, never printed inline.
+* A background translation job always restores the previous user, even when it fails.
+* No JSON escaping is switched off in printed output, including the MCP connection's sign-in response.
+
+= 3.27.5 =
+* AI model lists keep themselves current: retired models leave every picker and saved choices move to the newest model of the same family.
+
+= 3.27.4 =
+* Lighter start for WP-CLI commands: works within a 128 MB memory limit beside WooCommerce and other large plugins.
+
+= 3.27.3 =
+* Translations now arrive as small language packs for the languages your site uses, so the plugin download is much smaller.
+
+= 3.27.2 =
+* Cross-promotion cards: Zinn® SEO now shows on Tranzly's and Page Builder Sandwich's Overview and Add-ons screens, says what the two plugins do together once both are active, and links its own site while it is not in the WordPress.org directory.
+
+= 3.27.1 =
+* Admin screens: ready for agency branding in the Zinn® family.
+
+= 3.27.0 =
+* Pay for AI with Zinn® credits when Zinn® SEO is on the same site — no AI key of your own needed — and faster batched AI requests.
+
+= 3.26.0 =
+* New: works as one with Zinn® SEO. Its SEO titles, descriptions, social text and focus phrases are translated together with each page, in the free edition too; its title patterns and llms.txt summary are translated beside your site title; a page you hide from search stays hidden in every language; and the SEO audit reads its descriptions.
+* New: pages translated before this version catch up. Zinn® SEO's Fix it list translates the search titles and descriptions they lack, with one click, without touching anything else on the page.
+* Fixed: `wp tranzly jobs run` runs a job to its end. It could stop and show items still "running" when a worker had died, and the job had to be run again.
+* Fixed: a page translated before its page builder's integration was active (Elementor, Bricks, Beaver Builder, Oxygen) gets the builder's own settings the next time it is translated. Until then a translated Elementor page could show empty.
+
+= 3.25.14 =
+* Maintenance update of the shared admin screens: the setup can continue where it stopped, and tables fit narrow screens.
+
+= 3.25.13 =
+* Updated Freemius SDK to the latest version.
 
 = 3.25.12 =
 * The settings screen shows the Page Builder Sandwich Pro + Tranzly Pro bundle with its saving, linked to the bundle on the plugin's own pricing page.

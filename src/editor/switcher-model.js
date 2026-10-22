@@ -34,6 +34,42 @@ export function displayOptions() {
 }
 
 /**
+ * The flag shapes (Switcher::FLAG_SHAPES). A switcher of its own may also say "as the site's
+ * Switchers settings", which is the empty value.
+ *
+ * @param {boolean} withSiteDefault Offer "Site setting" first.
+ * @return {Array<{value:string,label:string}>} Options.
+ */
+export function flagShapeOptions( withSiteDefault = false ) {
+	return [
+		...( withSiteDefault
+			? [ { value: '', label: __( 'Site setting', 'tranzly' ) } ]
+			: [] ),
+		{ value: 'rectangle', label: __( 'Rectangle', 'tranzly' ) },
+		{ value: 'rounded', label: __( 'Rounded rectangle', 'tranzly' ) },
+		{ value: 'square', label: __( 'Square', 'tranzly' ) },
+		{ value: 'circle', label: __( 'Circle', 'tranzly' ) },
+	];
+}
+
+/**
+ * The flag sizes (Switcher::FLAG_SIZES).
+ *
+ * @param {boolean} withSiteDefault Offer "Site setting" first.
+ * @return {Array<{value:string,label:string}>} Options.
+ */
+export function flagSizeOptions( withSiteDefault = false ) {
+	return [
+		...( withSiteDefault
+			? [ { value: '', label: __( 'Site setting', 'tranzly' ) } ]
+			: [] ),
+		{ value: 'small', label: __( 'Small', 'tranzly' ) },
+		{ value: 'medium', label: __( 'Medium', 'tranzly' ) },
+		{ value: 'large', label: __( 'Large', 'tranzly' ) },
+	];
+}
+
+/**
  * The style variables with one changed; an empty value removes it (back to the theme's look).
  *
  * @param {Object<string,string>} vars  Current variables.

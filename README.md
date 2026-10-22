@@ -14,7 +14,7 @@ It is free, and it updates itself from WordPress.org like any directory plugin.
 
 | | |
 |---|---|
-| Version | `3.25.12` |
+| Version | `3.27.26` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |
@@ -31,12 +31,14 @@ The listing is at https://wordpress.org/plugins/tranzly/. On a site we host it i
 
 ## Our other WordPress plugins
 
+- **[zinn-backups](https://github.com/Zinn-Digital/zinn-backups)** — Backs up a WordPress site's files and database to the customer's own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores through temporary tables and one atomic swap, and imports backups made by UpdraftPlus, All-in-One WP Migration, Duplicator, BackWPup, WPvivid, Jetpack, BlogVault and Zinn® Migrate. Nothing is kept on the server.
 - **[zinn-cache](https://github.com/Zinn-Digital/zinn-cache)** — A page cache and a Redis object cache for any WordPress site: the LiteSpeed server cache where there is one and its own disk cache everywhere else, smart auto-purge and a Redis cache that proves it works. Zinn® Cache Pro is an add-on on top of it. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-cache/)
 - **[zinn-chat](https://github.com/Zinn-Digital/zinn-chat)** — A complete help desk and AI assistant that runs on your own WordPress: answers visitors from your own pages with links using your own AI key, live chat with a multi-chat inbox, and support tickets in wp-admin, on a submit-a-ticket page and in the WooCommerce account area. Under 10 KB on the page, and no requests at all until a visitor opens it.
 - **[zinn-connector](https://github.com/Zinn-Digital/zinn-connector)** — Connect any WordPress site to Zinn Digital® so scheduled articles publish to it. Pair with a code from your dashboard. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-connector/)
 - **[zinn-migrate](https://github.com/Zinn-Digital/zinn-migrate)** — Install it on the WordPress site you are LEAVING. It packages that site — files and database — into one archive and gives you a private link to paste into your Zinn Digital® migration. For hosts that give you no FTP, no SSH and no control-panel API; if you have any of those, Zinn® can fetch the site directly and you do not need this.
 - **[zinn-offload](https://github.com/Zinn-Digital/zinn-offload)** — Move a WordPress media library to Zinn® object storage and serve it from a CDN. Configured from the Zinn® dashboard — no access key is ever typed into WordPress. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-offload/)
 - **[zinn-reseller](https://github.com/Zinn-Digital/zinn-reseller-toolkit)** — Sell Zinn Digital® hosting from your own WordPress site — domain search, one-click client sign-in, and WooCommerce provisioning. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-reseller/)
+- **[zinn-seo](https://github.com/Zinn-Digital/zinn-seo)** — Complete search engine and AI visibility optimisation for WordPress, built for speed: nothing added to your visitors' pages except the tags search engines read, every setting in one place, a guided setup, SEO roles, settings export and import, and AI agent (MCP) access to every setting.
 - **[zinn-translate](https://github.com/Zinn-Digital/zinn-translate)** — Publish a WordPress site in 58 languages on their own web addresses — translated slugs, SEO metadata, menus, WooCommerce and hreflang — translated with a Zinn Digital® plan or the site owner's own provider key. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-translate/)
 
 All of them are free to download from https://zinndigital.com/wordpress-plugins.

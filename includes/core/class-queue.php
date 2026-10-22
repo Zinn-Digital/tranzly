@@ -250,8 +250,25 @@ final class Queue {
 			return;
 		}
 		$previous = get_current_user_id();
+		// wporg-justified: a background worker has no user, so wp_insert_post() would apply kses for an anonymous user and stamp no author; it acts as the job's creator (already capability-checked when the job was queued) and is restored below.
 		wp_set_current_user( (int) $row['created_by'] );
+		try {
+			self::run_claims( $job_id, $row );
+		} finally {
+			// wporg-justified: restores the user who was current before this worker ran (see above).
+			wp_set_current_user( $previous );
+		}
+		self::after_work( $job_id );
+	}
 
+	/**
+	 * Claim and translate items of one job until the worker's time budget is spent.
+	 *
+	 * @param int                  $job_id The job ID.
+	 * @param array<string, mixed> $row    The job row.
+	 * @return void
+	 */
+	private static function run_claims( int $job_id, array $row ): void {
 		$options = (array) json_decode( (string) $row['options'], true );
 
 		/**
@@ -286,9 +303,6 @@ final class Queue {
 				}
 			}
 		}
-
-		wp_set_current_user( $previous );
-		self::after_work( $job_id );
 	}
 
 	/**
@@ -500,6 +514,51 @@ final class Queue {
 			'id'   => (int) $target,
 			'edit' => (string) get_edit_post_link( (int) $target, 'raw' ),
 		);
+	}
+
+	/**
+	 * How long until a job's next item can be worked, in seconds: 0 when one is ready now, null
+	 * when the job has nothing left to do.
+	 *
+	 * An item that is not ready is one of two things: held by a worker (its lease has not run
+	 * out — the worker is alive, or it died and the lease is what gives the item back), or put
+	 * back to be tried again a little later.
+	 *
+	 * @param int $job_id Job ID.
+	 * @return int|null
+	 */
+	public static function next_due( int $job_id ): ?int {
+		global $wpdb;
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT COUNT(*) AS items, SUM( lease_until IS NULL ) AS ready, MIN( lease_until ) AS soonest FROM %i WHERE job_id = %d AND status IN ('queued','running')",
+				Schema::tables()['items'],
+				$job_id
+			),
+			ARRAY_A
+		);
+
+		return self::due_in( is_array( $row ) ? $row : array(), time() );
+	}
+
+	/**
+	 * The arithmetic of next_due() (the pure half).
+	 *
+	 * @param array<string, mixed> $row `items`, `ready` (items with no lease), `soonest` (the
+	 *                                  earliest lease end, UTC).
+	 * @param int                  $now Now, as a Unix time.
+	 * @return int|null
+	 */
+	public static function due_in( array $row, int $now ): ?int {
+		if ( (int) ( $row['items'] ?? 0 ) < 1 ) {
+			return null;
+		}
+		if ( (int) ( $row['ready'] ?? 0 ) > 0 || empty( $row['soonest'] ) ) {
+			return 0;
+		}
+		$at = strtotime( (string) $row['soonest'] . ' UTC' );
+
+		return false === $at ? 0 : max( 0, $at - $now );
 	}
 
 	/**

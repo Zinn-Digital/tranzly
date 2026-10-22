@@ -60,7 +60,7 @@ final class Language_Switch {
 			return false;
 		}
 		self::$stack[] = $code;
-		switch_to_locale( $code );
+		switch_to_locale( \ZinnDigital\Tranzly\Core\Locales::wp_locale( $code ) );
 
 		return true;
 	}

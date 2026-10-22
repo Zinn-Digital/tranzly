@@ -66,10 +66,12 @@ final class Widget extends \WP_Widget {
 		$instance = wp_parse_args(
 			(array) $instance,
 			array(
-				'title'   => '',
-				'style'   => 'list',
-				'display' => 'name',
-				'flags'   => false,
+				'title'      => '',
+				'style'      => 'list',
+				'display'    => 'name',
+				'flags'      => false,
+				'flag_shape' => '',
+				'flag_size'  => '',
 			)
 		);
 		$styles   = self::style_labels();
@@ -84,15 +86,30 @@ final class Widget extends \WP_Widget {
 			'style'   => array( __( 'Design', 'tranzly' ), $styles ),
 			'display' => array( __( 'Show each language as', 'tranzly' ), $displays ),
 		) as $field => $pair ) {
-			echo '<p><label for="' . esc_attr( $this->get_field_id( $field ) ) . '">' . esc_html( $pair[0] ) . '</label> <select class="widefat" id="' . esc_attr( $this->get_field_id( $field ) ) . '" name="' . esc_attr( $this->get_field_name( $field ) ) . '">';
-			foreach ( $pair[1] as $value => $label ) {
-				echo '<option value="' . esc_attr( $value ) . '"' . selected( (string) $instance[ $field ], $value, false ) . '>' . esc_html( $label ) . '</option>';
-			}
-			echo '</select></p>';
+			$this->select( $field, $pair[0], $pair[1], (string) $instance[ $field ] );
 		}
 		echo '<p><input type="checkbox" id="' . esc_attr( $this->get_field_id( 'flags' ) ) . '" name="' . esc_attr( $this->get_field_name( 'flags' ) ) . '" value="1"' . checked( ! empty( $instance['flags'] ), true, false ) . '> <label for="' . esc_attr( $this->get_field_id( 'flags' ) ) . '">' . esc_html__( 'Show flags (a flag is a country, not a language)', 'tranzly' ) . '</label></p>';
+		$this->select( 'flag_shape', __( 'Flag shape', 'tranzly' ), Switcher::flag_shape_labels( true ), (string) $instance['flag_shape'] );
+		$this->select( 'flag_size', __( 'Flag size', 'tranzly' ), Switcher::flag_size_labels( true ), (string) $instance['flag_size'] );
 
 		return '';
+	}
+
+	/**
+	 * One labelled select of the form.
+	 *
+	 * @param string                $field   Field name.
+	 * @param string                $label   Its label.
+	 * @param array<string, string> $choices value => label.
+	 * @param string                $current The saved value.
+	 * @return void
+	 */
+	private function select( string $field, string $label, array $choices, string $current ): void {
+		echo '<p><label for="' . esc_attr( $this->get_field_id( $field ) ) . '">' . esc_html( $label ) . '</label> <select class="widefat" id="' . esc_attr( $this->get_field_id( $field ) ) . '" name="' . esc_attr( $this->get_field_name( $field ) ) . '">';
+		foreach ( $choices as $value => $name ) {
+			echo '<option value="' . esc_attr( (string) $value ) . '"' . selected( $current, (string) $value, false ) . '>' . esc_html( $name ) . '</option>';
+		}
+		echo '</select></p>';
 	}
 
 	/**
@@ -105,17 +122,21 @@ final class Widget extends \WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$clean = Switcher::normalise(
 			array(
-				'style'   => $new_instance['style'] ?? 'list',
-				'display' => $new_instance['display'] ?? 'name',
-				'flags'   => ! empty( $new_instance['flags'] ),
+				'style'     => $new_instance['style'] ?? 'list',
+				'display'   => $new_instance['display'] ?? 'name',
+				'flags'     => ! empty( $new_instance['flags'] ),
+				'flagShape' => $new_instance['flag_shape'] ?? '',
+				'flagSize'  => $new_instance['flag_size'] ?? '',
 			)
 		);
 
 		return array(
-			'title'   => sanitize_text_field( (string) ( $new_instance['title'] ?? '' ) ),
-			'style'   => $clean['style'],
-			'display' => $clean['display'],
-			'flags'   => $clean['flags'],
+			'title'      => sanitize_text_field( (string) ( $new_instance['title'] ?? '' ) ),
+			'style'      => $clean['style'],
+			'display'    => $clean['display'],
+			'flags'      => $clean['flags'],
+			'flag_shape' => $clean['flagShape'],
+			'flag_size'  => $clean['flagSize'],
 		);
 	}
 
@@ -142,9 +163,11 @@ final class Widget extends \WP_Widget {
 	 */
 	private static function switcher_args( array $instance ): array {
 		return array(
-			'style'   => $instance['style'] ?? 'list',
-			'display' => $instance['display'] ?? 'name',
-			'flags'   => ! empty( $instance['flags'] ),
+			'style'     => $instance['style'] ?? 'list',
+			'display'   => $instance['display'] ?? 'name',
+			'flags'     => ! empty( $instance['flags'] ),
+			'flagShape' => $instance['flag_shape'] ?? '',
+			'flagSize'  => $instance['flag_size'] ?? '',
 		);
 	}
 }

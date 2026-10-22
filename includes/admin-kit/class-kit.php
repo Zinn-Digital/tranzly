@@ -47,6 +47,9 @@ final class Kit {
 		Licence::register();
 		Legacy_Support_Users::register();
 		Rest::register();
+		if ( class_exists( __NAMESPACE__ . '\\Language_Packs', false ) ) {
+			Language_Packs::register();
+		}
 	}
 
 	/**

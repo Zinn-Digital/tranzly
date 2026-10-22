@@ -11,6 +11,7 @@ namespace ZinnDigital\Tranzly\Switcher;
 
 use ZinnDigital\Tranzly\Assets;
 use ZinnDigital\Tranzly\Core\Locales;
+use ZinnDigital\Tranzly\Core\Options;
 use ZinnDigital\Tranzly\Frontend;
 use ZinnDigital\Tranzly\Languages;
 use ZinnDigital\Tranzly\Seo\Router;
@@ -45,6 +46,12 @@ final class Switcher {
 	/** How each language is named. */
 	public const DISPLAYS = array( 'name', 'code', 'name_code' );
 
+	/** The shapes a flag can take; the first is the default. */
+	public const FLAG_SHAPES = array( 'rectangle', 'rounded', 'square', 'circle' );
+
+	/** The sizes a flag can take; the first is the default. */
+	public const FLAG_SIZES = array( 'medium', 'small', 'large' );
+
 	/** Custom properties a caller may set, and the CSS property each styles. */
 	public const STYLE_VARS = array(
 		'color'       => 'color',
@@ -67,12 +74,43 @@ final class Switcher {
 			'style'       => 'list',
 			'display'     => 'name',
 			'flags'       => false,
+			'flagShape'   => '',
+			'flagSize'    => '',
 			'showCurrent' => true,
 			'hideMissing' => false,
 			'vertical'    => false,
 			'label'       => '',
 			'floating'    => '',
 			'vars'        => array(),
+		);
+	}
+
+	/**
+	 * The flag shapes, named for people ('' = the site's Switchers setting, when offered).
+	 *
+	 * @param bool $with_site Offer "Site setting" first.
+	 * @return array<string, string>
+	 */
+	public static function flag_shape_labels( bool $with_site = false ): array {
+		return ( $with_site ? array( '' => __( 'Site setting', 'tranzly' ) ) : array() ) + array(
+			'rectangle' => __( 'Rectangle', 'tranzly' ),
+			'rounded'   => __( 'Rounded rectangle', 'tranzly' ),
+			'square'    => __( 'Square', 'tranzly' ),
+			'circle'    => __( 'Circle', 'tranzly' ),
+		);
+	}
+
+	/**
+	 * The flag sizes, named for people ('' = the site's Switchers setting, when offered).
+	 *
+	 * @param bool $with_site Offer "Site setting" first.
+	 * @return array<string, string>
+	 */
+	public static function flag_size_labels( bool $with_site = false ): array {
+		return ( $with_site ? array( '' => __( 'Site setting', 'tranzly' ) ) : array() ) + array(
+			'small'  => __( 'Small', 'tranzly' ),
+			'medium' => __( 'Medium', 'tranzly' ),
+			'large'  => __( 'Large', 'tranzly' ),
 		);
 	}
 
@@ -89,6 +127,9 @@ final class Switcher {
 			'style'       => in_array( $args['style'] ?? '', self::STYLES, true ) ? (string) $args['style'] : $d['style'],
 			'display'     => in_array( $args['display'] ?? '', self::DISPLAYS, true ) ? (string) $args['display'] : $d['display'],
 			'flags'       => self::truthy( $args['flags'] ?? false ),
+			// '' = the site's own choice (Tranzly → Switchers), filled in by render().
+			'flagShape'   => in_array( $args['flagShape'] ?? '', self::FLAG_SHAPES, true ) ? (string) $args['flagShape'] : '',
+			'flagSize'    => in_array( $args['flagSize'] ?? '', self::FLAG_SIZES, true ) ? (string) $args['flagSize'] : '',
 			'showCurrent' => self::truthy( $args['showCurrent'] ?? true ),
 			'hideMissing' => self::truthy( $args['hideMissing'] ?? false ),
 			'vertical'    => self::truthy( $args['vertical'] ?? false ),
@@ -123,6 +164,15 @@ final class Switcher {
 			Assets::enqueue_script( 'switcher.js' );
 		}
 		$args['label'] = self::unique_label( '' !== $args['label'] ? $args['label'] : __( 'Choose a language', 'tranzly' ) );
+		$site          = Options::get()['switcher'];
+		foreach ( array(
+			'flagShape' => 'flag_shape',
+			'flagSize'  => 'flag_size',
+		) as $arg => $option ) {
+			if ( '' === $args[ $arg ] ) {
+				$args[ $arg ] = (string) ( $site[ $option ] ?? '' );
+			}
+		}
 
 		return self::html( $args, $items, Languages::current(), Settings::prefix() );
 	}
@@ -275,7 +325,7 @@ final class Switcher {
 		if ( $args['flags'] ) {
 			$flag = self::flag( $code );
 			if ( '' !== $flag ) {
-				$out .= '<span class="' . esc_attr( Frontend::classes( $prefix, 'lsw__flag' ) ) . '" aria-hidden="true">' . $flag . '</span>';
+				$out .= '<span class="' . esc_attr( Frontend::classes( $prefix, ...self::flag_classes( $args ) ) ) . '" aria-hidden="true">' . $flag . '</span>';
 			}
 		}
 		$display = 'codes' === $args['style'] ? 'code' : $args['display'];
@@ -287,6 +337,27 @@ final class Switcher {
 			$out .= '<span class="' . esc_attr( Frontend::classes( $prefix, 'lsw__name' ) ) . '">' . esc_html( $name ) . '</span> <span class="' . esc_attr( Frontend::classes( $prefix, 'lsw__code' ) ) . '" aria-hidden="true">' . esc_html( $short ) . '</span>';
 		} else {
 			$out .= '<span class="' . esc_attr( Frontend::classes( $prefix, 'lsw__name' ) ) . '">' . esc_html( $name ) . '</span>';
+		}
+
+		return $out;
+	}
+
+	/**
+	 * A flag's classes: its shape and size as modifiers, none for the default rectangle at the
+	 * medium size (so a switcher saved before shapes existed keeps the same markup).
+	 *
+	 * @param array<string, mixed> $args Normalised arguments.
+	 * @return array<int, string>
+	 */
+	private static function flag_classes( array $args ): array {
+		$out   = array( 'lsw__flag' );
+		$shape = (string) ( $args['flagShape'] ?? '' );
+		$size  = (string) ( $args['flagSize'] ?? '' );
+		if ( '' !== $shape && self::FLAG_SHAPES[0] !== $shape && in_array( $shape, self::FLAG_SHAPES, true ) ) {
+			$out[] = 'lsw__flag--' . $shape;
+		}
+		if ( '' !== $size && self::FLAG_SIZES[0] !== $size && in_array( $size, self::FLAG_SIZES, true ) ) {
+			$out[] = 'lsw__flag--' . $size;
 		}
 
 		return $out;

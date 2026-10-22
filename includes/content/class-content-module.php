@@ -42,6 +42,7 @@ final class Content_Module {
 		Shared_Strings::register();
 		Term_Admin::register();
 		Post_Admin::register();
+		List_Table::register();
 		Media_Admin::register();
 		Visibility::register();
 		add_action( 'admin_bar_menu', array( self::class, 'admin_bar' ), 90 );

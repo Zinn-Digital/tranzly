@@ -11,6 +11,8 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
+import { flagShapeOptions, flagSizeOptions } from '../editor/switcher-model';
+
 /**
  * The "Language switchers" tab (T5): the floating switcher and the automatic one around the
  * content, plus where every other kind of switcher is added. Self-contained, so the shared admin
@@ -56,6 +58,8 @@ export default function Switchers( { pro } ) {
 					style: display.style,
 					floating: display.floating,
 					display: display.display,
+					flag_shape: display.flag_shape,
+					flag_size: display.flag_size,
 				},
 			},
 		} )
@@ -182,6 +186,33 @@ export default function Switchers( { pro } ) {
 						onChange={ ( on ) =>
 							set( { style: on ? 'flags' : 'names' } )
 						}
+					/>
+				</PanelBody>
+				<PanelBody
+					title={ __( 'Flags', 'tranzly' ) }
+					initialOpen={ false }
+				>
+					<p>
+						{ __(
+							'The shape and size of the flags in every switcher that shows them. A block, widget or builder element can still choose its own.',
+							'tranzly'
+						) }
+					</p>
+					<SelectControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
+						label={ __( 'Flag shape', 'tranzly' ) }
+						value={ display.flag_shape }
+						options={ flagShapeOptions() }
+						onChange={ ( value ) => set( { flag_shape: value } ) }
+					/>
+					<SelectControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
+						label={ __( 'Flag size', 'tranzly' ) }
+						value={ display.flag_size }
+						options={ flagSizeOptions() }
+						onChange={ ( value ) => set( { flag_size: value } ) }
 					/>
 				</PanelBody>
 				<PanelBody

@@ -60,7 +60,7 @@ final class Suggest {
 			'current' => str_replace( '_', '-', Languages::current() ),
 			'offers'  => $offers,
 		);
-		wp_add_inline_script( $handle, 'window.' . \ZinnDigital\Tranzly\Settings::prefix() . 'Lsg=' . wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE ) . ';', 'before' );
+		wp_add_inline_script( $handle, 'window.' . \ZinnDigital\Tranzly\Settings::prefix() . 'Lsg=' . wp_json_encode( $data, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/**

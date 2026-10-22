@@ -9,6 +9,7 @@ declare( strict_types = 1 );
 
 namespace ZinnDigital\Tranzly\Core;
 
+use ZinnDigital\Tranzly\Engines\Billed_Characters;
 use ZinnDigital\Tranzly\Engines\Engine;
 use ZinnDigital\Tranzly\Engines\Failure;
 use ZinnDigital\Tranzly\Engines\Registry;
@@ -59,6 +60,21 @@ final class Translator {
 	 * @var int
 	 */
 	private static int $writing = 0;
+
+	/**
+	 * What the provider billed for the last item translated in this request (engine label and
+	 * characters), when the engine reports it ({@see Billed_Characters}); null otherwise.
+	 *
+	 * @var array{engine: string, characters: int}|null
+	 */
+	private static ?array $billed = null;
+
+	/**
+	 * Characters billed by the engine call in progress (summed over its formats).
+	 *
+	 * @var int|null
+	 */
+	private static ?int $billed_now = null;
 
 	/**
 	 * Translate a post into a language, creating the translation when it does not exist.
@@ -472,7 +488,8 @@ final class Translator {
 	 * @return array{texts: array<string, string>, engine: Engine, model: string}|\WP_Error
 	 */
 	private static function run( array $chain, array $segments, string $source, string $target ) {
-		$options = self::options_for( $target, $chain[0] );
+		self::$billed = null;
+		$options      = self::options_for( $target, $chain[0] );
 
 		$out      = array();
 		$missing  = array(); // format => key => text.
@@ -541,6 +558,12 @@ final class Translator {
 
 		$ran = self::through_chain( $chain, $missing, $source, $target, $options );
 		if ( ! is_wp_error( $ran ) ) {
+			if ( null !== ( $ran['billed'] ?? null ) ) {
+				self::$billed = array(
+					'engine'     => $ran['engine']->label(),
+					'characters' => (int) $ran['billed'],
+				);
+			}
 			foreach ( $ran['texts'] as $key => $translation ) {
 				$out[ $key ] = $translation;
 				if ( null !== $memory && isset( $reserved[ $key ] ) ) {
@@ -716,7 +739,7 @@ final class Translator {
 	 * @param string                               $source  Source language.
 	 * @param string                               $target  Target language.
 	 * @param array<string, mixed>                 $options Engine options (no format).
-	 * @return array{texts: array<string, string>, engine: Engine, model: string}|\WP_Error
+	 * @return array{texts: array<string, string>, engine: Engine, model: string, billed: int|null}|\WP_Error
 	 */
 	public static function through_chain( array $chain, array $missing, string $source, string $target, array $options ) {
 		$last = null;
@@ -751,6 +774,7 @@ final class Translator {
 				'texts'  => Style_Rules::apply_all( $answer, $sources, $target ),
 				'engine' => $engine,
 				'model'  => Engine_Settings::model_of( $engine, $target ),
+				'billed' => self::$billed_now,
 			);
 		}
 
@@ -768,11 +792,16 @@ final class Translator {
 	 * @return array<string, string>|\WP_Error
 	 */
 	private static function call( Engine $engine, array $missing, string $source, string $target, array $options ) {
-		$out = array();
+		$out              = array();
+		self::$billed_now = null;
 		foreach ( $missing as $format => $texts ) {
 			$answer = $engine->translate( $texts, $source, $target, array( 'format' => $format ) + $options );
 			if ( is_wp_error( $answer ) ) {
 				return $answer;
+			}
+			$billed = $engine instanceof Billed_Characters ? $engine->billed_characters() : null;
+			if ( null !== $billed ) {
+				self::$billed_now = (int) self::$billed_now + $billed;
 			}
 			if ( array() !== array_diff_key( $texts, (array) $answer ) ) {
 				return Failure::make( Failure::UNKNOWN, $engine, __( 'The engine did not return a translation for every part of this item. Nothing was changed.', 'tranzly' ) );
@@ -783,6 +812,36 @@ final class Translator {
 		}
 
 		return $out;
+	}
+
+	/**
+	 * What the provider billed for the last item this request translated, e.g. DeepL's own count
+	 * of characters, or null when nothing was sent (all from memory) or the engine does not say.
+	 *
+	 * @return array{engine: string, characters: int}|null
+	 */
+	public static function last_billed(): ?array {
+		return self::$billed;
+	}
+
+	/**
+	 * The sentence shown after a machine translation when the provider reported its billing
+	 * ("DeepL billed 1,234 characters."), or '' when it did not.
+	 *
+	 * @param array{engine: string, characters: int}|null $billed {@see last_billed()}.
+	 * @return string
+	 */
+	public static function billed_sentence( ?array $billed ): string {
+		if ( null === $billed ) {
+			return '';
+		}
+
+		return sprintf(
+			/* translators: 1: a translation engine, e.g. DeepL; 2: a number of characters, e.g. 1,234. */
+			_n( '%1$s billed %2$s character.', '%1$s billed %2$s characters.', (int) $billed['characters'], 'tranzly' ),
+			$billed['engine'],
+			number_format_i18n( (int) $billed['characters'] )
+		);
 	}
 
 	/**

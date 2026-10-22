@@ -1,5 +1,6 @@
 /* Generated from wp/packages/zinn-admin-kit/src/js/Overview.js by wp/bin/build-admin-kit.php. Edit the package, never this copy. */
 import { __, sprintf } from '@wordpress/i18n';
+import { Fragment } from '@wordpress/element';
 import {
 	Button,
 	Card,
@@ -14,7 +15,8 @@ import { PromoCard, CrossSellCard } from './PromoCard';
 
 /**
  * The first screen: what this site runs, where everything is, and — on our own screen only — the
- * hosting promotion and the cross-sell (features adm-4, adm-5).
+ * hosting promotion and the cross-sell (features adm-4, adm-5). A host screen may add its own
+ * card here by giving its route an `overview( navigate )` function (Zinn® SEO's credit card).
  *
  * @param {Object}        props
  * @param {Object}        props.kit       Boot data.
@@ -69,6 +71,13 @@ export default function Overview( {
 					</CardBody>
 				</Card>
 			) }
+			{ routes
+				.filter( ( r ) => typeof r.overview === 'function' )
+				.map( ( r ) => (
+					<Fragment key={ `overview-${ r.id }` }>
+						{ r.overview( navigate ) }
+					</Fragment>
+				) ) }
 			<Card className="zak-card" data-zak-tour="status">
 				<CardHeader>
 					<h2 className="zak-card__title">

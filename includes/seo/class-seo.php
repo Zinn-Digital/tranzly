@@ -36,6 +36,7 @@ final class Seo {
 		Robots::register();
 		Suggest::register();
 		Primer::register();
+		Zinn_Seo::register();
 		add_action( 'rest_api_init', array( self::class, 'register_routes' ) );
 		add_action( 'admin_init', array( Url_Settings::class, 'ensure' ) );
 		// Cheap (two queries, a write only on change) and catches links made through the REST API.
@@ -134,6 +135,7 @@ final class Seo {
 			'seo_plugins'  => array_values(
 				array_filter(
 					array(
+						Zinn_Seo::active() ? 'Zinn® SEO' : null,
 						defined( 'WPSEO_VERSION' ) ? 'Yoast SEO' : null,
 						defined( 'RANK_MATH_VERSION' ) ? 'Rank Math' : null,
 						defined( 'SEOPRESS_VERSION' ) ? 'SEOPress' : null,
@@ -152,6 +154,9 @@ final class Seo {
 	 */
 	private static function sitemap_urls(): array {
 		$home = Router::raw_home();
+		if ( Zinn_Seo::draws_sitemap() ) {
+			return array( Zinn_Seo::sitemap_url() );
+		}
 		if ( defined( 'WPSEO_VERSION' ) || defined( 'RANK_MATH_VERSION' ) ) {
 			return array( $home . '/sitemap_index.xml' );
 		}

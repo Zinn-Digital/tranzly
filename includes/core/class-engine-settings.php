@@ -134,6 +134,12 @@ final class Engine_Settings {
 	public static function chain( string $lang ): array {
 		$settings = self::get();
 		$first    = $settings['default'];
+		// ⛔ A stored default the site no longer has (a Pro engine after a trial ended unpaid, lane
+		// R35) would leave every translation failing on an engine that does not exist: the free
+		// default takes over, and the stored choice comes back the moment Pro does.
+		if ( '' !== $first && null === Registry::instance()->get( $first ) ) {
+			$first = '';
+		}
 		if ( '' === $first ) {
 			$default = Registry::instance()->default_engine();
 			$first   = null === $default ? '' : $default->id();

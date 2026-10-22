@@ -6,7 +6,17 @@
  */
 ( function () {
 	'use strict';
-	const menus = document.querySelectorAll( '.__PREFIX__-lsw__menu' );
+	// The class prefix: written into the copy published under uploads, or read from this
+	// script's own URL when it is served from the plugin folder (uploads not writable).
+	const PFX =
+		'__PREFIX__'.indexOf( '__' ) === 0
+			? ( document.currentScript &&
+					new URL( document.currentScript.src ).searchParams.get(
+						'pfx'
+					) ) ||
+				''
+			: '__PREFIX__';
+	const menus = document.querySelectorAll( '.' + PFX + '-lsw__menu' );
 	if ( ! menus.length ) {
 		return;
 	}

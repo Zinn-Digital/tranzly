@@ -167,22 +167,30 @@ final class Rest_Content {
 						'switcher' => array(
 							'type'                 => 'object',
 							'properties'           => array(
-								'position' => array(
+								'position'   => array(
 									'type' => 'string',
 									'enum' => Options::POSITIONS,
 								),
-								'style'    => array(
+								'style'      => array(
 									'type' => 'string',
 									'enum' => Options::STYLES,
 								),
-								'new_tab'  => array( 'type' => 'boolean' ),
-								'floating' => array(
+								'new_tab'    => array( 'type' => 'boolean' ),
+								'floating'   => array(
 									'type' => 'string',
 									'enum' => Options::FLOATING,
 								),
-								'display'  => array(
+								'display'    => array(
 									'type' => 'string',
 									'enum' => Options::DISPLAYS,
+								),
+								'flag_shape' => array(
+									'type' => 'string',
+									'enum' => Options::FLAG_SHAPES,
+								),
+								'flag_size'  => array(
+									'type' => 'string',
+									'enum' => Options::FLAG_SIZES,
 								),
 							),
 							'additionalProperties' => false,

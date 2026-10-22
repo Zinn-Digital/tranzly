@@ -76,12 +76,17 @@ function TranslationsPanel() {
 		for ( const code of picked ) {
 			setBusy( code );
 			try {
-				await apiFetch( {
+				const done = await apiFetch( {
 					path: `/tranzly/v1/posts/${ data.source }/translate`,
 					method: 'POST',
 					data: { lang: code, status: publish ? 'publish' : 'draft' },
 				} );
-				out.push( { code, ok: true } );
+				// The provider's own count, when it gives one (DeepL): "DeepL billed 1,234 characters."
+				out.push( {
+					code,
+					ok: true,
+					billed: done?.billed?.message || '',
+				} );
 			} catch ( e ) {
 				out.push( { code, ok: false, message: e.message } );
 			}
@@ -217,11 +222,16 @@ function TranslationsPanel() {
 							isDismissible={ false }
 						>
 							{ r.ok
-								? sprintf(
-										/* translators: %s: a language's name, e.g. Deutsch. */
-										__( '%s: translated.', 'tranzly' ),
-										nameOf( r.code )
-									)
+								? [
+										sprintf(
+											/* translators: %s: a language's name, e.g. Deutsch. */
+											__( '%s: translated.', 'tranzly' ),
+											nameOf( r.code )
+										),
+										r.billed,
+									]
+										.filter( Boolean )
+										.join( ' ' )
 								: `${ nameOf( r.code ) }: ${ r.message }` }
 						</Notice>
 					) ) }

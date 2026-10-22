@@ -9,6 +9,8 @@ declare( strict_types = 1 );
 
 namespace ZinnDigital\Tranzly\Core;
 
+use ZinnDigital\Tranzly\Switcher\Switcher;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -38,10 +40,16 @@ final class Options {
 	/** How the floating switcher names each language. */
 	public const DISPLAYS = array( 'name', 'code', 'name_code' );
 
+	/** The flag shape every switcher uses unless it sets its own (the first is the default). */
+	public const FLAG_SHAPES = Switcher::FLAG_SHAPES;
+
+	/** The flag size every switcher uses unless it sets its own (the first is the default). */
+	public const FLAG_SIZES = Switcher::FLAG_SIZES;
+
 	/**
 	 * The stored options over the defaults.
 	 *
-	 * @return array{switcher: array{position: string, style: string, new_tab: bool, floating: string, display: string}, credit: bool}
+	 * @return array{switcher: array{position: string, style: string, new_tab: bool, floating: string, display: string, flag_shape: string, flag_size: string}, credit: bool}
 	 */
 	public static function get(): array {
 		$stored   = get_option( self::OPTION, array() );
@@ -50,11 +58,13 @@ final class Options {
 
 		return array(
 			'switcher' => array(
-				'position' => in_array( $switcher['position'] ?? '', self::POSITIONS, true ) ? (string) $switcher['position'] : 'none',
-				'style'    => in_array( $switcher['style'] ?? '', self::STYLES, true ) ? (string) $switcher['style'] : 'names',
-				'new_tab'  => true === ( $switcher['new_tab'] ?? false ),
-				'floating' => in_array( $switcher['floating'] ?? null, self::FLOATING, true ) ? (string) $switcher['floating'] : '',
-				'display'  => in_array( $switcher['display'] ?? '', self::DISPLAYS, true ) ? (string) $switcher['display'] : 'name',
+				'position'   => in_array( $switcher['position'] ?? '', self::POSITIONS, true ) ? (string) $switcher['position'] : 'none',
+				'style'      => in_array( $switcher['style'] ?? '', self::STYLES, true ) ? (string) $switcher['style'] : 'names',
+				'new_tab'    => true === ( $switcher['new_tab'] ?? false ),
+				'floating'   => in_array( $switcher['floating'] ?? null, self::FLOATING, true ) ? (string) $switcher['floating'] : '',
+				'display'    => in_array( $switcher['display'] ?? '', self::DISPLAYS, true ) ? (string) $switcher['display'] : 'name',
+				'flag_shape' => in_array( $switcher['flag_shape'] ?? '', self::FLAG_SHAPES, true ) ? (string) $switcher['flag_shape'] : self::FLAG_SHAPES[0],
+				'flag_size'  => in_array( $switcher['flag_size'] ?? '', self::FLAG_SIZES, true ) ? (string) $switcher['flag_size'] : self::FLAG_SIZES[0],
 			),
 			'credit'   => true === ( $stored['credit'] ?? false ),
 		);
@@ -84,6 +94,10 @@ final class Options {
 					$current['switcher']['floating'] = $value;
 				} elseif ( 'display' === $key && in_array( $value, self::DISPLAYS, true ) ) {
 					$current['switcher']['display'] = $value;
+				} elseif ( 'flag_shape' === $key && in_array( $value, self::FLAG_SHAPES, true ) ) {
+					$current['switcher']['flag_shape'] = $value;
+				} elseif ( 'flag_size' === $key && in_array( $value, self::FLAG_SIZES, true ) ) {
+					$current['switcher']['flag_size'] = $value;
 				} else {
 					return self::refuse( 'switcher.' . $key );
 				}

@@ -45,18 +45,27 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 	const mode = useColorMode( prefs.theme || 'auto' );
 	const tours = useMemo( () => kitTours(), [] );
 
+	// A host may hide the kit's own screens (an agency's white label hides Plans, Add-ons and
+	// the help desk; a client login sees only what the agency allowed). Hidden means not drawn
+	// and not reachable by `?view=` — the host's server refuses their data as well.
+	const hidden = useMemo( () => new Set( kit.hidden || [] ), [ kit.hidden ] );
 	const routes = useMemo(
-		() => [
-			{ id: 'overview', label: __( 'Overview', 'tranzly' ) },
-			...hostRoutes,
-			{ id: 'setup', label: __( 'Setup', 'tranzly' ) },
-			{ id: 'plans', label: __( 'Plans and licence', 'tranzly' ) },
-			{ id: 'addons', label: __( 'Add-ons', 'tranzly' ) },
-			{ id: 'help', label: __( 'Get help', 'tranzly' ) },
-			{ id: 'feedback', label: __( 'Feedback', 'tranzly' ) },
-		],
-		[ hostRoutes ]
+		() =>
+			[
+				{ id: 'overview', label: __( 'Overview', 'tranzly' ) },
+				...hostRoutes,
+				{ id: 'setup', label: __( 'Setup', 'tranzly' ) },
+				{
+					id: 'plans',
+					label: __( 'Plans and licence', 'tranzly' ),
+				},
+				{ id: 'addons', label: __( 'Add-ons', 'tranzly' ) },
+				{ id: 'help', label: __( 'Get help', 'tranzly' ) },
+				{ id: 'feedback', label: __( 'Feedback', 'tranzly' ) },
+			].filter( ( r ) => ! hidden.has( r.id ) ),
+		[ hostRoutes, hidden ]
 	);
+	const brand = kit.brand || null;
 	const [ view, navigate ] = useView(
 		routes,
 		wizardState,
@@ -153,20 +162,33 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 
 	return (
 		<div
-			className={ `zak-shell is-${ mode }` }
+			className={ `zak-shell is-${ mode }${ brand ? ' is-branded' : '' }` }
 			data-zak-mode={ mode }
 			dir={ kit.rtl ? 'rtl' : 'ltr' }
+			style={ brand && brand.colours ? brand.colours : undefined }
 		>
 			{ /* ⛔ Plain divs, not <header>/<main>: the shell renders INSIDE WordPress admin's own
 				main landmark, so a second banner and main here are nested and duplicated landmarks
 				(axe, L06 2026-09-28; the kit e2e now scans the whole page). */ }
 			<div className="zak-header">
 				<div className="zak-header__title">
+					{ brand && brand.logo && (
+						<img
+							className="zak-header__logo"
+							src={ brand.logo }
+							alt=""
+							height="32"
+						/>
+					) }
 					<h1>{ kit.name }</h1>
-					<span className="zak-badge" data-zak-tour="status">
-						{ badgeText( kit.licence ) }
-					</span>
-					<span className="zak-version">{ kit.version }</span>
+					{ ! ( brand && brand.plain ) && (
+						<>
+							<span className="zak-badge" data-zak-tour="status">
+								{ badgeText( kit.licence ) }
+							</span>
+							<span className="zak-version">{ kit.version }</span>
+						</>
+					) }
 				</div>
 				<div className="zak-header__tools">
 					<span data-zak-tour="theme">
@@ -227,17 +249,19 @@ export default function Shell( { kit, hostRoutes = [], wizard = [] } ) {
 											) }
 										</MenuItem>
 									) }
-									<MenuItem
-										onClick={ () => {
-											navigate( 'help' );
-											onClose();
-										} }
-									>
-										{ __(
-											'Get help or report a bug',
-											'tranzly'
-										) }
-									</MenuItem>
+									{ ! hidden.has( 'help' ) && (
+										<MenuItem
+											onClick={ () => {
+												navigate( 'help' );
+												onClose();
+											} }
+										>
+											{ __(
+												'Get help or report a bug',
+												'tranzly'
+											) }
+										</MenuItem>
+									) }
 								</MenuGroup>
 							) }
 						</DropdownMenu>

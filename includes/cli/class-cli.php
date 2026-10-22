@@ -273,6 +273,7 @@ final class Cli {
 		$done    = 0;
 		$skipped = 0;
 		$failed  = 0;
+		$billed  = array(); // engine label => characters the provider billed.
 		foreach ( $batches as $batch ) {
 			foreach ( $batch as $id ) {
 				foreach ( $langs as $lang ) {
@@ -298,11 +299,18 @@ final class Cli {
 						continue;
 					}
 					++$done;
-					\WP_CLI::log( sprintf( '#%d %s -> #%d', $id, $lang, $result ) );
+					$cost = Translator::last_billed();
+					if ( null !== $cost ) {
+						$billed[ $cost['engine'] ] = ( $billed[ $cost['engine'] ] ?? 0 ) + $cost['characters'];
+					}
+					\WP_CLI::log( sprintf( '#%d %s -> #%d', $id, $lang, $result ) . ( null === $cost ? '' : sprintf( ' (%s billed %d characters)', $cost['engine'], $cost['characters'] ) ) );
 				}
 			}
 		}
 		$line = sprintf( 'translated %d, skipped %d (protected or already that language), failed %d.', $done, $skipped, $failed );
+		foreach ( $billed as $label => $characters ) {
+			$line .= sprintf( ' %s billed %d characters.', $label, $characters );
+		}
 		if ( $failed > 0 ) {
 			\WP_CLI::error( $line );
 		}
@@ -510,28 +518,28 @@ final class Cli {
 				\WP_CLI::success( 'Cancelled.' );
 				return;
 			case 'run':
+				// ⛔ To the END of the job. An item that cannot be worked this second is held by
+				// another worker, or by one that died (its lease gives it back), or is waiting to
+				// be tried again: the command waits for it. It used to stop when nothing was due
+				// within a minute and print a job with items still "running" — the caller read
+				// that as finished and had to run the job again (zinnseo demo, 2026-10-11).
 				$job = (int) ( $args[0] ?? 0 );
-				do {
+				while ( true ) {
 					Queue::work( $job );
 					$progress = Queue::progress( $job );
-				} while ( null !== $progress && 'running' === $progress['status'] && ( $progress['counts']['queued'] + $progress['counts']['running'] ) > 0 && self::claimable_soon( $job ) );
+					$wait     = Queue::next_due( $job );
+					if ( null === $progress || 'running' !== $progress['status'] || null === $wait ) {
+						break;
+					}
+					if ( $wait > 0 ) {
+						sleep( min( $wait, 15 ) );
+					}
+				}
 				self::print( Queue::progress( $job ), $format );
 				return;
 			default:
 				\WP_CLI::error( 'Use create, status, failures, retry, retry-failed, cancel or run.' );
 		}
-	}
-
-	/**
-	 * Is any queued item of a job due within a minute (so `run` should keep going)?
-	 *
-	 * @param int $job Job ID.
-	 * @return bool
-	 */
-	private static function claimable_soon( int $job ): bool {
-		global $wpdb;
-
-		return null !== $wpdb->get_var( $wpdb->prepare( "SELECT id FROM %i WHERE job_id = %d AND status IN ('queued','running') AND ( lease_until IS NULL OR lease_until <= %s ) LIMIT 1", \ZinnDigital\Tranzly\Core\Schema::tables()['items'], $job, gmdate( 'Y-m-d H:i:s', time() + 60 ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table; WP-CLI only.
 	}
 
 	/**

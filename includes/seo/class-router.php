@@ -110,6 +110,7 @@ final class Router {
 		add_action( 'init', array( self::class, 'set_text_direction' ), 1 );
 
 		add_action( 'template_redirect', array( self::class, 'redirects' ), 1 );
+		add_filter( 'allowed_redirect_hosts', array( self::class, 'allowed_hosts' ) );
 
 		// The two maps follow the options and every change to a post (or a link) in those groups.
 		$hooks = array( 'update_option_show_on_front', 'update_option_' . Url_Settings::OPTION );
@@ -709,7 +710,8 @@ final class Router {
 		$current   = Languages::current();
 		$resolving = false;
 
-		return $current;
+		// ⭐ The locale WordPress loads translations for (`fil` → `tl`, R27); the URL keeps `fil`.
+		return \ZinnDigital\Tranzly\Core\Locales::wp_locale( $current );
 	}
 
 	/**
@@ -740,6 +742,14 @@ final class Router {
 		if ( ! self::is_front() || is_preview() ) {
 			return;
 		}
+		$host_move = self::lapsed_host_target( self::request_host(), self::request_uri() ) ?? self::host_target( self::request_host(), self::request_uri() );
+		if ( null !== $host_move ) {
+			// ⛔ 302, never 301 (lane R35): the move lasts only while the licence is lapsed (or, the other
+			// way, only until it lapses again). A cached 301 in each direction would loop a visitor.
+			nocache_headers();
+			wp_safe_redirect( $host_move, 302, 'WordPress' );
+			exit;
+		}
 		$target = null;
 		$var    = Languages::query_var();
 		if ( 'query' !== self::mode() && isset( $_GET[ $var ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- a public language selector from an old link.
@@ -761,6 +771,96 @@ final class Router {
 			wp_safe_redirect( $target, 301, 'WordPress' );
 			exit;
 		}
+	}
+
+	/**
+	 * Where a request on a language subdomain or domain goes once the Pro licence has lapsed: the
+	 * same address under the language's folder on the main host (de.example.com/ueber-uns/ ->
+	 * example.com/de/ueber-uns/), or null.
+	 *
+	 * ⚖️ Owner decision 2026-10-18 (lane R35, option A): when a trial ends unpaid the Pro URL modes
+	 * stop, every language stays online (the free edition has no language limit) and nothing
+	 * 404s. Url_Settings::get() already serves folders then; this moves visitors and search
+	 * engines that still arrive on the hosts. Measured before: a translated page answered with a
+	 * PERMANENT redirect from its 404 fallback, and any other address on the host served the
+	 * main language's page under the language host.
+	 *
+	 * @param string $host The request host, lower case, with port.
+	 * @param string $uri  The request URI.
+	 * @return string|null
+	 */
+	public static function lapsed_host_target( string $host, string $uri ): ?string {
+		$stored = Url_Settings::stored_mode();
+		if ( ! in_array( $stored, Url_Settings::PRO_MODES, true ) || self::mode() === $stored ) {
+			return null;
+		}
+		$home = self::home_parts();
+		if ( '' === $host || $host === $home['host'] ) {
+			return null;
+		}
+		$settings = Url_Settings::get();
+		foreach ( $settings['segments'] as $code => $segment ) {
+			if ( Languages::default_code() === $code ) {
+				continue;
+			}
+			$match = 'subdomain' === $stored ? $host === $segment . '.' . $home['host'] : ( $settings['domains'][ $code ] ?? '' ) === $host;
+			if ( $match ) {
+				return self::raw_home() . '/' . $segment . '/' . ltrim( $uri, '/' );
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Where a language-folder address on the main host goes while the Pro URL mode is running: the
+	 * language's own host (example.com/de/ueber-uns/ -> de.example.com/ueber-uns/), or null. This
+	 * is the way back once a lapsed licence is paid: addresses visitors and search engines learned
+	 * meanwhile lead to the page at once. Measured before (lane R35): such an address answered 404,
+	 * or a redirect to wp-admin when the moved-page lookup found it on a host WordPress did not allow.
+	 *
+	 * @param string $host The request host, lower case, with port.
+	 * @param string $uri  The request URI.
+	 * @return string|null
+	 */
+	public static function host_target( string $host, string $uri ): ?string {
+		if ( ! self::hosts() || ! in_array( self::mode(), Url_Settings::PRO_MODES, true ) || self::home_parts()['host'] !== $host ) {
+			return null;
+		}
+		$path = (string) explode( '?', $uri, 2 )[0];
+		$lang = self::folder_language( $path );
+		if ( null === $lang ) {
+			return null;
+		}
+		$target_host = Pro\Hosts::host_for( $lang, self::home_parts()['host'] );
+		if ( null === $target_host ) {
+			return null;
+		}
+		$rest = self::after_home_path( $uri, self::home_parts()['path'] ) ?? '/';
+		$rest = (string) preg_replace( '#^/[^/?]+#', '', $rest );
+
+		return ( is_ssl() ? 'https' : 'http' ) . '://' . $target_host . '/' . ltrim( $rest, '/' );
+	}
+
+	/**
+	 * `allowed_redirect_hosts`: the language hosts, while the Pro URL mode serves them, so a redirect
+	 * to a translation on its own host is not turned into one to wp-admin by wp_safe_redirect().
+	 *
+	 * @param array<int, string>|mixed $hosts Allowed hosts.
+	 * @return array<int, string>|mixed
+	 */
+	public static function allowed_hosts( $hosts ) {
+		if ( ! is_array( $hosts ) || ! self::hosts() || ! in_array( self::mode(), Url_Settings::PRO_MODES, true ) ) {
+			return $hosts;
+		}
+		foreach ( Languages::all() as $language ) {
+			$host = Pro\Hosts::host_for( $language['code'], self::home_parts()['host'] );
+			if ( null !== $host ) {
+				$hosts[] = (string) preg_replace( '/:\d+$/', '', $host );
+			}
+		}
+
+		return $hosts;
 	}
 
 	/**

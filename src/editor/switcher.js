@@ -14,7 +14,13 @@ import {
 import ServerSideRender from '@wordpress/server-side-render';
 
 import metadata from '../../blocks/language-switcher/block.json';
-import { designOptions, displayOptions, setVar } from './switcher-model';
+import {
+	designOptions,
+	displayOptions,
+	flagShapeOptions,
+	flagSizeOptions,
+	setVar,
+} from './switcher-model';
 
 /*
  * The language switcher block (tz-l1). Dynamic: the server renders it with the same code as the
@@ -71,6 +77,30 @@ function Edit( { attributes, setAttributes } ) {
 						checked={ attributes.flags }
 						onChange={ ( flags ) => setAttributes( { flags } ) }
 					/>
+					{ attributes.flags && (
+						<>
+							<SelectControl
+								__next40pxDefaultSize
+								__nextHasNoMarginBottom
+								label={ __( 'Flag shape', 'tranzly' ) }
+								value={ attributes.flagShape }
+								options={ flagShapeOptions( true ) }
+								onChange={ ( flagShape ) =>
+									setAttributes( { flagShape } )
+								}
+							/>
+							<SelectControl
+								__next40pxDefaultSize
+								__nextHasNoMarginBottom
+								label={ __( 'Flag size', 'tranzly' ) }
+								value={ attributes.flagSize }
+								options={ flagSizeOptions( true ) }
+								onChange={ ( flagSize ) =>
+									setAttributes( { flagSize } )
+								}
+							/>
+						</>
+					) }
 					<ToggleControl
 						__nextHasNoMarginBottom
 						label={ __(

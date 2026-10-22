@@ -5,7 +5,7 @@
 	"title": "Language switcher",
 	"category": "widgets",
 	"icon": "translation",
-	"description": "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags.",
+	"description": "Lets visitors read this page in another of your languages: a list, pills, buttons, a dropdown or language codes, with optional flags in four shapes and three sizes.",
 	"keywords": [ "language", "switcher", "translation", "multilingual" ],
 	"textdomain": "tranzly",
 	"attributes": {
@@ -22,6 +22,16 @@
 		"flags": {
 			"type": "boolean",
 			"default": false
+		},
+		"flagShape": {
+			"type": "string",
+			"enum": [ "", "rectangle", "rounded", "square", "circle" ],
+			"default": ""
+		},
+		"flagSize": {
+			"type": "string",
+			"enum": [ "", "medium", "small", "large" ],
+			"default": ""
 		},
 		"showCurrent": {
 			"type": "boolean",

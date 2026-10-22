@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Publishes front-end CSS/JS out of the plugin directory into `uploads/<prefix>-assets/`.
  *
- * ⭐ WHY A COPY, AND WHY IT IS DONE IN wp-admin RATHER THAN ON A PAGE VIEW (docs/adr/0033).
+ * ⭐ WHY A COPY (docs/adr/0033).
  * A stylesheet enqueued from the plugin directory prints `/wp-content/plugins/tranzly/`
  * into every page, which is the single loudest footprint a plugin leaves (CONTRACT §7). The
  * alternatives were a rewrite rule (needs a flush, breaks on nginx without extra config, and
@@ -25,10 +25,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * cacheable for ever because its name changes when its content does, and needs no server
  * configuration.
  *
- * The copy is written on activation, on a version change and on a prefix change — all of them
- * admin-side events — so a front-end request never writes to disk. When a copy is missing or
- * the filesystem is not directly writable, the asset is printed inline instead: the page is
- * never unstyled and never falls back to the plugin path.
+ * The copy is written on activation, on a prefix change and on the first request after a version
+ * change. ⛔ s1014 L71, 2026-10-18: the version-change copy used to wait for `admin_init`, but an
+ * update made by WP-CLI, by WordPress's background auto-update or by our fleet updater never opens
+ * wp-admin, so from the update until somebody did, every page loaded its scripts from
+ * /wp-content/plugins/tranzly/ (V1 staff canary 244453 rolled tranzly-premium 3.27.17 back for
+ * exactly that: uploads/zd-assets/<hash>.js "gone"). The check now runs on `init`: one autoloaded
+ * option compared per request, and at most one write per version. When a copy is missing or
+ * the filesystem is not directly writable, a stylesheet is printed inline (through inline_css(),
+ * escaped at the call) so the page is never unstyled, and a script is loaded from the plugin
+ * folder by its URL (plugin_url()). Plugin code is never printed into the page as an inline
+ * script (WordPress.org review); the plugin path appears only when uploads cannot be written.
  */
 final class Assets {
 
@@ -52,7 +59,10 @@ final class Assets {
 	 * @return void
 	 */
 	public static function register(): void {
-		add_action( 'admin_init', array( self::class, 'maybe_publish' ) );
+		// `init`, not `admin_init`: it fires on every kind of request (a page view, REST, cron,
+		// WP-CLI) before `wp_enqueue_scripts`, so the first page after an update already gets the
+		// neutral copies (tranzly_assets_after_update.sh).
+		add_action( 'init', array( self::class, 'maybe_publish' ), 1 );
 	}
 
 	/**
@@ -95,7 +105,7 @@ final class Assets {
 					}
 					$name = substr( sha1( $body ), 0, 12 ) . '.' . pathinfo( $key, PATHINFO_EXTENSION );
 					$path = $dir . '/' . $name;
-					if ( $filesystem->exists( $path ) || $filesystem->put_contents( $path, $body, FS_CHMOD_FILE ) ) {
+					if ( $filesystem->exists( $path ) || self::write_whole( $filesystem, $path, $body ) ) {
 						$manifest['files'][ $key ] = array(
 							'url'  => $url . '/' . $name,
 							'path' => $path,
@@ -140,12 +150,43 @@ final class Assets {
 
 		wp_register_style( $handle, false, array(), $hash );
 		wp_enqueue_style( $handle );
-		wp_add_inline_style( $handle, $body );
+		wp_add_inline_style( $handle, self::inline_css( $body ) );
 	}
 
 	/**
-	 * Enqueue a front-end script under a neutral handle, from the published copy or inline, in the
-	 * footer and deferred. Scripts carry no plugin name for the same reason styles do (ADR 0033).
+	 * CSS made safe to print inside a `<style>` element: comments removed, then every tag
+	 * stripped, so nothing in it (a stored value, a filter's output) can close the element and
+	 * start markup. Every inline stylesheet the plugin prints goes through this, at the point it
+	 * is printed (escaping late). Comments go first so an unclosed `<` in one cannot swallow the
+	 * rules after it.
+	 *
+	 * @param string $css CSS.
+	 * @return string
+	 */
+	public static function inline_css( string $css ): string {
+		return wp_strip_all_tags( (string) preg_replace( '#/\*.*?\*/#s', '', $css ) );
+	}
+
+	/**
+	 * A source's URL in the plugin folder, with the class prefix as the `pfx` query argument: the
+	 * fallback when no published copy exists. The scripts read their prefix from their own URL when
+	 * the token in them was not replaced (`PFX` at the top of each script).
+	 *
+	 * @param string $key A key of self::SOURCES.
+	 * @return string|null Null when the key is unknown.
+	 */
+	public static function plugin_url( string $key ): ?string {
+		if ( ! isset( self::SOURCES[ $key ] ) ) {
+			return null;
+		}
+
+		return add_query_arg( array( 'pfx' => Settings::prefix() ), TRANZLY_URL . self::SOURCES[ $key ] );
+	}
+
+	/**
+	 * Enqueue a front-end script under a neutral handle, from the published copy or (when uploads
+	 * cannot be written) the plugin folder, in the footer and deferred. Scripts carry no plugin
+	 * name for the same reason styles do (ADR 0033).
 	 *
 	 * @param string $key A key of self::SOURCES.
 	 * @return string|null The handle, or null when the source is unknown.
@@ -165,14 +206,12 @@ final class Assets {
 			'in_footer' => true,
 			'strategy'  => 'defer',
 		);
-		$url  = self::published_url( $key );
-		if ( null !== $url ) {
-			wp_enqueue_script( $handle, $url, array(), $hash, $args );
-			return $handle;
+		// No published copy: the file in the plugin folder, never the body printed inline.
+		$url = self::published_url( $key ) ?? self::plugin_url( $key );
+		if ( null === $url ) {
+			return null;
 		}
-		wp_register_script( $handle, false, array(), $hash, array( 'in_footer' => true ) );
-		wp_enqueue_script( $handle );
-		wp_add_inline_script( $handle, $body );
+		wp_enqueue_script( $handle, $url, array(), $hash, $args );
 
 		return $handle;
 	}
@@ -282,6 +321,26 @@ final class Assets {
 
 		return str_starts_with( $real, trailingslashit( $base ) )
 			&& 1 === preg_match( '#/[a-z][a-z0-9]{0,7}-assets/[0-9a-f]{12}\.(?:css|js)$#', $real );
+	}
+
+	/**
+	 * Write a file under a temporary name and rename it into place, so a visitor whose request
+	 * arrives while another request is publishing never fetches half a script (the publish can now
+	 * happen during a page view).
+	 *
+	 * @param \WP_Filesystem_Base $filesystem The filesystem.
+	 * @param string              $path       Final path.
+	 * @param string              $body       Contents.
+	 * @return bool
+	 */
+	private static function write_whole( \WP_Filesystem_Base $filesystem, string $path, string $body ): bool {
+		$tmp = $path . '.' . wp_generate_password( 6, false ) . '.tmp';
+		if ( $filesystem->put_contents( $tmp, $body, FS_CHMOD_FILE ) && $filesystem->move( $tmp, $path, true ) ) {
+			return true;
+		}
+		$filesystem->delete( $tmp );
+
+		return false;
 	}
 
 	/**

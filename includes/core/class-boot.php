@@ -13,35 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once __DIR__ . '/class-schema.php';
-require_once __DIR__ . '/class-relations.php';
-require_once __DIR__ . '/class-secrets.php';
-require_once __DIR__ . '/class-locales.php';
-require_once __DIR__ . '/class-options.php';
-require_once __DIR__ . '/class-strings.php';
-require_once __DIR__ . '/class-content.php';
-require_once __DIR__ . '/class-legacy-graph.php';
-require_once __DIR__ . '/class-legacy-import.php';
-require_once __DIR__ . '/class-network.php';
-require_once __DIR__ . '/class-edition.php';
-require_once __DIR__ . '/class-engine-settings.php';
-require_once __DIR__ . '/class-glossary.php';
-require_once __DIR__ . '/class-style-rules.php';
-require_once __DIR__ . '/class-language-packs.php';
-require_once __DIR__ . '/interface-translation-memory.php';
-require_once __DIR__ . '/class-queue.php';
-require_once dirname( __DIR__ ) . '/engines/interface-engine.php';
-require_once dirname( __DIR__ ) . '/engines/class-registry.php';
-require_once dirname( __DIR__ ) . '/engines/class-failure.php';
-require_once dirname( __DIR__ ) . '/engines/class-deepl.php';
-require_once dirname( __DIR__ ) . '/engines/class-ai.php';
-require_once __DIR__ . '/class-translator.php';
-require_once dirname( __DIR__ ) . '/api/class-language-switch.php';
 require_once dirname( __DIR__ ) . '/api/functions-api.php';
-require_once dirname( __DIR__ ) . '/api/class-rest-engines.php';
-require_once dirname( __DIR__ ) . '/api/class-rest-jobs.php';
-require_once dirname( __DIR__ ) . '/api/class-rest-content.php';
-require_once dirname( __DIR__ ) . '/cli/class-cli.php';
 
 // The background queue's runner. It must load before `plugins_loaded`, where it elects the newest
 // copy on the site (WooCommerce and other plugins bundle it too); ours may or may not be the one used.
@@ -74,6 +46,8 @@ final class Boot {
 		\ZinnDigital\Tranzly\Api\Rest_Jobs::register();
 		\ZinnDigital\Tranzly\Cli\Cli::register();
 		self::premium();
+		// A registry made before Tranzly started (WP-CLI, Cli_Start) is announced now.
+		\ZinnDigital\Tranzly\Engines\Registry::announce();
 	}
 
 	/**
