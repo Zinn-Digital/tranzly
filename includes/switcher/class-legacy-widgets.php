@@ -52,6 +52,8 @@ final class Legacy_Widgets {
 		);
 		if ( null !== $done ) {
 			update_option( 'widget_' . self::BASE, $done['instances'], true );
+			// A one-time carry-over on upgrade that only ADDS this plugin's widget beside the legacy one.
+			// wporg-justified: runs once on plugins_loaded after an upgrade, no user input reaches it.
 			update_option( 'sidebars_widgets', $done['sidebars'] );
 		}
 		update_option( self::DONE_OPTION, '1', true );
