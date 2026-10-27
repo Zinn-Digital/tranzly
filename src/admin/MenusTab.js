@@ -11,7 +11,7 @@ import {
 	TextControl,
 } from '@wordpress/components';
 
-import { changedStrings } from './menus-model';
+import { changedStrings, initialScope } from './menus-model';
 
 /**
  * The line under a text that says who translated it.
@@ -45,7 +45,13 @@ export default function MenusTab( { pro } ) {
 	const [ menus, setMenus ] = useState( null );
 	const [ languages, setLanguages ] = useState( [] );
 	const [ lang, setLang ] = useState( '' );
-	const [ scope, setScope ] = useState( 'menus' );
+	// The editor's Translations panel links here with `&scope=…&lang=…` (ZT-STB8XM).
+	const [ scope, setScope ] = useState( () =>
+		initialScope(
+			new URLSearchParams( window.location.search ).get( 'scope' ),
+			pro
+		)
+	);
 	const [ strings, setStrings ] = useState( null );
 	const [ draft, setDraft ] = useState( {} );
 	const [ busy, setBusy ] = useState( false );
@@ -64,7 +70,17 @@ export default function MenusTab( { pro } ) {
 					( x ) => x.code !== l.default
 				);
 				setLanguages( others );
-				setLang( others[ 0 ]?.code || '' );
+				setLang(
+					others.find(
+						( x ) =>
+							x.code ===
+							new URLSearchParams( window.location.search ).get(
+								'lang'
+							)
+					)?.code ||
+						others[ 0 ]?.code ||
+						''
+				);
 			} )
 			.catch( fail );
 	}, [] );

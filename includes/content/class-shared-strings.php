@@ -224,7 +224,7 @@ final class Shared_Strings {
 	 * @param array<int, array<string, mixed>> $blocks Parsed blocks.
 	 * @return array<int, string>
 	 */
-	private static function navigation_labels( array $blocks ): array {
+	public static function navigation_labels( array $blocks ): array {
 		$out = array();
 		foreach ( $blocks as $block ) {
 			if ( in_array( $block['blockName'] ?? '', array( 'core/navigation-link', 'core/navigation-submenu' ), true ) ) {

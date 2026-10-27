@@ -47,6 +47,39 @@ final class Menus {
 		add_filter( 'theme_mod_nav_menu_locations', array( self::class, 'filter_locations' ), 20 );
 		add_filter( 'wp_nav_menu_objects', array( self::class, 'translate_items' ), 5, 1 );
 		add_filter( 'render_block_data', array( self::class, 'translate_navigation_link' ), 20, 1 );
+		add_filter( 'block_core_navigation_render_inner_blocks', array( self::class, 'translate_navigation_blocks' ), 20, 1 );
+	}
+
+	/**
+	 * `block_core_navigation_render_inner_blocks`: the links a Navigation block shows.
+	 *
+	 * ⛔ The Navigation block renders its links itself (`$inner_block->render()` on the list it built
+	 * from its `wp_navigation` post, its fallback or its own inner blocks), so `render_block_data`
+	 * never runs for them: a block-theme Header kept its source-language labels although their Menu
+	 * Labels translations existed (ZT-STB8XM, 2026-10-27). The links pointed at the translated pages
+	 * only because each link's address is built from its post. Each link is translated here, in
+	 * place, and so are a submenu's own links.
+	 *
+	 * @param mixed $blocks The block list.
+	 * @return mixed
+	 */
+	public static function translate_navigation_blocks( $blocks ) {
+		if ( ! $blocks instanceof \WP_Block_List || ! Router::is_front() || Languages::default_code() === Languages::current() ) {
+			return $blocks;
+		}
+		foreach ( $blocks as $block ) {
+			if ( ! $block instanceof \WP_Block ) {
+				continue;
+			}
+			$translated = self::translate_navigation_link( $block->parsed_block );
+			if ( $translated !== $block->parsed_block ) {
+				$block->parsed_block = $translated;
+				$block->refresh_parsed_block_dependents();
+			}
+			self::translate_navigation_blocks( $block->inner_blocks );
+		}
+
+		return $blocks;
 	}
 
 	/**

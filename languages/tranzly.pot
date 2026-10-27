@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tranzly™ 3.27.30\n"
+"Project-Id-Version: Tranzly™ 3.27.31\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tranzly\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-20T14:29:13+00:00\n"
+"POT-Creation-Date: 2026-10-27T12:48:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tranzly\n"
@@ -1533,8 +1533,9 @@ msgstr ""
 #: includes/content/class-content-module.php:78
 #: includes/content/class-post-admin.php:63
 #: includes/content/class-term-admin.php:71
-#: src/editor/translations-panel.js:57
-#: src/editor/translations-panel.js:112
+#: src/editor/translations-panel.js:68
+#: src/editor/translations-panel.js:124
+#: src/editor/translations-panel.js:157
 msgid "Translations"
 msgstr ""
 
@@ -1585,12 +1586,12 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/content/class-menus.php:86
+#: includes/content/class-menus.php:119
 msgid "Choose one of your menus for each language."
 msgstr ""
 
 #: includes/content/class-post-admin.php:83
-#: src/editor/translations-panel.js:60
+#: src/editor/translations-panel.js:71
 msgid "Save this post first, then translate it here."
 msgstr ""
 
@@ -1602,13 +1603,14 @@ msgstr ""
 #: includes/content/class-post-admin.php:103
 #: src/admin/SeoAudit.js:163
 #: src/admin/StatusTab.js:418
-#: src/editor/translations-panel.js:154
+#: src/editor/translations-panel.js:143
+#: src/editor/translations-panel.js:199
 msgid "Edit"
 msgstr ""
 
 #: includes/content/class-post-admin.php:104
 #: src/admin/StatusTab.js:430
-#: src/editor/translations-panel.js:159
+#: src/editor/translations-panel.js:204
 msgid "Side by side"
 msgstr ""
 
@@ -1646,7 +1648,7 @@ msgstr ""
 #. translators: %s: a language's name, e.g. Deutsch.
 #: includes/content/class-post-admin.php:162
 #: includes/content/class-term-admin.php:142
-#: src/editor/translations-panel.js:228
+#: src/editor/translations-panel.js:273
 #, php-format,js-format
 msgid "%s: translated."
 msgstr ""
@@ -1655,7 +1657,11 @@ msgstr ""
 msgid "This is not a translation, so there is nothing to protect."
 msgstr ""
 
-#: includes/content/class-rest-editor.php:65
+#: includes/content/class-rest-editor.php:95
+msgid "This template could not be found."
+msgstr ""
+
+#: includes/content/class-rest-editor.php:229
 msgid "This kind of content is not translated."
 msgstr ""
 
@@ -8564,7 +8570,7 @@ msgid "Content"
 msgstr ""
 
 #: src/admin/Jobs.js:418
-#: src/admin/MenusTab.js:236
+#: src/admin/MenusTab.js:252
 #: src/admin/StatusTab.js:214
 #: src/admin/StatusTab.js:292
 #: src/admin/StringsEditor.js:146
@@ -8608,65 +8614,65 @@ msgstr ""
 msgid "Translated by WordPress (language pack), at no cost. Type your own wording to use it instead."
 msgstr ""
 
-#: src/admin/MenusTab.js:113
+#: src/admin/MenusTab.js:129
 msgid "Menus saved."
 msgstr ""
 
 #. translators: %d: how many texts were translated.
-#: src/admin/MenusTab.js:138
+#: src/admin/MenusTab.js:154
 #: src/admin/StringsEditor.js:92
 #, js-format
 msgid "%d texts translated."
 msgstr ""
 
-#: src/admin/MenusTab.js:159
+#: src/admin/MenusTab.js:175
 #: src/admin/StringsEditor.js:113
 msgid "Saved. Your corrections are protected from machine translation."
 msgstr ""
 
-#: src/admin/MenusTab.js:171
+#: src/admin/MenusTab.js:187
 msgid "The same menu, translated"
 msgstr ""
 
-#: src/admin/MenusTab.js:191
+#: src/admin/MenusTab.js:207
 msgid "A separate menu per language"
 msgstr ""
 
-#: src/admin/MenusTab.js:197
+#: src/admin/MenusTab.js:213
 msgid "By default each menu is translated: its links lead to the translated pages, with their titles. Choose a menu of its own for a language here instead."
 msgstr ""
 
-#: src/admin/MenusTab.js:232
+#: src/admin/MenusTab.js:248
 msgid "Shared text"
 msgstr ""
 
-#: src/admin/MenusTab.js:247
+#: src/admin/MenusTab.js:263
 msgid "Which text"
 msgstr ""
 
-#: src/admin/MenusTab.js:252
+#: src/admin/MenusTab.js:268
 msgid "Menu labels"
 msgstr ""
 
-#: src/admin/MenusTab.js:256
+#: src/admin/MenusTab.js:272
 msgid "Site title, tagline and widgets"
 msgstr ""
 
-#: src/admin/MenusTab.js:267
+#: src/admin/MenusTab.js:283
 msgid "Templates, headers, footers and patterns"
 msgstr ""
 
-#: src/admin/MenusTab.js:284
+#: src/admin/MenusTab.js:300
 #: src/admin/StringsEditor.js:161
 msgid "Translate the missing text"
 msgstr ""
 
-#: src/admin/MenusTab.js:290
+#: src/admin/MenusTab.js:306
 #: src/admin/StringsEditor.js:167
 msgid "There is no text to translate here."
 msgstr ""
 
-#: src/admin/MenusTab.js:321
+#: src/admin/MenusTab.js:337
 #: src/admin/StringsEditor.js:213
 msgid "Save corrections"
 msgstr ""
@@ -9398,6 +9404,7 @@ msgid "Not translated"
 msgstr ""
 
 #: src/editor/translations-model.js:29
+#: src/editor/translations-model.js:81
 msgid "Original"
 msgstr ""
 
@@ -9421,24 +9428,30 @@ msgstr ""
 msgid "Not translated yet (a copy)"
 msgstr ""
 
-#: src/editor/translations-panel.js:164
+#. translators: 1: texts translated, 2: texts in the template.
+#: src/editor/translations-model.js:85
+#, js-format
+msgid "%1$d of %2$d texts translated"
+msgstr ""
+
+#: src/editor/translations-panel.js:209
 msgid "View"
 msgstr ""
 
-#: src/editor/translations-panel.js:174
+#: src/editor/translations-panel.js:219
 msgid "Unlock so it can be translated again"
 msgstr ""
 
-#: src/editor/translations-panel.js:189
+#: src/editor/translations-panel.js:234
 msgid "Protect"
 msgstr ""
 
-#: src/editor/translations-panel.js:197
+#: src/editor/translations-panel.js:242
 msgid "Publish the translations"
 msgstr ""
 
 #. translators: %d: how many languages are ticked.
-#: src/editor/translations-panel.js:209
+#: src/editor/translations-panel.js:254
 #, js-format
 msgid "Translate into %d language"
 msgid_plural "Translate into %d languages"

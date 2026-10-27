@@ -13,7 +13,13 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
-import { stateLabel, translatable } from './translations-model';
+import {
+	SITE_EDITOR_TYPES,
+	languagesPath,
+	stateLabel,
+	textsLabel,
+	translatable,
+} from './translations-model';
 
 /*
  * The editor's "Translations" panel (tz-w1, tz-r1, tz-r3): every language of this post, its
@@ -22,13 +28,15 @@ import { stateLabel, translatable } from './translations-model';
  */
 
 function TranslationsPanel() {
-	const { postId, isNew } = useSelect( ( select ) => {
+	const { postId, postType, isNew } = useSelect( ( select ) => {
 		const editor = select( 'core/editor' );
 		return {
 			postId: editor.getCurrentPostId(),
+			postType: editor.getCurrentPostType(),
 			isNew: editor.isEditedPostNew(),
 		};
 	}, [] );
+	const siteEditor = SITE_EDITOR_TYPES.includes( postType );
 	const [ data, setData ] = useState( null );
 	const [ error, setError ] = useState( null );
 	const [ picked, setPicked ] = useState( [] );
@@ -40,13 +48,16 @@ function TranslationsPanel() {
 		if ( ! postId || isNew ) {
 			return;
 		}
-		apiFetch( { path: `/tranzly/v1/posts/${ postId }/languages` } )
+		// The rows belong to what is edited NOW: switching from a page to its Header must never
+		// leave the page's rows (and their "Edit" links) under the Header (ZT-STB8XM).
+		setData( null );
+		apiFetch( { path: languagesPath( postType, postId ) } )
 			.then( ( result ) => {
 				setData( result );
 				setError( null );
 			} )
 			.catch( ( e ) => setError( e.message ) );
-	}, [ postId, isNew ] );
+	}, [ postId, postType, isNew ] );
 
 	useEffect( load, [ load ] );
 
@@ -105,6 +116,40 @@ function TranslationsPanel() {
 		} )
 			.then( load )
 			.catch( ( e ) => setError( e.message ) );
+
+	if ( siteEditor ) {
+		return (
+			<PluginDocumentSettingPanel
+				name="tranzly-translations"
+				title={ __( 'Translations', 'tranzly' ) }
+				className="tranzly-editor__translations"
+			>
+				{ error && (
+					<Notice status="error" isDismissible={ false }>
+						{ error }
+					</Notice>
+				) }
+				{ ! data && ! error && <Spinner /> }
+				{ data && (
+					<ul className="tranzly-editor__languages">
+						{ data.languages.map( ( row ) => (
+							<li key={ row.code }>
+								<strong>{ row.name }</strong>{ ' ' }
+								<span className="tranzly-editor__state">
+									{ textsLabel( row ) }
+								</span>{ ' ' }
+								{ row.edit && (
+									<a href={ row.edit }>
+										{ __( 'Edit', 'tranzly' ) }
+									</a>
+								) }
+							</li>
+						) ) }
+					</ul>
+				) }
+			</PluginDocumentSettingPanel>
+		);
+	}
 
 	return (
 		<PluginDocumentSettingPanel
