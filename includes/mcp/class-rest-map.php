@@ -128,7 +128,7 @@ final class Rest_Map {
 				'route'       => '/tranzly/v1/engines/settings',
 				'name'        => 'tranzly/update-engine-settings',
 				'label'       => __( 'Change the engine settings', 'tranzly' ),
-				'description' => __( 'Sets the default engine, a fallback engine, per-language engines and per-language AI models (default, fallback, per_lang, models, caps) and the request timeout (timeout). Everything but the default engine and the timeout is Pro.', 'tranzly' ),
+				'description' => __( 'Sets the default engine, a fallback engine, per-language engines and per-language AI models (default, fallback, per_lang, models, caps). Everything but the default engine is Pro.', 'tranzly' ),
 				'edition'     => 'free',
 				'capability'  => 'manage_options (the REST route\'s own check)',
 				'args'        => array(
@@ -152,10 +152,6 @@ final class Rest_Map {
 					'models'   => array(
 						'type'        => 'object',
 						'description' => __( 'Pro: language code => {provider, model} used when the AI engine translates that language; the key * sets the model for every other language. Empty model: the provider\'s recommended one.', 'tranzly' ),
-					),
-					'timeout'  => array(
-						'type'        => 'integer',
-						'description' => __( 'Seconds to wait for a DeepL, Google or Microsoft request, 5 to 60; 0 restores the default of 60.', 'tranzly' ),
 					),
 				),
 			),

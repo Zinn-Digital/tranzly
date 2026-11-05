@@ -33,7 +33,6 @@ export default function Engines() {
 	const [ usage, setUsage ] = useState( null );
 	const [ notice, setNotice ] = useState( null );
 	const [ busy, setBusy ] = useState( false );
-	const [ timeout, setTimeoutValue ] = useState( null );
 
 	// Stable across renders (only state setters inside), so the effect below runs once.
 	const fail = useCallback(
@@ -94,7 +93,6 @@ export default function Engines() {
 		fallback: [],
 		caps: {},
 		models: {},
-		timeout: 0,
 	};
 	const configured = engines.filter( ( engine ) => engine.configured );
 	const engineOptions = [
@@ -316,42 +314,6 @@ export default function Engines() {
 						busy={ busy }
 					/>
 				) }
-
-				<PanelBody
-					title={ __( 'Advanced', 'tranzly' ) }
-					initialOpen={ false }
-				>
-					<TextControl
-						__next40pxDefaultSize
-						__nextHasNoMarginBottom
-						type="number"
-						min={ 0 }
-						max={ 60 }
-						label={ __( 'Request timeout (seconds)', 'tranzly' ) }
-						help={ __(
-							'How long Tranzly waits for DeepL, Google or Microsoft before it gives up on one request: 5 to 60 seconds, or 0 for the default (60). A lower value makes a slow engine fail sooner, so your fallback engine or the next retry takes over.',
-							'tranzly'
-						) }
-						value={
-							null === timeout
-								? String( settings.timeout || 0 )
-								: timeout
-						}
-						onChange={ setTimeoutValue }
-						onBlur={ () => {
-							if (
-								null === timeout ||
-								String( settings.timeout || 0 ) === timeout
-							) {
-								return;
-							}
-							saveSettings( {
-								timeout: parseInt( timeout || '0', 10 ),
-							} ).then( () => setTimeoutValue( null ) );
-						} }
-						disabled={ busy }
-					/>
-				</PanelBody>
 
 				{ glossary && (
 					<PanelBody
