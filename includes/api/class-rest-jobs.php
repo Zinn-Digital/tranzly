@@ -427,7 +427,7 @@ final class Rest_Jobs {
 	 * @return \WP_REST_Response|\WP_Error
 	 */
 	public static function put_engine_settings( \WP_REST_Request $request ) {
-		$input = array_intersect_key( (array) $request->get_json_params(), array_flip( array( 'default', 'per_lang', 'fallback', 'caps', 'models' ) ) );
+		$input = array_intersect_key( (array) $request->get_json_params(), array_flip( array( 'default', 'per_lang', 'fallback', 'caps', 'models', 'timeout' ) ) );
 		$saved = Engine_Settings::save( $input );
 
 		return is_wp_error( $saved ) ? $saved : self::get_engine_settings();

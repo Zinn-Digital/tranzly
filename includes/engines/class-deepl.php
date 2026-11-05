@@ -452,7 +452,7 @@ final class DeepL implements Engine, Billed_Characters {
 		}
 		$args = array(
 			'method'      => $method,
-			'timeout'     => 60,
+			'timeout'     => \ZinnDigital\Tranzly\Core\Engine_Settings::request_timeout(),
 			'redirection' => 0,
 			'headers'     => $headers,
 		);

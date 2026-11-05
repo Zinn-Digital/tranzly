@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.34
+Stable tag: 3.27.35
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Media, widgets, site title and tagline.** Image alt text, captions and titles, widget text and the site title and tagline can each carry a translation per language, shown to visitors of that language.
 * **Unlimited languages**, in the free edition as well, added by their WordPress locale code (for example `fr_FR`). The first one is the language your content is written in.
 * **Your old Tranzly translations come with you.** On a site that ran Tranzly 2.x, the old language links, languages and DeepL key are imported in the background without changing the old data, and anything that cannot be imported is reported rather than stopping it. `wp tranzly legacy dry-run` shows what it would do first.
-* **Machine translation with your own account.** DeepL (free and paid API keys), AI models with your own key, and with Pro Google Cloud Translation and Microsoft Translator. See the cost before you start.
+* **Machine translation with your own account.** DeepL (free and paid API keys), AI models with your own key, and with Pro Google Cloud Translation and Microsoft Translator. See the cost before you start, and lower each engine's request timeout if your host needs it.
 * **Translations that read like a native writer's.** Every translation follows its language's house style, whichever engine wrote it: French « » with the right spaces, German „…“, Japanese spacing, and the quotation marks, apostrophes and punctuation of 15 languages (links, code and placeholders untouched). AI models also get each language's tone and form of address (26 languages) from its WordPress.org translation team's style guide.
 * **Pick the best AI for each language (Pro).** Choose the AI provider and model per language (Gemini for Japanese, Claude for German) plus one for all others. Estimates, fallback and per-provider monthly caps follow each language's choice.
 * **Translate in the background.** Translate a whole post type into several languages as one job that keeps going after you close the browser; a report shows what failed and why, with one-click retry.
@@ -158,6 +158,9 @@ Yes. Tranzly adds the multilingual parts (hreflang, language and direction, per-
 Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzly/v1/mcp` (WordPress 6.9 or later): languages, engines, translating posts, categories, media, menus and site texts, jobs, status, review, SEO addresses and more — everything the Tranzly screens do, with the same permission checks. In Pro, AI agents can also translate the whole site in the background, run the AI quality check, manage the glossary and export files for human translators. Create an application password under Users, Profile, then follow Tranzly, AI agents (MCP). The same actions are available over the REST API at `/wp-json/wp-abilities/v1/abilities`.
 
 == Changelog ==
+
+= 3.27.35 =
+* New: an expert request timeout on the Engines screen (Advanced): how long Tranzly waits for DeepL, Google or Microsoft before one request gives up, 5 to 60 seconds, so a slow engine fails sooner and the fallback engine or the next retry takes over.
 
 = 3.27.34 =
 * Dependency security update (Renovate).
