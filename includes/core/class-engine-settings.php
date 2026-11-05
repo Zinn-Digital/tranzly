@@ -33,13 +33,19 @@ final class Engine_Settings {
 	/** The option. */
 	public const OPTION = 'tranzly_engines';
 
+	/** The engine HTTP timeout when none is set, in seconds. */
+	public const DEFAULT_TIMEOUT = 60;
+
+	/** The lowest timeout an admin may set, in seconds. */
+	public const MIN_TIMEOUT = 5;
+
 	/** Spend per month: `YYYY-MM` => engine => dollars. */
 	public const SPEND = 'tranzly_engine_spend';
 
 	/**
 	 * The settings over their defaults.
 	 *
-	 * @return array{default: string, per_lang: array<string, string>, fallback: array<int, string>, caps: array<string, float>, models: array<string, array{provider: string, model: string}>}
+	 * @return array{default: string, per_lang: array<string, string>, fallback: array<int, string>, caps: array<string, float>, models: array<string, array{provider: string, model: string}>, timeout: int}
 	 */
 	public static function get(): array {
 		$stored = get_option( self::OPTION, array() );
@@ -51,7 +57,33 @@ final class Engine_Settings {
 			'fallback' => array_values( array_map( 'strval', is_array( $stored['fallback'] ?? null ) ? $stored['fallback'] : array() ) ),
 			'caps'     => array_map( 'floatval', is_array( $stored['caps'] ?? null ) ? $stored['caps'] : array() ),
 			'models'   => self::clean_models( $stored['models'] ?? array() ),
+			'timeout'  => self::clean_timeout( $stored['timeout'] ?? 0 ),
 		);
+	}
+
+	/**
+	 * A stored timeout: 0 (the default) or MIN_TIMEOUT..DEFAULT_TIMEOUT seconds.
+	 *
+	 * @param mixed $value Stored value.
+	 * @return int
+	 */
+	private static function clean_timeout( $value ): int {
+		$seconds = is_numeric( $value ) ? (int) $value : 0;
+
+		return $seconds >= self::MIN_TIMEOUT && $seconds <= self::DEFAULT_TIMEOUT ? $seconds : 0;
+	}
+
+	/**
+	 * How long one request to a machine-translation engine (DeepL, Google, Microsoft) may take,
+	 * in seconds. An expert option (rival Linguise 2.2.72): a lower value makes a slow or
+	 * unreachable engine fail sooner, so the fallback engine or the next retry takes over.
+	 *
+	 * @return int
+	 */
+	public static function request_timeout(): int {
+		$seconds = self::get()['timeout'];
+
+		return $seconds > 0 ? $seconds : self::DEFAULT_TIMEOUT;
 	}
 
 	/**
@@ -90,6 +122,22 @@ final class Engine_Settings {
 				return self::refuse( __( 'That translation engine is not available on this site.', 'tranzly' ) );
 			}
 			$current['default'] = (string) $input['default'];
+		}
+		if ( array_key_exists( 'timeout', $input ) ) {
+			$seconds = $input['timeout'];
+			$valid   = ( is_int( $seconds ) || ( is_string( $seconds ) && ctype_digit( $seconds ) ) )
+				&& ( 0 === (int) $seconds || ( (int) $seconds >= self::MIN_TIMEOUT && (int) $seconds <= self::DEFAULT_TIMEOUT ) );
+			if ( ! $valid ) {
+				return self::refuse(
+					sprintf(
+						/* translators: 1: the lowest timeout in seconds, 2: the highest timeout in seconds. */
+						__( 'The request timeout must be between %1$d and %2$d seconds, or 0 for the default.', 'tranzly' ),
+						self::MIN_TIMEOUT,
+						self::DEFAULT_TIMEOUT
+					)
+				);
+			}
+			$current['timeout'] = (int) $seconds;
 		}
 		$pro_keys = array_filter(
 			array( 'per_lang', 'fallback', 'caps', 'models' ),
