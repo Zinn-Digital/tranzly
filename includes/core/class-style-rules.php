@@ -261,7 +261,7 @@ final class Style_Rules {
 			self::PROTECTED,
 			static function ( array $m ) use ( &$kept ): string {
 				$kept[] = $m[0];
-				return mb_chr( self::SENTINEL_BASE + count( $kept ) - 1, 'UTF-8' );
+				return self::utf8_char( self::SENTINEL_BASE + count( $kept ) - 1 );
 			},
 			$text
 		);
@@ -283,7 +283,7 @@ final class Style_Rules {
 		$out = preg_replace_callback(
 			'/[\x{E000}-\x{F8FF}]/u',
 			static function ( array $m ) use ( $kept ): string {
-				$i = mb_ord( $m[0], 'UTF-8' ) - self::SENTINEL_BASE;
+				$i = self::utf8_ord( $m[0] ) - self::SENTINEL_BASE;
 				return $i >= 0 && $i < count( $kept ) ? $kept[ $i ] : $m[0];
 			},
 			$text
@@ -302,9 +302,58 @@ final class Style_Rules {
 		if ( 1 !== mb_strlen( $ch ) ) {
 			return false;
 		}
-		$o = mb_ord( $ch, 'UTF-8' );
+		$o = self::utf8_ord( $ch );
 
 		return $o >= 0xE000 && $o <= 0xF8FF;
+	}
+
+	/**
+	 * The UTF-8 bytes of one code point. Plain PHP, not mbstring's mb_chr: mbstring is optional on a host,
+	 * and Plugin Check counts mb_chr as a WordPress 7.1 polyfill above our Requires at least.
+	 *
+	 * @param int $cp Code point (0 to 0x10FFFF).
+	 * @return string
+	 */
+	public static function utf8_char( int $cp ): string {
+		if ( $cp < 0x80 ) {
+			return chr( $cp );
+		}
+		if ( $cp < 0x800 ) {
+			return chr( 0xC0 | ( $cp >> 6 ) ) . chr( 0x80 | ( $cp & 0x3F ) );
+		}
+		if ( $cp < 0x10000 ) {
+			return chr( 0xE0 | ( $cp >> 12 ) ) . chr( 0x80 | ( ( $cp >> 6 ) & 0x3F ) ) . chr( 0x80 | ( $cp & 0x3F ) );
+		}
+
+		return chr( 0xF0 | ( $cp >> 18 ) ) . chr( 0x80 | ( ( $cp >> 12 ) & 0x3F ) ) . chr( 0x80 | ( ( $cp >> 6 ) & 0x3F ) ) . chr( 0x80 | ( $cp & 0x3F ) );
+	}
+
+	/**
+	 * The code point of the first character of a UTF-8 string (mb_ord without mbstring), or -1
+	 * for an empty or truncated string.
+	 *
+	 * @param string $ch One character.
+	 * @return int
+	 */
+	public static function utf8_ord( string $ch ): int {
+		$len = strlen( $ch );
+		if ( 0 === $len ) {
+			return -1;
+		}
+		$b0 = ord( $ch[0] );
+		if ( $b0 < 0x80 ) {
+			return $b0;
+		}
+		$need = $b0 >= 0xF0 ? 4 : ( $b0 >= 0xE0 ? 3 : 2 );
+		if ( $len < $need ) {
+			return -1;
+		}
+		$cp = $b0 & ( 0xFF >> ( $need + 1 ) );
+		for ( $i = 1; $i < $need; $i++ ) {
+			$cp = ( $cp << 6 ) | ( ord( $ch[ $i ] ) & 0x3F );
+		}
+
+		return $cp;
 	}
 
 	// ── shared mechanics ──────────────────────────────────────────────────────────────────.
@@ -640,7 +689,7 @@ final class Style_Rules {
 		if ( 1 !== mb_strlen( $ch ) ) {
 			return false;
 		}
-		$o = mb_ord( $ch, 'UTF-8' );
+		$o = self::utf8_ord( $ch );
 
 		return ( $o >= 0x3040 && $o <= 0x30FF ) || ( $o >= 0x3400 && $o <= 0x4DBF ) || ( $o >= 0x4E00 && $o <= 0x9FFF ) || ( $o >= 0xF900 && $o <= 0xFAFF ) || ( $o >= 0xFF66 && $o <= 0xFF9F );
 	}
@@ -675,7 +724,7 @@ final class Style_Rules {
 		if ( ! self::is_sentinel( $ch ) ) {
 			return '';
 		}
-		$i    = mb_ord( $ch, 'UTF-8' ) - self::SENTINEL_BASE;
+		$i    = self::utf8_ord( $ch ) - self::SENTINEL_BASE;
 		$word = self::$kept[ $i ] ?? '';
 
 		return '' === $word || false !== strpos( '%<&{`', $word[0] ) ? '' : $word;

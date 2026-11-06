@@ -12,6 +12,7 @@ namespace ZinnDigital\Tranzly\Switcher;
 use ZinnDigital\Tranzly\Assets;
 use ZinnDigital\Tranzly\Core\Locales;
 use ZinnDigital\Tranzly\Core\Options;
+use ZinnDigital\Tranzly\Core\Style_Rules;
 use ZinnDigital\Tranzly\Frontend;
 use ZinnDigital\Tranzly\Languages;
 use ZinnDigital\Tranzly\Seo\Router;
@@ -412,7 +413,7 @@ final class Switcher {
 		}
 		$flag = '';
 		foreach ( str_split( $region ) as $letter ) {
-			$flag .= mb_chr( 0x1F1E6 + ord( $letter ) - ord( 'A' ), 'UTF-8' );
+			$flag .= Style_Rules::utf8_char( 0x1F1E6 + ord( $letter ) - ord( 'A' ) );
 		}
 
 		return $flag;
