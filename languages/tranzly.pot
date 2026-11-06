@@ -1332,57 +1332,9 @@ msgstr ""
 msgid "This site is connected to its Zinn® account for viewing only, so it cannot spend credit. The account's owner can allow it."
 msgstr ""
 
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:125
-msgid "Your user role is not allowed to use AI on this site. Ask an administrator."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:132
-msgid "This site has reached its monthly AI spending limit. An administrator can raise it in the AI settings."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:135
-msgid "This site has reached its monthly limit of AI requests. An administrator can raise it in the AI settings."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:243
-msgid "Usage and cost"
-msgstr ""
-
-#. translators: %s: list of plugin names.
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:253
-#, php-format
-msgid "The log, limits and role permissions apply to AI used through: %s."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:256
-msgid "Costs are approximate, worked out from published prices; a model with no known price counts as zero."
-msgstr ""
-
-#. translators: 1: number of requests, 2: approximate cost in US dollars.
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:260
-#, php-format
-msgid "This month: %1$s requests, about %2$s."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
-msgid "When"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
-msgid "Who"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
-msgid "Used for"
-msgstr ""
-
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
 #: src/admin/WorkflowTab.js:202
 msgid "Model"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:269
-msgid "Tokens in / out"
 msgstr ""
 
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:269
@@ -1396,52 +1348,12 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:274
-msgid "No AI requests have been made yet."
-msgstr ""
-
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:285
 #: includes/freemius-strings.php:908
 #: includes/freemius-strings.php:3771
 #: src/admin-kit/Tour.js:128
 #: src/admin-kit/Wizard.js:76
 msgid "Done"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:289
-msgid "Limits and permissions"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:293
-msgid "Monthly spending limit (US dollars)"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:293
-msgid "Leave empty for no limit. AI stops for the rest of the month once the approximate cost reaches it."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:294
-msgid "Monthly request limit"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:294
-msgid "Leave empty for no limit."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:295
-msgid "Who may use AI"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:299
-msgid "Tick none to let everyone who can use the plugin's features use AI. Administrators can always use it."
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:301
-msgid "Save limits and permissions"
-msgstr ""
-
-#: includes/ai-core/pro__premium_only/class-pro-policy.php:350
-msgid "Limits and permissions saved."
 msgstr ""
 
 #: includes/api/class-rest-content.php:400
@@ -1712,10 +1624,6 @@ msgstr ""
 msgid "Piece %s is not part of this translation any more. Reload the page and try again."
 msgstr ""
 
-#: includes/content/pro__premium_only/class-visual-editor.php:55
-msgid "Translate on this page"
-msgstr ""
-
 #: includes/core/class-content.php:150
 #: includes/core/class-content.php:290
 msgid "This item already has a version in that language."
@@ -1868,36 +1776,6 @@ msgid "%1$s billed %2$s character."
 msgid_plural "%1$s billed %2$s characters."
 msgstr[0] ""
 msgstr[1] ""
-
-#: includes/core/pro__premium_only/class-engine-routing.php:103
-msgid "Each language must be one of the site's languages, with an available engine."
-msgstr ""
-
-#: includes/core/pro__premium_only/class-engine-routing.php:117
-msgid "Each language's AI model must name one of the site's languages (or all other languages), an AI provider and one of its models."
-msgstr ""
-
-#. translators: 1: an AI model id, 2: an AI provider id.
-#: includes/core/pro__premium_only/class-engine-routing.php:123
-#, php-format
-msgid "%1$s is not one of the models of %2$s. Pick one from the list, or add it in the AI settings first."
-msgstr ""
-
-#: includes/core/pro__premium_only/class-engine-routing.php:137
-msgid "The fallback list may only name available engines."
-msgstr ""
-
-#: includes/core/pro__premium_only/class-engine-routing.php:148
-msgid "A monthly cap is an amount in US dollars, zero or more, for an available engine."
-msgstr ""
-
-#: includes/core/pro__premium_only/class-glossary-pro.php:51
-msgid "Glossary entries must be grouped by one of the site's languages."
-msgstr ""
-
-#: includes/core/pro__premium_only/class-glossary-pro.php:68
-msgid "Tone is set per site language: formality default, more or less, plus optional instructions."
-msgstr ""
 
 #: includes/engines/class-ai.php:113
 msgid "AI model"
@@ -6030,88 +5908,14 @@ msgstr ""
 msgid "Comments and reviews"
 msgstr ""
 
-#. translators: %s: the language a comment was written in.
-#: includes/integrations/pro__premium_only/class-comments.php:292
-#, php-format
-msgid "Translated automatically from %s."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-currencies.php:72
-msgid "WooCommerce currencies"
-msgstr ""
-
 #: includes/integrations/pro__premium_only/class-currencies.php:335
 #: src/admin/IntegrationsTab.js:378
 msgid "Currency"
 msgstr ""
 
-#. translators: %s: a currency code.
-#: includes/integrations/pro__premium_only/class-currencies.php:372
-#, php-format
-msgid "The rate source does not quote %s, the shop's currency."
-msgstr ""
-
-#. translators: %s: what was entered.
-#: includes/integrations/pro__premium_only/class-currencies.php:448
-#, php-format
-msgid "\"%s\" is not a currency WooCommerce knows, or it is the shop's own currency."
-msgstr ""
-
-#. translators: %s: a currency code.
-#: includes/integrations/pro__premium_only/class-currencies.php:453
-#, php-format
-msgid "Enter a rate above zero for %s, like 0.92."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-currencies.php:458
-msgid "Rounding steps and price endings are amounts, like 0.05 or 0.99."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-custom-fields.php:64
-msgid "Custom fields (ACF, Meta Box, Pods)"
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-custom-fields.php:384
-msgid "Choose translate, copy or leave empty for each field."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-forms.php:58
-msgid "Forms (Contact Form 7, WPForms, Gravity Forms, Fluent Forms)"
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-rates.php:43
-msgid "I enter the rates myself"
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-rates.php:44
-msgid "European Central Bank, updated daily (free, no account needed)"
-msgstr ""
-
-#. translators: %d: an HTTP status code.
-#: includes/integrations/pro__premium_only/class-rates.php:63
-#, php-format
-msgid "The European Central Bank answered %d. The last rates are kept."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-rates.php:66
-msgid "The European Central Bank's feed held no rates. The last rates are kept."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-rates.php:79
-msgid "That exchange-rate source is not available."
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-seo-fields.php:106
-msgid "SEO plugins (Yoast SEO, Rank Math, SEOPress, All in One SEO)"
-msgstr ""
-
 #: includes/integrations/pro__premium_only/class-theme-strings.php:59
 #: src/admin/IntegrationsTab.js:619
 msgid "Theme and plugin text"
-msgstr ""
-
-#: includes/integrations/pro__premium_only/class-theme-strings.php:315
-msgid "That theme or plugin is not active on this site."
 msgstr ""
 
 #: includes/mcp-kit/class-ability.php:94
@@ -6958,62 +6762,6 @@ msgstr ""
 msgid "AI model of the quality check."
 msgstr ""
 
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:43
-msgid "Translate the whole site"
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:44
-msgid "Starts background translation jobs for every original of the given content types (all translated types when none are given): the missing translations, the out-of-date ones, or all of them. Returns the jobs started, one per language."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:84
-msgid "Check a translation with AI"
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:85
-msgid "Has AI compare one translation with its original and score it, and stores the report on the translation. Uses the quality-check AI model set in Tranzly's workflow settings."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:93
-msgid "The translation's post ID."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:111
-msgid "Export a file for human translators"
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:112
-msgid "Returns an XLIFF or CSV file (as text) with the originals and their translations in one language, for a translator or a translation agency: the given posts, or a page of up to 100 originals of a content type in a state (missing, stale, translated or all; repeat with after). The same file can be imported back once translated."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:158
-msgid "Words never translated (brand and product names)."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:162
-msgid "Per language code: source term => the translation always used."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:166
-msgid "Per language code: formality (default, more, less) and style instructions."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:177
-msgid "Read the glossary"
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:178
-msgid "Returns the words never translated, the fixed term translations and the tone per language."
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:200
-msgid "Update the glossary"
-msgstr ""
-
-#: includes/mcp/pro__premium_only/class-pro-abilities.php:201
-msgid "Replaces the parts of the glossary you send (words never translated, term translations, tone); parts you leave out are kept. Used by every engine from the next translation on."
-msgstr ""
-
 #: includes/seo/class-suggest.php:116
 msgid "Language suggestion"
 msgstr ""
@@ -7300,26 +7048,6 @@ msgstr ""
 msgid "Current language background"
 msgstr ""
 
-#: includes/switcher/pro__premium_only/class-bricks-element.php:132
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:147
-msgid "Border"
-msgstr ""
-
-#: includes/switcher/pro__premium_only/class-bricks-element.php:147
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:159
-msgid "Corner radius"
-msgstr ""
-
-#: includes/switcher/pro__premium_only/class-bricks-element.php:148
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:160
-msgid "Space between languages"
-msgstr ""
-
-#: includes/switcher/pro__premium_only/class-bricks-element.php:149
-#: includes/switcher/pro__premium_only/class-elementor-widget.php:161
-msgid "Text size"
-msgstr ""
-
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:74
 #: includes/switcher/pro__premium_only/class-elementor-widget.php:137
 #: src/editor/index.js:32
@@ -7341,112 +7069,6 @@ msgstr ""
 
 #: includes/workflow/class-status.php:398
 msgid "That content type is not translated on this site."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-bulk.php:107
-msgid "There is nothing to translate in that selection."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-bulk.php:139
-msgid "Choose at least one language to translate into."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:118
-msgid "You are not allowed to export translations."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:291
-msgid "Choose an XLIFF or CSV file to import."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:295
-msgid "That is not a Tranzly XLIFF or CSV file. Export one first, translate it, and import it here."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:300
-msgid "The file could not be stored for importing. Check that the uploads folder is writable."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:322
-msgid "That import is not there any more. Upload the file again."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:365
-msgid "That page is not on this site any more."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-exchange.php:368
-msgid "The file is for a language this site does not have."
-msgstr ""
-
-#. translators: 1: object type (post or term), 2: its ID, 3: why it was not linked.
-#: includes/workflow/pro__premium_only/class-import-source.php:214
-#, php-format
-msgid "Could not link %1$s %2$d: %3$s"
-msgstr ""
-
-#. translators: 1: post ID, 2: why it failed.
-#: includes/workflow/pro__premium_only/class-import-translatepress.php:150
-#, php-format
-msgid "Post #%1$d: %2$s"
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-importers.php:134
-msgid "No data from that plugin was found on this site."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-quality.php:199
-msgid "This is not a translation of anything on this site."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-quality.php:203
-msgid "There is no text to check."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-quality.php:208
-msgid "The AI settings are not part of this build."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-quality.php:234
-msgid "The AI provider did not answer."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-quality.php:247
-msgid "The AI model did not score every part of this page. Try again, or choose another model."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-review-roles.php:56
-msgid "Translator"
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-review-roles.php:57
-msgid "Translation reviewer"
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-review.php:155
-msgid "A reviewer asked for changes to this translation."
-msgstr ""
-
-#. translators: %s: the reviewer's note.
-#: includes/workflow/pro__premium_only/class-review.php:155
-#, php-format
-msgid "A reviewer asked for changes to this translation: %s"
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-review.php:158
-msgid "This translation is waiting for a reviewer. Publishing it (as a reviewer) approves it."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-review.php:225
-msgid "Only a translation can be reviewed."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-settings.php:33
-msgid "Choose what happens when an original changes: nothing, mark its translations out of date, or translate them again."
-msgstr ""
-
-#: includes/workflow/pro__premium_only/class-settings.php:45
-msgid "The quality threshold is a score from 0 to 100."
 msgstr ""
 
 #: src/admin-kit/Addons.js:35
@@ -9506,147 +9128,6 @@ msgstr ""
 
 #: src/mcp-kit/McpPanel.js:82
 msgid "AI agents are turned off. Their connection address no longer answers."
-msgstr ""
-
-#: src/pro__premium_only/editor/index.js:48
-msgid "Image per language"
-msgstr ""
-
-#: src/pro__premium_only/editor/index.js:52
-msgid "Show another image to readers of a language, for example a banner with words on it."
-msgstr ""
-
-#. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:88
-#, js-format
-msgid "Replace the %s image"
-msgstr ""
-
-#. translators: %s: a language's name.
-#: src/pro__premium_only/editor/index.js:96
-#, js-format
-msgid "Choose a %s image"
-msgstr ""
-
-#: src/pro__premium_only/editor/index.js:120
-msgid "Use the original image"
-msgstr ""
-
-#. translators: 1: an AI provider's name, 2: one of its models.
-#: src/pro__premium_only/settings/index.js:38
-#, js-format
-msgid "%1$s: %2$s"
-msgstr ""
-
-#. translators: 1: an AI provider, 2: a model name.
-#: src/pro__premium_only/settings/index.js:128
-#, js-format
-msgid "The AI settings' choice (%1$s %2$s)"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:132
-msgid "The AI settings' choice"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:138
-msgid "Choose the AI model that translates each language, for example one model for Japanese and another for German. Languages without a choice of their own use the model for all other languages."
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:145
-msgid "AI model for all other languages"
-msgstr ""
-
-#. translators: %s: a language name.
-#: src/pro__premium_only/settings/index.js:165
-#, js-format
-msgid "Engine for %s"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:172
-msgid "The default engine"
-msgstr ""
-
-#. translators: %s: a language name.
-#: src/pro__premium_only/settings/index.js:194
-#, js-format
-msgid "AI model for %s"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:197
-msgid "The model for all other languages"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:211
-msgid "If an engine fails or reaches a limit, try these next, in this order"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:260
-msgid "Monthly spending caps"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:264
-msgid "When an engine reaches its cap, nothing more is sent to it until next month and the failed-translation report says why. Leave empty for no cap."
-msgstr ""
-
-#. translators: 1: an engine's name, 2: dollars spent this month.
-#: src/pro__premium_only/settings/index.js:278
-#, js-format
-msgid "%1$s (spent this month: $%2$s)"
-msgstr ""
-
-#. translators: 1: an AI provider's name, 2: dollars spent this month.
-#: src/pro__premium_only/settings/index.js:308
-#, js-format
-msgid "AI provider %1$s, every language it translates (spent this month: $%2$s)"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:336
-msgid "Save spending caps"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:362
-msgid "Preferred translations (one per line: term = translation)"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:379
-msgid "Formality"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:387
-msgid "Default"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:391
-msgid "Formal"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:395
-msgid "Informal"
-msgstr ""
-
-#: src/pro__premium_only/settings/index.js:414
-msgid "Style instructions (audience, brand voice)"
-msgstr ""
-
-#: src/pro__premium_only/visual/index.js:19
-#: src/pro__premium_only/visual/index.js:22
-msgid "Correct this translation"
-msgstr ""
-
-#: src/pro__premium_only/visual/index.js:48
-msgid "Saving…"
-msgstr ""
-
-#: src/pro__premium_only/visual/index.js:76
-msgid "Translated text. Press Enter to correct it."
-msgstr ""
-
-#: src/pro__premium_only/visual/index.js:105
-msgid "Click any outlined text to correct its translation."
-msgstr ""
-
-#: src/pro__premium_only/visual/index.js:109
-msgid "No translated text was found on this page to edit here. Use the side-by-side editor instead."
 msgstr ""
 
 #: blocks/fixture-switcher/block.json
