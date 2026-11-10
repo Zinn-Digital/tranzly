@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.39
+Stable tag: 3.27.38
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,9 +159,6 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
-= 3.27.39 =
-* Dependency security update (Renovate).
-
 = 3.27.38 =
 * The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
 
@@ -190,5 +187,8 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 = 3.27.30 =
 * Security: the AI-app sign-in's "Disconnect" action checks the signed-in user's capability as well as the nonce (shared MCP kit; WordPress.org review standards).
+
+= 3.27.29 =
+* Maintenance: code notes for the WordPress.org review. No change in how the plugin works.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
