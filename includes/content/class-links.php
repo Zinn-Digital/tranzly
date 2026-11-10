@@ -289,10 +289,25 @@ final class Links {
 		if ( array() === $paths ) {
 			return $out;
 		}
-		$posts = self::posts_by_path( array_keys( $paths ) );
+		// A page's endpoint (WooCommerce's /my-account/orders/, any add_rewrite_endpoint()) is
+		// the page's address plus a tail: the page is looked up in the SAME query (its slug is
+		// already one of the path's segments) and the tail is kept as it was.
+		$splits = array();
+		foreach ( array_keys( $paths ) as $path ) {
+			$split = self::endpoint_split( (string) $path );
+			if ( null !== $split ) {
+				$splits[ $path ] = $split;
+			}
+		}
+		$posts = self::posts_by_path( array_values( array_unique( array_merge( array_map( 'strval', array_keys( $paths ) ), array_column( $splits, 0 ) ) ) ) );
 		Relations::prime( 'post', array_values( array_filter( $posts ) ) );
 		foreach ( $paths as $path => $links ) {
 			$source = (int) ( $posts[ $path ] ?? 0 );
+			$tail   = '';
+			if ( 0 === $source && isset( $splits[ $path ] ) ) {
+				$source = (int) ( $posts[ $splits[ $path ][0] ] ?? 0 );
+				$tail   = $splits[ $path ][1];
+			}
 			$target = $source > 0 ? Languages::translation( $source, $lang ) : null;
 			if ( null === $target || $target === $source || ! Router::is_public_post( $target ) ) {
 				continue;
@@ -302,7 +317,12 @@ final class Links {
 				continue;
 			}
 			foreach ( $links as [ $href, $parsed ] ) {
-				$out[ $href ] = self::with_suffix( $url, $parsed );
+				$base = $url;
+				if ( '' !== $tail ) {
+					$slash = str_ends_with( (string) wp_parse_url( $href, PHP_URL_PATH ), '/' ) ? '/' : '';
+					$base  = trailingslashit( $url ) . $tail . $slash;
+				}
+				$out[ $href ] = self::with_suffix( $base, $parsed );
 			}
 		}
 
@@ -387,6 +407,36 @@ final class Links {
 		}
 
 		return $url;
+	}
+
+	/**
+	 * A path that ends in a page endpoint (a name registered with add_rewrite_endpoint() for
+	 * pages, as WooCommerce registers `orders`, `view-order` and every My Account tab), split
+	 * into the page's path and the encoded tail; null when no segment after the first is one.
+	 *
+	 * @param string $path Decoded path, no slashes at either end.
+	 * @return array{0: string, 1: string}|null
+	 */
+	public static function endpoint_split( string $path ): ?array {
+		global $wp_rewrite;
+		$names = array();
+		foreach ( (array) ( $wp_rewrite->endpoints ?? array() ) as $endpoint ) {
+			if ( is_array( $endpoint ) && isset( $endpoint[0], $endpoint[1] ) && ( (int) $endpoint[0] & EP_PAGES ) ) {
+				$names[ (string) $endpoint[1] ] = true;
+			}
+		}
+		$segments = explode( '/', $path );
+		$count    = count( $segments );
+		for ( $i = 1; $i < $count; $i++ ) {
+			if ( isset( $names[ $segments[ $i ] ] ) ) {
+				return array(
+					implode( '/', array_slice( $segments, 0, $i ) ),
+					implode( '/', array_map( 'rawurlencode', array_slice( $segments, $i ) ) ),
+				);
+			}
+		}
+
+		return null;
 	}
 
 	/**
