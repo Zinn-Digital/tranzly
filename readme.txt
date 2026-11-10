@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.39
+Stable tag: 3.27.40
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.40 =
+* Shop account tabs: an address such as /ar/my-account/orders/ now opens that tab on the account page in that language (or on the original account page when it has no translation yet), instead of the original account page's first screen.
+
 = 3.27.39 =
 * Dependency security update (Renovate).
 
@@ -187,8 +190,5 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * Fix: on a block theme, the Header's navigation now shows your Menu Labels translations (the links already went to the translated pages, but the labels stayed in the original language).
 * Fix: in the Site Editor, the Translations panel of a template part (a Header or Footer) no longer says "No route was found matching the URL and request method" or shows the homepage's translations: it shows how many of the part's texts each language has, and Edit opens them in Tranzly.
 * Pro: GetPaid sends a customer who paid from a translated checkout to the Success Page's translation in that language, and the labels, button text and help text typed in GetPaid's Payment Form Builder are listed in Theme and plugin text to translate.
-
-= 3.27.30 =
-* Security: the AI-app sign-in's "Disconnect" action checks the signed-in user's capability as well as the nonce (shared MCP kit; WordPress.org review standards).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

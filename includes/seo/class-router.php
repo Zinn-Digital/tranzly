@@ -943,9 +943,14 @@ final class Router {
 	 * @return string|null
 	 */
 	private static function find_moved(): ?string {
-		global $wp;
+		global $wp, $wp_rewrite;
 		$request = is_object( $wp ) ? (string) $wp->request : '';
-		$slug    = sanitize_title( (string) wp_basename( $request ) );
+		$names   = array();
+		foreach ( ( is_object( $wp_rewrite ) && is_array( $wp_rewrite->endpoints ?? null ) ) ? $wp_rewrite->endpoints : array() as $endpoint ) {
+			$names[] = (string) ( $endpoint[1] ?? '' );
+		}
+		list( $request, $tail ) = self::split_endpoint( $request, $names );
+		$slug                   = sanitize_title( (string) wp_basename( $request ) );
 		if ( '' === $slug ) {
 			return null;
 		}
@@ -966,17 +971,57 @@ final class Router {
 		// An address with no language folder names the post itself (an old link to /ueber-uns/ is
 		// the German page); an address WITH one asks for that language's version of it.
 		if ( null === self::url_language() ) {
-			return (string) get_permalink( $posts[0] );
+			return self::with_tail( (string) get_permalink( $posts[0] ), $tail );
 		}
 		$wanted = Languages::current();
 		foreach ( $posts as $post ) {
 			$translation = Languages::translation( $post->ID, $wanted );
 			if ( null !== $translation && self::is_public_post( $translation ) ) {
-				return (string) get_permalink( $translation );
+				return self::with_tail( (string) get_permalink( $translation ), $tail );
 			}
 		}
 
-		return (string) get_permalink( $posts[0] );
+		return self::with_tail( (string) get_permalink( $posts[0] ), $tail );
+	}
+
+	/**
+	 * A request split at its first rewrite endpoint after the first path word: the page's path and
+	 * the endpoint part (`ar/my-account/messages` -> `ar/my-account`, `messages`).
+	 *
+	 * ⛔ Without it (CAMPWOOPLUG-r24) /ar/my-account/orders/ looked up a post named "orders", found
+	 * none, and WordPress's own guess sent the shopper to the English /my-account/ — the tab and
+	 * the language both lost, even with an Arabic account page published.
+	 *
+	 * @param string            $request The request path, no leading or trailing slash needed.
+	 * @param array<int,string> $names   The registered endpoint names (WooCommerce's account tabs…).
+	 * @return array{0: string, 1: string}
+	 */
+	public static function split_endpoint( string $request, array $names ): array {
+		$words = array_values( array_filter( explode( '/', trim( $request, '/' ) ), static fn( $w ) => '' !== $w ) );
+		$names = array_filter( $names, static fn( $n ) => '' !== $n );
+		$count = count( $words );
+		for ( $i = 1; $i < $count; $i++ ) {
+			if ( in_array( $words[ $i ], $names, true ) ) {
+				return array( implode( '/', array_slice( $words, 0, $i ) ), implode( '/', array_slice( $words, $i ) ) );
+			}
+		}
+
+		return array( implode( '/', $words ), '' );
+	}
+
+	/**
+	 * A page address with an endpoint part put back (`…/حسابي/` + `messages` -> `…/حسابي/messages/`).
+	 *
+	 * @param string $url  The page's address.
+	 * @param string $tail The endpoint part, or ''.
+	 * @return string
+	 */
+	public static function with_tail( string $url, string $tail ): string {
+		if ( '' === $tail || '' === $url || false !== strpos( $url, '?' ) ) {
+			return $url;
+		}
+
+		return rtrim( $url, '/' ) . '/' . $tail . '/';
 	}
 
 	/**
