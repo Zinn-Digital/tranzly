@@ -42,7 +42,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * without a candidate link costs nothing. The answer is kept with the page — post meta of the post
  * being viewed (already loaded with it, so a repeat view costs ZERO queries) or, on archives, the
  * object cache — stamped with `tranzly_links_version`, an autoloaded counter bumped whenever a
- * post, a translation group, the permalinks or the URL settings change.
+ * post, a translation group, the permalinks or the URL settings change, AND with the plugin's own
+ * version: an update that changes how links resolve re-resolves every page on its next view
+ * (3.27.41's account-tab fix stayed invisible on upgraded sites until a post was saved).
  */
 final class Links {
 
@@ -100,6 +102,16 @@ final class Links {
 	 */
 	public static function version(): int {
 		return (int) get_option( self::VERSION_OPTION, 0 );
+	}
+
+	/**
+	 * The stamp a kept answer must carry to be reused: the counter plus the plugin version, so an
+	 * answer kept by an older release is never served by a newer one.
+	 *
+	 * @return string
+	 */
+	public static function stamp(): string {
+		return self::version() . '@' . ( defined( 'TRANZLY_VERSION' ) ? (string) TRANZLY_VERSION : '' );
 	}
 
 	/**
@@ -197,7 +209,7 @@ final class Links {
 	 * @return array<string, string> href => localised href (only the ones that change).
 	 */
 	private static function lookup( array $hrefs, string $lang, int $post_id ): array {
-		$version = self::version();
+		$version = self::stamp();
 		$kept    = array();
 		$key     = '';
 		if ( $post_id > 0 ) {
