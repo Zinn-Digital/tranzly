@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.41
+Stable tag: 3.27.42
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.42 =
+* The language switcher Tranzly adds before or after your content now follows the Display setting (name, code, or name and code), as the floating switcher already did.
+
 = 3.27.41 =
 * Shop account menu: on a translated account page (for example /ar/my-account/) the tab links (orders, downloads, addresses, account details, log out and tabs added by other plugins) now stay in that language instead of opening the original-language page.
 
@@ -184,9 +187,6 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * Dependency security update (Renovate).
 
 = 3.27.33 =
-* Dependency security update (Renovate).
-
-= 3.27.32 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

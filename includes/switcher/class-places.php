@@ -323,14 +323,26 @@ final class Places {
 		if ( 'none' === $opts['position'] ) {
 			return $content;
 		}
-		$html = Switcher::render(
-			array(
-				'style'       => 'list',
-				'flags'       => 'flags' === $opts['style'],
-				'hideMissing' => true,
-			)
-		);
+		$html = Switcher::render( self::content_args( $opts ) );
 
 		return 'before' === $opts['position'] ? $html . $content : $content . $html;
+	}
+
+	/**
+	 * The automatic before/after-content switcher's arguments from the site's display options.
+	 * It honours `display` (name, code or both) like the floating switcher does: setting
+	 * `switcher.display = code` through `PUT /tranzly/v1/display` (the `tranzly/update-display`
+	 * ability) used to change only the floating switcher, never this one.
+	 *
+	 * @param array<string, mixed> $opts The `switcher` part of the display options.
+	 * @return array<string, mixed>
+	 */
+	public static function content_args( array $opts ): array {
+		return array(
+			'style'       => 'list',
+			'display'     => (string) ( $opts['display'] ?? 'name' ),
+			'flags'       => 'flags' === ( $opts['style'] ?? '' ),
+			'hideMissing' => true,
+		);
 	}
 }
