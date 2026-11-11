@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.42
+Stable tag: 3.27.43
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.43 =
+* Dependency security update (Renovate).
+
 = 3.27.42 =
 * The language switcher Tranzly adds before or after your content now follows the Display setting (name, code, or name and code), as the floating switcher already did.
 
@@ -184,9 +187,6 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * New: an expert request timeout on the Engines screen (Advanced): how long Tranzly waits for DeepL, Google or Microsoft before one request gives up, 5 to 60 seconds, so a slow engine fails sooner and the fallback engine or the next retry takes over.
 
 = 3.27.34 =
-* Dependency security update (Renovate).
-
-= 3.27.33 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
