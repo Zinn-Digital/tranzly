@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.44
+Stable tag: 3.27.45
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.45 =
+* Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
+
 = 3.27.44 =
 * Fix: after updating Tranzly, pages now pick up the new release's link fixes on their next view. Before, a page kept the links it had worked out under the old release until a post was saved (3.27.41's account-menu fix stayed hidden on updated sites).
 
@@ -186,5 +189,4 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 = 3.27.36 =
 * Fix: Pro no longer writes a PHP file into the uploads folder. The private import/export folder is protected by .htaccess and an empty index.html, and the index.php an older version wrote there is removed (only when it is exactly ours), so security scanners no longer see a script in uploads.
 
-= 3.27.35 =
-* New: an expert request timeout on the Engines screen (Advanced): how long Tranzly waits for DeepL, Google or Microsoft before one request gives up, 5 to 60 seconds, so a slow engine fails sooner and the fallback engine or the next retry takes over.
+The full history of every release is in changelog.txt, in the plugin's folder.
