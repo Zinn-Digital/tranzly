@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.45
+Stable tag: 3.27.46
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,10 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.46 =
+* Pro licences include full enterprise-level 24/7 support in 50+ languages.
+* The Zinn® Pro Membership card now opens the membership page in your admin language.
+
 = 3.27.45 =
 * Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
 
@@ -185,8 +189,5 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 = 3.27.37 =
 * The language switcher's flags and the style rules no longer need PHP's mbstring extension; WordPress Plugin Check passes on WordPress 6.8 and later.
-
-= 3.27.36 =
-* Fix: Pro no longer writes a PHP file into the uploads folder. The private import/export folder is protected by .htaccess and an empty index.html, and the index.php an older version wrote there is removed (only when it is exactly ours), so security scanners no longer see a script in uploads.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
