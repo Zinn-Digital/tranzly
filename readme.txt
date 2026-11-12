@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.46
+Stable tag: 3.27.47
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -159,6 +159,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.47 =
+* Dependency security update (Renovate).
+
 = 3.27.46 =
 * Pro licences include full enterprise-level 24/7 support in 50+ languages.
 * The Zinn® Pro Membership card now opens the membership page in your admin language.
@@ -186,8 +189,5 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 = 3.27.38 =
 * The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
-
-= 3.27.37 =
-* The language switcher's flags and the style rules no longer need PHP's mbstring extension; WordPress Plugin Check passes on WordPress 6.8 and later.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
