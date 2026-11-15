@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.47
+Stable tag: 3.27.48
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,12 +59,6 @@ Tranzly rebuilt from the ground up. Each translation is a real WordPress post (o
 * **Footprint-free front end.** The switcher uses neutral class names with a short prefix (`zd` by default), no HTML comments or generator tags, and styles served from `wp-content/uploads/<prefix>-assets/` rather than the plugin's folder.
 
 The admin screens stay clearly branded; only what your visitors see is neutral.
-
-= Build from source =
-
-The admin screen and editor script are built from the human-readable sources in `src/` with `@wordpress/scripts`:
-
-`npm ci && npm run build`
 
 == External services ==
 
@@ -129,6 +123,14 @@ The plugin's Get help screen can send a support request to Zinn Digital®, the p
 
 == Frequently Asked Questions ==
 
+= How do I build the JavaScript from source? =
+
+The admin screen and editor script are built from the human-readable sources in `src/` with `@wordpress/scripts`. The `package.json` and `package-lock.json` that pin the build tools ship in the plugin folder; run this there:
+
+`npm ci && npm run build`
+
+The same source and build tools are public at https://github.com/Zinn-Digital/tranzly
+
 = Does it translate my content automatically? =
 
 Yes, with a translation service you choose and your own key: DeepL (Free or Pro) or an AI model in the free edition, and Google Cloud Translation or Microsoft Translator with Pro. Add a key under Tranzly → Engines, then translate one post from the editor or a whole post type as a background job. You can also write translations by hand, or keep the text imported from Tranzly 2.x.
@@ -159,6 +161,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.48 =
+* Ships package.json and package-lock.json beside the JavaScript sources, so npm ci && npm run build rebuilds the shipped build/ from the plugin folder; the readme links the public source repository.
+
 = 3.27.47 =
 * Dependency security update (Renovate).
 
@@ -186,8 +191,5 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 = 3.27.39 =
 * Dependency security update (Renovate).
-
-= 3.27.38 =
-* The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
 
 The full history of every release is in changelog.txt, in the plugin's folder.

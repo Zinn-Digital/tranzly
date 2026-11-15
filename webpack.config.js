@@ -4,6 +4,7 @@
  * front-end editor. All are for people editing the site; a visitor's page loads nothing built here
  * (front-end CSS/JS is published from assets/, ADR 0033).
  */
+const fs = require( 'fs' );
 const path = require( 'path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
@@ -27,3 +28,14 @@ module.exports = {
 		),
 	},
 };
+
+/*
+ * The free package (WordPress.org, the public repository) carries no premium-only source, so an
+ * entry whose source file is absent is skipped: `npm ci && npm run build` run from the free
+ * package rebuilds exactly the free bundles it ships (WordPress.org review, PBSREVIEW1115).
+ */
+module.exports.entry = Object.fromEntries(
+	Object.entries( module.exports.entry ).filter( ( [ , file ] ) =>
+		fs.existsSync( file )
+	)
+);
