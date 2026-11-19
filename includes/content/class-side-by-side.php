@@ -11,6 +11,7 @@ declare( strict_types = 1 );
 namespace ZinnDigital\Tranzly\Content;
 
 use ZinnDigital\Tranzly\Admin;
+use ZinnDigital\Tranzly\Core\Content;
 use ZinnDigital\Tranzly\Core\Relations;
 use ZinnDigital\Tranzly\Core\Translator;
 use ZinnDigital\Tranzly\Languages;
@@ -398,7 +399,7 @@ final class Side_By_Side {
 		if ( array() !== $blocks ) {
 			$update['post_content'] = Block_Parser::rebuild( (string) $translation->post_content, $blocks );
 		}
-		$saved = wp_update_post( wp_slash( $update ), true );
+		$saved = wp_update_post( wp_slash( Content::keep_template( $update ) ), true );
 		if ( is_wp_error( $saved ) ) {
 			return $saved;
 		}

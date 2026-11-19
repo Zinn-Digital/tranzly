@@ -4,6 +4,9 @@ Every release of Tranzly™, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 3.27.53 =
+* Fix: translating a page whose template the theme does not list as a page template (the WooCommerce Shop page uses the `archive-product` template) no longer fails with "Invalid page template."; the translation keeps the original's template.
+
 = 3.27.52 =
 * Dependency security update (Renovate).
 

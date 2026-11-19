@@ -229,7 +229,7 @@ final class Translator {
 		 * @param \WP_Post              $post       The original.
 		 * @param string                $code       The target language.
 		 */
-		$update        = (array) apply_filters( 'tranzly_translated_post_fields', $update, $texts, $post, $code );
+		$update        = Content::keep_template( (array) apply_filters( 'tranzly_translated_post_fields', $update, $texts, $post, $code ) );
 		self::$writing = (int) $target;
 		try {
 			$saved = wp_update_post( wp_slash( $update ), true );

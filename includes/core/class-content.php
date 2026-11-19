@@ -45,6 +45,26 @@ final class Content {
 	}
 
 	/**
+	 * Leave a translation's page template as it is when its fields are updated.
+	 *
+	 * `wp_update_post()` re-submits the post's own `page_template` and, with `$wp_error`, refuses
+	 * the whole save when that template is not one the theme offers as a page template. WooCommerce
+	 * gives its Shop page the `archive-product` block template, which no theme lists, so every
+	 * translation of the Shop page failed with "Invalid page template." (WordPress compatibility
+	 * suite, 2026-11-18). An empty value tells WordPress not to touch the template; the copied
+	 * `_wp_page_template` stays exactly as the original has it.
+	 *
+	 * @param array<string, mixed> $update The fields passed to `wp_update_post()`.
+	 * @return array<string, mixed>
+	 */
+	public static function keep_template( array $update ): array {
+		if ( ! array_key_exists( 'page_template', $update ) ) {
+			$update['page_template'] = '';
+		}
+		return $update;
+	}
+
+	/**
 	 * May the current user create a translation of this post?
 	 *
 	 * @param int $post_id The source post.
