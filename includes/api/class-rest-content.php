@@ -461,7 +461,8 @@ final class Rest_Content {
 		}
 		$key  = (string) $request->get_param( 'key' );
 		$text = (string) $request->get_param( 'translation' );
-		$text = preg_match( '/\.(text|content)$/', $key ) && ! current_user_can( 'unfiltered_html' ) ? wp_kses_post( $text ) : $text;
+		// Script and style are stripped for everyone, whatever their role (WordPress.org review).
+		$text = preg_match( '/\.(text|content)$/', $key ) ? wp_kses_post( $text ) : $text;
 		$text = preg_match( '/\.(text|content)$/', $key ) ? $text : sanitize_text_field( $text );
 		$done = Strings::set( $lang, $key, $text );
 

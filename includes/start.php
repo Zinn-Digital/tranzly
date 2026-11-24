@@ -77,7 +77,8 @@ require_once __DIR__ . '/admin-kit/load.php';
 	)
 );
 
-// The premium layer's features, when it is running (registered above, before the core booted).
-if ( class_exists( '\\ZinnDigital\\Tranzly\\Pro\\Pro', false ) && \ZinnDigital\Tranzly\Core\Edition::pro() ) {
-	\ZinnDigital\Tranzly\Pro\Pro::boot();
-}
+/**
+ * Fires once the core, the AI core and the admin kit have booted, so an add-on (the premium layer,
+ * when it ships and its licence allows it) boots its features. The free plugin never checks for it.
+ */
+do_action( 'tranzly_booted' );

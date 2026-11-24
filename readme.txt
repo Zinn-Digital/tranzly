@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.60
+Stable tag: 3.27.61
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -161,6 +161,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.61 =
+* WordPress.org review fixes: nothing is written into or removed from the must-use, plugins or themes folders by free code without your action, add-ons hook in through actions, and translated text is filtered for every role.
+
 = 3.27.60 =
 * An AI provider key saved by an older version is re-sealed from the admin screens only, never during a visitor's request; small admin screen fixes.
 
@@ -187,9 +190,6 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * Fix: translating a page whose template the theme does not list as a page template (the WooCommerce Shop page uses the `archive-product` template) no longer fails with "Invalid page template."; the translation keeps the original's template.
 
 = 3.27.52 =
-* Dependency security update (Renovate).
-
-= 3.27.51 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

@@ -11,7 +11,6 @@ declare( strict_types = 1 );
 namespace ZinnDigital\Tranzly\Mcp;
 
 use ZinnDigital\Tranzly\Core\Content;
-use ZinnDigital\Tranzly\Core\Edition;
 use ZinnDigital\Tranzly\Core\Relations;
 use ZinnDigital\Tranzly\Core\Translator;
 use ZinnDigital\Tranzly\Engines\Registry;
@@ -77,7 +76,7 @@ final class Abilities {
 	}
 
 	/**
-	 * Register the abilities (on `wp_abilities_api_init`), then the Pro ones when licensed.
+	 * Register the abilities (on `wp_abilities_api_init`), then let add-ons register theirs.
 	 *
 	 * @return void
 	 */
@@ -250,13 +249,14 @@ final class Abilities {
 		require_once __DIR__ . '/class-rest-map.php';
 		Rest_Bridge::register( Rest_Map::entries(), self::CATEGORY );
 
-		// ⛔ The premium abilities load only when their file ships AND the licence allows it; the
-		// directory name is split so the free package never carries the premium token (CONTRACT §3).
-		$pro = __DIR__ . '/pro_' . '_premium_only/class-pro-abilities.php'; // phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- deliberate split, see above.
-		if ( is_readable( $pro ) && Edition::pro() && class_exists( '\\ZinnDigital\\Tranzly\\Workflow\\Pro\\Bulk' ) ) {
-			require_once $pro;
-			Pro\Pro_Abilities::register();
-		}
+		/**
+		 * Fires after the free abilities are registered, so an add-on (the premium layer, when it
+		 * runs and its licence allows it) registers its own. The free plugin never checks for it
+		 * (WordPress.org guideline 5).
+		 *
+		 * @param string $category The abilities category.
+		 */
+		do_action( 'tranzly_register_abilities', self::CATEGORY );
 	}
 
 	/**
