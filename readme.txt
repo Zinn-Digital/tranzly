@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, languages
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.58
+Stable tag: 3.27.59
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -161,6 +161,9 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 
 == Changelog ==
 
+= 3.27.59 =
+* Dependency security update (Renovate).
+
 = 3.27.58 =
 * WordPress.org review fixes and a shared admin kit update (diagnostics and promotions panels).
 * Shared AI and MCP code update: stored AI keys are sealed with a random key for each site, a private AI address needs an explicit setting in wp-config.php, and the WordPress.org version no longer carries the MCP sign-in.
@@ -187,9 +190,6 @@ Yes. Tranzly adds WordPress abilities and its own MCP server at `/wp-json/tranzl
 * Dependency security update (Renovate).
 
 = 3.27.50 =
-* Dependency security update (Renovate).
-
-= 3.27.49 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
