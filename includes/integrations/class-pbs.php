@@ -28,7 +28,8 @@ final class Pbs extends Integration {
 
 	/** PBS blocks whose object attributes hold visible text PBS does not mark. */
 	private const OPT_IN = array(
-		'pbs/widget' => array( 'instance' ),
+		'pbsw/widget' => array( 'instance' ),
+		'pbs/widget'  => array( 'instance' ),
 	);
 
 	/**

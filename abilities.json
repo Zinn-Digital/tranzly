@@ -1462,29 +1462,6 @@
             "mcp_tool": "tranzly-set-urls"
         },
         {
-            "name": "tranzly/start-trial",
-            "label": "Start the free Pro trial",
-            "description": "Starts the 14-day Tranzly Pro trial for this site (no payment needed).",
-            "edition": "free",
-            "capability": "manage_options (the REST route's own check)",
-            "annotations": {
-                "readonly": false,
-                "destructive": false,
-                "idempotent": false
-            },
-            "input_schema": {
-                "type": "object",
-                "additionalProperties": true,
-                "default": {}
-            },
-            "output_schema": {},
-            "rest": {
-                "method": "POST",
-                "path": "/wp-json/wp-abilities/v1/abilities/tranzly/start-trial/run"
-            },
-            "mcp_tool": "tranzly-start-trial"
-        },
-        {
             "name": "tranzly/translate-media-field",
             "label": "Translate an image's text",
             "description": "Saves an image's alt text, title or caption (field) in a language (lang).",

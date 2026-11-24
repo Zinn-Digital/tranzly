@@ -238,6 +238,7 @@ final class Matrix {
 		'sh-r8'   => array( 10, true ),
 	);
 
+	// dotorg-omit:begin
 	/**
 	 * The lowest plan that includes a feature, or null for an unknown id.
 	 *
@@ -247,6 +248,7 @@ final class Matrix {
 	public static function min_plan( string $feature ): ?string {
 		return self::MIN_PLAN[ $feature ] ?? null;
 	}
+	// dotorg-omit:end
 
 	/**
 	 * The plans, lowest first, with their site limits (null = unlimited).

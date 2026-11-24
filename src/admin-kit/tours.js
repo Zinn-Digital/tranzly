@@ -33,6 +33,10 @@ export default function kitTours() {
 		),
 	};
 
+	let offersTitle = __( 'Plans and upgrades', 'tranzly' );
+	// dotorg-omit:begin
+	offersTitle = __( 'Try Pro or upgrade', 'tranzly' );
+	// dotorg-omit:end
 	return {
 		overview: [
 			{
@@ -65,9 +69,9 @@ export default function kitTours() {
 			},
 			{
 				target: '[data-zak-tour="offers"]',
-				title: __( 'Try Pro or upgrade', 'tranzly' ),
+				title: offersTitle,
 				content: __(
-					'Start a free trial without a card, upgrade, or renew, all from here.',
+					'Compare plans, upgrade or renew, all from here.',
 					'tranzly'
 				),
 			},

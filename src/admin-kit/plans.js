@@ -67,13 +67,17 @@ export function badgeText( licence ) {
 	const name = licence.legacy
 		? __( 'Pro', 'tranzly' )
 		: planName( licence.plan );
-	return licence.trial && licence.trial.active
-		? sprintf(
-				/* translators: %s: plan name. */
-				__( '%s trial', 'tranzly' ),
-				name
-			)
-		: name;
+	let text = name;
+	// dotorg-omit:begin
+	if ( licence.trial && licence.trial.active ) {
+		text = sprintf(
+			/* translators: %s: plan name. */
+			__( '%s trial', 'tranzly' ),
+			name
+		);
+	}
+	// dotorg-omit:end
+	return text;
 }
 
 /**
