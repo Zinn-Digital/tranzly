@@ -33,10 +33,12 @@ export default function kitTours() {
 		),
 	};
 
-	let offersTitle = __( 'Plans and upgrades', 'tranzly' );
+	// A property, not a `let`: the dotorg build strips the region that sets `pro` (no-useless-assignment).
+	const offers = { free: __( 'Plans and upgrades', 'tranzly' ), pro: '' };
 	// dotorg-omit:begin
-	offersTitle = __( 'Try Pro or upgrade', 'tranzly' );
+	offers.pro = __( 'Try Pro or upgrade', 'tranzly' );
 	// dotorg-omit:end
+	const offersTitle = offers.pro || offers.free;
 	return {
 		overview: [
 			{
