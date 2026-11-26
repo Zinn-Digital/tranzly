@@ -1,6 +1,6 @@
 # Tranzly™
 
-Multilingual WordPress, one post per language: linked translations of posts, pages, terms, media, widgets and the site title.
+Translate WordPress into unlimited languages with DeepL or AI, with full international SEO: hreflang, translated URLs and sitemaps.
 
 Built and maintained by **Neil Lock — CEO, Zinn Digital® Ltd** — https://zinndigital.com
 
@@ -14,7 +14,7 @@ It is free, and it updates itself from WordPress.org like any directory plugin.
 
 | | |
 |---|---|
-| Version | `3.27.63` |
+| Version | `3.27.64` |
 | Requires WordPress | 6.8 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |
