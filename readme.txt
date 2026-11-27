@@ -7,7 +7,7 @@ Tags: translation, multilingual, language switcher, ai translation
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 3.27.64
+Stable tag: 3.27.66
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -230,6 +230,12 @@ The same source and build tools are public at https://github.com/Zinn-Digital/tr
 
 == Changelog ==
 
+= 3.27.66 =
+* Dependency security update (Renovate).
+
+= 3.27.65 =
+* Dependency security update (Renovate).
+
 = 3.27.64 =
 * New directory listing: the plugin is now named Tranzly™ – AI Translation & Multilingual SEO, with a rewritten description, FAQ and compatibility list. No code changes.
 
@@ -254,14 +260,5 @@ The same source and build tools are public at https://github.com/Zinn-Digital/tr
 
 = 3.27.57 =
 * Maintenance release.
-
-= 3.27.56 =
-* Dependency security update (Renovate).
-
-= 3.27.55 =
-* Dependency security update (Renovate).
-
-= 3.27.54 =
-* Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
